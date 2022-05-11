@@ -23,6 +23,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create/Update Maintenance Configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var maintenanceConfiguration = new MaintenanceConfiguration(&#34;maintenanceConfiguration&#34;, MaintenanceConfigurationArgs.builder()        
+ *             .configName(&#34;default&#34;)
+ *             .notAllowedTime(Map.ofEntries(
+ *                 Map.entry(&#34;end&#34;, &#34;2020-11-30T12:00:00Z&#34;),
+ *                 Map.entry(&#34;start&#34;, &#34;2020-11-26T03:00:00Z&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .timeInWeek(Map.ofEntries(
+ *                 Map.entry(&#34;day&#34;, &#34;Monday&#34;),
+ *                 Map.entry(&#34;hourSlots&#34;,                 
+ *                     1,
+ *                     2)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01-preview.
  * 
  * ## Example Usage
+ * ### NameSpacePrivateEndPointConnectionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnection = new PrivateEndpointConnection(&#34;privateEndpointConnection&#34;, PrivateEndpointConnectionArgs.builder()        
+ *             .namespaceName(&#34;sdk-Namespace-2924&#34;)
+ *             .privateEndpoint(Map.of(&#34;id&#34;, &#34;/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847&#34;))
+ *             .privateEndpointConnectionName(&#34;privateEndpointConnectionName&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;testing&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Rejected&#34;)
+ *             ))
+ *             .provisioningState(&#34;Succeeded&#34;)
+ *             .resourceGroupName(&#34;ArunMonocle&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

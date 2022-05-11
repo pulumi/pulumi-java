@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApiVersionSet
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiVersionSet = new ApiVersionSet(&#34;apiVersionSet&#34;, ApiVersionSetArgs.builder()        
+ *             .description(&#34;Version configuration&#34;)
+ *             .displayName(&#34;api set 1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .versionSetId(&#34;api1&#34;)
+ *             .versioningScheme(&#34;Segment&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

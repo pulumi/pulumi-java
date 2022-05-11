@@ -23,6 +23,49 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-04-preview.
  * 
  * ## Example Usage
+ * ### Create a spacecraft
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var spacecraft = new Spacecraft(&#34;spacecraft&#34;, SpacecraftArgs.builder()        
+ *             .links(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;bandwidthMHz&#34;, 0.036),
+ *                     Map.entry(&#34;centerFrequencyMHz&#34;, 2106.4063),
+ *                     Map.entry(&#34;direction&#34;, &#34;uplink&#34;),
+ *                     Map.entry(&#34;polarization&#34;, &#34;RHCP&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;bandwidthMHz&#34;, 150),
+ *                     Map.entry(&#34;centerFrequencyMHz&#34;, 8125),
+ *                     Map.entry(&#34;direction&#34;, &#34;downlink&#34;),
+ *                     Map.entry(&#34;polarization&#34;, &#34;RHCP&#34;)
+ *                 ))
+ *             .location(&#34;westus&#34;)
+ *             .noradId(&#34;27424&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .spacecraftName(&#34;AQUA&#34;)
+ *             .titleLine(&#34;(AQUA)&#34;)
+ *             .tleLine1(&#34;1 27424U 02022A   20195.59202355  .00000039  00000-0  18634-4 0  9991&#34;)
+ *             .tleLine2(&#34;2 27424  98.2098 135.8486 0000176  28.4050 144.5909 14.57108832967671&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

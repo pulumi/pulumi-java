@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateSetting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var setting = new Setting(&#34;setting&#34;, SettingArgs.builder()        
+ *             .cache(Map.ofEntries(
+ *                 Map.entry(&#34;channel&#34;, &#34;Modern&#34;),
+ *                 Map.entry(&#34;id&#34;, &#34;/providers/Microsoft.Management/managementGroups/72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                 Map.entry(&#34;parent&#34;, &#34;/providers/Microsoft.Management/managementGroups/acm&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;enabled&#34;),
+ *                 Map.entry(&#34;subchannel&#34;, &#34;NotApplicable&#34;)
+ *             ))
+ *             .scope(&#34;/subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .settingName(&#34;myscope&#34;)
+ *             .startOn(&#34;LastUsed&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

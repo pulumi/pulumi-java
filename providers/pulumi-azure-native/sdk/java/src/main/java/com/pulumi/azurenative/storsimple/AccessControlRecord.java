@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### AccessControlRecordsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accessControlRecord = new AccessControlRecord(&#34;accessControlRecord&#34;, AccessControlRecordArgs.builder()        
+ *             .accessControlRecordName(&#34;ACRForTest&#34;)
+ *             .initiatorName(&#34;iqn.2017-06.com.contoso:ForTest&#34;)
+ *             .managerName(&#34;ManagerForSDKTest1&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

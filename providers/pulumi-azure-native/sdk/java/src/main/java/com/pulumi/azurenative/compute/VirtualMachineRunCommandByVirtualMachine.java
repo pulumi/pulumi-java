@@ -26,6 +26,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a run command.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineRunCommandByVirtualMachine = new VirtualMachineRunCommandByVirtualMachine(&#34;virtualMachineRunCommandByVirtualMachine&#34;, VirtualMachineRunCommandByVirtualMachineArgs.builder()        
+ *             .asyncExecution(false)
+ *             .location(&#34;West US&#34;)
+ *             .parameters(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;param1&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;param2&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value2&#34;)
+ *                 ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .runAsPassword(&#34;&lt;runAsPassword&gt;&#34;)
+ *             .runAsUser(&#34;user1&#34;)
+ *             .runCommandName(&#34;myRunCommand&#34;)
+ *             .source(Map.of(&#34;script&#34;, &#34;Write-Host Hello World!&#34;))
+ *             .timeoutInSeconds(3600)
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

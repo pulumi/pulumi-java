@@ -25,6 +25,31 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### Monitors_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var monitor = new Monitor(&#34;monitor&#34;, MonitorArgs.builder()        
+ *             .monitorName(&#34;myMonitor&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

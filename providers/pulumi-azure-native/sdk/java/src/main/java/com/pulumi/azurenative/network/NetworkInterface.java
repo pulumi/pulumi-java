@@ -30,6 +30,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create network interface
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkInterface = new NetworkInterface(&#34;networkInterface&#34;, NetworkInterfaceArgs.builder()        
+ *             .enableAcceleratedNetworking(true)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;ipconfig1&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default&#34;))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .networkInterfaceName(&#34;test-nic&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates Azure Active Directory only authentication object.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstanceAzureADOnlyAuthentication = new ManagedInstanceAzureADOnlyAuthentication(&#34;managedInstanceAzureADOnlyAuthentication&#34;, ManagedInstanceAzureADOnlyAuthenticationArgs.builder()        
+ *             .authenticationName(&#34;Default&#34;)
+ *             .azureADOnlyAuthentication(false)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

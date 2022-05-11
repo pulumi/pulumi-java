@@ -22,6 +22,53 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create Application
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .applicationName(&#34;hue&#34;)
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;applicationType&#34;, &#34;CustomApplication&#34;),
+ *                 Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D12_v2&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;edgenode&#34;),
+ *                     Map.entry(&#34;targetInstanceCount&#34;, 1)
+ *                 ))),
+ *                 Map.entry(&#34;errors&#34;, ),
+ *                 Map.entry(&#34;httpsEndpoints&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;accessModes&#34;, &#34;WebPage&#34;),
+ *                     Map.entry(&#34;destinationPort&#34;, 20000),
+ *                     Map.entry(&#34;subDomainSuffix&#34;, &#34;dss&#34;)
+ *                 )),
+ *                 Map.entry(&#34;installScriptActions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;app-install-app1&#34;),
+ *                     Map.entry(&#34;parameters&#34;, &#34;-version latest -port 20000&#34;),
+ *                     Map.entry(&#34;roles&#34;, &#34;edgenode&#34;),
+ *                     Map.entry(&#34;uri&#34;, &#34;https://.../install.sh&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uninstallScriptActions&#34;, )
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

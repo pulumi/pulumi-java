@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-24-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a SQL Server in a Registration group.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlServer = new SqlServer(&#34;sqlServer&#34;, SqlServerArgs.builder()        
+ *             .cores(8)
+ *             .edition(&#34;Latin&#34;)
+ *             .propertyBag(&#34;&#34;)
+ *             .registrationID(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlServerName(&#34;testsqlserver&#34;)
+ *             .sqlServerRegistrationName(&#34;testsqlregistration&#34;)
+ *             .version(&#34;2008&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

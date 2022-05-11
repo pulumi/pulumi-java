@@ -20,6 +20,45 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### MoveResources_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var moveResource = new MoveResource(&#34;moveResource&#34;, MoveResourceArgs.builder()        
+ *             .moveCollectionName(&#34;movecollection1&#34;)
+ *             .moveResourceName(&#34;moveresourcename1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;dependsOnOverrides&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/eastusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140&#34;),
+ *                     Map.entry(&#34;targetId&#34;, &#34;/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/westusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140&#34;)
+ *                 )),
+ *                 Map.entry(&#34;resourceSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;resourceType&#34;, &#34;Microsoft.Compute/virtualMachines&#34;),
+ *                     Map.entry(&#34;targetAvailabilitySetId&#34;, &#34;/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/availabilitySets/avset1&#34;),
+ *                     Map.entry(&#34;targetAvailabilityZone&#34;, &#34;2&#34;),
+ *                     Map.entry(&#34;targetResourceName&#34;, &#34;westusvm1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sourceId&#34;, &#34;/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/virtualMachines/eastusvm1&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

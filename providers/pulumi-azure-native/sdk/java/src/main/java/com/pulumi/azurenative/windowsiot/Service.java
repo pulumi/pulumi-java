@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Service_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .adminDomainName(&#34;d.e.f&#34;)
+ *             .billingDomainName(&#34;a.b.c&#34;)
+ *             .deviceName(&#34;service4445&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .notes(&#34;blah&#34;)
+ *             .quantity(1000000)
+ *             .resourceGroupName(&#34;res9101&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

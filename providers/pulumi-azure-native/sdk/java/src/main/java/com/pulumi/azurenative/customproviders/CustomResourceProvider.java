@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update the custom resource provider
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customResourceProvider = new CustomResourceProvider(&#34;customResourceProvider&#34;, CustomResourceProviderArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, &#34;https://mytestendpoint/&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;TestAction&#34;),
+ *                 Map.entry(&#34;routingType&#34;, &#34;Proxy&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;testRG&#34;)
+ *             .resourceProviderName(&#34;newrp&#34;)
+ *             .resourceTypes(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, &#34;https://mytestendpoint2/&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;TestResource&#34;),
+ *                 Map.entry(&#34;routingType&#34;, &#34;Proxy,Cache&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

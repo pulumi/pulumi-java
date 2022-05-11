@@ -23,6 +23,78 @@ import javax.annotation.Nullable;
  * API Version: 2018-10-31-preview.
  * 
  * ## Example Usage
+ * ### Create a new or update an existing dedicated HSM
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dedicatedHsm = new DedicatedHsm(&#34;dedicatedHsm&#34;, DedicatedHsmArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .name(&#34;hsm1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkInterfaces&#34;, Map.of(&#34;privateIpAddress&#34;, &#34;1.0.0.1&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;hsm-group&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;SafeNet Luna Network HSM A790&#34;))
+ *             .stampId(&#34;stamp01&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Dept&#34;, &#34;hsm&#34;),
+ *                 Map.entry(&#34;Environment&#34;, &#34;dogfood&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a new or update an existing payment HSM
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dedicatedHsm = new DedicatedHsm(&#34;dedicatedHsm&#34;, DedicatedHsmArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .name(&#34;hsm1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkInterfaces&#34;, Map.of(&#34;privateIpAddress&#34;, &#34;1.0.0.1&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;hsm-group&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;payShield10K_LMK1_CPS60&#34;))
+ *             .stampId(&#34;stamp01&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Dept&#34;, &#34;hsm&#34;),
+ *                 Map.entry(&#34;Environment&#34;, &#34;dogfood&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

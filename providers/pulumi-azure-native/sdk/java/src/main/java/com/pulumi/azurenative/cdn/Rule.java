@@ -45,6 +45,52 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Rules_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rule = new Rule(&#34;rule&#34;, RuleArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;ModifyResponseHeader&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;headerAction&#34;, &#34;Overwrite&#34;),
+ *                     Map.entry(&#34;headerName&#34;, &#34;X-CDN&#34;),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;MSFT&#34;)
+ *                 ))
+ *             ))
+ *             .conditions(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;RequestMethod&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;matchValues&#34;, &#34;GET&#34;),
+ *                     Map.entry(&#34;negateCondition&#34;, false),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;Equal&#34;)
+ *                 ))
+ *             ))
+ *             .order(1)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .ruleName(&#34;rule1&#34;)
+ *             .ruleSetName(&#34;ruleSet1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

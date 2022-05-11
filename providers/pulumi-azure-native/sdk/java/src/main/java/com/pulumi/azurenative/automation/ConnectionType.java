@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update connection type
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectionType = new ConnectionType(&#34;connectionType&#34;, ConnectionTypeArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount22&#34;)
+ *             .connectionTypeName(&#34;myCT&#34;)
+ *             .fieldDefinitions(Map.ofEntries(
+ *                 Map.entry(&#34;myBoolField&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;isEncrypted&#34;, false),
+ *                     Map.entry(&#34;isOptional&#34;, false),
+ *                     Map.entry(&#34;type&#34;, &#34;bool&#34;)
+ *                 )),
+ *                 Map.entry(&#34;myStringField&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;isEncrypted&#34;, false),
+ *                     Map.entry(&#34;isOptional&#34;, false),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;myStringFieldEncrypted&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;isEncrypted&#34;, true),
+ *                     Map.entry(&#34;isOptional&#34;, false),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .isGlobal(false)
+ *             .name(&#34;myCT&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

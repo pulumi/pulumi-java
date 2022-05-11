@@ -30,6 +30,97 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create a snapshot by importing an unmanaged blob from a different subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Import&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;),
+ *                 Map.entry(&#34;storageAccountId&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount&#34;)
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .snapshotName(&#34;mySnapshot1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a snapshot by importing an unmanaged blob from the same subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Import&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;)
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .snapshotName(&#34;mySnapshot1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a snapshot from an existing snapshot in the same or a different subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Copy&#34;),
+ *                 Map.entry(&#34;sourceResourceId&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1&#34;)
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .snapshotName(&#34;mySnapshot2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

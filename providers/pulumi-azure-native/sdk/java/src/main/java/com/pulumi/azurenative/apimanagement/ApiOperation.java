@@ -23,6 +23,56 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApiOperation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiOperation = new ApiOperation(&#34;apiOperation&#34;, ApiOperationArgs.builder()        
+ *             .apiId(&#34;PetStoreTemplate2&#34;)
+ *             .description(&#34;This can only be done by the logged in user.&#34;)
+ *             .displayName(&#34;createUser2&#34;)
+ *             .method(&#34;POST&#34;)
+ *             .operationId(&#34;newoperations&#34;)
+ *             .request(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Created user object&#34;),
+ *                 Map.entry(&#34;headers&#34;, ),
+ *                 Map.entry(&#34;queryParameters&#34;, ),
+ *                 Map.entry(&#34;representations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contentType&#34;, &#34;application/json&#34;),
+ *                     Map.entry(&#34;schemaId&#34;, &#34;592f6c1d0af5840ca8897f0c&#34;),
+ *                     Map.entry(&#34;typeName&#34;, &#34;User&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .responses(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;successful operation&#34;),
+ *                 Map.entry(&#34;headers&#34;, ),
+ *                 Map.entry(&#34;representations&#34;,                 
+ *                     Map.of(&#34;contentType&#34;, &#34;application/xml&#34;),
+ *                     Map.of(&#34;contentType&#34;, &#34;application/json&#34;)),
+ *                 Map.entry(&#34;statusCode&#34;, 200)
+ *             ))
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .templateParameters()
+ *             .urlTemplate(&#34;/user1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

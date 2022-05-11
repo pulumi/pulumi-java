@@ -23,6 +23,56 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateApplication
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .applicationResourceName(&#34;sampleApplication&#34;)
+ *             .description(&#34;Service Fabric Mesh sample application.&#34;)
+ *             .location(&#34;EastUS&#34;)
+ *             .resourceGroupName(&#34;sbz_demo&#34;)
+ *             .services(Map.ofEntries(
+ *                 Map.entry(&#34;codePackages&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endpoints&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;helloWorldListener&#34;),
+ *                         Map.entry(&#34;port&#34;, 80)
+ *                     )),
+ *                     Map.entry(&#34;image&#34;, &#34;seabreeze/sbz-helloworld:1.0-alpine&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;helloWorldCode&#34;),
+ *                     Map.entry(&#34;resources&#34;, Map.of(&#34;requests&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;cpu&#34;, 1),
+ *                         Map.entry(&#34;memoryInGB&#34;, 1)
+ *                     )))
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;SeaBreeze Hello World Service.&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;helloWorldService&#34;),
+ *                 Map.entry(&#34;networkRefs&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endpointRefs&#34;, Map.of(&#34;name&#34;, &#34;helloWorldListener&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;replicaCount&#34;, 1)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,31 @@ import javax.annotation.Nullable;
  * API Version: 2018-10-01.
  * 
  * ## Example Usage
+ * ### PutConsole
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var console = new Console(&#34;console&#34;, ConsoleArgs.builder()        
+ *             .consoleName(&#34;default&#34;)
+ *             .properties(Map.of(&#34;osType&#34;, &#34;Linux&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

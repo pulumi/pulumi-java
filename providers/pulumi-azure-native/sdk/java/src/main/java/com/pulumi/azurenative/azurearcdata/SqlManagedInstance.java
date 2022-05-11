@@ -25,6 +25,51 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a SQL Managed Instance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlManagedInstance = new SqlManagedInstance(&#34;sqlManagedInstance&#34;, SqlManagedInstanceArgs.builder()        
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;CustomLocation&#34;)
+ *             ))
+ *             .location(&#34;northeurope&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;admin&#34;, &#34;Admin user&#34;),
+ *                 Map.entry(&#34;basicLoginInformation&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;password&#34;, &#34;********&#34;),
+ *                     Map.entry(&#34;username&#34;, &#34;username&#34;)
+ *                 )),
+ *                 Map.entry(&#34;endTime&#34;, &#34;Instance end time&#34;),
+ *                 Map.entry(&#34;startTime&#34;, &#34;Instance start time&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;dev&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .sqlManagedInstanceName(&#34;testsqlManagedInstance&#34;)
+ *             .tags(Map.of(&#34;mytag&#34;, &#34;myval&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

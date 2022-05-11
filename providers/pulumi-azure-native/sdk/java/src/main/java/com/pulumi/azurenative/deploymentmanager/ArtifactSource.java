@@ -22,6 +22,71 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create artifact source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifactSource = new ArtifactSource(&#34;artifactSource&#34;, ArtifactSourceArgs.builder()        
+ *             .artifactSourceName(&#34;myArtifactSource&#34;)
+ *             .authentication(Map.ofEntries(
+ *                 Map.entry(&#34;sasUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&amp;se=2019-12-31T15%3A10%3A00Z&amp;sp=rl&amp;sv=2017-04-17&amp;sr=c&amp;sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Sas&#34;)
+ *             ))
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sourceType(&#34;AzureStorage&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create artifact source with artifact root, an offset into the storage container
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifactSource = new ArtifactSource(&#34;artifactSource&#34;, ArtifactSourceArgs.builder()        
+ *             .artifactRoot(&#34;1.0.0.0&#34;)
+ *             .artifactSourceName(&#34;myArtifactSource&#34;)
+ *             .authentication(Map.ofEntries(
+ *                 Map.entry(&#34;sasUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&amp;se=2019-12-31T15%3A10%3A00Z&amp;sp=rl&amp;sv=2017-04-17&amp;sr=c&amp;sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Sas&#34;)
+ *             ))
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sourceType(&#34;AzureStorage&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

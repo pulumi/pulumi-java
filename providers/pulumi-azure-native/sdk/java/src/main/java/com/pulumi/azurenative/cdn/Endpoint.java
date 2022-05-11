@@ -30,6 +30,127 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Endpoints_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .contentTypesToCompress(            
+ *                 &#34;text/html&#34;,
+ *                 &#34;application/octet-stream&#34;)
+ *             .defaultOriginGroup(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1&#34;))
+ *             .deliveryPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Test description for a policy.&#34;),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actions&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;CacheExpiration&#34;),
+ *                             Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;cacheBehavior&#34;, &#34;Override&#34;),
+ *                                 Map.entry(&#34;cacheDuration&#34;, &#34;10:10:09&#34;),
+ *                                 Map.entry(&#34;cacheType&#34;, &#34;All&#34;),
+ *                                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;ModifyResponseHeader&#34;),
+ *                             Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;headerAction&#34;, &#34;Overwrite&#34;),
+ *                                 Map.entry(&#34;headerName&#34;, &#34;Access-Control-Allow-Origin&#34;),
+ *                                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;*&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;ModifyRequestHeader&#34;),
+ *                             Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;headerAction&#34;, &#34;Overwrite&#34;),
+ *                                 Map.entry(&#34;headerName&#34;, &#34;Accept-Encoding&#34;),
+ *                                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;gzip&#34;)
+ *                             ))
+ *                         )),
+ *                     Map.entry(&#34;conditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;RemoteAddress&#34;),
+ *                         Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;matchValues&#34;,                             
+ *                                 &#34;192.168.1.0/24&#34;,
+ *                                 &#34;10.0.0.0/24&#34;),
+ *                             Map.entry(&#34;negateCondition&#34;, true),
+ *                             Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters&#34;),
+ *                             Map.entry(&#34;operator&#34;, &#34;IPMatch&#34;)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;order&#34;, 1)
+ *                 ))
+ *             ))
+ *             .endpointName(&#34;endpoint1&#34;)
+ *             .isCompressionEnabled(true)
+ *             .isHttpAllowed(true)
+ *             .isHttpsAllowed(true)
+ *             .location(&#34;WestUs&#34;)
+ *             .originGroups(Map.ofEntries(
+ *                 Map.entry(&#34;healthProbeSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;probeIntervalInSeconds&#34;, 120),
+ *                     Map.entry(&#34;probePath&#34;, &#34;/health.aspx&#34;),
+ *                     Map.entry(&#34;probeProtocol&#34;, &#34;Http&#34;),
+ *                     Map.entry(&#34;probeRequestType&#34;, &#34;GET&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;originGroup1&#34;),
+ *                 Map.entry(&#34;origins&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2&#34;)),
+ *                 Map.entry(&#34;responseBasedOriginErrorDetectionSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;responseBasedDetectedErrorTypes&#34;, &#34;TcpErrorsOnly&#34;),
+ *                     Map.entry(&#34;responseBasedFailoverThresholdPercentage&#34;, 10)
+ *                 ))
+ *             ))
+ *             .originHostHeader(&#34;www.bing.com&#34;)
+ *             .originPath(&#34;/photos&#34;)
+ *             .origins(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;hostName&#34;, &#34;www.someDomain1.net&#34;),
+ *                     Map.entry(&#34;httpPort&#34;, 80),
+ *                     Map.entry(&#34;httpsPort&#34;, 443),
+ *                     Map.entry(&#34;name&#34;, &#34;origin1&#34;),
+ *                     Map.entry(&#34;originHostHeader&#34;, &#34;www.someDomain1.net&#34;),
+ *                     Map.entry(&#34;priority&#34;, 1),
+ *                     Map.entry(&#34;weight&#34;, 50)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;hostName&#34;, &#34;www.someDomain2.net&#34;),
+ *                     Map.entry(&#34;httpPort&#34;, 80),
+ *                     Map.entry(&#34;httpsPort&#34;, 443),
+ *                     Map.entry(&#34;name&#34;, &#34;origin2&#34;),
+ *                     Map.entry(&#34;originHostHeader&#34;, &#34;www.someDomain2.net&#34;),
+ *                     Map.entry(&#34;priority&#34;, 2),
+ *                     Map.entry(&#34;weight&#34;, 50)
+ *                 ))
+ *             .profileName(&#34;profile1&#34;)
+ *             .queryStringCachingBehavior(&#34;BypassCaching&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

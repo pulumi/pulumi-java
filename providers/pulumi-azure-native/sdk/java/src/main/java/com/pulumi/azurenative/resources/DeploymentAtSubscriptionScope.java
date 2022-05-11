@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create a deployment that will deploy a templateSpec with the given resourceId
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentAtSubscriptionScope = new DeploymentAtSubscriptionScope(&#34;deploymentAtSubscriptionScope&#34;, DeploymentAtSubscriptionScopeArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Incremental&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

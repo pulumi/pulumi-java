@@ -24,6 +24,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create nat gateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var natGateway = new NatGateway(&#34;natGateway&#34;, NatGatewayArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .natGatewayName(&#34;test-natgateway&#34;)
+ *             .publicIpAddresses(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1&#34;))
+ *             .publicIpPrefixes(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

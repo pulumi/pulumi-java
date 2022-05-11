@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### put delegated subnet
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var delegatedSubnetServiceDetails = new DelegatedSubnetServiceDetails(&#34;delegatedSubnetServiceDetails&#34;, DelegatedSubnetServiceDetailsArgs.builder()        
+ *             .controllerDetails(Map.of(&#34;id&#34;, &#34;/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;TestRG&#34;)
+ *             .resourceName(&#34;delegated1&#34;)
+ *             .subnetDetails(Map.of(&#34;id&#34;, &#34;/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

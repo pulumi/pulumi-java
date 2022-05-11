@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### ChannelsCreateOrUpdateExample
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var channel = new Channel(&#34;channel&#34;, ChannelArgs.builder()        
+ *             .accountName(&#34;ExampleAccount&#34;)
+ *             .channelFunctions(            
+ *                 &#34;MockFunction1&#34;,
+ *                 &#34;MockFunction2&#34;)
+ *             .channelName(&#34;ExampleChannel&#34;)
+ *             .channelType(&#34;MockChannel&#34;)
+ *             .credentials(Map.ofEntries(
+ *                 Map.entry(&#34;AppId&#34;, &#34;exampleApp&#34;),
+ *                 Map.entry(&#34;AppKey&#34;, &#34;exampleAppKey&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;ExampleRg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

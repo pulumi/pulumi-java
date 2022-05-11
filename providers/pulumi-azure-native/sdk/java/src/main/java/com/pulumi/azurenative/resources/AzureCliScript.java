@@ -28,6 +28,131 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01.
  * 
  * ## Example Usage
+ * ### DeploymentScriptsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureCliScript = new AzureCliScript(&#34;azureCliScript&#34;, AzureCliScriptArgs.builder()        
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreateNoUserManagedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureCliScript = new AzureCliScript(&#34;azureCliScript&#34;, AzureCliScriptArgs.builder()        
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_MinCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureCliScript = new AzureCliScript(&#34;azureCliScript&#34;, AzureCliScriptArgs.builder()        
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_UsingCustomACIName
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureCliScript = new AzureCliScript(&#34;azureCliScript&#34;, AzureCliScriptArgs.builder()        
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_UsingExistingStorageAccount
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureCliScript = new AzureCliScript(&#34;azureCliScript&#34;, AzureCliScriptArgs.builder()        
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

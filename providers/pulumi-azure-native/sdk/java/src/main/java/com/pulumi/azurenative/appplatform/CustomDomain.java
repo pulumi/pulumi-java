@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### CustomDomains_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customDomain = new CustomDomain(&#34;customDomain&#34;, CustomDomainArgs.builder()        
+ *             .appName(&#34;myapp&#34;)
+ *             .domainName(&#34;mydomain.com&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;certName&#34;, &#34;mycert&#34;),
+ *                 Map.entry(&#34;thumbprint&#34;, &#34;934367bf1c97033f877db0f15cb1b586957d3133&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

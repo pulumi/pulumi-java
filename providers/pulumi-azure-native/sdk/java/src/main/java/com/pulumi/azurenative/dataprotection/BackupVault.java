@@ -24,6 +24,70 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create BackupVault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupVault = new BackupVault(&#34;backupVault&#34;, BackupVaultArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;None&#34;))
+ *             .location(&#34;WestUS&#34;)
+ *             .properties(Map.of(&#34;storageSettings&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;datastoreType&#34;, &#34;VaultStore&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;LocallyRedundant&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *             .vaultName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create BackupVault With MSI
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupVault = new BackupVault(&#34;backupVault&#34;, BackupVaultArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;systemAssigned&#34;))
+ *             .location(&#34;WestUS&#34;)
+ *             .properties(Map.of(&#34;storageSettings&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;datastoreType&#34;, &#34;VaultStore&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;LocallyRedundant&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *             .vaultName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

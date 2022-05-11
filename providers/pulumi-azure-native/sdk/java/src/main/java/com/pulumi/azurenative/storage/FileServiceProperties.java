@@ -24,6 +24,131 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### PutFileServices
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileServiceProperties = new FileServiceProperties(&#34;fileServiceProperties&#34;, FileServicePropertiesArgs.builder()        
+ *             .accountName(&#34;sto8607&#34;)
+ *             .cors(Map.of(&#34;corsRules&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;,                     
+ *                         &#34;x-ms-meta-abc&#34;,
+ *                         &#34;x-ms-meta-data*&#34;,
+ *                         &#34;x-ms-meta-target*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;,                     
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;,
+ *                         &#34;POST&#34;,
+ *                         &#34;OPTIONS&#34;,
+ *                         &#34;MERGE&#34;,
+ *                         &#34;PUT&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;,                     
+ *                         &#34;http://www.contoso.com&#34;,
+ *                         &#34;http://www.fabrikam.com&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;, &#34;x-ms-meta-*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 100)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;, &#34;GET&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 2)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;, &#34;x-ms-meta-12345675754564*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;,                     
+ *                         &#34;GET&#34;,
+ *                         &#34;PUT&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;,                     
+ *                         &#34;http://www.abc23.com&#34;,
+ *                         &#34;https://www.fabrikam.com/*&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;,                     
+ *                         &#34;x-ms-meta-abc&#34;,
+ *                         &#34;x-ms-meta-data*&#34;,
+ *                         &#34;x-ms-meta-target*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 2000)
+ *                 )))
+ *             .fileServicesName(&#34;default&#34;)
+ *             .resourceGroupName(&#34;res4410&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PutFileServices_EnableSMBMultichannel
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileServiceProperties = new FileServiceProperties(&#34;fileServiceProperties&#34;, FileServicePropertiesArgs.builder()        
+ *             .accountName(&#34;sto8607&#34;)
+ *             .fileServicesName(&#34;default&#34;)
+ *             .protocolSettings(Map.of(&#34;smb&#34;, Map.of(&#34;multichannel&#34;, Map.of(&#34;enabled&#34;, true))))
+ *             .resourceGroupName(&#34;res4410&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PutFileServices_EnableSecureSmbFeatures
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileServiceProperties = new FileServiceProperties(&#34;fileServiceProperties&#34;, FileServicePropertiesArgs.builder()        
+ *             .accountName(&#34;sto8607&#34;)
+ *             .fileServicesName(&#34;default&#34;)
+ *             .protocolSettings(Map.of(&#34;smb&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;authenticationMethods&#34;, &#34;NTLMv2;Kerberos&#34;),
+ *                 Map.entry(&#34;channelEncryption&#34;, &#34;AES-128-CCM;AES-128-GCM;AES-256-GCM&#34;),
+ *                 Map.entry(&#34;kerberosTicketEncryption&#34;, &#34;RC4-HMAC;AES-256&#34;),
+ *                 Map.entry(&#34;versions&#34;, &#34;SMB2.1;SMB3.0;SMB3.1.1&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;res4410&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Backups_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backup = new Backup(&#34;backup&#34;, BackupArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .backupName(&#34;backup1&#34;)
+ *             .label(&#34;myLabel&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .poolName(&#34;pool1&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .volumeName(&#34;volume1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

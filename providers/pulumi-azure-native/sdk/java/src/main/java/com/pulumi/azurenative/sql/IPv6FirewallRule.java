@@ -20,6 +20,62 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01-preview.
  * 
  * ## Example Usage
+ * ### Create an IPv6 firewall rule max/min
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iPv6FirewallRule = new IPv6FirewallRule(&#34;iPv6FirewallRule&#34;, IPv6FirewallRuleArgs.builder()        
+ *             .endIPv6Address(&#34;0000:0000:0000:0000:0000:ffff:0000:0003&#34;)
+ *             .firewallRuleName(&#34;firewallrulecrudtest-5370&#34;)
+ *             .resourceGroupName(&#34;firewallrulecrudtest-12&#34;)
+ *             .serverName(&#34;firewallrulecrudtest-6285&#34;)
+ *             .startIPv6Address(&#34;0000:0000:0000:0000:0000:ffff:0000:0003&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update an IPv6 firewall rule max/min
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iPv6FirewallRule = new IPv6FirewallRule(&#34;iPv6FirewallRule&#34;, IPv6FirewallRuleArgs.builder()        
+ *             .endIPv6Address(&#34;0000:0000:0000:0000:0000:ffff:0000:0001&#34;)
+ *             .firewallRuleName(&#34;firewallrulecrudtest-3927&#34;)
+ *             .resourceGroupName(&#34;firewallrulecrudtest-12&#34;)
+ *             .serverName(&#34;firewallrulecrudtest-6285&#34;)
+ *             .startIPv6Address(&#34;0000:0000:0000:0000:0000:ffff:0000:0001&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

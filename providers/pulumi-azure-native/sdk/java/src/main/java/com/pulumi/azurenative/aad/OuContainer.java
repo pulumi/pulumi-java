@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Domain Service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ouContainer = new OuContainer(&#34;ouContainer&#34;, OuContainerArgs.builder()        
+ *             .accountName(&#34;AccountName1&#34;)
+ *             .domainServiceName(&#34;OuContainer.com&#34;)
+ *             .ouContainerName(&#34;OuContainer1&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;OuContainerResourceGroup&#34;)
+ *             .spn(&#34;Spn1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

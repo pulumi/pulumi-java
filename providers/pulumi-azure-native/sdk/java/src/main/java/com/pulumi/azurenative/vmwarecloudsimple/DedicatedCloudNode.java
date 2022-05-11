@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-04-01.
  * 
  * ## Example Usage
+ * ### CreateDedicatedCloudNode
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dedicatedCloudNode = new DedicatedCloudNode(&#34;dedicatedCloudNode&#34;, DedicatedCloudNodeArgs.builder()        
+ *             .availabilityZoneId(&#34;az1&#34;)
+ *             .dedicatedCloudNodeName(&#34;myNode&#34;)
+ *             .id(&#34;general&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .name(&#34;CS28-Node&#34;)
+ *             .nodesCount(1)
+ *             .placementGroupId(&#34;n1&#34;)
+ *             .purchaseId(&#34;56acbd46-3d36-4bbf-9b08-57c30fdf6932&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;VMware_CloudSimple_CS28&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

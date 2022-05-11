@@ -28,6 +28,106 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Creates specific policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .customRules(Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, &#34;Block&#34;),
+ *                 Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;matchConditions&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;matchValue&#34;, &#34;CH&#34;),
+ *                         Map.entry(&#34;matchVariable&#34;, &#34;RemoteAddr&#34;),
+ *                         Map.entry(&#34;negateCondition&#34;, false),
+ *                         Map.entry(&#34;operator&#34;, &#34;GeoMatch&#34;),
+ *                         Map.entry(&#34;transforms&#34;, )
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;matchValue&#34;, &#34;windows&#34;),
+ *                         Map.entry(&#34;matchVariable&#34;, &#34;RequestHeader&#34;),
+ *                         Map.entry(&#34;negateCondition&#34;, false),
+ *                         Map.entry(&#34;operator&#34;, &#34;Contains&#34;),
+ *                         Map.entry(&#34;selector&#34;, &#34;UserAgent&#34;),
+ *                         Map.entry(&#34;transforms&#34;, )
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;matchValue&#34;,                         
+ *                             &#34;&lt;?php&#34;,
+ *                             &#34;?&gt;&#34;),
+ *                         Map.entry(&#34;matchVariable&#34;, &#34;QueryString&#34;),
+ *                         Map.entry(&#34;negateCondition&#34;, false),
+ *                         Map.entry(&#34;operator&#34;, &#34;Contains&#34;),
+ *                         Map.entry(&#34;selector&#34;, &#34;search&#34;),
+ *                         Map.entry(&#34;transforms&#34;,                         
+ *                             &#34;UrlDecode&#34;,
+ *                             &#34;Lowercase&#34;)
+ *                     )),
+ *                 Map.entry(&#34;name&#34;, &#34;CustomRule1&#34;),
+ *                 Map.entry(&#34;priority&#34;, 2)
+ *             )))
+ *             .location(&#34;WestUs&#34;)
+ *             .managedRules(Map.of(&#34;managedRuleSets&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;ruleGroupOverrides&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;ruleGroupName&#34;, &#34;Group1&#34;),
+ *                     Map.entry(&#34;rules&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;action&#34;, &#34;Redirect&#34;),
+ *                             Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                             Map.entry(&#34;ruleId&#34;, &#34;GROUP1-0001&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;enabledState&#34;, &#34;Disabled&#34;),
+ *                             Map.entry(&#34;ruleId&#34;, &#34;GROUP1-0002&#34;)
+ *                         ))
+ *                 )),
+ *                 Map.entry(&#34;ruleSetType&#34;, &#34;DefaultRuleSet&#34;),
+ *                 Map.entry(&#34;ruleSetVersion&#34;, &#34;preview-1.0&#34;)
+ *             )))
+ *             .policyName(&#34;MicrosoftCdnWafPolicy&#34;)
+ *             .policySettings(Map.ofEntries(
+ *                 Map.entry(&#34;defaultCustomBlockResponseBody&#34;, &#34;PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==&#34;),
+ *                 Map.entry(&#34;defaultCustomBlockResponseStatusCode&#34;, 200),
+ *                 Map.entry(&#34;defaultRedirectUrl&#34;, &#34;http://www.bing.com&#34;)
+ *             ))
+ *             .rateLimitRules(Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, &#34;Block&#34;),
+ *                 Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;matchConditions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;matchValue&#34;,                     
+ *                         &#34;192.168.1.0/24&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;matchVariable&#34;, &#34;RemoteAddr&#34;),
+ *                     Map.entry(&#34;negateCondition&#34;, false),
+ *                     Map.entry(&#34;operator&#34;, &#34;IPMatch&#34;),
+ *                     Map.entry(&#34;transforms&#34;, )
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;RateLimitRule1&#34;),
+ *                 Map.entry(&#34;priority&#34;, 1),
+ *                 Map.entry(&#34;rateLimitDurationInMinutes&#34;, 0),
+ *                 Map.entry(&#34;rateLimitThreshold&#34;, 1000)
+ *             )))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard_Microsoft&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

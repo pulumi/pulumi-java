@@ -24,6 +24,90 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a job step with all properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobStep = new JobStep(&#34;jobStep&#34;, JobStepArgs.builder()        
+ *             .action(Map.ofEntries(
+ *                 Map.entry(&#34;source&#34;, &#34;Inline&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;TSql&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;select 2&#34;)
+ *             ))
+ *             .credential(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1&#34;)
+ *             .executionOptions(Map.ofEntries(
+ *                 Map.entry(&#34;initialRetryIntervalSeconds&#34;, 11),
+ *                 Map.entry(&#34;maximumRetryIntervalSeconds&#34;, 222),
+ *                 Map.entry(&#34;retryAttempts&#34;, 42),
+ *                 Map.entry(&#34;retryIntervalBackoffMultiplier&#34;, 3),
+ *                 Map.entry(&#34;timeoutSeconds&#34;, 1234)
+ *             ))
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .jobName(&#34;job1&#34;)
+ *             .output(Map.ofEntries(
+ *                 Map.entry(&#34;credential&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0&#34;),
+ *                 Map.entry(&#34;databaseName&#34;, &#34;database3&#34;),
+ *                 Map.entry(&#34;resourceGroupName&#34;, &#34;group3&#34;),
+ *                 Map.entry(&#34;schemaName&#34;, &#34;myschema1234&#34;),
+ *                 Map.entry(&#34;serverName&#34;, &#34;server3&#34;),
+ *                 Map.entry(&#34;subscriptionId&#34;, &#34;3501b905-a848-4b5d-96e8-b253f62d735a&#34;),
+ *                 Map.entry(&#34;tableName&#34;, &#34;mytable5678&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;SqlDatabase&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .serverName(&#34;server1&#34;)
+ *             .stepId(1)
+ *             .stepName(&#34;step1&#34;)
+ *             .targetGroup(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a job step with minimal properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobStep = new JobStep(&#34;jobStep&#34;, JobStepArgs.builder()        
+ *             .action(Map.of(&#34;value&#34;, &#34;select 1&#34;))
+ *             .credential(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0&#34;)
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .jobName(&#34;job1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .serverName(&#34;server1&#34;)
+ *             .stepName(&#34;step1&#34;)
+ *             .targetGroup(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

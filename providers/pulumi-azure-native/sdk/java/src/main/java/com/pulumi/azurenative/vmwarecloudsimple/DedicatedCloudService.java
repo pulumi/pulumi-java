@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-04-01.
  * 
  * ## Example Usage
+ * ### CreateDedicatedCloudService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dedicatedCloudService = new DedicatedCloudService(&#34;dedicatedCloudService&#34;, DedicatedCloudServiceArgs.builder()        
+ *             .dedicatedCloudServiceName(&#34;myService&#34;)
+ *             .gatewaySubnet(&#34;10.0.0.0&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

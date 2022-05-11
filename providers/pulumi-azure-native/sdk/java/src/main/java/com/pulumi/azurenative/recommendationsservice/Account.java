@@ -23,6 +23,41 @@ import javax.annotation.Nullable;
  * API Version: 2022-02-01.
  * 
  * ## Example Usage
+ * ### Create or update RecommendationsService Account resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;sampleAccount&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, &#34;Capacity&#34;),
+ *                 Map.entry(&#34;endpointAuthentications&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;aadTenantID&#34;, &#34;tenant&#34;),
+ *                     Map.entry(&#34;principalID&#34;, &#34;oid&#34;),
+ *                     Map.entry(&#34;principalType&#34;, &#34;User&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Prod&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### ComponentCurrentBillingFeaturesUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var componentCurrentBillingFeature = new ComponentCurrentBillingFeature(&#34;componentCurrentBillingFeature&#34;, ComponentCurrentBillingFeatureArgs.builder()        
+ *             .currentBillingFeatures(            
+ *                 &#34;Basic&#34;,
+ *                 &#34;Application Insights Enterprise&#34;)
+ *             .dataVolumeCap(Map.ofEntries(
+ *                 Map.entry(&#34;cap&#34;, 100),
+ *                 Map.entry(&#34;stopSendNotificationWhenHitCap&#34;, true)
+ *             ))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

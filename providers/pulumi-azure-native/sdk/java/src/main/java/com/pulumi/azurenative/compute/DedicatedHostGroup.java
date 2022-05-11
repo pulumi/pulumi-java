@@ -25,6 +25,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create or update a dedicated host group.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dedicatedHostGroup = new DedicatedHostGroup(&#34;dedicatedHostGroup&#34;, DedicatedHostGroupArgs.builder()        
+ *             .hostGroupName(&#34;myDedicatedHostGroup&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .platformFaultDomainCount(3)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .supportAutomaticPlacement(true)
+ *             .tags(Map.of(&#34;department&#34;, &#34;finance&#34;))
+ *             .zones(&#34;1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

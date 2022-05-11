@@ -23,6 +23,61 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### Formulas_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var formula = new Formula(&#34;formula&#34;, FormulaArgs.builder()        
+ *             .description(&#34;Formula using a Linux base&#34;)
+ *             .formulaContent(Map.ofEntries(
+ *                 Map.entry(&#34;allowClaim&#34;, false),
+ *                 Map.entry(&#34;artifacts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;artifactId&#34;, &#34;/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs&#34;),
+ *                     Map.entry(&#34;parameters&#34;, )
+ *                 )),
+ *                 Map.entry(&#34;disallowPublicIpAddress&#34;, true),
+ *                 Map.entry(&#34;galleryImageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;0001-com-ubuntu-server-groovy&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;20_10&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;isAuthenticationWithSshKey&#34;, false),
+ *                 Map.entry(&#34;labSubnetName&#34;, &#34;Dtl{labName}Subnet&#34;),
+ *                 Map.entry(&#34;labVirtualNetworkId&#34;, &#34;/virtualnetworks/dtl{labName}&#34;),
+ *                 Map.entry(&#34;location&#34;, &#34;{location}&#34;),
+ *                 Map.entry(&#34;networkInterface&#34;, Map.of(&#34;sharedPublicIpAddressConfiguration&#34;, Map.of(&#34;inboundNatRules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;backendPort&#34;, 22),
+ *                     Map.entry(&#34;transportProtocol&#34;, &#34;Tcp&#34;)
+ *                 )))),
+ *                 Map.entry(&#34;notes&#34;, &#34;Ubuntu Server 20.10&#34;),
+ *                 Map.entry(&#34;size&#34;, &#34;Standard_B1ms&#34;),
+ *                 Map.entry(&#34;storageType&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;userName&#34;, &#34;user&#34;)
+ *             ))
+ *             .labName(&#34;{labName}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{formulaName}&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

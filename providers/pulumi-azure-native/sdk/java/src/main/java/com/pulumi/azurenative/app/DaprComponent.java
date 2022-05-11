@@ -24,6 +24,60 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or update dapr component
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var daprComponent = new DaprComponent(&#34;daprComponent&#34;, DaprComponentArgs.builder()        
+ *             .componentType(&#34;state.azure.cosmosdb&#34;)
+ *             .environmentName(&#34;myenvironment&#34;)
+ *             .ignoreErrors(false)
+ *             .initTimeout(&#34;50s&#34;)
+ *             .metadata(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;url&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;&lt;COSMOS-URL&gt;&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;database&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;itemsDB&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;collection&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;items&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;masterkey&#34;),
+ *                     Map.entry(&#34;secretRef&#34;, &#34;masterkey&#34;)
+ *                 ))
+ *             .name(&#34;reddog&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .scopes(            
+ *                 &#34;container-app-1&#34;,
+ *                 &#34;container-app-2&#34;)
+ *             .secrets(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;masterkey&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;keyvalue&#34;)
+ *             ))
+ *             .version(&#34;v1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

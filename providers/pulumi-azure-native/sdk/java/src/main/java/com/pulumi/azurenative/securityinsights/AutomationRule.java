@@ -26,6 +26,64 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates an automation rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var automationRule = new AutomationRule(&#34;automationRule&#34;, AutomationRuleArgs.builder()        
+ *             .actions(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;actionConfiguration&#34;, Map.of(&#34;severity&#34;, &#34;High&#34;)),
+ *                     Map.entry(&#34;actionType&#34;, &#34;ModifyProperties&#34;),
+ *                     Map.entry(&#34;order&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;actionConfiguration&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;logicAppResourceId&#34;, &#34;/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook&#34;),
+ *                         Map.entry(&#34;tenantId&#34;, &#34;ee48efaf-50c6-411b-9345-b2bdc3eb4abc&#34;)
+ *                     )),
+ *                     Map.entry(&#34;actionType&#34;, &#34;RunPlaybook&#34;),
+ *                     Map.entry(&#34;order&#34;, 2)
+ *                 ))
+ *             .automationRuleId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .displayName(&#34;High severity incidents escalation&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .order(1)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .triggeringLogic(Map.ofEntries(
+ *                 Map.entry(&#34;conditions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;conditionProperties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;operator&#34;, &#34;Contains&#34;),
+ *                         Map.entry(&#34;propertyName&#34;, &#34;IncidentRelatedAnalyticRuleIds&#34;),
+ *                         Map.entry(&#34;propertyValues&#34;,                         
+ *                             &#34;/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/fab3d2d4-747f-46a7-8ef0-9c0be8112bf7&#34;,
+ *                             &#34;/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a&#34;)
+ *                     )),
+ *                     Map.entry(&#34;conditionType&#34;, &#34;Property&#34;)
+ *                 )),
+ *                 Map.entry(&#34;isEnabled&#34;, true),
+ *                 Map.entry(&#34;triggersOn&#34;, &#34;Incidents&#34;),
+ *                 Map.entry(&#34;triggersWhen&#34;, &#34;Created&#34;)
+ *             ))
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

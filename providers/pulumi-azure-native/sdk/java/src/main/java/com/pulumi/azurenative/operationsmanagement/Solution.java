@@ -23,6 +23,47 @@ import javax.annotation.Nullable;
  * API Version: 2015-11-01-preview.
  * 
  * ## Example Usage
+ * ### SolutionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var solution = new Solution(&#34;solution&#34;, SolutionArgs.builder()        
+ *             .location(&#34;East US&#34;)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;name1&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;product1&#34;),
+ *                 Map.entry(&#34;promotionCode&#34;, &#34;promocode1&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;publisher1&#34;)
+ *             ))
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;containedResources&#34;,                 
+ *                     &#34;/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource1&#34;,
+ *                     &#34;/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource2&#34;),
+ *                 Map.entry(&#34;referencedResources&#34;,                 
+ *                     &#34;/subscriptions/sub2/resourceGroups/rg2/providers/provider1/resources/resource2&#34;,
+ *                     &#34;/subscriptions/sub2/resourceGroups/rg2/providers/provider2/resources/resource3&#34;),
+ *                 Map.entry(&#34;workspaceResourceId&#34;, &#34;/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .solutionName(&#34;solution1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

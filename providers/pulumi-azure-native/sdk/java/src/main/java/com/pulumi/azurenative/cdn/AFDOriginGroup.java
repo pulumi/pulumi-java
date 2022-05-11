@@ -25,6 +25,44 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### AFDOriginGroups_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var afdOriginGroup = new AFDOriginGroup(&#34;afdOriginGroup&#34;, AFDOriginGroupArgs.builder()        
+ *             .healthProbeSettings(Map.ofEntries(
+ *                 Map.entry(&#34;probeIntervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;probePath&#34;, &#34;/path2&#34;),
+ *                 Map.entry(&#34;probeProtocol&#34;, &#34;NotSet&#34;),
+ *                 Map.entry(&#34;probeRequestType&#34;, &#34;NotSet&#34;)
+ *             ))
+ *             .loadBalancingSettings(Map.ofEntries(
+ *                 Map.entry(&#34;additionalLatencyInMilliseconds&#34;, 1000),
+ *                 Map.entry(&#34;sampleSize&#34;, 3),
+ *                 Map.entry(&#34;successfulSamplesRequired&#34;, 3)
+ *             ))
+ *             .originGroupName(&#34;origingroup1&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .trafficRestorationTimeToHealedOrNewEndpointsInMinutes(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

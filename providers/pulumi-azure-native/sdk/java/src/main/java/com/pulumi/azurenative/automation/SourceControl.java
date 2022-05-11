@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update a source control
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sourceControl = new SourceControl(&#34;sourceControl&#34;, SourceControlArgs.builder()        
+ *             .autoSync(true)
+ *             .automationAccountName(&#34;sampleAccount9&#34;)
+ *             .branch(&#34;master&#34;)
+ *             .description(&#34;my description&#34;)
+ *             .folderPath(&#34;/folderOne/folderTwo&#34;)
+ *             .publishRunbook(true)
+ *             .repoUrl(&#34;https://sampleUser.visualstudio.com/myProject/_git/myRepository&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .securityToken(Map.ofEntries(
+ *                 Map.entry(&#34;accessToken&#34;, &#34;3a326f7a0dcd343ea58fee21f2fd5fb4c1234567&#34;),
+ *                 Map.entry(&#34;tokenType&#34;, &#34;PersonalAccessToken&#34;)
+ *             ))
+ *             .sourceControlName(&#34;sampleSourceControl&#34;)
+ *             .sourceType(&#34;VsoGit&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

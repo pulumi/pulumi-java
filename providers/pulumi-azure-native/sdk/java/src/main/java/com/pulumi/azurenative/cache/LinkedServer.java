@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### LinkedServer_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedServer = new LinkedServer(&#34;linkedServer&#34;, LinkedServerArgs.builder()        
+ *             .linkedRedisCacheId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2&#34;)
+ *             .linkedRedisCacheLocation(&#34;West US&#34;)
+ *             .linkedServerName(&#34;cache2&#34;)
+ *             .name(&#34;cache1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serverRole(&#34;Secondary&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

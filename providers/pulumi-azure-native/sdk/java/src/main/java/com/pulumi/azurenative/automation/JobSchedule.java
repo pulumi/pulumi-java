@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create a job schedule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobSchedule = new JobSchedule(&#34;jobSchedule&#34;, JobScheduleArgs.builder()        
+ *             .automationAccountName(&#34;ContoseAutomationAccount&#34;)
+ *             .jobScheduleId(&#34;0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;jobscheduletag01&#34;, &#34;jobschedulevalue01&#34;),
+ *                 Map.entry(&#34;jobscheduletag02&#34;, &#34;jobschedulevalue02&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .runbook(Map.of(&#34;name&#34;, &#34;TestRunbook&#34;))
+ *             .schedule(Map.of(&#34;name&#34;, &#34;ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

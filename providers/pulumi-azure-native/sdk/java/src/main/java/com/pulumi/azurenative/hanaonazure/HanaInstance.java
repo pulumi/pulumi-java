@@ -25,6 +25,39 @@ import javax.annotation.Nullable;
  * API Version: 2017-11-03-preview.
  * 
  * ## Example Usage
+ * ### Create a HANA instance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hanaInstance = new HanaInstance(&#34;hanaInstance&#34;, HanaInstanceArgs.builder()        
+ *             .hanaInstanceName(&#34;myHanaInstance&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.of(&#34;ipAddress&#34;, &#34;100.100.100.100&#34;)))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;computerName&#34;, &#34;myComputerName&#34;),
+ *                 Map.entry(&#34;sshPublicKey&#34;, &#34;AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L&#34;)
+ *             ))
+ *             .partnerNodeId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

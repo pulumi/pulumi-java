@@ -24,6 +24,46 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-04-preview.
  * 
  * ## Example Usage
+ * ### QuantumWorkspacesPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .providers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;providerId&#34;, &#34;Honeywell&#34;),
+ *                     Map.entry(&#34;providerSku&#34;, &#34;Basic&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;providerId&#34;, &#34;IonQ&#34;),
+ *                     Map.entry(&#34;providerSku&#34;, &#34;Basic&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;providerId&#34;, &#34;OneQBit&#34;),
+ *                     Map.entry(&#34;providerSku&#34;, &#34;Basic&#34;)
+ *                 ))
+ *             .resourceGroupName(&#34;quantumResourcegroup&#34;)
+ *             .storageAccount(&#34;/subscriptions/1C4B2828-7D49-494F-933D-061373BE28C2/resourceGroups/quantumResourcegroup/providers/Microsoft.Storage/storageAccounts/testStorageAccount&#34;)
+ *             .workspaceName(&#34;quantumworkspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

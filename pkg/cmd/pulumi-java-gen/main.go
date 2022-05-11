@@ -15,6 +15,7 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/pkg/errors"
 	"gopkg.in/yaml.v3"
 
 	javagen "github.com/pulumi/pulumi-java/pkg/codegen/java"
@@ -78,17 +79,25 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 		}
 		stream = resp.Body
 	} else {
-		jsonFile, err := os.Open(path)
+		file, err := os.Open(path)
 		if err != nil {
 			return nil, err
 		}
-		stream = jsonFile
+		stream = file
 	}
+
 	defer stream.Close()
-	dec := json.NewDecoder(stream)
 	var result pschema.PackageSpec
-	if err := dec.Decode(&result); err != nil {
-		return nil, err
+	if strings.HasSuffix(path, ".yaml") {
+		dec := yaml.NewDecoder(stream)
+		if err := dec.Decode(&result); err != nil {
+			return nil, errors.Wrap(err, "reading YAML schema")
+		}
+	} else {
+		dec := json.NewDecoder(stream)
+		if err := dec.Decode(&result); err != nil {
+			return nil, errors.Wrap(err, "reading JSON schema")
+		}
 	}
 	return &result, nil
 }

@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### RelayNamespaceCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespace = new Namespace(&#34;namespace&#34;, NamespaceArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .namespaceName(&#34;example-RelayNamespace-01&#34;)
+ *             .resourceGroupName(&#34;resourcegroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -202,7 +236,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:relay/v20160701:Namespace").build()),
                 Output.of(Alias.builder().type("azure-native:relay/v20170401:Namespace").build()),
-                Output.of(Alias.builder().type("azure-native:relay/v20180101preview:Namespace").build())
+                Output.of(Alias.builder().type("azure-native:relay/v20180101preview:Namespace").build()),
+                Output.of(Alias.builder().type("azure-native:relay/v20211101:Namespace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

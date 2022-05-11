@@ -26,6 +26,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-20.
  * 
  * ## Example Usage
+ * ### PrivateClouds_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateCloud = new PrivateCloud(&#34;privateCloud&#34;, PrivateCloudArgs.builder()        
+ *             .location(&#34;eastus2&#34;)
+ *             .managementCluster(Map.of(&#34;clusterSize&#34;, 4))
+ *             .networkBlock(&#34;192.168.48.0/22&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;AV36&#34;))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

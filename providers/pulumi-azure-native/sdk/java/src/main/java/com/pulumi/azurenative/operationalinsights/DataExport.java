@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### DataExportCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataExport = new DataExport(&#34;dataExport&#34;, DataExportArgs.builder()        
+ *             .dataExportName(&#34;export1&#34;)
+ *             .resourceGroupName(&#34;RgTest1&#34;)
+ *             .resourceId(&#34;/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test&#34;)
+ *             .tableNames(&#34;Heartbeat&#34;)
+ *             .workspaceName(&#34;DeWnTest1234&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

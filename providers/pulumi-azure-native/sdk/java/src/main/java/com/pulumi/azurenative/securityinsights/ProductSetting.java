@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Update EyesOn settings.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var productSetting = new ProductSetting(&#34;productSetting&#34;, ProductSettingArgs.builder()        
+ *             .kind(&#34;EyesOn&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .settingsName(&#34;EyesOn&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

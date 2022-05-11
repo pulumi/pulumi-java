@@ -23,6 +23,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateDiagnostic
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diagnostic = new Diagnostic(&#34;diagnostic&#34;, DiagnosticArgs.builder()        
+ *             .alwaysLog(&#34;allErrors&#34;)
+ *             .backend(Map.ofEntries(
+ *                 Map.entry(&#34;request&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;body&#34;, Map.of(&#34;bytes&#34;, 512)),
+ *                     Map.entry(&#34;headers&#34;, &#34;Content-type&#34;)
+ *                 )),
+ *                 Map.entry(&#34;response&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;body&#34;, Map.of(&#34;bytes&#34;, 512)),
+ *                     Map.entry(&#34;headers&#34;, &#34;Content-type&#34;)
+ *                 ))
+ *             ))
+ *             .diagnosticId(&#34;applicationinsights&#34;)
+ *             .frontend(Map.ofEntries(
+ *                 Map.entry(&#34;request&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;body&#34;, Map.of(&#34;bytes&#34;, 512)),
+ *                     Map.entry(&#34;headers&#34;, &#34;Content-type&#34;)
+ *                 )),
+ *                 Map.entry(&#34;response&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;body&#34;, Map.of(&#34;bytes&#34;, 512)),
+ *                     Map.entry(&#34;headers&#34;, &#34;Content-type&#34;)
+ *                 ))
+ *             ))
+ *             .loggerId(&#34;/loggers/azuremonitor&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sampling(Map.ofEntries(
+ *                 Map.entry(&#34;percentage&#34;, 50),
+ *                 Map.entry(&#34;samplingType&#34;, &#34;fixed&#34;)
+ *             ))
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

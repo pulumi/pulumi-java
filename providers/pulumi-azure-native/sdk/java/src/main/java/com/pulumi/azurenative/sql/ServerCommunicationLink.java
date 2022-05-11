@@ -19,6 +19,33 @@ import javax.annotation.Nullable;
  * API Version: 2014-04-01.
  * 
  * ## Example Usage
+ * ### Create a server communication link
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverCommunicationLink = new ServerCommunicationLink(&#34;serverCommunicationLink&#34;, ServerCommunicationLinkArgs.builder()        
+ *             .communicationLinkName(&#34;link1&#34;)
+ *             .partnerServer(&#34;sqldcrudtest-test&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-7398&#34;)
+ *             .serverName(&#34;sqlcrudtest-4645&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,133 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### Create a new vault or update an existing vault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vault = new Vault(&#34;vault&#34;, VaultArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;accessPolicies&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;objectId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;),
+ *                     Map.entry(&#34;permissions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;certificates&#34;,                         
+ *                             &#34;get&#34;,
+ *                             &#34;list&#34;,
+ *                             &#34;delete&#34;,
+ *                             &#34;create&#34;,
+ *                             &#34;import&#34;,
+ *                             &#34;update&#34;,
+ *                             &#34;managecontacts&#34;,
+ *                             &#34;getissuers&#34;,
+ *                             &#34;listissuers&#34;,
+ *                             &#34;setissuers&#34;,
+ *                             &#34;deleteissuers&#34;,
+ *                             &#34;manageissuers&#34;,
+ *                             &#34;recover&#34;,
+ *                             &#34;purge&#34;),
+ *                         Map.entry(&#34;keys&#34;,                         
+ *                             &#34;encrypt&#34;,
+ *                             &#34;decrypt&#34;,
+ *                             &#34;wrapKey&#34;,
+ *                             &#34;unwrapKey&#34;,
+ *                             &#34;sign&#34;,
+ *                             &#34;verify&#34;,
+ *                             &#34;get&#34;,
+ *                             &#34;list&#34;,
+ *                             &#34;create&#34;,
+ *                             &#34;update&#34;,
+ *                             &#34;import&#34;,
+ *                             &#34;delete&#34;,
+ *                             &#34;backup&#34;,
+ *                             &#34;restore&#34;,
+ *                             &#34;recover&#34;,
+ *                             &#34;purge&#34;),
+ *                         Map.entry(&#34;secrets&#34;,                         
+ *                             &#34;get&#34;,
+ *                             &#34;list&#34;,
+ *                             &#34;set&#34;,
+ *                             &#34;delete&#34;,
+ *                             &#34;backup&#34;,
+ *                             &#34;restore&#34;,
+ *                             &#34;recover&#34;,
+ *                             &#34;purge&#34;)
+ *                     )),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;)
+ *                 )),
+ *                 Map.entry(&#34;enabledForDeployment&#34;, true),
+ *                 Map.entry(&#34;enabledForDiskEncryption&#34;, true),
+ *                 Map.entry(&#34;enabledForTemplateDeployment&#34;, true),
+ *                 Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;family&#34;, &#34;A&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;standard&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sample-resource-group&#34;)
+ *             .vaultName(&#34;sample-vault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a vault with network acls
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vault = new Vault(&#34;vault&#34;, VaultArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;enabledForDeployment&#34;, true),
+ *                 Map.entry(&#34;enabledForDiskEncryption&#34;, true),
+ *                 Map.entry(&#34;enabledForTemplateDeployment&#34;, true),
+ *                 Map.entry(&#34;networkAcls&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;bypass&#34;, &#34;AzureServices&#34;),
+ *                     Map.entry(&#34;defaultAction&#34;, &#34;Deny&#34;),
+ *                     Map.entry(&#34;ipRules&#34;,                     
+ *                         Map.of(&#34;value&#34;, &#34;124.56.78.91&#34;),
+ *                         Map.of(&#34;value&#34;, &#34;&#39;10.91.4.0/24&#39;&#34;)),
+ *                     Map.entry(&#34;virtualNetworkRules&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#34;))
+ *                 )),
+ *                 Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;family&#34;, &#34;A&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;standard&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sample-resource-group&#34;)
+ *             .vaultName(&#34;sample-vault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

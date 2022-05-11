@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### Solutions_Put
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var solution = new Solution(&#34;solution&#34;, SolutionArgs.builder()        
+ *             .migrateProjectName(&#34;project01&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;goal&#34;, &#34;Databases&#34;),
+ *                 Map.entry(&#34;purpose&#34;, &#34;Assessment&#34;),
+ *                 Map.entry(&#34;tool&#34;, &#34;DataMigrationAssistant&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .solutionName(&#34;dbsolution&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### WorkloadNetworks_CreateDnsZone
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadNetworkDnsZone = new WorkloadNetworkDnsZone(&#34;workloadNetworkDnsZone&#34;, WorkloadNetworkDnsZoneArgs.builder()        
+ *             .displayName(&#34;dnsZone1&#34;)
+ *             .dnsServerIps(&#34;1.1.1.1&#34;)
+ *             .dnsZoneId(&#34;dnsZone1&#34;)
+ *             .domain()
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .revision(1)
+ *             .sourceIp(&#34;8.8.8.8&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

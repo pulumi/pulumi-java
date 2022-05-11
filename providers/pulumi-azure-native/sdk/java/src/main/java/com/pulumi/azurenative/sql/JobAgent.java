@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a job agent
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobAgent = new JobAgent(&#34;jobAgent&#34;, JobAgentArgs.builder()        
+ *             .databaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1&#34;)
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .serverName(&#34;server1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

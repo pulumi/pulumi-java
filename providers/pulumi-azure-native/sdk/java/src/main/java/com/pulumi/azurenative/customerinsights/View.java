@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Views_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var view = new View(&#34;view&#34;, ViewArgs.builder()        
+ *             .definition(&#34;{\\\&#34;isProfileType\\\&#34;:false,\\\&#34;profileTypes\\\&#34;:[],\\\&#34;widgets\\\&#34;:[],\\\&#34;style\\\&#34;:[]}&#34;)
+ *             .displayName(Map.of(&#34;en&#34;, &#34;some name&#34;))
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .userId(&#34;testUser&#34;)
+ *             .viewName(&#34;testView&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

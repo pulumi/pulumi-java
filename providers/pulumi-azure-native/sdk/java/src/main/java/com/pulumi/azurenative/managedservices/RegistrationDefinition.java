@@ -22,6 +22,54 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### Put Registration Definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registrationDefinition = new RegistrationDefinition(&#34;registrationDefinition&#34;, RegistrationDefinitionArgs.builder()        
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;addesai-plan&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;marketplace-test&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;1.0.0&#34;)
+ *             ))
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authorizations&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;principalId&#34;, &#34;f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc&#34;),
+ *                         Map.entry(&#34;principalIdDisplayName&#34;, &#34;Support User&#34;),
+ *                         Map.entry(&#34;roleDefinitionId&#34;, &#34;acdd72a7-3385-48ef-bd42-f606fba81ae7&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;delegatedRoleDefinitionIds&#34;, &#34;b24988ac-6180-42a0-ab88-20f7382dd24c&#34;),
+ *                         Map.entry(&#34;principalId&#34;, &#34;f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc&#34;),
+ *                         Map.entry(&#34;principalIdDisplayName&#34;, &#34;User Access Administrator&#34;),
+ *                         Map.entry(&#34;roleDefinitionId&#34;, &#34;18d7d88d-d35e-4fb5-a5c3-7773c20a72d9&#34;)
+ *                     )),
+ *                 Map.entry(&#34;description&#34;, &#34;Tes1t&#34;),
+ *                 Map.entry(&#34;managedByTenantId&#34;, &#34;83abe5cd-bcc3-441a-bd86-e6a75360cecc&#34;),
+ *                 Map.entry(&#34;registrationDefinitionName&#34;, &#34;DefinitionName&#34;)
+ *             ))
+ *             .registrationDefinitionId(&#34;26c128c2-fefa-4340-9bb1-6e081c90ada2&#34;)
+ *             .scope(&#34;subscription/0afefe50-734e-4610-8a82-a144ahf49dea&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

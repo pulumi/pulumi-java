@@ -29,6 +29,125 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create connection monitor V1
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectionMonitor = new ConnectionMonitor(&#34;connectionMonitor&#34;, ConnectionMonitorArgs.builder()        
+ *             .connectionMonitorName(&#34;cm1&#34;)
+ *             .endpoints(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;source&#34;),
+ *                     Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;address&#34;, &#34;bing.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;destination&#34;)
+ *                 ))
+ *             .location(&#34;eastus&#34;)
+ *             .networkWatcherName(&#34;nw1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .testConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;tcp&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;),
+ *                 Map.entry(&#34;tcpConfiguration&#34;, Map.of(&#34;port&#34;, 80)),
+ *                 Map.entry(&#34;testFrequencySec&#34;, 60)
+ *             ))
+ *             .testGroups(Map.ofEntries(
+ *                 Map.entry(&#34;destinations&#34;, &#34;destination&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;tg&#34;),
+ *                 Map.entry(&#34;sources&#34;, &#34;source&#34;),
+ *                 Map.entry(&#34;testConfigurations&#34;, &#34;tcp&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create connection monitor V2
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectionMonitor = new ConnectionMonitor(&#34;connectionMonitor&#34;, ConnectionMonitorArgs.builder()        
+ *             .connectionMonitorName(&#34;cm1&#34;)
+ *             .endpoints(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;vm1&#34;),
+ *                     Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;filter&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;items&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;address&#34;, &#34;npmuser&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;AgentAddress&#34;)
+ *                         )),
+ *                         Map.entry(&#34;type&#34;, &#34;Include&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;CanaryWorkspaceVamshi&#34;),
+ *                     Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;address&#34;, &#34;bing.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;bing&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;address&#34;, &#34;google.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;google&#34;)
+ *                 ))
+ *             .networkWatcherName(&#34;nw1&#34;)
+ *             .outputs()
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .testConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;testConfig1&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;),
+ *                 Map.entry(&#34;tcpConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;disableTraceRoute&#34;, false),
+ *                     Map.entry(&#34;port&#34;, 80)
+ *                 )),
+ *                 Map.entry(&#34;testFrequencySec&#34;, 60)
+ *             ))
+ *             .testGroups(Map.ofEntries(
+ *                 Map.entry(&#34;destinations&#34;,                 
+ *                     &#34;bing&#34;,
+ *                     &#34;google&#34;),
+ *                 Map.entry(&#34;disable&#34;, false),
+ *                 Map.entry(&#34;name&#34;, &#34;test1&#34;),
+ *                 Map.entry(&#34;sources&#34;,                 
+ *                     &#34;vm1&#34;,
+ *                     &#34;CanaryWorkspaceVamshi&#34;),
+ *                 Map.entry(&#34;testConfigurations&#34;, &#34;testConfig1&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

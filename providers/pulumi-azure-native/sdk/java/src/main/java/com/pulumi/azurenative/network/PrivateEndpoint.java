@@ -26,6 +26,71 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create private endpoint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpoint = new PrivateEndpoint(&#34;privateEndpoint&#34;, PrivateEndpointArgs.builder()        
+ *             .location(&#34;eastus2euap&#34;)
+ *             .privateEndpointName(&#34;testPe&#34;)
+ *             .privateLinkServiceConnections(Map.ofEntries(
+ *                 Map.entry(&#34;groupIds&#34;, &#34;groupIdFromResource&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;testPlc&#34;),
+ *                 Map.entry(&#34;privateLinkServiceId&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls&#34;),
+ *                 Map.entry(&#34;requestMessage&#34;, &#34;Please approve my connection.&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnet(Map.of(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create private endpoint with manual approval connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpoint = new PrivateEndpoint(&#34;privateEndpoint&#34;, PrivateEndpointArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .manualPrivateLinkServiceConnections(Map.ofEntries(
+ *                 Map.entry(&#34;groupIds&#34;, &#34;groupIdFromResource&#34;),
+ *                 Map.entry(&#34;privateLinkServiceId&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls&#34;),
+ *                 Map.entry(&#34;requestMessage&#34;, &#34;Please manually approve my connection.&#34;)
+ *             ))
+ *             .privateEndpointName(&#34;testPe&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnet(Map.of(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

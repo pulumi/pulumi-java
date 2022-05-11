@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### TableOperationPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var table = new Table(&#34;table&#34;, TableArgs.builder()        
+ *             .accountName(&#34;sto328&#34;)
+ *             .resourceGroupName(&#34;res3376&#34;)
+ *             .tableName(&#34;table6185&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

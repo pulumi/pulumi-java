@@ -32,6 +32,88 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create subnet
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subnet = new Subnet(&#34;subnet&#34;, SubnetArgs.builder()        
+ *             .addressPrefix(&#34;10.0.0.0/16&#34;)
+ *             .resourceGroupName(&#34;subnet-test&#34;)
+ *             .subnetName(&#34;subnet1&#34;)
+ *             .virtualNetworkName(&#34;vnetname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create subnet with a delegation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subnet = new Subnet(&#34;subnet&#34;, SubnetArgs.builder()        
+ *             .addressPrefix(&#34;10.0.0.0/16&#34;)
+ *             .resourceGroupName(&#34;subnet-test&#34;)
+ *             .subnetName(&#34;subnet1&#34;)
+ *             .virtualNetworkName(&#34;vnetname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create subnet with service endpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subnet = new Subnet(&#34;subnet&#34;, SubnetArgs.builder()        
+ *             .addressPrefix(&#34;10.0.0.0/16&#34;)
+ *             .resourceGroupName(&#34;subnet-test&#34;)
+ *             .serviceEndpoints(Map.of(&#34;service&#34;, &#34;Microsoft.Storage&#34;))
+ *             .subnetName(&#34;subnet1&#34;)
+ *             .virtualNetworkName(&#34;vnetname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-12-preview.
  * 
  * ## Example Usage
+ * ### FarmBeatsModels_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var farmBeatsModel = new FarmBeatsModel(&#34;farmBeatsModel&#34;, FarmBeatsModelArgs.builder()        
+ *             .farmBeatsResourceName(&#34;examples-farmbeatsResourceName&#34;)
+ *             .location(&#34;eastus2&#34;)
+ *             .resourceGroupName(&#34;examples-rg&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

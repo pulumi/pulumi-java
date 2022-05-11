@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15-preview.
  * 
  * ## Example Usage
+ * ### Create/Update Custom Location
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customLocation = new CustomLocation(&#34;customLocation&#34;, CustomLocationArgs.builder()        
+ *             .authentication(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;KubeConfig&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;&lt;base64 KubeConfig&gt;&#34;)
+ *             ))
+ *             .clusterExtensionIds(&#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kubernetes/connectedCluster/someCluster/Microsoft.KubernetesConfiguration/clusterExtensions/fooExtension&#34;)
+ *             .displayName(&#34;customLocationLocation01&#34;)
+ *             .hostResourceId(&#34;/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup/providers/Microsoft.ContainerService/managedClusters/cluster01&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .namespace(&#34;namespace01&#34;)
+ *             .resourceGroupName(&#34;testresourcegroup&#34;)
+ *             .resourceName(&#34;customLocation01&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

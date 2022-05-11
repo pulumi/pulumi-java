@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create IpAllocation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipAllocation = new IpAllocation(&#34;ipAllocation&#34;, IpAllocationArgs.builder()        
+ *             .allocationTags(Map.of(&#34;VNetID&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1&#34;))
+ *             .ipAllocationName(&#34;test-ipallocation&#34;)
+ *             .location(&#34;centraluseuap&#34;)
+ *             .prefix(&#34;3.2.5.0/24&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .type(&#34;Hypernet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

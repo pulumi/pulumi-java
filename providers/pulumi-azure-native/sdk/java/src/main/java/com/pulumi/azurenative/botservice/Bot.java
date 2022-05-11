@@ -23,6 +23,56 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Bot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bot = new Bot(&#34;bot&#34;, BotArgs.builder()        
+ *             .kind(&#34;sdk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;cmekKeyVaultUrl&#34;, &#34;https://myCmekKey&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;The description of the bot&#34;),
+ *                 Map.entry(&#34;developerAppInsightKey&#34;, &#34;appinsightskey&#34;),
+ *                 Map.entry(&#34;developerAppInsightsApiKey&#34;, &#34;appinsightsapikey&#34;),
+ *                 Map.entry(&#34;developerAppInsightsApplicationId&#34;, &#34;appinsightsappid&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;The Name of the bot&#34;),
+ *                 Map.entry(&#34;endpoint&#34;, &#34;http://mybot.coffee&#34;),
+ *                 Map.entry(&#34;iconUrl&#34;, &#34;http://myicon&#34;),
+ *                 Map.entry(&#34;isCmekEnabled&#34;, true),
+ *                 Map.entry(&#34;luisAppIds&#34;,                 
+ *                     &#34;luisappid1&#34;,
+ *                     &#34;luisappid2&#34;),
+ *                 Map.entry(&#34;luisKey&#34;, &#34;luiskey&#34;),
+ *                 Map.entry(&#34;msaAppId&#34;, &#34;exampleappid&#34;),
+ *                 Map.entry(&#34;publicNetworkAccess&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;schemaTransformationVersion&#34;, &#34;1.0&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;S1&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

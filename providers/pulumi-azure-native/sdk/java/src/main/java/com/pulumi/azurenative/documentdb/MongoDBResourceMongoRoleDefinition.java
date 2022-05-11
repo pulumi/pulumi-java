@@ -22,6 +22,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBMongoDBRoleDefinitionCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mongoDBResourceMongoRoleDefinition = new MongoDBResourceMongoRoleDefinition(&#34;mongoDBResourceMongoRoleDefinition&#34;, MongoDBResourceMongoRoleDefinitionArgs.builder()        
+ *             .accountName(&#34;myAccountName&#34;)
+ *             .databaseName(&#34;sales&#34;)
+ *             .mongoRoleDefinitionId(&#34;myMongoRoleDefinitionId&#34;)
+ *             .privileges(Map.ofEntries(
+ *                 Map.entry(&#34;actions&#34;,                 
+ *                     &#34;insert&#34;,
+ *                     &#34;find&#34;),
+ *                 Map.entry(&#34;resource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;collection&#34;, &#34;sales&#34;),
+ *                     Map.entry(&#34;db&#34;, &#34;sales&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .roleName(&#34;myRoleName&#34;)
+ *             .roles(Map.ofEntries(
+ *                 Map.entry(&#34;db&#34;, &#34;sales&#34;),
+ *                 Map.entry(&#34;role&#34;, &#34;myInheritedRole&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

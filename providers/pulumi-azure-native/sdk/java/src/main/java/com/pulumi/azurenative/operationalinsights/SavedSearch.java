@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### SavedSearchCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var savedSearch = new SavedSearch(&#34;savedSearch&#34;, SavedSearchArgs.builder()        
+ *             .category(&#34;Saved Search Test Category&#34;)
+ *             .displayName(&#34;Create or Update Saved Search Test&#34;)
+ *             .functionAlias(&#34;heartbeat_func&#34;)
+ *             .functionParameters(&#34;a:int=1&#34;)
+ *             .query(&#34;Heartbeat | summarize Count() by Computer | take a&#34;)
+ *             .resourceGroupName(&#34;TestRG&#34;)
+ *             .savedSearchId(&#34;00000000-0000-0000-0000-00000000000&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Group&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;Computer&#34;)
+ *             ))
+ *             .version(2)
+ *             .workspaceName(&#34;TestWS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

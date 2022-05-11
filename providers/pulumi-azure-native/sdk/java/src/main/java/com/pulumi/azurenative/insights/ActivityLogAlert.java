@@ -24,6 +24,142 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01.
  * 
  * ## Example Usage
+ * ### Create or update an Activity Log Alert rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var activityLogAlert = new ActivityLogAlert(&#34;activityLogAlert&#34;, ActivityLogAlertArgs.builder()        
+ *             .actions(Map.of(&#34;actionGroups&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup&#34;),
+ *                 Map.entry(&#34;webhookProperties&#34;, Map.of(&#34;sampleWebhookProperty&#34;, &#34;SamplePropertyValue&#34;))
+ *             )))
+ *             .activityLogAlertName(&#34;SampleActivityLogAlertRule&#34;)
+ *             .condition(Map.of(&#34;allOf&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;equals&#34;, &#34;Administrative&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;category&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;equals&#34;, &#34;Error&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;level&#34;)
+ *                 )))
+ *             .description(&#34;Description of sample Activity Log Alert rule.&#34;)
+ *             .enabled(true)
+ *             .location(&#34;Global&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .scopes(&#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an Activity Log Alert rule with &#39;anyOf&#39; condition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var activityLogAlert = new ActivityLogAlert(&#34;activityLogAlert&#34;, ActivityLogAlertArgs.builder()        
+ *             .actions(Map.of(&#34;actionGroups&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup&#34;),
+ *                 Map.entry(&#34;webhookProperties&#34;, Map.of(&#34;sampleWebhookProperty&#34;, &#34;SamplePropertyValue&#34;))
+ *             )))
+ *             .activityLogAlertName(&#34;SampleActivityLogAlertRuleWithAnyOfCondition&#34;)
+ *             .condition(Map.of(&#34;allOf&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;equals&#34;, &#34;ServiceHealth&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;category&#34;)
+ *                 ),
+ *                 Map.of(&#34;anyOf&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;equals&#34;, &#34;Incident&#34;),
+ *                         Map.entry(&#34;field&#34;, &#34;properties.incidentType&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;equals&#34;, &#34;Maintenance&#34;),
+ *                         Map.entry(&#34;field&#34;, &#34;properties.incidentType&#34;)
+ *                     ))))
+ *             .description(&#34;Description of sample Activity Log Alert rule with &#39;anyOf&#39; condition.&#34;)
+ *             .enabled(true)
+ *             .location(&#34;Global&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .scopes(&#34;subscriptions/187f412d-1758-44d9-b052-169e2564721d&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an Activity Log Alert rule with &#39;containsAny&#39;
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var activityLogAlert = new ActivityLogAlert(&#34;activityLogAlert&#34;, ActivityLogAlertArgs.builder()        
+ *             .actions(Map.of(&#34;actionGroups&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup&#34;),
+ *                 Map.entry(&#34;webhookProperties&#34;, Map.of(&#34;sampleWebhookProperty&#34;, &#34;SamplePropertyValue&#34;))
+ *             )))
+ *             .activityLogAlertName(&#34;SampleActivityLogAlertRuleWithContainsAny&#34;)
+ *             .condition(Map.of(&#34;allOf&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;equals&#34;, &#34;ServiceHealth&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;category&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;containsAny&#34;,                     
+ *                         &#34;North Europe&#34;,
+ *                         &#34;West Europe&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;properties.impactedServices[*].ImpactedRegions[*].RegionName&#34;)
+ *                 )))
+ *             .description(&#34;Description of sample Activity Log Alert rule with &#39;containsAny&#39;.&#34;)
+ *             .enabled(true)
+ *             .location(&#34;Global&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .scopes(&#34;subscriptions/187f412d-1758-44d9-b052-169e2564721d&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

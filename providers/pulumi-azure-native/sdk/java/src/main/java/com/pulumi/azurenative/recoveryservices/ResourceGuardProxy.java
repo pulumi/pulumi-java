@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create ResourceGuardProxy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var resourceGuardProxy = new ResourceGuardProxy(&#34;resourceGuardProxy&#34;, ResourceGuardProxyArgs.builder()        
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .resourceGuardProxyName(&#34;swaggerExample&#34;)
+ *             .vaultName(&#34;sampleVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

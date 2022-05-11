@@ -24,6 +24,67 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create a disk encryption set with key vault from a different subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diskEncryptionSet = new DiskEncryptionSet(&#34;diskEncryptionSet&#34;, DiskEncryptionSetArgs.builder()        
+ *             .activeKey(Map.of(&#34;keyUrl&#34;, &#34;https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}&#34;))
+ *             .diskEncryptionSetName(&#34;myDiskEncryptionSet&#34;)
+ *             .encryptionType(&#34;EncryptionAtRestWithCustomerKey&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a disk encryption set.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diskEncryptionSet = new DiskEncryptionSet(&#34;diskEncryptionSet&#34;, DiskEncryptionSetArgs.builder()        
+ *             .activeKey(Map.ofEntries(
+ *                 Map.entry(&#34;keyUrl&#34;, &#34;https://myvmvault.vault-int.azure-int.net/keys/{key}&#34;),
+ *                 Map.entry(&#34;sourceVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault&#34;))
+ *             ))
+ *             .diskEncryptionSetName(&#34;myDiskEncryptionSet&#34;)
+ *             .encryptionType(&#34;EncryptionAtRestWithCustomerKey&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

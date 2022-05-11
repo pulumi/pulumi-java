@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### PutAddOns
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var arcAddon = new ArcAddon(&#34;arcAddon&#34;, ArcAddonArgs.builder()        
+ *             .addonName(&#34;arcName&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .kind(&#34;ArcForKubernetes&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .resourceLocation(&#34;EastUS&#34;)
+ *             .resourceName(&#34;testedgedevice&#34;)
+ *             .roleName(&#34;KubernetesRole&#34;)
+ *             .subscriptionId(&#34;4385cf00-2d3a-425a-832f-f4285b1c9dce&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

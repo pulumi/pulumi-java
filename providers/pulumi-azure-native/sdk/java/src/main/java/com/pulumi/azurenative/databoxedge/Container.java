@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ContainerPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var container = new Container(&#34;container&#34;, ContainerArgs.builder()        
+ *             .containerName(&#34;blobcontainer1&#34;)
+ *             .dataFormat(&#34;BlockBlob&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .storageAccountName(&#34;storageaccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

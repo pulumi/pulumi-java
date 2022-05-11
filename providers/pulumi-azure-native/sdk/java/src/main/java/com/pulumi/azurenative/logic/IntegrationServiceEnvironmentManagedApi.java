@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Gets the integration service environment managed Apis
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationServiceEnvironmentManagedApi = new IntegrationServiceEnvironmentManagedApi(&#34;integrationServiceEnvironmentManagedApi&#34;, IntegrationServiceEnvironmentManagedApiArgs.builder()        
+ *             .apiName(&#34;servicebus&#34;)
+ *             .integrationServiceEnvironmentName(&#34;testIntegrationServiceEnvironment&#34;)
+ *             .location(&#34;brazilsouth&#34;)
+ *             .resourceGroup(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

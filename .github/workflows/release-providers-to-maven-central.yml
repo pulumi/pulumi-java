@@ -8,8 +8,10 @@ on:
     tags:
       - aws-native/v*.*.*
       - aws/v*.*.*
+      - aws-apigateway/v*.*.*
       - awsx/v*.*.*
       - azure-native/v*.*.*
+      - azure/v*.*.*
       - azuread/v*.*.*
       - docker/v*.*.*
       - eks/v*.*.*
@@ -52,7 +54,9 @@ jobs:
         provider:
         - aws
         - aws-native
+        - aws-apigateway
         - awsx
+        - azure
         - azure-native
         - azuread
         - docker

@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create or update a prefix for the peering service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prefix = new Prefix(&#34;prefix&#34;, PrefixArgs.builder()        
+ *             .peeringServiceName(&#34;peeringServiceName&#34;)
+ *             .peeringServicePrefixKey(&#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             .prefix(&#34;192.168.1.0/24&#34;)
+ *             .prefixName(&#34;peeringServicePrefixName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

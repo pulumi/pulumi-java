@@ -22,6 +22,44 @@ import javax.annotation.Nullable;
  * API Version: 2017-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a SQL virtual machine group.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachineGroup = new SqlVirtualMachineGroup(&#34;sqlVirtualMachineGroup&#34;, SqlVirtualMachineGroupArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlImageOffer(&#34;SQL2016-WS2016&#34;)
+ *             .sqlImageSku(&#34;Enterprise&#34;)
+ *             .sqlVirtualMachineGroupName(&#34;testvmgroup&#34;)
+ *             .tags(Map.of(&#34;mytag&#34;, &#34;myval&#34;))
+ *             .wsfcDomainProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clusterBootstrapAccount&#34;, &#34;testrpadmin&#34;),
+ *                 Map.entry(&#34;clusterOperatorAccount&#34;, &#34;testrp@testdomain.com&#34;),
+ *                 Map.entry(&#34;domainFqdn&#34;, &#34;testdomain.com&#34;),
+ *                 Map.entry(&#34;ouPath&#34;, &#34;OU=WSCluster,DC=testdomain,DC=com&#34;),
+ *                 Map.entry(&#34;sqlServiceAccount&#34;, &#34;sqlservice@testdomain.com&#34;),
+ *                 Map.entry(&#34;storageAccountPrimaryKey&#34;, &#34;&lt;primary storage access key&gt;&#34;),
+ *                 Map.entry(&#34;storageAccountUrl&#34;, &#34;https://storgact.blob.core.windows.net/&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -10,8 +10,10 @@ on:
       - sdk/v*.*.*
       - aws-native/v*.*.*
       - aws/v*.*.*
+      - aws-apigateway/v*.*.*
       - awsx/v*.*.*
       - azure-native/v*.*.*
+      - azure/v*.*.*
       - azuread/v*.*.*
       - docker/v*.*.*
       - eks/v*.*.*
@@ -178,6 +180,7 @@ jobs:
         provider:
         - aws
         - aws-native
+        - azure
         - azure-native
         - azuread
         - docker
@@ -294,6 +297,7 @@ jobs:
         provider:
         - eks
         - awsx
+        - aws-apigateway
     steps:
       - uses: actions/checkout@v2
       - run: make submodule_update

@@ -20,6 +20,51 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01-preview.
  * 
  * ## Example Usage
+ * ### Update a threat Intelligence indicator
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var threatIntelligenceIndicator = new ThreatIntelligenceIndicator(&#34;threatIntelligenceIndicator&#34;, ThreatIntelligenceIndicatorArgs.builder()        
+ *             .confidence(78)
+ *             .createdByRef(&#34;contoso@contoso.com&#34;)
+ *             .description(&#34;debugging indicators&#34;)
+ *             .displayName(&#34;new schema&#34;)
+ *             .externalReferences()
+ *             .granularMarkings()
+ *             .killChainPhases()
+ *             .kind(&#34;indicator&#34;)
+ *             .labels()
+ *             .modified(&#34;&#34;)
+ *             .name(&#34;d9cd6f0b-96b9-3984-17cd-a779d1e15a93&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .pattern(&#34;[url:value = &#39;https://www.contoso.com&#39;]&#34;)
+ *             .patternType(&#34;url&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .revoked(false)
+ *             .source(&#34;Azure Sentinel&#34;)
+ *             .threatIntelligenceTags(&#34;new schema&#34;)
+ *             .threatTypes(&#34;compromised&#34;)
+ *             .validFrom(&#34;2020-04-15T17:44:00.114052Z&#34;)
+ *             .validUntil(&#34;&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

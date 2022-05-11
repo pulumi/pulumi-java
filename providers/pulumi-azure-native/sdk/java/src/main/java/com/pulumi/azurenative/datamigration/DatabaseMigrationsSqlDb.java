@@ -21,6 +21,105 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-30-preview.
  * 
  * ## Example Usage
+ * ### Create or Update Database Migration resource with Maximum parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseMigrationsSqlDb = new DatabaseMigrationsSqlDb(&#34;databaseMigrationsSqlDb&#34;, DatabaseMigrationsSqlDbArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;kind&#34;, &#34;SqlDb&#34;),
+ *                 Map.entry(&#34;migrationService&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.DataMigration/sqlMigrationServices/testagent&#34;),
+ *                 Map.entry(&#34;scope&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Sql/servers/sqldbinstance&#34;),
+ *                 Map.entry(&#34;sourceDatabaseName&#34;, &#34;aaa&#34;),
+ *                 Map.entry(&#34;sourceSqlConnection&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, &#34;WindowsAuthentication&#34;),
+ *                     Map.entry(&#34;dataSource&#34;, &#34;aaa&#34;),
+ *                     Map.entry(&#34;encryptConnection&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;placeholder&#34;),
+ *                     Map.entry(&#34;trustServerCertificate&#34;, true),
+ *                     Map.entry(&#34;userName&#34;, &#34;bbb&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tableList&#34;,                 
+ *                     &#34;[Schema1].[TableName1]&#34;,
+ *                     &#34;[Schema2].[TableName2]&#34;),
+ *                 Map.entry(&#34;targetSqlConnection&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, &#34;SqlAuthentication&#34;),
+ *                     Map.entry(&#34;dataSource&#34;, &#34;sqldbinstance&#34;),
+ *                     Map.entry(&#34;encryptConnection&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;placeholder&#34;),
+ *                     Map.entry(&#34;trustServerCertificate&#34;, true),
+ *                     Map.entry(&#34;userName&#34;, &#34;bbb&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlDbInstanceName(&#34;sqldbinstance&#34;)
+ *             .targetDbName(&#34;db1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update Database Migration resource with Minimum parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseMigrationsSqlDb = new DatabaseMigrationsSqlDb(&#34;databaseMigrationsSqlDb&#34;, DatabaseMigrationsSqlDbArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;kind&#34;, &#34;SqlDb&#34;),
+ *                 Map.entry(&#34;migrationService&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.DataMigration/sqlMigrationServices/testagent&#34;),
+ *                 Map.entry(&#34;scope&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Sql/servers/sqldbinstance&#34;),
+ *                 Map.entry(&#34;sourceDatabaseName&#34;, &#34;aaa&#34;),
+ *                 Map.entry(&#34;sourceSqlConnection&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, &#34;WindowsAuthentication&#34;),
+ *                     Map.entry(&#34;dataSource&#34;, &#34;aaa&#34;),
+ *                     Map.entry(&#34;encryptConnection&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;placeholder&#34;),
+ *                     Map.entry(&#34;trustServerCertificate&#34;, true),
+ *                     Map.entry(&#34;userName&#34;, &#34;bbb&#34;)
+ *                 )),
+ *                 Map.entry(&#34;targetSqlConnection&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, &#34;SqlAuthentication&#34;),
+ *                     Map.entry(&#34;dataSource&#34;, &#34;sqldbinstance&#34;),
+ *                     Map.entry(&#34;encryptConnection&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;placeholder&#34;),
+ *                     Map.entry(&#34;trustServerCertificate&#34;, true),
+ *                     Map.entry(&#34;userName&#34;, &#34;bbb&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlDbInstanceName(&#34;sqldbinstance&#34;)
+ *             .targetDbName(&#34;db1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

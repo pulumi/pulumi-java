@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-04-preview.
  * 
  * ## Example Usage
+ * ### Create a contact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contact = new Contact(&#34;contact&#34;, ContactArgs.builder()        
+ *             .contactName(&#34;contact1&#34;)
+ *             .contactProfile(Map.of(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK&#34;))
+ *             .groundStationName(&#34;westus_gs1&#34;)
+ *             .reservationEndTime(&#34;2020-07-16T20:55:00.00Z&#34;)
+ *             .reservationStartTime(&#34;2020-07-16T20:35:00.00Z&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .spacecraftName(&#34;AQUA&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

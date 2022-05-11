@@ -24,6 +24,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### AFDCustomDomains_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var afdCustomDomain = new AFDCustomDomain(&#34;afdCustomDomain&#34;, AFDCustomDomainArgs.builder()        
+ *             .azureDnsZone(Map.of(&#34;id&#34;, &#34;&#34;))
+ *             .customDomainName(&#34;domain1&#34;)
+ *             .hostName(&#34;www.someDomain.net&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .tlsSettings(Map.ofEntries(
+ *                 Map.entry(&#34;certificateType&#34;, &#34;ManagedCertificate&#34;),
+ *                 Map.entry(&#34;minimumTlsVersion&#34;, &#34;TLS12&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

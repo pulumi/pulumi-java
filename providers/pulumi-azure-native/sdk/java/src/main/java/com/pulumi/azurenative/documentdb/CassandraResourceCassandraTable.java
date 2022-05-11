@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### CosmosDBCassandraTableCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cassandraResourceCassandraTable = new CassandraResourceCassandraTable(&#34;cassandraResourceCassandraTable&#34;, CassandraResourceCassandraTableArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .keyspaceName(&#34;keyspaceName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .options()
+ *             .resource(Map.ofEntries(
+ *                 Map.entry(&#34;defaultTtl&#34;, 100),
+ *                 Map.entry(&#34;id&#34;, &#34;tableName&#34;),
+ *                 Map.entry(&#34;schema&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clusterKeys&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;columnA&#34;),
+ *                         Map.entry(&#34;orderBy&#34;, &#34;Asc&#34;)
+ *                     )),
+ *                     Map.entry(&#34;columns&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;columnA&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;Ascii&#34;)
+ *                     )),
+ *                     Map.entry(&#34;partitionKeys&#34;, Map.of(&#34;name&#34;, &#34;columnA&#34;))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tableName(&#34;tableName&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

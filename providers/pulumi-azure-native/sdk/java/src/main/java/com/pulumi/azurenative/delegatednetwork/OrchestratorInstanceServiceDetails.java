@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### Create orchestrator instance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orchestratorInstanceServiceDetails = new OrchestratorInstanceServiceDetails(&#34;orchestratorInstanceServiceDetails&#34;, OrchestratorInstanceServiceDetailsArgs.builder()        
+ *             .apiServerEndpoint(&#34;https://testk8s.cloudapp.net&#34;)
+ *             .clusterRootCA(&#34;ddsadsad344mfdsfdl&#34;)
+ *             .controllerDetails(Map.of(&#34;id&#34;, &#34;/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller&#34;))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .kind(&#34;Kubernetes&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .orchestratorAppId(&#34;546192d7-503f-477a-9cfe-4efc3ee2b6e1&#34;)
+ *             .orchestratorTenantId(&#34;da6192d7-503f-477a-9cfe-4efc3ee2b6c3&#34;)
+ *             .privateLinkResourceId(&#34;/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1&#34;)
+ *             .resourceGroupName(&#34;TestRG&#34;)
+ *             .resourceName(&#34;testk8s1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-30-preview.
  * 
  * ## Example Usage
+ * ### Create or update configuration profile preference
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configurationProfilePreference = new ConfigurationProfilePreference(&#34;configurationProfilePreference&#34;, ConfigurationProfilePreferenceArgs.builder()        
+ *             .configurationProfilePreferenceName(&#34;defaultProfilePreference&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;antiMalware&#34;, Map.of(&#34;enableRealTimeProtection&#34;, &#34;True&#34;)),
+ *                 Map.entry(&#34;vmBackup&#34;, Map.of(&#34;timeZone&#34;, &#34;Pacific Standard Time&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .tags(Map.of(&#34;Organization&#34;, &#34;Administration&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

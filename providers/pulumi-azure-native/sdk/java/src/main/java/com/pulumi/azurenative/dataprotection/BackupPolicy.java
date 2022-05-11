@@ -21,6 +21,99 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate BackupPolicy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupPolicy = new BackupPolicy(&#34;backupPolicy&#34;, BackupPolicyArgs.builder()        
+ *             .backupPolicyName(&#34;OSSDBPolicy&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasourceTypes&#34;, &#34;OssDB&#34;),
+ *                 Map.entry(&#34;objectType&#34;, &#34;BackupPolicy&#34;),
+ *                 Map.entry(&#34;policyRules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;backupParameters&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;backupType&#34;, &#34;Full&#34;),
+ *                             Map.entry(&#34;objectType&#34;, &#34;AzureBackupParams&#34;)
+ *                         )),
+ *                         Map.entry(&#34;dataStore&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;dataStoreType&#34;, &#34;VaultStore&#34;),
+ *                             Map.entry(&#34;objectType&#34;, &#34;DataStoreInfoBase&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;BackupWeekly&#34;),
+ *                         Map.entry(&#34;objectType&#34;, &#34;AzureBackupRule&#34;),
+ *                         Map.entry(&#34;trigger&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;objectType&#34;, &#34;ScheduleBasedTriggerContext&#34;),
+ *                             Map.entry(&#34;schedule&#34;, Map.of(&#34;repeatingTimeIntervals&#34;, &#34;R/2019-11-20T08:00:00-08:00/P1W&#34;)),
+ *                             Map.entry(&#34;taggingCriteria&#34;,                             
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;isDefault&#34;, true),
+ *                                     Map.entry(&#34;tagInfo&#34;, Map.of(&#34;tagName&#34;, &#34;Default&#34;)),
+ *                                     Map.entry(&#34;taggingPriority&#34;, 99)
+ *                                 ),
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;criteria&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;daysOfTheWeek&#34;, &#34;Sunday&#34;),
+ *                                         Map.entry(&#34;objectType&#34;, &#34;ScheduleBasedBackupCriteria&#34;),
+ *                                         Map.entry(&#34;scheduleTimes&#34;, &#34;2019-03-01T13:00:00Z&#34;)
+ *                                     )),
+ *                                     Map.entry(&#34;isDefault&#34;, false),
+ *                                     Map.entry(&#34;tagInfo&#34;, Map.of(&#34;tagName&#34;, &#34;Weekly&#34;)),
+ *                                     Map.entry(&#34;taggingPriority&#34;, 20)
+ *                                 ))
+ *                         ))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;lifecycles&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;deleteAfter&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;duration&#34;, &#34;P1W&#34;),
+ *                                 Map.entry(&#34;objectType&#34;, &#34;AbsoluteDeleteOption&#34;)
+ *                             )),
+ *                             Map.entry(&#34;sourceDataStore&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dataStoreType&#34;, &#34;VaultStore&#34;),
+ *                                 Map.entry(&#34;objectType&#34;, &#34;DataStoreInfoBase&#34;)
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;Default&#34;),
+ *                         Map.entry(&#34;objectType&#34;, &#34;AzureRetentionRule&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isDefault&#34;, false),
+ *                         Map.entry(&#34;lifecycles&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;deleteAfter&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;duration&#34;, &#34;P12W&#34;),
+ *                                 Map.entry(&#34;objectType&#34;, &#34;AbsoluteDeleteOption&#34;)
+ *                             )),
+ *                             Map.entry(&#34;sourceDataStore&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dataStoreType&#34;, &#34;VaultStore&#34;),
+ *                                 Map.entry(&#34;objectType&#34;, &#34;DataStoreInfoBase&#34;)
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;Weekly&#34;),
+ *                         Map.entry(&#34;objectType&#34;, &#34;AzureRetentionRule&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;000pikumar&#34;)
+ *             .vaultName(&#34;PrivatePreviewVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

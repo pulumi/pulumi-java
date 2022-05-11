@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### VolumesCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volume = new Volume(&#34;volume&#34;, VolumeArgs.builder()        
+ *             .accessControlRecordIds(&#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2&#34;)
+ *             .deviceName(&#34;Device05ForSDKTest&#34;)
+ *             .managerName(&#34;ManagerForSDKTest1&#34;)
+ *             .monitoringStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .sizeInBytes(5368709120)
+ *             .volumeContainerName(&#34;VolumeContainerForSDKTest&#34;)
+ *             .volumeName(&#34;Volume1ForSDKTest&#34;)
+ *             .volumeStatus(&#34;Offline&#34;)
+ *             .volumeType(&#34;Tiered&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

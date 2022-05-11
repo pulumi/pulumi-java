@@ -22,6 +22,109 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Creates a Streaming Locator with clear streaming
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingLocator = new StreamingLocator(&#34;streamingLocator&#34;, StreamingLocatorArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .assetName(&#34;ClimbingMountRainier&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingLocatorName(&#34;UserCreatedClearStreamingLocator&#34;)
+ *             .streamingPolicyName(&#34;clearStreamingPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Locator with secure streaming
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingLocator = new StreamingLocator(&#34;streamingLocator&#34;, StreamingLocatorArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .assetName(&#34;ClimbingMountRainier&#34;)
+ *             .endTime(&#34;2028-12-31T23:59:59.9999999Z&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .startTime(&#34;2018-03-01T00:00:00Z&#34;)
+ *             .streamingLocatorName(&#34;UserCreatedSecureStreamingLocator&#34;)
+ *             .streamingPolicyName(&#34;secureStreamingPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Locator with user defined content keys
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingLocator = new StreamingLocator(&#34;streamingLocator&#34;, StreamingLocatorArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .assetName(&#34;ClimbingMountRainier&#34;)
+ *             .contentKeys(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;60000000-0000-0000-0000-000000000001&#34;),
+ *                     Map.entry(&#34;labelReferenceInStreamingPolicy&#34;, &#34;aesDefaultKey&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;1UqLohAfWsEGkULYxHjYZg==&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;60000000-0000-0000-0000-000000000004&#34;),
+ *                     Map.entry(&#34;labelReferenceInStreamingPolicy&#34;, &#34;cencDefaultKey&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;4UqLohAfWsEGkULYxHjYZg==&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;60000000-0000-0000-0000-000000000007&#34;),
+ *                     Map.entry(&#34;labelReferenceInStreamingPolicy&#34;, &#34;cbcsDefaultKey&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;7UqLohAfWsEGkULYxHjYZg==&#34;)
+ *                 ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingLocatorId(&#34;90000000-0000-0000-0000-00000000000A&#34;)
+ *             .streamingLocatorName(&#34;UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys&#34;)
+ *             .streamingPolicyName(&#34;secureStreamingPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

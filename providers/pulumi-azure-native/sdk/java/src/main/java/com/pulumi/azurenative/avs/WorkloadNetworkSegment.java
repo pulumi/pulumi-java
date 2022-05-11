@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### WorkloadNetworks_CreateSegments
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadNetworkSegment = new WorkloadNetworkSegment(&#34;workloadNetworkSegment&#34;, WorkloadNetworkSegmentArgs.builder()        
+ *             .connectedGateway(&#34;/infra/tier-1s/gateway&#34;)
+ *             .displayName(&#34;segment1&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .revision(1)
+ *             .segmentId(&#34;segment1&#34;)
+ *             .subnet(Map.ofEntries(
+ *                 Map.entry(&#34;dhcpRanges&#34;, &#34;40.20.0.0-40.20.0.1&#34;),
+ *                 Map.entry(&#34;gatewayAddress&#34;, &#34;40.20.20.20/16&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

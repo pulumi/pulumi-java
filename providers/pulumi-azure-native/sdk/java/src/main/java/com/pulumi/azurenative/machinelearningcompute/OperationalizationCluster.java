@@ -27,6 +27,51 @@ import javax.annotation.Nullable;
  * API Version: 2017-08-01-preview.
  * 
  * ## Example Usage
+ * ### PUT Operationalization Cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var operationalizationCluster = new OperationalizationCluster(&#34;operationalizationCluster&#34;, OperationalizationClusterArgs.builder()        
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .clusterType(&#34;ACS&#34;)
+ *             .containerService(Map.ofEntries(
+ *                 Map.entry(&#34;orchestratorProperties&#34;, Map.of(&#34;servicePrincipal&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;abcdefghijklmnopqrt&#34;),
+ *                     Map.entry(&#34;secret&#34;, &#34;&lt;secret&gt;&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;orchestratorType&#34;, &#34;Kubernetes&#34;)
+ *             ))
+ *             .description(&#34;My Operationalization Cluster&#34;)
+ *             .globalServiceConfiguration(Map.of(&#34;ssl&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;cert&#34;, &#34;afjdklq2131casfakld=&#34;),
+ *                 Map.entry(&#34;cname&#34;, &#34;foo.bar.com&#34;),
+ *                 Map.entry(&#34;key&#34;, &#34;flksdafkldsajf=&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Enabled&#34;)
+ *             )))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;alpha&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;beta&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,41 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-01-preview.
  * 
  * ## Example Usage
+ * ### putSchedule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var schedule = new Schedule(&#34;schedule&#34;, ScheduleArgs.builder()        
+ *             .labName(&#34;testlab&#34;)
+ *             .notes(&#34;Schedule 1 for students&#34;)
+ *             .recurrencePattern(Map.ofEntries(
+ *                 Map.entry(&#34;expirationDate&#34;, &#34;2020-08-14&#34;),
+ *                 Map.entry(&#34;frequency&#34;, &#34;Daily&#34;),
+ *                 Map.entry(&#34;interval&#34;, 2)
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .scheduleName(&#34;schedule1&#34;)
+ *             .startAt(&#34;2020-05-26T12:00:00Z&#34;)
+ *             .stopAt(&#34;2020-05-26T18:00:00Z&#34;)
+ *             .timeZoneId(&#34;America/Los_Angeles&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

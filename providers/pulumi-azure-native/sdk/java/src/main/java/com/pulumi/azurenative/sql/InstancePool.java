@@ -23,6 +23,75 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create an instance pool with all properties.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instancePool = new InstancePool(&#34;instancePool&#34;, InstancePoolArgs.builder()        
+ *             .instancePoolName(&#34;testIP&#34;)
+ *             .licenseType(&#34;LicenseIncluded&#34;)
+ *             .location(&#34;japaneast&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen5&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .subnetId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1&#34;)
+ *             .tags(Map.of(&#34;a&#34;, &#34;b&#34;))
+ *             .vCores(8)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an instance pool with min properties.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instancePool = new InstancePool(&#34;instancePool&#34;, InstancePoolArgs.builder()        
+ *             .instancePoolName(&#34;testIP&#34;)
+ *             .licenseType(&#34;LicenseIncluded&#34;)
+ *             .location(&#34;japaneast&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen5&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .subnetId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet1&#34;)
+ *             .vCores(8)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates an incident comment.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var incidentComment = new IncidentComment(&#34;incidentComment&#34;, IncidentCommentArgs.builder()        
+ *             .incidentCommentId(&#34;4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014&#34;)
+ *             .incidentId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .message(&#34;Some message&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

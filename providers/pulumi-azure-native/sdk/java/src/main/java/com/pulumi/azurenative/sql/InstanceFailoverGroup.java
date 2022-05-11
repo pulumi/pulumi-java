@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create failover group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instanceFailoverGroup = new InstanceFailoverGroup(&#34;instanceFailoverGroup&#34;, InstanceFailoverGroupArgs.builder()        
+ *             .failoverGroupName(&#34;failover-group-test-3&#34;)
+ *             .locationName(&#34;Japan East&#34;)
+ *             .managedInstancePairs(Map.ofEntries(
+ *                 Map.entry(&#34;partnerManagedInstanceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance&#34;),
+ *                 Map.entry(&#34;primaryManagedInstanceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance&#34;)
+ *             ))
+ *             .partnerRegions(Map.of(&#34;location&#34;, &#34;Japan West&#34;))
+ *             .readOnlyEndpoint(Map.of(&#34;failoverPolicy&#34;, &#34;Disabled&#34;))
+ *             .readWriteEndpoint(Map.ofEntries(
+ *                 Map.entry(&#34;failoverPolicy&#34;, &#34;Automatic&#34;),
+ *                 Map.entry(&#34;failoverWithDataLossGracePeriodMinutes&#34;, 480)
+ *             ))
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

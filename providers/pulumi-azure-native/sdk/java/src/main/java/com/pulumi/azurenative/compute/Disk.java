@@ -33,6 +33,400 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create a managed disk and associate with disk access resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.of(&#34;createOption&#34;, &#34;Empty&#34;))
+ *             .diskAccessId(&#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}&#34;)
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .location(&#34;West US&#34;)
+ *             .networkAccessPolicy(&#34;AllowPrivate&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk and associate with disk encryption set.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.of(&#34;createOption&#34;, &#34;Empty&#34;))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .encryption(Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk by copying a snapshot.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Copy&#34;),
+ *                 Map.entry(&#34;sourceResourceId&#34;, &#34;subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot&#34;)
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk by importing an unmanaged blob from a different subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Import&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;),
+ *                 Map.entry(&#34;storageAccountId&#34;, &#34;subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount&#34;)
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk by importing an unmanaged blob from the same subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Import&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;)
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk from a platform image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0&#34;))
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .osType(&#34;Windows&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk from an existing managed disk in the same or different subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Copy&#34;),
+ *                 Map.entry(&#34;sourceResourceId&#34;, &#34;subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1&#34;)
+ *             ))
+ *             .diskName(&#34;myDisk2&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk with security profile
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}&#34;))
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;North Central US&#34;)
+ *             .osType(&#34;Windows&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .securityProfile(Map.of(&#34;securityType&#34;, &#34;TrustedLaunch&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed disk with ssd zrs account type.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.of(&#34;createOption&#34;, &#34;Empty&#34;))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Premium_ZRS&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a managed upload disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Upload&#34;),
+ *                 Map.entry(&#34;uploadSizeBytes&#34;, 10737418752)
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an empty managed disk in extended location.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.of(&#34;createOption&#34;, &#34;Empty&#34;))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;{edge-zone-id}&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;EdgeZone&#34;)
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an empty managed disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.of(&#34;createOption&#34;, &#34;Empty&#34;))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an ultra managed disk with logicalSectorSize 512E
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                 Map.entry(&#34;logicalSectorSize&#34;, 512)
+ *             ))
+ *             .diskName(&#34;myDisk&#34;)
+ *             .diskSizeGB(200)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;UltraSSD_LRS&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

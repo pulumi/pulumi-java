@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### Create/Update Snapshot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .creationData(Map.of(&#34;sourceResourceId&#34;, &#34;/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool0&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;snapshot1&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;val1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;val2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

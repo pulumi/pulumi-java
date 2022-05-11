@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create deployment at tenant scope.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentAtTenantScope = new DeploymentAtTenantScope(&#34;deploymentAtTenantScope&#34;, DeploymentAtTenantScopeArgs.builder()        
+ *             .deploymentName(&#34;tenant-dep01&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Incremental&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;uri&#34;, &#34;https://example.com/exampleTemplate.json&#34;))
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tagKey1&#34;, &#34;tag-value-1&#34;),
+ *                 Map.entry(&#34;tagKey2&#34;, &#34;tag-value-2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

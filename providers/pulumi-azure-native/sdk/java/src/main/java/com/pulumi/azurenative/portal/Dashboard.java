@@ -23,6 +23,63 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a Dashboard
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dashboard = new Dashboard(&#34;dashboard&#34;, DashboardArgs.builder()        
+ *             .dashboardName(&#34;testDashboard&#34;)
+ *             .lenses(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;order&#34;, 1),
+ *                     Map.entry(&#34;parts&#34;,                     
+ *                         Map.of(&#34;position&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;colSpan&#34;, 3),
+ *                             Map.entry(&#34;rowSpan&#34;, 4),
+ *                             Map.entry(&#34;x&#34;, 1),
+ *                             Map.entry(&#34;y&#34;, 2)
+ *                         )),
+ *                         Map.of(&#34;position&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;colSpan&#34;, 6),
+ *                             Map.entry(&#34;rowSpan&#34;, 6),
+ *                             Map.entry(&#34;x&#34;, 5),
+ *                             Map.entry(&#34;y&#34;, 5)
+ *                         )))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;order&#34;, 2),
+ *                     Map.entry(&#34;parts&#34;, )
+ *                 ))
+ *             .location(&#34;eastus&#34;)
+ *             .metadata(Map.of(&#34;metadata&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;ColSpan&#34;, 2),
+ *                 Map.entry(&#34;RowSpan&#34;, 1),
+ *                 Map.entry(&#34;X&#34;, 4),
+ *                 Map.entry(&#34;Y&#34;, 3)
+ *             )))
+ *             .resourceGroupName(&#34;testRG&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;aKey&#34;, &#34;aValue&#34;),
+ *                 Map.entry(&#34;anotherKey&#34;, &#34;anotherValue&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

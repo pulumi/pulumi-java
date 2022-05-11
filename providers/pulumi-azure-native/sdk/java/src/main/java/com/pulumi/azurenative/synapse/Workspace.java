@@ -30,6 +30,62 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a workspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .defaultDataLakeStorage(Map.ofEntries(
+ *                 Map.entry(&#34;accountUrl&#34;, &#34;https://accountname.dfs.core.windows.net&#34;),
+ *                 Map.entry(&#34;filesystem&#34;, &#34;default&#34;)
+ *             ))
+ *             .encryption(Map.of(&#34;cmk&#34;, Map.of(&#34;key&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultUrl&#34;, &#34;https://vault.azure.net/keys/key1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;)
+ *             ))))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;East US&#34;)
+ *             .managedResourceGroupName(&#34;workspaceManagedResourceGroupUnique&#34;)
+ *             .managedVirtualNetwork(&#34;default&#34;)
+ *             .managedVirtualNetworkSettings(Map.ofEntries(
+ *                 Map.entry(&#34;allowedAadTenantIdsForLinking&#34;, &#34;740239CE-A25B-485B-86A0-262F29F6EBDB&#34;),
+ *                 Map.entry(&#34;linkedAccessCheckOnTargetResource&#34;, false),
+ *                 Map.entry(&#34;preventDataExfiltration&#34;, false)
+ *             ))
+ *             .publicNetworkAccess(&#34;Enabled&#34;)
+ *             .purviewConfiguration(Map.of(&#34;purviewResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1&#34;))
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .sqlAdministratorLogin(&#34;login&#34;)
+ *             .sqlAdministratorLoginPassword(&#34;password&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .workspaceRepositoryConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;accountName&#34;, &#34;mygithubaccount&#34;),
+ *                 Map.entry(&#34;collaborationBranch&#34;, &#34;master&#34;),
+ *                 Map.entry(&#34;hostName&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;projectName&#34;, &#34;myproject&#34;),
+ *                 Map.entry(&#34;repositoryName&#34;, &#34;myrepository&#34;),
+ *                 Map.entry(&#34;rootFolder&#34;, &#34;/&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;FactoryGitHubConfiguration&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

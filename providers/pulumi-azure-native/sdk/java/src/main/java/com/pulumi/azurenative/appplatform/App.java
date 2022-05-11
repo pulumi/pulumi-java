@@ -22,6 +22,47 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### Apps_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;, AppArgs.builder()        
+ *             .appName(&#34;myapp&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;activeDeploymentName&#34;, &#34;mydeployment1&#34;),
+ *                 Map.entry(&#34;fqdn&#34;, &#34;myapp.mydomain.com&#34;),
+ *                 Map.entry(&#34;httpsOnly&#34;, false),
+ *                 Map.entry(&#34;persistentDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;mountPath&#34;, &#34;/mypersistentdisk&#34;),
+ *                     Map.entry(&#34;sizeInGB&#34;, 2)
+ *                 )),
+ *                 Map.entry(&#34;public&#34;, true),
+ *                 Map.entry(&#34;temporaryDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;mountPath&#34;, &#34;/mytemporarydisk&#34;),
+ *                     Map.entry(&#34;sizeInGB&#34;, 2)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

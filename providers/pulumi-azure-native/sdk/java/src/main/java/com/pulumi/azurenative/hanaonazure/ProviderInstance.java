@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-02-07-preview.
  * 
  * ## Example Usage
+ * ### Create a SAP Monitor
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var providerInstance = new ProviderInstance(&#34;providerInstance&#34;, ProviderInstanceArgs.builder()        
+ *             .metadata(&#34;{\&#34;key\&#34;:\&#34;value\&#34;}&#34;)
+ *             .properties(&#34;{\&#34;hostname\&#34;:\&#34;10.0.0.6\&#34;,\&#34;dbName\&#34;:\&#34;SYSTEMDB\&#34;,\&#34;sqlPort\&#34;:30013,\&#34;dbUsername\&#34;:\&#34;SYSTEM\&#34;,\&#34;dbPassword\&#34;:\&#34;PASSWORD\&#34;}&#34;)
+ *             .providerInstanceName(&#34;myProviderInstance&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sapMonitorName(&#34;mySapMonitor&#34;)
+ *             .type(&#34;hana&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### EventChannels_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventChannel = new EventChannel(&#34;eventChannel&#34;, EventChannelArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;azureSubscriptionId&#34;, &#34;5b4b650e-28b9-4790-b3ab-ddbd88d727c4&#34;),
+ *                 Map.entry(&#34;partnerTopicName&#34;, &#34;examplePartnerTopic1&#34;),
+ *                 Map.entry(&#34;resourceGroup&#34;, &#34;examplerg2&#34;)
+ *             ))
+ *             .eventChannelName(&#34;exampleEventChannelName1&#34;)
+ *             .partnerNamespaceName(&#34;examplePartnerNamespaceName1&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .source(Map.of(&#34;source&#34;, &#34;ContosoCorp.Accounts.User1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

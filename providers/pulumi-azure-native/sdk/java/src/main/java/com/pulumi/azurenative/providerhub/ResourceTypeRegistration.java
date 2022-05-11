@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### ResourceTypeRegistrations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var resourceTypeRegistration = new ResourceTypeRegistration(&#34;resourceTypeRegistration&#34;, ResourceTypeRegistrationArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;endpoints&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiVersions&#34;, &#34;2020-06-01-preview&#34;),
+ *                     Map.entry(&#34;locations&#34;,                     
+ *                         &#34;West US&#34;,
+ *                         &#34;East US&#34;,
+ *                         &#34;North Europe&#34;),
+ *                     Map.entry(&#34;requiredFeatures&#34;, &#34;&lt;feature flag&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;regionality&#34;, &#34;Regional&#34;),
+ *                 Map.entry(&#34;routingType&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;swaggerSpecifications&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiVersions&#34;, &#34;2020-06-01-preview&#34;),
+ *                     Map.entry(&#34;swaggerSpecFolderUri&#34;, &#34;https://github.com/Azure/azure-rest-api-specs/blob/feature/azure/contoso/specification/contoso/resource-manager/Microsoft.SampleRP/&#34;)
+ *                 ))
+ *             ))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .resourceType(&#34;employees&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

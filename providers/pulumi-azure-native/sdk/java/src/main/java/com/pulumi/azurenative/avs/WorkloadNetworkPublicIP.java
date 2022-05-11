@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01.
  * 
  * ## Example Usage
+ * ### WorkloadNetworks_CreatePublicIP
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadNetworkPublicIP = new WorkloadNetworkPublicIP(&#34;workloadNetworkPublicIP&#34;, WorkloadNetworkPublicIPArgs.builder()        
+ *             .displayName(&#34;publicIP1&#34;)
+ *             .numberOfPublicIPs(32)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .publicIPId(&#34;publicIP1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

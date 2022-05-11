@@ -23,6 +23,48 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### JobDefinitions_CreateOrUpdatePUT83
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobDefinition = new JobDefinition(&#34;jobDefinition&#34;, JobDefinitionArgs.builder()        
+ *             .dataManagerName(&#34;TestAzureSDKOperations&#34;)
+ *             .dataServiceInput(Map.ofEntries(
+ *                 Map.entry(&#34;AzureStorageType&#34;, &#34;Blob&#34;),
+ *                 Map.entry(&#34;BackupChoice&#34;, &#34;UseExistingLatest&#34;),
+ *                 Map.entry(&#34;ContainerName&#34;, &#34;containerfromtest&#34;),
+ *                 Map.entry(&#34;DeviceName&#34;, &#34;8600-SHG0997877L71FC&#34;),
+ *                 Map.entry(&#34;FileNameFilter&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;IsDirectoryMode&#34;, false),
+ *                 Map.entry(&#34;RootDirectories&#34;, &#34;\\&#34;),
+ *                 Map.entry(&#34;VolumeNames&#34;, &#34;TestAutomation&#34;)
+ *             ))
+ *             .dataServiceName(&#34;DataTransformation&#34;)
+ *             .dataSinkId(&#34;/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1&#34;)
+ *             .dataSourceId(&#34;/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1&#34;)
+ *             .jobDefinitionName(&#34;jobdeffromtestcode1&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .runLocation(&#34;westus&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .userConfirmation(&#34;Required&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

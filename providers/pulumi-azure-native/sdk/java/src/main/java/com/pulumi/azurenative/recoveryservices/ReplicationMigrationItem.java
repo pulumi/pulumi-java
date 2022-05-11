@@ -21,6 +21,51 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Enables migration.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationMigrationItem = new ReplicationMigrationItem(&#34;replicationMigrationItem&#34;, ReplicationMigrationItemArgs.builder()        
+ *             .fabricName(&#34;vmwarefabric1&#34;)
+ *             .migrationItemName(&#34;virtualmachine1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;policyId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1&#34;),
+ *                 Map.entry(&#34;providerSpecificDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataMoverRunAsAccountId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1&#34;),
+ *                     Map.entry(&#34;disksToInclude&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;diskId&#34;, &#34;disk1&#34;),
+ *                         Map.entry(&#34;isOSDisk&#34;, &#34;true&#34;),
+ *                         Map.entry(&#34;logStorageAccountId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1&#34;),
+ *                         Map.entry(&#34;logStorageAccountSasSecretName&#34;, &#34;logStorageSas&#34;)
+ *                     )),
+ *                     Map.entry(&#34;instanceType&#34;, &#34;VMwareCbt&#34;),
+ *                     Map.entry(&#34;snapshotRunAsAccountId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1&#34;),
+ *                     Map.entry(&#34;targetNetworkId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1&#34;),
+ *                     Map.entry(&#34;targetResourceGroupId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1&#34;),
+ *                     Map.entry(&#34;vmwareMachineId&#34;, &#34;/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1&#34;)
+ *                 ))
+ *             ))
+ *             .protectionContainerName(&#34;vmwareContainer1&#34;)
+ *             .resourceGroupName(&#34;resourcegroup1&#34;)
+ *             .resourceName(&#34;migrationvault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

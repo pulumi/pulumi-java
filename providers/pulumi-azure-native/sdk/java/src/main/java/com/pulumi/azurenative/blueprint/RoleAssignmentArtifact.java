@@ -21,6 +21,170 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### MG-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .displayName(&#34;enforce owners of given subscription&#34;)
+ *             .kind(&#34;roleAssignment&#34;)
+ *             .principalIds(&#34;[parameters(&#39;owners&#39;)]&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .roleDefinitionId(&#34;/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignmentArtifact = new RoleAssignmentArtifact(&#34;roleAssignmentArtifact&#34;, RoleAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .displayName(&#34;enforce owners of given subscription&#34;)
+ *             .kind(&#34;roleAssignment&#34;)
+ *             .principalIds(&#34;[parameters(&#39;owners&#39;)]&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .roleDefinitionId(&#34;/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

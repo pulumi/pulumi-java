@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Invitations_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var invitation = new Invitation(&#34;invitation&#34;, InvitationArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .expirationDate(&#34;2020-08-26T22:33:24.5785265Z&#34;)
+ *             .invitationName(&#34;Invitation1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .targetEmail(&#34;receiver@microsoft.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

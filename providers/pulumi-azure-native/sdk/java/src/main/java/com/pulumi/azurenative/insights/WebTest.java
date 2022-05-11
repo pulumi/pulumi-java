@@ -25,6 +25,77 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### webTestCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webTest = new WebTest(&#34;webTest&#34;, WebTestArgs.builder()        
+ *             .configuration(Map.of(&#34;webTest&#34;, &#34;&lt;WebTest Name=\&#34;my-webtest\&#34; Id=\&#34;678ddf96-1ab8-44c8-9274-123456789abc\&#34; Enabled=\&#34;True\&#34; CssProjectStructure=\&#34;\&#34; CssIteration=\&#34;\&#34; Timeout=\&#34;120\&#34; WorkItemIds=\&#34;\&#34; xmlns=\&#34;http://microsoft.com/schemas/VisualStudio/TeamTest/2010\&#34; Description=\&#34;\&#34; CredentialUserName=\&#34;\&#34; CredentialPassword=\&#34;\&#34; PreAuthenticate=\&#34;True\&#34; Proxy=\&#34;default\&#34; StopOnError=\&#34;False\&#34; RecordedResultFile=\&#34;\&#34; ResultsLocale=\&#34;\&#34; &gt;&lt;Items&gt;&lt;Request Method=\&#34;GET\&#34; Guid=\&#34;a4162485-9114-fcfc-e086-123456789abc\&#34; Version=\&#34;1.1\&#34; Url=\&#34;http://my-component.azurewebsites.net\&#34; ThinkTime=\&#34;0\&#34; Timeout=\&#34;120\&#34; ParseDependentRequests=\&#34;True\&#34; FollowRedirects=\&#34;True\&#34; RecordResult=\&#34;True\&#34; Cache=\&#34;False\&#34; ResponseTimeGoal=\&#34;0\&#34; Encoding=\&#34;utf-8\&#34; ExpectedHttpStatusCode=\&#34;200\&#34; ExpectedResponseUrl=\&#34;\&#34; ReportingName=\&#34;\&#34; IgnoreHttpStatusCode=\&#34;False\&#34; /&gt;&lt;/Items&gt;&lt;/WebTest&gt;&#34;))
+ *             .description(&#34;Ping web test alert for mytestwebapp&#34;)
+ *             .enabled(true)
+ *             .frequency(900)
+ *             .kind(&#34;ping&#34;)
+ *             .location(&#34;South Central US&#34;)
+ *             .locations(Map.of(&#34;location&#34;, &#34;us-fl-mia-edge&#34;))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .retryEnabled(true)
+ *             .syntheticMonitorId(&#34;my-webtest-my-component&#34;)
+ *             .timeout(120)
+ *             .webTestKind(&#34;ping&#34;)
+ *             .webTestName(&#34;my-webtest-my-component&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### webTestUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webTest = new WebTest(&#34;webTest&#34;, WebTestArgs.builder()        
+ *             .configuration(Map.of(&#34;webTest&#34;, &#34;&lt;WebTest Name=\&#34;my-webtest\&#34; Id=\&#34;678ddf96-1ab8-44c8-9274-123456789abc\&#34; Enabled=\&#34;True\&#34; CssProjectStructure=\&#34;\&#34; CssIteration=\&#34;\&#34; Timeout=\&#34;30\&#34; WorkItemIds=\&#34;\&#34; xmlns=\&#34;http://microsoft.com/schemas/VisualStudio/TeamTest/2010\&#34; Description=\&#34;\&#34; CredentialUserName=\&#34;\&#34; CredentialPassword=\&#34;\&#34; PreAuthenticate=\&#34;True\&#34; Proxy=\&#34;default\&#34; StopOnError=\&#34;False\&#34; RecordedResultFile=\&#34;\&#34; ResultsLocale=\&#34;\&#34; &gt;&lt;Items&gt;&lt;Request Method=\&#34;GET\&#34; Guid=\&#34;a4162485-9114-fcfc-e086-123456789abc\&#34; Version=\&#34;1.1\&#34; Url=\&#34;http://my-component.azurewebsites.net\&#34; ThinkTime=\&#34;0\&#34; Timeout=\&#34;30\&#34; ParseDependentRequests=\&#34;True\&#34; FollowRedirects=\&#34;True\&#34; RecordResult=\&#34;True\&#34; Cache=\&#34;False\&#34; ResponseTimeGoal=\&#34;0\&#34; Encoding=\&#34;utf-8\&#34; ExpectedHttpStatusCode=\&#34;200\&#34; ExpectedResponseUrl=\&#34;\&#34; ReportingName=\&#34;\&#34; IgnoreHttpStatusCode=\&#34;False\&#34; /&gt;&lt;/Items&gt;&lt;/WebTest&gt;&#34;))
+ *             .frequency(600)
+ *             .kind(&#34;ping&#34;)
+ *             .location(&#34;South Central US&#34;)
+ *             .locations(            
+ *                 Map.of(&#34;location&#34;, &#34;us-fl-mia-edge&#34;),
+ *                 Map.of(&#34;location&#34;, &#34;apac-hk-hkn-azr&#34;))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .syntheticMonitorId(&#34;my-webtest-my-component&#34;)
+ *             .timeout(30)
+ *             .webTestKind(&#34;ping&#34;)
+ *             .webTestName(&#34;my-webtest-my-component&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

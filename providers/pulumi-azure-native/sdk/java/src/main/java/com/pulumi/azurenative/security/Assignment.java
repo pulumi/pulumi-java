@@ -26,6 +26,70 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01-preview.
  * 
  * ## Example Usage
+ * ### Define a default standard assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .assignedStandard(Map.of(&#34;id&#34;, &#34;/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8&#34;))
+ *             .assignmentId(&#34;1f3afdf9-d0c9-4c3d-847f-89da613e70a8&#34;)
+ *             .description(&#34;Set of policies monitored by Azure Security Center for cross cloud&#34;)
+ *             .displayName(&#34;ASC Default&#34;)
+ *             .effect(&#34;audit&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scope(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Exempt Recommendation From standard and resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .additionalData(Map.of(&#34;exemptionCategory&#34;, &#34;waiver&#34;))
+ *             .assignedComponent(Map.of(&#34;key&#34;, &#34;1195afff-c881-495e-9bc5-1486211ae03f&#34;))
+ *             .assignedStandard(Map.of(&#34;id&#34;, &#34;/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8&#34;))
+ *             .assignmentId(&#34;1f3afdf9-d0c9-4c3d-847f-89da613e70a8&#34;)
+ *             .description(&#34;Set of policies monitored by Azure Security Center for cross cloud&#34;)
+ *             .displayName(&#34;ASC Default&#34;)
+ *             .effect(&#34;Exempt&#34;)
+ *             .expiresOn(&#34;2022-05-01T19:50:47.083633Z&#34;)
+ *             .metadata(Map.of(&#34;ticketId&#34;, 12345))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scope(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

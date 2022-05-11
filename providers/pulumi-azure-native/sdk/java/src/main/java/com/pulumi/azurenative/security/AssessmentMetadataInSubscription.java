@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Create security assessment metadata for subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assessmentMetadataInSubscription = new AssessmentMetadataInSubscription(&#34;assessmentMetadataInSubscription&#34;, AssessmentMetadataInSubscriptionArgs.builder()        
+ *             .assessmentMetadataName(&#34;ca039e75-a276-4175-aebc-bcd41e4b14b7&#34;)
+ *             .assessmentType(&#34;CustomerManaged&#34;)
+ *             .categories(&#34;Compute&#34;)
+ *             .description(&#34;Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.&#34;)
+ *             .displayName(&#34;Install endpoint protection solution on virtual machine scale sets&#34;)
+ *             .implementationEffort(&#34;Low&#34;)
+ *             .remediationDescription(&#34;To install an endpoint protection solution: 1.  &lt;a href=\&#34;https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\&#34;&gt;Follow the instructions in How do I turn on antimalware in my virtual machine scale set&lt;/a&gt;&#34;)
+ *             .severity(&#34;Medium&#34;)
+ *             .threats(            
+ *                 &#34;dataExfiltration&#34;,
+ *                 &#34;dataSpillage&#34;,
+ *                 &#34;maliciousInsider&#34;)
+ *             .userImpact(&#34;Low&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

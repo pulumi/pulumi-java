@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-07-01-preview.
  * 
  * ## Example Usage
+ * ### Create a Custom Assessment Automation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customAssessmentAutomation = new CustomAssessmentAutomation(&#34;customAssessmentAutomation&#34;, CustomAssessmentAutomationArgs.builder()        
+ *             .compressedQuery(&#34;DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=&#34;)
+ *             .customAssessmentAutomationName(&#34;MyCustomAssessmentAutomation&#34;)
+ *             .description(&#34;Data should be encrypted&#34;)
+ *             .displayName(&#34;Password Policy&#34;)
+ *             .remediationDescription(&#34;Encrypt store by...&#34;)
+ *             .resourceGroupName(&#34;TestResourceGroup&#34;)
+ *             .severity(&#34;Medium&#34;)
+ *             .supportedCloud(&#34;AWS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

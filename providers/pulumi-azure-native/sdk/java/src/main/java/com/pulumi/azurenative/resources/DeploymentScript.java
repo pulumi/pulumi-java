@@ -23,6 +23,157 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01.
  * 
  * ## Example Usage
+ * ### DeploymentScriptsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentScript = new DeploymentScript(&#34;deploymentScript&#34;, DeploymentScriptArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai&#34;, ))
+ *             ))
+ *             .kind(&#34;AzurePowerShell&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreateNoUserManagedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentScript = new DeploymentScript(&#34;deploymentScript&#34;, DeploymentScriptArgs.builder()        
+ *             .kind(&#34;AzurePowerShell&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_MinCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentScript = new DeploymentScript(&#34;deploymentScript&#34;, DeploymentScriptArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai&#34;, ))
+ *             ))
+ *             .kind(&#34;AzurePowerShell&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_UsingCustomACIName
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentScript = new DeploymentScript(&#34;deploymentScript&#34;, DeploymentScriptArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai&#34;, ))
+ *             ))
+ *             .kind(&#34;AzurePowerShell&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DeploymentScriptsCreate_UsingExistingStorageAccount
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentScript = new DeploymentScript(&#34;deploymentScript&#34;, DeploymentScriptArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai&#34;, ))
+ *             ))
+ *             .kind(&#34;AzurePowerShell&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;script-rg&#34;)
+ *             .scriptName(&#34;MyDeploymentScript&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

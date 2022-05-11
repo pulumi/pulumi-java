@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2017-05-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or Updates the subscription diagnostic setting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subscriptionDiagnosticSetting = new SubscriptionDiagnosticSetting(&#34;subscriptionDiagnosticSetting&#34;, SubscriptionDiagnosticSettingArgs.builder()        
+ *             .eventHubAuthorizationRuleId(&#34;/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule&#34;)
+ *             .eventHubName(&#34;myeventhub&#34;)
+ *             .logs(Map.ofEntries(
+ *                 Map.entry(&#34;category&#34;, &#34;Security&#34;),
+ *                 Map.entry(&#34;enabled&#34;, true)
+ *             ))
+ *             .name(&#34;ds4&#34;)
+ *             .storageAccountId(&#34;/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1&#34;)
+ *             .workspaceId(&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

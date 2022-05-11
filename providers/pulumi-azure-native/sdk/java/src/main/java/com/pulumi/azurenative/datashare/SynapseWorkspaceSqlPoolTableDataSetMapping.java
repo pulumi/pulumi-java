@@ -20,6 +20,144 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### DataSetMappings_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synapseWorkspaceSqlPoolTableDataSetMapping = new SynapseWorkspaceSqlPoolTableDataSetMapping(&#34;synapseWorkspaceSqlPoolTableDataSetMapping&#34;, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDB_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synapseWorkspaceSqlPoolTableDataSetMapping = new SynapseWorkspaceSqlPoolTableDataSetMapping(&#34;synapseWorkspaceSqlPoolTableDataSetMapping&#34;, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synapseWorkspaceSqlPoolTableDataSetMapping = new SynapseWorkspaceSqlPoolTableDataSetMapping(&#34;synapseWorkspaceSqlPoolTableDataSetMapping&#34;, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDW_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synapseWorkspaceSqlPoolTableDataSetMapping = new SynapseWorkspaceSqlPoolTableDataSetMapping(&#34;synapseWorkspaceSqlPoolTableDataSetMapping&#34;, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synapseWorkspaceSqlPoolTableDataSetMapping = new SynapseWorkspaceSqlPoolTableDataSetMapping(&#34;synapseWorkspaceSqlPoolTableDataSetMapping&#34;, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;consumerAccount&#34;)
+ *             .dataSetId(&#34;3dc64e49-1fc3-4186-b3dc-d388c4d3076a&#34;)
+ *             .dataSetMappingName(&#34;datasetMappingName1&#34;)
+ *             .kind(&#34;SynapseWorkspaceSqlPoolTable&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .synapseWorkspaceSqlPoolTableResourceId(&#34;/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

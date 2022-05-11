@@ -21,6 +21,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-30-preview.
  * 
  * ## Example Usage
+ * ### Create or replace a time series database connection for a DigitalTwins instance.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var timeSeriesDatabaseConnection = new TimeSeriesDatabaseConnection(&#34;timeSeriesDatabaseConnection&#34;, TimeSeriesDatabaseConnectionArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;adxDatabaseName&#34;, &#34;myDatabase&#34;),
+ *                 Map.entry(&#34;adxEndpointUri&#34;, &#34;https://mycluster.kusto.windows.net&#34;),
+ *                 Map.entry(&#34;adxResourceId&#34;, &#34;/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mycluster&#34;),
+ *                 Map.entry(&#34;adxTableName&#34;, &#34;myTable&#34;),
+ *                 Map.entry(&#34;connectionType&#34;, &#34;AzureDataExplorer&#34;),
+ *                 Map.entry(&#34;eventHubEndpointUri&#34;, &#34;sb://myeh.servicebus.windows.net/&#34;),
+ *                 Map.entry(&#34;eventHubEntityPath&#34;, &#34;myeh&#34;),
+ *                 Map.entry(&#34;eventHubNamespaceResourceId&#34;, &#34;/subscriptions/c493073e-2460-45ba-a403-f3e0df1e9feg/resourceGroups/testrg/providers/Microsoft.EventHub/namespaces/myeh&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .resourceName(&#34;myDigitalTwinsService&#34;)
+ *             .timeSeriesDatabaseConnectionName(&#34;myConnection&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

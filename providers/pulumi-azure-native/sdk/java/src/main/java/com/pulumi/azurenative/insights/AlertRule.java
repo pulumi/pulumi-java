@@ -29,6 +29,49 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create or update an alert rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var alertRule = new AlertRule(&#34;alertRule&#34;, AlertRuleArgs.builder()        
+ *             .actions()
+ *             .condition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metricName&#34;, &#34;Requests&#34;),
+ *                     Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#34;),
+ *                     Map.entry(&#34;resourceUri&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#34;),
+ *                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                 Map.entry(&#34;threshold&#34;, 3),
+ *                 Map.entry(&#34;timeAggregation&#34;, &#34;Total&#34;),
+ *                 Map.entry(&#34;windowSize&#34;, &#34;PT5M&#34;)
+ *             ))
+ *             .description(&#34;Pura Vida&#34;)
+ *             .isEnabled(true)
+ *             .location(&#34;West US&#34;)
+ *             .name(&#34;chiricutin&#34;)
+ *             .resourceGroupName(&#34;Rac46PostSwapRG&#34;)
+ *             .ruleName(&#34;chiricutin&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

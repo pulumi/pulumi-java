@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01.
  * 
  * ## Example Usage
+ * ### CreatePrivateStoreCollection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateStoreCollection = new PrivateStoreCollection(&#34;privateStoreCollection&#34;, PrivateStoreCollectionArgs.builder()        
+ *             .allSubscriptions(false)
+ *             .claim(&#34;&#34;)
+ *             .collectionId(&#34;d0f5aa2c-ecc3-4d87-906a-f8c486dcc4f1&#34;)
+ *             .collectionName(&#34;Test Collection&#34;)
+ *             .privateStoreId(&#34;a0e28e55-90c4-41d8-8e34-bb7ef7775406&#34;)
+ *             .subscriptionsList(            
+ *                 &#34;b340914e-353d-453a-85fb-8f9b65b51f91&#34;,
+ *                 &#34;f2baa04d-5bfc-461b-b6d8-61b403c9ec48&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

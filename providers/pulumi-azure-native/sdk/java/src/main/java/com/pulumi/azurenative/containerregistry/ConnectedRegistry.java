@@ -26,6 +26,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### ConnectedRegistryCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectedRegistry = new ConnectedRegistry(&#34;connectedRegistry&#34;, ConnectedRegistryArgs.builder()        
+ *             .clientTokenIds(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/client1Token&#34;)
+ *             .connectedRegistryName(&#34;myConnectedRegistry&#34;)
+ *             .mode(&#34;Registry&#34;)
+ *             .parent(Map.of(&#34;syncProperties&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;messageTtl&#34;, &#34;P2D&#34;),
+ *                 Map.entry(&#34;schedule&#34;, &#34;0 9 * * *&#34;),
+ *                 Map.entry(&#34;syncWindow&#34;, &#34;PT3H&#34;),
+ *                 Map.entry(&#34;tokenId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tokens/syncToken&#34;)
+ *             )))
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

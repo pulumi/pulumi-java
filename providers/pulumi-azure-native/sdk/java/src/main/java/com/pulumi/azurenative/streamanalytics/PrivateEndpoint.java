@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01-preview.
  * 
  * ## Example Usage
+ * ### Create a private endpoint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpoint = new PrivateEndpoint(&#34;privateEndpoint&#34;, PrivateEndpointArgs.builder()        
+ *             .clusterName(&#34;testcluster&#34;)
+ *             .privateEndpointName(&#34;testpe&#34;)
+ *             .properties(Map.of(&#34;manualPrivateLinkServiceConnections&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;groupIds&#34;, &#34;groupIdFromResource&#34;),
+ *                 Map.entry(&#34;privateLinkServiceId&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;sjrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

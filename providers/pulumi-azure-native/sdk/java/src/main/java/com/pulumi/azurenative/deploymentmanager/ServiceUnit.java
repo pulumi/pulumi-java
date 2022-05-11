@@ -22,6 +22,76 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create service unit using SAS URIs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceUnit = new ServiceUnit(&#34;serviceUnit&#34;, ServiceUnitArgs.builder()        
+ *             .artifacts(Map.ofEntries(
+ *                 Map.entry(&#34;parametersUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&amp;se=2019-12-31T15%3A10%3A00Z&amp;sp=rl&amp;sv=2017-04-17&amp;sr=c&amp;sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D&#34;),
+ *                 Map.entry(&#34;templateUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&amp;se=2019-12-31T15%3A10%3A00Z&amp;sp=rl&amp;sv=2017-04-17&amp;sr=c&amp;sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D&#34;)
+ *             ))
+ *             .deploymentMode(&#34;Incremental&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myService&#34;)
+ *             .serviceTopologyName(&#34;myTopology&#34;)
+ *             .serviceUnitName(&#34;myServiceUnit&#34;)
+ *             .tags()
+ *             .targetResourceGroup(&#34;myDeploymentResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create service unit using relative paths into the artifact source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceUnit = new ServiceUnit(&#34;serviceUnit&#34;, ServiceUnitArgs.builder()        
+ *             .artifacts(Map.ofEntries(
+ *                 Map.entry(&#34;parametersArtifactSourceRelativePath&#34;, &#34;parameter/myTopologyUnit.parameters.json&#34;),
+ *                 Map.entry(&#34;templateArtifactSourceRelativePath&#34;, &#34;templates/myTopologyUnit.template.json&#34;)
+ *             ))
+ *             .deploymentMode(&#34;Incremental&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myService&#34;)
+ *             .serviceTopologyName(&#34;myTopology&#34;)
+ *             .serviceUnitName(&#34;myServiceUnit&#34;)
+ *             .tags()
+ *             .targetResourceGroup(&#34;myDeploymentResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

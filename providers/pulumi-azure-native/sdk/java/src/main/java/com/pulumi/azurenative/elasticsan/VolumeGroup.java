@@ -23,6 +23,66 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-20-preview.
  * 
  * ## Example Usage
+ * ### VolumeGroups_Create_MaximumSet_Gen
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volumeGroup = new VolumeGroup(&#34;volumeGroup&#34;, VolumeGroupArgs.builder()        
+ *             .elasticSanName(&#34;33zg-7s_4_7L2_65o&#34;)
+ *             .encryption(&#34;EncryptionAtRestWithPlatformKey&#34;)
+ *             .location(&#34;aaaaaaaaaaaaaaaaaaaaaa&#34;)
+ *             .networkAcls(Map.of(&#34;virtualNetworkRules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                 Map.entry(&#34;virtualNetworkResourceId&#34;, &#34;aa&#34;)
+ *             )))
+ *             .protocolType(&#34;Iscsi&#34;)
+ *             .resourceGroupName(&#34;rgelasticsan&#34;)
+ *             .tags(Map.of(&#34;key3582&#34;, &#34;a&#34;))
+ *             .volumeGroupName(&#34;9_67U25-1f2gR3-b6L-4T5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### VolumeGroups_Create_MinimumSet_Gen
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volumeGroup = new VolumeGroup(&#34;volumeGroup&#34;, VolumeGroupArgs.builder()        
+ *             .elasticSanName(&#34;33zg-7s_4_7L2_65o&#34;)
+ *             .resourceGroupName(&#34;rgelasticsan&#34;)
+ *             .volumeGroupName(&#34;9_67U25-1f2gR3-b6L-4T5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

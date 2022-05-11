@@ -28,6 +28,107 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Creates specific policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .customRules(Map.of(&#34;rules&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Block&#34;),
+ *                     Map.entry(&#34;matchConditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;matchValue&#34;,                         
+ *                             &#34;192.168.1.0/24&#34;,
+ *                             &#34;10.0.0.0/24&#34;),
+ *                         Map.entry(&#34;matchVariable&#34;, &#34;RemoteAddr&#34;),
+ *                         Map.entry(&#34;operator&#34;, &#34;IPMatch&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;Rule1&#34;),
+ *                     Map.entry(&#34;priority&#34;, 1),
+ *                     Map.entry(&#34;rateLimitThreshold&#34;, 1000),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;RateLimitRule&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Block&#34;),
+ *                     Map.entry(&#34;matchConditions&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;matchValue&#34;, &#34;CH&#34;),
+ *                             Map.entry(&#34;matchVariable&#34;, &#34;RemoteAddr&#34;),
+ *                             Map.entry(&#34;operator&#34;, &#34;GeoMatch&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;matchValue&#34;, &#34;windows&#34;),
+ *                             Map.entry(&#34;matchVariable&#34;, &#34;RequestHeader&#34;),
+ *                             Map.entry(&#34;operator&#34;, &#34;Contains&#34;),
+ *                             Map.entry(&#34;selector&#34;, &#34;UserAgent&#34;),
+ *                             Map.entry(&#34;transforms&#34;, &#34;Lowercase&#34;)
+ *                         )),
+ *                     Map.entry(&#34;name&#34;, &#34;Rule2&#34;),
+ *                     Map.entry(&#34;priority&#34;, 2),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;MatchRule&#34;)
+ *                 )))
+ *             .managedRules(Map.of(&#34;managedRuleSets&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;exclusions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;matchVariable&#34;, &#34;RequestHeaderNames&#34;),
+ *                     Map.entry(&#34;selector&#34;, &#34;User-Agent&#34;),
+ *                     Map.entry(&#34;selectorMatchOperator&#34;, &#34;Equals&#34;)
+ *                 )),
+ *                 Map.entry(&#34;ruleGroupOverrides&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;exclusions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;matchVariable&#34;, &#34;RequestCookieNames&#34;),
+ *                         Map.entry(&#34;selector&#34;, &#34;token&#34;),
+ *                         Map.entry(&#34;selectorMatchOperator&#34;, &#34;StartsWith&#34;)
+ *                     )),
+ *                     Map.entry(&#34;ruleGroupName&#34;, &#34;SQLI&#34;),
+ *                     Map.entry(&#34;rules&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;action&#34;, &#34;Redirect&#34;),
+ *                             Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                             Map.entry(&#34;exclusions&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;matchVariable&#34;, &#34;QueryStringArgNames&#34;),
+ *                                 Map.entry(&#34;selector&#34;, &#34;query&#34;),
+ *                                 Map.entry(&#34;selectorMatchOperator&#34;, &#34;Equals&#34;)
+ *                             )),
+ *                             Map.entry(&#34;ruleId&#34;, &#34;942100&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;enabledState&#34;, &#34;Disabled&#34;),
+ *                             Map.entry(&#34;ruleId&#34;, &#34;942110&#34;)
+ *                         ))
+ *                 )),
+ *                 Map.entry(&#34;ruleSetAction&#34;, &#34;Block&#34;),
+ *                 Map.entry(&#34;ruleSetType&#34;, &#34;DefaultRuleSet&#34;),
+ *                 Map.entry(&#34;ruleSetVersion&#34;, &#34;1.0&#34;)
+ *             )))
+ *             .policyName(&#34;Policy1&#34;)
+ *             .policySettings(Map.ofEntries(
+ *                 Map.entry(&#34;customBlockResponseBody&#34;, &#34;PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==&#34;),
+ *                 Map.entry(&#34;customBlockResponseStatusCode&#34;, 499),
+ *                 Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;mode&#34;, &#34;Prevention&#34;),
+ *                 Map.entry(&#34;redirectUrl&#34;, &#34;http://www.bing.com&#34;),
+ *                 Map.entry(&#34;requestBodyCheck&#34;, &#34;Disabled&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Classic_AzureFrontDoor&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

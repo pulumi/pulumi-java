@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Create security recommendation task on a resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assessment = new Assessment(&#34;assessment&#34;, AssessmentArgs.builder()        
+ *             .assessmentName(&#34;8bb8be0a-6010-4789-812f-e4d661c4ed0e&#34;)
+ *             .resourceDetails(Map.of(&#34;source&#34;, &#34;Azure&#34;))
+ *             .resourceId(&#34;subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2&#34;)
+ *             .status(Map.of(&#34;code&#34;, &#34;Healthy&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

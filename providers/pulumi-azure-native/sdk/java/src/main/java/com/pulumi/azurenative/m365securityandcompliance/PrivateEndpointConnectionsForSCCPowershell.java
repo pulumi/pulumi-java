@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-25-preview.
  * 
  * ## Example Usage
+ * ### PrivateEndpointConnection_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnectionsForSCCPowershell = new PrivateEndpointConnectionsForSCCPowershell(&#34;privateEndpointConnectionsForSCCPowershell&#34;, PrivateEndpointConnectionsForSCCPowershellArgs.builder()        
+ *             .privateEndpointConnectionName(&#34;myConnection&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Auto-Approved&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rgname&#34;)
+ *             .resourceName(&#34;service1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

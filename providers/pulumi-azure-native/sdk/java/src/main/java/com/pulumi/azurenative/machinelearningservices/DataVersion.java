@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Data Version.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataVersion = new DataVersion(&#34;dataVersion&#34;, DataVersionArgs.builder()        
+ *             .name(&#34;dataset123&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasetType&#34;, &#34;Simple&#34;),
+ *                 Map.entry(&#34;datastoreId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;isAnonymous&#34;, true),
+ *                 Map.entry(&#34;path&#34;, &#34;path/to/file.csv&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .version(&#34;1&#34;)
+ *             .workspaceName(&#34;workspace123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

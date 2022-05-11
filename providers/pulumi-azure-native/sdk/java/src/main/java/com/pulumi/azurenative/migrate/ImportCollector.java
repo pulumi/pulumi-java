@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### ImportCollectors_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var importCollector = new ImportCollector(&#34;importCollector&#34;, ImportCollectorArgs.builder()        
+ *             .importCollectorName(&#34;importCollector2952&#34;)
+ *             .projectName(&#34;rajoshCCY9671project&#34;)
+ *             .resourceGroupName(&#34;markusavstestrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBMongoDBUserDefinitionCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mongoDBResourceMongoUserDefinition = new MongoDBResourceMongoUserDefinition(&#34;mongoDBResourceMongoUserDefinition&#34;, MongoDBResourceMongoUserDefinitionArgs.builder()        
+ *             .accountName(&#34;myAccountName&#34;)
+ *             .customData(&#34;My custom data&#34;)
+ *             .databaseName(&#34;sales&#34;)
+ *             .mechanisms(&#34;SCRAM-SHA-256&#34;)
+ *             .mongoUserDefinitionId(&#34;myMongoUserDefinitionId&#34;)
+ *             .password(&#34;myPassword&#34;)
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .roles(Map.ofEntries(
+ *                 Map.entry(&#34;db&#34;, &#34;sales&#34;),
+ *                 Map.entry(&#34;role&#34;, &#34;myReadRole&#34;)
+ *             ))
+ *             .userName(&#34;myUserName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

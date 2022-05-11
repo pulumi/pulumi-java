@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01-preview.
  * 
  * ## Example Usage
+ * ### KeyValues_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyValue = new KeyValue(&#34;keyValue&#34;, KeyValueArgs.builder()        
+ *             .configStoreName(&#34;contoso&#34;)
+ *             .keyValueName(&#34;myKey$myLabel&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;tagValue1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;tagValue2&#34;)
+ *             ))
+ *             .value(&#34;myValue&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,163 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create a direct peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peering = new Peering(&#34;peering&#34;, PeeringArgs.builder()        
+ *             .direct(Map.ofEntries(
+ *                 Map.entry(&#34;connections&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;bandwidthInMbps&#34;, 10000),
+ *                         Map.entry(&#34;bgpSession&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV4&#34;, 1000),
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV6&#34;, 100),
+ *                             Map.entry(&#34;md5AuthenticationKey&#34;, &#34;test-md5-auth-key&#34;),
+ *                             Map.entry(&#34;sessionPrefixV4&#34;, &#34;192.168.0.0/31&#34;),
+ *                             Map.entry(&#34;sessionPrefixV6&#34;, &#34;fd00::0/127&#34;)
+ *                         )),
+ *                         Map.entry(&#34;connectionIdentifier&#34;, &#34;5F4CB5C7-6B43-4444-9338-9ABC72606C16&#34;),
+ *                         Map.entry(&#34;peeringDBFacilityId&#34;, 99999),
+ *                         Map.entry(&#34;sessionAddressProvider&#34;, &#34;Peer&#34;),
+ *                         Map.entry(&#34;useForPeeringService&#34;, false)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;bandwidthInMbps&#34;, 10000),
+ *                         Map.entry(&#34;connectionIdentifier&#34;, &#34;8AB00818-D533-4504-A25A-03A17F61201C&#34;),
+ *                         Map.entry(&#34;peeringDBFacilityId&#34;, 99999),
+ *                         Map.entry(&#34;sessionAddressProvider&#34;, &#34;Microsoft&#34;),
+ *                         Map.entry(&#34;useForPeeringService&#34;, true)
+ *                     )),
+ *                 Map.entry(&#34;directPeeringType&#34;, &#34;Edge&#34;),
+ *                 Map.entry(&#34;peerAsn&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1&#34;))
+ *             ))
+ *             .kind(&#34;Direct&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .peeringLocation(&#34;peeringLocation0&#34;)
+ *             .peeringName(&#34;peeringName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Basic_Direct_Free&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a peering with exchange route server
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peering = new Peering(&#34;peering&#34;, PeeringArgs.builder()        
+ *             .direct(Map.ofEntries(
+ *                 Map.entry(&#34;connections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;bandwidthInMbps&#34;, 10000),
+ *                     Map.entry(&#34;bgpSession&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;maxPrefixesAdvertisedV4&#34;, 1000),
+ *                         Map.entry(&#34;maxPrefixesAdvertisedV6&#34;, 100),
+ *                         Map.entry(&#34;microsoftSessionIPv4Address&#34;, &#34;192.168.0.123&#34;),
+ *                         Map.entry(&#34;peerSessionIPv4Address&#34;, &#34;192.168.0.234&#34;),
+ *                         Map.entry(&#34;sessionPrefixV4&#34;, &#34;192.168.0.0/24&#34;)
+ *                     )),
+ *                     Map.entry(&#34;connectionIdentifier&#34;, &#34;5F4CB5C7-6B43-4444-9338-9ABC72606C16&#34;),
+ *                     Map.entry(&#34;peeringDBFacilityId&#34;, 99999),
+ *                     Map.entry(&#34;sessionAddressProvider&#34;, &#34;Peer&#34;),
+ *                     Map.entry(&#34;useForPeeringService&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;directPeeringType&#34;, &#34;IxRs&#34;),
+ *                 Map.entry(&#34;peerAsn&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1&#34;))
+ *             ))
+ *             .kind(&#34;Direct&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .peeringLocation(&#34;peeringLocation0&#34;)
+ *             .peeringName(&#34;peeringName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Premium_Direct_Free&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an exchange peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peering = new Peering(&#34;peering&#34;, PeeringArgs.builder()        
+ *             .exchange(Map.ofEntries(
+ *                 Map.entry(&#34;connections&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;bgpSession&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV4&#34;, 1000),
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV6&#34;, 100),
+ *                             Map.entry(&#34;md5AuthenticationKey&#34;, &#34;test-md5-auth-key&#34;),
+ *                             Map.entry(&#34;peerSessionIPv4Address&#34;, &#34;192.168.2.1&#34;),
+ *                             Map.entry(&#34;peerSessionIPv6Address&#34;, &#34;fd00::1&#34;)
+ *                         )),
+ *                         Map.entry(&#34;connectionIdentifier&#34;, &#34;CE495334-0E94-4E51-8164-8116D6CD284D&#34;),
+ *                         Map.entry(&#34;peeringDBFacilityId&#34;, 99999)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;bgpSession&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV4&#34;, 1000),
+ *                             Map.entry(&#34;maxPrefixesAdvertisedV6&#34;, 100),
+ *                             Map.entry(&#34;md5AuthenticationKey&#34;, &#34;test-md5-auth-key&#34;),
+ *                             Map.entry(&#34;peerSessionIPv4Address&#34;, &#34;192.168.2.2&#34;),
+ *                             Map.entry(&#34;peerSessionIPv6Address&#34;, &#34;fd00::2&#34;)
+ *                         )),
+ *                         Map.entry(&#34;connectionIdentifier&#34;, &#34;CDD8E673-CB07-47E6-84DE-3739F778762B&#34;),
+ *                         Map.entry(&#34;peeringDBFacilityId&#34;, 99999)
+ *                     )),
+ *                 Map.entry(&#34;peerAsn&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1&#34;))
+ *             ))
+ *             .kind(&#34;Exchange&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .peeringLocation(&#34;peeringLocation0&#34;)
+ *             .peeringName(&#34;peeringName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Basic_Exchange_Free&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create server trust group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverTrustGroup = new ServerTrustGroup(&#34;serverTrustGroup&#34;, ServerTrustGroupArgs.builder()        
+ *             .groupMembers(            
+ *                 Map.of(&#34;serverId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1&#34;),
+ *                 Map.of(&#34;serverId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2&#34;))
+ *             .locationName(&#34;Japan East&#34;)
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .serverTrustGroupName(&#34;server-trust-group-test&#34;)
+ *             .trustScopes(            
+ *                 &#34;GlobalTransactions&#34;,
+ *                 &#34;ServiceBroker&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

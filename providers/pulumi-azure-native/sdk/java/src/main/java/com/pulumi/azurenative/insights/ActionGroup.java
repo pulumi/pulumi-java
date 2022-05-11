@@ -32,6 +32,115 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update an action group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var actionGroup = new ActionGroup(&#34;actionGroup&#34;, ActionGroupArgs.builder()        
+ *             .actionGroupName(&#34;SampleActionGroup&#34;)
+ *             .armRoleReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Sample armRole&#34;),
+ *                 Map.entry(&#34;roleId&#34;, &#34;8e3af657-a8ff-443c-a75c-2fe8c4bcb635&#34;),
+ *                 Map.entry(&#34;useCommonAlertSchema&#34;, true)
+ *             ))
+ *             .automationRunbookReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;automationAccountId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest&#34;),
+ *                 Map.entry(&#34;isGlobalRunbook&#34;, false),
+ *                 Map.entry(&#34;name&#34;, &#34;testRunbook&#34;),
+ *                 Map.entry(&#34;runbookName&#34;, &#34;Sample runbook&#34;),
+ *                 Map.entry(&#34;serviceUri&#34;, &#34;&lt;serviceUri&gt;&#34;),
+ *                 Map.entry(&#34;useCommonAlertSchema&#34;, true),
+ *                 Map.entry(&#34;webhookResourceId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084&#34;)
+ *             ))
+ *             .azureAppPushReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;emailAddress&#34;, &#34;johndoe@email.com&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Sample azureAppPush&#34;)
+ *             ))
+ *             .azureFunctionReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;functionAppResourceId&#34;, &#34;/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp&#34;),
+ *                 Map.entry(&#34;functionName&#34;, &#34;HttpTriggerCSharp1&#34;),
+ *                 Map.entry(&#34;httpTriggerUrl&#34;, &#34;&lt;httpTriggerUrl&gt;&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Sample azureFunction&#34;),
+ *                 Map.entry(&#34;useCommonAlertSchema&#34;, true)
+ *             ))
+ *             .emailReceivers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;emailAddress&#34;, &#34;johndoe@email.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;John Doe&#39;s email&#34;),
+ *                     Map.entry(&#34;useCommonAlertSchema&#34;, false)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;emailAddress&#34;, &#34;janesmith@email.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Jane Smith&#39;s email&#34;),
+ *                     Map.entry(&#34;useCommonAlertSchema&#34;, true)
+ *                 ))
+ *             .enabled(true)
+ *             .groupShortName(&#34;sample&#34;)
+ *             .itsmReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;connectionId&#34;, &#34;a3b9076c-ce8e-434e-85b4-aff10cb3c8f1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Sample itsm&#34;),
+ *                 Map.entry(&#34;region&#34;, &#34;westcentralus&#34;),
+ *                 Map.entry(&#34;ticketConfiguration&#34;, &#34;{\&#34;PayloadRevision\&#34;:0,\&#34;WorkItemType\&#34;:\&#34;Incident\&#34;,\&#34;UseTemplate\&#34;:false,\&#34;WorkItemData\&#34;:\&#34;{}\&#34;,\&#34;CreateOneWIPerCI\&#34;:false}&#34;),
+ *                 Map.entry(&#34;workspaceId&#34;, &#34;5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c&#34;)
+ *             ))
+ *             .location(&#34;Global&#34;)
+ *             .logicAppReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;callbackUrl&#34;, &#34;https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Sample logicApp&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp&#34;),
+ *                 Map.entry(&#34;useCommonAlertSchema&#34;, false)
+ *             ))
+ *             .resourceGroupName(&#34;Default-NotificationRules&#34;)
+ *             .smsReceivers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;countryCode&#34;, &#34;1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;John Doe&#39;s mobile&#34;),
+ *                     Map.entry(&#34;phoneNumber&#34;, &#34;1234567890&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;countryCode&#34;, &#34;1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Jane Smith&#39;s mobile&#34;),
+ *                     Map.entry(&#34;phoneNumber&#34;, &#34;0987654321&#34;)
+ *                 ))
+ *             .tags()
+ *             .voiceReceivers(Map.ofEntries(
+ *                 Map.entry(&#34;countryCode&#34;, &#34;1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Sample voice&#34;),
+ *                 Map.entry(&#34;phoneNumber&#34;, &#34;1234567890&#34;)
+ *             ))
+ *             .webhookReceivers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;Sample webhook 1&#34;),
+ *                     Map.entry(&#34;serviceUri&#34;, &#34;http://www.example.com/webhook1&#34;),
+ *                     Map.entry(&#34;useCommonAlertSchema&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;identifierUri&#34;, &#34;http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Sample webhook 2&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;d3bb868c-fe44-452c-aa26-769a6538c808&#34;),
+ *                     Map.entry(&#34;serviceUri&#34;, &#34;http://www.example.com/webhook2&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;68a4459a-ccb8-493c-b9da-dd30457d1b84&#34;),
+ *                     Map.entry(&#34;useAadAuth&#34;, true),
+ *                     Map.entry(&#34;useCommonAlertSchema&#34;, true)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

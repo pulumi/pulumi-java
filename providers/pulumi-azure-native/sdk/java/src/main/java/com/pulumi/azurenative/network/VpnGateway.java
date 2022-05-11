@@ -28,6 +28,68 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VpnGatewayPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpnGateway = new VpnGateway(&#34;vpnGateway&#34;, VpnGatewayArgs.builder()        
+ *             .bgpSettings(Map.ofEntries(
+ *                 Map.entry(&#34;asn&#34;, 65515),
+ *                 Map.entry(&#34;bgpPeeringAddresses&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;customBgpIpAddresses&#34;, &#34;169.254.21.5&#34;),
+ *                         Map.entry(&#34;ipconfigurationId&#34;, &#34;Instance0&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;customBgpIpAddresses&#34;, &#34;169.254.21.10&#34;),
+ *                         Map.entry(&#34;ipconfigurationId&#34;, &#34;Instance1&#34;)
+ *                     )),
+ *                 Map.entry(&#34;peerWeight&#34;, 0)
+ *             ))
+ *             .connections(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;vpnConnection1&#34;),
+ *                 Map.entry(&#34;remoteVpnSite&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1&#34;)),
+ *                 Map.entry(&#34;vpnLinkConnections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;connectionBandwidth&#34;, 200),
+ *                     Map.entry(&#34;egressNatRules&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;Connection-Link1&#34;),
+ *                     Map.entry(&#34;sharedKey&#34;, &#34;key&#34;),
+ *                     Map.entry(&#34;vpnConnectionProtocolType&#34;, &#34;IKEv2&#34;),
+ *                     Map.entry(&#34;vpnSiteLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1&#34;))
+ *                 ))
+ *             ))
+ *             .gatewayName(&#34;gateway1&#34;)
+ *             .isRoutingPreferenceInternet(false)
+ *             .location(&#34;westcentralus&#34;)
+ *             .natRules(Map.ofEntries(
+ *                 Map.entry(&#34;externalMappings&#34;, Map.of(&#34;addressSpace&#34;, &#34;192.168.0.0/26&#34;)),
+ *                 Map.entry(&#34;internalMappings&#34;, Map.of(&#34;addressSpace&#34;, &#34;0.0.0.0/26&#34;)),
+ *                 Map.entry(&#34;ipConfigurationId&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;mode&#34;, &#34;EgressSnat&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nat03&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Static&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

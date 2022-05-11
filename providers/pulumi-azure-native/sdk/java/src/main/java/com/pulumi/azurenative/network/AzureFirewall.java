@@ -29,6 +29,602 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create Azure Firewall
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .applicationRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;apprulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 110),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;targetFqdns&#34;, &#34;www.test.com&#34;)
+ *                 ))
+ *             ))
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet&#34;))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .natRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Dnat&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;natrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all outbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTPS-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedAddress&#34;, &#34;1.2.3.5&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;8443&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all inbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;80&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTP-traffic-With-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttpserver&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;880&#34;)
+ *                     ))
+ *             ))
+ *             .networkRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;netrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;,                         
+ *                             &#34;192.168.1.1-192.168.1.12&#34;,
+ *                             &#34;10.1.4.12-10.1.4.255&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports to amazon&#34;),
+ *                         Map.entry(&#34;destinationFqdns&#34;, &#34;www.amazon.com&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic-with-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;10.2.4.12-10.2.4.255&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_VNet&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .zones()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Azure Firewall With Additional Properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .additionalProperties(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .applicationRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;apprulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 110),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;targetFqdns&#34;, &#34;www.test.com&#34;)
+ *                 ))
+ *             ))
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet&#34;))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .natRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Dnat&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;natrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all outbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTPS-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedAddress&#34;, &#34;1.2.3.5&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;8443&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all inbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;80&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTP-traffic-With-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttpserver&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;880&#34;)
+ *                     ))
+ *             ))
+ *             .networkRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;netrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;,                         
+ *                             &#34;192.168.1.1-192.168.1.12&#34;,
+ *                             &#34;10.1.4.12-10.1.4.255&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports to amazon&#34;),
+ *                         Map.entry(&#34;destinationFqdns&#34;, &#34;www.amazon.com&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic-with-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;10.2.4.12-10.2.4.255&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_VNet&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .zones()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Azure Firewall With IpGroups
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .applicationRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;apprulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 110),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;targetFqdns&#34;, &#34;www.test.com&#34;)
+ *                 ))
+ *             ))
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet&#34;))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .natRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Dnat&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;natrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all outbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTPS-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedAddress&#34;, &#34;1.2.3.5&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;8443&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all inbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;80&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTP-traffic-With-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttpserver&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;880&#34;)
+ *                     ))
+ *             ))
+ *             .networkRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;netrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;,                         
+ *                             &#34;192.168.1.1-192.168.1.12&#34;,
+ *                             &#34;10.1.4.12-10.1.4.255&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports to amazon&#34;),
+ *                         Map.entry(&#34;destinationFqdns&#34;, &#34;www.amazon.com&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic-with-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;10.2.4.12-10.2.4.255&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_VNet&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .zones()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Azure Firewall With Zones
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .applicationRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;apprulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 110),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;targetFqdns&#34;, &#34;www.test.com&#34;)
+ *                 ))
+ *             ))
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet&#34;))
+ *             ))
+ *             .location(&#34;West US 2&#34;)
+ *             .natRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Dnat&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;natrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all outbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTPS-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedAddress&#34;, &#34;1.2.3.5&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;8443&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all inbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;80&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTP-traffic-With-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttpserver&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;880&#34;)
+ *                     ))
+ *             ))
+ *             .networkRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;netrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;,                         
+ *                             &#34;192.168.1.1-192.168.1.12&#34;,
+ *                             &#34;10.1.4.12-10.1.4.255&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports to amazon&#34;),
+ *                         Map.entry(&#34;destinationFqdns&#34;, &#34;www.amazon.com&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic-with-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;10.2.4.12-10.2.4.255&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_VNet&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .zones(            
+ *                 &#34;1&#34;,
+ *                 &#34;2&#34;,
+ *                 &#34;3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Azure Firewall With management subnet
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .applicationRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;apprulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 110),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;targetFqdns&#34;, &#34;www.test.com&#34;)
+ *                 ))
+ *             ))
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallSubnet&#34;))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .managementIpConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;azureFirewallMgmtIpConfiguration&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/managementPipName&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet&#34;))
+ *             ))
+ *             .natRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Dnat&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;natrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all outbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTPS-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedAddress&#34;, &#34;1.2.3.5&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;8443&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;D-NAT all inbound web traffic for inspection&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;1.2.3.4&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;80&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;DNAT-HTTP-traffic-With-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttpserver&#34;),
+ *                         Map.entry(&#34;translatedPort&#34;, &#34;880&#34;)
+ *                     ))
+ *             ))
+ *             .networkRuleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;netrulecoll&#34;),
+ *                 Map.entry(&#34;priority&#34;, 112),
+ *                 Map.entry(&#34;rules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;,                         
+ *                             &#34;192.168.1.1-192.168.1.12&#34;,
+ *                             &#34;10.1.4.12-10.1.4.255&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Block traffic based on source IPs and ports to amazon&#34;),
+ *                         Map.entry(&#34;destinationFqdns&#34;, &#34;www.amazon.com&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;,                         
+ *                             &#34;443-444&#34;,
+ *                             &#34;8443&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;L4-traffic-with-FQDN&#34;),
+ *                         Map.entry(&#34;protocols&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;10.2.4.12-10.2.4.255&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_VNet&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .zones()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Azure Firewall in virtual Hub
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var azureFirewall = new AzureFirewall(&#34;azureFirewall&#34;, AzureFirewallArgs.builder()        
+ *             .azureFirewallName(&#34;azurefirewall&#34;)
+ *             .firewallPolicy(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1&#34;))
+ *             .hubIPAddresses(Map.of(&#34;publicIPs&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;addresses&#34;, ),
+ *                 Map.entry(&#34;count&#34;, 1)
+ *             )))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;AZFW_Hub&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1&#34;))
+ *             .zones()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

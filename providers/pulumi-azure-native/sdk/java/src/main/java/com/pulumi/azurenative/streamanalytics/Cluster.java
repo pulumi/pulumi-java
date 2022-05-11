@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01-preview.
  * 
  * ## Example Usage
+ * ### Create a new cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;An Example Cluster&#34;)
+ *             .location(&#34;North US&#34;)
+ *             .resourceGroupName(&#34;sjrg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 48),
+ *                 Map.entry(&#34;name&#34;, &#34;Default&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

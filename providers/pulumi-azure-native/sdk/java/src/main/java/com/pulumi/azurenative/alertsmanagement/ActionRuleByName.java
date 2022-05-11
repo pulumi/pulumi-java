@@ -25,6 +25,73 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-05-preview.
  * 
  * ## Example Usage
+ * ### PutActionRule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var actionRuleByName = new ActionRuleByName(&#34;actionRuleByName&#34;, ActionRuleByNameArgs.builder()        
+ *             .actionRuleName(&#34;DailySuppression&#34;)
+ *             .location(&#34;Global&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;conditions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;monitorCondition&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;operator&#34;, &#34;Equals&#34;),
+ *                         Map.entry(&#34;values&#34;, &#34;Fired&#34;)
+ *                     )),
+ *                     Map.entry(&#34;monitorService&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;operator&#34;, &#34;Equals&#34;),
+ *                         Map.entry(&#34;values&#34;,                         
+ *                             &#34;Platform&#34;,
+ *                             &#34;Application Insights&#34;)
+ *                     )),
+ *                     Map.entry(&#34;severity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;operator&#34;, &#34;Equals&#34;),
+ *                         Map.entry(&#34;values&#34;,                         
+ *                             &#34;Sev0&#34;,
+ *                             &#34;Sev2&#34;)
+ *                     )),
+ *                     Map.entry(&#34;targetResourceType&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;operator&#34;, &#34;NotEquals&#34;),
+ *                         Map.entry(&#34;values&#34;, &#34;Microsoft.Compute/VirtualMachines&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;Action rule on resource group for daily suppression&#34;),
+ *                 Map.entry(&#34;scope&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;scopeType&#34;, &#34;ResourceGroup&#34;),
+ *                     Map.entry(&#34;values&#34;, &#34;/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;suppressionConfig&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;recurrenceType&#34;, &#34;Daily&#34;),
+ *                     Map.entry(&#34;schedule&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;endDate&#34;, &#34;12/18/2018&#34;),
+ *                         Map.entry(&#34;endTime&#34;, &#34;14:00:00&#34;),
+ *                         Map.entry(&#34;startDate&#34;, &#34;12/09/2018&#34;),
+ *                         Map.entry(&#34;startTime&#34;, &#34;06:00:00&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Suppression&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;alertscorrelationrg&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### OrderPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var order = new Order(&#34;order&#34;, OrderArgs.builder()        
+ *             .contactInformation(Map.ofEntries(
+ *                 Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                 Map.entry(&#34;contactPerson&#34;, &#34;John Mcclane&#34;),
+ *                 Map.entry(&#34;emailList&#34;, &#34;john@microsoft.com&#34;),
+ *                 Map.entry(&#34;phone&#34;, &#34;(800) 426-9400&#34;)
+ *             ))
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .shippingAddress(Map.ofEntries(
+ *                 Map.entry(&#34;addressLine1&#34;, &#34;Microsoft Corporation&#34;),
+ *                 Map.entry(&#34;addressLine2&#34;, &#34;One Microsoft Way&#34;),
+ *                 Map.entry(&#34;addressLine3&#34;, &#34;Redmond&#34;),
+ *                 Map.entry(&#34;city&#34;, &#34;WA&#34;),
+ *                 Map.entry(&#34;country&#34;, &#34;USA&#34;),
+ *                 Map.entry(&#34;postalCode&#34;, &#34;98052&#34;),
+ *                 Map.entry(&#34;state&#34;, &#34;WA&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

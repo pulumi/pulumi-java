@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### DataManagers_CreatePUT41
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataManager = new DataManager(&#34;dataManager&#34;, DataManagerArgs.builder()        
+ *             .dataManagerName(&#34;TestAzureSDKOperations&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

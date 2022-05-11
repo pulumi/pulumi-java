@@ -23,13 +23,71 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create a default admin rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultAdminRule = new DefaultAdminRule(&#34;defaultAdminRule&#34;, DefaultAdminRuleArgs.builder()        
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .flag(&#34;AllowVnetInbound&#34;)
+ *             .kind(&#34;Default&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionName(&#34;testRuleCollection&#34;)
+ *             .ruleName(&#34;SampleDefaultAdminRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an admin rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultAdminRule = new DefaultAdminRule(&#34;defaultAdminRule&#34;, DefaultAdminRuleArgs.builder()        
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionName(&#34;testRuleCollection&#34;)
+ *             .ruleName(&#34;SampleAdminRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:DefaultAdminRule SampleAdminRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityAdminConfigurations/myTestSecurityConfig/ruleCollections/rules/SampleAdminRule 
+ * $ pulumi import azure-native:network:DefaultAdminRule SampleAdminRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityAdminConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection/rules/SampleAdminRule 
  * ```
  * 
  */

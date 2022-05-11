@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Origins_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var origin = new Origin(&#34;origin&#34;, OriginArgs.builder()        
+ *             .enabled(true)
+ *             .endpointName(&#34;endpoint1&#34;)
+ *             .hostName(&#34;www.someDomain.net&#34;)
+ *             .httpPort(80)
+ *             .httpsPort(443)
+ *             .originHostHeader(&#34;www.someDomain.net&#34;)
+ *             .originName(&#34;www-someDomain-net&#34;)
+ *             .priority(1)
+ *             .privateLinkApprovalMessage(&#34;Please approve the connection request for this Private Link&#34;)
+ *             .privateLinkLocation(&#34;eastus&#34;)
+ *             .privateLinkResourceId(&#34;/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .weight(50)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,66 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### NameSpaceNetworkRuleSetCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespaceNetworkRuleSet = new NamespaceNetworkRuleSet(&#34;namespaceNetworkRuleSet&#34;, NamespaceNetworkRuleSetArgs.builder()        
+ *             .defaultAction(&#34;Deny&#34;)
+ *             .ipRules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;1.1.1.1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;1.1.1.2&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;1.1.1.3&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;1.1.1.4&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;1.1.1.5&#34;)
+ *                 ))
+ *             .namespaceName(&#34;sdk-Namespace-6019&#34;)
+ *             .resourceGroupName(&#34;ResourceGroup&#34;)
+ *             .virtualNetworkRules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ignoreMissingVnetServiceEndpoint&#34;, true),
+ *                     Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ignoreMissingVnetServiceEndpoint&#34;, false),
+ *                     Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ignoreMissingVnetServiceEndpoint&#34;, false),
+ *                     Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6&#34;))
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

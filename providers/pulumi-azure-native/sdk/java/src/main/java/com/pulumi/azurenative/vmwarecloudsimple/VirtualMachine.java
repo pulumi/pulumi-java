@@ -28,6 +28,49 @@ import javax.annotation.Nullable;
  * API Version: 2019-04-01.
  * 
  * ## Example Usage
+ * ### CreateVirtualMachine
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .amountOfRam(4096)
+ *             .disks(Map.ofEntries(
+ *                 Map.entry(&#34;controllerId&#34;, &#34;1000&#34;),
+ *                 Map.entry(&#34;independenceMode&#34;, &#34;persistent&#34;),
+ *                 Map.entry(&#34;totalSize&#34;, 10485760),
+ *                 Map.entry(&#34;virtualDiskId&#34;, &#34;2000&#34;)
+ *             ))
+ *             .location(&#34;westus2&#34;)
+ *             .nics(Map.ofEntries(
+ *                 Map.entry(&#34;network&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19&#34;)),
+ *                 Map.entry(&#34;nicType&#34;, &#34;E1000&#34;),
+ *                 Map.entry(&#34;powerOnBoot&#34;, true),
+ *                 Map.entry(&#34;virtualNicId&#34;, &#34;4000&#34;)
+ *             ))
+ *             .numberOfCores(2)
+ *             .privateCloudId(&#34;/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourcePool(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26&#34;))
+ *             .templateId(&#34;/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34&#34;)
+ *             .virtualMachineName(&#34;myVirtualMachine&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

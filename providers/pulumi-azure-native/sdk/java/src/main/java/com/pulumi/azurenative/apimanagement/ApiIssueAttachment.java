@@ -19,6 +19,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApiIssueAttachment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiIssueAttachment = new ApiIssueAttachment(&#34;apiIssueAttachment&#34;, ApiIssueAttachmentArgs.builder()        
+ *             .apiId(&#34;57d1f7558aa04f15146d9d8a&#34;)
+ *             .attachmentId(&#34;57d2ef278aa04f0888cba3f3&#34;)
+ *             .content(&#34;IEJhc2U2NA==&#34;)
+ *             .contentFormat(&#34;image/jpeg&#34;)
+ *             .issueId(&#34;57d2ef278aa04f0ad01d6cdc&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .title(&#34;Issue attachment.&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

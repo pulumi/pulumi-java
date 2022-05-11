@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create role definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleDefinition = new RoleDefinition(&#34;roleDefinition&#34;, RoleDefinitionArgs.builder()        
+ *             .roleDefinitionId(&#34;roleDefinitionId&#34;)
+ *             .scope(&#34;scope&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

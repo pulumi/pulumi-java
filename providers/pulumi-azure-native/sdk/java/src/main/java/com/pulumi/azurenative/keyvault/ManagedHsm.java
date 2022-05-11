@@ -24,6 +24,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create a new managed HSM Pool or update an existing managed HSM Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedHsm = new ManagedHsm(&#34;managedHsm&#34;, ManagedHsmArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .name(&#34;hsm1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;enablePurgeProtection&#34;, true),
+ *                 Map.entry(&#34;enableSoftDelete&#34;, true),
+ *                 Map.entry(&#34;initialAdminObjectIds&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;),
+ *                 Map.entry(&#34;softDeleteRetentionInDays&#34;, 90),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;hsm-group&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;family&#34;, &#34;B&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_B1&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Dept&#34;, &#34;hsm&#34;),
+ *                 Map.entry(&#34;Environment&#34;, &#34;dogfood&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

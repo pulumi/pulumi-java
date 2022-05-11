@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a certificate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountCertificate = new IntegrationAccountCertificate(&#34;integrationAccountCertificate&#34;, IntegrationAccountCertificateArgs.builder()        
+ *             .certificateName(&#34;testCertificate&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .key(Map.ofEntries(
+ *                 Map.entry(&#34;keyName&#34;, &#34;&lt;keyName&gt;&#34;),
+ *                 Map.entry(&#34;keyVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/&lt;keyVaultName&gt;&#34;)),
+ *                 Map.entry(&#34;keyVersion&#34;, &#34;87d9764197604449b9b8eb7bd8710868&#34;)
+ *             ))
+ *             .location(&#34;brazilsouth&#34;)
+ *             .publicCertificate(&#34;&lt;publicCertificateValue&gt;&#34;)
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### FavoriteAdd
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var favorite = new Favorite(&#34;favorite&#34;, FavoriteArgs.builder()        
+ *             .config(&#34;{\&#34;MEDataModelRawJSON\&#34;:\&#34;{\\n  \\\&#34;version\\\&#34;: \\\&#34;1.4.1\\\&#34;,\\n  \\\&#34;isCustomDataModel\\\&#34;: true,\\n  \\\&#34;items\\\&#34;: [\\n    {\\n      \\\&#34;id\\\&#34;: \\\&#34;90a7134d-9a38-4c25-88d3-a495209873eb\\\&#34;,\\n      \\\&#34;chartType\\\&#34;: \\\&#34;Area\\\&#34;,\\n      \\\&#34;chartHeight\\\&#34;: 4,\\n      \\\&#34;metrics\\\&#34;: [\\n        {\\n          \\\&#34;id\\\&#34;: \\\&#34;preview/requests/count\\\&#34;,\\n          \\\&#34;metricAggregation\\\&#34;: \\\&#34;Sum\\\&#34;,\\n          \\\&#34;color\\\&#34;: \\\&#34;msportalfx-bgcolor-d0\\\&#34;\\n        }\\n      ],\\n      \\\&#34;priorPeriod\\\&#34;: false,\\n      \\\&#34;clickAction\\\&#34;: {\\n        \\\&#34;defaultBlade\\\&#34;: \\\&#34;SearchBlade\\\&#34;\\n      },\\n      \\\&#34;horizontalBars\\\&#34;: true,\\n      \\\&#34;showOther\\\&#34;: true,\\n      \\\&#34;aggregation\\\&#34;: \\\&#34;Sum\\\&#34;,\\n      \\\&#34;percentage\\\&#34;: false,\\n      \\\&#34;palette\\\&#34;: \\\&#34;fail\\\&#34;,\\n      \\\&#34;yAxisOption\\\&#34;: 0,\\n      \\\&#34;title\\\&#34;: \\\&#34;\\\&#34;\\n    },\\n    {\\n      \\\&#34;id\\\&#34;: \\\&#34;0c289098-88e8-4010-b212-546815cddf70\\\&#34;,\\n      \\\&#34;chartType\\\&#34;: \\\&#34;Area\\\&#34;,\\n      \\\&#34;chartHeight\\\&#34;: 2,\\n      \\\&#34;metrics\\\&#34;: [\\n        {\\n          \\\&#34;id\\\&#34;: \\\&#34;preview/requests/duration\\\&#34;,\\n          \\\&#34;metricAggregation\\\&#34;: \\\&#34;Avg\\\&#34;,\\n          \\\&#34;color\\\&#34;: \\\&#34;msportalfx-bgcolor-j1\\\&#34;\\n        }\\n      ],\\n      \\\&#34;priorPeriod\\\&#34;: false,\\n      \\\&#34;clickAction\\\&#34;: {\\n        \\\&#34;defaultBlade\\\&#34;: \\\&#34;SearchBlade\\\&#34;\\n      },\\n      \\\&#34;horizontalBars\\\&#34;: true,\\n      \\\&#34;showOther\\\&#34;: true,\\n      \\\&#34;aggregation\\\&#34;: \\\&#34;Avg\\\&#34;,\\n      \\\&#34;percentage\\\&#34;: false,\\n      \\\&#34;palette\\\&#34;: \\\&#34;greenHues\\\&#34;,\\n      \\\&#34;yAxisOption\\\&#34;: 0,\\n      \\\&#34;title\\\&#34;: \\\&#34;\\\&#34;\\n    },\\n    {\\n      \\\&#34;id\\\&#34;: \\\&#34;cbdaab6f-a808-4f71-aca5-b3976cbb7345\\\&#34;,\\n      \\\&#34;chartType\\\&#34;: \\\&#34;Bar\\\&#34;,\\n      \\\&#34;chartHeight\\\&#34;: 4,\\n      \\\&#34;metrics\\\&#34;: [\\n        {\\n          \\\&#34;id\\\&#34;: \\\&#34;preview/requests/duration\\\&#34;,\\n          \\\&#34;metricAggregation\\\&#34;: \\\&#34;Avg\\\&#34;,\\n          \\\&#34;color\\\&#34;: \\\&#34;msportalfx-bgcolor-d0\\\&#34;\\n        }\\n      ],\\n      \\\&#34;priorPeriod\\\&#34;: false,\\n      \\\&#34;clickAction\\\&#34;: {\\n        \\\&#34;defaultBlade\\\&#34;: \\\&#34;SearchBlade\\\&#34;\\n      },\\n      \\\&#34;horizontalBars\\\&#34;: true,\\n      \\\&#34;showOther\\\&#34;: true,\\n      \\\&#34;aggregation\\\&#34;: \\\&#34;Avg\\\&#34;,\\n      \\\&#34;percentage\\\&#34;: false,\\n      \\\&#34;palette\\\&#34;: \\\&#34;magentaHues\\\&#34;,\\n      \\\&#34;yAxisOption\\\&#34;: 0,\\n      \\\&#34;title\\\&#34;: \\\&#34;\\\&#34;\\n    },\\n    {\\n      \\\&#34;id\\\&#34;: \\\&#34;1d5a6a3a-9fa1-4099-9cf9-05eff72d1b02\\\&#34;,\\n      \\\&#34;grouping\\\&#34;: {\\n        \\\&#34;kind\\\&#34;: \\\&#34;ByDimension\\\&#34;,\\n        \\\&#34;dimension\\\&#34;: \\\&#34;context.application.version\\\&#34;\\n      },\\n      \\\&#34;chartType\\\&#34;: \\\&#34;Grid\\\&#34;,\\n      \\\&#34;chartHeight\\\&#34;: 1,\\n      \\\&#34;metrics\\\&#34;: [\\n        {\\n          \\\&#34;id\\\&#34;: \\\&#34;basicException.count\\\&#34;,\\n          \\\&#34;metricAggregation\\\&#34;: \\\&#34;Sum\\\&#34;,\\n          \\\&#34;color\\\&#34;: \\\&#34;msportalfx-bgcolor-g0\\\&#34;\\n        },\\n        {\\n          \\\&#34;id\\\&#34;: \\\&#34;requestFailed.count\\\&#34;,\\n          \\\&#34;metricAggregation\\\&#34;: \\\&#34;Sum\\\&#34;,\\n          \\\&#34;color\\\&#34;: \\\&#34;msportalfx-bgcolor-f0s2\\\&#34;\\n        }\\n      ],\\n      \\\&#34;priorPeriod\\\&#34;: true,\\n      \\\&#34;clickAction\\\&#34;: {\\n        \\\&#34;defaultBlade\\\&#34;: \\\&#34;SearchBlade\\\&#34;\\n      },\\n      \\\&#34;horizontalBars\\\&#34;: true,\\n      \\\&#34;showOther\\\&#34;: true,\\n      \\\&#34;percentage\\\&#34;: false,\\n      \\\&#34;palette\\\&#34;: \\\&#34;blueHues\\\&#34;,\\n      \\\&#34;yAxisOption\\\&#34;: 0,\\n      \\\&#34;title\\\&#34;: \\\&#34;\\\&#34;\\n    }\\n  ],\\n  \\\&#34;currentFilter\\\&#34;: {\\n    \\\&#34;eventTypes\\\&#34;: [\\n      1,\\n      2\\n    ],\\n    \\\&#34;typeFacets\\\&#34;: {},\\n    \\\&#34;isPermissive\\\&#34;: false\\n  },\\n  \\\&#34;timeContext\\\&#34;: {\\n    \\\&#34;durationMs\\\&#34;: 75600000,\\n    \\\&#34;endTime\\\&#34;: \\\&#34;2018-01-31T20:30:00.000Z\\\&#34;,\\n    \\\&#34;createdTime\\\&#34;: \\\&#34;2018-01-31T23:54:26.280Z\\\&#34;,\\n    \\\&#34;isInitialTime\\\&#34;: false,\\n    \\\&#34;grain\\\&#34;: 1,\\n    \\\&#34;useDashboardTimeRange\\\&#34;: false\\n  },\\n  \\\&#34;jsonUri\\\&#34;: \\\&#34;Favorite_BlankChart\\\&#34;,\\n  \\\&#34;timeSource\\\&#34;: 0\\n}\&#34;}&#34;)
+ *             .favoriteId(&#34;deadb33f-8bee-4d3b-a059-9be8dac93960&#34;)
+ *             .favoriteType(&#34;shared&#34;)
+ *             .isGeneratedFromTemplate(false)
+ *             .name(&#34;Blah Blah Blah&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-ai-component&#34;)
+ *             .tags(            
+ *                 &#34;TagSample01&#34;,
+ *                 &#34;TagSample02&#34;)
+ *             .version(&#34;ME&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

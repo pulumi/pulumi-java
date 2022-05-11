@@ -21,6 +21,59 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### QueryPackCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queryPack = new QueryPack(&#34;queryPack&#34;, QueryPackArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .queryPackName(&#34;my-querypack&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### QueryPackUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queryPack = new QueryPack(&#34;queryPack&#34;, QueryPackArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .queryPackName(&#34;my-querypack&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .tags(Map.of(&#34;Tag1&#34;, &#34;Value1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,318 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### ExportCreateOrUpdateByBillingAccount
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;providers/Microsoft.Billing/billingAccounts/123456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ExportCreateOrUpdateByDepartment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;providers/Microsoft.Billing/billingAccounts/12/departments/1234&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ExportCreateOrUpdateByEnrollmentAccount
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;providers/Microsoft.Billing/billingAccounts/100/enrollmentAccounts/456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ExportCreateOrUpdateByManagementGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;providers/Microsoft.Management/managementGroups/TestMG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ExportCreateOrUpdateByResourceGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ExportCreateOrUpdateBySubscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var export = new Export(&#34;export&#34;, ExportArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;dataSet&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;columns&#34;,                     
+ *                         &#34;Date&#34;,
+ *                         &#34;MeterId&#34;,
+ *                         &#34;ResourceId&#34;,
+ *                         &#34;ResourceLocation&#34;,
+ *                         &#34;Quantity&#34;)),
+ *                     Map.entry(&#34;granularity&#34;, &#34;Daily&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeframe&#34;, &#34;MonthToDate&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ActualCost&#34;)
+ *             ))
+ *             .deliveryInfo(Map.of(&#34;destination&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;exports&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182&#34;),
+ *                 Map.entry(&#34;rootFolderPath&#34;, &#34;ad-hoc&#34;)
+ *             )))
+ *             .exportName(&#34;TestExport&#34;)
+ *             .format(&#34;Csv&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;recurrence&#34;, &#34;Weekly&#34;),
+ *                 Map.entry(&#34;recurrencePeriod&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;from&#34;, &#34;2020-06-01T00:00:00Z&#34;),
+ *                     Map.entry(&#34;to&#34;, &#34;2020-10-31T00:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

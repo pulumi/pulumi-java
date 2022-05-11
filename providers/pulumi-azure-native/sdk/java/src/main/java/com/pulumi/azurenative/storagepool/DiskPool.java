@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-15-preview.
  * 
  * ## Example Usage
+ * ### Create or Update Disk pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diskPool = new DiskPool(&#34;diskPool&#34;, DiskPoolArgs.builder()        
+ *             .availabilityZones(&#34;1&#34;)
+ *             .diskPoolName(&#34;myDiskPool&#34;)
+ *             .disks(            
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0&#34;),
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .subnetId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .tier(&#34;Basic&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

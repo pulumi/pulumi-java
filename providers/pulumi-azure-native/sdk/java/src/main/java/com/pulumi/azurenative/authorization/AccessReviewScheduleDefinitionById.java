@@ -24,6 +24,30 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### PutAccessReview
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accessReviewScheduleDefinitionById = new AccessReviewScheduleDefinitionById(&#34;accessReviewScheduleDefinitionById&#34;, AccessReviewScheduleDefinitionByIdArgs.builder()        
+ *             .scheduleDefinitionId(&#34;fa73e90b-5bf1-45fd-a182-35ce5fc0674d&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

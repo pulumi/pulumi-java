@@ -24,6 +24,61 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01.
  * 
  * ## Example Usage
+ * ### CreateOrderItem
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderItemByName = new OrderItemByName(&#34;orderItemByName&#34;, OrderItemByNameArgs.builder()        
+ *             .addressDetails(Map.of(&#34;forwardAddress&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;XXXX XXXX&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;xxxx@xxxx.xxx&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;0000000000&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;None&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;UNIT 1&#34;)
+ *                 ))
+ *             )))
+ *             .location(&#34;eastus&#34;)
+ *             .orderId(&#34;/subscriptions/YourSubscriptionId/resourceGroups/YourResourceGroupName/providers/Microsoft.EdgeOrder/locations/eastus/orders/TestOrderName2&#34;)
+ *             .orderItemDetails(Map.ofEntries(
+ *                 Map.entry(&#34;orderItemType&#34;, &#34;Purchase&#34;),
+ *                 Map.entry(&#34;preferences&#34;, Map.of(&#34;transportPreferences&#34;, Map.of(&#34;preferredShipmentType&#34;, &#34;MicrosoftManaged&#34;))),
+ *                 Map.entry(&#34;productDetails&#34;, Map.of(&#34;hierarchyInformation&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurationName&#34;, &#34;edgep_base&#34;),
+ *                     Map.entry(&#34;productFamilyName&#34;, &#34;azurestackedge&#34;),
+ *                     Map.entry(&#34;productLineName&#34;, &#34;azurestackedge&#34;),
+ *                     Map.entry(&#34;productName&#34;, &#34;azurestackedgegpu&#34;)
+ *                 )))
+ *             ))
+ *             .orderItemName(&#34;TestOrderItemName2&#34;)
+ *             .resourceGroupName(&#34;YourResourceGroupName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

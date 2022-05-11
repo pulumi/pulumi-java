@@ -23,6 +23,79 @@ import javax.annotation.Nullable;
  * API Version: 2016-06-01.
  * 
  * ## Example Usage
+ * ### Create or update an RosettaNetProcessConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rosettaNetProcessConfiguration = new RosettaNetProcessConfiguration(&#34;rosettaNetProcessConfiguration&#34;, RosettaNetProcessConfigurationArgs.builder()        
+ *             .activitySettings(Map.ofEntries(
+ *                 Map.entry(&#34;acknowledgmentOfReceiptSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;isNonRepudiationRequired&#34;, false),
+ *                     Map.entry(&#34;timeToAcknowledgeInSeconds&#34;, 600)
+ *                 )),
+ *                 Map.entry(&#34;activityBehavior&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actionType&#34;, &#34;DoubleAction&#34;),
+ *                     Map.entry(&#34;isAuthorizationRequired&#34;, false),
+ *                     Map.entry(&#34;isSecuredTransportRequired&#34;, false),
+ *                     Map.entry(&#34;nonRepudiationOfOriginAndContent&#34;, false),
+ *                     Map.entry(&#34;persistentConfidentialityScope&#34;, &#34;None&#34;),
+ *                     Map.entry(&#34;responseType&#34;, &#34;Async&#34;),
+ *                     Map.entry(&#34;retryCount&#34;, 2),
+ *                     Map.entry(&#34;timeToPerformInSeconds&#34;, 7200)
+ *                 )),
+ *                 Map.entry(&#34;activityType&#34;, &#34;RequestResponse&#34;)
+ *             ))
+ *             .description(&#34;Test description&#34;)
+ *             .initiatorRoleSettings(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, &#34;Purchase Order Request&#34;),
+ *                 Map.entry(&#34;businessDocument&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;A request to accept a purchase order for fulfillment..&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Purchase Order Request&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;V02.02.00&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;This partner role creates a demand for a product or service.&#34;),
+ *                 Map.entry(&#34;role&#34;, &#34;Buyer&#34;),
+ *                 Map.entry(&#34;roleType&#34;, &#34;Functional&#34;),
+ *                 Map.entry(&#34;service&#34;, &#34;Buyer Service&#34;),
+ *                 Map.entry(&#34;serviceClassification&#34;, &#34;Business Service&#34;)
+ *             ))
+ *             .integrationAccountName(&#34;testia123&#34;)
+ *             .processCode(&#34;3A4&#34;)
+ *             .processName(&#34;Request Purchase Order&#34;)
+ *             .processVersion(&#34;V02.02.00&#34;)
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .responderRoleSettings(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, &#34;Purchase Order Confirmation Action&#34;),
+ *                 Map.entry(&#34;businessDocument&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Purchase Order Confirmation&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;V02.02.00&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;An organization that sells products to partners in the supply chain.&#34;),
+ *                 Map.entry(&#34;role&#34;, &#34;Seller&#34;),
+ *                 Map.entry(&#34;roleType&#34;, &#34;Organizational&#34;),
+ *                 Map.entry(&#34;service&#34;, &#34;Seller Service&#34;),
+ *                 Map.entry(&#34;serviceClassification&#34;, &#34;Business Service&#34;)
+ *             ))
+ *             .rosettaNetProcessConfigurationName(&#34;3A4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

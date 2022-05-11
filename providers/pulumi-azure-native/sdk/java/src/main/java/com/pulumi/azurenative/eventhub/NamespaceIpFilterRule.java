@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01-preview.
  * 
  * ## Example Usage
+ * ### NameSpaceIpFilterRuleCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespaceIpFilterRule = new NamespaceIpFilterRule(&#34;namespaceIpFilterRule&#34;, NamespaceIpFilterRuleArgs.builder()        
+ *             .action(&#34;Accept&#34;)
+ *             .filterName(&#34;sdk-IPFilterRules-7337&#34;)
+ *             .ipFilterRuleName(&#34;sdk-IPFilterRules-7337&#34;)
+ *             .ipMask(&#34;13.78.143.246/32&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-5232&#34;)
+ *             .resourceGroupName(&#34;ResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

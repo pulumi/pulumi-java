@@ -26,6 +26,124 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Create/update full metadata.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metadata = new Metadata(&#34;metadata&#34;, MetadataArgs.builder()        
+ *             .author(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, &#34;email@microsoft.com&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;User Name&#34;)
+ *             ))
+ *             .categories(Map.ofEntries(
+ *                 Map.entry(&#34;domains&#34;,                 
+ *                     &#34;Application&#34;,
+ *                     &#34;Security – Insider Threat&#34;),
+ *                 Map.entry(&#34;verticals&#34;, &#34;Healthcare&#34;)
+ *             ))
+ *             .contentId(&#34;c00ee137-7475-47c8-9cce-ec6f0f1bedd0&#34;)
+ *             .dependencies(Map.ofEntries(
+ *                 Map.entry(&#34;criteria&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;criteria&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;contentId&#34;, &#34;045d06d0-ee72-4794-aba4-cf5646e4c756&#34;),
+ *                                 Map.entry(&#34;kind&#34;, &#34;DataConnector&#34;),
+ *                                 Map.entry(&#34;name&#34;, &#34;Microsoft Defender for Endpoint&#34;)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;contentId&#34;, &#34;dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d&#34;),
+ *                                 Map.entry(&#34;kind&#34;, &#34;DataConnector&#34;)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;contentId&#34;, &#34;de4dca9b-eb37-47d6-a56f-b8b06b261593&#34;),
+ *                                 Map.entry(&#34;kind&#34;, &#34;DataConnector&#34;),
+ *                                 Map.entry(&#34;version&#34;, &#34;2.0&#34;)
+ *                             )),
+ *                         Map.entry(&#34;operator&#34;, &#34;OR&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;contentId&#34;, &#34;31ee11cc-9989-4de8-b176-5e0ef5c4dbab&#34;),
+ *                         Map.entry(&#34;kind&#34;, &#34;Playbook&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;1.0&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;contentId&#34;, &#34;21ba424a-9438-4444-953a-7059539a7a1b&#34;),
+ *                         Map.entry(&#34;kind&#34;, &#34;Parser&#34;)
+ *                     )),
+ *                 Map.entry(&#34;operator&#34;, &#34;AND&#34;)
+ *             ))
+ *             .firstPublishDate(&#34;2021-05-18&#34;)
+ *             .kind(&#34;AnalyticsRule&#34;)
+ *             .lastPublishDate(&#34;2021-05-18&#34;)
+ *             .metadataName(&#34;metadataName&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .parentId(&#34;/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName&#34;)
+ *             .providers(            
+ *                 &#34;Amazon&#34;,
+ *                 &#34;Microsoft&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;kind&#34;, &#34;Solution&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Contoso Solution 1.0&#34;),
+ *                 Map.entry(&#34;sourceId&#34;, &#34;b688a130-76f4-4a07-bf57-762222a3cadf&#34;)
+ *             ))
+ *             .support(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, &#34;support@microsoft.com&#34;),
+ *                 Map.entry(&#34;link&#34;, &#34;https://support.microsoft.com/&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Microsoft&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Partner&#34;)
+ *             ))
+ *             .version(&#34;1.0.0.0&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create/update minimal metadata.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metadata = new Metadata(&#34;metadata&#34;, MetadataArgs.builder()        
+ *             .contentId(&#34;c00ee137-7475-47c8-9cce-ec6f0f1bedd0&#34;)
+ *             .kind(&#34;AnalyticsRule&#34;)
+ *             .metadataName(&#34;metadataName&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .parentId(&#34;/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

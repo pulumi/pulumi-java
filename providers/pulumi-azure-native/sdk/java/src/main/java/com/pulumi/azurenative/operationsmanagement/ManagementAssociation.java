@@ -21,6 +21,36 @@ import javax.annotation.Nullable;
  * API Version: 2015-11-01-preview.
  * 
  * ## Example Usage
+ * ### SolutionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementAssociation = new ManagementAssociation(&#34;managementAssociation&#34;, ManagementAssociationArgs.builder()        
+ *             .location(&#34;East US&#34;)
+ *             .managementAssociationName(&#34;managementAssociation1&#34;)
+ *             .properties(Map.of(&#34;applicationId&#34;, &#34;/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1&#34;))
+ *             .providerName(&#34;providerName&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;resourceName&#34;)
+ *             .resourceType(&#34;resourceType&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

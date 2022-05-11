@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-12-01.
  * 
  * ## Example Usage
+ * ### ConfigurationCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configuration = new Configuration(&#34;configuration&#34;, ConfigurationArgs.builder()        
+ *             .configurationName(&#34;event_scheduler&#34;)
+ *             .resourceGroupName(&#34;TestGroup&#34;)
+ *             .serverName(&#34;testserver&#34;)
+ *             .source(&#34;user-override&#34;)
+ *             .value(&#34;off&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

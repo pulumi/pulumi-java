@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a bookmark relation.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bookmarkRelation = new BookmarkRelation(&#34;bookmarkRelation&#34;, BookmarkRelationArgs.builder()        
+ *             .bookmarkId(&#34;2216d0e1-91e3-4902-89fd-d2df8c535096&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .relatedResourceId(&#34;/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812&#34;)
+ *             .relationName(&#34;4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

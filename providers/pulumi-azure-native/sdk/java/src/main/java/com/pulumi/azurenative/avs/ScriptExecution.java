@@ -25,6 +25,51 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01.
  * 
  * ## Example Usage
+ * ### ScriptExecutions_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scriptExecution = new ScriptExecution(&#34;scriptExecution&#34;, ScriptExecutionArgs.builder()        
+ *             .hiddenParameters(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Password&#34;),
+ *                 Map.entry(&#34;secureValue&#34;, &#34;PlaceholderPassword&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;SecureValue&#34;)
+ *             ))
+ *             .parameters(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;DomainName&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Value&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;placeholderDomain.local&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;BaseUserDN&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Value&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;DC=placeholder, DC=placeholder&#34;)
+ *                 ))
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .retention(&#34;P0Y0M60DT0H60M60S&#34;)
+ *             .scriptCmdletId(&#34;/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource&#34;)
+ *             .scriptExecutionName(&#34;addSsoServer&#34;)
+ *             .timeout(&#34;P0Y0M0DT0H60M60S&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

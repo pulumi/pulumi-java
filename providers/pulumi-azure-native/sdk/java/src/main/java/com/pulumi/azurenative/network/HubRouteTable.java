@@ -21,6 +21,45 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### RouteTablePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hubRouteTable = new HubRouteTable(&#34;hubRouteTable&#34;, HubRouteTableArgs.builder()        
+ *             .labels(            
+ *                 &#34;label1&#34;,
+ *                 &#34;label2&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeTableName(&#34;hubRouteTable1&#34;)
+ *             .routes(Map.ofEntries(
+ *                 Map.entry(&#34;destinationType&#34;, &#34;CIDR&#34;),
+ *                 Map.entry(&#34;destinations&#34;,                 
+ *                     &#34;10.0.0.0/8&#34;,
+ *                     &#34;20.0.0.0/8&#34;,
+ *                     &#34;30.0.0.0/8&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;route1&#34;),
+ *                 Map.entry(&#34;nextHop&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1&#34;),
+ *                 Map.entry(&#34;nextHopType&#34;, &#34;ResourceId&#34;)
+ *             ))
+ *             .virtualHubName(&#34;virtualHub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

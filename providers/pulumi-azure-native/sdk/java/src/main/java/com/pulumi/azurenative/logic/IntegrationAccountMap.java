@@ -24,6 +24,119 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a map
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountMap = new IntegrationAccountMap(&#34;integrationAccountMap&#34;, IntegrationAccountMapArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-16&#34;?&gt;
+ * &lt;xsl:stylesheet xmlns:xsl=&#34;http://www.w3.org/1999/XSL/Transform&#34; xmlns:msxsl=&#34;urn:schemas-microsoft-com:xslt&#34; xmlns:var=&#34;http://schemas.microsoft.com/BizTalk/2003/var&#34; exclude-result-prefixes=&#34;msxsl var s0 userCSharp&#34; version=&#34;1.0&#34; xmlns:ns0=&#34;http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema&#34; xmlns:s0=&#34;http://BizTalk_Server_Project4.StringFunctoidsSourceSchema&#34; xmlns:userCSharp=&#34;http://schemas.microsoft.com/BizTalk/2003/userCSharp&#34;&gt;
+ *   &lt;xsl:import href=&#34;http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt&#34; /&gt;
+ *   &lt;xsl:output omit-xml-declaration=&#34;yes&#34; method=&#34;xml&#34; version=&#34;1.0&#34; /&gt;
+ *   &lt;xsl:template match=&#34;/&#34;&gt;
+ *     &lt;xsl:apply-templates select=&#34;/s0:Root&#34; /&gt;
+ *   &lt;/xsl:template&gt;
+ *   &lt;xsl:template match=&#34;/s0:Root&#34;&gt;
+ *     &lt;xsl:variable name=&#34;var:v1&#34; select=&#34;userCSharp:StringFind(string(StringFindSource/text()) , &amp;quot;SearchString&amp;quot;)&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v2&#34; select=&#34;userCSharp:StringLeft(string(StringLeftSource/text()) , &amp;quot;2&amp;quot;)&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v3&#34; select=&#34;userCSharp:StringRight(string(StringRightSource/text()) , &amp;quot;2&amp;quot;)&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v4&#34; select=&#34;userCSharp:StringUpperCase(string(UppercaseSource/text()))&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v5&#34; select=&#34;userCSharp:StringLowerCase(string(LowercaseSource/text()))&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v6&#34; select=&#34;userCSharp:StringSize(string(SizeSource/text()))&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v7&#34; select=&#34;userCSharp:StringSubstring(string(StringExtractSource/text()) , &amp;quot;0&amp;quot; , &amp;quot;2&amp;quot;)&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v8&#34; select=&#34;userCSharp:StringConcat(string(StringConcatSource/text()))&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v9&#34; select=&#34;userCSharp:StringTrimLeft(string(StringLeftTrimSource/text()))&#34; /&gt;
+ *     &lt;xsl:variable name=&#34;var:v10&#34; select=&#34;userCSharp:StringTrimRight(string(StringRightTrimSource/text()))&#34; /&gt;
+ *     &lt;ns0:Root&gt;
+ *       &lt;StringFindDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v1&#34; /&gt;
+ *       &lt;/StringFindDestination&gt;
+ *       &lt;StringLeftDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v2&#34; /&gt;
+ *       &lt;/StringLeftDestination&gt;
+ *       &lt;StringRightDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v3&#34; /&gt;
+ *       &lt;/StringRightDestination&gt;
+ *       &lt;UppercaseDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v4&#34; /&gt;
+ *       &lt;/UppercaseDestination&gt;
+ *       &lt;LowercaseDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v5&#34; /&gt;
+ *       &lt;/LowercaseDestination&gt;
+ *       &lt;SizeDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v6&#34; /&gt;
+ *       &lt;/SizeDestination&gt;
+ *       &lt;StringExtractDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v7&#34; /&gt;
+ *       &lt;/StringExtractDestination&gt;
+ *       &lt;StringConcatDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v8&#34; /&gt;
+ *       &lt;/StringConcatDestination&gt;
+ *       &lt;StringLeftTrimDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v9&#34; /&gt;
+ *       &lt;/StringLeftTrimDestination&gt;
+ *       &lt;StringRightTrimDestination&gt;
+ *         &lt;xsl:value-of select=&#34;$var:v10&#34; /&gt;
+ *       &lt;/StringRightTrimDestination&gt;
+ *     &lt;/ns0:Root&gt;
+ *   &lt;/xsl:template&gt;
+ * &lt;/xsl:stylesheet&gt;            &#34;&#34;&#34;)
+ *             .contentType(&#34;application/xml&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .mapName(&#34;testMap&#34;)
+ *             .mapType(&#34;Xslt&#34;)
+ *             .metadata()
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a map larger than 4 MB
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountMap = new IntegrationAccountMap(&#34;integrationAccountMap&#34;, IntegrationAccountMapArgs.builder()        
+ *             .contentType(&#34;application/xml&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .mapName(&#34;testMap&#34;)
+ *             .mapType(&#34;Xslt&#34;)
+ *             .metadata()
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

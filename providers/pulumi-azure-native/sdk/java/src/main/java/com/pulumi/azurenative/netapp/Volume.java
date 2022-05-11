@@ -26,6 +26,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Volumes_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volume = new Volume(&#34;volume&#34;, VolumeArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .creationToken(&#34;my-unique-file-path&#34;)
+ *             .encryptionKeySource(&#34;Microsoft.KeyVault&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .poolName(&#34;pool1&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .serviceLevel(&#34;Premium&#34;)
+ *             .subnetId(&#34;/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3&#34;)
+ *             .throughputMibps(128)
+ *             .usageThreshold(107374182400)
+ *             .volumeName(&#34;volume1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01-preview.
  * 
  * ## Example Usage
+ * ### NameSpaceVirtualNetworkRuleCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespaceVirtualNetworkRule = new NamespaceVirtualNetworkRule(&#34;namespaceVirtualNetworkRule&#34;, NamespaceVirtualNetworkRuleArgs.builder()        
+ *             .namespaceName(&#34;sdk-Namespace-6019&#34;)
+ *             .resourceGroupName(&#34;ResourceGroup&#34;)
+ *             .virtualNetworkRuleName(&#34;sdk-VirtualNetworkRules-9191&#34;)
+ *             .virtualNetworkSubnetId(&#34;/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

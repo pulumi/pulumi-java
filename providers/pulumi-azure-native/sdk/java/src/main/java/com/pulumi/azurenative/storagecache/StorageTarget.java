@@ -26,6 +26,113 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### StorageTargets_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageTarget = new StorageTarget(&#34;storageTarget&#34;, StorageTargetArgs.builder()        
+ *             .cacheName(&#34;sc1&#34;)
+ *             .junctions(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;namespacePath&#34;, &#34;/path/on/cache&#34;),
+ *                     Map.entry(&#34;nfsAccessPolicy&#34;, &#34;default&#34;),
+ *                     Map.entry(&#34;nfsExport&#34;, &#34;exp1&#34;),
+ *                     Map.entry(&#34;targetPath&#34;, &#34;/path/on/exp1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;namespacePath&#34;, &#34;/path2/on/cache&#34;),
+ *                     Map.entry(&#34;nfsAccessPolicy&#34;, &#34;rootSquash&#34;),
+ *                     Map.entry(&#34;nfsExport&#34;, &#34;exp2&#34;),
+ *                     Map.entry(&#34;targetPath&#34;, &#34;/path2/on/exp2&#34;)
+ *                 ))
+ *             .nfs3(Map.ofEntries(
+ *                 Map.entry(&#34;target&#34;, &#34;10.0.44.44&#34;),
+ *                 Map.entry(&#34;usageModel&#34;, &#34;READ_HEAVY_INFREQ&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;scgroup&#34;)
+ *             .storageTargetName(&#34;st1&#34;)
+ *             .targetType(&#34;nfs3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageTargets_CreateOrUpdate_BlobNfs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageTarget = new StorageTarget(&#34;storageTarget&#34;, StorageTargetArgs.builder()        
+ *             .blobNfs(Map.ofEntries(
+ *                 Map.entry(&#34;target&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs&#34;),
+ *                 Map.entry(&#34;usageModel&#34;, &#34;WRITE_WORKLOAD_15&#34;)
+ *             ))
+ *             .cacheName(&#34;sc1&#34;)
+ *             .junctions(Map.of(&#34;namespacePath&#34;, &#34;/blobnfs&#34;))
+ *             .resourceGroupName(&#34;scgroup&#34;)
+ *             .storageTargetName(&#34;st1&#34;)
+ *             .targetType(&#34;blobNfs&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageTargets_CreateOrUpdate_NoJunctions
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageTarget = new StorageTarget(&#34;storageTarget&#34;, StorageTargetArgs.builder()        
+ *             .cacheName(&#34;sc1&#34;)
+ *             .nfs3(Map.ofEntries(
+ *                 Map.entry(&#34;target&#34;, &#34;10.0.44.44&#34;),
+ *                 Map.entry(&#34;usageModel&#34;, &#34;READ_HEAVY_INFREQ&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;scgroup&#34;)
+ *             .storageTargetName(&#34;st1&#34;)
+ *             .targetType(&#34;nfs3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

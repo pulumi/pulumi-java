@@ -20,6 +20,174 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### DataSets_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .containerName(&#34;C1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .filePath(&#34;file21&#34;)
+ *             .kind(&#34;Blob&#34;)
+ *             .resourceGroup(&#34;SampleResourceGroup&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .storageAccountName(&#34;storage2&#34;)
+ *             .subscriptionId(&#34;433a8dfd-e5d5-4e77-ad86-90acdc75eb1a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_KustoCluster_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_KustoDatabase_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SqlDBTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SqlDWTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SynapseWorkspaceSqlPoolTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blobDataSet = new BlobDataSet(&#34;blobDataSet&#34;, BlobDataSetArgs.builder()        
+ *             .accountName(&#34;sourceAccount&#34;)
+ *             .dataSetName(&#34;dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

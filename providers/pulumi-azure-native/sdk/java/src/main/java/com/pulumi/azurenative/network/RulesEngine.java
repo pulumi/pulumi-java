@@ -21,6 +21,90 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a specific Rules Engine Configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rulesEngine = new RulesEngine(&#34;rulesEngine&#34;, RulesEngineArgs.builder()        
+ *             .frontDoorName(&#34;frontDoor1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .rules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, Map.of(&#34;routeConfigurationOverride&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;customFragment&#34;, &#34;fragment&#34;),
+ *                         Map.entry(&#34;customHost&#34;, &#34;www.bing.com&#34;),
+ *                         Map.entry(&#34;customPath&#34;, &#34;/api&#34;),
+ *                         Map.entry(&#34;customQueryString&#34;, &#34;a=b&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#34;),
+ *                         Map.entry(&#34;redirectProtocol&#34;, &#34;HttpsOnly&#34;),
+ *                         Map.entry(&#34;redirectType&#34;, &#34;Moved&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;matchConditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;rulesEngineMatchValue&#34;, &#34;CH&#34;),
+ *                         Map.entry(&#34;rulesEngineMatchVariable&#34;, &#34;RemoteAddr&#34;),
+ *                         Map.entry(&#34;rulesEngineOperator&#34;, &#34;GeoMatch&#34;)
+ *                     )),
+ *                     Map.entry(&#34;matchProcessingBehavior&#34;, &#34;Stop&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Rule1&#34;),
+ *                     Map.entry(&#34;priority&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, Map.of(&#34;responseHeaderActions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;headerActionType&#34;, &#34;Overwrite&#34;),
+ *                         Map.entry(&#34;headerName&#34;, &#34;Cache-Control&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;public, max-age=31536000&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;matchConditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;rulesEngineMatchValue&#34;, &#34;jpg&#34;),
+ *                         Map.entry(&#34;rulesEngineMatchVariable&#34;, &#34;RequestFilenameExtension&#34;),
+ *                         Map.entry(&#34;rulesEngineOperator&#34;, &#34;Equal&#34;),
+ *                         Map.entry(&#34;transforms&#34;, &#34;Lowercase&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;Rule2&#34;),
+ *                     Map.entry(&#34;priority&#34;, 2)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, Map.of(&#34;routeConfigurationOverride&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;backendPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1&#34;)),
+ *                         Map.entry(&#34;cacheConfiguration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;cacheDuration&#34;, &#34;P1DT12H20M30S&#34;),
+ *                             Map.entry(&#34;dynamicCompression&#34;, &#34;Disabled&#34;),
+ *                             Map.entry(&#34;queryParameterStripDirective&#34;, &#34;StripOnly&#34;),
+ *                             Map.entry(&#34;queryParameters&#34;, &#34;a=b,p=q&#34;)
+ *                         )),
+ *                         Map.entry(&#34;forwardingProtocol&#34;, &#34;HttpsOnly&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;matchConditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;negateCondition&#34;, false),
+ *                         Map.entry(&#34;rulesEngineMatchValue&#34;, &#34;allowoverride&#34;),
+ *                         Map.entry(&#34;rulesEngineMatchVariable&#34;, &#34;RequestHeader&#34;),
+ *                         Map.entry(&#34;rulesEngineOperator&#34;, &#34;Equal&#34;),
+ *                         Map.entry(&#34;selector&#34;, &#34;Rules-Engine-Route-Forward&#34;),
+ *                         Map.entry(&#34;transforms&#34;, &#34;Lowercase&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;Rule3&#34;),
+ *                     Map.entry(&#34;priority&#34;, 3)
+ *                 ))
+ *             .rulesEngineName(&#34;rulesEngine1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,62 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### Update tags on a resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tagAtScope = new TagAtScope(&#34;tagAtScope&#34;, TagAtScopeArgs.builder()        
+ *             .properties(Map.of(&#34;tags&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;tagKey1&#34;, &#34;tagValue1&#34;),
+ *                 Map.entry(&#34;tagKey2&#34;, &#34;tagValue2&#34;)
+ *             )))
+ *             .scope(&#34;subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd/resourcegroups/myResourceGroup/providers/myPRNameSpace/VM/myVm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update tags on a subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tagAtScope = new TagAtScope(&#34;tagAtScope&#34;, TagAtScopeArgs.builder()        
+ *             .properties(Map.of(&#34;tags&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;tagKey1&#34;, &#34;tagValue1&#34;),
+ *                 Map.entry(&#34;tagKey2&#34;, &#34;tagValue2&#34;)
+ *             )))
+ *             .scope(&#34;subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

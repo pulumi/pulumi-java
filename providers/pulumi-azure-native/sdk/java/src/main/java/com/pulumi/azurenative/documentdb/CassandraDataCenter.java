@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBManagedCassandraDataCenterCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cassandraDataCenter = new CassandraDataCenter(&#34;cassandraDataCenter&#34;, CassandraDataCenterArgs.builder()        
+ *             .clusterName(&#34;cassandra-prod&#34;)
+ *             .dataCenterName(&#34;dc1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;base64EncodedCassandraYamlFragment&#34;, &#34;Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA=&#34;),
+ *                 Map.entry(&#34;dataCenterLocation&#34;, &#34;West US 2&#34;),
+ *                 Map.entry(&#34;delegatedSubnetId&#34;, &#34;/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet&#34;),
+ *                 Map.entry(&#34;nodeCount&#34;, 9)
+ *             ))
+ *             .resourceGroupName(&#34;cassandra-prod-rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

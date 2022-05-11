@@ -24,6 +24,43 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update a Smart Detector alert rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var smartDetectorAlertRule = new SmartDetectorAlertRule(&#34;smartDetectorAlertRule&#34;, SmartDetectorAlertRuleArgs.builder()        
+ *             .actionGroups(Map.ofEntries(
+ *                 Map.entry(&#34;customEmailSubject&#34;, &#34;My custom email subject&#34;),
+ *                 Map.entry(&#34;customWebhookPayload&#34;, &#34;{\&#34;AlertRuleName\&#34;:\&#34;#alertrulename\&#34;}&#34;),
+ *                 Map.entry(&#34;groupIds&#34;, &#34;/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup&#34;)
+ *             ))
+ *             .alertRuleName(&#34;MyAlertRule&#34;)
+ *             .description(&#34;Sample smart detector alert rule description&#34;)
+ *             .detector(Map.of(&#34;id&#34;, &#34;VMMemoryLeak&#34;))
+ *             .frequency(&#34;PT5M&#34;)
+ *             .resourceGroupName(&#34;MyAlertRules&#34;)
+ *             .scope(&#34;/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1&#34;)
+ *             .severity(&#34;Sev3&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .throttling(Map.of(&#34;duration&#34;, &#34;PT20M&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

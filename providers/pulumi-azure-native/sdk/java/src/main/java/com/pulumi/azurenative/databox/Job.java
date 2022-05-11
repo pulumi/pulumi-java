@@ -31,6 +31,278 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### JobsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .details(Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;Public SDK Test&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;testing@microsoft.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;1234567890&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataImportDetails&#34;, Map.of(&#34;accountDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                     Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;jobDetailsType&#34;, &#34;DataBox&#34;),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;Commercial&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;Unit 1&#34;)
+ *                 ))
+ *             ))
+ *             .jobName(&#34;SdkJob952&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;SdkRg5154&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;DataBox&#34;))
+ *             .transferType(&#34;ImportToAzure&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### JobsCreateDevicePassword
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .details(Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;Public SDK Test&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;testing@microsoft.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;1234567890&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataImportDetails&#34;, Map.of(&#34;accountDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                     Map.entry(&#34;sharePassword&#34;, &#34;&lt;sharePassword&gt;&#34;),
+ *                     Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;devicePassword&#34;, &#34;&lt;devicePassword&gt;&#34;),
+ *                 Map.entry(&#34;jobDetailsType&#34;, &#34;DataBox&#34;),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;Commercial&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;Unit 1&#34;)
+ *                 ))
+ *             ))
+ *             .jobName(&#34;SdkJob9640&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;SdkRg7478&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;DataBox&#34;))
+ *             .transferType(&#34;ImportToAzure&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### JobsCreateDoubleEncryption
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .details(Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;Public SDK Test&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;testing@microsoft.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;1234567890&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataImportDetails&#34;, Map.of(&#34;accountDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                     Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;jobDetailsType&#34;, &#34;DataBox&#34;),
+ *                 Map.entry(&#34;preferences&#34;, Map.of(&#34;encryptionPreferences&#34;, Map.of(&#34;doubleEncryption&#34;, &#34;Enabled&#34;))),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;Commercial&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;Unit 1&#34;)
+ *                 ))
+ *             ))
+ *             .jobName(&#34;SdkJob6599&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;SdkRg608&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;DataBox&#34;))
+ *             .transferType(&#34;ImportToAzure&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### JobsCreateExport
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .details(Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;Public SDK Test&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;testing@microsoft.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;1234567890&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataExportDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;accountDetails&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                         Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2&#34;)
+ *                     )),
+ *                     Map.entry(&#34;transferConfiguration&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;transferAllDetails&#34;, Map.of(&#34;include&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                             Map.entry(&#34;transferAllBlobs&#34;, true),
+ *                             Map.entry(&#34;transferAllFiles&#34;, true)
+ *                         ))),
+ *                         Map.entry(&#34;transferConfigurationType&#34;, &#34;TransferAll&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;jobDetailsType&#34;, &#34;DataBox&#34;),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;Commercial&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;Unit 1&#34;)
+ *                 ))
+ *             ))
+ *             .jobName(&#34;SdkJob6429&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;SdkRg8091&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;DataBox&#34;))
+ *             .transferType(&#34;ExportFromAzure&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### JobsCreateWithUserAssignedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .details(Map.ofEntries(
+ *                 Map.entry(&#34;contactDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;contactName&#34;, &#34;Public SDK Test&#34;),
+ *                     Map.entry(&#34;emailList&#34;, &#34;testing@microsoft.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;1234567890&#34;),
+ *                     Map.entry(&#34;phoneExtension&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataImportDetails&#34;, Map.of(&#34;accountDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataAccountType&#34;, &#34;StorageAccount&#34;),
+ *                     Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;jobDetailsType&#34;, &#34;DataBox&#34;),
+ *                 Map.entry(&#34;shippingAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;addressType&#34;, &#34;Commercial&#34;),
+ *                     Map.entry(&#34;city&#34;, &#34;San Francisco&#34;),
+ *                     Map.entry(&#34;companyName&#34;, &#34;Microsoft&#34;),
+ *                     Map.entry(&#34;country&#34;, &#34;US&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;94107&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;CA&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;16 TOWNSEND ST&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;Unit 1&#34;)
+ *                 ))
+ *             ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity&#34;, ))
+ *             ))
+ *             .jobName(&#34;SdkJob5337&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;SdkRg7552&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;DataBox&#34;))
+ *             .transferType(&#34;ImportToAzure&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

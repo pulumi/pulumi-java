@@ -25,6 +25,38 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create environments
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedEnvironment = new ManagedEnvironment(&#34;managedEnvironment&#34;, ManagedEnvironmentArgs.builder()        
+ *             .appLogsConfiguration(Map.of(&#34;logAnalyticsConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;customerId&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;sharedKey&#34;, &#34;string&#34;)
+ *             )))
+ *             .daprAIConnectionString(&#34;InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://northcentralus-0.in.applicationinsights.azure.com/&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .name(&#34;testcontainerenv&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .zoneRedundant(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

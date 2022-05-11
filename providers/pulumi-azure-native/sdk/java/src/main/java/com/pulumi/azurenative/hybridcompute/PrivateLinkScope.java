@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-25-preview.
  * 
  * ## Example Usage
+ * ### PrivateLinkScopeCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkScope = new PrivateLinkScope(&#34;privateLinkScope&#34;, PrivateLinkScopeArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .scopeName(&#34;my-privatelinkscope&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PrivateLinkScopeUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkScope = new PrivateLinkScope(&#34;privateLinkScope&#34;, PrivateLinkScopeArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .scopeName(&#34;my-privatelinkscope&#34;)
+ *             .tags(Map.of(&#34;Tag1&#34;, &#34;Value1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

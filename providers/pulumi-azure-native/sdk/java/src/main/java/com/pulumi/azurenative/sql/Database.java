@@ -25,6 +25,325 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Creates a VCore database by specifying service objective name.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;family&#34;, &#34;Gen4&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;BC&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a VCore database by specifying sku name and capacity.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;BC_Gen4&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database as a copy.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .createMode(&#34;Copy&#34;)
+ *             .databaseName(&#34;dbcopy&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S0&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .sourceDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database as an on-line secondary.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .createMode(&#34;Secondary&#34;)
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .secondaryType(&#34;Geo&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S0&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .sourceDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database as named replica secondary.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .createMode(&#34;Secondary&#34;)
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .secondaryType(&#34;Named&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;HS_Gen4&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Hyperscale&#34;)
+ *             ))
+ *             .sourceDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/primarydb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database from PointInTimeRestore.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .createMode(&#34;PointInTimeRestore&#34;)
+ *             .databaseName(&#34;dbpitr&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .restorePointInTime(&#34;2020-10-22T05:35:31.503Z&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sourceDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database with default mode.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .collation(&#34;SQL_Latin1_General_CP1_CI_AS&#34;)
+ *             .createMode(&#34;Default&#34;)
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .maxSizeBytes(1073741824)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S0&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database with minimum number of parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database with preferred maintenance window.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .collation(&#34;SQL_Latin1_General_CP1_CI_AS&#34;)
+ *             .createMode(&#34;Default&#34;)
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .maintenanceConfigurationId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_SouthEastAsia_1&#34;)
+ *             .maxSizeBytes(1073741824)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a database with specified backup storage redundancy.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .requestedBackupStorageRedundancy(&#34;Zone&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

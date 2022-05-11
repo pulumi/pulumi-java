@@ -24,6 +24,44 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create sim
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sim = new Sim(&#34;sim&#34;, SimArgs.builder()        
+ *             .authenticationKey(&#34;00000000000000000000000000000000&#34;)
+ *             .deviceType(&#34;Video camera&#34;)
+ *             .integratedCircuitCardIdentifier(&#34;8900000000000000000&#34;)
+ *             .internationalMobileSubscriberIdentity(&#34;00000&#34;)
+ *             .location(&#34;testLocation&#34;)
+ *             .mobileNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork&#34;))
+ *             .operatorKeyCode(&#34;00000000000000000000000000000000&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .simName(&#34;testSim&#34;)
+ *             .simPolicy(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/simPolicies/MySimPolicy&#34;))
+ *             .staticIpConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;attachedDataNetwork&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/packetCoreControlPlanes/TestPacketCoreCP/packetCoreDataPlanes/TestPacketCoreDP/attachedDataNetworks/TestAttachedDataNetwork&#34;)),
+ *                 Map.entry(&#34;slice&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/slices/testSlice&#34;)),
+ *                 Map.entry(&#34;staticIp&#34;, Map.of(&#34;ipv4Address&#34;, &#34;2.4.0.1&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -434,9 +434,10 @@ func resolveExecutor(exec string) (*javaExecutor, error) {
 func newGradleExecutor(cmd string) (*javaExecutor, error) {
 	return &javaExecutor{
 		cmd:       cmd,
-		buildArgs: []string{"build", "-q", "--console=plain"},
-		runArgs:   []string{"run", "-q", "--console=plain"},
+		buildArgs: []string{"build", "--console=plain"},
+		runArgs:   []string{"run", "--console=plain"},
 		pluginArgs: []string{
+			/* STDOUT needs to be clean of gradle output, because we expect a JSON with plugin results */
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
 			"-PmainClass=com.pulumi.bootstrap.internal.Main",
@@ -448,10 +449,12 @@ func newGradleExecutor(cmd string) (*javaExecutor, error) {
 func newMavenExecutor(cmd string) (*javaExecutor, error) {
 	return &javaExecutor{
 		cmd:       cmd,
-		buildArgs: []string{"--quiet", "--no-transfer-progress", "compile"},
-		runArgs:   []string{"--quiet", "--no-transfer-progress", "compile", "exec:java"},
+		buildArgs: []string{"--no-transfer-progress", "compile"},
+		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
-			"--quiet", "--no-transfer-progress", "compile", "exec:java",
+			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
+			"-Dorg.slf4j.simpleLogger.logFile=System.err",
+			"--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
 		},

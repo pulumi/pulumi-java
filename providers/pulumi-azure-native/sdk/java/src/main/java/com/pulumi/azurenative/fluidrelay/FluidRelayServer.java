@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-12-preview.
  * 
  * ## Example Usage
+ * ### Create a Fluid Relay server
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fluidRelayServer = new FluidRelayServer(&#34;fluidRelayServer&#34;, FluidRelayServerArgs.builder()        
+ *             .location(&#34;west-us&#34;)
+ *             .name(&#34;myFluidRelayServer&#34;)
+ *             .resourceGroup(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;Category&#34;, &#34;sales&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

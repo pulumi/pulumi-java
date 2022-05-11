@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### Skus_CreateOrUpdateNestedResourceTypeThird
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var skusNestedResourceTypeThird = new SkusNestedResourceTypeThird(&#34;skusNestedResourceTypeThird&#34;, SkusNestedResourceTypeThirdArgs.builder()        
+ *             .nestedResourceTypeFirst(&#34;nestedResourceTypeFirst&#34;)
+ *             .nestedResourceTypeSecond(&#34;nestedResourceTypeSecond&#34;)
+ *             .nestedResourceTypeThird(&#34;nestedResourceTypeThird&#34;)
+ *             .properties(Map.of(&#34;skuSettings&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;kind&#34;, &#34;Standard&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;freeSku&#34;),
+ *                     Map.entry(&#34;tier&#34;, &#34;Tier1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;costs&#34;, Map.of(&#34;meterId&#34;, &#34;xxx&#34;)),
+ *                     Map.entry(&#34;kind&#34;, &#34;Premium&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;premiumSku&#34;),
+ *                     Map.entry(&#34;tier&#34;, &#34;Tier2&#34;)
+ *                 )))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .resourceType(&#34;testResourceType&#34;)
+ *             .sku(&#34;testSku&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

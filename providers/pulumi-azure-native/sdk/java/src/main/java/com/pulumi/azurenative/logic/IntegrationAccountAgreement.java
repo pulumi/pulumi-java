@@ -24,6 +24,180 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update an agreement
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountAgreement = new IntegrationAccountAgreement(&#34;integrationAccountAgreement&#34;, IntegrationAccountAgreementArgs.builder()        
+ *             .agreementName(&#34;testAgreement&#34;)
+ *             .agreementType(&#34;AS2&#34;)
+ *             .content(Map.of(&#34;aS2&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;receiveAgreement&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;protocolSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;acknowledgementConnectionSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;ignoreCertificateNameMismatch&#34;, true),
+ *                             Map.entry(&#34;keepHttpConnectionAlive&#34;, true),
+ *                             Map.entry(&#34;supportHttpStatusCodeContinue&#34;, true),
+ *                             Map.entry(&#34;unfoldHttpHeaders&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;envelopeSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;autogenerateFileName&#34;, true),
+ *                             Map.entry(&#34;fileNameTemplate&#34;, &#34;Test&#34;),
+ *                             Map.entry(&#34;messageContentType&#34;, &#34;text/plain&#34;),
+ *                             Map.entry(&#34;suspendMessageOnFileNameGenerationError&#34;, true),
+ *                             Map.entry(&#34;transmitFileNameInMimeHeader&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;errorSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;resendIfMDNNotReceived&#34;, true),
+ *                             Map.entry(&#34;suspendDuplicateMessage&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;mdnSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;dispositionNotificationTo&#34;, &#34;http://tempuri.org&#34;),
+ *                             Map.entry(&#34;mdnText&#34;, &#34;Sample&#34;),
+ *                             Map.entry(&#34;micHashingAlgorithm&#34;, &#34;SHA1&#34;),
+ *                             Map.entry(&#34;needMDN&#34;, true),
+ *                             Map.entry(&#34;receiptDeliveryUrl&#34;, &#34;http://tempuri.org&#34;),
+ *                             Map.entry(&#34;sendInboundMDNToMessageBox&#34;, true),
+ *                             Map.entry(&#34;sendMDNAsynchronously&#34;, true),
+ *                             Map.entry(&#34;signMDN&#34;, true),
+ *                             Map.entry(&#34;signOutboundMDNIfOptional&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;messageConnectionSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;ignoreCertificateNameMismatch&#34;, true),
+ *                             Map.entry(&#34;keepHttpConnectionAlive&#34;, true),
+ *                             Map.entry(&#34;supportHttpStatusCodeContinue&#34;, true),
+ *                             Map.entry(&#34;unfoldHttpHeaders&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;securitySettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;enableNRRForInboundDecodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForInboundEncodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForInboundMDN&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundDecodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundEncodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundMDN&#34;, true),
+ *                             Map.entry(&#34;overrideGroupSigningCertificate&#34;, false)
+ *                         )),
+ *                         Map.entry(&#34;validationSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;checkCertificateRevocationListOnReceive&#34;, true),
+ *                             Map.entry(&#34;checkCertificateRevocationListOnSend&#34;, true),
+ *                             Map.entry(&#34;checkDuplicateMessage&#34;, true),
+ *                             Map.entry(&#34;compressMessage&#34;, true),
+ *                             Map.entry(&#34;encryptMessage&#34;, false),
+ *                             Map.entry(&#34;encryptionAlgorithm&#34;, &#34;AES128&#34;),
+ *                             Map.entry(&#34;interchangeDuplicatesValidityDays&#34;, 100),
+ *                             Map.entry(&#34;overrideMessageProperties&#34;, true),
+ *                             Map.entry(&#34;signMessage&#34;, false)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;receiverBusinessIdentity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;qualifier&#34;, &#34;ZZ&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;ZZ&#34;)
+ *                     )),
+ *                     Map.entry(&#34;senderBusinessIdentity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;qualifier&#34;, &#34;AA&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;AA&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;sendAgreement&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;protocolSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;acknowledgementConnectionSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;ignoreCertificateNameMismatch&#34;, true),
+ *                             Map.entry(&#34;keepHttpConnectionAlive&#34;, true),
+ *                             Map.entry(&#34;supportHttpStatusCodeContinue&#34;, true),
+ *                             Map.entry(&#34;unfoldHttpHeaders&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;envelopeSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;autogenerateFileName&#34;, true),
+ *                             Map.entry(&#34;fileNameTemplate&#34;, &#34;Test&#34;),
+ *                             Map.entry(&#34;messageContentType&#34;, &#34;text/plain&#34;),
+ *                             Map.entry(&#34;suspendMessageOnFileNameGenerationError&#34;, true),
+ *                             Map.entry(&#34;transmitFileNameInMimeHeader&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;errorSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;resendIfMDNNotReceived&#34;, true),
+ *                             Map.entry(&#34;suspendDuplicateMessage&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;mdnSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;dispositionNotificationTo&#34;, &#34;http://tempuri.org&#34;),
+ *                             Map.entry(&#34;mdnText&#34;, &#34;Sample&#34;),
+ *                             Map.entry(&#34;micHashingAlgorithm&#34;, &#34;SHA1&#34;),
+ *                             Map.entry(&#34;needMDN&#34;, true),
+ *                             Map.entry(&#34;receiptDeliveryUrl&#34;, &#34;http://tempuri.org&#34;),
+ *                             Map.entry(&#34;sendInboundMDNToMessageBox&#34;, true),
+ *                             Map.entry(&#34;sendMDNAsynchronously&#34;, true),
+ *                             Map.entry(&#34;signMDN&#34;, true),
+ *                             Map.entry(&#34;signOutboundMDNIfOptional&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;messageConnectionSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;ignoreCertificateNameMismatch&#34;, true),
+ *                             Map.entry(&#34;keepHttpConnectionAlive&#34;, true),
+ *                             Map.entry(&#34;supportHttpStatusCodeContinue&#34;, true),
+ *                             Map.entry(&#34;unfoldHttpHeaders&#34;, true)
+ *                         )),
+ *                         Map.entry(&#34;securitySettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;enableNRRForInboundDecodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForInboundEncodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForInboundMDN&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundDecodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundEncodedMessages&#34;, true),
+ *                             Map.entry(&#34;enableNRRForOutboundMDN&#34;, true),
+ *                             Map.entry(&#34;overrideGroupSigningCertificate&#34;, false)
+ *                         )),
+ *                         Map.entry(&#34;validationSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;checkCertificateRevocationListOnReceive&#34;, true),
+ *                             Map.entry(&#34;checkCertificateRevocationListOnSend&#34;, true),
+ *                             Map.entry(&#34;checkDuplicateMessage&#34;, true),
+ *                             Map.entry(&#34;compressMessage&#34;, true),
+ *                             Map.entry(&#34;encryptMessage&#34;, false),
+ *                             Map.entry(&#34;encryptionAlgorithm&#34;, &#34;AES128&#34;),
+ *                             Map.entry(&#34;interchangeDuplicatesValidityDays&#34;, 100),
+ *                             Map.entry(&#34;overrideMessageProperties&#34;, true),
+ *                             Map.entry(&#34;signMessage&#34;, false)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;receiverBusinessIdentity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;qualifier&#34;, &#34;AA&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;AA&#34;)
+ *                     )),
+ *                     Map.entry(&#34;senderBusinessIdentity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;qualifier&#34;, &#34;ZZ&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;ZZ&#34;)
+ *                     ))
+ *                 ))
+ *             )))
+ *             .guestIdentity(Map.ofEntries(
+ *                 Map.entry(&#34;qualifier&#34;, &#34;AA&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;AA&#34;)
+ *             ))
+ *             .guestPartner(&#34;GuestPartner&#34;)
+ *             .hostIdentity(Map.ofEntries(
+ *                 Map.entry(&#34;qualifier&#34;, &#34;ZZ&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;ZZ&#34;)
+ *             ))
+ *             .hostPartner(&#34;HostPartner&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .metadata()
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .tags(Map.of(&#34;IntegrationAccountAgreement&#34;, &#34;&lt;IntegrationAccountAgreementName&gt;&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

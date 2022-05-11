@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create custom IP prefix allocation method
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customIPPrefix = new CustomIPPrefix(&#34;customIPPrefix&#34;, CustomIPPrefixArgs.builder()        
+ *             .cidr(&#34;0.0.0.0/24&#34;)
+ *             .customIpPrefixName(&#34;test-customipprefix&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

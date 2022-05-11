@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create a peer ASN
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peerAsn = new PeerAsn(&#34;peerAsn&#34;, PeerAsnArgs.builder()        
+ *             .peerAsn(65000)
+ *             .peerAsnName(&#34;peerAsnName&#34;)
+ *             .peerContactDetail(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;email&#34;, &#34;noc@contoso.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;+1 (234) 567-8999&#34;),
+ *                     Map.entry(&#34;role&#34;, &#34;Noc&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;email&#34;, &#34;abc@contoso.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;+1 (234) 567-8900&#34;),
+ *                     Map.entry(&#34;role&#34;, &#34;Policy&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;email&#34;, &#34;xyz@contoso.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;+1 (234) 567-8900&#34;),
+ *                     Map.entry(&#34;role&#34;, &#34;Technical&#34;)
+ *                 ))
+ *             .peerName(&#34;Contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

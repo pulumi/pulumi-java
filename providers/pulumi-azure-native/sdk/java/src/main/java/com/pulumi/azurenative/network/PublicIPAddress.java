@@ -31,6 +31,92 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create public IP address DNS
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var publicIPAddress = new PublicIPAddress(&#34;publicIPAddress&#34;, PublicIPAddressArgs.builder()        
+ *             .dnsSettings(Map.of(&#34;domainNameLabel&#34;, &#34;dnslbl&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .publicIpAddressName(&#34;test-ip&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create public IP address allocation method
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var publicIPAddress = new PublicIPAddress(&#34;publicIPAddress&#34;, PublicIPAddressArgs.builder()        
+ *             .idleTimeoutInMinutes(10)
+ *             .location(&#34;eastus&#34;)
+ *             .publicIPAddressVersion(&#34;IPv4&#34;)
+ *             .publicIPAllocationMethod(&#34;Static&#34;)
+ *             .publicIpAddressName(&#34;test-ip&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Global&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create public IP address defaults
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var publicIPAddress = new PublicIPAddress(&#34;publicIPAddress&#34;, PublicIPAddressArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .publicIpAddressName(&#34;test-ip&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

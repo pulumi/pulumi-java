@@ -24,6 +24,47 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Links_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var link = new Link(&#34;link&#34;, LinkArgs.builder()        
+ *             .description(Map.of(&#34;en-us&#34;, &#34;Link Description&#34;))
+ *             .displayName(Map.of(&#34;en-us&#34;, &#34;Link DisplayName&#34;))
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .linkName(&#34;linkTest4806&#34;)
+ *             .mappings(Map.ofEntries(
+ *                 Map.entry(&#34;linkType&#34;, &#34;UpdateAlways&#34;),
+ *                 Map.entry(&#34;sourcePropertyName&#34;, &#34;testInteraction1949&#34;),
+ *                 Map.entry(&#34;targetPropertyName&#34;, &#34;testProfile1446&#34;)
+ *             ))
+ *             .participantPropertyReferences(Map.ofEntries(
+ *                 Map.entry(&#34;sourcePropertyName&#34;, &#34;testInteraction1949&#34;),
+ *                 Map.entry(&#34;targetPropertyName&#34;, &#34;ProfileId&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .sourceEntityType(&#34;Interaction&#34;)
+ *             .sourceEntityTypeName(&#34;testInteraction1949&#34;)
+ *             .targetEntityType(&#34;Profile&#34;)
+ *             .targetEntityTypeName(&#34;testProfile1446&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

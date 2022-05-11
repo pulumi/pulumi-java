@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates an Activity entity query.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entityQuery = new EntityQuery(&#34;entityQuery&#34;, EntityQueryArgs.builder()        
+ *             .entityQueryId(&#34;07da3cc8-c8ad-4710-a44e-334cdcb7882b&#34;)
+ *             .kind(&#34;Activity&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalIinsights&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

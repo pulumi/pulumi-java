@@ -24,6 +24,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01.
  * 
  * ## Example Usage
+ * ### Creates a Track
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var track = new Track(&#34;track&#34;, TrackArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .assetName(&#34;ClimbingMountRainer&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .track(Map.ofEntries(
+ *                 Map.entry(&#34;displayName&#34;, &#34;A new track&#34;),
+ *                 Map.entry(&#34;fileName&#34;, &#34;text3.ttml&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.TextTrack&#34;),
+ *                 Map.entry(&#34;playerVisibility&#34;, &#34;Visible&#34;)
+ *             ))
+ *             .trackName(&#34;text3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

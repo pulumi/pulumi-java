@@ -24,6 +24,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-08.
  * 
  * ## Example Usage
+ * ### BotCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bot = new Bot(&#34;bot&#34;, BotArgs.builder()        
+ *             .botName(&#34;samplebotname&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .resourceGroupName(&#34;healthbotClient&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;F0&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

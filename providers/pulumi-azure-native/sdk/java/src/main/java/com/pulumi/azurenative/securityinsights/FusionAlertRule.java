@@ -21,6 +21,87 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates a Fusion alert rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fusionAlertRule = new FusionAlertRule(&#34;fusionAlertRule&#34;, FusionAlertRuleArgs.builder()        
+ *             .alertRuleTemplateName(&#34;f71aba3d-28fb-450b-b192-4e76a83015c8&#34;)
+ *             .enabled(true)
+ *             .kind(&#34;Fusion&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;myFirstFusionRule&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fusionAlertRule = new FusionAlertRule(&#34;fusionAlertRule&#34;, FusionAlertRuleArgs.builder()        
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;microsoftSecurityIncidentCreationRuleExample&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a Scheduled alert rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fusionAlertRule = new FusionAlertRule(&#34;fusionAlertRule&#34;, FusionAlertRuleArgs.builder()        
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

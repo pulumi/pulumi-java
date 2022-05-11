@@ -23,6 +23,93 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Batch Deployment.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchDeployment = new BatchDeployment(&#34;batchDeployment&#34;, BatchDeploymentArgs.builder()        
+ *             .deploymentName(&#34;testBatchDeployment&#34;)
+ *             .endpointName(&#34;testBatchEndpoint&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;principalId&#34;, &#34;string&#34;)
+ *                 )))
+ *             ))
+ *             .kind(&#34;string&#34;)
+ *             .location(&#34;string&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;codeConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;codeId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1&#34;),
+ *                     Map.entry(&#34;scoringScript&#34;, &#34;score.py&#34;)
+ *                 )),
+ *                 Map.entry(&#34;compute&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;instanceCount&#34;, 0),
+ *                     Map.entry(&#34;instanceType&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;isLocal&#34;, false),
+ *                     Map.entry(&#34;location&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                         Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                         Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                     )),
+ *                     Map.entry(&#34;target&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;environmentId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv&#34;),
+ *                 Map.entry(&#34;environmentVariables&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;errorThreshold&#34;, 0),
+ *                 Map.entry(&#34;loggingLevel&#34;, &#34;Info&#34;),
+ *                 Map.entry(&#34;miniBatchSize&#34;, 0),
+ *                 Map.entry(&#34;model&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;assetId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1&#34;),
+ *                     Map.entry(&#34;referenceType&#34;, &#34;Id&#34;)
+ *                 )),
+ *                 Map.entry(&#34;outputConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;appendRowFileName&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;outputAction&#34;, &#34;SummaryOnly&#34;)
+ *                 )),
+ *                 Map.entry(&#34;partitionKeys&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;retrySettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxRetries&#34;, 0),
+ *                     Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup-1234&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *             ))
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

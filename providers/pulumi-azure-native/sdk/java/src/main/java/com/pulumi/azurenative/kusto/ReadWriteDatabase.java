@@ -22,6 +22,60 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Kusto ReadOnly database update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var readWriteDatabase = new ReadWriteDatabase(&#34;readWriteDatabase&#34;, ReadWriteDatabaseArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .databaseName(&#34;KustoreadOnlyDatabase&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Kusto ReadWrite database create or update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var readWriteDatabase = new ReadWriteDatabase(&#34;readWriteDatabase&#34;, ReadWriteDatabaseArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .databaseName(&#34;KustoDatabase8&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .softDeletePeriod(&#34;P1D&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

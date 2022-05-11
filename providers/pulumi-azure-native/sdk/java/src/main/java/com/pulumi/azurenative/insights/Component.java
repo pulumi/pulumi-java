@@ -25,6 +25,67 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### ComponentCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var component = new Component(&#34;component&#34;, ComponentArgs.builder()        
+ *             .applicationType(&#34;web&#34;)
+ *             .flowType(&#34;Bluefield&#34;)
+ *             .kind(&#34;web&#34;)
+ *             .location(&#34;South Central US&#34;)
+ *             .requestSource(&#34;rest&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ComponentUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var component = new Component(&#34;component&#34;, ComponentArgs.builder()        
+ *             .kind(&#34;web&#34;)
+ *             .location(&#34;South Central US&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;ApplicationGatewayType&#34;, &#34;Internal-Only&#34;),
+ *                 Map.entry(&#34;BillingEntity&#34;, &#34;Self&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

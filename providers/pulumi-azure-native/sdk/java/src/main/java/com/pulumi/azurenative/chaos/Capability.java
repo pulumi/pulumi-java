@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-09-15-preview.
  * 
  * ## Example Usage
+ * ### Create/update a Capability that extends a virtual machine Target resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var capability = new Capability(&#34;capability&#34;, CapabilityArgs.builder()        
+ *             .capabilityName(&#34;Shutdown-1.0&#34;)
+ *             .parentProviderNamespace(&#34;Microsoft.Compute&#34;)
+ *             .parentResourceName(&#34;exampleVM&#34;)
+ *             .parentResourceType(&#34;virtualMachines&#34;)
+ *             .resourceGroupName(&#34;exampleRG&#34;)
+ *             .targetName(&#34;Microsoft-VirtualMachine&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

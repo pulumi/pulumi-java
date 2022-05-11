@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Create VMware site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var site = new Site(&#34;site&#34;, SiteArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.of(&#34;servicePrincipalIdentityDetails&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;aadAuthority&#34;, &#34;https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                 Map.entry(&#34;applicationId&#34;, &#34;e9f013df-2a2a-4871-b766-e79867f30348&#34;),
+ *                 Map.entry(&#34;audience&#34;, &#34;https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp&#34;),
+ *                 Map.entry(&#34;objectId&#34;, &#34;2cd492bc-7ef3-4ee0-b301-59a88108b47b&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;pajindTest&#34;)
+ *             .siteName(&#34;appliance1e39site&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

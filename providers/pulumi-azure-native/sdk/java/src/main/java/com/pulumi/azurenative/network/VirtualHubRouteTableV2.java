@@ -21,6 +21,48 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VirtualHubRouteTableV2Put
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualHubRouteTableV2 = new VirtualHubRouteTableV2(&#34;virtualHubRouteTableV2&#34;, VirtualHubRouteTableV2Args.builder()        
+ *             .attachedConnections(&#34;All_Vnets&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeTableName(&#34;virtualHubRouteTable1a&#34;)
+ *             .routes(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationType&#34;, &#34;CIDR&#34;),
+ *                     Map.entry(&#34;destinations&#34;,                     
+ *                         &#34;20.10.0.0/16&#34;,
+ *                         &#34;20.20.0.0/16&#34;),
+ *                     Map.entry(&#34;nextHopType&#34;, &#34;IPAddress&#34;),
+ *                     Map.entry(&#34;nextHops&#34;, &#34;10.0.0.68&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationType&#34;, &#34;CIDR&#34;),
+ *                     Map.entry(&#34;destinations&#34;, &#34;0.0.0.0/0&#34;),
+ *                     Map.entry(&#34;nextHopType&#34;, &#34;IPAddress&#34;),
+ *                     Map.entry(&#34;nextHops&#34;, &#34;10.0.0.68&#34;)
+ *                 ))
+ *             .virtualHubName(&#34;virtualHub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

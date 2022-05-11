@@ -24,13 +24,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create capacity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var capacityDetails = new CapacityDetails(&#34;capacityDetails&#34;, CapacityDetailsArgs.builder()        
+ *             .administration(Map.of(&#34;members&#34;,             
+ *                 &#34;azsdktest@microsoft.com&#34;,
+ *                 &#34;azsdktest2@microsoft.com&#34;))
+ *             .dedicatedCapacityName(&#34;azsdktest&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;TestRG&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;A1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;PBIE_Azure&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testKey&#34;, &#34;testValue&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:powerbidedicated:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/capacities/azsdktest 
+ * $ pulumi import azure-native:powerbidedicated:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
  * ```
  * 
  */

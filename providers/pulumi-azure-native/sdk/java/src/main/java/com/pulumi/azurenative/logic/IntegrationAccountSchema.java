@@ -23,6 +23,195 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update schema
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountSchema = new IntegrationAccountSchema(&#34;integrationAccountSchema&#34;, IntegrationAccountSchemaArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-16&#34;?&gt;
+ * &lt;xs:schema xmlns:b=&#34;http://schemas.microsoft.com/BizTalk/2003&#34; xmlns=&#34;http://Inbound_EDI.OrderFile&#34; targetNamespace=&#34;http://Inbound_EDI.OrderFile&#34; xmlns:xs=&#34;http://www.w3.org/2001/XMLSchema&#34;&gt;
+ *   &lt;xs:annotation&gt;
+ *     &lt;xs:appinfo&gt;
+ *       &lt;b:schemaInfo default_pad_char=&#34; &#34; count_positions_by_byte=&#34;false&#34; parser_optimization=&#34;speed&#34; lookahead_depth=&#34;3&#34; suppress_empty_nodes=&#34;false&#34; generate_empty_nodes=&#34;true&#34; allow_early_termination=&#34;false&#34; early_terminate_optional_fields=&#34;false&#34; allow_message_breakup_of_infix_root=&#34;false&#34; compile_parse_tables=&#34;false&#34; standard=&#34;Flat File&#34; root_reference=&#34;OrderFile&#34; /&gt;
+ *       &lt;schemaEditorExtension:schemaInfo namespaceAlias=&#34;b&#34; extensionClass=&#34;Microsoft.BizTalk.FlatFileExtension.FlatFileExtension&#34; standardName=&#34;Flat File&#34; xmlns:schemaEditorExtension=&#34;http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions&#34; /&gt;
+ *     &lt;/xs:appinfo&gt;
+ *   &lt;/xs:annotation&gt;
+ *   &lt;xs:element name=&#34;OrderFile&#34;&gt;
+ *     &lt;xs:annotation&gt;
+ *       &lt;xs:appinfo&gt;
+ *         &lt;b:recordInfo structure=&#34;delimited&#34; preserve_delimiter_for_empty_data=&#34;true&#34; suppress_trailing_delimiters=&#34;false&#34; sequence_number=&#34;1&#34; /&gt;
+ *       &lt;/xs:appinfo&gt;
+ *     &lt;/xs:annotation&gt;
+ *     &lt;xs:complexType&gt;
+ *       &lt;xs:sequence&gt;
+ *         &lt;xs:annotation&gt;
+ *           &lt;xs:appinfo&gt;
+ *             &lt;b:groupInfo sequence_number=&#34;0&#34; /&gt;
+ *           &lt;/xs:appinfo&gt;
+ *         &lt;/xs:annotation&gt;
+ *         &lt;xs:element name=&#34;Order&#34;&gt;
+ *           &lt;xs:annotation&gt;
+ *             &lt;xs:appinfo&gt;
+ *               &lt;b:recordInfo sequence_number=&#34;1&#34; structure=&#34;delimited&#34; preserve_delimiter_for_empty_data=&#34;true&#34; suppress_trailing_delimiters=&#34;false&#34; child_delimiter_type=&#34;hex&#34; child_delimiter=&#34;0x0D 0x0A&#34; child_order=&#34;infix&#34; /&gt;
+ *             &lt;/xs:appinfo&gt;
+ *           &lt;/xs:annotation&gt;
+ *           &lt;xs:complexType&gt;
+ *             &lt;xs:sequence&gt;
+ *               &lt;xs:annotation&gt;
+ *                 &lt;xs:appinfo&gt;
+ *                   &lt;b:groupInfo sequence_number=&#34;0&#34; /&gt;
+ *                 &lt;/xs:appinfo&gt;
+ *               &lt;/xs:annotation&gt;
+ *               &lt;xs:element name=&#34;Header&#34;&gt;
+ *                 &lt;xs:annotation&gt;
+ *                   &lt;xs:appinfo&gt;
+ *                     &lt;b:recordInfo sequence_number=&#34;1&#34; structure=&#34;delimited&#34; preserve_delimiter_for_empty_data=&#34;true&#34; suppress_trailing_delimiters=&#34;false&#34; child_delimiter_type=&#34;char&#34; child_delimiter=&#34;|&#34; child_order=&#34;infix&#34; tag_name=&#34;HDR|&#34; /&gt;
+ *                   &lt;/xs:appinfo&gt;
+ *                 &lt;/xs:annotation&gt;
+ *                 &lt;xs:complexType&gt;
+ *                   &lt;xs:sequence&gt;
+ *                     &lt;xs:annotation&gt;
+ *                       &lt;xs:appinfo&gt;
+ *                         &lt;b:groupInfo sequence_number=&#34;0&#34; /&gt;
+ *                       &lt;/xs:appinfo&gt;
+ *                     &lt;/xs:annotation&gt;
+ *                     &lt;xs:element name=&#34;PODate&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;1&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;PONumber&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo justification=&#34;left&#34; sequence_number=&#34;2&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;CustomerID&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;3&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;CustomerContactName&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;4&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;CustomerContactPhone&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;5&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                   &lt;/xs:sequence&gt;
+ *                 &lt;/xs:complexType&gt;
+ *               &lt;/xs:element&gt;
+ *               &lt;xs:element minOccurs=&#34;1&#34; maxOccurs=&#34;unbounded&#34; name=&#34;LineItems&#34;&gt;
+ *                 &lt;xs:annotation&gt;
+ *                   &lt;xs:appinfo&gt;
+ *                     &lt;b:recordInfo sequence_number=&#34;2&#34; structure=&#34;delimited&#34; preserve_delimiter_for_empty_data=&#34;true&#34; suppress_trailing_delimiters=&#34;false&#34; child_delimiter_type=&#34;char&#34; child_delimiter=&#34;|&#34; child_order=&#34;infix&#34; tag_name=&#34;DTL|&#34; /&gt;
+ *                   &lt;/xs:appinfo&gt;
+ *                 &lt;/xs:annotation&gt;
+ *                 &lt;xs:complexType&gt;
+ *                   &lt;xs:sequence&gt;
+ *                     &lt;xs:annotation&gt;
+ *                       &lt;xs:appinfo&gt;
+ *                         &lt;b:groupInfo sequence_number=&#34;0&#34; /&gt;
+ *                       &lt;/xs:appinfo&gt;
+ *                     &lt;/xs:annotation&gt;
+ *                     &lt;xs:element name=&#34;PONumber&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;1&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;ItemOrdered&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;2&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;Quantity&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;3&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;UOM&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;4&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;Price&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;5&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;ExtendedPrice&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;6&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                     &lt;xs:element name=&#34;Description&#34; type=&#34;xs:string&#34;&gt;
+ *                       &lt;xs:annotation&gt;
+ *                         &lt;xs:appinfo&gt;
+ *                           &lt;b:fieldInfo sequence_number=&#34;7&#34; justification=&#34;left&#34; /&gt;
+ *                         &lt;/xs:appinfo&gt;
+ *                       &lt;/xs:annotation&gt;
+ *                     &lt;/xs:element&gt;
+ *                   &lt;/xs:sequence&gt;
+ *                 &lt;/xs:complexType&gt;
+ *               &lt;/xs:element&gt;
+ *             &lt;/xs:sequence&gt;
+ *           &lt;/xs:complexType&gt;
+ *         &lt;/xs:element&gt;
+ *       &lt;/xs:sequence&gt;
+ *     &lt;/xs:complexType&gt;
+ *   &lt;/xs:element&gt;
+ * &lt;/xs:schema&gt;            &#34;&#34;&#34;)
+ *             .contentType(&#34;application/xml&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .metadata()
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .schemaName(&#34;testSchema&#34;)
+ *             .schemaType(&#34;Xml&#34;)
+ *             .tags(Map.of(&#34;integrationAccountSchemaName&#34;, &#34;IntegrationAccountSchema8120&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

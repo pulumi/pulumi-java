@@ -23,6 +23,53 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBManagedCassandraClusterCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cassandraCluster = new CassandraCluster(&#34;cassandraCluster&#34;, CassandraClusterArgs.builder()        
+ *             .clusterName(&#34;cassandra-prod&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authenticationMethod&#34;, &#34;Cassandra&#34;),
+ *                 Map.entry(&#34;cassandraVersion&#34;, &#34;3.11&#34;),
+ *                 Map.entry(&#34;clientCertificates&#34;, Map.of(&#34;pem&#34;, &#34;&#34;&#34;
+ * -----BEGIN CERTIFICATE-----
+ * ...Base64 encoded certificate...
+ * -----END CERTIFICATE-----                &#34;&#34;&#34;)),
+ *                 Map.entry(&#34;clusterNameOverride&#34;, &#34;ClusterNameIllegalForAzureResource&#34;),
+ *                 Map.entry(&#34;delegatedManagementSubnetId&#34;, &#34;/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management&#34;),
+ *                 Map.entry(&#34;externalGossipCertificates&#34;, Map.of(&#34;pem&#34;, &#34;&#34;&#34;
+ * -----BEGIN CERTIFICATE-----
+ * ...Base64 encoded certificate...
+ * -----END CERTIFICATE-----                &#34;&#34;&#34;)),
+ *                 Map.entry(&#34;externalSeedNodes&#34;,                 
+ *                     Map.of(&#34;ipAddress&#34;, &#34;10.52.221.2&#34;),
+ *                     Map.of(&#34;ipAddress&#34;, &#34;10.52.221.3&#34;),
+ *                     Map.of(&#34;ipAddress&#34;, &#34;10.52.221.4&#34;)),
+ *                 Map.entry(&#34;hoursBetweenBackups&#34;, 24),
+ *                 Map.entry(&#34;initialCassandraAdminPassword&#34;, &#34;mypassword&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;cassandra-prod-rg&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

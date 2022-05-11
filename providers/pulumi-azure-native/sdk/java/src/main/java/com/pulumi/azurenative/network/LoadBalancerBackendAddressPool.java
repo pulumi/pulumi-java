@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Update load balancer backend pool with backend addresses containing virtual network and  IP address.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancerBackendAddressPool = new LoadBalancerBackendAddressPool(&#34;loadBalancerBackendAddressPool&#34;, LoadBalancerBackendAddressPoolArgs.builder()        
+ *             .backendAddressPoolName(&#34;backend&#34;)
+ *             .loadBalancerBackendAddresses(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ipAddress&#34;, &#34;10.0.0.4&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;address1&#34;),
+ *                     Map.entry(&#34;virtualNetwork&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ipAddress&#34;, &#34;10.0.0.5&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;address2&#34;),
+ *                     Map.entry(&#34;virtualNetwork&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb&#34;))
+ *                 ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Create or update a policy definition at management group level
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyDefinitionAtManagementGroup = new PolicyDefinitionAtManagementGroup(&#34;policyDefinitionAtManagementGroup&#34;, PolicyDefinitionAtManagementGroupArgs.builder()        
+ *             .description(&#34;Force resource names to begin with given &#39;prefix&#39; and/or end with given &#39;suffix&#39;&#34;)
+ *             .displayName(&#34;Enforce resource naming convention&#34;)
+ *             .managementGroupId(&#34;MyManagementGroup&#34;)
+ *             .metadata(Map.of(&#34;category&#34;, &#34;Naming&#34;))
+ *             .mode(&#34;All&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;prefix&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metadata&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Resource name prefix&#34;),
+ *                         Map.entry(&#34;displayName&#34;, &#34;Prefix&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 )),
+ *                 Map.entry(&#34;suffix&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metadata&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Resource name suffix&#34;),
+ *                         Map.entry(&#34;displayName&#34;, &#34;Suffix&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 ))
+ *             ))
+ *             .policyDefinitionName(&#34;ResourceNaming&#34;)
+ *             .policyRule(Map.ofEntries(
+ *                 Map.entry(&#34;if&#34;, Map.of(&#34;not&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;field&#34;, &#34;name&#34;),
+ *                     Map.entry(&#34;like&#34;, &#34;[concat(parameters(&#39;prefix&#39;), &#39;*&#39;, parameters(&#39;suffix&#39;))]&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;then&#34;, Map.of(&#34;effect&#34;, &#34;deny&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

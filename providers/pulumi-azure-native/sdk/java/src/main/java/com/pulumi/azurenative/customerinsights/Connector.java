@@ -24,6 +24,39 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Connectors_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connector = new Connector(&#34;connector&#34;, ConnectorArgs.builder()        
+ *             .connectorName(&#34;testConnector&#34;)
+ *             .connectorProperties(Map.of(&#34;connectionKeyVaultUrl&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;organizationId&#34;, &#34;XXX&#34;),
+ *                 Map.entry(&#34;organizationUrl&#34;, &#34;https://XXX.crmlivetie.com/&#34;)
+ *             )))
+ *             .connectorType(&#34;AzureBlob&#34;)
+ *             .description(&#34;Test connector&#34;)
+ *             .displayName(&#34;testConnector&#34;)
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

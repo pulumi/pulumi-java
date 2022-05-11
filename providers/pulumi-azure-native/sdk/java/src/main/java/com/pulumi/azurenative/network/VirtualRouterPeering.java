@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### Create Virtual Router Peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualRouterPeering = new VirtualRouterPeering(&#34;virtualRouterPeering&#34;, VirtualRouterPeeringArgs.builder()        
+ *             .peerAsn(20000)
+ *             .peerIp(&#34;192.168.1.5&#34;)
+ *             .peeringName(&#34;peering1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .virtualRouterName(&#34;virtualRouter&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

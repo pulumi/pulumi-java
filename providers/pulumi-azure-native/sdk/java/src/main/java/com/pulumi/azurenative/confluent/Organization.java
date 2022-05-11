@@ -23,6 +23,45 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### Organization_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new Organization(&#34;organization&#34;, OrganizationArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .offerDetail(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;planId&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;planName&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;publisherId&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;termUnit&#34;, &#34;string&#34;)
+ *             ))
+ *             .organizationName(&#34;myOrganization&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Dev&#34;))
+ *             .userDetail(Map.ofEntries(
+ *                 Map.entry(&#34;emailAddress&#34;, &#34;contoso@microsoft.com&#34;),
+ *                 Map.entry(&#34;firstName&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;lastName&#34;, &#34;string&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

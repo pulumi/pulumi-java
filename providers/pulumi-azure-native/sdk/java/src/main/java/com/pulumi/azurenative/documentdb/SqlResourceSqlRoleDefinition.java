@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBSqlRoleDefinitionCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlResourceSqlRoleDefinition = new SqlResourceSqlRoleDefinition(&#34;sqlResourceSqlRoleDefinition&#34;, SqlResourceSqlRoleDefinitionArgs.builder()        
+ *             .accountName(&#34;myAccountName&#34;)
+ *             .assignableScopes(            
+ *                 &#34;/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales&#34;,
+ *                 &#34;/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases&#34;)
+ *             .permissions(Map.ofEntries(
+ *                 Map.entry(&#34;dataActions&#34;,                 
+ *                     &#34;Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create&#34;,
+ *                     &#34;Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read&#34;),
+ *                 Map.entry(&#34;notDataActions&#34;, )
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .roleDefinitionId(&#34;myRoleDefinitionId&#34;)
+ *             .roleName(&#34;myRoleName&#34;)
+ *             .type(&#34;CustomRole&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

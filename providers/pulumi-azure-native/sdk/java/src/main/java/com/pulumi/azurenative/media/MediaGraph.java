@@ -22,6 +22,129 @@ import javax.annotation.Nullable;
  * API Version: 2020-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a Media Graph with a clear RTSP Source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mediaGraph = new MediaGraph(&#34;mediaGraph&#34;, MediaGraphArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .description(&#34;updated description&#34;)
+ *             .mediaGraphName(&#34;SampleMediaGraph&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .sinks(Map.ofEntries(
+ *                 Map.entry(&#34;assetName&#34;, &#34;SampleAsset&#34;),
+ *                 Map.entry(&#34;inputs&#34;, &#34;rtspSource&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;AssetSink&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphAssetSink&#34;)
+ *             ))
+ *             .sources(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#34;),
+ *                         Map.entry(&#34;password&#34;, &#34;examplepassword&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;exampleusername&#34;)
+ *                     )),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphClearEndpoint&#34;),
+ *                     Map.entry(&#34;url&#34;, &#34;rtsp://contoso.com:554/stream1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;rtspSource&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphRtspSource&#34;),
+ *                 Map.entry(&#34;transport&#34;, &#34;Http&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a Media Graph with an encrypted RTSP Source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mediaGraph = new MediaGraph(&#34;mediaGraph&#34;, MediaGraphArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .description(&#34;updated description&#34;)
+ *             .mediaGraphName(&#34;SampleMediaGraph&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .sinks(Map.ofEntries(
+ *                 Map.entry(&#34;assetName&#34;, &#34;SampleAsset&#34;),
+ *                 Map.entry(&#34;inputs&#34;, &#34;rtspSource&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;AssetSink&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphAssetSink&#34;)
+ *             ))
+ *             .sources(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#34;),
+ *                         Map.entry(&#34;password&#34;, &#34;examplepassword&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;exampleusername&#34;)
+ *                     )),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphTlsEndpoint&#34;),
+ *                     Map.entry(&#34;trustedCertificates&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;certificates&#34;, &#34;&#34;&#34;
+ * -----BEGIN CERTIFICATE-----
+ * MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+ * BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+ * MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+ * MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+ * EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ * ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+ * 7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+ * uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+ * f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+ * 9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+ * qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+ * JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+ * /wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+ * MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+ * Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+ * 99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+ * PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+ * oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+ * nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+ * -----END CERTIFICATE-----                        &#34;&#34;&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphPemCertificateList&#34;)
+ *                     )),
+ *                     Map.entry(&#34;url&#34;, &#34;rtsps://contoso.com:443/stream1&#34;),
+ *                     Map.entry(&#34;validationOptions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;ignoreHostname&#34;, true),
+ *                         Map.entry(&#34;ignoreSignature&#34;, false)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;rtspSource&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.MediaGraphRtspSource&#34;),
+ *                 Map.entry(&#34;transport&#34;, &#34;Http&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

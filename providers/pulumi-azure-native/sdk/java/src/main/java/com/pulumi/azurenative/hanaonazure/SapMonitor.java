@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-02-07-preview.
  * 
  * ## Example Usage
+ * ### Create a SAP Monitor
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sapMonitor = new SapMonitor(&#34;sapMonitor&#34;, SapMonitorArgs.builder()        
+ *             .enableCustomerAnalytics(true)
+ *             .location(&#34;westus&#34;)
+ *             .logAnalyticsWorkspaceArmId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace&#34;)
+ *             .logAnalyticsWorkspaceId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             .logAnalyticsWorkspaceSharedKey(&#34;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==&#34;)
+ *             .monitorSubnet(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sapMonitorName(&#34;mySapMonitor&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

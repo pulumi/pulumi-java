@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01.
  * 
  * ## Example Usage
+ * ### ManagedVirtualNetworks_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedPrivateEndpoint = new ManagedPrivateEndpoint(&#34;managedPrivateEndpoint&#34;, ManagedPrivateEndpointArgs.builder()        
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .managedPrivateEndpointName(&#34;exampleManagedPrivateEndpointName&#34;)
+ *             .managedVirtualNetworkName(&#34;exampleManagedVirtualNetworkName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;fqdns&#34;, ),
+ *                 Map.entry(&#34;groupId&#34;, &#34;blob&#34;),
+ *                 Map.entry(&#34;privateLinkResourceId&#34;, &#34;/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

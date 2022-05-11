@@ -23,6 +23,97 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-31.
  * 
  * ## Example Usage
+ * ### IotHubResource_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotHubResource = new IotHubResource(&#34;iotHubResource&#34;, IotHubResourceArgs.builder()        
+ *             .location(&#34;centraluseuap&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;cloudToDevice&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;defaultTtlAsIso8601&#34;, &#34;PT1H&#34;),
+ *                     Map.entry(&#34;feedback&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;lockDurationAsIso8601&#34;, &#34;PT1M&#34;),
+ *                         Map.entry(&#34;maxDeliveryCount&#34;, 10),
+ *                         Map.entry(&#34;ttlAsIso8601&#34;, &#34;PT1H&#34;)
+ *                     )),
+ *                     Map.entry(&#34;maxDeliveryCount&#34;, 10)
+ *                 )),
+ *                 Map.entry(&#34;enableFileUploadNotifications&#34;, false),
+ *                 Map.entry(&#34;eventHubEndpoints&#34;, Map.of(&#34;events&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;partitionCount&#34;, 2),
+ *                     Map.entry(&#34;retentionTimeInDays&#34;, 1)
+ *                 ))),
+ *                 Map.entry(&#34;features&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;ipFilterRules&#34;, ),
+ *                 Map.entry(&#34;messagingEndpoints&#34;, Map.of(&#34;fileNotifications&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;lockDurationAsIso8601&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;maxDeliveryCount&#34;, 10),
+ *                     Map.entry(&#34;ttlAsIso8601&#34;, &#34;PT1H&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;minTlsVersion&#34;, &#34;1.2&#34;),
+ *                 Map.entry(&#34;networkRuleSets&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applyToBuiltInEventHubEndpoint&#34;, true),
+ *                     Map.entry(&#34;defaultAction&#34;, &#34;Deny&#34;),
+ *                     Map.entry(&#34;ipRules&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                             Map.entry(&#34;filterName&#34;, &#34;rule1&#34;),
+ *                             Map.entry(&#34;ipMask&#34;, &#34;131.117.159.53&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                             Map.entry(&#34;filterName&#34;, &#34;rule2&#34;),
+ *                             Map.entry(&#34;ipMask&#34;, &#34;157.55.59.128/25&#34;)
+ *                         ))
+ *                 )),
+ *                 Map.entry(&#34;routing&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endpoints&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;eventHubs&#34;, ),
+ *                         Map.entry(&#34;serviceBusQueues&#34;, ),
+ *                         Map.entry(&#34;serviceBusTopics&#34;, ),
+ *                         Map.entry(&#34;storageContainers&#34;, )
+ *                     )),
+ *                     Map.entry(&#34;fallbackRoute&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;condition&#34;, &#34;true&#34;),
+ *                         Map.entry(&#34;endpointNames&#34;, &#34;events&#34;),
+ *                         Map.entry(&#34;isEnabled&#34;, true),
+ *                         Map.entry(&#34;name&#34;, &#34;$fallback&#34;),
+ *                         Map.entry(&#34;source&#34;, &#34;DeviceMessages&#34;)
+ *                     )),
+ *                     Map.entry(&#34;routes&#34;, )
+ *                 )),
+ *                 Map.entry(&#34;storageEndpoints&#34;, Map.of(&#34;$default&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;connectionString&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;containerName&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;sasTtlAsIso8601&#34;, &#34;PT1H&#34;)
+ *                 )))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourceName(&#34;testHub&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;S1&#34;)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,81 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Profiles_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .apiEntitySetName(&#34;TestProfileType396&#34;)
+ *             .fields(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;fieldName&#34;, &#34;Id&#34;),
+ *                     Map.entry(&#34;fieldType&#34;, &#34;Edm.String&#34;),
+ *                     Map.entry(&#34;isArray&#34;, false),
+ *                     Map.entry(&#34;isRequired&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;fieldName&#34;, &#34;ProfileId&#34;),
+ *                     Map.entry(&#34;fieldType&#34;, &#34;Edm.String&#34;),
+ *                     Map.entry(&#34;isArray&#34;, false),
+ *                     Map.entry(&#34;isRequired&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;fieldName&#34;, &#34;LastName&#34;),
+ *                     Map.entry(&#34;fieldType&#34;, &#34;Edm.String&#34;),
+ *                     Map.entry(&#34;isArray&#34;, false),
+ *                     Map.entry(&#34;isRequired&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;fieldName&#34;, &#34;TestProfileType396&#34;),
+ *                     Map.entry(&#34;fieldType&#34;, &#34;Edm.String&#34;),
+ *                     Map.entry(&#34;isArray&#34;, false),
+ *                     Map.entry(&#34;isRequired&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;fieldName&#34;, &#34;SavingAccountBalance&#34;),
+ *                     Map.entry(&#34;fieldType&#34;, &#34;Edm.Int32&#34;),
+ *                     Map.entry(&#34;isArray&#34;, false),
+ *                     Map.entry(&#34;isRequired&#34;, true)
+ *                 ))
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .largeImage(&#34;\\\\Images\\\\LargeImage&#34;)
+ *             .mediumImage(&#34;\\\\Images\\\\MediumImage&#34;)
+ *             .profileName(&#34;TestProfileType396&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .schemaItemTypeLink(&#34;SchemaItemTypeLink&#34;)
+ *             .smallImage(&#34;\\\\Images\\\\smallImage&#34;)
+ *             .strongIds(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;keyPropertyNames&#34;,                     
+ *                         &#34;Id&#34;,
+ *                         &#34;SavingAccountBalance&#34;),
+ *                     Map.entry(&#34;strongIdName&#34;, &#34;Id&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;keyPropertyNames&#34;,                     
+ *                         &#34;ProfileId&#34;,
+ *                         &#34;LastName&#34;),
+ *                     Map.entry(&#34;strongIdName&#34;, &#34;ProfileId&#34;)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

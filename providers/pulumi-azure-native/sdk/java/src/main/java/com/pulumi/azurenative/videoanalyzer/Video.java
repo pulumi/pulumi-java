@@ -24,6 +24,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Register video entity.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var video = new Video(&#34;video&#34;, VideoArgs.builder()        
+ *             .accountName(&#34;testaccount2&#34;)
+ *             .description(&#34;Sample Description 1&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .title(&#34;Sample Title 1&#34;)
+ *             .videoName(&#34;video1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

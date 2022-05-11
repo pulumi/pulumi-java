@@ -25,6 +25,54 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### Schedules_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var schedule = new Schedule(&#34;schedule&#34;, ScheduleArgs.builder()        
+ *             .dailyRecurrence(Map.of(&#34;time&#34;, &#34;{timeOfTheDayTheScheduleWillOccurEveryDay}&#34;))
+ *             .hourlyRecurrence(Map.of(&#34;minute&#34;, 30))
+ *             .labName(&#34;{labName}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{scheduleName}&#34;)
+ *             .notificationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;emailRecipient&#34;, &#34;{email}&#34;),
+ *                 Map.entry(&#34;notificationLocale&#34;, &#34;EN&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;{Enabled|Disabled}&#34;),
+ *                 Map.entry(&#34;timeInMinutes&#34;, 15),
+ *                 Map.entry(&#34;webhookUrl&#34;, &#34;{webhookUrl}&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .status(&#34;{Enabled|Disabled}&#34;)
+ *             .tags(Map.of(&#34;tagName1&#34;, &#34;tagValue1&#34;))
+ *             .targetResourceId(&#34;/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}&#34;)
+ *             .taskType(&#34;{myLabVmTaskType}&#34;)
+ *             .timeZoneId(&#34;Pacific Standard Time&#34;)
+ *             .weeklyRecurrence(Map.ofEntries(
+ *                 Map.entry(&#34;time&#34;, &#34;{timeOfTheDayTheScheduleWillOccurOnThoseDays}&#34;),
+ *                 Map.entry(&#34;weekdays&#34;,                 
+ *                     &#34;Monday&#34;,
+ *                     &#34;Wednesday&#34;,
+ *                     &#34;Friday&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

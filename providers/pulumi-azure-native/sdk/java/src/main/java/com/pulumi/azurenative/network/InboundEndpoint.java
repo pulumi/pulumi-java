@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-01-preview.
  * 
  * ## Example Usage
+ * ### Upsert inbound endpoint for DNS resolver
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var inboundEndpoint = new InboundEndpoint(&#34;inboundEndpoint&#34;, InboundEndpointArgs.builder()        
+ *             .dnsResolverName(&#34;sampleDnsResolver&#34;)
+ *             .inboundEndpointName(&#34;sampleInboundEndpoint&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;privateIpAddress&#34;, &#34;255.255.255.255&#34;),
+ *                 Map.entry(&#34;privateIpAllocationMethod&#34;, &#34;Static&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork/subnets/sampleSubnet&#34;))
+ *             ))
+ *             .location(&#34;westus2&#34;)
+ *             .resourceGroupName(&#34;sampleResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

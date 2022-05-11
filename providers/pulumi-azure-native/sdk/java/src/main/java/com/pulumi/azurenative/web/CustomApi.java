@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2016-06-01.
  * 
  * ## Example Usage
+ * ### Replace a custom API
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customApi = new CustomApi(&#34;customApi&#34;, CustomApiArgs.builder()        
+ *             .apiName(&#34;testCustomApi&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;apiDefinitions&#34;, Map.of(&#34;originalSwaggerUrl&#34;, &#34;https://tempuri.org/swagger.json&#34;)),
+ *                 Map.entry(&#34;apiType&#34;, &#34;Rest&#34;),
+ *                 Map.entry(&#34;capabilities&#34;, ),
+ *                 Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;testCustomApi&#34;),
+ *                 Map.entry(&#34;iconUri&#34;, &#34;/testIcon.svg&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

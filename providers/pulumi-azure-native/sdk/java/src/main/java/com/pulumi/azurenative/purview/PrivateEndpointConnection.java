@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01-preview.
  * 
  * ## Example Usage
+ * ### PrivateEndpointConnections_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnection = new PrivateEndpointConnection(&#34;privateEndpointConnection&#34;, PrivateEndpointConnectionArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .privateEndpointConnectionName(&#34;privateEndpointConnection1&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Approved by johndoe@company.com&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

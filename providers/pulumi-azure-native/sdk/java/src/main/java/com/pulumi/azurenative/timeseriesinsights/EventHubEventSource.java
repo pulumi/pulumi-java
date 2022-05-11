@@ -22,6 +22,79 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-15.
  * 
  * ## Example Usage
+ * ### CreateEventHubEventSource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventHubEventSource = new EventHubEventSource(&#34;eventHubEventSource&#34;, EventHubEventSourceArgs.builder()        
+ *             .consumerGroupName(&#34;cgn&#34;)
+ *             .environmentName(&#34;env1&#34;)
+ *             .eventHubName(&#34;ehn&#34;)
+ *             .eventSourceName(&#34;es1&#34;)
+ *             .eventSourceResourceId(&#34;somePathInArm&#34;)
+ *             .keyName(&#34;managementKey&#34;)
+ *             .kind(&#34;Microsoft.EventHub&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceBusNamespace(&#34;sbn&#34;)
+ *             .sharedAccessKey(&#34;someSecretvalue&#34;)
+ *             .timestampPropertyName(&#34;someTimestampProperty&#34;)
+ *             .type(&#34;EarliestAvailable&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSourcesCreateEventHubWithCustomEnquedTime
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventHubEventSource = new EventHubEventSource(&#34;eventHubEventSource&#34;, EventHubEventSourceArgs.builder()        
+ *             .consumerGroupName(&#34;cgn&#34;)
+ *             .environmentName(&#34;env1&#34;)
+ *             .eventHubName(&#34;ehn&#34;)
+ *             .eventSourceName(&#34;es1&#34;)
+ *             .eventSourceResourceId(&#34;somePathInArm&#34;)
+ *             .keyName(&#34;managementKey&#34;)
+ *             .kind(&#34;Microsoft.EventHub&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceBusNamespace(&#34;sbn&#34;)
+ *             .sharedAccessKey(&#34;someSecretvalue&#34;)
+ *             .time(&#34;2017-04-01T19:20:33.2288820Z&#34;)
+ *             .timestampPropertyName(&#34;someTimestampProperty&#34;)
+ *             .type(&#34;CustomEnqueuedTime&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
