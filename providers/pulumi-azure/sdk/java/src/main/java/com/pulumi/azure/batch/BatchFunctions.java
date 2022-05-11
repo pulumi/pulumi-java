@@ -50,6 +50,35 @@ public final class BatchFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Batch Account.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BatchFunctions.getAccount(GetAccountArgs.builder()
+     *             .name(&#34;testbatchaccount&#34;)
+     *             .resourceGroupName(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;poolAllocationMode&#34;, example.apply(getAccountResult -&gt; getAccountResult.getPoolAllocationMode()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:batch/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -86,6 +115,36 @@ public final class BatchFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Batch Application instance.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BatchFunctions.getApplication(GetApplicationArgs.builder()
+     *             .name(&#34;testapplication&#34;)
+     *             .resourceGroupName(&#34;test&#34;)
+     *             .accountName(&#34;testbatchaccount&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;batchApplicationId&#34;, example.apply(getApplicationResult -&gt; getApplicationResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:batch/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -122,6 +181,36 @@ public final class BatchFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing certificate in a Batch Account.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BatchFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .name(&#34;SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA&#34;)
+     *             .accountName(&#34;examplebatchaccount&#34;)
+     *             .resourceGroupName(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;thumbprint&#34;, example.apply(getCertificateResult -&gt; getCertificateResult.getThumbprint()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:batch/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -157,6 +246,35 @@ public final class BatchFunctions {
     public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
         return getPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Batch pool
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BatchFunctions.getPool(GetPoolArgs.builder()
+     *             .accountName(&#34;testbatchaccount&#34;)
+     *             .name(&#34;testbatchpool&#34;)
+     *             .resourceGroupName(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:batch/getPool:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }

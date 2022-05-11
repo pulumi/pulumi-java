@@ -19,6 +19,10 @@ public final class AttestationFunctions {
     public static CompletableFuture<GetProviderResult> getProvider(GetProviderArgs args) {
         return getProvider(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Attestation Provider.
+     * 
+     */
     public static CompletableFuture<GetProviderResult> getProvider(GetProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:attestation/getProvider:getProvider", TypeShape.of(GetProviderResult.class), args, Utilities.withVersion(options));
     }

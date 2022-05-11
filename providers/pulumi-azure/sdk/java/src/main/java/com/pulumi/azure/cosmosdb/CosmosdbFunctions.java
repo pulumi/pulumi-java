@@ -48,6 +48,35 @@ public final class CosmosdbFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing CosmosDB (formally DocumentDB) Account.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CosmosdbFunctions.getAccount(GetAccountArgs.builder()
+     *             .name(&#34;tfex-cosmosdb-account&#34;)
+     *             .resourceGroupName(&#34;tfex-cosmosdb-account-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;cosmosdbAccountEndpoint&#34;, example.apply(getAccountResult -&gt; getAccountResult.getEndpoint()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:cosmosdb/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -84,6 +113,36 @@ public final class CosmosdbFunctions {
     public static CompletableFuture<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args) {
         return getMongoDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Cosmos DB Mongo Database.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CosmosdbFunctions.getMongoDatabase(GetMongoDatabaseArgs.builder()
+     *             .name(&#34;test-cosmosdb-mongo-db&#34;)
+     *             .resourceGroupName(&#34;test-cosmosdb-account-rg&#34;)
+     *             .accountName(&#34;test-cosmosdb-account&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getMongoDatabaseResult -&gt; getMongoDatabaseResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:cosmosdb/getMongoDatabase:getMongoDatabase", TypeShape.of(GetMongoDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +178,35 @@ public final class CosmosdbFunctions {
     public static CompletableFuture<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args) {
         return getRestorableDatabaseAccounts(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about Cosmos DB Restorable Database Accounts.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CosmosdbFunctions.getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs.builder()
+     *             .name(&#34;example-ca&#34;)
+     *             .location(&#34;West Europe&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getRestorableDatabaseAccountsResult -&gt; getRestorableDatabaseAccountsResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:cosmosdb/getRestorableDatabaseAccounts:getRestorableDatabaseAccounts", TypeShape.of(GetRestorableDatabaseAccountsResult.class), args, Utilities.withVersion(options));
     }

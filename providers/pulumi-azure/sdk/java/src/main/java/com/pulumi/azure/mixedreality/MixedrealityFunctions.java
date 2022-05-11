@@ -44,6 +44,35 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args) {
         return getSpatialAnchorsAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about an Azure Spatial Anchors Account.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MixedrealityFunctions.getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;accountDomain&#34;, data.getAzurerm_spatial_anchors_account().getAccount_domain());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mixedreality/getSpatialAnchorsAccount:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args, Utilities.withVersion(options));
     }

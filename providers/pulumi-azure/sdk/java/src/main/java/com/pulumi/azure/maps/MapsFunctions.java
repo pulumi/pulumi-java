@@ -44,6 +44,35 @@ public final class MapsFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Azure Maps Account.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MapsFunctions.getAccount(GetAccountArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;maps&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;mapsAccountId&#34;, example.apply(getAccountResult -&gt; getAccountResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:maps/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }

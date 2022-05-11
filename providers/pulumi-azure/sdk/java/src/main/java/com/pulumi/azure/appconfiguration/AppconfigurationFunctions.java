@@ -49,6 +49,38 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args) {
         return getConfigurationKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Azure App Configuration Key.
+     * 
+     * &gt; **Note:** App Configuration Keys are provisioned using a Data Plane API which requires the role `App Configuration Data Owner` on either the App Configuration or a parent scope (such as the Resource Group/Subscription). [More information can be found in the Azure Documentation for App Configuration](https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac#azure-built-in-roles-for-azure-app-configuration).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(AppconfigurationFunctions.getConfigurationKey(GetConfigurationKeyArgs.builder()
+     *             .configurationStoreId(azurerm_app_configuration.getAppconf().getId())
+     *             .key(&#34;appConfKey1&#34;)
+     *             .label(&#34;somelabel&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;value&#34;, test.apply(getConfigurationKeyResult -&gt; getConfigurationKeyResult.getValue()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:appconfiguration/getConfigurationKey:getConfigurationKey", TypeShape.of(GetConfigurationKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -84,6 +116,35 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args) {
         return getConfigurationStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing App Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AppconfigurationFunctions.getConfigurationStore(GetConfigurationStoreArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getConfigurationStoreResult -&gt; getConfigurationStoreResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:appconfiguration/getConfigurationStore:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args, Utilities.withVersion(options));
     }

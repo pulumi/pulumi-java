@@ -44,6 +44,35 @@ public final class SynapseFunctions {
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Synapse Workspace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SynapseFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;example-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getWorkspaceResult -&gt; getWorkspaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:synapse/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }

@@ -44,6 +44,35 @@ public final class ProximityFunctions {
     public static CompletableFuture<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args) {
         return getPlacementGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Proximity Placement Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ProximityFunctions.getPlacementGroup(GetPlacementGroupArgs.builder()
+     *             .name(&#34;tf-appsecuritygroup&#34;)
+     *             .resourceGroupName(&#34;my-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;proximityPlacementGroupId&#34;, example.apply(getPlacementGroupResult -&gt; getPlacementGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:proximity/getPlacementGroup:getPlacementGroup", TypeShape.of(GetPlacementGroupResult.class), args, Utilities.withVersion(options));
     }

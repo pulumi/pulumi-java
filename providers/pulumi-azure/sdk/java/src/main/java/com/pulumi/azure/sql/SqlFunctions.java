@@ -47,6 +47,34 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SqlFunctions.getDatabase(GetDatabaseArgs.builder()
+     *             .name(&#34;example_db&#34;)
+     *             .serverName(&#34;example_db_server&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;sqlDatabaseId&#34;, example.apply(getDatabaseResult -&gt; getDatabaseResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:sql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -80,6 +108,33 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SqlFunctions.getServer(GetServerArgs.builder()
+     *             .name(&#34;examplesqlservername&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;sqlServerId&#34;, example.apply(getServerResult -&gt; getServerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:sql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +168,33 @@ public final class SqlFunctions {
     public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args) {
         return getSqlManagedInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SqlFunctions.getSqlManagedInstance(GetSqlManagedInstanceArgs.builder()
+     *             .name(&#34;example_mi&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;sqlInstanceId&#34;, example.apply(getSqlManagedInstanceResult -&gt; getSqlManagedInstanceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:sql/getSqlManagedInstance:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args, Utilities.withVersion(options));
     }

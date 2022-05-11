@@ -43,9 +43,65 @@ public final class ManagementFunctions {
     public static CompletableFuture<GetGroupResult> getGroup() {
         return getGroup(GetGroupArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Management Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ManagementFunctions.getGroup(GetGroupArgs.builder()
+     *             .name(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;displayName&#34;, example.apply(getGroupResult -&gt; getGroupResult.getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Management Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ManagementFunctions.getGroup(GetGroupArgs.builder()
+     *             .name(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;displayName&#34;, example.apply(getGroupResult -&gt; getGroupResult.getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:management/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }

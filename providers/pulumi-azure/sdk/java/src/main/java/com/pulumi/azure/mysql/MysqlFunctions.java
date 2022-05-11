@@ -46,6 +46,35 @@ public final class MysqlFunctions {
     public static CompletableFuture<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args) {
         return getFlexibleServer(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing MySQL Flexible Server.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MysqlFunctions.getFlexibleServer(GetFlexibleServerArgs.builder()
+     *             .name(&#34;existingMySqlFlexibleServer&#34;)
+     *             .resourceGroupName(&#34;existingResGroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getFlexibleServerResult -&gt; getFlexibleServerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mysql/getFlexibleServer:getFlexibleServer", TypeShape.of(GetFlexibleServerResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +110,35 @@ public final class MysqlFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing MySQL Server.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MysqlFunctions.getServer(GetServerArgs.builder()
+     *             .name(&#34;existingMySqlServer&#34;)
+     *             .resourceGroupName(&#34;existingResGroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getServerResult -&gt; getServerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mysql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }

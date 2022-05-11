@@ -44,6 +44,35 @@ public final class DigitaltwinsFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Digital Twins instance.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DigitaltwinsFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;existing-digital-twins&#34;)
+     *             .resourceGroupName(&#34;existing-resgroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getInstanceResult -&gt; getInstanceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:digitaltwins/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
