@@ -44,6 +44,35 @@ public final class Aadb2cFunctions {
     public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
         return getDirectory(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing AAD B2C Directory.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Aadb2cFunctions.getDirectory(GetDirectoryArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .domainName(&#34;exampleb2ctenant.onmicrosoft.com&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;tenantId&#34;, example.apply(getDirectoryResult -&gt; getDirectoryResult.getTenantId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:aadb2c/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }

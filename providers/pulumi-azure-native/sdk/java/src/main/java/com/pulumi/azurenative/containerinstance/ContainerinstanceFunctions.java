@@ -20,6 +20,11 @@ public final class ContainerinstanceFunctions {
     public static CompletableFuture<GetContainerGroupResult> getContainerGroup(GetContainerGroupArgs args) {
         return getContainerGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * A container group.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetContainerGroupResult> getContainerGroup(GetContainerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerinstance:getContainerGroup", TypeShape.of(GetContainerGroupResult.class), args, Utilities.withVersion(options));
     }

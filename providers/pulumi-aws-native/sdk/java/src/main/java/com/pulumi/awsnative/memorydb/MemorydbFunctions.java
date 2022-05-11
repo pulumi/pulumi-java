@@ -27,6 +27,10 @@ public final class MemorydbFunctions {
     public static CompletableFuture<GetACLResult> getACL(GetACLArgs args) {
         return getACL(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::MemoryDB::ACL
+     * 
+     */
     public static CompletableFuture<GetACLResult> getACL(GetACLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class MemorydbFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class MemorydbFunctions {
     public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
         return getParameterGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
+     * 
+     */
     public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class MemorydbFunctions {
     public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
         return getSubnetGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
+     * 
+     */
     public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class MemorydbFunctions {
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::MemoryDB::User
+     * 
+     */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }

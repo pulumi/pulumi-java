@@ -22,6 +22,11 @@ public final class CommunicationFunctions {
     public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(GetCommunicationServiceArgs args) {
         return getCommunicationService(args, InvokeOptions.Empty);
     }
+    /**
+     * A class representing a CommunicationService resource.
+     * API Version: 2020-08-20.
+     * 
+     */
     public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(GetCommunicationServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:getCommunicationService", TypeShape.of(GetCommunicationServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class CommunicationFunctions {
     public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(ListCommunicationServiceKeysArgs args) {
         return listCommunicationServiceKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * A class representing the access keys of a CommunicationService.
+     * API Version: 2020-08-20.
+     * 
+     */
     public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(ListCommunicationServiceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:listCommunicationServiceKeys", TypeShape.of(ListCommunicationServiceKeysResult.class), args, Utilities.withVersion(options));
     }

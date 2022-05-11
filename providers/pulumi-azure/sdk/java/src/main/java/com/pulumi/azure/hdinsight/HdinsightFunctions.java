@@ -44,6 +44,35 @@ public final class HdinsightFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing HDInsight Cluster.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(HdinsightFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;httpsEndpoint&#34;, example.apply(getClusterResult -&gt; getClusterResult.getHttpsEndpoint()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:hdinsight/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class Cloudbuild_v1alpha1Functions {
     public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args) {
         return getWorkerPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns information about a `WorkerPool`.
+     * 
+     */
     public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1alpha1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }

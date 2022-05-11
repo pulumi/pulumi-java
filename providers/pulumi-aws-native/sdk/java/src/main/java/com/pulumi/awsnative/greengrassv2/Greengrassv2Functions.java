@@ -19,6 +19,10 @@ public final class Greengrassv2Functions {
     public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args) {
         return getComponentVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource for Greengrass component version.
+     * 
+     */
     public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:greengrassv2:getComponentVersion", TypeShape.of(GetComponentVersionResult.class), args, Utilities.withVersion(options));
     }

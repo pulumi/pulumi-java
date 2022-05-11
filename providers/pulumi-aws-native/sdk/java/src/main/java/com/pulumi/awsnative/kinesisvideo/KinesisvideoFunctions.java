@@ -21,6 +21,10 @@ public final class KinesisvideoFunctions {
     public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args) {
         return getSignalingChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+     * 
+     */
     public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class KinesisvideoFunctions {
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::Stream
+     * 
+     */
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }

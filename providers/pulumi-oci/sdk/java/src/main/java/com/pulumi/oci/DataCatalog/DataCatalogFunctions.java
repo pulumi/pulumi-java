@@ -45,6 +45,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogResult> getCatalog(GetCatalogArgs args) {
         return getCatalog(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Catalog resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a data catalog by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogResult> getCatalog(GetCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalog:getCatalog", TypeShape.of(GetCatalogResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +67,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogPrivateEndpointResult> getCatalogPrivateEndpoint(GetCatalogPrivateEndpointArgs args) {
         return getCatalogPrivateEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Catalog Private Endpoint resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a specific private reverse connection by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogPrivateEndpointResult> getCatalogPrivateEndpoint(GetCatalogPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalogPrivateEndpoint:getCatalogPrivateEndpoint", TypeShape.of(GetCatalogPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -73,6 +89,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogPrivateEndpointsResult> getCatalogPrivateEndpoints(GetCatalogPrivateEndpointsArgs args) {
         return getCatalogPrivateEndpoints(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Catalog Private Endpoints in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of all the catalog private endpoints in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogPrivateEndpointsResult> getCatalogPrivateEndpoints(GetCatalogPrivateEndpointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalogPrivateEndpoints:getCatalogPrivateEndpoints", TypeShape.of(GetCatalogPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +111,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogTypeResult> getCatalogType(GetCatalogTypeArgs args) {
         return getCatalogType(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Catalog Type resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a specific type by key within a data catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogTypeResult> getCatalogType(GetCatalogTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalogType:getCatalogType", TypeShape.of(GetCatalogTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -101,6 +133,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogTypesResult> getCatalogTypes(GetCatalogTypesArgs args) {
         return getCatalogTypes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Catalog Types in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of all types within a data catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogTypesResult> getCatalogTypes(GetCatalogTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalogTypes:getCatalogTypes", TypeShape.of(GetCatalogTypesResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +155,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetCatalogsResult> getCatalogs(GetCatalogsArgs args) {
         return getCatalogs(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Catalogs in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of all the data catalogs in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCatalogsResult> getCatalogs(GetCatalogsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getCatalogs:getCatalogs", TypeShape.of(GetCatalogsResult.class), args, Utilities.withVersion(options));
     }
@@ -129,6 +177,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Connection resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a specific data asset connection by key.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -143,6 +199,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
         return getConnections(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Connections in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of all Connections for a data asset.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
     }
@@ -157,6 +221,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetDataAssetResult> getDataAsset(GetDataAssetArgs args) {
         return getDataAsset(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Data Asset resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a specific data asset for the given key within a data catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataAssetResult> getDataAsset(GetDataAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getDataAsset:getDataAsset", TypeShape.of(GetDataAssetResult.class), args, Utilities.withVersion(options));
     }
@@ -171,6 +243,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetDataAssetsResult> getDataAssets(GetDataAssetsArgs args) {
         return getDataAssets(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Data Assets in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of data assets within a data catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataAssetsResult> getDataAssets(GetDataAssetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getDataAssets:getDataAssets", TypeShape.of(GetDataAssetsResult.class), args, Utilities.withVersion(options));
     }
@@ -185,6 +265,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetMetastoreResult> getMetastore(GetMetastoreArgs args) {
         return getMetastore(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Metastore resource in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Gets a metastore by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMetastoreResult> getMetastore(GetMetastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getMetastore:getMetastore", TypeShape.of(GetMetastoreResult.class), args, Utilities.withVersion(options));
     }
@@ -199,6 +287,14 @@ public final class DataCatalogFunctions {
     public static CompletableFuture<GetMetastoresResult> getMetastores(GetMetastoresArgs args) {
         return getMetastores(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Metastores in Oracle Cloud Infrastructure Data Catalog service.
+     * 
+     * Returns a list of all metastores in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMetastoresResult> getMetastores(GetMetastoresArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataCatalog/getMetastores:getMetastores", TypeShape.of(GetMetastoresResult.class), args, Utilities.withVersion(options));
     }

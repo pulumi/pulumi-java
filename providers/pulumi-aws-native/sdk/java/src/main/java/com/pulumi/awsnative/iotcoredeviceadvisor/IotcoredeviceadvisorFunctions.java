@@ -19,6 +19,10 @@ public final class IotcoredeviceadvisorFunctions {
     public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(GetSuiteDefinitionArgs args) {
         return getSuiteDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(GetSuiteDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotcoredeviceadvisor:getSuiteDefinition", TypeShape.of(GetSuiteDefinitionResult.class), args, Utilities.withVersion(options));
     }

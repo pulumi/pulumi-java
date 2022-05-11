@@ -48,6 +48,39 @@ public final class TrafficmanagerFunctions {
     public static CompletableFuture<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args) {
         return getGeographicalLocation(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
+     * 
+     * ## Example Usage
+     * ### World)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getTrafficManager(GetTrafficManagerArgs.builder()
+     *             .name(&#34;World&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;locationCode&#34;, example.apply(getTrafficManagerResult -&gt; getTrafficManagerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     * @deprecated
+     * azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager
+     * 
+     */
+    @Deprecated /* azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager */
     public static CompletableFuture<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:trafficmanager/getGeographicalLocation:getGeographicalLocation", TypeShape.of(GetGeographicalLocationResult.class), args, Utilities.withVersion(options));
     }

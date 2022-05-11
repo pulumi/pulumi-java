@@ -25,6 +25,14 @@ public final class IntegrationFunctions {
     public static CompletableFuture<GetIntegrationInstanceResult> getIntegrationInstance(GetIntegrationInstanceArgs args) {
         return getIntegrationInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Integration Instance resource in Oracle Cloud Infrastructure Integration service.
+     * 
+     * Gets a IntegrationInstance by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetIntegrationInstanceResult> getIntegrationInstance(GetIntegrationInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Integration/getIntegrationInstance:getIntegrationInstance", TypeShape.of(GetIntegrationInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class IntegrationFunctions {
     public static CompletableFuture<GetIntegrationInstancesResult> getIntegrationInstances(GetIntegrationInstancesArgs args) {
         return getIntegrationInstances(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Integration Instances in Oracle Cloud Infrastructure Integration service.
+     * 
+     * Returns a list of Integration Instances.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetIntegrationInstancesResult> getIntegrationInstances(GetIntegrationInstancesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Integration/getIntegrationInstances:getIntegrationInstances", TypeShape.of(GetIntegrationInstancesResult.class), args, Utilities.withVersion(options));
     }

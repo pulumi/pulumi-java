@@ -47,6 +47,36 @@ public final class NotificationhubFunctions {
     public static CompletableFuture<GetHubResult> getHub(GetHubArgs args) {
         return getHub(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Notification Hub within a Notification Hub Namespace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NotificationhubFunctions.getHub(GetHubArgs.builder()
+     *             .name(&#34;notification-hub&#34;)
+     *             .namespaceName(&#34;namespace-name&#34;)
+     *             .resourceGroupName(&#34;resource-group-name&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getHubResult -&gt; getHubResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:notificationhub/getHub:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
@@ -82,6 +112,35 @@ public final class NotificationhubFunctions {
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Notification Hub Namespace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NotificationhubFunctions.getNamespace(GetNamespaceArgs.builder()
+     *             .name(&#34;my-namespace&#34;)
+     *             .resourceGroupName(&#34;my-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;servicebusEndpoint&#34;, example.apply(getNamespaceResult -&gt; getNamespaceResult.getServicebusEndpoint()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:notificationhub/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }

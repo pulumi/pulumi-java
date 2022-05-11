@@ -20,6 +20,11 @@ public final class AlertsmanagementFunctions {
     public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args) {
         return getActionRuleByName(args, InvokeOptions.Empty);
     }
+    /**
+     * Action rule object containing target scope, conditions and suppression logic
+     * API Version: 2019-05-05-preview.
+     * 
+     */
     public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
     }

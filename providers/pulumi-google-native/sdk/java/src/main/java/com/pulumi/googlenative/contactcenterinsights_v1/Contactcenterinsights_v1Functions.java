@@ -27,6 +27,10 @@ public final class Contactcenterinsights_v1Functions {
     public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
         return getAnalysis(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an analysis.
+     * 
+     */
     public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class Contactcenterinsights_v1Functions {
     public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args) {
         return getConversation(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a conversation.
+     * 
+     */
     public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getConversation", TypeShape.of(GetConversationResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class Contactcenterinsights_v1Functions {
     public static CompletableFuture<GetIssueModelResult> getIssueModel(GetIssueModelArgs args) {
         return getIssueModel(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an issue model.
+     * 
+     */
     public static CompletableFuture<GetIssueModelResult> getIssueModel(GetIssueModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getIssueModel", TypeShape.of(GetIssueModelResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class Contactcenterinsights_v1Functions {
     public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(GetPhraseMatcherArgs args) {
         return getPhraseMatcher(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a phrase matcher.
+     * 
+     */
     public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(GetPhraseMatcherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getPhraseMatcher", TypeShape.of(GetPhraseMatcherResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class Contactcenterinsights_v1Functions {
     public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
         return getView(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a view.
+     * 
+     */
     public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }

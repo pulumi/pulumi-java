@@ -48,6 +48,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an environment instance
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +64,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetEnvironmentSettingResult> getEnvironmentSetting(GetEnvironmentSettingArgs args) {
         return getEnvironmentSetting(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents settings of an environment, from which environment instances would be created
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentSettingResult> getEnvironmentSetting(GetEnvironmentSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getEnvironmentSetting", TypeShape.of(GetEnvironmentSettingResult.class), args, Utilities.withVersion(options));
     }
@@ -70,6 +80,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetGalleryImageResult> getGalleryImage(GetGalleryImageArgs args) {
         return getGalleryImage(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an image from the Azure Marketplace
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetGalleryImageResult> getGalleryImage(GetGalleryImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGalleryImage", TypeShape.of(GetGalleryImageResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +96,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetGlobalUserEnvironmentResult> getGlobalUserEnvironment(GetGlobalUserEnvironmentArgs args) {
         return getGlobalUserEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents the environments details
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetGlobalUserEnvironmentResult> getGlobalUserEnvironment(GetGlobalUserEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserEnvironment", TypeShape.of(GetGlobalUserEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -92,6 +112,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetGlobalUserOperationBatchStatusResult> getGlobalUserOperationBatchStatus(GetGlobalUserOperationBatchStatusArgs args) {
         return getGlobalUserOperationBatchStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * Status Details of the long running operation for an environment
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetGlobalUserOperationBatchStatusResult> getGlobalUserOperationBatchStatus(GetGlobalUserOperationBatchStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserOperationBatchStatus", TypeShape.of(GetGlobalUserOperationBatchStatusResult.class), args, Utilities.withVersion(options));
     }
@@ -103,6 +128,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetGlobalUserOperationStatusResult> getGlobalUserOperationStatus(GetGlobalUserOperationStatusArgs args) {
         return getGlobalUserOperationStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * Status Details of the long running operation for an environment
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetGlobalUserOperationStatusResult> getGlobalUserOperationStatus(GetGlobalUserOperationStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserOperationStatus", TypeShape.of(GetGlobalUserOperationStatusResult.class), args, Utilities.withVersion(options));
     }
@@ -114,6 +144,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetGlobalUserPersonalPreferencesResult> getGlobalUserPersonalPreferences(GetGlobalUserPersonalPreferencesArgs args) {
         return getGlobalUserPersonalPreferences(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents the PersonalPreferences for the user
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetGlobalUserPersonalPreferencesResult> getGlobalUserPersonalPreferences(GetGlobalUserPersonalPreferencesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserPersonalPreferences", TypeShape.of(GetGlobalUserPersonalPreferencesResult.class), args, Utilities.withVersion(options));
     }
@@ -125,6 +160,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetLabResult> getLab(GetLabArgs args) {
         return getLab(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a lab.
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetLabResult> getLab(GetLabArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLab", TypeShape.of(GetLabResult.class), args, Utilities.withVersion(options));
     }
@@ -136,6 +176,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetLabAccountResult> getLabAccount(GetLabAccountArgs args) {
         return getLabAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a lab account.
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetLabAccountResult> getLabAccount(GetLabAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabAccount", TypeShape.of(GetLabAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -147,6 +192,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetLabAccountRegionalAvailabilityResult> getLabAccountRegionalAvailability(GetLabAccountRegionalAvailabilityArgs args) {
         return getLabAccountRegionalAvailability(args, InvokeOptions.Empty);
     }
+    /**
+     * The response model from the GetRegionalAvailability action
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetLabAccountRegionalAvailabilityResult> getLabAccountRegionalAvailability(GetLabAccountRegionalAvailabilityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabAccountRegionalAvailability", TypeShape.of(GetLabAccountRegionalAvailabilityResult.class), args, Utilities.withVersion(options));
     }
@@ -158,6 +208,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetLabPlanResult> getLabPlan(GetLabPlanArgs args) {
         return getLabPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Lab Plans act as a permission container for creating labs via labs.azure.com. Additionally, they can provide a set of default configurations that will apply at the time of creating a lab, but these defaults can still be overwritten.
+     * API Version: 2021-10-01-preview.
+     * 
+     */
     public static CompletableFuture<GetLabPlanResult> getLabPlan(GetLabPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabPlan", TypeShape.of(GetLabPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -169,6 +224,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args) {
         return getSchedule(args, InvokeOptions.Empty);
     }
+    /**
+     * Schedule for automatically turning virtual machines in a lab on and off at specified times.
+     * API Version: 2021-10-01-preview.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getSchedule", TypeShape.of(GetScheduleResult.class), args, Utilities.withVersion(options));
     }
@@ -180,6 +240,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
+    /**
+     * The User registered to a lab
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
@@ -191,6 +256,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<ListGlobalUserEnvironmentsResult> listGlobalUserEnvironments(ListGlobalUserEnvironmentsArgs args) {
         return listGlobalUserEnvironments(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents the list of environments owned by a user
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<ListGlobalUserEnvironmentsResult> listGlobalUserEnvironments(ListGlobalUserEnvironmentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserEnvironments", TypeShape.of(ListGlobalUserEnvironmentsResult.class), args, Utilities.withVersion(options));
     }
@@ -202,6 +272,11 @@ public final class LabservicesFunctions {
     public static CompletableFuture<ListGlobalUserLabsResult> listGlobalUserLabs(ListGlobalUserLabsArgs args) {
         return listGlobalUserLabs(args, InvokeOptions.Empty);
     }
+    /**
+     * Lists the labs owned by a user
+     * API Version: 2018-10-15.
+     * 
+     */
     public static CompletableFuture<ListGlobalUserLabsResult> listGlobalUserLabs(ListGlobalUserLabsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserLabs", TypeShape.of(ListGlobalUserLabsResult.class), args, Utilities.withVersion(options));
     }

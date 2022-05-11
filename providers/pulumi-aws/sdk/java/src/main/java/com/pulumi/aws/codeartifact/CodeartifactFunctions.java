@@ -44,6 +44,33 @@ public final class CodeartifactFunctions {
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
         return getAuthorizationToken(args, InvokeOptions.Empty);
     }
+    /**
+     * The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CodeartifactFunctions.getAuthorizationToken(GetAuthorizationTokenArgs.builder()
+     *             .domain(aws_codeartifact_domain.getTest().getDomain())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +106,35 @@ public final class CodeartifactFunctions {
     public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args) {
         return getRepositoryEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CodeartifactFunctions.getRepositoryEndpoint(GetRepositoryEndpointArgs.builder()
+     *             .domain(aws_codeartifact_domain.getTest().getDomain())
+     *             .repository(aws_codeartifact_repository.getTest().getRepository())
+     *             .format(&#34;npm&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getRepositoryEndpoint:getRepositoryEndpoint", TypeShape.of(GetRepositoryEndpointResult.class), args, Utilities.withVersion(options));
     }

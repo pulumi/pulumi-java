@@ -20,6 +20,11 @@ public final class DevopsFunctions {
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
         return getPipeline(args, InvokeOptions.Empty);
     }
+    /**
+     * Pipeline used to configure Continuous Integration (CI) &amp; Continuous Delivery (CD) for Azure resources.
+     * API Version: 2020-07-13-preview.
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devops:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }

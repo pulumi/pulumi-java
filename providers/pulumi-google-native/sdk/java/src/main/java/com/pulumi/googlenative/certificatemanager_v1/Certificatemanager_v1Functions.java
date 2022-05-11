@@ -25,6 +25,10 @@ public final class Certificatemanager_v1Functions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Certificate.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:certificatemanager/v1:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Certificatemanager_v1Functions {
     public static CompletableFuture<GetCertificateMapResult> getCertificateMap(GetCertificateMapArgs args) {
         return getCertificateMap(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single CertificateMap.
+     * 
+     */
     public static CompletableFuture<GetCertificateMapResult> getCertificateMap(GetCertificateMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:certificatemanager/v1:getCertificateMap", TypeShape.of(GetCertificateMapResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Certificatemanager_v1Functions {
     public static CompletableFuture<GetCertificateMapEntryResult> getCertificateMapEntry(GetCertificateMapEntryArgs args) {
         return getCertificateMapEntry(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single CertificateMapEntry.
+     * 
+     */
     public static CompletableFuture<GetCertificateMapEntryResult> getCertificateMapEntry(GetCertificateMapEntryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:certificatemanager/v1:getCertificateMapEntry", TypeShape.of(GetCertificateMapEntryResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Certificatemanager_v1Functions {
     public static CompletableFuture<GetDnsAuthorizationResult> getDnsAuthorization(GetDnsAuthorizationArgs args) {
         return getDnsAuthorization(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single DnsAuthorization.
+     * 
+     */
     public static CompletableFuture<GetDnsAuthorizationResult> getDnsAuthorization(GetDnsAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:certificatemanager/v1:getDnsAuthorization", TypeShape.of(GetDnsAuthorizationResult.class), args, Utilities.withVersion(options));
     }

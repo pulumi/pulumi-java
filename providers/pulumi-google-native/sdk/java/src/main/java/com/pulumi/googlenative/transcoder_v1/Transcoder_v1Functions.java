@@ -21,6 +21,10 @@ public final class Transcoder_v1Functions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the job data.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:transcoder/v1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Transcoder_v1Functions {
     public static CompletableFuture<GetJobTemplateResult> getJobTemplate(GetJobTemplateArgs args) {
         return getJobTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the job template data.
+     * 
+     */
     public static CompletableFuture<GetJobTemplateResult> getJobTemplate(GetJobTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:transcoder/v1:getJobTemplate", TypeShape.of(GetJobTemplateResult.class), args, Utilities.withVersion(options));
     }

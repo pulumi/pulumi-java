@@ -19,6 +19,10 @@ public final class Websecurityscanner_v1alphaFunctions {
     public static CompletableFuture<GetScanConfigResult> getScanConfig(GetScanConfigArgs args) {
         return getScanConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a ScanConfig.
+     * 
+     */
     public static CompletableFuture<GetScanConfigResult> getScanConfig(GetScanConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:websecurityscanner/v1alpha:getScanConfig", TypeShape.of(GetScanConfigResult.class), args, Utilities.withVersion(options));
     }

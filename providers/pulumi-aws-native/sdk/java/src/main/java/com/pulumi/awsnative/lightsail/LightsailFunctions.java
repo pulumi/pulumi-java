@@ -37,6 +37,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args) {
         return getAlarm(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Alarm
+     * 
+     */
     public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +51,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Bucket
+     * 
+     */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +65,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +79,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args) {
         return getContainer(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Container
+     * 
+     */
     public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
     }
@@ -77,6 +93,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Database
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +107,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
         return getDisk(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Disk
+     * 
+     */
     public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
@@ -97,6 +121,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::Instance
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -107,6 +135,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
         return getLoadBalancer(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancer
+     * 
+     */
     public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
@@ -117,6 +149,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args) {
         return getLoadBalancerTlsCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+     * 
+     */
     public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancerTlsCertificate", TypeShape.of(GetLoadBalancerTlsCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -127,6 +163,10 @@ public final class LightsailFunctions {
     public static CompletableFuture<GetStaticIpResult> getStaticIp(GetStaticIpArgs args) {
         return getStaticIp(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lightsail::StaticIp
+     * 
+     */
     public static CompletableFuture<GetStaticIpResult> getStaticIp(GetStaticIpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getStaticIp", TypeShape.of(GetStaticIpResult.class), args, Utilities.withVersion(options));
     }

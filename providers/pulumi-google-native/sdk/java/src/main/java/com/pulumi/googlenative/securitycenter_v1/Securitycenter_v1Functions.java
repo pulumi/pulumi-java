@@ -33,6 +33,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetFolderBigQueryExportResult> getFolderBigQueryExport(GetFolderBigQueryExportArgs args) {
         return getFolderBigQueryExport(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a big query export.
+     * 
+     */
     public static CompletableFuture<GetFolderBigQueryExportResult> getFolderBigQueryExport(GetFolderBigQueryExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getFolderBigQueryExport", TypeShape.of(GetFolderBigQueryExportResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +47,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetMuteConfigResult> getMuteConfig(GetMuteConfigArgs args) {
         return getMuteConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a mute config.
+     * 
+     */
     public static CompletableFuture<GetMuteConfigResult> getMuteConfig(GetMuteConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getMuteConfig", TypeShape.of(GetMuteConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -53,6 +61,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(GetNotificationConfigArgs args) {
         return getNotificationConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a notification config.
+     * 
+     */
     public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(GetNotificationConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getNotificationConfig", TypeShape.of(GetNotificationConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -63,6 +75,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetOrganizationBigQueryExportResult> getOrganizationBigQueryExport(GetOrganizationBigQueryExportArgs args) {
         return getOrganizationBigQueryExport(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a big query export.
+     * 
+     */
     public static CompletableFuture<GetOrganizationBigQueryExportResult> getOrganizationBigQueryExport(GetOrganizationBigQueryExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationBigQueryExport", TypeShape.of(GetOrganizationBigQueryExportResult.class), args, Utilities.withVersion(options));
     }
@@ -73,6 +89,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(GetOrganizationMuteConfigArgs args) {
         return getOrganizationMuteConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a mute config.
+     * 
+     */
     public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(GetOrganizationMuteConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationMuteConfig", TypeShape.of(GetOrganizationMuteConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +103,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args) {
         return getOrganizationSourceIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy on the specified Source.
+     * 
+     */
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +117,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetProjectBigQueryExportResult> getProjectBigQueryExport(GetProjectBigQueryExportArgs args) {
         return getProjectBigQueryExport(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a big query export.
+     * 
+     */
     public static CompletableFuture<GetProjectBigQueryExportResult> getProjectBigQueryExport(GetProjectBigQueryExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getProjectBigQueryExport", TypeShape.of(GetProjectBigQueryExportResult.class), args, Utilities.withVersion(options));
     }
@@ -103,6 +131,10 @@ public final class Securitycenter_v1Functions {
     public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args) {
         return getSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a source.
+     * 
+     */
     public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getSource", TypeShape.of(GetSourceResult.class), args, Utilities.withVersion(options));
     }

@@ -46,9 +46,71 @@ public final class AdvisorFunctions {
     public static CompletableFuture<GetRecommendationsResult> getRecommendations() {
         return getRecommendations(GetRecommendationsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Advisor Recommendations.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AdvisorFunctions.getRecommendations(GetRecommendationsArgs.builder()
+     *             .filterByCategories(            
+     *                 &#34;security&#34;,
+     *                 &#34;cost&#34;)
+     *             .filterByResourceGroups(&#34;example-resgroups&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;recommendations&#34;, example.apply(getRecommendationsResult -&gt; getRecommendationsResult.getRecommendations()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args) {
         return getRecommendations(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Advisor Recommendations.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AdvisorFunctions.getRecommendations(GetRecommendationsArgs.builder()
+     *             .filterByCategories(            
+     *                 &#34;security&#34;,
+     *                 &#34;cost&#34;)
+     *             .filterByResourceGroups(&#34;example-resgroups&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;recommendations&#34;, example.apply(getRecommendationsResult -&gt; getRecommendationsResult.getRecommendations()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:advisor/getRecommendations:getRecommendations", TypeShape.of(GetRecommendationsResult.class), args, Utilities.withVersion(options));
     }

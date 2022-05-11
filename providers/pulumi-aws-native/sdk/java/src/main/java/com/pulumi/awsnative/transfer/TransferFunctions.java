@@ -19,6 +19,10 @@ public final class TransferFunctions {
     public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
         return getWorkflow(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Transfer::Workflow
+     * 
+     */
     public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:transfer:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }

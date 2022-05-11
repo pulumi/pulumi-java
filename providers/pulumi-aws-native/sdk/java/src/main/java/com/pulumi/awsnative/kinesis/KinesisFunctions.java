@@ -19,6 +19,10 @@ public final class KinesisFunctions {
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Kinesis::Stream
+     * 
+     */
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesis:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }

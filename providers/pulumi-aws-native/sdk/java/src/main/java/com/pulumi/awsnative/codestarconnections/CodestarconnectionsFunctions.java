@@ -19,6 +19,10 @@ public final class CodestarconnectionsFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarconnections:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }

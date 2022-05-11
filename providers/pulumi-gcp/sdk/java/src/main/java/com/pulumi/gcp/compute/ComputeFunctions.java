@@ -117,6 +117,46 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args) {
         return getAddress(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the IP address from a static address. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myAddress = Output.of(ComputeFunctions.getAddress(GetAddressArgs.builder()
+     *             .name(&#34;foobar&#34;)
+     *             .build()));
+     * 
+     *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+     *             .dnsName(&#34;prod.mydomain.com.&#34;)
+     *             .build());
+     * 
+     *         var frontend = new RecordSet(&#34;frontend&#34;, RecordSetArgs.builder()        
+     *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;frontend.%s&#34;, dnsName)))
+     *             .type(&#34;A&#34;)
+     *             .ttl(300)
+     *             .managedZone(prod.getName())
+     *             .rrdatas(myAddress.apply(getAddressResult -&gt; getAddressResult.getAddress()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getAddress:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
     }
@@ -150,6 +190,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args) {
         return getBackendBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a BackendBucket.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-backend-bucket = Output.of(ComputeFunctions.getBackendBucket(GetBackendBucketArgs.builder()
+     *             .name(&#34;my-backend&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -162,6 +229,12 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args) {
         return getBackendService(args, InvokeOptions.Empty);
     }
+    /**
+     * Provide access to a Backend Service&#39;s attribute. For more information
+     * see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
+     * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
+     * 
+     */
     public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -198,6 +271,36 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a Google Compute SSL Certificate from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCert = Output.of(ComputeFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .name(&#34;my-cert&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;certificate&#34;, myCert.apply(getCertificateResult -&gt; getCertificateResult.getCertificate()));
+     *         ctx.export(&#34;certificateId&#34;, myCert.apply(getCertificateResult -&gt; getCertificateResult.getCertificateId()));
+     *         ctx.export(&#34;selfLink&#34;, myCert.apply(getCertificateResult -&gt; getCertificateResult.getSelfLink()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -230,9 +333,61 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
         return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to retrieve default service account for this project
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+     * 
+     *         ctx.export(&#34;defaultAccount&#34;, default_.getEmail());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
         return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to retrieve default service account for this project
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+     * 
+     *         ctx.export(&#34;defaultAccount&#34;, default_.getEmail());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -276,6 +431,43 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
         return getDisk(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Compute Persistent disks.
+     * 
+     * [the official documentation](https://cloud.google.com/compute/docs/disks) and its [API](https://cloud.google.com/compute/docs/reference/latest/disks).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var persistent-boot-disk = Output.of(ComputeFunctions.getDisk(GetDiskArgs.builder()
+     *             .name(&#34;persistent-boot-disk&#34;)
+     *             .project(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         var default_ = new Instance(&#34;default&#34;, InstanceArgs.builder()        
+     *             .bootDisk(InstanceBootDisk.builder()
+     *                 .source(persistent_boot_disk.getSelfLink())
+     *                 .autoDelete(false)
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getDisk:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
@@ -309,6 +501,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args) {
         return getForwardingRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a forwarding rule within GCE from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-forwarding-rule = Output.of(ComputeFunctions.getForwardingRule(GetForwardingRuleArgs.builder()
+     *             .name(&#34;forwarding-rule-us-east1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getForwardingRule:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -355,6 +574,46 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args) {
         return getGlobalAddress(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myAddress = Output.of(ComputeFunctions.getGlobalAddress(GetGlobalAddressArgs.builder()
+     *             .name(&#34;foobar&#34;)
+     *             .build()));
+     * 
+     *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+     *             .dnsName(&#34;prod.mydomain.com.&#34;)
+     *             .build());
+     * 
+     *         var frontend = new RecordSet(&#34;frontend&#34;, RecordSetArgs.builder()        
+     *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;lb.%s&#34;, dnsName)))
+     *             .type(&#34;A&#34;)
+     *             .ttl(300)
+     *             .managedZone(prod.getName())
+     *             .rrdatas(myAddress.apply(getGlobalAddressResult -&gt; getGlobalAddressResult.getAddress()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
     }
@@ -388,6 +647,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args) {
         return getGlobalForwardingRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a global forwarding rule within GCE from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-forwarding-rule = Output.of(ComputeFunctions.getGlobalForwardingRule(GetGlobalForwardingRuleArgs.builder()
+     *             .name(&#34;forwarding-rule-global&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -421,6 +707,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args) {
         return getHcVpnGateway(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a HA VPN Gateway within GCE from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var gateway = Output.of(ComputeFunctions.getHcVpnGateway(GetHcVpnGatewayArgs.builder()
+     *             .name(&#34;foobar&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getHcVpnGateway:getHcVpnGateway", TypeShape.of(GetHcVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
@@ -454,6 +767,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
         return getHealthCheck(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a HealthCheck.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var healthCheck = Output.of(ComputeFunctions.getHealthCheck(GetHealthCheckArgs.builder()
+     *             .name(&#34;my-hc&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getHealthCheck:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
@@ -497,9 +837,83 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetImageResult> getImage() {
         return getImage(GetImageArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+     *             .family(&#34;debian-9&#34;)
+     *             .project(&#34;debian-cloud&#34;)
+     *             .build()));
+     * 
+     *         var default_ = new Instance(&#34;default&#34;, InstanceArgs.builder()        
+     *             .bootDisk(InstanceBootDisk.builder()
+     *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+     *                     .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+     *             .family(&#34;debian-9&#34;)
+     *             .project(&#34;debian-cloud&#34;)
+     *             .build()));
+     * 
+     *         var default_ = new Instance(&#34;default&#34;, InstanceArgs.builder()        
+     *             .bootDisk(InstanceBootDisk.builder()
+     *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+     *                     .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
@@ -537,9 +951,71 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance() {
         return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a VM instance resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instances)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var appserver = Output.of(ComputeFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;primary-application-server&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a VM instance resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instances)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var appserver = Output.of(ComputeFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;primary-application-server&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -574,9 +1050,65 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup() {
         return getInstanceGroup(GetInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get a Compute Instance Group within GCE.
+     * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
+     * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComputeFunctions.getInstanceGroup(GetInstanceGroupArgs.builder()
+     *             .name(&#34;instance-group-name&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args) {
         return getInstanceGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a Compute Instance Group within GCE.
+     * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
+     * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComputeFunctions.getInstanceGroup(GetInstanceGroupArgs.builder()
+     *             .name(&#34;instance-group-name&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceGroup:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -672,6 +1204,95 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args) {
         return getInstanceSerialPort(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the serial port output from a Compute Instance. For more information see
+     * the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var serial = Output.of(ComputeFunctions.getInstanceSerialPort(GetInstanceSerialPortArgs.builder()
+     *             .instance(&#34;my-instance&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .port(1)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;serialOut&#34;, serial.apply(getInstanceSerialPortResult -&gt; getInstanceSerialPortResult.getContents()));
+     *         }
+     * }
+     * ```
+     * 
+     * Using the serial port output to generate a windows password, derived from the [official guide](https://cloud.google.com/compute/docs/instances/windows/automate-pw-generation):
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * import static com.pulumi.codegen.internal.Serialization.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var windows = new Instance(&#34;windows&#34;, InstanceArgs.builder()        
+     *             .machineType(&#34;e2-medium&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .bootDisk(InstanceBootDisk.builder()
+     *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+     *                     .image(&#34;windows-cloud/windows-2019&#34;)
+     *                     .build())
+     *                 .build())
+     *             .networkInterfaces(InstanceNetworkInterface.builder()
+     *                 .network(&#34;default&#34;)
+     *                 .accessConfigs()
+     *                 .build())
+     *             .metadata(Map.ofEntries(
+     *                 Map.entry(&#34;serial-port-logging-enable&#34;, &#34;TRUE&#34;),
+     *                 Map.entry(&#34;windows-keys&#34;, serializeJson(
+     *                     jsonObject(
+     *                         jsonProperty(&#34;email&#34;, &#34;example.user@example.com&#34;),
+     *                         jsonProperty(&#34;expireOn&#34;, &#34;2020-04-14T01:37:19Z&#34;),
+     *                         jsonProperty(&#34;exponent&#34;, &#34;AQAB&#34;),
+     *                         jsonProperty(&#34;modulus&#34;, &#34;wgsquN4IBNPqIUnu+h/5Za1kujb2YRhX1vCQVQAkBwnWigcCqOBVfRa5JoZfx6KIvEXjWqa77jPvlsxM4WPqnDIM2qiK36up3SKkYwFjff6F2ni/ry8vrwXCX3sGZ1hbIHlK0O012HpA3ISeEswVZmX2X67naOvJXfY5v0hGPWqCADao+xVxrmxsZD4IWnKl1UaZzI5lhAzr8fw6utHwx1EZ/MSgsEki6tujcZfN+GUDRnmJGQSnPTXmsf7Q4DKreTZk49cuyB3prV91S0x3DYjCUpSXrkVy1Ha5XicGD/q+ystuFsJnrrhbNXJbpSjM6sjo/aduAkZJl4FmOt0R7Q==&#34;),
+     *                         jsonProperty(&#34;userName&#34;, &#34;example-user&#34;)
+     *                     )))
+     *             ))
+     *             .serviceAccount(InstanceServiceAccount.builder()
+     *                 .scopes(                
+     *                     &#34;userinfo-email&#34;,
+     *                     &#34;compute-ro&#34;,
+     *                     &#34;storage-ro&#34;)
+     *                 .build())
+     *             .build());
+     * 
+     *         final var serial = ComputeFunctions.getInstanceSerialPort(GetInstanceSerialPortArgs.builder()
+     *             .instance(windows.getName())
+     *             .zone(windows.getZone())
+     *             .port(4)
+     *             .build());
+     * 
+     *         ctx.export(&#34;serialOut&#34;, serial.apply(getInstanceSerialPortResult -&gt; getInstanceSerialPortResult).apply(serial -&gt; serial.apply(getInstanceSerialPortResult -&gt; getInstanceSerialPortResult.getContents())));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args, Utilities.withVersion(options));
     }
@@ -713,9 +1334,79 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate() {
         return getInstanceTemplate(GetInstanceTemplateArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a VM instance template resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instance-templates)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var generic = Output.of(ComputeFunctions.getInstanceTemplate(GetInstanceTemplateArgs.builder()
+     *             .name(&#34;generic-tpl-20200107&#34;)
+     *             .build()));
+     * 
+     *         final var generic-regex = Output.of(ComputeFunctions.getInstanceTemplate(GetInstanceTemplateArgs.builder()
+     *             .filter(&#34;name != generic-tpl-20200107&#34;)
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
         return getInstanceTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a VM instance template resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instance-templates)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var generic = Output.of(ComputeFunctions.getInstanceTemplate(GetInstanceTemplateArgs.builder()
+     *             .name(&#34;generic-tpl-20200107&#34;)
+     *             .build()));
+     * 
+     *         final var generic-regex = Output.of(ComputeFunctions.getInstanceTemplate(GetInstanceTemplateArgs.builder()
+     *             .filter(&#34;name != generic-tpl-20200107&#34;)
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceTemplate:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
     }
@@ -759,9 +1450,83 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges() {
         return getLBIPRanges(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access IP ranges in your firewall rules.
+     * 
+     * https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ranges = Output.of(ComputeFunctions.getLBIPRanges());
+     * 
+     *         var lb = new Firewall(&#34;lb&#34;, FirewallArgs.builder()        
+     *             .network(google_compute_network.getMain().getName())
+     *             .allows(FirewallAllow.builder()
+     *                 .protocol(&#34;tcp&#34;)
+     *                 .ports(&#34;80&#34;)
+     *                 .build())
+     *             .sourceRanges(ranges.apply(getLBIPRangesResult -&gt; getLBIPRangesResult.getNetworks()))
+     *             .targetTags(&#34;InstanceBehindLoadBalancer&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args) {
         return getLBIPRanges(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access IP ranges in your firewall rules.
+     * 
+     * https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ranges = Output.of(ComputeFunctions.getLBIPRanges());
+     * 
+     *         var lb = new Firewall(&#34;lb&#34;, FirewallArgs.builder()        
+     *             .network(google_compute_network.getMain().getName())
+     *             .allows(FirewallAllow.builder()
+     *                 .protocol(&#34;tcp&#34;)
+     *                 .ports(&#34;80&#34;)
+     *                 .build())
+     *             .sourceRanges(ranges.apply(getLBIPRangesResult -&gt; getLBIPRangesResult.getNetworks()))
+     *             .targetTags(&#34;InstanceBehindLoadBalancer&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getLBIPRanges:getLBIPRanges", TypeShape.of(GetLBIPRangesResult.class), args, Utilities.withVersion(options));
     }
@@ -830,9 +1595,133 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges() {
         return getNetblockIPRanges(GetNetblockIPRangesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
+     * 
+     * ## Example Usage
+     * ### Cloud Ranges
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var netblock = Output.of(ComputeFunctions.getNetblockIPRanges());
+     * 
+     *         ctx.export(&#34;cidrBlocks&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocks()));
+     *         ctx.export(&#34;cidrBlocksIpv4&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocksIpv4s()));
+     *         ctx.export(&#34;cidrBlocksIpv6&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocksIpv6s()));
+     *         }
+     * }
+     * ```
+     * ### Allow Health Checks
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var legacy-hcs = Output.of(ComputeFunctions.getNetblockIPRanges(GetNetblockIPRangesArgs.builder()
+     *             .rangeType(&#34;legacy-health-checkers&#34;)
+     *             .build()));
+     * 
+     *         var default_ = new Network(&#34;default&#34;);
+     * 
+     *         var allow_hcs = new Firewall(&#34;allow-hcs&#34;, FirewallArgs.builder()        
+     *             .network(default_.getName())
+     *             .allows(FirewallAllow.builder()
+     *                 .protocol(&#34;tcp&#34;)
+     *                 .ports(&#34;80&#34;)
+     *                 .build())
+     *             .sourceRanges(legacy_hcs.getCidrBlocksIpv4s())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args) {
         return getNetblockIPRanges(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
+     * 
+     * ## Example Usage
+     * ### Cloud Ranges
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var netblock = Output.of(ComputeFunctions.getNetblockIPRanges());
+     * 
+     *         ctx.export(&#34;cidrBlocks&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocks()));
+     *         ctx.export(&#34;cidrBlocksIpv4&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocksIpv4s()));
+     *         ctx.export(&#34;cidrBlocksIpv6&#34;, netblock.apply(getNetblockIPRangesResult -&gt; getNetblockIPRangesResult.getCidrBlocksIpv6s()));
+     *         }
+     * }
+     * ```
+     * ### Allow Health Checks
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var legacy-hcs = Output.of(ComputeFunctions.getNetblockIPRanges(GetNetblockIPRangesArgs.builder()
+     *             .rangeType(&#34;legacy-health-checkers&#34;)
+     *             .build()));
+     * 
+     *         var default_ = new Network(&#34;default&#34;);
+     * 
+     *         var allow_hcs = new Firewall(&#34;allow-hcs&#34;, FirewallArgs.builder()        
+     *             .network(default_.getName())
+     *             .allows(FirewallAllow.builder()
+     *                 .protocol(&#34;tcp&#34;)
+     *                 .ports(&#34;80&#34;)
+     *                 .build())
+     *             .sourceRanges(legacy_hcs.getCidrBlocksIpv4s())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args, Utilities.withVersion(options));
     }
@@ -866,6 +1755,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
         return getNetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a network within GCE from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-network = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+     *             .name(&#34;default-us-east1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -906,9 +1822,77 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup() {
         return getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access a Network Endpoint Group&#39;s attributes.
+     * 
+     * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var neg1 = Output.of(ComputeFunctions.getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.builder()
+     *             .name(&#34;k8s1-abcdef01-myns-mysvc-8080-4b6bac43&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         final var neg2 = Output.of(ComputeFunctions.getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.builder()
+     *             .selfLink(&#34;https://www.googleapis.com/compute/v1/projects/myproject/zones/us-central1-a/networkEndpointGroups/k8s1-abcdef01-myns-mysvc-8080-4b6bac43&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args) {
         return getNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access a Network Endpoint Group&#39;s attributes.
+     * 
+     * The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var neg1 = Output.of(ComputeFunctions.getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.builder()
+     *             .name(&#34;k8s1-abcdef01-myns-mysvc-8080-4b6bac43&#34;)
+     *             .zone(&#34;us-central1-a&#34;)
+     *             .build()));
+     * 
+     *         final var neg2 = Output.of(ComputeFunctions.getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.builder()
+     *             .selfLink(&#34;https://www.googleapis.com/compute/v1/projects/myproject/zones/us-central1-a/networkEndpointGroups/k8s1-abcdef01-myns-mysvc-8080-4b6bac43&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetworkEndpointGroup:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -948,9 +1932,75 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetNodeTypesResult> getNodeTypes() {
         return getNodeTypes(GetNodeTypesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides available node types for Compute Engine sole-tenant nodes in a zone
+     * for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ComputeFunctions.getNodeTypes(GetNodeTypesArgs.builder()
+     *             .zone(&#34;us-central1-b&#34;)
+     *             .build()));
+     * 
+     *         var tmpl = new NodeTemplate(&#34;tmpl&#34;, NodeTemplateArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .nodeType(data.getGoogle_compute_node_types().getTypes().getNames()[0])
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args) {
         return getNodeTypes(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides available node types for Compute Engine sole-tenant nodes in a zone
+     * for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ComputeFunctions.getNodeTypes(GetNodeTypesArgs.builder()
+     *             .zone(&#34;us-central1-b&#34;)
+     *             .build()));
+     * 
+     *         var tmpl = new NodeTemplate(&#34;tmpl&#34;, NodeTemplateArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .nodeType(data.getGoogle_compute_node_types().getTypes().getNames()[0])
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNodeTypes:getNodeTypes", TypeShape.of(GetNodeTypesResult.class), args, Utilities.withVersion(options));
     }
@@ -985,9 +2035,65 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup() {
         return getRegionInstanceGroup(GetRegionInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get a Compute Region Instance Group within GCE.
+     * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups).
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var group = Output.of(ComputeFunctions.getRegionInstanceGroup(GetRegionInstanceGroupArgs.builder()
+     *             .name(&#34;instance-group-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
+     * 
+     */
     public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args) {
         return getRegionInstanceGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a Compute Region Instance Group within GCE.
+     * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups).
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var group = Output.of(ComputeFunctions.getRegionInstanceGroup(GetRegionInstanceGroupArgs.builder()
+     *             .name(&#34;instance-group-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
+     * 
+     */
     public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegionInstanceGroup:getRegionInstanceGroup", TypeShape.of(GetRegionInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -1024,6 +2130,36 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args) {
         return getRegionSslCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a Region Google Compute SSL Certificate from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCert = Output.of(ComputeFunctions.getRegionSslCertificate(GetRegionSslCertificateArgs.builder()
+     *             .name(&#34;my-cert&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;certificate&#34;, myCert.apply(getRegionSslCertificateResult -&gt; getRegionSslCertificateResult.getCertificate()));
+     *         ctx.export(&#34;certificateId&#34;, myCert.apply(getRegionSslCertificateResult -&gt; getRegionSslCertificateResult.getCertificateId()));
+     *         ctx.export(&#34;selfLink&#34;, myCert.apply(getRegionSslCertificateResult -&gt; getRegionSslCertificateResult.getSelfLink()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegionSslCertificate:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -1035,9 +2171,19 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetRegionsResult> getRegions() {
         return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Compute regions for a given project.
+     * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
+     * 
+     */
     public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
         return getRegions(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Compute regions for a given project.
+     * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
+     * 
+     */
     public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
@@ -1070,6 +2216,32 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
         return getResourcePolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Provide access to a Resource Policy&#39;s attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var daily = Output.of(ComputeFunctions.getResourcePolicy(GetResourcePolicyArgs.builder()
+     *             .name(&#34;daily&#34;)
+     *             .region(&#34;us-central1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getResourcePolicy:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -1104,6 +2276,34 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args) {
         return getRouter(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a router within GCE from its name and VPC.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-router = Output.of(ComputeFunctions.getRouter(GetRouterArgs.builder()
+     *             .name(&#34;myrouter-us-east1&#34;)
+     *             .network(&#34;my-network&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRouter:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
     }
@@ -1142,6 +2342,38 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args) {
         return getRouterStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a Cloud Router&#39;s status within GCE from its name and region. This data source exposes the
+     * routes learned by a Cloud Router via BGP peers.
+     * 
+     * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/routers/getRouterStatus).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-router = Output.of(ComputeFunctions.getRouterStatus(GetRouterStatusArgs.builder()
+     *             .name(&#34;myrouter&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRouterStatus:getRouterStatus", TypeShape.of(GetRouterStatusResult.class), args, Utilities.withVersion(options));
     }
@@ -1176,6 +2408,34 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args) {
         return getSSLPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
+     *     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-ssl-policy = Output.of(ComputeFunctions.getSSLPolicy(GetSSLPolicyArgs.builder()
+     *             .name(&#34;production-ssl-policy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSSLPolicy:getSSLPolicy", TypeShape.of(GetSSLPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -1210,9 +2470,65 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetSubnetworkResult> getSubnetwork() {
         return getSubnetwork(GetSubnetworkArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get a subnetwork within GCE from its name and region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-subnetwork = Output.of(ComputeFunctions.getSubnetwork(GetSubnetworkArgs.builder()
+     *             .name(&#34;default-us-east1&#34;)
+     *             .region(&#34;us-east1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args) {
         return getSubnetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a subnetwork within GCE from its name and region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-subnetwork = Output.of(ComputeFunctions.getSubnetwork(GetSubnetworkArgs.builder()
+     *             .name(&#34;default-us-east1&#34;)
+     *             .region(&#34;us-east1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -1246,6 +2562,33 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args) {
         return getVPNGateway(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a VPN gateway within GCE from its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-vpn-gateway = Output.of(ComputeFunctions.getVPNGateway(GetVPNGatewayArgs.builder()
+     *             .name(&#34;vpn-gateway-us-east1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getVPNGateway:getVPNGateway", TypeShape.of(GetVPNGatewayResult.class), args, Utilities.withVersion(options));
     }
@@ -1257,9 +2600,19 @@ public final class ComputeFunctions {
     public static CompletableFuture<GetZonesResult> getZones() {
         return getZones(GetZonesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Compute zones in a region for a given project.
+     * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
+     * 
+     */
     public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args) {
         return getZones(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Compute zones in a region for a given project.
+     * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
+     * 
+     */
     public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
@@ -1302,6 +2655,42 @@ public final class ComputeFunctions {
     public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args) {
         return routerStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a Cloud Router&#39;s status within GCE from its name and region. This data source exposes the
+     * routes learned by a Cloud Router via BGP peers.
+     * 
+     * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/routers/getRouterStatus).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-router = Output.of(ComputeFunctions.getRouterStatus(GetRouterStatusArgs.builder()
+     *             .name(&#34;myrouter&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * @deprecated
+     * gcp.compute.RouterStatus has been deprecated in favor of gcp.compute.getRouterStatus
+     * 
+     */
+    @Deprecated /* gcp.compute.RouterStatus has been deprecated in favor of gcp.compute.getRouterStatus */
     public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args, Utilities.withVersion(options));
     }

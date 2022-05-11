@@ -49,6 +49,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Bucket resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets the current representation of the given bucket in the given Object Storage namespace.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +79,22 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args) {
         return getBucketSummaries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Buckets in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets a list of all BucketSummary items in a compartment. A BucketSummary contains only summary fields for the bucket
+     * and does not contain fields like the user-defined metadata.
+     * 
+     * ListBuckets returns a BucketSummary containing at most 1000 buckets. To paginate through more buckets, use the returned
+     * `opc-next-page` value with the `page` request parameter.
+     * 
+     * To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
+     * talk to an administrator. If you are an administrator who needs to write policies to give users access, see
+     * [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getBucketSummaries:getBucketSummaries", TypeShape.of(GetBucketSummariesResult.class), args, Utilities.withVersion(options));
     }
@@ -91,9 +115,37 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetNamespaceResult> getNamespace() {
         return getNamespace(GetNamespaceArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Namespace resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Each Oracle Cloud Infrastructure tenant is assigned one unique and uneditable Object Storage namespace. The namespace
+     * is a system-generated string assigned during account creation. For some older tenancies, the namespace string may be
+     * the tenancy name in all lower-case letters. You cannot edit a namespace.
+     * 
+     * GetNamespace returns the name of the Object Storage namespace for the user making the request.
+     * If an optional compartmentId query parameter is provided, GetNamespace returns the namespace name of the corresponding
+     * tenancy, provided the user has access to it.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Namespace resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Each Oracle Cloud Infrastructure tenant is assigned one unique and uneditable Object Storage namespace. The namespace
+     * is a system-generated string assigned during account creation. For some older tenancies, the namespace string may be
+     * the tenancy name in all lower-case letters. You cannot edit a namespace.
+     * 
+     * GetNamespace returns the name of the Object Storage namespace for the user making the request.
+     * If an optional compartmentId query parameter is provided, GetNamespace returns the namespace name of the corresponding
+     * tenancy, provided the user has access to it.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
@@ -114,6 +166,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args) {
         return getObject(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Object resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets the metadata and body of an object.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
     }
@@ -128,6 +188,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args) {
         return getObjectHead(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about metadata of a specific Object resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets the metadata of an object.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectHead:getObjectHead", TypeShape.of(GetObjectHeadResult.class), args, Utilities.withVersion(options));
     }
@@ -142,6 +210,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args) {
         return getObjectLifecyclePolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Object Lifecycle Policy resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets the object lifecycle policy for the bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectLifecyclePolicy:getObjectLifecyclePolicy", TypeShape.of(GetObjectLifecyclePolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -163,6 +239,21 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args) {
         return getObjectVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Object Versions in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Lists the object versions in a bucket.
+     * 
+     * ListObjectVersions returns an ObjectVersionCollection containing at most 1000 object versions. To paginate through
+     * more object versions, use the returned `opc-next-page` value with the `page` request parameter.
+     * 
+     * To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
+     * talk to an administrator. If you are an administrator who needs to write policies to give users access, see
+     * [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectVersions:getObjectVersions", TypeShape.of(GetObjectVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -186,6 +277,23 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args) {
         return getObjects(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Objects in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Lists the objects in a bucket. By default, ListObjects returns object names only. See the `fields`
+     * parameter for other fields that you can optionally include in ListObjects response.
+     * 
+     * ListObjects returns at most 1000 objects. To paginate through more objects, use the returned &#39;nextStartWith&#39;
+     * value with the &#39;start&#39; parameter. To filter which objects ListObjects returns, use the &#39;start&#39; and &#39;end&#39;
+     * parameters.
+     * 
+     * To use this and other API operations, you must be authorized in an IAM policy. If you are not authorized,
+     * talk to an administrator. If you are an administrator who needs to write policies to give users access, see
+     * [Getting Started with Policies](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/policygetstarted.htm).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
     }
@@ -200,6 +308,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args) {
         return getPreauthrequest(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Preauthenticated Request resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Gets the pre-authenticated request for the bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getPreauthrequest:getPreauthrequest", TypeShape.of(GetPreauthrequestResult.class), args, Utilities.withVersion(options));
     }
@@ -214,6 +330,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args) {
         return getPreauthrequests(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Preauthenticated Requests in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Lists pre-authenticated requests for the bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getPreauthrequests:getPreauthrequests", TypeShape.of(GetPreauthrequestsResult.class), args, Utilities.withVersion(options));
     }
@@ -228,6 +352,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args) {
         return getReplicationPolicies(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Replication Policies in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * List the replication policies associated with a bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationPolicies:getReplicationPolicies", TypeShape.of(GetReplicationPoliciesResult.class), args, Utilities.withVersion(options));
     }
@@ -242,6 +374,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
         return getReplicationPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Replication Policy resource in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * Get the replication policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -256,6 +396,14 @@ public final class ObjectStorageFunctions {
     public static CompletableFuture<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args) {
         return getReplicationSources(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Replication Sources in Oracle Cloud Infrastructure Object Storage service.
+     * 
+     * List the replication sources of a destination bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationSources:getReplicationSources", TypeShape.of(GetReplicationSourcesResult.class), args, Utilities.withVersion(options));
     }

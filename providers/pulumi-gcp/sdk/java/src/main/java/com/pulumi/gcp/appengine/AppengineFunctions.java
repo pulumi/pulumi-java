@@ -41,9 +41,61 @@ public final class AppengineFunctions {
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
         return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to retrieve the default App Engine service account for the specified project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(AppengineFunctions.getDefaultServiceAccount());
+     * 
+     *         ctx.export(&#34;defaultAccount&#34;, default_.getEmail());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
         return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to retrieve the default App Engine service account for the specified project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(AppengineFunctions.getDefaultServiceAccount());
+     * 
+     *         ctx.export(&#34;defaultAccount&#34;, default_.getEmail());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:appengine/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }

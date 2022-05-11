@@ -19,6 +19,10 @@ public final class ChatbotFunctions {
     public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(GetSlackChannelConfigurationArgs args) {
         return getSlackChannelConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
+     * 
+     */
     public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(GetSlackChannelConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:chatbot:getSlackChannelConfiguration", TypeShape.of(GetSlackChannelConfigurationResult.class), args, Utilities.withVersion(options));
     }

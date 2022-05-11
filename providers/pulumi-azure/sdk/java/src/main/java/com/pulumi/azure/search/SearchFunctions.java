@@ -47,6 +47,38 @@ public final class SearchFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Manages a Search Service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleResourceGroup = new ResourceGroup(&#34;exampleResourceGroup&#34;, ResourceGroupArgs.builder()        
+     *             .location(&#34;West Europe&#34;)
+     *             .build());
+     * 
+     *         final var exampleService = SearchFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;example-search-service&#34;)
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:search/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }

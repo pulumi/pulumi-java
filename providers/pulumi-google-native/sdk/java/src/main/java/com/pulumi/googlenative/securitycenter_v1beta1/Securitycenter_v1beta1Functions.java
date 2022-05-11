@@ -21,6 +21,10 @@ public final class Securitycenter_v1beta1Functions {
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args) {
         return getOrganizationSourceIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy on the specified Source.
+     * 
+     */
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1beta1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Securitycenter_v1beta1Functions {
     public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args) {
         return getSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a source.
+     * 
+     */
     public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1beta1:getSource", TypeShape.of(GetSourceResult.class), args, Utilities.withVersion(options));
     }

@@ -22,6 +22,11 @@ public final class AttestationFunctions {
     public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args) {
         return getAttestationProvider(args, InvokeOptions.Empty);
     }
+    /**
+     * Attestation service response message.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getAttestationProvider", TypeShape.of(GetAttestationProviderResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class AttestationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }

@@ -30,6 +30,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args) {
         return getArtifactSource(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource that defines the source location where the artifacts are located.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +46,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args) {
         return getRollout(args, InvokeOptions.Empty);
     }
+    /**
+     * Defines the PUT rollout request body.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getRollout", TypeShape.of(GetRolloutResult.class), args, Utilities.withVersion(options));
     }
@@ -52,6 +62,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource representation of a service in a service topology.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -63,6 +78,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(GetServiceTopologyArgs args) {
         return getServiceTopology(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource representation of a service topology.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(GetServiceTopologyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceTopology", TypeShape.of(GetServiceTopologyResult.class), args, Utilities.withVersion(options));
     }
@@ -74,6 +94,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetServiceUnitResult> getServiceUnit(GetServiceUnitArgs args) {
         return getServiceUnit(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents the response of a service unit resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServiceUnitResult> getServiceUnit(GetServiceUnitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceUnit", TypeShape.of(GetServiceUnitResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +110,11 @@ public final class DeploymentmanagerFunctions {
     public static CompletableFuture<GetStepResult> getStep(GetStepArgs args) {
         return getStep(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource representation of a rollout step.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetStepResult> getStep(GetStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getStep", TypeShape.of(GetStepResult.class), args, Utilities.withVersion(options));
     }

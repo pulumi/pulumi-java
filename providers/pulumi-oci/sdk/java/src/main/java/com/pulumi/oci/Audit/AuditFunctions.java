@@ -25,6 +25,14 @@ public final class AuditFunctions {
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Configuration resource in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Get the configuration
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Audit/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -40,6 +48,15 @@ public final class AuditFunctions {
     public static CompletableFuture<GetEventsResult> getEvents(GetEventsArgs args) {
         return getEvents(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Returns all the audit events processed for the specified compartment within the specified
+     * time range.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEventsResult> getEvents(GetEventsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Audit/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
     }

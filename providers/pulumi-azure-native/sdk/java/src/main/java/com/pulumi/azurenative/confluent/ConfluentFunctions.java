@@ -20,6 +20,11 @@ public final class ConfluentFunctions {
     public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
         return getOrganization(args, InvokeOptions.Empty);
     }
+    /**
+     * Organization resource.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }

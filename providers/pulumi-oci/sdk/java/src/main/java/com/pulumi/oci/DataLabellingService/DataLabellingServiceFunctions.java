@@ -29,6 +29,14 @@ public final class DataLabellingServiceFunctions {
     public static CompletableFuture<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args) {
         return getAnnotationFormat(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Annotation Format resource in Oracle Cloud Infrastructure Data Labeling Service service.
+     * 
+     * These are a static list in a given region.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getAnnotationFormat:getAnnotationFormat", TypeShape.of(GetAnnotationFormatResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,14 @@ public final class DataLabellingServiceFunctions {
     public static CompletableFuture<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args) {
         return getAnnotationFormats(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Annotation Formats in Oracle Cloud Infrastructure Data Labeling Service service.
+     * 
+     * These are a static list in a given region.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getAnnotationFormats:getAnnotationFormats", TypeShape.of(GetAnnotationFormatsResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +73,14 @@ public final class DataLabellingServiceFunctions {
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Dataset resource in Oracle Cloud Infrastructure Data Labeling Service service.
+     * 
+     * Gets a Dataset by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getDataset:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +95,14 @@ public final class DataLabellingServiceFunctions {
     public static CompletableFuture<GetDatasetsResult> getDatasets(GetDatasetsArgs args) {
         return getDatasets(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Datasets in Oracle Cloud Infrastructure Data Labeling Service service.
+     * 
+     * Returns a list of Datasets.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatasetsResult> getDatasets(GetDatasetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getDatasets:getDatasets", TypeShape.of(GetDatasetsResult.class), args, Utilities.withVersion(options));
     }

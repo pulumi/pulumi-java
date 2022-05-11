@@ -44,6 +44,35 @@ public final class CloudfunctionsFunctions {
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Cloud Function. For more information see
+     * the [official documentation](https://cloud.google.com/functions/docs/)
+     * and [API](https://cloud.google.com/functions/docs/apis).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-function = Output.of(CloudfunctionsFunctions.getFunction(GetFunctionArgs.builder()
+     *             .name(&#34;function&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudfunctions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }

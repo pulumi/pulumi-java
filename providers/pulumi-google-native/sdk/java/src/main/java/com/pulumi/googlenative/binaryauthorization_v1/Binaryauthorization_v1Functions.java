@@ -23,6 +23,10 @@ public final class Binaryauthorization_v1Functions {
     public static CompletableFuture<GetAttestorResult> getAttestor(GetAttestorArgs args) {
         return getAttestor(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
+     * 
+     */
     public static CompletableFuture<GetAttestorResult> getAttestor(GetAttestorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1:getAttestor", TypeShape.of(GetAttestorResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Binaryauthorization_v1Functions {
     public static CompletableFuture<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args) {
         return getAttestorIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1:getAttestorIamPolicy", TypeShape.of(GetAttestorIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -43,9 +51,17 @@ public final class Binaryauthorization_v1Functions {
     public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy() {
         return getPolicyIamPolicy(GetPolicyIamPolicyArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args) {
         return getPolicyIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1:getPolicyIamPolicy", TypeShape.of(GetPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }

@@ -44,6 +44,35 @@ public final class DatafactoryFunctions {
     public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args) {
         return getFactory(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Azure Data Factory (Version 2).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DatafactoryFunctions.getFactory(GetFactoryArgs.builder()
+     *             .name(&#34;existing-adf&#34;)
+     *             .resourceGroupName(&#34;existing-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getFactoryResult -&gt; getFactoryResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:datafactory/getFactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
     }

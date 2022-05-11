@@ -26,6 +26,11 @@ public final class AadiamFunctions {
     public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args) {
         return getDiagnosticSetting(args, InvokeOptions.Empty);
     }
+    /**
+     * The diagnostic setting resource.
+     * API Version: 2017-04-01.
+     * 
+     */
     public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +42,11 @@ public final class AadiamFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Private endpoint connection resource.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -48,6 +58,11 @@ public final class AadiamFunctions {
     public static CompletableFuture<GetazureADMetricResult> getazureADMetric(GetazureADMetricArgs args) {
         return getazureADMetric(args, InvokeOptions.Empty);
     }
+    /**
+     * AzureADMetrics resource.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
     public static CompletableFuture<GetazureADMetricResult> getazureADMetric(GetazureADMetricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getazureADMetric", TypeShape.of(GetazureADMetricResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +74,11 @@ public final class AadiamFunctions {
     public static CompletableFuture<GetprivateLinkForAzureAdResult> getprivateLinkForAzureAd(GetprivateLinkForAzureAdArgs args) {
         return getprivateLinkForAzureAd(args, InvokeOptions.Empty);
     }
+    /**
+     * PrivateLink Policy configuration object.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkForAzureAdResult> getprivateLinkForAzureAd(GetprivateLinkForAzureAdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getprivateLinkForAzureAd", TypeShape.of(GetprivateLinkForAzureAdResult.class), args, Utilities.withVersion(options));
     }

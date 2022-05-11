@@ -25,6 +25,10 @@ public final class LambdaFunctions {
     public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
         return getCodeSigningConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+     * 
+     */
     public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class LambdaFunctions {
     public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(GetEventSourceMappingArgs args) {
         return getEventSourceMapping(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lambda::EventSourceMapping
+     * 
+     */
     public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(GetEventSourceMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getEventSourceMapping", TypeShape.of(GetEventSourceMappingResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class LambdaFunctions {
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lambda::Function
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class LambdaFunctions {
     public static CompletableFuture<GetUrlResult> getUrl(GetUrlArgs args) {
         return getUrl(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Lambda::Url
+     * 
+     */
     public static CompletableFuture<GetUrlResult> getUrl(GetUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getUrl", TypeShape.of(GetUrlResult.class), args, Utilities.withVersion(options));
     }

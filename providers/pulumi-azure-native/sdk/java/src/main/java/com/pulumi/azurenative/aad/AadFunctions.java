@@ -22,6 +22,11 @@ public final class AadFunctions {
     public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args) {
         return getDomainService(args, InvokeOptions.Empty);
     }
+    /**
+     * Domain service.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class AadFunctions {
     public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args) {
         return getOuContainer(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource for OuContainer.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
     }

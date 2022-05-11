@@ -21,6 +21,10 @@ public final class LookoutmetricsFunctions {
     public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args) {
         return getAlert(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::LookoutMetrics::Alert
+     * 
+     */
     public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class LookoutmetricsFunctions {
     public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args) {
         return getAnomalyDetector(args, InvokeOptions.Empty);
     }
+    /**
+     * An Amazon Lookout for Metrics Detector
+     * 
+     */
     public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAnomalyDetector", TypeShape.of(GetAnomalyDetectorResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class RumFunctions {
     public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args) {
         return getAppMonitor(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::RUM::AppMonitor
+     * 
+     */
     public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rum:getAppMonitor", TypeShape.of(GetAppMonitorResult.class), args, Utilities.withVersion(options));
     }

@@ -46,9 +46,71 @@ public final class GlobalacceleratorFunctions {
     public static CompletableFuture<GetAcceleratorResult> getAccelerator() {
         return getAccelerator(GetAcceleratorArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides information about a Global Accelerator accelerator.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var acceleratorArn = config.get(&#34;acceleratorArn&#34;).orElse(&#34;&#34;);
+     *         final var acceleratorName = config.get(&#34;acceleratorName&#34;).orElse(&#34;&#34;);
+     *         final var example = Output.of(GlobalacceleratorFunctions.getAccelerator(GetAcceleratorArgs.builder()
+     *             .arn(acceleratorArn)
+     *             .name(acceleratorName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
         return getAccelerator(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information about a Global Accelerator accelerator.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var acceleratorArn = config.get(&#34;acceleratorArn&#34;).orElse(&#34;&#34;);
+     *         final var acceleratorName = config.get(&#34;acceleratorName&#34;).orElse(&#34;&#34;);
+     *         final var example = Output.of(GlobalacceleratorFunctions.getAccelerator(GetAcceleratorArgs.builder()
+     *             .arn(acceleratorArn)
+     *             .name(acceleratorName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:globalaccelerator/getAccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }

@@ -20,6 +20,11 @@ public final class WindowsiotFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * The description of the Windows IoT Device Service.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:windowsiot:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }

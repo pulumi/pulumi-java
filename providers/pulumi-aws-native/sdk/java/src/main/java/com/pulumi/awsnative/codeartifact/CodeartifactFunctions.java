@@ -21,6 +21,10 @@ public final class CodeartifactFunctions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource schema to create a CodeArtifact domain.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class CodeartifactFunctions {
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource schema to create a CodeArtifact repository.
+     * 
+     */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }

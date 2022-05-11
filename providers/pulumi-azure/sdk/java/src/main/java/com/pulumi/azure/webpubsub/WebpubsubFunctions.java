@@ -43,6 +43,34 @@ public final class WebpubsubFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Azure Web Pubsub service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WebpubsubFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;test-webpubsub&#34;)
+     *             .resourceGroupName(&#34;wps-resource-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:webpubsub/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }

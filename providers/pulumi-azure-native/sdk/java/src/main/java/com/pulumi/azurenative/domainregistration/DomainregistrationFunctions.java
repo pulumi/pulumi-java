@@ -26,6 +26,11 @@ public final class DomainregistrationFunctions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about a domain.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +42,11 @@ public final class DomainregistrationFunctions {
     public static CompletableFuture<GetDomainOwnershipIdentifierResult> getDomainOwnershipIdentifier(GetDomainOwnershipIdentifierArgs args) {
         return getDomainOwnershipIdentifier(args, InvokeOptions.Empty);
     }
+    /**
+     * Domain ownership Identifier.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetDomainOwnershipIdentifierResult> getDomainOwnershipIdentifier(GetDomainOwnershipIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:getDomainOwnershipIdentifier", TypeShape.of(GetDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
     }
@@ -48,9 +58,19 @@ public final class DomainregistrationFunctions {
     public static CompletableFuture<ListDomainRecommendationsResult> listDomainRecommendations() {
         return listDomainRecommendations(ListDomainRecommendationsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Collection of domain name identifiers.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<ListDomainRecommendationsResult> listDomainRecommendations(ListDomainRecommendationsArgs args) {
         return listDomainRecommendations(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of domain name identifiers.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<ListDomainRecommendationsResult> listDomainRecommendations(ListDomainRecommendationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:listDomainRecommendations", TypeShape.of(ListDomainRecommendationsResult.class), args, Utilities.withVersion(options));
     }
@@ -62,6 +82,11 @@ public final class DomainregistrationFunctions {
     public static CompletableFuture<ListTopLevelDomainAgreementsResult> listTopLevelDomainAgreements(ListTopLevelDomainAgreementsArgs args) {
         return listTopLevelDomainAgreements(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of top-level domain legal agreements.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<ListTopLevelDomainAgreementsResult> listTopLevelDomainAgreements(ListTopLevelDomainAgreementsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:listTopLevelDomainAgreements", TypeShape.of(ListTopLevelDomainAgreementsResult.class), args, Utilities.withVersion(options));
     }

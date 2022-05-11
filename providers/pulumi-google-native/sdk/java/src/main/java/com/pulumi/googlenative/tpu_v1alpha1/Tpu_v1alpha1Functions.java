@@ -19,6 +19,10 @@ public final class Tpu_v1alpha1Functions {
     public static CompletableFuture<GetNodeResult> getNode(GetNodeArgs args) {
         return getNode(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a node.
+     * 
+     */
     public static CompletableFuture<GetNodeResult> getNode(GetNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:tpu/v1alpha1:getNode", TypeShape.of(GetNodeResult.class), args, Utilities.withVersion(options));
     }

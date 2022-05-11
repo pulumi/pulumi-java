@@ -25,6 +25,10 @@ public final class RefactorspacesFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::RefactorSpaces::Application Resource Type
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class RefactorspacesFunctions {
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::RefactorSpaces::Environment Resource Type
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class RefactorspacesFunctions {
     public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
         return getRoute(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::RefactorSpaces::Route Resource Type
+     * 
+     */
     public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class RefactorspacesFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::RefactorSpaces::Service Resource Type
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }

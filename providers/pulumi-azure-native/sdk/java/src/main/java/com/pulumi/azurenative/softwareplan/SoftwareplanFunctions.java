@@ -20,6 +20,11 @@ public final class SoftwareplanFunctions {
     public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args) {
         return getHybridUseBenefit(args, InvokeOptions.Empty);
     }
+    /**
+     * Response on GET of a hybrid use benefit
+     * API Version: 2019-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:softwareplan:getHybridUseBenefit", TypeShape.of(GetHybridUseBenefitResult.class), args, Utilities.withVersion(options));
     }

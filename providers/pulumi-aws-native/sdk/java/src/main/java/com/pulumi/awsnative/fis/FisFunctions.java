@@ -19,6 +19,10 @@ public final class FisFunctions {
     public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args) {
         return getExperimentTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::FIS::ExperimentTemplate
+     * 
+     */
     public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args, Utilities.withVersion(options));
     }

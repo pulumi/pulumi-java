@@ -23,6 +23,10 @@ public final class Baremetalsolution_v2Functions {
     public static CompletableFuture<GetProvisioningConfigResult> getProvisioningConfig(GetProvisioningConfigArgs args) {
         return getProvisioningConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Get ProvisioningConfig by name.
+     * 
+     */
     public static CompletableFuture<GetProvisioningConfigResult> getProvisioningConfig(GetProvisioningConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getProvisioningConfig", TypeShape.of(GetProvisioningConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Baremetalsolution_v2Functions {
     public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
+    /**
+     * Get details of a single storage volume snapshot.
+     * 
+     */
     public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Baremetalsolution_v2Functions {
     public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(GetSnapshotSchedulePolicyArgs args) {
         return getSnapshotSchedulePolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Get details of a single snapshot schedule policy.
+     * 
+     */
     public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(GetSnapshotSchedulePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getSnapshotSchedulePolicy", TypeShape.of(GetSnapshotSchedulePolicyResult.class), args, Utilities.withVersion(options));
     }

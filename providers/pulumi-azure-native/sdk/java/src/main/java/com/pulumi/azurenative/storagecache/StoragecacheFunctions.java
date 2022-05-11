@@ -22,6 +22,11 @@ public final class StoragecacheFunctions {
     public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
         return getCache(args, InvokeOptions.Empty);
     }
+    /**
+     * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class StoragecacheFunctions {
     public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args) {
         return getStorageTarget(args, InvokeOptions.Empty);
     }
+    /**
+     * Type of the Storage Target.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getStorageTarget", TypeShape.of(GetStorageTargetResult.class), args, Utilities.withVersion(options));
     }

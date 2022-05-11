@@ -28,6 +28,11 @@ public final class BlockchainFunctions {
     public static CompletableFuture<GetBlockchainMemberResult> getBlockchainMember(GetBlockchainMemberArgs args) {
         return getBlockchainMember(args, InvokeOptions.Empty);
     }
+    /**
+     * Payload of the blockchain member which is exposed in the request/response of the resource provider.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetBlockchainMemberResult> getBlockchainMember(GetBlockchainMemberArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:getBlockchainMember", TypeShape.of(GetBlockchainMemberResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +44,11 @@ public final class BlockchainFunctions {
     public static CompletableFuture<GetTransactionNodeResult> getTransactionNode(GetTransactionNodeArgs args) {
         return getTransactionNode(args, InvokeOptions.Empty);
     }
+    /**
+     * Payload of the transaction node which is the request/response of the resource provider.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetTransactionNodeResult> getTransactionNode(GetTransactionNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:getTransactionNode", TypeShape.of(GetTransactionNodeResult.class), args, Utilities.withVersion(options));
     }
@@ -50,6 +60,11 @@ public final class BlockchainFunctions {
     public static CompletableFuture<ListBlockchainMemberApiKeysResult> listBlockchainMemberApiKeys(ListBlockchainMemberApiKeysArgs args) {
         return listBlockchainMemberApiKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of the API key payload which is exposed in the response of the resource provider.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<ListBlockchainMemberApiKeysResult> listBlockchainMemberApiKeys(ListBlockchainMemberApiKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listBlockchainMemberApiKeys", TypeShape.of(ListBlockchainMemberApiKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +76,11 @@ public final class BlockchainFunctions {
     public static CompletableFuture<ListLocationConsortiumsResult> listLocationConsortiums(ListLocationConsortiumsArgs args) {
         return listLocationConsortiums(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of the consortium payload.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<ListLocationConsortiumsResult> listLocationConsortiums(ListLocationConsortiumsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listLocationConsortiums", TypeShape.of(ListLocationConsortiumsResult.class), args, Utilities.withVersion(options));
     }
@@ -72,6 +92,11 @@ public final class BlockchainFunctions {
     public static CompletableFuture<ListTransactionNodeApiKeysResult> listTransactionNodeApiKeys(ListTransactionNodeApiKeysArgs args) {
         return listTransactionNodeApiKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of the API key payload which is exposed in the response of the resource provider.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<ListTransactionNodeApiKeysResult> listTransactionNodeApiKeys(ListTransactionNodeApiKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listTransactionNodeApiKeys", TypeShape.of(ListTransactionNodeApiKeysResult.class), args, Utilities.withVersion(options));
     }

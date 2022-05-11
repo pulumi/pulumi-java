@@ -27,6 +27,10 @@ public final class ConfigurationFunctions {
     public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(GetAggregationAuthorizationArgs args) {
         return getAggregationAuthorization(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Config::AggregationAuthorization
+     * 
+     */
     public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(GetAggregationAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getAggregationAuthorization", TypeShape.of(GetAggregationAuthorizationResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class ConfigurationFunctions {
     public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(GetConfigurationAggregatorArgs args) {
         return getConfigurationAggregator(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Config::ConfigurationAggregator
+     * 
+     */
     public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(GetConfigurationAggregatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConfigurationAggregator", TypeShape.of(GetConfigurationAggregatorResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class ConfigurationFunctions {
     public static CompletableFuture<GetConformancePackResult> getConformancePack(GetConformancePackArgs args) {
         return getConformancePack(args, InvokeOptions.Empty);
     }
+    /**
+     * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
+     * 
+     */
     public static CompletableFuture<GetConformancePackResult> getConformancePack(GetConformancePackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConformancePack", TypeShape.of(GetConformancePackResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class ConfigurationFunctions {
     public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(GetOrganizationConformancePackArgs args) {
         return getOrganizationConformancePack(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Config::OrganizationConformancePack.
+     * 
+     */
     public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(GetOrganizationConformancePackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getOrganizationConformancePack", TypeShape.of(GetOrganizationConformancePackResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class ConfigurationFunctions {
     public static CompletableFuture<GetStoredQueryResult> getStoredQuery(GetStoredQueryArgs args) {
         return getStoredQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Config::StoredQuery
+     * 
+     */
     public static CompletableFuture<GetStoredQueryResult> getStoredQuery(GetStoredQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getStoredQuery", TypeShape.of(GetStoredQueryResult.class), args, Utilities.withVersion(options));
     }

@@ -40,9 +40,59 @@ public final class GuarddutyFunctions {
     public static CompletableFuture<GetDetectorResult> getDetector() {
         return getDetector(GetDetectorArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a GuardDuty detector.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GuarddutyFunctions.getDetector());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args) {
         return getDetector(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a GuardDuty detector.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GuarddutyFunctions.getDetector());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:guardduty/getDetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
     }

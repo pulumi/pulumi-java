@@ -44,6 +44,35 @@ public final class OperationalinsightsFunctions {
     public static CompletableFuture<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args) {
         return getAnalyticsWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OperationalinsightsFunctions.getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs.builder()
+     *             .name(&#34;acctest-01&#34;)
+     *             .resourceGroupName(&#34;acctest&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;logAnalyticsWorkspaceId&#34;, example.apply(getAnalyticsWorkspaceResult -&gt; getAnalyticsWorkspaceResult.getWorkspaceId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:operationalinsights/getAnalyticsWorkspace:getAnalyticsWorkspace", TypeShape.of(GetAnalyticsWorkspaceResult.class), args, Utilities.withVersion(options));
     }

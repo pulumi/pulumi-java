@@ -19,6 +19,10 @@ public final class AccessanalyzerFunctions {
     public static CompletableFuture<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args) {
         return getAnalyzer(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
+     * 
+     */
     public static CompletableFuture<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:accessanalyzer:getAnalyzer", TypeShape.of(GetAnalyzerResult.class), args, Utilities.withVersion(options));
     }

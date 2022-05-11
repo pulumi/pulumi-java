@@ -21,6 +21,10 @@ public final class Gkehub_v1beta1Functions {
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args) {
         return getMembership(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a Membership.
+     * 
+     */
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta1:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Gkehub_v1beta1Functions {
     public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
         return getMembershipIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta1:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }

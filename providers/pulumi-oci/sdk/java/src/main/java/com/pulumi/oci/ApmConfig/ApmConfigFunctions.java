@@ -25,6 +25,14 @@ public final class ApmConfigFunctions {
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Config resource in Oracle Cloud Infrastructure Apm Config service.
+     * 
+     * Get the configuration of the item identified by the OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmConfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class ApmConfigFunctions {
     public static CompletableFuture<GetConfigsResult> getConfigs(GetConfigsArgs args) {
         return getConfigs(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Configs in Oracle Cloud Infrastructure Apm Config service.
+     * 
+     * Returns all configured items optionally filtered by configuration type
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConfigsResult> getConfigs(GetConfigsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmConfig/getConfigs:getConfigs", TypeShape.of(GetConfigsResult.class), args, Utilities.withVersion(options));
     }

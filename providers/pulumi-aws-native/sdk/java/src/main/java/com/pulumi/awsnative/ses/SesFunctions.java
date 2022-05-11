@@ -25,6 +25,10 @@ public final class SesFunctions {
     public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args) {
         return getConfigurationSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::SES::ConfigurationSet.
+     * 
+     */
     public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class SesFunctions {
     public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args) {
         return getConfigurationSetEventDestination(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SES::ConfigurationSetEventDestination
+     * 
+     */
     public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSetEventDestination", TypeShape.of(GetConfigurationSetEventDestinationResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class SesFunctions {
     public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args) {
         return getContactList(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::SES::ContactList.
+     * 
+     */
     public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getContactList", TypeShape.of(GetContactListResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class SesFunctions {
     public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
         return getTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SES::Template
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }

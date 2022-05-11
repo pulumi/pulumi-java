@@ -46,6 +46,35 @@ public final class ServicequotasFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a Service Quotas Service.
+     * 
+     * &gt; **NOTE:** Global quotas apply to all AWS regions, but can only be accessed in `us-east-1` in the Commercial partition or `us-gov-west-1` in the GovCloud partition. In other regions, the AWS API will return the error `The request failed because the specified service does not exist.`
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicequotasFunctions.getService(GetServiceArgs.builder()
+     *             .serviceName(&#34;Amazon Virtual Private Cloud (Amazon VPC)&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicequotas/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +116,41 @@ public final class ServicequotasFunctions {
     public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args) {
         return getServiceQuota(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a Service Quota.
+     * 
+     * &gt; **NOTE:** Global quotas apply to all AWS regions, but can only be accessed in `us-east-1` in the Commercial partition or `us-gov-west-1` in the GovCloud partition. In other regions, the AWS API will return the error `The request failed because the specified service does not exist.`
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byQuotaCode = Output.of(ServicequotasFunctions.getServiceQuota(GetServiceQuotaArgs.builder()
+     *             .quotaCode(&#34;L-F678F1CE&#34;)
+     *             .serviceCode(&#34;vpc&#34;)
+     *             .build()));
+     * 
+     *         final var byQuotaName = Output.of(ServicequotasFunctions.getServiceQuota(GetServiceQuotaArgs.builder()
+     *             .quotaName(&#34;VPCs per Region&#34;)
+     *             .serviceCode(&#34;vpc&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicequotas/getServiceQuota:getServiceQuota", TypeShape.of(GetServiceQuotaResult.class), args, Utilities.withVersion(options));
     }

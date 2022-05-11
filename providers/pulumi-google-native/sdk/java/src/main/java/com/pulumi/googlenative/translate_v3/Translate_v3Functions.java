@@ -19,6 +19,10 @@ public final class Translate_v3Functions {
     public static CompletableFuture<GetGlossaryResult> getGlossary(GetGlossaryArgs args) {
         return getGlossary(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn&#39;t exist.
+     * 
+     */
     public static CompletableFuture<GetGlossaryResult> getGlossary(GetGlossaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:translate/v3:getGlossary", TypeShape.of(GetGlossaryResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class SyntheticsFunctions {
     public static CompletableFuture<GetCanaryResult> getCanary(GetCanaryArgs args) {
         return getCanary(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Synthetics::Canary
+     * 
+     */
     public static CompletableFuture<GetCanaryResult> getCanary(GetCanaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:synthetics:getCanary", TypeShape.of(GetCanaryResult.class), args, Utilities.withVersion(options));
     }

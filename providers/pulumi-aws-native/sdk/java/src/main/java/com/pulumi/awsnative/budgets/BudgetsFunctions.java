@@ -19,6 +19,10 @@ public final class BudgetsFunctions {
     public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args) {
         return getBudgetsAction(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args, Utilities.withVersion(options));
     }

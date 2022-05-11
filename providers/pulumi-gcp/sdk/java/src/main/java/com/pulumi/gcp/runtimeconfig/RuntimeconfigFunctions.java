@@ -42,6 +42,31 @@ public final class RuntimeconfigFunctions {
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getConfig(GetConfigArgs.builder()
+     *             .name(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -74,6 +99,32 @@ public final class RuntimeconfigFunctions {
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getVariable(GetVariableArgs.builder()
+     *             .name(&#34;prod-variables/hostname&#34;)
+     *             .parent(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }

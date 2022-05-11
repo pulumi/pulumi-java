@@ -22,6 +22,11 @@ public final class AzuredataFunctions {
     public static CompletableFuture<GetSqlServerResult> getSqlServer(GetSqlServerArgs args) {
         return getSqlServer(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL server.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
     public static CompletableFuture<GetSqlServerResult> getSqlServer(GetSqlServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServer", TypeShape.of(GetSqlServerResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class AzuredataFunctions {
     public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(GetSqlServerRegistrationArgs args) {
         return getSqlServerRegistration(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL server registration.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
     public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(GetSqlServerRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServerRegistration", TypeShape.of(GetSqlServerRegistrationResult.class), args, Utilities.withVersion(options));
     }

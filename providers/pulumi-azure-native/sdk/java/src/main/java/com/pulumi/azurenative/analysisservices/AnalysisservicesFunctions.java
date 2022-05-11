@@ -22,6 +22,11 @@ public final class AnalysisservicesFunctions {
     public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args) {
         return getServerDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of an Analysis Services resource.
+     * API Version: 2017-08-01.
+     * 
+     */
     public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class AnalysisservicesFunctions {
     public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args) {
         return listServerGatewayStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * Status of gateway is live.
+     * API Version: 2017-08-01.
+     * 
+     */
     public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:listServerGatewayStatus", TypeShape.of(ListServerGatewayStatusResult.class), args, Utilities.withVersion(options));
     }

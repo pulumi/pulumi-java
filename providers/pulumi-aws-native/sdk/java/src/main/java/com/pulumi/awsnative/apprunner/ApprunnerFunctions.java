@@ -23,6 +23,10 @@ public final class ApprunnerFunctions {
     public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args) {
         return getObservabilityConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::AppRunner::ObservabilityConfiguration resource  is an AWS App Runner resource type that specifies an App Runner observability configuration
+     * 
+     */
     public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getObservabilityConfiguration", TypeShape.of(GetObservabilityConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class ApprunnerFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::AppRunner::Service resource specifies an AppRunner Service.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class ApprunnerFunctions {
     public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args) {
         return getVpcConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
+     * 
+     */
     public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args, Utilities.withVersion(options));
     }

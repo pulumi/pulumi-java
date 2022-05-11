@@ -20,6 +20,11 @@ public final class DatacatalogFunctions {
     public static CompletableFuture<GetADCCatalogResult> getADCCatalog(GetADCCatalogArgs args) {
         return getADCCatalog(args, InvokeOptions.Empty);
     }
+    /**
+     * Azure Data Catalog.
+     * API Version: 2016-03-30.
+     * 
+     */
     public static CompletableFuture<GetADCCatalogResult> getADCCatalog(GetADCCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datacatalog:getADCCatalog", TypeShape.of(GetADCCatalogResult.class), args, Utilities.withVersion(options));
     }

@@ -25,6 +25,10 @@ public final class Eventarc_v1Functions {
     public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(GetChannelConnectionIamPolicyArgs args) {
         return getChannelConnectionIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(GetChannelConnectionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getChannelConnectionIamPolicy", TypeShape.of(GetChannelConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Eventarc_v1Functions {
     public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(GetChannelIamPolicyArgs args) {
         return getChannelIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(GetChannelIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getChannelIamPolicy", TypeShape.of(GetChannelIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Eventarc_v1Functions {
     public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
         return getTrigger(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a single trigger.
+     * 
+     */
     public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Eventarc_v1Functions {
     public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args) {
         return getTriggerIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getTriggerIamPolicy", TypeShape.of(GetTriggerIamPolicyResult.class), args, Utilities.withVersion(options));
     }

@@ -22,6 +22,11 @@ public final class ExtendedlocationFunctions {
     public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args) {
         return getCustomLocation(args, InvokeOptions.Empty);
     }
+    /**
+     * Custom Locations definition.
+     * API Version: 2021-03-15-preview.
+     * 
+     */
     public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:extendedlocation:getCustomLocation", TypeShape.of(GetCustomLocationResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class ExtendedlocationFunctions {
     public static CompletableFuture<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args) {
         return getResourceSyncRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Sync Rules definition.
+     * API Version: 2021-08-31-preview.
+     * 
+     */
     public static CompletableFuture<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:extendedlocation:getResourceSyncRule", TypeShape.of(GetResourceSyncRuleResult.class), args, Utilities.withVersion(options));
     }

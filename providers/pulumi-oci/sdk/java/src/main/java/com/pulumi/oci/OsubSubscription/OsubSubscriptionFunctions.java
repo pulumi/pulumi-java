@@ -29,6 +29,14 @@ public final class OsubSubscriptionFunctions {
     public static CompletableFuture<GetCommitmentResult> getCommitment(GetCommitmentArgs args) {
         return getCommitment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Commitment resource in Oracle Cloud Infrastructure Osub Subscription service.
+     * 
+     * This API returns the commitment details corresponding to the id provided
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCommitmentResult> getCommitment(GetCommitmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getCommitment:getCommitment", TypeShape.of(GetCommitmentResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,14 @@ public final class OsubSubscriptionFunctions {
     public static CompletableFuture<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args) {
         return getCommitments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Commitments in Oracle Cloud Infrastructure Osub Subscription service.
+     * 
+     * This list API returns all commitments for a particular Subscribed Service
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getCommitments:getCommitments", TypeShape.of(GetCommitmentsResult.class), args, Utilities.withVersion(options));
     }
@@ -58,6 +74,15 @@ public final class OsubSubscriptionFunctions {
     public static CompletableFuture<GetRatecardsResult> getRatecards(GetRatecardsArgs args) {
         return getRatecards(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Ratecards in Oracle Cloud Infrastructure Osub Subscription service.
+     * 
+     * List API that returns all ratecards for given Subscription Id and Account ID (if provided) and
+     * for a particular date range
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetRatecardsResult> getRatecards(GetRatecardsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getRatecards:getRatecards", TypeShape.of(GetRatecardsResult.class), args, Utilities.withVersion(options));
     }
@@ -75,6 +100,17 @@ public final class OsubSubscriptionFunctions {
     public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Subscriptions in Oracle Cloud Infrastructure Osub Subscription service.
+     * 
+     * This list API returns all subscriptions for a given plan number or subscription id or buyer email
+     * and provides additional parameters to include ratecard and commitment details.
+     * This API expects exactly one of the above mentioned parameters as input. If more than one parameters are provided the API will throw
+     * a 400 - invalid parameters exception and if no parameters are provided it will throw a 400 - missing parameter exception
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }

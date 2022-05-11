@@ -44,6 +44,35 @@ public final class PortalFunctions {
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing shared dashboard in the Azure Portal. This is the data source of the `azure.portal.Dashboard` resource.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PortalFunctions.getDashboard(GetDashboardArgs.builder()
+     *             .name(&#34;existing-dashboard&#34;)
+     *             .resourceGroupName(&#34;dashboard-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, data.getAzurerm_dashboard().getExample().getId());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:portal/getDashboard:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }

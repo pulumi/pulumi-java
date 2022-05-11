@@ -50,6 +50,33 @@ public final class BackupFunctions {
     public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
         return getFramework(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an existing backup framework.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getFramework(GetFrameworkArgs.builder()
+     *             .name(&#34;tf_example_backup_framework_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getFramework:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +110,33 @@ public final class BackupFunctions {
     public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args) {
         return getPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an existing backup plan.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getPlan(GetPlanArgs.builder()
+     *             .planId(&#34;tf_example_backup_plan_id&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getPlan:getPlan", TypeShape.of(GetPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -116,6 +170,33 @@ public final class BackupFunctions {
     public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
         return getReportPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an existing backup report plan.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getReportPlan(GetReportPlanArgs.builder()
+     *             .name(&#34;tf_example_backup_report_plan_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getReportPlan:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -150,6 +231,34 @@ public final class BackupFunctions {
     public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args) {
         return getSelection(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an existing backup selection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getSelection(GetSelectionArgs.builder()
+     *             .planId(data.getAws_backup_plan().getExample().getId())
+     *             .selectionId(&#34;selection-id-example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getSelection:getSelection", TypeShape.of(GetSelectionResult.class), args, Utilities.withVersion(options));
     }
@@ -183,6 +292,33 @@ public final class BackupFunctions {
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an existing backup vault.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getVault(GetVaultArgs.builder()
+     *             .name(&#34;example_backup_vault&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }

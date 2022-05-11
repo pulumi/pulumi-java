@@ -20,6 +20,11 @@ public final class DashboardFunctions {
     public static CompletableFuture<GetGrafanaResult> getGrafana(GetGrafanaArgs args) {
         return getGrafana(args, InvokeOptions.Empty);
     }
+    /**
+     * The grafana resource type.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGrafanaResult> getGrafana(GetGrafanaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dashboard:getGrafana", TypeShape.of(GetGrafanaResult.class), args, Utilities.withVersion(options));
     }

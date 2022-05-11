@@ -21,6 +21,10 @@ public final class StepfunctionsFunctions {
     public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args) {
         return getActivity(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for Activity
+     * 
+     */
     public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getActivity", TypeShape.of(GetActivityResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class StepfunctionsFunctions {
     public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {
         return getStateMachine(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for StateMachine
+     * 
+     */
     public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getStateMachine", TypeShape.of(GetStateMachineResult.class), args, Utilities.withVersion(options));
     }

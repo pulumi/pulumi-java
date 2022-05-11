@@ -55,6 +55,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetFastLaunchJobConfigsResult> getFastLaunchJobConfigs(GetFastLaunchJobConfigsArgs args) {
         return getFastLaunchJobConfigs(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Fast Launch Job Configs in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * List fast launch capable job configs in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetFastLaunchJobConfigsResult> getFastLaunchJobConfigs(GetFastLaunchJobConfigsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getFastLaunchJobConfigs:getFastLaunchJobConfigs", TypeShape.of(GetFastLaunchJobConfigsResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +77,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Job resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets a job.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getJob:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +99,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetJobRunResult> getJobRun(GetJobRunArgs args) {
         return getJobRun(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Job Run resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets a job run.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobRunResult> getJobRun(GetJobRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getJobRun:getJobRun", TypeShape.of(GetJobRunResult.class), args, Utilities.withVersion(options));
     }
@@ -97,6 +121,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetJobRunsResult> getJobRuns(GetJobRunsArgs args) {
         return getJobRuns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Job Runs in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * List out job runs.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobRunsResult> getJobRuns(GetJobRunsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getJobRuns:getJobRuns", TypeShape.of(GetJobRunsResult.class), args, Utilities.withVersion(options));
     }
@@ -111,6 +143,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetJobShapesResult> getJobShapes(GetJobShapesArgs args) {
         return getJobShapes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Job Shapes in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * List job shapes available in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobShapesResult> getJobShapes(GetJobShapesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getJobShapes:getJobShapes", TypeShape.of(GetJobShapesResult.class), args, Utilities.withVersion(options));
     }
@@ -125,6 +165,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetJobsResult> getJobs(GetJobsArgs args) {
         return getJobs(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Jobs in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * List jobs in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobsResult> getJobs(GetJobsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getJobs:getJobs", TypeShape.of(GetJobsResult.class), args, Utilities.withVersion(options));
     }
@@ -139,6 +187,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
         return getModel(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Model resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets the specified model&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModel:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
@@ -153,6 +209,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelDeploymentResult> getModelDeployment(GetModelDeploymentArgs args) {
         return getModelDeployment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Model Deployment resource in Oracle Cloud Infrastructure Datascience service.
+     * 
+     * Retrieves the model deployment for the specified `modelDeploymentId`.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelDeploymentResult> getModelDeployment(GetModelDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModelDeployment:getModelDeployment", TypeShape.of(GetModelDeploymentResult.class), args, Utilities.withVersion(options));
     }
@@ -167,6 +231,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelDeploymentShapesResult> getModelDeploymentShapes(GetModelDeploymentShapesArgs args) {
         return getModelDeploymentShapes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Model Deployment Shapes in Oracle Cloud Infrastructure Datascience service.
+     * 
+     * Lists the valid model deployment shapes.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelDeploymentShapesResult> getModelDeploymentShapes(GetModelDeploymentShapesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModelDeploymentShapes:getModelDeploymentShapes", TypeShape.of(GetModelDeploymentShapesResult.class), args, Utilities.withVersion(options));
     }
@@ -181,6 +253,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelDeploymentsResult> getModelDeployments(GetModelDeploymentsArgs args) {
         return getModelDeployments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Model Deployments in Oracle Cloud Infrastructure Datascience service.
+     * 
+     * Lists all model deployments in the specified compartment. Only one parameter other than compartmentId may also be included in a query. The query must include compartmentId. If the query does not include compartmentId, or includes compartmentId but two or more other parameters an error is returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelDeploymentsResult> getModelDeployments(GetModelDeploymentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModelDeployments:getModelDeployments", TypeShape.of(GetModelDeploymentsResult.class), args, Utilities.withVersion(options));
     }
@@ -195,6 +275,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelProvenanceResult> getModelProvenance(GetModelProvenanceArgs args) {
         return getModelProvenance(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Model Provenance resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets provenance information for specified model.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelProvenanceResult> getModelProvenance(GetModelProvenanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModelProvenance:getModelProvenance", TypeShape.of(GetModelProvenanceResult.class), args, Utilities.withVersion(options));
     }
@@ -209,6 +297,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetModelsResult> getModels(GetModelsArgs args) {
         return getModels(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Models in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Lists models in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetModelsResult> getModels(GetModelsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getModels:getModels", TypeShape.of(GetModelsResult.class), args, Utilities.withVersion(options));
     }
@@ -223,6 +319,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetNotebookSessionResult> getNotebookSession(GetNotebookSessionArgs args) {
         return getNotebookSession(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Notebook Session resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets the specified notebook session&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNotebookSessionResult> getNotebookSession(GetNotebookSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getNotebookSession:getNotebookSession", TypeShape.of(GetNotebookSessionResult.class), args, Utilities.withVersion(options));
     }
@@ -237,6 +341,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetNotebookSessionShapesResult> getNotebookSessionShapes(GetNotebookSessionShapesArgs args) {
         return getNotebookSessionShapes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Notebook Session Shapes in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Lists the valid notebook session shapes.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNotebookSessionShapesResult> getNotebookSessionShapes(GetNotebookSessionShapesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getNotebookSessionShapes:getNotebookSessionShapes", TypeShape.of(GetNotebookSessionShapesResult.class), args, Utilities.withVersion(options));
     }
@@ -251,6 +363,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetNotebookSessionsResult> getNotebookSessions(GetNotebookSessionsArgs args) {
         return getNotebookSessions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Notebook Sessions in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Lists the notebook sessions in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNotebookSessionsResult> getNotebookSessions(GetNotebookSessionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getNotebookSessions:getNotebookSessions", TypeShape.of(GetNotebookSessionsResult.class), args, Utilities.withVersion(options));
     }
@@ -265,6 +385,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Gets the specified project&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
@@ -279,6 +407,14 @@ public final class DataScienceFunctions {
     public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args) {
         return getProjects(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Projects in Oracle Cloud Infrastructure Data Science service.
+     * 
+     * Lists projects in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataScience/getProjects:getProjects", TypeShape.of(GetProjectsResult.class), args, Utilities.withVersion(options));
     }

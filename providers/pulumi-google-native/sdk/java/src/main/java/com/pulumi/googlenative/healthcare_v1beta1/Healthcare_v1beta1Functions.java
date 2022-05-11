@@ -55,6 +55,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetAnnotationResult> getAnnotation(GetAnnotationArgs args) {
         return getAnnotation(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an Annotation.
+     * 
+     */
     public static CompletableFuture<GetAnnotationResult> getAnnotation(GetAnnotationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getAnnotation", TypeShape.of(GetAnnotationResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +69,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetAnnotationStoreResult> getAnnotationStore(GetAnnotationStoreArgs args) {
         return getAnnotationStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+     * 
+     */
     public static CompletableFuture<GetAnnotationStoreResult> getAnnotationStore(GetAnnotationStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getAnnotationStore", TypeShape.of(GetAnnotationStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -75,6 +83,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetAttributeDefinitionResult> getAttributeDefinition(GetAttributeDefinitionArgs args) {
         return getAttributeDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Attribute definition.
+     * 
+     */
     public static CompletableFuture<GetAttributeDefinitionResult> getAttributeDefinition(GetAttributeDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getAttributeDefinition", TypeShape.of(GetAttributeDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +97,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetConsentResult> getConsent(GetConsentArgs args) {
         return getConsent(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not specified in the resource name.
+     * 
+     */
     public static CompletableFuture<GetConsentResult> getConsent(GetConsentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getConsent", TypeShape.of(GetConsentResult.class), args, Utilities.withVersion(options));
     }
@@ -95,6 +111,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetConsentArtifactResult> getConsentArtifact(GetConsentArtifactArgs args) {
         return getConsentArtifact(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Consent artifact.
+     * 
+     */
     public static CompletableFuture<GetConsentArtifactResult> getConsentArtifact(GetConsentArtifactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getConsentArtifact", TypeShape.of(GetConsentArtifactResult.class), args, Utilities.withVersion(options));
     }
@@ -105,6 +125,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetConsentStoreResult> getConsentStore(GetConsentStoreArgs args) {
         return getConsentStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified consent store.
+     * 
+     */
     public static CompletableFuture<GetConsentStoreResult> getConsentStore(GetConsentStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getConsentStore", TypeShape.of(GetConsentStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +139,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets any metadata associated with a dataset.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
@@ -125,6 +153,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetAnnotationStoreIamPolicyResult> getDatasetAnnotationStoreIamPolicy(GetDatasetAnnotationStoreIamPolicyArgs args) {
         return getDatasetAnnotationStoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetAnnotationStoreIamPolicyResult> getDatasetAnnotationStoreIamPolicy(GetDatasetAnnotationStoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetAnnotationStoreIamPolicy", TypeShape.of(GetDatasetAnnotationStoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -135,6 +167,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetConsentStoreIamPolicyResult> getDatasetConsentStoreIamPolicy(GetDatasetConsentStoreIamPolicyArgs args) {
         return getDatasetConsentStoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetConsentStoreIamPolicyResult> getDatasetConsentStoreIamPolicy(GetDatasetConsentStoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetConsentStoreIamPolicy", TypeShape.of(GetDatasetConsentStoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -145,6 +181,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetDicomStoreIamPolicyResult> getDatasetDicomStoreIamPolicy(GetDatasetDicomStoreIamPolicyArgs args) {
         return getDatasetDicomStoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetDicomStoreIamPolicyResult> getDatasetDicomStoreIamPolicy(GetDatasetDicomStoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetDicomStoreIamPolicy", TypeShape.of(GetDatasetDicomStoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -155,6 +195,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetFhirStoreIamPolicyResult> getDatasetFhirStoreIamPolicy(GetDatasetFhirStoreIamPolicyArgs args) {
         return getDatasetFhirStoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetFhirStoreIamPolicyResult> getDatasetFhirStoreIamPolicy(GetDatasetFhirStoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetFhirStoreIamPolicy", TypeShape.of(GetDatasetFhirStoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -165,6 +209,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetHl7V2StoreIamPolicyResult> getDatasetHl7V2StoreIamPolicy(GetDatasetHl7V2StoreIamPolicyArgs args) {
         return getDatasetHl7V2StoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetHl7V2StoreIamPolicyResult> getDatasetHl7V2StoreIamPolicy(GetDatasetHl7V2StoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetHl7V2StoreIamPolicy", TypeShape.of(GetDatasetHl7V2StoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -175,6 +223,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDatasetIamPolicyResult> getDatasetIamPolicy(GetDatasetIamPolicyArgs args) {
         return getDatasetIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetIamPolicyResult> getDatasetIamPolicy(GetDatasetIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetIamPolicy", TypeShape.of(GetDatasetIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -185,6 +237,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetDicomStoreResult> getDicomStore(GetDicomStoreArgs args) {
         return getDicomStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified DICOM store.
+     * 
+     */
     public static CompletableFuture<GetDicomStoreResult> getDicomStore(GetDicomStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDicomStore", TypeShape.of(GetDicomStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -195,6 +251,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetFhirResult> getFhir(GetFhirArgs args) {
         return getFhir(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the contents of a FHIR resource. Implements the FHIR standard read interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#read), [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#read), [R4](https://hl7.org/implement/standards/fhir/R4/http.html#read)). Also supports the FHIR standard conditional read interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#cread), [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#cread), [R4](https://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag value. On success, the response body contains a JSON-encoded representation of the resource. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead. For samples that show how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-tos/fhir-resources#getting_a_fhir_resource).
+     * 
+     */
     public static CompletableFuture<GetFhirResult> getFhir(GetFhirArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getFhir", TypeShape.of(GetFhirResult.class), args, Utilities.withVersion(options));
     }
@@ -205,6 +265,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetFhirStoreResult> getFhirStore(GetFhirStoreArgs args) {
         return getFhirStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the configuration of the specified FHIR store.
+     * 
+     */
     public static CompletableFuture<GetFhirStoreResult> getFhirStore(GetFhirStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getFhirStore", TypeShape.of(GetFhirStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -215,6 +279,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetHl7V2StoreResult> getHl7V2Store(GetHl7V2StoreArgs args) {
         return getHl7V2Store(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified HL7v2 store.
+     * 
+     */
     public static CompletableFuture<GetHl7V2StoreResult> getHl7V2Store(GetHl7V2StoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getHl7V2Store", TypeShape.of(GetHl7V2StoreResult.class), args, Utilities.withVersion(options));
     }
@@ -225,6 +293,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetMessageResult> getMessage(GetMessageArgs args) {
         return getMessage(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an HL7v2 message.
+     * 
+     */
     public static CompletableFuture<GetMessageResult> getMessage(GetMessageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getMessage", TypeShape.of(GetMessageResult.class), args, Utilities.withVersion(options));
     }
@@ -235,6 +307,10 @@ public final class Healthcare_v1beta1Functions {
     public static CompletableFuture<GetUserDataMappingResult> getUserDataMapping(GetUserDataMappingArgs args) {
         return getUserDataMapping(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified User data mapping.
+     * 
+     */
     public static CompletableFuture<GetUserDataMappingResult> getUserDataMapping(GetUserDataMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getUserDataMapping", TypeShape.of(GetUserDataMappingResult.class), args, Utilities.withVersion(options));
     }

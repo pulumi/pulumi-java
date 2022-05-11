@@ -21,6 +21,10 @@ public final class ApsFunctions {
     public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args) {
         return getRuleGroupsNamespace(args, InvokeOptions.Empty);
     }
+    /**
+     * RuleGroupsNamespace schema for cloudformation.
+     * 
+     */
     public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class ApsFunctions {
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::APS::Workspace
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }

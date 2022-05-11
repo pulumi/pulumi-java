@@ -20,6 +20,11 @@ public final class AdvisorFunctions {
     public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args) {
         return getSuppression(args, InvokeOptions.Empty);
     }
+    /**
+     * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     * API Version: 2020-01-01.
+     * 
+     */
     public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args, Utilities.withVersion(options));
     }

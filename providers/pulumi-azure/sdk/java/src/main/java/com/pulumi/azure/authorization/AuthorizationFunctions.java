@@ -21,9 +21,17 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition() {
         return getRoleDefinition(GetRoleDefinitionArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Role Definition.
+     * 
+     */
     public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
         return getRoleDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Role Definition.
+     * 
+     */
     public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:authorization/getRoleDefinition:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -62,6 +70,38 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
         return getUserAssignedIdentity(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing User Assigned Identity.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AuthorizationFunctions.getUserAssignedIdentity(GetUserAssignedIdentityArgs.builder()
+     *             .name(&#34;name_of_user_assigned_identity&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;uaiClientId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getClientId()));
+     *         ctx.export(&#34;uaiPrincipalId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getPrincipalId()));
+     *         ctx.export(&#34;uaiTenantId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getTenantId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:authorization/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }

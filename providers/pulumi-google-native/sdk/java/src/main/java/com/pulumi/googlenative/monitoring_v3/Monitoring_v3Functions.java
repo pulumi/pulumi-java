@@ -31,6 +31,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args) {
         return getAlertPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single alerting policy.
+     * 
+     */
     public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +45,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single group.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -51,6 +59,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetMetricDescriptorResult> getMetricDescriptor(GetMetricDescriptorArgs args) {
         return getMetricDescriptor(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single metric descriptor.
+     * 
+     */
     public static CompletableFuture<GetMetricDescriptorResult> getMetricDescriptor(GetMetricDescriptorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getMetricDescriptor", TypeShape.of(GetMetricDescriptorResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +73,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single notification channel. The channel includes the relevant configuration details with which the channel was created. However, the response may truncate or omit passwords, API keys, or other private key matter and thus the response may not be 100% identical to the information that was supplied in the call to the create method.
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +87,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the named Service.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +101,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetServiceLevelObjectiveResult> getServiceLevelObjective(GetServiceLevelObjectiveArgs args) {
         return getServiceLevelObjective(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a ServiceLevelObjective by name.
+     * 
+     */
     public static CompletableFuture<GetServiceLevelObjectiveResult> getServiceLevelObjective(GetServiceLevelObjectiveArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getServiceLevelObjective", TypeShape.of(GetServiceLevelObjectiveResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +115,10 @@ public final class Monitoring_v3Functions {
     public static CompletableFuture<GetUptimeCheckConfigResult> getUptimeCheckConfig(GetUptimeCheckConfigArgs args) {
         return getUptimeCheckConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single Uptime check configuration.
+     * 
+     */
     public static CompletableFuture<GetUptimeCheckConfigResult> getUptimeCheckConfig(GetUptimeCheckConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getUptimeCheckConfig", TypeShape.of(GetUptimeCheckConfigResult.class), args, Utilities.withVersion(options));
     }

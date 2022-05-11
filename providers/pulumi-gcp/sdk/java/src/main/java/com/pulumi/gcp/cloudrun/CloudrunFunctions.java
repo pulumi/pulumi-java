@@ -48,9 +48,71 @@ public final class CloudrunFunctions {
     public static CompletableFuture<GetLocationsResult> getLocations() {
         return getLocations(GetLocationsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get Cloud Run locations available for a project.
+     * 
+     * To get more information about Cloud Run, see:
+     * 
+     * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations)
+     * * How-to Guides
+     *     * [Official Documentation](https://cloud.google.com/run/docs/)
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(CloudrunFunctions.getLocations());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args) {
         return getLocations(args, InvokeOptions.Empty);
     }
+    /**
+     * Get Cloud Run locations available for a project.
+     * 
+     * To get more information about Cloud Run, see:
+     * 
+     * * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations)
+     * * How-to Guides
+     *     * [Official Documentation](https://cloud.google.com/run/docs/)
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(CloudrunFunctions.getLocations());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +149,36 @@ public final class CloudrunFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Cloud Run Service. For more information see
+     * the [official documentation](https://cloud.google.com/run/docs/)
+     * and [API](https://cloud.google.com/run/docs/apis).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(CloudrunFunctions.getService(GetServiceArgs.builder()
+     *             .location(&#34;us-central1&#34;)
+     *             .name(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }

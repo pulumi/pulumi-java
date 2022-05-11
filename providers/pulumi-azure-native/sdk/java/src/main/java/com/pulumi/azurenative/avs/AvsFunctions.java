@@ -56,6 +56,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
         return getAddon(args, InvokeOptions.Empty);
     }
+    /**
+     * An addon resource
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +72,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetAuthorizationResult> getAuthorization(GetAuthorizationArgs args) {
         return getAuthorization(args, InvokeOptions.Empty);
     }
+    /**
+     * ExpressRoute Circuit Authorization
+     * API Version: 2020-03-20.
+     * 
+     */
     public static CompletableFuture<GetAuthorizationResult> getAuthorization(GetAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAuthorization", TypeShape.of(GetAuthorizationResult.class), args, Utilities.withVersion(options));
     }
@@ -78,6 +88,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetCloudLinkResult> getCloudLink(GetCloudLinkArgs args) {
         return getCloudLink(args, InvokeOptions.Empty);
     }
+    /**
+     * A cloud link resource
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetCloudLinkResult> getCloudLink(GetCloudLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getCloudLink", TypeShape.of(GetCloudLinkResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +104,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * A cluster resource
+     * API Version: 2020-03-20.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -100,6 +120,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args) {
         return getDatastore(args, InvokeOptions.Empty);
     }
+    /**
+     * A datastore resource
+     * API Version: 2021-01-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
     }
@@ -111,6 +136,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(GetGlobalReachConnectionArgs args) {
         return getGlobalReachConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A global reach connection resource
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(GetGlobalReachConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getGlobalReachConnection", TypeShape.of(GetGlobalReachConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -122,6 +152,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(GetHcxEnterpriseSiteArgs args) {
         return getHcxEnterpriseSite(args, InvokeOptions.Empty);
     }
+    /**
+     * An HCX Enterprise Site resource
+     * API Version: 2020-03-20.
+     * 
+     */
     public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(GetHcxEnterpriseSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getHcxEnterpriseSite", TypeShape.of(GetHcxEnterpriseSiteResult.class), args, Utilities.withVersion(options));
     }
@@ -133,6 +168,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(GetPlacementPolicyArgs args) {
         return getPlacementPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A vSphere Distributed Resource Scheduler (DRS) placement policy
+     * API Version: 2021-12-01.
+     * 
+     */
     public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(GetPlacementPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPlacementPolicy", TypeShape.of(GetPlacementPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -144,6 +184,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(GetPrivateCloudArgs args) {
         return getPrivateCloud(args, InvokeOptions.Empty);
     }
+    /**
+     * A private cloud resource
+     * API Version: 2020-03-20.
+     * 
+     */
     public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(GetPrivateCloudArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPrivateCloud", TypeShape.of(GetPrivateCloudResult.class), args, Utilities.withVersion(options));
     }
@@ -155,6 +200,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(GetScriptExecutionArgs args) {
         return getScriptExecution(args, InvokeOptions.Empty);
     }
+    /**
+     * An instance of a script executed by a user - custom or AVS
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(GetScriptExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getScriptExecution", TypeShape.of(GetScriptExecutionResult.class), args, Utilities.withVersion(options));
     }
@@ -166,6 +216,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(GetScriptExecutionLogsArgs args) {
         return getScriptExecutionLogs(args, InvokeOptions.Empty);
     }
+    /**
+     * An instance of a script executed by a user - custom or AVS
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(GetScriptExecutionLogsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getScriptExecutionLogs", TypeShape.of(GetScriptExecutionLogsResult.class), args, Utilities.withVersion(options));
     }
@@ -177,6 +232,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(GetWorkloadNetworkDhcpArgs args) {
         return getWorkloadNetworkDhcp(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX DHCP
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(GetWorkloadNetworkDhcpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDhcp", TypeShape.of(GetWorkloadNetworkDhcpResult.class), args, Utilities.withVersion(options));
     }
@@ -188,6 +248,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(GetWorkloadNetworkDnsServiceArgs args) {
         return getWorkloadNetworkDnsService(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX DNS Service
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(GetWorkloadNetworkDnsServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsService", TypeShape.of(GetWorkloadNetworkDnsServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -199,6 +264,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(GetWorkloadNetworkDnsZoneArgs args) {
         return getWorkloadNetworkDnsZone(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX DNS Zone
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(GetWorkloadNetworkDnsZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsZone", TypeShape.of(GetWorkloadNetworkDnsZoneResult.class), args, Utilities.withVersion(options));
     }
@@ -210,6 +280,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(GetWorkloadNetworkPortMirroringArgs args) {
         return getWorkloadNetworkPortMirroring(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX Port Mirroring
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(GetWorkloadNetworkPortMirroringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkPortMirroring", TypeShape.of(GetWorkloadNetworkPortMirroringResult.class), args, Utilities.withVersion(options));
     }
@@ -221,6 +296,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(GetWorkloadNetworkPublicIPArgs args) {
         return getWorkloadNetworkPublicIP(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX Public IP Block
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(GetWorkloadNetworkPublicIPArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkPublicIP", TypeShape.of(GetWorkloadNetworkPublicIPResult.class), args, Utilities.withVersion(options));
     }
@@ -232,6 +312,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(GetWorkloadNetworkSegmentArgs args) {
         return getWorkloadNetworkSegment(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX Segment
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(GetWorkloadNetworkSegmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkSegment", TypeShape.of(GetWorkloadNetworkSegmentResult.class), args, Utilities.withVersion(options));
     }
@@ -243,6 +328,11 @@ public final class AvsFunctions {
     public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(GetWorkloadNetworkVMGroupArgs args) {
         return getWorkloadNetworkVMGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * NSX VM Group
+     * API Version: 2020-07-17-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(GetWorkloadNetworkVMGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkVMGroup", TypeShape.of(GetWorkloadNetworkVMGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -254,6 +344,11 @@ public final class AvsFunctions {
     public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(ListPrivateCloudAdminCredentialsArgs args) {
         return listPrivateCloudAdminCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * Administrative credentials for accessing vCenter and NSX-T
+     * API Version: 2020-03-20.
+     * 
+     */
     public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(ListPrivateCloudAdminCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:listPrivateCloudAdminCredentials", TypeShape.of(ListPrivateCloudAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }

@@ -21,6 +21,10 @@ public final class Run_v2Functions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about a Service.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v2:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Run_v2Functions {
     public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
         return getServiceIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This result does not include any inherited policies.
+     * 
+     */
     public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v2:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }

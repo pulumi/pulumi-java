@@ -24,6 +24,11 @@ public final class DelegatednetworkFunctions {
     public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(GetControllerDetailsArgs args) {
         return getControllerDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of a DNC controller.
+     * API Version: 2021-03-15.
+     * 
+     */
     public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(GetControllerDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getControllerDetails", TypeShape.of(GetControllerDetailsResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class DelegatednetworkFunctions {
     public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(GetDelegatedSubnetServiceDetailsArgs args) {
         return getDelegatedSubnetServiceDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of a orchestrator.
+     * API Version: 2021-03-15.
+     * 
+     */
     public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(GetDelegatedSubnetServiceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getDelegatedSubnetServiceDetails", TypeShape.of(GetDelegatedSubnetServiceDetailsResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class DelegatednetworkFunctions {
     public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(GetOrchestratorInstanceServiceDetailsArgs args) {
         return getOrchestratorInstanceServiceDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of a orchestrator.
+     * API Version: 2021-03-15.
+     * 
+     */
     public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(GetOrchestratorInstanceServiceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getOrchestratorInstanceServiceDetails", TypeShape.of(GetOrchestratorInstanceServiceDetailsResult.class), args, Utilities.withVersion(options));
     }

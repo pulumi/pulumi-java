@@ -20,6 +20,11 @@ public final class QuantumFunctions {
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource proxy definition object for quantum workspace.
+     * API Version: 2019-11-04-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:quantum:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }

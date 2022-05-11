@@ -27,6 +27,10 @@ public final class MediapackageFunctions {
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args) {
         return getAsset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaPackage::Asset
+     * 
+     */
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getAsset", TypeShape.of(GetAssetResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class MediapackageFunctions {
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaPackage::Channel
+     * 
+     */
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class MediapackageFunctions {
     public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(GetOriginEndpointArgs args) {
         return getOriginEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaPackage::OriginEndpoint
+     * 
+     */
     public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(GetOriginEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getOriginEndpoint", TypeShape.of(GetOriginEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class MediapackageFunctions {
     public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(GetPackagingConfigurationArgs args) {
         return getPackagingConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaPackage::PackagingConfiguration
+     * 
+     */
     public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(GetPackagingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingConfiguration", TypeShape.of(GetPackagingConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class MediapackageFunctions {
     public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(GetPackagingGroupArgs args) {
         return getPackagingGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaPackage::PackagingGroup
+     * 
+     */
     public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(GetPackagingGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingGroup", TypeShape.of(GetPackagingGroupResult.class), args, Utilities.withVersion(options));
     }

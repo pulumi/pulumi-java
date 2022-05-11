@@ -32,6 +32,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * A Stream Analytics Cluster object
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +48,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
+    /**
+     * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
@@ -54,6 +64,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetInputResult> getInput(GetInputArgs args) {
         return getInput(args, InvokeOptions.Empty);
     }
+    /**
+     * An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetInputResult> getInput(GetInputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getInput", TypeShape.of(GetInputResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +80,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetOutputResult> getOutput(GetOutputArgs args) {
         return getOutput(args, InvokeOptions.Empty);
     }
+    /**
+     * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetOutputResult> getOutput(GetOutputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getOutput", TypeShape.of(GetOutputResult.class), args, Utilities.withVersion(options));
     }
@@ -76,6 +96,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args) {
         return getPrivateEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Complete information about the private endpoint.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +112,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetStreamingJobResult> getStreamingJob(GetStreamingJobArgs args) {
         return getStreamingJob(args, InvokeOptions.Empty);
     }
+    /**
+     * A streaming job object, containing all information associated with the named streaming job.
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetStreamingJobResult> getStreamingJob(GetStreamingJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getStreamingJob", TypeShape.of(GetStreamingJobResult.class), args, Utilities.withVersion(options));
     }
@@ -98,6 +128,11 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(ListClusterStreamingJobsArgs args) {
         return listClusterStreamingJobs(args, InvokeOptions.Empty);
     }
+    /**
+     * A list of streaming jobs. Populated by a List operation.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(ListClusterStreamingJobsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:listClusterStreamingJobs", TypeShape.of(ListClusterStreamingJobsResult.class), args, Utilities.withVersion(options));
     }

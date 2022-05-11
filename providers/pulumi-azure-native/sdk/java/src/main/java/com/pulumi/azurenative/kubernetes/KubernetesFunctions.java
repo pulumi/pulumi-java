@@ -24,6 +24,11 @@ public final class KubernetesFunctions {
     public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(GetConnectedClusterArgs args) {
         return getConnectedCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a connected cluster.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(GetConnectedClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:getConnectedCluster", TypeShape.of(GetConnectedClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class KubernetesFunctions {
     public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(ListConnectedClusterUserCredentialArgs args) {
         return listConnectedClusterUserCredential(args, InvokeOptions.Empty);
     }
+    /**
+     * The list of credential result response.
+     * API Version: 2021-10-01.
+     * 
+     */
     public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(ListConnectedClusterUserCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:listConnectedClusterUserCredential", TypeShape.of(ListConnectedClusterUserCredentialResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class KubernetesFunctions {
     public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(ListConnectedClusterUserCredentialsArgs args) {
         return listConnectedClusterUserCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * The list of credential result response.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(ListConnectedClusterUserCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:listConnectedClusterUserCredentials", TypeShape.of(ListConnectedClusterUserCredentialsResult.class), args, Utilities.withVersion(options));
     }

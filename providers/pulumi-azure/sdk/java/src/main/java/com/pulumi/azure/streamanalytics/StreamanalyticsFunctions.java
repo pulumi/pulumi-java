@@ -44,6 +44,35 @@ public final class StreamanalyticsFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Stream Analytics Job.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(StreamanalyticsFunctions.getJob(GetJobArgs.builder()
+     *             .name(&#34;example-job&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;jobId&#34;, example.apply(getJobResult -&gt; getJobResult.getJobId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:streamanalytics/getJob:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }

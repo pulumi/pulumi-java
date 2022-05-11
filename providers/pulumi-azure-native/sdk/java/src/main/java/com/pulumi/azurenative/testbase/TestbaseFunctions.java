@@ -34,6 +34,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(GetCustomerEventArgs args) {
         return getCustomerEvent(args, InvokeOptions.Empty);
     }
+    /**
+     * The Customer Notification Event resource.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(GetCustomerEventArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getCustomerEvent", TypeShape.of(GetCustomerEventResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +50,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(GetFavoriteProcessArgs args) {
         return getFavoriteProcess(args, InvokeOptions.Empty);
     }
+    /**
+     * A favorite process identifier.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(GetFavoriteProcessArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getFavoriteProcess", TypeShape.of(GetFavoriteProcessResult.class), args, Utilities.withVersion(options));
     }
@@ -56,6 +66,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args) {
         return getPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * The Test Base Package resource.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +82,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(GetPackageDownloadURLArgs args) {
         return getPackageDownloadURL(args, InvokeOptions.Empty);
     }
+    /**
+     * The response of getting a download URL.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(GetPackageDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackageDownloadURL", TypeShape.of(GetPackageDownloadURLResult.class), args, Utilities.withVersion(options));
     }
@@ -78,6 +98,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(GetTestBaseAccountArgs args) {
         return getTestBaseAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * The Test Base Account resource.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(GetTestBaseAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccount", TypeShape.of(GetTestBaseAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +114,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(GetTestBaseAccountFileUploadUrlArgs args) {
         return getTestBaseAccountFileUploadUrl(args, InvokeOptions.Empty);
     }
+    /**
+     * The URL response
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(GetTestBaseAccountFileUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccountFileUploadUrl", TypeShape.of(GetTestBaseAccountFileUploadUrlResult.class), args, Utilities.withVersion(options));
     }
@@ -100,6 +130,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(GetTestResultDownloadURLArgs args) {
         return getTestResultDownloadURL(args, InvokeOptions.Empty);
     }
+    /**
+     * The response of getting a download URL.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(GetTestResultDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultDownloadURL", TypeShape.of(GetTestResultDownloadURLResult.class), args, Utilities.withVersion(options));
     }
@@ -111,6 +146,11 @@ public final class TestbaseFunctions {
     public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(GetTestResultVideoDownloadURLArgs args) {
         return getTestResultVideoDownloadURL(args, InvokeOptions.Empty);
     }
+    /**
+     * The response of getting a download URL.
+     * API Version: 2020-12-16-preview.
+     * 
+     */
     public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(GetTestResultVideoDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultVideoDownloadURL", TypeShape.of(GetTestResultVideoDownloadURLResult.class), args, Utilities.withVersion(options));
     }
