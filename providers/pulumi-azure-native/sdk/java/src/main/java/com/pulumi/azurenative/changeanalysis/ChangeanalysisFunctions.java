@@ -20,6 +20,11 @@ public final class ChangeanalysisFunctions {
     public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(GetConfigurationProfileArgs args) {
         return getConfigurationProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * A profile object that contains change analysis configuration, such as notification settings, for this subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     */
     public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(GetConfigurationProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:changeanalysis:getConfigurationProfile", TypeShape.of(GetConfigurationProfileResult.class), args, Utilities.withVersion(options));
     }

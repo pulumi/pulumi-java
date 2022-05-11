@@ -59,6 +59,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsCategoriesListResult> getLogAnalyticsCategoriesList(GetLogAnalyticsCategoriesListArgs args) {
         return getLogAnalyticsCategoriesList(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about Categories in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Returns a list of categories, containing detailed information about them. You may limit the number of results, provide sorting order, and filter by information such as category name or description.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsCategoriesListResult> getLogAnalyticsCategoriesList(GetLogAnalyticsCategoriesListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsCategoriesList:getLogAnalyticsCategoriesList", TypeShape.of(GetLogAnalyticsCategoriesListResult.class), args, Utilities.withVersion(options));
     }
@@ -73,6 +81,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsCategoryResult> getLogAnalyticsCategory(GetLogAnalyticsCategoryArgs args) {
         return getLogAnalyticsCategory(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Category resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Gets detailed information about the category with the specified name.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsCategoryResult> getLogAnalyticsCategory(GetLogAnalyticsCategoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsCategory:getLogAnalyticsCategory", TypeShape.of(GetLogAnalyticsCategoryResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +103,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsEntitiesResult> getLogAnalyticsEntities(GetLogAnalyticsEntitiesArgs args) {
         return getLogAnalyticsEntities(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Log Analytics Entities in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Return a list of log analytics entities.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsEntitiesResult> getLogAnalyticsEntities(GetLogAnalyticsEntitiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsEntities:getLogAnalyticsEntities", TypeShape.of(GetLogAnalyticsEntitiesResult.class), args, Utilities.withVersion(options));
     }
@@ -101,6 +125,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsEntitiesSummaryResult> getLogAnalyticsEntitiesSummary(GetLogAnalyticsEntitiesSummaryArgs args) {
         return getLogAnalyticsEntitiesSummary(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Entities Summary resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Returns log analytics entities count summary report.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsEntitiesSummaryResult> getLogAnalyticsEntitiesSummary(GetLogAnalyticsEntitiesSummaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsEntitiesSummary:getLogAnalyticsEntitiesSummary", TypeShape.of(GetLogAnalyticsEntitiesSummaryResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +147,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsEntityResult> getLogAnalyticsEntity(GetLogAnalyticsEntityArgs args) {
         return getLogAnalyticsEntity(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Entity resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Retrieve the log analytics entity with the given id.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsEntityResult> getLogAnalyticsEntity(GetLogAnalyticsEntityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsEntity:getLogAnalyticsEntity", TypeShape.of(GetLogAnalyticsEntityResult.class), args, Utilities.withVersion(options));
     }
@@ -129,6 +169,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsEntityTopologyResult> getLogAnalyticsEntityTopology(GetLogAnalyticsEntityTopologyArgs args) {
         return getLogAnalyticsEntityTopology(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Entity Topology resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Return a log analytics entity topology collection that contains a set of log analytics entities and a set of relationships between those, for the input source entity.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsEntityTopologyResult> getLogAnalyticsEntityTopology(GetLogAnalyticsEntityTopologyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsEntityTopology:getLogAnalyticsEntityTopology", TypeShape.of(GetLogAnalyticsEntityTopologyResult.class), args, Utilities.withVersion(options));
     }
@@ -143,6 +191,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsLogGroupResult> getLogAnalyticsLogGroup(GetLogAnalyticsLogGroupArgs args) {
         return getLogAnalyticsLogGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Log Group resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Gets detailed information about the specified log group such as display name, description, defined tags, and free-form tags.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsLogGroupResult> getLogAnalyticsLogGroup(GetLogAnalyticsLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsLogGroup:getLogAnalyticsLogGroup", TypeShape.of(GetLogAnalyticsLogGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -157,6 +213,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsLogGroupsResult> getLogAnalyticsLogGroups(GetLogAnalyticsLogGroupsArgs args) {
         return getLogAnalyticsLogGroups(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Log Analytics Log Groups in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Returns a list of log groups in a compartment. You may limit the number of log groups, provide sorting options, and filter the results by specifying a display name.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsLogGroupsResult> getLogAnalyticsLogGroups(GetLogAnalyticsLogGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsLogGroups:getLogAnalyticsLogGroups", TypeShape.of(GetLogAnalyticsLogGroupsResult.class), args, Utilities.withVersion(options));
     }
@@ -171,6 +235,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsLogGroupsSummaryResult> getLogAnalyticsLogGroupsSummary(GetLogAnalyticsLogGroupsSummaryArgs args) {
         return getLogAnalyticsLogGroupsSummary(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Log Groups Summary resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Returns the count of log groups in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsLogGroupsSummaryResult> getLogAnalyticsLogGroupsSummary(GetLogAnalyticsLogGroupsSummaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsLogGroupsSummary:getLogAnalyticsLogGroupsSummary", TypeShape.of(GetLogAnalyticsLogGroupsSummaryResult.class), args, Utilities.withVersion(options));
     }
@@ -185,6 +257,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsObjectCollectionRuleResult> getLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleArgs args) {
         return getLogAnalyticsObjectCollectionRule(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Object Collection Rule resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Gets a configured object storage based collection rule by given id
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsObjectCollectionRuleResult> getLogAnalyticsObjectCollectionRule(GetLogAnalyticsObjectCollectionRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsObjectCollectionRule:getLogAnalyticsObjectCollectionRule", TypeShape.of(GetLogAnalyticsObjectCollectionRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -199,6 +279,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsObjectCollectionRulesResult> getLogAnalyticsObjectCollectionRules(GetLogAnalyticsObjectCollectionRulesArgs args) {
         return getLogAnalyticsObjectCollectionRules(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Log Analytics Object Collection Rules in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Gets list of configuration details of Object Storage based collection rules.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsObjectCollectionRulesResult> getLogAnalyticsObjectCollectionRules(GetLogAnalyticsObjectCollectionRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsObjectCollectionRules:getLogAnalyticsObjectCollectionRules", TypeShape.of(GetLogAnalyticsObjectCollectionRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -213,6 +301,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsPreferenceResult> getLogAnalyticsPreference(GetLogAnalyticsPreferenceArgs args) {
         return getLogAnalyticsPreference(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Preference resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Lists the preferences of the tenant. Currently, only &#34;DEFAULT_HOMEPAGE&#34; is supported.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsPreferenceResult> getLogAnalyticsPreference(GetLogAnalyticsPreferenceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsPreference:getLogAnalyticsPreference", TypeShape.of(GetLogAnalyticsPreferenceResult.class), args, Utilities.withVersion(options));
     }
@@ -227,6 +323,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsResourceCategoriesListResult> getLogAnalyticsResourceCategoriesList(GetLogAnalyticsResourceCategoriesListArgs args) {
         return getLogAnalyticsResourceCategoriesList(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about Resource Categories in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Returns a list of resources and their category assignments.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsResourceCategoriesListResult> getLogAnalyticsResourceCategoriesList(GetLogAnalyticsResourceCategoriesListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsResourceCategoriesList:getLogAnalyticsResourceCategoriesList", TypeShape.of(GetLogAnalyticsResourceCategoriesListResult.class), args, Utilities.withVersion(options));
     }
@@ -241,6 +345,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogAnalyticsUnprocessedDataBucketResult> getLogAnalyticsUnprocessedDataBucket(GetLogAnalyticsUnprocessedDataBucketArgs args) {
         return getLogAnalyticsUnprocessedDataBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Analytics Unprocessed Data Bucket resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * This API retrieves details of the configured bucket that stores unprocessed payloads.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogAnalyticsUnprocessedDataBucketResult> getLogAnalyticsUnprocessedDataBucket(GetLogAnalyticsUnprocessedDataBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogAnalyticsUnprocessedDataBucket:getLogAnalyticsUnprocessedDataBucket", TypeShape.of(GetLogAnalyticsUnprocessedDataBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -255,6 +367,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetLogSetsCountResult> getLogSetsCount(GetLogSetsCountArgs args) {
         return getLogSetsCount(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Log Sets Count resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * This API returns the count of distinct log sets.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLogSetsCountResult> getLogSetsCount(GetLogSetsCountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getLogSetsCount:getLogSetsCount", TypeShape.of(GetLogSetsCountResult.class), args, Utilities.withVersion(options));
     }
@@ -269,6 +389,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Namespace resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * This API gets the namespace details of a tenancy already onboarded in Logging Analytics Application
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
@@ -283,6 +411,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetNamespaceScheduledTaskResult> getNamespaceScheduledTask(GetNamespaceScheduledTaskArgs args) {
         return getNamespaceScheduledTask(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Namespace Scheduled Task resource in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Get the scheduled task for the specified task identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespaceScheduledTaskResult> getNamespaceScheduledTask(GetNamespaceScheduledTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getNamespaceScheduledTask:getNamespaceScheduledTask", TypeShape.of(GetNamespaceScheduledTaskResult.class), args, Utilities.withVersion(options));
     }
@@ -297,6 +433,14 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetNamespaceScheduledTasksResult> getNamespaceScheduledTasks(GetNamespaceScheduledTasksArgs args) {
         return getNamespaceScheduledTasks(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Namespace Scheduled Tasks in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Lists scheduled tasks.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespaceScheduledTasksResult> getNamespaceScheduledTasks(GetNamespaceScheduledTasksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getNamespaceScheduledTasks:getNamespaceScheduledTasks", TypeShape.of(GetNamespaceScheduledTasksResult.class), args, Utilities.withVersion(options));
     }
@@ -312,6 +456,15 @@ public final class LogAnalyticsFunctions {
     public static CompletableFuture<GetNamespacesResult> getNamespaces(GetNamespacesArgs args) {
         return getNamespaces(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Namespaces in Oracle Cloud Infrastructure Log Analytics service.
+     * 
+     * Given a tenancy OCID, this API returns the namespace of the tenancy if it is valid and subscribed to the region.  The
+     * result also indicates if the tenancy is onboarded with Logging Analytics.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNamespacesResult> getNamespaces(GetNamespacesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:LogAnalytics/getNamespaces:getNamespaces", TypeShape.of(GetNamespacesResult.class), args, Utilities.withVersion(options));
     }

@@ -35,6 +35,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns metadata for the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +49,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetBucketAccessControlResult> getBucketAccessControl(GetBucketAccessControlArgs args) {
         return getBucketAccessControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the ACL entry for the specified entity on the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetBucketAccessControlResult> getBucketAccessControl(GetBucketAccessControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketAccessControl", TypeShape.of(GetBucketAccessControlResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +63,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetBucketIamPolicyResult> getBucketIamPolicy(GetBucketIamPolicyArgs args) {
         return getBucketIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns an IAM policy for the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetBucketIamPolicyResult> getBucketIamPolicy(GetBucketIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketIamPolicy", TypeShape.of(GetBucketIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +77,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
         return getBucketObject(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves an object or its metadata.
+     * 
+     */
     public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
@@ -75,6 +91,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetDefaultObjectAccessControlResult> getDefaultObjectAccessControl(GetDefaultObjectAccessControlArgs args) {
         return getDefaultObjectAccessControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the default object ACL entry for the specified entity on the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetDefaultObjectAccessControlResult> getDefaultObjectAccessControl(GetDefaultObjectAccessControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getDefaultObjectAccessControl", TypeShape.of(GetDefaultObjectAccessControlResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +105,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetHmacKeyResult> getHmacKey(GetHmacKeyArgs args) {
         return getHmacKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves an HMAC key&#39;s metadata
+     * 
+     */
     public static CompletableFuture<GetHmacKeyResult> getHmacKey(GetHmacKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getHmacKey", TypeShape.of(GetHmacKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -95,6 +119,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetNotificationResult> getNotification(GetNotificationArgs args) {
         return getNotification(args, InvokeOptions.Empty);
     }
+    /**
+     * View a notification configuration.
+     * 
+     */
     public static CompletableFuture<GetNotificationResult> getNotification(GetNotificationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getNotification", TypeShape.of(GetNotificationResult.class), args, Utilities.withVersion(options));
     }
@@ -105,6 +133,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetObjectAccessControlResult> getObjectAccessControl(GetObjectAccessControlArgs args) {
         return getObjectAccessControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the ACL entry for the specified entity on the specified object.
+     * 
+     */
     public static CompletableFuture<GetObjectAccessControlResult> getObjectAccessControl(GetObjectAccessControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getObjectAccessControl", TypeShape.of(GetObjectAccessControlResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +147,10 @@ public final class Storage_v1Functions {
     public static CompletableFuture<GetObjectIamPolicyResult> getObjectIamPolicy(GetObjectIamPolicyArgs args) {
         return getObjectIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns an IAM policy for the specified object.
+     * 
+     */
     public static CompletableFuture<GetObjectIamPolicyResult> getObjectIamPolicy(GetObjectIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getObjectIamPolicy", TypeShape.of(GetObjectIamPolicyResult.class), args, Utilities.withVersion(options));
     }

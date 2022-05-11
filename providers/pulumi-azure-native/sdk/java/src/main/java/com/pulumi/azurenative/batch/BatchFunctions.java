@@ -30,6 +30,11 @@ public final class BatchFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains information about an application in a Batch account.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +46,11 @@ public final class BatchFunctions {
     public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(GetApplicationPackageArgs args) {
         return getApplicationPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * An application package which represents a particular version of an application.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(GetApplicationPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getApplicationPackage", TypeShape.of(GetApplicationPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -52,6 +62,11 @@ public final class BatchFunctions {
     public static CompletableFuture<GetBatchAccountResult> getBatchAccount(GetBatchAccountArgs args) {
         return getBatchAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains information about an Azure Batch account.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetBatchAccountResult> getBatchAccount(GetBatchAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getBatchAccount", TypeShape.of(GetBatchAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -63,6 +78,11 @@ public final class BatchFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains information about a certificate.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -74,6 +94,11 @@ public final class BatchFunctions {
     public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
         return getPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains information about a pool.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +110,11 @@ public final class BatchFunctions {
     public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(ListBatchAccountKeysArgs args) {
         return listBatchAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * A set of Azure Batch account keys.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(ListBatchAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:listBatchAccountKeys", TypeShape.of(ListBatchAccountKeysResult.class), args, Utilities.withVersion(options));
     }

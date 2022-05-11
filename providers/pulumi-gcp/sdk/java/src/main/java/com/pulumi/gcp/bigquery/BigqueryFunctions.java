@@ -54,9 +54,87 @@ public final class BigqueryFunctions {
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
         return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get the email address of a project&#39;s unique BigQuery service account.
+     * 
+     * Each Google Cloud project has a unique service account used by BigQuery. When using
+     * BigQuery with [customer-managed encryption keys](https://cloud.google.com/bigquery/docs/customer-managed-encryption),
+     * this account needs to be granted the
+     * `cloudkms.cryptoKeyEncrypterDecrypter` IAM role on the customer-managed Cloud KMS key used to protect the data.
+     * 
+     * For more information see
+     * [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bqSa = Output.of(BigqueryFunctions.getDefaultServiceAccount());
+     * 
+     *         var keySaUser = new CryptoKeyIAMMember(&#34;keySaUser&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getKey().getId())
+     *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, bqSa.apply(getDefaultServiceAccountResult -&gt; getDefaultServiceAccountResult.getEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
         return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the email address of a project&#39;s unique BigQuery service account.
+     * 
+     * Each Google Cloud project has a unique service account used by BigQuery. When using
+     * BigQuery with [customer-managed encryption keys](https://cloud.google.com/bigquery/docs/customer-managed-encryption),
+     * this account needs to be granted the
+     * `cloudkms.cryptoKeyEncrypterDecrypter` IAM role on the customer-managed Cloud KMS key used to protect the data.
+     * 
+     * For more information see
+     * [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bqSa = Output.of(BigqueryFunctions.getDefaultServiceAccount());
+     * 
+     *         var keySaUser = new CryptoKeyIAMMember(&#34;keySaUser&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getKey().getId())
+     *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, bqSa.apply(getDefaultServiceAccountResult -&gt; getDefaultServiceAccountResult.getEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:bigquery/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }

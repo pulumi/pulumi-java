@@ -21,6 +21,10 @@ public final class Domains_v1Functions {
     public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args) {
         return getRegistration(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a `Registration` resource.
+     * 
+     */
     public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:domains/v1:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Domains_v1Functions {
     public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(GetRegistrationIamPolicyArgs args) {
         return getRegistrationIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(GetRegistrationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:domains/v1:getRegistrationIamPolicy", TypeShape.of(GetRegistrationIamPolicyResult.class), args, Utilities.withVersion(options));
     }

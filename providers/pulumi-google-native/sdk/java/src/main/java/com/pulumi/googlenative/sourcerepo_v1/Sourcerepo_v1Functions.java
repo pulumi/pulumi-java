@@ -21,6 +21,10 @@ public final class Sourcerepo_v1Functions {
     public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args) {
         return getRepo(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns information about a repo.
+     * 
+     */
     public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Sourcerepo_v1Functions {
     public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args) {
         return getRepoIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepoIamPolicy", TypeShape.of(GetRepoIamPolicyResult.class), args, Utilities.withVersion(options));
     }

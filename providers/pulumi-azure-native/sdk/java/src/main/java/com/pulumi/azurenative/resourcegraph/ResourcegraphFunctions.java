@@ -20,6 +20,11 @@ public final class ResourcegraphFunctions {
     public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args) {
         return getGraphQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * Graph Query entity definition.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourcegraph:getGraphQuery", TypeShape.of(GetGraphQueryResult.class), args, Utilities.withVersion(options));
     }

@@ -23,6 +23,10 @@ public final class Retail_v2betaFunctions {
     public static CompletableFuture<GetControlResult> getControl(GetControlArgs args) {
         return getControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a Control.
+     * 
+     */
     public static CompletableFuture<GetControlResult> getControl(GetControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2beta:getControl", TypeShape.of(GetControlResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Retail_v2betaFunctions {
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a Product.
+     * 
+     */
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2beta:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Retail_v2betaFunctions {
     public static CompletableFuture<GetServingConfigResult> getServingConfig(GetServingConfigArgs args) {
         return getServingConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+     * 
+     */
     public static CompletableFuture<GetServingConfigResult> getServingConfig(GetServingConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2beta:getServingConfig", TypeShape.of(GetServingConfigResult.class), args, Utilities.withVersion(options));
     }

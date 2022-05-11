@@ -43,6 +43,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args) {
         return getAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified agent.
+     * 
+     */
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getAgent", TypeShape.of(GetAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -53,6 +57,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args) {
         return getEntityType(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified entity type.
+     * 
+     */
     public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getEntityType", TypeShape.of(GetEntityTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -63,6 +71,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified Environment.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -73,6 +85,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
         return getExperiment(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified Experiment.
+     * 
+     */
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +99,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args) {
         return getFlow(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified flow.
+     * 
+     */
     public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +113,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args) {
         return getIntent(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified intent.
+     * 
+     */
     public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getIntent", TypeShape.of(GetIntentResult.class), args, Utilities.withVersion(options));
     }
@@ -103,6 +127,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetPageResult> getPage(GetPageArgs args) {
         return getPage(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified page.
+     * 
+     */
     public static CompletableFuture<GetPageResult> getPage(GetPageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getPage", TypeShape.of(GetPageResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +141,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(GetSecuritySettingArgs args) {
         return getSecuritySetting(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
+     * 
+     */
     public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(GetSecuritySettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getSecuritySetting", TypeShape.of(GetSecuritySettingResult.class), args, Utilities.withVersion(options));
     }
@@ -123,6 +155,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args) {
         return getSessionEntityType(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified session entity type.
+     * 
+     */
     public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getSessionEntityType", TypeShape.of(GetSessionEntityTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -133,6 +169,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetTestCaseResult> getTestCase(GetTestCaseArgs args) {
         return getTestCase(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a test case.
+     * 
+     */
     public static CompletableFuture<GetTestCaseResult> getTestCase(GetTestCaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getTestCase", TypeShape.of(GetTestCaseResult.class), args, Utilities.withVersion(options));
     }
@@ -143,6 +183,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(GetTransitionRouteGroupArgs args) {
         return getTransitionRouteGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified TransitionRouteGroup.
+     * 
+     */
     public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(GetTransitionRouteGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getTransitionRouteGroup", TypeShape.of(GetTransitionRouteGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -153,6 +197,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args) {
         return getVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified Version.
+     * 
+     */
     public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -163,6 +211,10 @@ public final class Dialogflow_v3beta1Functions {
     public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
         return getWebhook(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified webhook.
+     * 
+     */
     public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }

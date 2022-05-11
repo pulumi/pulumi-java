@@ -19,6 +19,10 @@ public final class Osconfig_v1alphaFunctions {
     public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(GetOsPolicyAssignmentArgs args) {
         return getOsPolicyAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+     * 
+     */
     public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(GetOsPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1alpha:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }

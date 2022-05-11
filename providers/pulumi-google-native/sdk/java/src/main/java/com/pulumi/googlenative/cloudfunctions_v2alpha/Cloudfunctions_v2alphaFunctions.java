@@ -21,6 +21,10 @@ public final class Cloudfunctions_v2alphaFunctions {
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns a function with the given name from the requested project.
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v2alpha:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Cloudfunctions_v2alphaFunctions {
     public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args) {
         return getFunctionIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v2alpha:getFunctionIamPolicy", TypeShape.of(GetFunctionIamPolicyResult.class), args, Utilities.withVersion(options));
     }

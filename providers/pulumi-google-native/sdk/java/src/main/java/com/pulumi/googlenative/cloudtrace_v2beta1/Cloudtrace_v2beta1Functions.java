@@ -19,6 +19,10 @@ public final class Cloudtrace_v2beta1Functions {
     public static CompletableFuture<GetTraceSinkResult> getTraceSink(GetTraceSinkArgs args) {
         return getTraceSink(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a trace sink by name under the parent resource (GCP project).
+     * 
+     */
     public static CompletableFuture<GetTraceSinkResult> getTraceSink(GetTraceSinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtrace/v2beta1:getTraceSink", TypeShape.of(GetTraceSinkResult.class), args, Utilities.withVersion(options));
     }

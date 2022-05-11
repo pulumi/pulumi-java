@@ -25,6 +25,10 @@ public final class Gkehub_v1Functions {
     public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
         return getFeature(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Feature.
+     * 
+     */
     public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Gkehub_v1Functions {
     public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args) {
         return getFeatureIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Gkehub_v1Functions {
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args) {
         return getMembership(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a Membership.
+     * 
+     */
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Gkehub_v1Functions {
     public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
         return getMembershipIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }

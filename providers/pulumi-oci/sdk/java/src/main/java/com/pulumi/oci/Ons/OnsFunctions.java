@@ -29,6 +29,14 @@ public final class OnsFunctions {
     public static CompletableFuture<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args) {
         return getNotificationTopic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Notification Topic resource in Oracle Cloud Infrastructure Notifications service.
+     * 
+     * Gets the specified topic&#39;s configuration information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ons/getNotificationTopic:getNotificationTopic", TypeShape.of(GetNotificationTopicResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,16 @@ public final class OnsFunctions {
     public static CompletableFuture<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args) {
         return getNotificationTopics(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Notification Topics in Oracle Cloud Infrastructure Notifications service.
+     * 
+     * Lists topics in the specified compartment.
+     * 
+     * Transactions Per Minute (TPM) per-tenancy limit for this operation: 120.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ons/getNotificationTopics:getNotificationTopics", TypeShape.of(GetNotificationTopicsResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +79,16 @@ public final class OnsFunctions {
     public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Subscription resource in Oracle Cloud Infrastructure Notifications service.
+     * 
+     * Gets the specified subscription&#39;s configuration information.
+     * 
+     * Transactions Per Minute (TPM) per-tenancy limit for this operation: 60.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ons/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
@@ -77,6 +105,16 @@ public final class OnsFunctions {
     public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Subscriptions in Oracle Cloud Infrastructure Notifications service.
+     * 
+     * Lists the subscriptions in the specified compartment or topic.
+     * 
+     * Transactions Per Minute (TPM) per-tenancy limit for this operation: 60.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ons/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }

@@ -20,6 +20,11 @@ public final class SubscriptionFunctions {
     public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
         return getAlias(args, InvokeOptions.Empty);
     }
+    /**
+     * Subscription Information with the alias.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:subscription:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }

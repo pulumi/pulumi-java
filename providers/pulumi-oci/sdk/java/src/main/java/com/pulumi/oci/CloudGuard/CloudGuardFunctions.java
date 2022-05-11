@@ -43,6 +43,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args) {
         return getCloudGuardConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Cloud Guard Configuration resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * GET Cloud Guard Configuration Details for a Tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getCloudGuardConfiguration:getCloudGuardConfiguration", TypeShape.of(GetCloudGuardConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +65,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args) {
         return getDataMaskRule(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Data Mask Rule resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a DataMaskRule identified by DataMaskRuleId
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDataMaskRule:getDataMaskRule", TypeShape.of(GetDataMaskRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +87,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args) {
         return getDataMaskRules(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Data Mask Rules in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a list of all Data Mask Rules in the root &#39;compartmentId&#39; passed.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDataMaskRules:getDataMaskRules", TypeShape.of(GetDataMaskRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +109,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args) {
         return getDetectorRecipe(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Detector Recipe resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a DetectorRecipe identified by detectorRecipeId
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDetectorRecipe:getDetectorRecipe", TypeShape.of(GetDetectorRecipeResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +145,28 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args) {
         return getDetectorRecipes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Detector Recipes in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a list of all Detector Recipes in a compartment
+     * 
+     * The ListDetectorRecipes operation returns only the detector recipes in `compartmentId` passed.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListDetectorRecipes on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDetectorRecipes:getDetectorRecipes", TypeShape.of(GetDetectorRecipesResult.class), args, Utilities.withVersion(options));
     }
@@ -127,6 +181,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args) {
         return getGuardTarget(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Target resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a Target identified by targetId
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getGuardTarget:getGuardTarget", TypeShape.of(GetGuardTargetResult.class), args, Utilities.withVersion(options));
     }
@@ -154,6 +216,27 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args) {
         return getGuardTargets(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Targets in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a list of all Targets in a compartment
+     * The ListTargets operation returns only the targets in `compartmentId` passed.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListTargets on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getGuardTargets:getGuardTargets", TypeShape.of(GetGuardTargetsResult.class), args, Utilities.withVersion(options));
     }
@@ -168,6 +251,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetManagedListResult> getManagedList(GetManagedListArgs args) {
         return getManagedList(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Managed List resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a managed list identified by managedListId
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagedListResult> getManagedList(GetManagedListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getManagedList:getManagedList", TypeShape.of(GetManagedListResult.class), args, Utilities.withVersion(options));
     }
@@ -195,6 +286,27 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetManagedListsResult> getManagedLists(GetManagedListsArgs args) {
         return getManagedLists(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Managed Lists in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a list of ListManagedLists.
+     * The ListManagedLists operation returns only the managed lists in `compartmentId` passed.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return ManagedLists in only
+     * those compartments for which the requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListManagedLists on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagedListsResult> getManagedLists(GetManagedListsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getManagedLists:getManagedLists", TypeShape.of(GetManagedListsResult.class), args, Utilities.withVersion(options));
     }
@@ -209,6 +321,14 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args) {
         return getResponderRecipe(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Responder Recipe resource in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Get a ResponderRecipe by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getResponderRecipe:getResponderRecipe", TypeShape.of(GetResponderRecipeResult.class), args, Utilities.withVersion(options));
     }
@@ -236,6 +356,27 @@ public final class CloudGuardFunctions {
     public static CompletableFuture<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args) {
         return getResponderRecipes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Responder Recipes in Oracle Cloud Infrastructure Cloud Guard service.
+     * 
+     * Returns a list of all ResponderRecipes in a compartment
+     * The ListResponderRecipe operation returns only the targets in `compartmentId` passed.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListResponderRecipe on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:CloudGuard/getResponderRecipes:getResponderRecipes", TypeShape.of(GetResponderRecipesResult.class), args, Utilities.withVersion(options));
     }

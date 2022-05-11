@@ -23,9 +23,25 @@ public final class Ec2Functions {
     public static CompletableFuture<GetDefaultVpcResult> getDefaultVpc() {
         return getDefaultVpc(GetDefaultVpcArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * [NOT YET IMPLEMENTED] Get the Default VPC for a region.
+     * 
+     * @deprecated
+     * Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved.
+     * 
+     */
+    @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
     public static CompletableFuture<GetDefaultVpcResult> getDefaultVpc(GetDefaultVpcArgs args) {
         return getDefaultVpc(args, InvokeOptions.Empty);
     }
+    /**
+     * [NOT YET IMPLEMENTED] Get the Default VPC for a region.
+     * 
+     * @deprecated
+     * Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved.
+     * 
+     */
+    @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
     public static CompletableFuture<GetDefaultVpcResult> getDefaultVpc(GetDefaultVpcArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("awsx:ec2:getDefaultVpc", TypeShape.of(GetDefaultVpcResult.class), args, Utilities.withVersion(options));
     }

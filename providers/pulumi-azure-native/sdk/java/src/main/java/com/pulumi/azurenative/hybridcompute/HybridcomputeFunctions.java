@@ -28,6 +28,11 @@ public final class HybridcomputeFunctions {
     public static CompletableFuture<GetMachineResult> getMachine(GetMachineArgs args) {
         return getMachine(args, InvokeOptions.Empty);
     }
+    /**
+     * Describes a hybrid machine.
+     * API Version: 2020-08-02.
+     * 
+     */
     public static CompletableFuture<GetMachineResult> getMachine(GetMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getMachine", TypeShape.of(GetMachineResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +44,11 @@ public final class HybridcomputeFunctions {
     public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args) {
         return getMachineExtension(args, InvokeOptions.Empty);
     }
+    /**
+     * Describes a Machine Extension.
+     * API Version: 2020-08-02.
+     * 
+     */
     public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getMachineExtension", TypeShape.of(GetMachineExtensionResult.class), args, Utilities.withVersion(options));
     }
@@ -50,6 +60,11 @@ public final class HybridcomputeFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2021-03-25-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +76,11 @@ public final class HybridcomputeFunctions {
     public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args) {
         return getPrivateLinkScope(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure Arc PrivateLinkScope definition.
+     * API Version: 2021-03-25-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args, Utilities.withVersion(options));
     }
@@ -72,6 +92,11 @@ public final class HybridcomputeFunctions {
     public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args) {
         return getPrivateLinkScopedResource(args, InvokeOptions.Empty);
     }
+    /**
+     * A private link scoped resource
+     * API Version: 2020-08-15-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getPrivateLinkScopedResource", TypeShape.of(GetPrivateLinkScopedResourceResult.class), args, Utilities.withVersion(options));
     }

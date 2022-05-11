@@ -25,6 +25,14 @@ public final class OceFunctions {
     public static CompletableFuture<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args) {
         return getOceInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Oce Instance resource in Oracle Cloud Infrastructure Content and Experience service.
+     * 
+     * Gets a OceInstance by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Oce/getOceInstance:getOceInstance", TypeShape.of(GetOceInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class OceFunctions {
     public static CompletableFuture<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args) {
         return getOceInstances(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Oce Instances in Oracle Cloud Infrastructure Content and Experience service.
+     * 
+     * Returns a list of OceInstances.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Oce/getOceInstances:getOceInstances", TypeShape.of(GetOceInstancesResult.class), args, Utilities.withVersion(options));
     }

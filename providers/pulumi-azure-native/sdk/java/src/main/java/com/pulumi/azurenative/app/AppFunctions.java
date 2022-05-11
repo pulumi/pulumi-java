@@ -38,6 +38,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Certificate used for Custom Domain bindings of Container Apps in a Managed Environment
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +54,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args) {
         return getContainerApp(args, InvokeOptions.Empty);
     }
+    /**
+     * Container App.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getContainerApp", TypeShape.of(GetContainerAppResult.class), args, Utilities.withVersion(options));
     }
@@ -60,6 +70,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetContainerAppsAuthConfigResult> getContainerAppsAuthConfig(GetContainerAppsAuthConfigArgs args) {
         return getContainerAppsAuthConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Configuration settings for the Azure ContainerApp Service Authentication / Authorization feature.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetContainerAppsAuthConfigResult> getContainerAppsAuthConfig(GetContainerAppsAuthConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getContainerAppsAuthConfig", TypeShape.of(GetContainerAppsAuthConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +86,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetContainerAppsSourceControlResult> getContainerAppsSourceControl(GetContainerAppsSourceControlArgs args) {
         return getContainerAppsSourceControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Container App SourceControl.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetContainerAppsSourceControlResult> getContainerAppsSourceControl(GetContainerAppsSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getContainerAppsSourceControl", TypeShape.of(GetContainerAppsSourceControlResult.class), args, Utilities.withVersion(options));
     }
@@ -82,6 +102,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetDaprComponentResult> getDaprComponent(GetDaprComponentArgs args) {
         return getDaprComponent(args, InvokeOptions.Empty);
     }
+    /**
+     * Dapr Component.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetDaprComponentResult> getDaprComponent(GetDaprComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getDaprComponent", TypeShape.of(GetDaprComponentResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +118,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetManagedEnvironmentResult> getManagedEnvironment(GetManagedEnvironmentArgs args) {
         return getManagedEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * An environment for hosting container apps
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetManagedEnvironmentResult> getManagedEnvironment(GetManagedEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getManagedEnvironment", TypeShape.of(GetManagedEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -104,6 +134,11 @@ public final class AppFunctions {
     public static CompletableFuture<GetManagedEnvironmentsStorageResult> getManagedEnvironmentsStorage(GetManagedEnvironmentsStorageArgs args) {
         return getManagedEnvironmentsStorage(args, InvokeOptions.Empty);
     }
+    /**
+     * Storage resource for managedEnvironment.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<GetManagedEnvironmentsStorageResult> getManagedEnvironmentsStorage(GetManagedEnvironmentsStorageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:getManagedEnvironmentsStorage", TypeShape.of(GetManagedEnvironmentsStorageResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +150,11 @@ public final class AppFunctions {
     public static CompletableFuture<ListContainerAppCustomHostNameAnalysisResult> listContainerAppCustomHostNameAnalysis(ListContainerAppCustomHostNameAnalysisArgs args) {
         return listContainerAppCustomHostNameAnalysis(args, InvokeOptions.Empty);
     }
+    /**
+     * Custom domain analysis.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<ListContainerAppCustomHostNameAnalysisResult> listContainerAppCustomHostNameAnalysis(ListContainerAppCustomHostNameAnalysisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:listContainerAppCustomHostNameAnalysis", TypeShape.of(ListContainerAppCustomHostNameAnalysisResult.class), args, Utilities.withVersion(options));
     }
@@ -126,6 +166,11 @@ public final class AppFunctions {
     public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args) {
         return listContainerAppSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * Container App Secrets Collection ARM resource.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:listContainerAppSecrets", TypeShape.of(ListContainerAppSecretsResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +182,11 @@ public final class AppFunctions {
     public static CompletableFuture<ListDaprComponentSecretsResult> listDaprComponentSecrets(ListDaprComponentSecretsArgs args) {
         return listDaprComponentSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * Dapr component Secrets Collection ARM resource.
+     * API Version: 2022-03-01.
+     * 
+     */
     public static CompletableFuture<ListDaprComponentSecretsResult> listDaprComponentSecrets(ListDaprComponentSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:app:listDaprComponentSecrets", TypeShape.of(ListDaprComponentSecretsResult.class), args, Utilities.withVersion(options));
     }

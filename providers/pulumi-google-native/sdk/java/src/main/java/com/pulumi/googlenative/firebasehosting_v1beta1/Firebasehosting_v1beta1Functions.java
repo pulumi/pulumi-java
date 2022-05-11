@@ -23,6 +23,10 @@ public final class Firebasehosting_v1beta1Functions {
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves information for the specified channel of the specified site.
+     * 
+     */
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Firebasehosting_v1beta1Functions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a domain mapping on the specified site.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Firebasehosting_v1beta1Functions {
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Hosting Site.
+     * 
+     */
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }

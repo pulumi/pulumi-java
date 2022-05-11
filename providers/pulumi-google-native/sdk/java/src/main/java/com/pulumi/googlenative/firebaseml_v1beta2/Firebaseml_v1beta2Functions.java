@@ -19,6 +19,10 @@ public final class Firebaseml_v1beta2Functions {
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
         return getModel(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a model resource.
+     * 
+     */
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaseml/v1beta2:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }

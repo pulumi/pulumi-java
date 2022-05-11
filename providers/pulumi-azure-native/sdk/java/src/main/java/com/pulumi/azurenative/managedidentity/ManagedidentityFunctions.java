@@ -22,6 +22,11 @@ public final class ManagedidentityFunctions {
     public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
         return getUserAssignedIdentity(args, InvokeOptions.Empty);
     }
+    /**
+     * Describes an identity resource.
+     * API Version: 2018-11-30.
+     * 
+     */
     public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedidentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class ManagedidentityFunctions {
     public static CompletableFuture<ListUserAssignedIdentityAssociatedResourcesResult> listUserAssignedIdentityAssociatedResources(ListUserAssignedIdentityAssociatedResourcesArgs args) {
         return listUserAssignedIdentityAssociatedResources(args, InvokeOptions.Empty);
     }
+    /**
+     * Azure resources returned by the resource action to get a list of assigned resources.
+     * API Version: 2021-09-30-preview.
+     * 
+     */
     public static CompletableFuture<ListUserAssignedIdentityAssociatedResourcesResult> listUserAssignedIdentityAssociatedResources(ListUserAssignedIdentityAssociatedResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedidentity:listUserAssignedIdentityAssociatedResources", TypeShape.of(ListUserAssignedIdentityAssociatedResourcesResult.class), args, Utilities.withVersion(options));
     }

@@ -20,6 +20,11 @@ public final class SerialconsoleFunctions {
     public static CompletableFuture<GetSerialPortResult> getSerialPort(GetSerialPortArgs args) {
         return getSerialPort(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents the serial port of the parent resource.
+     * API Version: 2018-05-01.
+     * 
+     */
     public static CompletableFuture<GetSerialPortResult> getSerialPort(GetSerialPortArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:serialconsole:getSerialPort", TypeShape.of(GetSerialPortResult.class), args, Utilities.withVersion(options));
     }

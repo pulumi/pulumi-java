@@ -49,6 +49,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args) {
         return getAcceptedAgreement(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Accepted Agreement resource in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the details of a specific, previously accepted terms of use agreement.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getAcceptedAgreement:getAcceptedAgreement", TypeShape.of(GetAcceptedAgreementResult.class), args, Utilities.withVersion(options));
     }
@@ -64,6 +72,15 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args) {
         return getAcceptedAgreements(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Accepted Agreements in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Lists the terms of use agreements that have been accepted in the specified compartment.
+     * You can filter results by specifying query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getAcceptedAgreements:getAcceptedAgreements", TypeShape.of(GetAcceptedAgreementsResult.class), args, Utilities.withVersion(options));
     }
@@ -79,9 +96,27 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetCategoriesResult> getCategories() {
         return getCategories(GetCategoriesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Categories in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the list of all the categories for listings published to Oracle Cloud Infrastructure Marketplace. Categories apply
+     * to the software product provided by the listing.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCategoriesResult> getCategories(GetCategoriesArgs args) {
         return getCategories(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Categories in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the list of all the categories for listings published to Oracle Cloud Infrastructure Marketplace. Categories apply
+     * to the software product provided by the listing.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCategoriesResult> getCategories(GetCategoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getCategories:getCategories", TypeShape.of(GetCategoriesResult.class), args, Utilities.withVersion(options));
     }
@@ -110,6 +145,28 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingResult> getListing(GetListingArgs args) {
         return getListing(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Listing resource in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets detailed information about a listing, including the listing&#39;s name, version, description, and
+     * resources.
+     * 
+     * If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+     * you launch the instance, you also need to provide the image ID of the listing resource version that you want.
+     * 
+     * Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+     * listing resource version. To get the signature, issue a [GetAppCatalogListingAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements) API call.
+     * The [AppCatalogListingResourceVersionAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements) object, including
+     * its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+     * listing resource version, create a subscription by issuing a
+     * [CreateAppCatalogSubscription](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription) API call.
+     * 
+     * To get the image ID to launch an instance, issue a [GetAppCatalogListingResourceVersion](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion) API call.
+     * Lastly, to launch the instance, use the image ID of the listing resource version to issue a [LaunchInstance](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance) API call.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingResult> getListing(GetListingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListing:getListing", TypeShape.of(GetListingResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +194,27 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingPackageResult> getListingPackage(GetListingPackageArgs args) {
         return getListingPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Listing Package resource in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Get the details of the specified version of a package, including information needed to launch the package.
+     * 
+     * If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+     * you launch the instance, you also need to provide the image ID of the listing resource version that you want.
+     * 
+     * Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+     * listing resource version. To get the signature, issue a [GetAppCatalogListingAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements) API call.
+     * The [AppCatalogListingResourceVersionAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements) object, including
+     * its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+     * listing resource version, create a subscription by issuing a
+     * [CreateAppCatalogSubscription](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription) API call.
+     * 
+     * To get the image ID to launch an instance, issue a [GetAppCatalogListingResourceVersion](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion) API call.
+     * Lastly, to launch the instance, use the image ID of the listing resource version to issue a [LaunchInstance](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance) API call.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingPackageResult> getListingPackage(GetListingPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackage:getListingPackage", TypeShape.of(GetListingPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -151,6 +229,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args) {
         return getListingPackageAgreements(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Listing Package Agreements in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Returns the terms of use agreements that must be accepted before you can deploy the specified version of a package.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackageAgreements:getListingPackageAgreements", TypeShape.of(GetListingPackageAgreementsResult.class), args, Utilities.withVersion(options));
     }
@@ -178,6 +264,27 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args) {
         return getListingPackages(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Listing Packages in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the list of packages for a listing.
+     * 
+     * If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+     * you launch the instance, you also need to provide the image ID of the listing resource version that you want.
+     * 
+     * Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+     * listing resource version. To get the signature, issue a [GetAppCatalogListingAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements) API call.
+     * The [AppCatalogListingResourceVersionAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements) object, including
+     * its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+     * listing resource version, create a subscription by issuing a
+     * [CreateAppCatalogSubscription](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription) API call.
+     * 
+     * To get the image ID to launch an instance, issue a [GetAppCatalogListingResourceVersion](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion) API call.
+     * Lastly, to launch the instance, use the image ID of the listing resource version to issue a [LaunchInstance](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance) API call.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackages:getListingPackages", TypeShape.of(GetListingPackagesResult.class), args, Utilities.withVersion(options));
     }
@@ -192,6 +299,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args) {
         return getListingTaxes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Listing Taxes in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Returns list of all tax implications that current tenant may be liable to once they launch the listing.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingTaxes:getListingTaxes", TypeShape.of(GetListingTaxesResult.class), args, Utilities.withVersion(options));
     }
@@ -220,9 +335,53 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetListingsResult> getListings() {
         return getListings(GetListingsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Listings in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets a list of listings from Oracle Cloud Infrastructure Marketplace by searching keywords and
+     * filtering according to listing attributes.
+     * 
+     * If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+     * you launch the instance, you also need to provide the image ID of the listing resource version that you want.
+     * 
+     * Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+     * listing resource version. To get the signature, issue a [GetAppCatalogListingAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements) API call.
+     * The [AppCatalogListingResourceVersionAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements) object, including
+     * its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+     * listing resource version, create a subscription by issuing a
+     * [CreateAppCatalogSubscription](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription) API call.
+     * 
+     * To get the image ID to launch an instance, issue a [GetAppCatalogListingResourceVersion](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion) API call.
+     * Lastly, to launch the instance, use the image ID of the listing resource version to issue a [LaunchInstance](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance) API call.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingsResult> getListings(GetListingsArgs args) {
         return getListings(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Listings in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets a list of listings from Oracle Cloud Infrastructure Marketplace by searching keywords and
+     * filtering according to listing attributes.
+     * 
+     * If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+     * you launch the instance, you also need to provide the image ID of the listing resource version that you want.
+     * 
+     * Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+     * listing resource version. To get the signature, issue a [GetAppCatalogListingAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements) API call.
+     * The [AppCatalogListingResourceVersionAgreements](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements) object, including
+     * its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+     * listing resource version, create a subscription by issuing a
+     * [CreateAppCatalogSubscription](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription) API call.
+     * 
+     * To get the image ID to launch an instance, issue a [GetAppCatalogListingResourceVersion](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion) API call.
+     * Lastly, to launch the instance, use the image ID of the listing resource version to issue a [LaunchInstance](https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance) API call.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListingsResult> getListings(GetListingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getListings:getListings", TypeShape.of(GetListingsResult.class), args, Utilities.withVersion(options));
     }
@@ -237,6 +396,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetPublicationResult> getPublication(GetPublicationArgs args) {
         return getPublication(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Publication resource in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the details of the specified publication.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublicationResult> getPublication(GetPublicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublication:getPublication", TypeShape.of(GetPublicationResult.class), args, Utilities.withVersion(options));
     }
@@ -251,6 +418,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args) {
         return getPublicationPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Publication Package resource in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the details of a specific package version within a given publication.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublicationPackage:getPublicationPackage", TypeShape.of(GetPublicationPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -265,6 +440,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args) {
         return getPublicationPackages(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Publication Packages in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Lists the packages in the specified publication.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublicationPackages:getPublicationPackages", TypeShape.of(GetPublicationPackagesResult.class), args, Utilities.withVersion(options));
     }
@@ -279,6 +462,14 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetPublicationsResult> getPublications(GetPublicationsArgs args) {
         return getPublications(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Publications in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Lists the publications in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublicationsResult> getPublications(GetPublicationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublications:getPublications", TypeShape.of(GetPublicationsResult.class), args, Utilities.withVersion(options));
     }
@@ -293,9 +484,25 @@ public final class MarketplaceFunctions {
     public static CompletableFuture<GetPublishersResult> getPublishers() {
         return getPublishers(GetPublishersArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Publishers in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the list of all the publishers of listings available in Oracle Cloud Infrastructure Marketplace.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublishersResult> getPublishers(GetPublishersArgs args) {
         return getPublishers(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Publishers in Oracle Cloud Infrastructure Marketplace service.
+     * 
+     * Gets the list of all the publishers of listings available in Oracle Cloud Infrastructure Marketplace.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPublishersResult> getPublishers(GetPublishersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublishers:getPublishers", TypeShape.of(GetPublishersResult.class), args, Utilities.withVersion(options));
     }

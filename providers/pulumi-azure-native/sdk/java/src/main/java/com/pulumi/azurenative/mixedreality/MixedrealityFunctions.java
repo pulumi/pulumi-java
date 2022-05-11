@@ -30,6 +30,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<GetObjectAnchorsAccountResult> getObjectAnchorsAccount(GetObjectAnchorsAccountArgs args) {
         return getObjectAnchorsAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * ObjectAnchorsAccount Response.
+     * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetObjectAnchorsAccountResult> getObjectAnchorsAccount(GetObjectAnchorsAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getObjectAnchorsAccount", TypeShape.of(GetObjectAnchorsAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +46,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<GetRemoteRenderingAccountResult> getRemoteRenderingAccount(GetRemoteRenderingAccountArgs args) {
         return getRemoteRenderingAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * RemoteRenderingAccount Response.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetRemoteRenderingAccountResult> getRemoteRenderingAccount(GetRemoteRenderingAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getRemoteRenderingAccount", TypeShape.of(GetRemoteRenderingAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -52,6 +62,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args) {
         return getSpatialAnchorsAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * SpatialAnchorsAccount Response.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -63,6 +78,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<ListObjectAnchorsAccountKeysResult> listObjectAnchorsAccountKeys(ListObjectAnchorsAccountKeysArgs args) {
         return listObjectAnchorsAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Developer Keys of account
+     * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<ListObjectAnchorsAccountKeysResult> listObjectAnchorsAccountKeys(ListObjectAnchorsAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:listObjectAnchorsAccountKeys", TypeShape.of(ListObjectAnchorsAccountKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -74,6 +94,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<ListRemoteRenderingAccountKeysResult> listRemoteRenderingAccountKeys(ListRemoteRenderingAccountKeysArgs args) {
         return listRemoteRenderingAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Developer Keys of account
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<ListRemoteRenderingAccountKeysResult> listRemoteRenderingAccountKeys(ListRemoteRenderingAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:listRemoteRenderingAccountKeys", TypeShape.of(ListRemoteRenderingAccountKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +110,11 @@ public final class MixedrealityFunctions {
     public static CompletableFuture<ListSpatialAnchorsAccountKeysResult> listSpatialAnchorsAccountKeys(ListSpatialAnchorsAccountKeysArgs args) {
         return listSpatialAnchorsAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Developer Keys of account
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<ListSpatialAnchorsAccountKeysResult> listSpatialAnchorsAccountKeys(ListSpatialAnchorsAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:listSpatialAnchorsAccountKeys", TypeShape.of(ListSpatialAnchorsAccountKeysResult.class), args, Utilities.withVersion(options));
     }

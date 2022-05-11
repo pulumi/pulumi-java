@@ -27,6 +27,14 @@ public final class ApmFunctions {
     public static CompletableFuture<GetApmDomainResult> getApmDomain(GetApmDomainArgs args) {
         return getApmDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Apm Domain resource in Oracle Cloud Infrastructure Apm service.
+     * 
+     * Gets the details of the APM domain specified by OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetApmDomainResult> getApmDomain(GetApmDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Apm/getApmDomain:getApmDomain", TypeShape.of(GetApmDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +49,14 @@ public final class ApmFunctions {
     public static CompletableFuture<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args) {
         return getApmDomains(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Apm Domains in Oracle Cloud Infrastructure Apm service.
+     * 
+     * Lists all APM domains for the specified tenant compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Apm/getApmDomains:getApmDomains", TypeShape.of(GetApmDomainsResult.class), args, Utilities.withVersion(options));
     }
@@ -56,6 +72,15 @@ public final class ApmFunctions {
     public static CompletableFuture<GetDataKeysResult> getDataKeys(GetDataKeysArgs args) {
         return getDataKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Data Keys in Oracle Cloud Infrastructure Apm service.
+     * 
+     * Lists all Data Keys for the specified APM domain. The caller may filter the list by specifying the &#39;dataKeyType&#39;
+     * query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataKeysResult> getDataKeys(GetDataKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Apm/getDataKeys:getDataKeys", TypeShape.of(GetDataKeysResult.class), args, Utilities.withVersion(options));
     }

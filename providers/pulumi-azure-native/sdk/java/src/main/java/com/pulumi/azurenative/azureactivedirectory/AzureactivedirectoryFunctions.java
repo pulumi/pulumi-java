@@ -21,6 +21,10 @@ public final class AzureactivedirectoryFunctions {
     public static CompletableFuture<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args) {
         return getB2CTenant(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2019-01-01-preview.
+     * 
+     */
     public static CompletableFuture<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args, Utilities.withVersion(options));
     }
@@ -32,6 +36,11 @@ public final class AzureactivedirectoryFunctions {
     public static CompletableFuture<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args) {
         return getGuestUsage(args, InvokeOptions.Empty);
     }
+    /**
+     * Guest Usages Resource
+     * API Version: 2020-05-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args, Utilities.withVersion(options));
     }

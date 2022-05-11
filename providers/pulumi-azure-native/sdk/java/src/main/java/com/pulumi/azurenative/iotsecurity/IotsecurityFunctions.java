@@ -28,9 +28,19 @@ public final class IotsecurityFunctions {
     public static CompletableFuture<GetDefenderSettingResult> getDefenderSetting() {
         return getDefenderSetting(GetDefenderSettingArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * IoT Defender settings
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDefenderSettingResult> getDefenderSetting(GetDefenderSettingArgs args) {
         return getDefenderSetting(args, InvokeOptions.Empty);
     }
+    /**
+     * IoT Defender settings
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDefenderSettingResult> getDefenderSetting(GetDefenderSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getDefenderSetting", TypeShape.of(GetDefenderSettingResult.class), args, Utilities.withVersion(options));
     }
@@ -42,6 +52,11 @@ public final class IotsecurityFunctions {
     public static CompletableFuture<GetDeviceGroupResult> getDeviceGroup(GetDeviceGroupArgs args) {
         return getDeviceGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Device group
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDeviceGroupResult> getDeviceGroup(GetDeviceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getDeviceGroup", TypeShape.of(GetDeviceGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -53,6 +68,11 @@ public final class IotsecurityFunctions {
     public static CompletableFuture<GetOnPremiseSensorResult> getOnPremiseSensor(GetOnPremiseSensorArgs args) {
         return getOnPremiseSensor(args, InvokeOptions.Empty);
     }
+    /**
+     * On-premise IoT sensor
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetOnPremiseSensorResult> getOnPremiseSensor(GetOnPremiseSensorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getOnPremiseSensor", TypeShape.of(GetOnPremiseSensorResult.class), args, Utilities.withVersion(options));
     }
@@ -64,6 +84,11 @@ public final class IotsecurityFunctions {
     public static CompletableFuture<GetSensorResult> getSensor(GetSensorArgs args) {
         return getSensor(args, InvokeOptions.Empty);
     }
+    /**
+     * IoT sensor model
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSensorResult> getSensor(GetSensorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getSensor", TypeShape.of(GetSensorResult.class), args, Utilities.withVersion(options));
     }
@@ -75,6 +100,11 @@ public final class IotsecurityFunctions {
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
+    /**
+     * IoT site model
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }

@@ -21,6 +21,10 @@ public final class Bigqueryreservation_v1beta1Functions {
     public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args) {
         return getCapacityCommitment(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns information about the capacity commitment.
+     * 
+     */
     public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1beta1:getCapacityCommitment", TypeShape.of(GetCapacityCommitmentResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Bigqueryreservation_v1beta1Functions {
     public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
         return getReservation(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns information about the reservation.
+     * 
+     */
     public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1beta1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }

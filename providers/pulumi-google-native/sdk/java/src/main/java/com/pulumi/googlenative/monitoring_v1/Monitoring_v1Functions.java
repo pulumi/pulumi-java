@@ -19,6 +19,10 @@ public final class Monitoring_v1Functions {
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
+    /**
+     * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+     * 
+     */
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v1:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }

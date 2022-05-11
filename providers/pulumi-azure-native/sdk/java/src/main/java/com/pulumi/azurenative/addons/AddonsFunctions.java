@@ -20,6 +20,11 @@ public final class AddonsFunctions {
     public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args) {
         return getSupportPlanType(args, InvokeOptions.Empty);
     }
+    /**
+     * The status of the Canonical support plan.
+     * API Version: 2018-03-01.
+     * 
+     */
     public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:addons:getSupportPlanType", TypeShape.of(GetSupportPlanTypeResult.class), args, Utilities.withVersion(options));
     }

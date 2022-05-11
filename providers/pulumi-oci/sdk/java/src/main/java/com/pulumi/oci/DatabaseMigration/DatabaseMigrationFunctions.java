@@ -41,6 +41,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args) {
         return getAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Agent resource in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display the ODMS Agent configuration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getAgent:getAgent", TypeShape.of(GetAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -55,9 +63,25 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetAgentImagesResult> getAgentImages() {
         return getAgentImages(GetAgentImagesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Agent Images in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Get details of the ODMS Agent Images available to install on-premises.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAgentImagesResult> getAgentImages(GetAgentImagesArgs args) {
         return getAgentImages(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Agent Images in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Get details of the ODMS Agent Images available to install on-premises.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAgentImagesResult> getAgentImages(GetAgentImagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getAgentImages:getAgentImages", TypeShape.of(GetAgentImagesResult.class), args, Utilities.withVersion(options));
     }
@@ -72,6 +96,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetAgentsResult> getAgents(GetAgentsArgs args) {
         return getAgents(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Agents in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display the name of all the existing ODMS Agents in the server.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAgentsResult> getAgents(GetAgentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getAgents:getAgents", TypeShape.of(GetAgentsResult.class), args, Utilities.withVersion(options));
     }
@@ -86,6 +118,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Connection resource in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display Database Connection details.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -100,6 +140,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
         return getConnections(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Connections in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * List all Database Connections.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
     }
@@ -114,6 +162,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetJobAdvisorReportResult> getJobAdvisorReport(GetJobAdvisorReportArgs args) {
         return getJobAdvisorReport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Job Advisor Report resource in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Get the Pre-Migration Advisor report details
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobAdvisorReportResult> getJobAdvisorReport(GetJobAdvisorReportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getJobAdvisorReport:getJobAdvisorReport", TypeShape.of(GetJobAdvisorReportResult.class), args, Utilities.withVersion(options));
     }
@@ -128,6 +184,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetJobOutputResult> getJobOutput(GetJobOutputArgs args) {
         return getJobOutput(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Job Output resource in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * List the Job Outputs
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetJobOutputResult> getJobOutput(GetJobOutputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getJobOutput:getJobOutput", TypeShape.of(GetJobOutputResult.class), args, Utilities.withVersion(options));
     }
@@ -142,6 +206,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetMigrationResult> getMigration(GetMigrationArgs args) {
         return getMigration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Migration resource in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display Migration details.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMigrationResult> getMigration(GetMigrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getMigration:getMigration", TypeShape.of(GetMigrationResult.class), args, Utilities.withVersion(options));
     }
@@ -156,9 +228,25 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetMigrationObjectTypesResult> getMigrationObjectTypes() {
         return getMigrationObjectTypes(GetMigrationObjectTypesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Migration Object Types in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display sample object types to exclude or include for a Migration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMigrationObjectTypesResult> getMigrationObjectTypes(GetMigrationObjectTypesArgs args) {
         return getMigrationObjectTypes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Migration Object Types in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * Display sample object types to exclude or include for a Migration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMigrationObjectTypesResult> getMigrationObjectTypes(GetMigrationObjectTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getMigrationObjectTypes:getMigrationObjectTypes", TypeShape.of(GetMigrationObjectTypesResult.class), args, Utilities.withVersion(options));
     }
@@ -173,6 +261,14 @@ public final class DatabaseMigrationFunctions {
     public static CompletableFuture<GetMigrationsResult> getMigrations(GetMigrationsArgs args) {
         return getMigrations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Migrations in Oracle Cloud Infrastructure Database Migration service.
+     * 
+     * List all Migrations.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMigrationsResult> getMigrations(GetMigrationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DatabaseMigration/getMigrations:getMigrations", TypeShape.of(GetMigrationsResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class Oslogin_v1betaFunctions {
     public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args) {
         return getSshPublicKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves an SSH public key.
+     * 
+     */
     public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:oslogin/v1beta:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
     }

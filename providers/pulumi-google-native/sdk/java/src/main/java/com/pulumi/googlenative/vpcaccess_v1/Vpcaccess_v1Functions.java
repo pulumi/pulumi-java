@@ -19,6 +19,10 @@ public final class Vpcaccess_v1Functions {
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
         return getConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+     * 
+     */
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vpcaccess/v1:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }

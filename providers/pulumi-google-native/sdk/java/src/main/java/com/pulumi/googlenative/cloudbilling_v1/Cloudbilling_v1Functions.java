@@ -21,6 +21,10 @@ public final class Cloudbilling_v1Functions {
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args) {
         return getBillingAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about a billing account. The current authenticated user must be a [viewer of the billing account](https://cloud.google.com/billing/docs/how-to/billing-access).
+     * 
+     */
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbilling/v1:getBillingAccount", TypeShape.of(GetBillingAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Cloudbilling_v1Functions {
     public static CompletableFuture<GetBillingAccountIamPolicyResult> getBillingAccountIamPolicy(GetBillingAccountIamPolicyArgs args) {
         return getBillingAccountIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
+     * 
+     */
     public static CompletableFuture<GetBillingAccountIamPolicyResult> getBillingAccountIamPolicy(GetBillingAccountIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbilling/v1:getBillingAccountIamPolicy", TypeShape.of(GetBillingAccountIamPolicyResult.class), args, Utilities.withVersion(options));
     }

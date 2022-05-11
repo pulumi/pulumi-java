@@ -19,6 +19,10 @@ public final class Redis_v1beta1Functions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a specific Redis instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:redis/v1beta1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }

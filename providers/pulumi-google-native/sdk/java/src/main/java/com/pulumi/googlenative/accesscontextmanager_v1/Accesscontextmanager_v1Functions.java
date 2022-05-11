@@ -27,6 +27,10 @@ public final class Accesscontextmanager_v1Functions {
     public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args) {
         return getAccessLevel(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an access level based on the resource name.
+     * 
+     */
     public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class Accesscontextmanager_v1Functions {
     public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns an access policy based on the name.
+     * 
+     */
     public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class Accesscontextmanager_v1Functions {
     public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(GetAccessPolicyIamPolicyArgs args) {
         return getAccessPolicyIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the IAM policy for the specified Access Context Manager access policy.
+     * 
+     */
     public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(GetAccessPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicyIamPolicy", TypeShape.of(GetAccessPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class Accesscontextmanager_v1Functions {
     public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(GetGcpUserAccessBindingArgs args) {
         return getGcpUserAccessBinding(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the GcpUserAccessBinding with the given name.
+     * 
+     */
     public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(GetGcpUserAccessBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getGcpUserAccessBinding", TypeShape.of(GetGcpUserAccessBindingResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class Accesscontextmanager_v1Functions {
     public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args) {
         return getServicePerimeter(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a service perimeter based on the resource name.
+     * 
+     */
     public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getServicePerimeter", TypeShape.of(GetServicePerimeterResult.class), args, Utilities.withVersion(options));
     }

@@ -25,6 +25,14 @@ public final class GenericArtifactsContentFunctions {
     public static CompletableFuture<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args) {
         return getArtifactByPath(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Artifact By Path resource in Oracle Cloud Infrastructure Generic Artifacts Content service.
+     * 
+     * Get generic artifact content.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GenericArtifactsContent/getArtifactByPath:getArtifactByPath", TypeShape.of(GetArtifactByPathResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class GenericArtifactsContentFunctions {
     public static CompletableFuture<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args) {
         return getGenericArtifactsContent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Generic Artifacts Content resource in Oracle Cloud Infrastructure Generic Artifacts Content service.
+     * 
+     * Gets the specified artifact&#39;s content.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GenericArtifactsContent/getGenericArtifactsContent:getGenericArtifactsContent", TypeShape.of(GetGenericArtifactsContentResult.class), args, Utilities.withVersion(options));
     }

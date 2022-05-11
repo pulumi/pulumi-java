@@ -179,6 +179,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args) {
         return getAlert(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alert resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of alert by its ID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlert:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
     }
@@ -193,6 +201,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args) {
         return getAlertAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alert Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns aggregation details of alerts.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertAnalytic:getAlertAnalytic", TypeShape.of(GetAlertAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -207,6 +223,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args) {
         return getAlertPolicies(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Alert Policies in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all alert policies.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicies:getAlertPolicies", TypeShape.of(GetAlertPoliciesResult.class), args, Utilities.withVersion(options));
     }
@@ -221,6 +245,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args) {
         return getAlertPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alert Policy resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of alert policy by its ID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicy:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -236,6 +268,15 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args) {
         return getAlertPolicyRule(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alert Policy Rule resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Lists the rules of the specified alert policy. The alert policy is said to be satisfied when all rules in the policy evaulate to true.
+     * If there are three rules: rule1,rule2 and rule3, the policy is satisfied if rule1 AND rule2 AND rule3 is True.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicyRule:getAlertPolicyRule", TypeShape.of(GetAlertPolicyRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -251,6 +292,15 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args) {
         return getAlertPolicyRules(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Alert Policy Rules in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Lists the rules of the specified alert policy. The alert policy is said to be satisfied when all rules in the policy evaulate to true.
+     * If there are three rules: rule1,rule2 and rule3, the policy is satisfied if rule1 AND rule2 AND rule3 is True.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicyRules:getAlertPolicyRules", TypeShape.of(GetAlertPolicyRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -265,6 +315,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAlertsResult> getAlerts(GetAlertsArgs args) {
         return getAlerts(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Alerts in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all alerts.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlertsResult> getAlerts(GetAlertsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlerts:getAlerts", TypeShape.of(GetAlertsResult.class), args, Utilities.withVersion(options));
     }
@@ -279,6 +337,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args) {
         return getAuditArchiveRetrieval(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Archive Retrieval resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified archive retreival.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditArchiveRetrieval:getAuditArchiveRetrieval", TypeShape.of(GetAuditArchiveRetrievalResult.class), args, Utilities.withVersion(options));
     }
@@ -293,6 +359,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args) {
         return getAuditArchiveRetrievals(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Archive Retrievals in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns the list of audit archive retrieval.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditArchiveRetrievals:getAuditArchiveRetrievals", TypeShape.of(GetAuditArchiveRetrievalsResult.class), args, Utilities.withVersion(options));
     }
@@ -319,6 +393,26 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args) {
         return getAuditEvent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Event resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * The ListAuditEvents operation returns specified `compartmentId` audit Events only.
+     * The list does not include any audit Events associated with the `subcompartments` of the specified `compartmentId`.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListAuditEvents on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEvent:getAuditEvent", TypeShape.of(GetAuditEventResult.class), args, Utilities.withVersion(options));
     }
@@ -338,6 +432,19 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args) {
         return getAuditEventAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Event Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * By default ListAuditEventAnalytics operation will return all of the summary columns. To filter desired summary columns, specify
+     * it in the `summaryOf` query parameter.
+     * 
+     * **Example:** /ListAuditEventAnalytics?summaryField=targetName&amp;summaryField=userName&amp;summaryField=clientHostName&amp;summaryField
+     *              &amp;summaryField=dmls&amp;summaryField=privilege_changes&amp;summaryField=ddls&amp;summaryField=login_failure&amp;summaryField=login_success
+     *              &amp;summaryField=eventcount&amp;q=(operationTime ge &#39;2021-06-13T23:49:14&#39;)&amp;groupBy=targetName
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEventAnalytic:getAuditEventAnalytic", TypeShape.of(GetAuditEventAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -364,6 +471,26 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args) {
         return getAuditEvents(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * The ListAuditEvents operation returns specified `compartmentId` audit Events only.
+     * The list does not include any audit Events associated with the `subcompartments` of the specified `compartmentId`.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListAuditEvents on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEvents:getAuditEvents", TypeShape.of(GetAuditEventsResult.class), args, Utilities.withVersion(options));
     }
@@ -392,6 +519,28 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args) {
         return getAuditPolicies(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Policies in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Retrieves a list of all audited targets with their corresponding provisioned audit policies, and their provisioning conditions.
+     * 
+     * The ListAuditPolicies operation returns only the audit policies in the specified `compartmentId`.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListAuditPolicies on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditPolicies:getAuditPolicies", TypeShape.of(GetAuditPoliciesResult.class), args, Utilities.withVersion(options));
     }
@@ -406,6 +555,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args) {
         return getAuditPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Policy resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a audit policy by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditPolicy:getAuditPolicy", TypeShape.of(GetAuditPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -420,6 +577,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args) {
         return getAuditProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Profile resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of audit profile resource and associated audit trails of the audit profile.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfile:getAuditProfile", TypeShape.of(GetAuditProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -446,6 +611,26 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args) {
         return getAuditProfileAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Profile Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of audit profile aggregated details . A audit profile  aggregation helps understand the overall  state of audit profile profiles.
+     * As an example, it helps understand how many audit profiles have paid usage. It is especially useful to create dashboards or to support analytics.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform AuditProfileAnalytics on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAnalytic:getAuditProfileAnalytic", TypeShape.of(GetAuditProfileAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -460,6 +645,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args) {
         return getAuditProfileAvailableAuditVolume(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Profile Available Audit Volume resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Retrieves a list of audit trails, and associated audit event volume for each trail up to defined start date.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAvailableAuditVolume:getAuditProfileAvailableAuditVolume", TypeShape.of(GetAuditProfileAvailableAuditVolumeResult.class), args, Utilities.withVersion(options));
     }
@@ -474,6 +667,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args) {
         return getAuditProfileAvailableAuditVolumes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Profile Available Audit Volumes in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Retrieves a list of audit trails, and associated audit event volume for each trail up to defined start date.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAvailableAuditVolumes:getAuditProfileAvailableAuditVolumes", TypeShape.of(GetAuditProfileAvailableAuditVolumesResult.class), args, Utilities.withVersion(options));
     }
@@ -488,6 +689,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args) {
         return getAuditProfileCollectedAuditVolume(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Profile Collected Audit Volume resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all collected audit volume data points.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileCollectedAuditVolume:getAuditProfileCollectedAuditVolume", TypeShape.of(GetAuditProfileCollectedAuditVolumeResult.class), args, Utilities.withVersion(options));
     }
@@ -502,6 +711,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args) {
         return getAuditProfileCollectedAuditVolumes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Profile Collected Audit Volumes in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all collected audit volume data points.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileCollectedAuditVolumes:getAuditProfileCollectedAuditVolumes", TypeShape.of(GetAuditProfileCollectedAuditVolumesResult.class), args, Utilities.withVersion(options));
     }
@@ -530,6 +747,28 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args) {
         return getAuditProfiles(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Profiles in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all audit profiles.
+     * 
+     * The ListAuditProfiles operation returns only the audit profiles in the specified `compartmentId`.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListAuditProfiles on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfiles:getAuditProfiles", TypeShape.of(GetAuditProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -544,6 +783,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args) {
         return getAuditTrail(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Trail resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of audit trail.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrail:getAuditTrail", TypeShape.of(GetAuditTrailResult.class), args, Utilities.withVersion(options));
     }
@@ -570,6 +817,26 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args) {
         return getAuditTrailAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Audit Trail Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of audit trail aggregated details . A audit trail aggregation helps understand the overall  state of trails.
+     * As an example, it helps understand how many trails are running or stopped. It is especially useful to create dashboards or to support analytics.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform AuditTrailAnalytics on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrailAnalytic:getAuditTrailAnalytic", TypeShape.of(GetAuditTrailAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -597,6 +864,27 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args) {
         return getAuditTrails(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Audit Trails in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all audit trails.
+     * The ListAuditTrails operation returns only the audit trails in the specified `compartmentId`.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListAuditTrails on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrails:getAuditTrails", TypeShape.of(GetAuditTrailsResult.class), args, Utilities.withVersion(options));
     }
@@ -617,9 +905,37 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType() {
         return getCompatibleFormatsForDataType(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Compatible Formats For Data Type resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of basic masking formats compatible with the supported data types.
+     * The data types are grouped into the following categories -
+     * Character - Includes CHAR, NCHAR, VARCHAR2, and NVARCHAR2
+     * Numeric - Includes NUMBER, FLOAT, RAW, BINARY_FLOAT, and BINARY_DOUBLE
+     * Date - Includes DATE and TIMESTAMP
+     * LOB - Includes BLOB, CLOB, and NCLOB
+     * All - Includes all the supported data types
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args) {
         return getCompatibleFormatsForDataType(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Compatible Formats For Data Type resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of basic masking formats compatible with the supported data types.
+     * The data types are grouped into the following categories -
+     * Character - Includes CHAR, NCHAR, VARCHAR2, and NVARCHAR2
+     * Numeric - Includes NUMBER, FLOAT, RAW, BINARY_FLOAT, and BINARY_DOUBLE
+     * Date - Includes DATE and TIMESTAMP
+     * LOB - Includes BLOB, CLOB, and NCLOB
+     * All - Includes all the supported data types
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getCompatibleFormatsForDataType:getCompatibleFormatsForDataType", TypeShape.of(GetCompatibleFormatsForDataTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -637,6 +953,17 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args) {
         return getCompatibleFormatsForSensitiveType(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Compatible Formats For Sensitive Type resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of library masking formats compatible with the existing sensitive types.
+     * For each sensitive type, it returns the assigned default masking format as well as
+     * the other library masking formats that have the sensitiveTypeIds attribute containing
+     * the OCID of the sensitive type.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getCompatibleFormatsForSensitiveType:getCompatibleFormatsForSensitiveType", TypeShape.of(GetCompatibleFormatsForSensitiveTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -651,6 +978,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args) {
         return getDataSafeConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Data Safe Configuration resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the Data Safe configuration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafeConfiguration:getDataSafeConfiguration", TypeShape.of(GetDataSafeConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -665,6 +1000,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args) {
         return getDataSafePrivateEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Data Safe Private Endpoint resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified Data Safe private endpoint.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafePrivateEndpoint:getDataSafePrivateEndpoint", TypeShape.of(GetDataSafePrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -679,6 +1022,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args) {
         return getDataSafePrivateEndpoints(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Data Safe Private Endpoints in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of Data Safe private endpoints.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafePrivateEndpoints:getDataSafePrivateEndpoints", TypeShape.of(GetDataSafePrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
@@ -693,6 +1044,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args) {
         return getDiscoveryAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Discovery Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets consolidated discovery analytics data based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryAnalytic:getDiscoveryAnalytic", TypeShape.of(GetDiscoveryAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -707,6 +1066,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args) {
         return getDiscoveryAnalytics(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Discovery Analytics in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets consolidated discovery analytics data based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryAnalytics:getDiscoveryAnalytics", TypeShape.of(GetDiscoveryAnalyticsResult.class), args, Utilities.withVersion(options));
     }
@@ -721,6 +1088,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args) {
         return getDiscoveryJob(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Discovery Job resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified discovery job.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJob:getDiscoveryJob", TypeShape.of(GetDiscoveryJobResult.class), args, Utilities.withVersion(options));
     }
@@ -735,6 +1110,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args) {
         return getDiscoveryJobsResult(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Discovery Jobs Result resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified discovery result.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJobsResult:getDiscoveryJobsResult", TypeShape.of(GetDiscoveryJobsResultResult.class), args, Utilities.withVersion(options));
     }
@@ -749,6 +1132,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args) {
         return getDiscoveryJobsResults(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Discovery Jobs Results in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of discovery results based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJobsResults:getDiscoveryJobsResults", TypeShape.of(GetDiscoveryJobsResultsResult.class), args, Utilities.withVersion(options));
     }
@@ -763,6 +1154,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args) {
         return getLibraryMaskingFormat(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Library Masking Format resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified library masking format.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getLibraryMaskingFormat:getLibraryMaskingFormat", TypeShape.of(GetLibraryMaskingFormatResult.class), args, Utilities.withVersion(options));
     }
@@ -777,6 +1176,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args) {
         return getLibraryMaskingFormats(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Library Masking Formats in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of library masking formats based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getLibraryMaskingFormats:getLibraryMaskingFormats", TypeShape.of(GetLibraryMaskingFormatsResult.class), args, Utilities.withVersion(options));
     }
@@ -794,6 +1201,17 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args) {
         return getListUserGrants(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of List User Grants in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of grants for a particular user in the specified user assessment. A user grant contains details such as the
+     * privilege name, type, category, and depth level. The depth level indicates how deep in the hierarchy of roles granted to
+     * roles a privilege grant is. The userKey in this operation is a system-generated identifier. Perform the operation ListUsers
+     * to get the userKey for a particular user.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getListUserGrants:getListUserGrants", TypeShape.of(GetListUserGrantsResult.class), args, Utilities.withVersion(options));
     }
@@ -808,6 +1226,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args) {
         return getMaskingAnalytic(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Masking Analytic resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets consolidated masking analytics data based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingAnalytic:getMaskingAnalytic", TypeShape.of(GetMaskingAnalyticResult.class), args, Utilities.withVersion(options));
     }
@@ -822,6 +1248,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args) {
         return getMaskingAnalytics(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Masking Analytics in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets consolidated masking analytics data based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingAnalytics:getMaskingAnalytics", TypeShape.of(GetMaskingAnalyticsResult.class), args, Utilities.withVersion(options));
     }
@@ -836,6 +1270,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args) {
         return getMaskingPolicies(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Masking Policies in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of masking policies based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPolicies:getMaskingPolicies", TypeShape.of(GetMaskingPoliciesResult.class), args, Utilities.withVersion(options));
     }
@@ -850,6 +1292,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args) {
         return getMaskingPoliciesMaskingColumn(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Masking Policies Masking Column resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified masking column.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPoliciesMaskingColumn:getMaskingPoliciesMaskingColumn", TypeShape.of(GetMaskingPoliciesMaskingColumnResult.class), args, Utilities.withVersion(options));
     }
@@ -864,6 +1314,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args) {
         return getMaskingPoliciesMaskingColumns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Masking Policies Masking Columns in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of masking columns present in the specified masking policy and based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPoliciesMaskingColumns:getMaskingPoliciesMaskingColumns", TypeShape.of(GetMaskingPoliciesMaskingColumnsResult.class), args, Utilities.withVersion(options));
     }
@@ -878,6 +1336,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args) {
         return getMaskingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Masking Policy resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified masking policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPolicy:getMaskingPolicy", TypeShape.of(GetMaskingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -892,6 +1358,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args) {
         return getMaskingReport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Masking Report resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified masking report.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReport:getMaskingReport", TypeShape.of(GetMaskingReportResult.class), args, Utilities.withVersion(options));
     }
@@ -906,6 +1380,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args) {
         return getMaskingReportMaskedColumns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Masking Reports Masked Columns in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of masked columns present in the specified masking report and based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReportMaskedColumns:getMaskingReportMaskedColumns", TypeShape.of(GetMaskingReportMaskedColumnsResult.class), args, Utilities.withVersion(options));
     }
@@ -920,6 +1402,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args) {
         return getMaskingReports(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Masking Reports in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of masking reports based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReports:getMaskingReports", TypeShape.of(GetMaskingReportsResult.class), args, Utilities.withVersion(options));
     }
@@ -934,6 +1424,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args) {
         return getMaskingReportsMaskedColumn(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Masking Reports Masked Column resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of masked columns present in the specified masking report and based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReportsMaskedColumn:getMaskingReportsMaskedColumn", TypeShape.of(GetMaskingReportsMaskedColumnResult.class), args, Utilities.withVersion(options));
     }
@@ -948,6 +1446,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args) {
         return getOnpremConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific On Prem Connector resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified on-premises connector.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getOnpremConnector:getOnpremConnector", TypeShape.of(GetOnpremConnectorResult.class), args, Utilities.withVersion(options));
     }
@@ -962,6 +1468,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args) {
         return getOnpremConnectors(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of On Prem Connectors in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of on-premises connectors.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getOnpremConnectors:getOnpremConnectors", TypeShape.of(GetOnpremConnectorsResult.class), args, Utilities.withVersion(options));
     }
@@ -976,6 +1490,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetReportResult> getReport(GetReportArgs args) {
         return getReport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Report resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a report by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReportResult> getReport(GetReportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getReport:getReport", TypeShape.of(GetReportResult.class), args, Utilities.withVersion(options));
     }
@@ -990,6 +1512,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetReportContentResult> getReportContent(GetReportContentArgs args) {
         return getReportContent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Report Content resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Downloads the specified report in the form of PDF or XLXS.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReportContentResult> getReportContent(GetReportContentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportContent:getReportContent", TypeShape.of(GetReportContentResult.class), args, Utilities.withVersion(options));
     }
@@ -1004,6 +1534,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
         return getReportDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Report Definition resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of report definition specified by the identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -1020,6 +1558,16 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args) {
         return getReportDefinitions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Report Definitions in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of report definitions.
+     * The ListReportDefinitions operation returns only the report definitions in the specified `compartmentId`.
+     * It also returns the seeded report definitions which are available to all the compartments.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportDefinitions:getReportDefinitions", TypeShape.of(GetReportDefinitionsResult.class), args, Utilities.withVersion(options));
     }
@@ -1034,6 +1582,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetReportsResult> getReports(GetReportsArgs args) {
         return getReports(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Reports in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all the reports in the compartment. It contains information such as report generation time.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReportsResult> getReports(GetReportsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getReports:getReports", TypeShape.of(GetReportsResult.class), args, Utilities.withVersion(options));
     }
@@ -1048,6 +1604,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args) {
         return getSecurityAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Security Assessment resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified security assessment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessment:getSecurityAssessment", TypeShape.of(GetSecurityAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -1062,6 +1626,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args) {
         return getSecurityAssessmentComparison(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Security Assessment Comparison resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the comparison report on the security assessments submitted for comparison.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessmentComparison:getSecurityAssessmentComparison", TypeShape.of(GetSecurityAssessmentComparisonResult.class), args, Utilities.withVersion(options));
     }
@@ -1082,6 +1654,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args) {
         return getSecurityAssessmentFindings(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Security Assessment Findings in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * List all the findings from all the targets in the specified assessment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessmentFindings:getSecurityAssessmentFindings", TypeShape.of(GetSecurityAssessmentFindingsResult.class), args, Utilities.withVersion(options));
     }
@@ -1110,6 +1690,28 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args) {
         return getSecurityAssessments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Security Assessments in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of security assessments.
+     * 
+     * The ListSecurityAssessments operation returns only the assessments in the specified `compartmentId`.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListSecurityAssessments on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessments:getSecurityAssessments", TypeShape.of(GetSecurityAssessmentsResult.class), args, Utilities.withVersion(options));
     }
@@ -1124,6 +1726,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args) {
         return getSensitiveDataModel(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Sensitive Data Model resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified sensitive data model.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModel:getSensitiveDataModel", TypeShape.of(GetSensitiveDataModelResult.class), args, Utilities.withVersion(options));
     }
@@ -1138,6 +1748,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args) {
         return getSensitiveDataModels(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Sensitive Data Models in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of sensitive data models based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModels:getSensitiveDataModels", TypeShape.of(GetSensitiveDataModelsResult.class), args, Utilities.withVersion(options));
     }
@@ -1152,6 +1770,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args) {
         return getSensitiveDataModelsSensitiveColumn(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Sensitive Data Models Sensitive Column resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified sensitive column.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModelsSensitiveColumn:getSensitiveDataModelsSensitiveColumn", TypeShape.of(GetSensitiveDataModelsSensitiveColumnResult.class), args, Utilities.withVersion(options));
     }
@@ -1166,6 +1792,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args) {
         return getSensitiveDataModelsSensitiveColumns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Sensitive Data Models Sensitive Columns in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of sensitive columns present in the specified sensitive data model based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModelsSensitiveColumns:getSensitiveDataModelsSensitiveColumns", TypeShape.of(GetSensitiveDataModelsSensitiveColumnsResult.class), args, Utilities.withVersion(options));
     }
@@ -1180,6 +1814,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args) {
         return getSensitiveType(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Sensitive Type resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the specified sensitive type.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveType:getSensitiveType", TypeShape.of(GetSensitiveTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -1194,6 +1836,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args) {
         return getSensitiveTypes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Sensitive Types in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of sensitive types based on the specified query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveTypes:getSensitiveTypes", TypeShape.of(GetSensitiveTypesResult.class), args, Utilities.withVersion(options));
     }
@@ -1208,6 +1858,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args) {
         return getTargetAlertPolicyAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Target Alert Policy Association resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of target-alert policy association by its ID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetAlertPolicyAssociation:getTargetAlertPolicyAssociation", TypeShape.of(GetTargetAlertPolicyAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -1222,6 +1880,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args) {
         return getTargetAlertPolicyAssociations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Alert Policy Associations in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of all target-alert policy associations.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetAlertPolicyAssociations:getTargetAlertPolicyAssociations", TypeShape.of(GetTargetAlertPolicyAssociationsResult.class), args, Utilities.withVersion(options));
     }
@@ -1236,6 +1902,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args) {
         return getTargetDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Target Database resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns the details of the specified Data Safe target database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabase:getTargetDatabase", TypeShape.of(GetTargetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -1256,6 +1930,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args) {
         return getTargetDatabaseRoles(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Database Roles in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns a list of role metadata objects.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabaseRoles:getTargetDatabaseRoles", TypeShape.of(GetTargetDatabaseRolesResult.class), args, Utilities.withVersion(options));
     }
@@ -1270,6 +1952,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args) {
         return getTargetDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Databases in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns the list of registered target databases in Data Safe.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabases:getTargetDatabases", TypeShape.of(GetTargetDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -1284,6 +1974,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args) {
         return getTargetDatabasesColumns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Databases Columns in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns a list of column metadata objects.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesColumns:getTargetDatabasesColumns", TypeShape.of(GetTargetDatabasesColumnsResult.class), args, Utilities.withVersion(options));
     }
@@ -1298,6 +1996,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args) {
         return getTargetDatabasesSchemas(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Databases Schemas in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns list of schema.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesSchemas:getTargetDatabasesSchemas", TypeShape.of(GetTargetDatabasesSchemasResult.class), args, Utilities.withVersion(options));
     }
@@ -1312,6 +2018,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args) {
         return getTargetDatabasesTables(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Target Databases Tables in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Returns a list of table metadata objects.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesTables:getTargetDatabasesTables", TypeShape.of(GetTargetDatabasesTablesResult.class), args, Utilities.withVersion(options));
     }
@@ -1326,6 +2040,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args) {
         return getUserAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific User Assessment resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a user assessment by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessment:getUserAssessment", TypeShape.of(GetUserAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -1340,6 +2062,14 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args) {
         return getUserAssessmentComparison(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific User Assessment Comparison resource in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets the details of the comparison report for the user assessments provided.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentComparison:getUserAssessmentComparison", TypeShape.of(GetUserAssessmentComparisonResult.class), args, Utilities.withVersion(options));
     }
@@ -1368,6 +2098,28 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args) {
         return getUserAssessmentUserAnalytics(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of User Assessment User Analytics in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of aggregated user details from the specified user assessment. This provides information about the overall state
+     * of database user security.  For example, the user details include how many users have the DBA role and how many users are in
+     * the critical category. This data is especially useful content for dashboards or to support analytics.
+     * 
+     * When you perform the ListUserAnalytics operation, if the parameter compartmentIdInSubtree is set to &#34;true,&#34; and if the
+     * parameter accessLevel is set to ACCESSIBLE, then the operation returns compartments in which the requestor has INSPECT
+     * permissions on at least one resource, directly or indirectly (in subcompartments). If the operation is performed at the
+     * root compartment. If the requestor does not have access to at least one subcompartment of the compartment specified by
+     * compartmentId, then &#34;Not Authorized&#34; is returned.
+     * 
+     * The parameter compartmentIdInSubtree applies when you perform ListUserAnalytics on the compartmentId passed and when it is
+     * set to true, the entire hierarchy of compartments can be returned.
+     * 
+     * To use ListUserAnalytics to get a full list of all compartments and subcompartments in the tenancy from the root compartment,
+     * set the parameter compartmentIdInSubtree to true and accessLevel to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentUserAnalytics:getUserAssessmentUserAnalytics", TypeShape.of(GetUserAssessmentUserAnalyticsResult.class), args, Utilities.withVersion(options));
     }
@@ -1385,6 +2137,17 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args) {
         return getUserAssessmentUsers(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of User Assessment Users in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of users of the specified user assessment. The result contains the database user details for each user, such
+     * as user type, account status, last login time, user creation time, authentication type, user profile, and the date and time
+     * of the latest password change. It also contains the user category derived from these user details as well as privileges
+     * granted to each user.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentUsers:getUserAssessmentUsers", TypeShape.of(GetUserAssessmentUsersResult.class), args, Utilities.withVersion(options));
     }
@@ -1413,6 +2176,28 @@ public final class DataSafeFunctions {
     public static CompletableFuture<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args) {
         return getUserAssessments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of User Assessments in Oracle Cloud Infrastructure Data Safe service.
+     * 
+     * Gets a list of user assessments.
+     * 
+     * The ListUserAssessments operation returns only the assessments in the specified `compartmentId`.
+     * The list does not include any subcompartments of the compartmentId passed.
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (ACCESSIBLE) (the resource can be in a subcompartment) or to return Not Authorized if
+     * Principal doesn&#39;t have access to even one of the child compartments. This is valid only when
+     * `compartmentIdInSubtree` is set to `true`.
+     * 
+     * The parameter `compartmentIdInSubtree` applies when you perform ListUserAssessments on the
+     * `compartmentId` passed and when it is set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ACCESSIBLE.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessments:getUserAssessments", TypeShape.of(GetUserAssessmentsResult.class), args, Utilities.withVersion(options));
     }

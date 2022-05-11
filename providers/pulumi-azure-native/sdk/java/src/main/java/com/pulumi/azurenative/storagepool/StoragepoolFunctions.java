@@ -22,6 +22,11 @@ public final class StoragepoolFunctions {
     public static CompletableFuture<GetDiskPoolResult> getDiskPool(GetDiskPoolArgs args) {
         return getDiskPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for Disk pool request.
+     * API Version: 2020-03-15-preview.
+     * 
+     */
     public static CompletableFuture<GetDiskPoolResult> getDiskPool(GetDiskPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getDiskPool", TypeShape.of(GetDiskPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class StoragepoolFunctions {
     public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(GetIscsiTargetArgs args) {
         return getIscsiTarget(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for iSCSI target requests.
+     * API Version: 2020-03-15-preview.
+     * 
+     */
     public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(GetIscsiTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getIscsiTarget", TypeShape.of(GetIscsiTargetResult.class), args, Utilities.withVersion(options));
     }

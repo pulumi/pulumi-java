@@ -24,6 +24,11 @@ public final class SaasFunctions {
     public static CompletableFuture<GetSaasSubscriptionLevelResult> getSaasSubscriptionLevel(GetSaasSubscriptionLevelArgs args) {
         return getSaasSubscriptionLevel(args, InvokeOptions.Empty);
     }
+    /**
+     * SaaS REST API resource definition.
+     * API Version: 2018-03-01-beta.
+     * 
+     */
     public static CompletableFuture<GetSaasSubscriptionLevelResult> getSaasSubscriptionLevel(GetSaasSubscriptionLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:saas:getSaasSubscriptionLevel", TypeShape.of(GetSaasSubscriptionLevelResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class SaasFunctions {
     public static CompletableFuture<ListSaasResourceAccessTokenResult> listSaasResourceAccessToken(ListSaasResourceAccessTokenArgs args) {
         return listSaasResourceAccessToken(args, InvokeOptions.Empty);
     }
+    /**
+     * the ISV access token result response.
+     * API Version: 2018-03-01-beta.
+     * 
+     */
     public static CompletableFuture<ListSaasResourceAccessTokenResult> listSaasResourceAccessToken(ListSaasResourceAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:saas:listSaasResourceAccessToken", TypeShape.of(ListSaasResourceAccessTokenResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class SaasFunctions {
     public static CompletableFuture<ListSaasSubscriptionLevelAccessTokenResult> listSaasSubscriptionLevelAccessToken(ListSaasSubscriptionLevelAccessTokenArgs args) {
         return listSaasSubscriptionLevelAccessToken(args, InvokeOptions.Empty);
     }
+    /**
+     * the ISV access token result response.
+     * API Version: 2018-03-01-beta.
+     * 
+     */
     public static CompletableFuture<ListSaasSubscriptionLevelAccessTokenResult> listSaasSubscriptionLevelAccessToken(ListSaasSubscriptionLevelAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:saas:listSaasSubscriptionLevelAccessToken", TypeShape.of(ListSaasSubscriptionLevelAccessTokenResult.class), args, Utilities.withVersion(options));
     }

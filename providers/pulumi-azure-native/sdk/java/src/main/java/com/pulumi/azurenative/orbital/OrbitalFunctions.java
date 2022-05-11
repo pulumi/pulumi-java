@@ -26,6 +26,11 @@ public final class OrbitalFunctions {
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
         return getContact(args, InvokeOptions.Empty);
     }
+    /**
+     * Customer creates a contact resource for a spacecraft resource.
+     * API Version: 2021-04-04-preview.
+     * 
+     */
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +42,11 @@ public final class OrbitalFunctions {
     public static CompletableFuture<GetContactProfileResult> getContactProfile(GetContactProfileArgs args) {
         return getContactProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
+     * API Version: 2021-04-04-preview.
+     * 
+     */
     public static CompletableFuture<GetContactProfileResult> getContactProfile(GetContactProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContactProfile", TypeShape.of(GetContactProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -48,6 +58,11 @@ public final class OrbitalFunctions {
     public static CompletableFuture<GetSpacecraftResult> getSpacecraft(GetSpacecraftArgs args) {
         return getSpacecraft(args, InvokeOptions.Empty);
     }
+    /**
+     * Customer creates a spacecraft resource to schedule a contact.
+     * API Version: 2021-04-04-preview.
+     * 
+     */
     public static CompletableFuture<GetSpacecraftResult> getSpacecraft(GetSpacecraftArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getSpacecraft", TypeShape.of(GetSpacecraftResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +74,11 @@ public final class OrbitalFunctions {
     public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(ListSpacecraftAvailableContactsArgs args) {
         return listSpacecraftAvailableContacts(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for the ListAvailableContacts API service call.
+     * API Version: 2021-04-04-preview.
+     * 
+     */
     public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(ListSpacecraftAvailableContactsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:listSpacecraftAvailableContacts", TypeShape.of(ListSpacecraftAvailableContactsResult.class), args, Utilities.withVersion(options));
     }

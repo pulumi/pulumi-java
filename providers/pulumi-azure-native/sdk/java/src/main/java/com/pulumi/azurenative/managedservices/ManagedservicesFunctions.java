@@ -22,6 +22,11 @@ public final class ManagedservicesFunctions {
     public static CompletableFuture<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args) {
         return getRegistrationAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Registration assignment.
+     * API Version: 2019-09-01.
+     * 
+     */
     public static CompletableFuture<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationAssignment", TypeShape.of(GetRegistrationAssignmentResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class ManagedservicesFunctions {
     public static CompletableFuture<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args) {
         return getRegistrationDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Registration definition.
+     * API Version: 2019-09-01.
+     * 
+     */
     public static CompletableFuture<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationDefinition", TypeShape.of(GetRegistrationDefinitionResult.class), args, Utilities.withVersion(options));
     }

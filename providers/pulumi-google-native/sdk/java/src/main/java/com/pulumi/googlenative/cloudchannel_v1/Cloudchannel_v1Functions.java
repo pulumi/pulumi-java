@@ -23,6 +23,10 @@ public final class Cloudchannel_v1Functions {
     public static CompletableFuture<GetChannelPartnerLinkResult> getChannelPartnerLink(GetChannelPartnerLinkArgs args) {
         return getChannelPartnerLink(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the requested ChannelPartnerLink resource. You must be a distributor to call this method. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: ChannelPartnerLink resource not found because of an invalid channel partner link name. Return value: The ChannelPartnerLink resource.
+     * 
+     */
     public static CompletableFuture<GetChannelPartnerLinkResult> getChannelPartnerLink(GetChannelPartnerLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getChannelPartnerLink", TypeShape.of(GetChannelPartnerLinkResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Cloudchannel_v1Functions {
     public static CompletableFuture<GetCustomerResult> getCustomer(GetCustomerArgs args) {
         return getCustomer(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer resource doesn&#39;t exist. Usually the result of an invalid name parameter. Return value: The Customer resource.
+     * 
+     */
     public static CompletableFuture<GetCustomerResult> getCustomer(GetCustomerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getCustomer", TypeShape.of(GetCustomerResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Cloudchannel_v1Functions {
     public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args) {
         return getEntitlement(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn&#39;t belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
+     * 
+     */
     public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getEntitlement", TypeShape.of(GetEntitlementResult.class), args, Utilities.withVersion(options));
     }
