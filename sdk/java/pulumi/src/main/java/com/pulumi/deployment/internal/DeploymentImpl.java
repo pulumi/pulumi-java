@@ -1668,14 +1668,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     @VisibleForTesting
     static class DefaultRunner implements Runner {
-        private static final int ProcessExitedSuccessfully = 0;
-        private static final int ProcessExitedBeforeLoggingUserActionableMessage = 1;
-        // Keep track if we already logged the information about an unhandled error to the user.
-        // If so, we end with a different exit code. The language host recognizes this and will not print
-        // any further messages to the user since we already took care of it.
-        //
-        // 32 was picked to be very unlikely to collide with any other error codes.
-        private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
         private final Logger standardLogger;
         private final EngineLogger engineLogger;
