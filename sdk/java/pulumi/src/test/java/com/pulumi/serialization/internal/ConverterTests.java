@@ -19,11 +19,11 @@ import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
-import com.pulumi.deployment.MocksTest;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.PulumiTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -223,10 +223,7 @@ class ConverterTests {
 
         @Test
         void testNullInPreviewProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
-                    .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(true))
-                    .setMockGlobalInstance();
+            PulumiTest.withOptions(new TestOptions(true)).build();
 
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);
@@ -240,10 +237,7 @@ class ConverterTests {
 
         @Test
         void testNullInNormalProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
-                    .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(false))
-                    .setMockGlobalInstance();
+            PulumiTest.withOptions(new TestOptions(false)).build();
 
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);

@@ -1,31 +1,23 @@
 package com.pulumi.core;
 
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MocksTest;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.PulumiTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UrnTest {
 
-    private static DeploymentTests.DeploymentMock mock;
-
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setOptions(new TestOptions(false))
-            .setMockGlobalInstance();
+        PulumiTest.withDefaults().build();
     }
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @Test

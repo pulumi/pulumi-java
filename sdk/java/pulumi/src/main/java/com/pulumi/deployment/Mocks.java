@@ -9,6 +9,7 @@ import java.util.concurrent.CompletableFuture;
 /**
  * Hooks to mock the engine that provide test doubles for offline unit testing of stacks.
  */
+// TODO: move to com.pulumi.test.mock
 public interface Mocks {
 
     /**

@@ -76,6 +76,7 @@ public class DeploymentTests {
             this.config.setAllConfig(config, secretKeys);
         }
 
+        @Deprecated
         public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Supplier<T> stackFactory) {
             return tryTestAsync(stackFactory).thenApply(r -> {
                 if (!r.exceptions.isEmpty()) {
@@ -89,6 +90,7 @@ public class DeploymentTests {
             });
         }
 
+        @Deprecated
         public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Supplier<T> stackFactory) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
@@ -106,6 +108,7 @@ public class DeploymentTests {
                     ));
         }
 
+        @Deprecated
         public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
@@ -124,6 +127,7 @@ public class DeploymentTests {
                     ));
         }
 
+        @Deprecated // use TestResult
         public static class TestAsyncResult {
             public final ImmutableList<Resource> resources;
             public final ImmutableList<Exception> exceptions;
@@ -297,6 +301,7 @@ public class DeploymentTests {
                     this.state.config.isConfigSecret((String) invocation.getArguments()[0])
             );
             Mockito.when(mock.getRunner()).thenReturn(this.runner);
+            Mockito.when(mock.getLog()).thenReturn(this.log);
 
             this.deployment = mock;
 
