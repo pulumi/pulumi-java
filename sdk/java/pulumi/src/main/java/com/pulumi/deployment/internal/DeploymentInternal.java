@@ -47,11 +47,6 @@ public interface DeploymentInternal extends Deployment {
                 .map(DeploymentInstanceInternal::getInternal);
     }
 
-    @InternalUse
-    static Supplier<DeploymentInternal> deploymentFactory() {
-        return DeploymentImpl::new;
-    }
-
     // this method *must* remain async
     // in order to protect the scope of the Deployment#instance we cannot elide the task (return it early)
     // if the task is returned early and not awaited, than it is possible for any code that runs before the eventual await
