@@ -4,5 +4,5 @@ overlays:
 - ./build-templates
 pluginFile: src/main/resources/com/pulumi/aws-apigateway/plugin.json
 schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-apigateway/v0.0.7/schema.yaml
-version: v0.0.7
+version: 0.0.7
 versionFile: src/main/resources/com/pulumi/aws-apigateway/version.txt

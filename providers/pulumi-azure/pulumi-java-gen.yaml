@@ -1,5 +1,5 @@
 artifactID: azure
-version: v5.5.0
+version: 5.5.0
 schema: https://raw.githubusercontent.com/pulumi/pulumi-azure/v5.5.0/provider/cmd/pulumi-resource-azure/schema.json
 out: sdk/java
 versionFile: src/main/resources/com/pulumi/azure/version.txt
