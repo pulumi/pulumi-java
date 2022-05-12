@@ -20,7 +20,7 @@ import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.test.PulumiTest;

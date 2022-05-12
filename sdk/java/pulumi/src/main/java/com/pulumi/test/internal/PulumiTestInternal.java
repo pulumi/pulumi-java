@@ -3,7 +3,7 @@ package com.pulumi.test.internal;
 import com.pulumi.context.internal.ContextInternal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.Runner;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.test.PulumiTest;
 import com.pulumi.test.mock.EmptyMocks;

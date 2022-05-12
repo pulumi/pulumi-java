@@ -1,4 +1,4 @@
-package com.pulumi.deployment.internal;
+package com.pulumi.test;
 
 import javax.annotation.Nullable;
 
@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
  * Optional settings for tests.
  */
 public class TestOptions {
+
     private final String projectName;
     private final String stackName;
     private final boolean preview;
@@ -31,21 +32,21 @@ public class TestOptions {
     /**
      * Project name. Defaults to <b>"project"</b> if not specified.
      */
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
     /**
      * Stack name. Defaults to <b>"stack"</b> if not specified.
      */
-    public String getStackName() {
+    public String stackName() {
         return this.stackName;
     }
 
     /**
      * Whether the test runs in Preview mode. Defaults to <b>true</b> if not specified.
      */
-    public boolean isPreview() {
+    public boolean preview() {
         return this.preview;
     }
 }

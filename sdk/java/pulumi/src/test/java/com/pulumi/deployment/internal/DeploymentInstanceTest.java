@@ -2,6 +2,7 @@ package com.pulumi.deployment.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import com.pulumi.test.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
@@ -34,9 +35,9 @@ public class DeploymentInstanceTest {
         var state = new DeploymentImpl.DeploymentState(
                 config,
                 DeploymentTests.defaultLogger(),
-                options.getProjectName(),
-                options.getStackName(),
-                options.isPreview(),
+                options.projectName(),
+                options.stackName(),
+                options.preview(),
                 engine,
                 monitor
         );

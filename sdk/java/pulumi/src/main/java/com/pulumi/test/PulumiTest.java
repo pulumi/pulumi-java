@@ -1,7 +1,6 @@
 package com.pulumi.test;
 
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
 
 public interface PulumiTest {

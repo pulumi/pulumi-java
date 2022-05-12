@@ -7,6 +7,7 @@ import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.mock.MonitorMocks;
 import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import com.pulumi.exceptions.RunException;
@@ -267,9 +268,9 @@ public class DeploymentTests {
                 this.state = new DeploymentImpl.DeploymentState(
                         config,
                         this.standardLogger,
-                        options.getProjectName(),
-                        options.getStackName(),
-                        options.isPreview(),
+                        options.projectName(),
+                        options.stackName(),
+                        options.preview(),
                         engine,
                         monitor
                 );

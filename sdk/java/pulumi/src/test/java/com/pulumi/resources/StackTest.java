@@ -7,7 +7,7 @@ import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MonitorMocksTest;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.exceptions.RunException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

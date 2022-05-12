@@ -3,7 +3,6 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
@@ -11,7 +10,7 @@ import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
@@ -19,7 +18,6 @@ import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;

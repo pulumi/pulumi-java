@@ -2,13 +2,11 @@ package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
-import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.deployment.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
