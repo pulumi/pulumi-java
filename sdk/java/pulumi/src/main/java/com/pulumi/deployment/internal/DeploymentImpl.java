@@ -110,7 +110,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final Deserializer deserializer;
     private final Converter converter;
     private final InvokeInternal invoke;
-    private final Call call;
+    private final InternalCall call;
     private final Prepare prepare;
     private final ReadOrRegisterResource readOrRegisterResource;
     private final ReadResource readResource;
@@ -139,7 +139,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.invoke = new InvokeInternal(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
+        this.call = new InternalCall(this.log, state.monitor, this.prepare, this.serialization, this.converter);
         this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
         this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
         this.readOrRegisterResource = new ReadOrRegisterResource(
@@ -617,7 +617,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
-    private final static class Call {
+    private final static class InternalCall implements Call {
 
         private final Log log;
         private final Monitor monitor;
@@ -625,7 +625,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final PropertiesSerializer serialization;
         private final Converter converter;
 
-        public Call(
+        public InternalCall(
                 Log log,
                 Monitor monitor,
                 Prepare prepare,
@@ -639,27 +639,33 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.converter = Objects.requireNonNull(converter);
         }
 
-        void call(String token, CallArgs args) {
+        @Override
+        public void call(String token, CallArgs args) {
             call(token, args, null, CallOptions.Empty);
         }
 
-        void call(String token, CallArgs args, @Nullable Resource self) {
+        @Override
+        public void call(String token, CallArgs args, @Nullable Resource self) {
             call(token, args, self, CallOptions.Empty);
         }
 
-        void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
+        @Override
+        public void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
             new OutputInternal<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
-        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
+        @Override
+        public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
             return call(token, targetType, args, null, CallOptions.Empty);
         }
 
-        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self) {
+        @Override
+        public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self) {
             return call(token, targetType, args, self, CallOptions.Empty);
         }
 
-        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+        @Override
+        public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
             return new OutputInternal<>(callAsync(token, targetType, args, self, options));
         }
 

@@ -2,12 +2,10 @@ package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.TypeShape;
+import com.pulumi.deployment.internal.Call;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.deployment.internal.Invoke;
-import com.pulumi.resources.CallArgs;
-import com.pulumi.resources.Resource;
 import com.pulumi.resources.Stack;
 import com.pulumi.resources.StackOptions;
 
@@ -17,7 +15,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
-public interface Deployment extends Invoke {
+public interface Deployment extends Invoke, Call {
 
     /**
      * The current running deployment instance. This is only available from inside the function
@@ -42,47 +40,11 @@ public interface Deployment extends Invoke {
     String getProjectName();
 
     /**
-     * Whether or not the application is currently being previewed or actually applied.
+     * Whether the application is currently being previewed or actually applied.
      *
      * @return true if application is being applied
      */
     boolean isDryRun();
-
-    /**
-     * Dynamically calls the function {@code token}, which is offered by a provider plugin.
-     * <p>
-     * The result of {@code call} will be an @see {@link Output}{@literal <T>} resolved to the
-     * result value of the provider plugin.
-     * <p>
-     * The {@code args} inputs can be a bag of computed values
-     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.).
-     */
-    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, @Nullable CallOptions options);
-
-    /**
-     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}
-     */
-    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self);
-
-    /**
-     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}
-     */
-    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args);
-
-    /**
-     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
-     */
-    void call(String token, CallArgs args, @Nullable Resource self, @Nullable CallOptions options);
-
-    /**
-     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
-     */
-    void call(String token, CallArgs args, @Nullable Resource self);
-
-    /**
-     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
-     */
-    void call(String token, CallArgs args);
 
     /**
      * An entry-point to a Pulumi application.
