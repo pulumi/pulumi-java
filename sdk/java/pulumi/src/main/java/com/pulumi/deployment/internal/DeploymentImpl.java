@@ -57,7 +57,6 @@ import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Provider.CallRequest;
-import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
@@ -110,7 +109,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final PropertiesSerializer serialization;
     private final Deserializer deserializer;
     private final Converter converter;
-    private final Invoke invoke;
+    private final InvokeInternal invoke;
     private final Call call;
     private final Prepare prepare;
     private final ReadOrRegisterResource readOrRegisterResource;
@@ -137,7 +136,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.serialization = new PropertiesSerializer(this.log);
         this.deserializer = new Deserializer();
         this.converter = new Converter(this.log, this.deserializer);
-        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
+        this.invoke = new InvokeInternal(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
         this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
@@ -425,7 +424,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @ParametersAreNonnullByDefault
-    private final static class Invoke {
+    private final static class InvokeInternal implements Invoke {
 
         private final Log log;
         private final Monitor monitor;
@@ -433,7 +432,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final PropertiesSerializer serialization;
         private final Converter converter;
 
-        private Invoke(
+        private InvokeInternal(
                 Log log,
                 Monitor monitor,
                 FeatureSupport featureSupport,
@@ -1064,7 +1063,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private final Log log;
         private final Runner runner;
-        private final Invoke invoke;
+        private final InvokeInternal invoke;
         private final ReadResource readResource;
         private final RegisterResource registerResource;
         private final Converter converter;
@@ -1073,7 +1072,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private ReadOrRegisterResource(
                 Log log,
                 Runner runner,
-                Invoke invoke,
+                InvokeInternal invoke,
                 ReadResource readResource,
                 RegisterResource registerResource,
                 Converter converter,
