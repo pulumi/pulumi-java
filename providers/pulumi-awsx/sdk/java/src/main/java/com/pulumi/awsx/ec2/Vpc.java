@@ -18,7 +18,6 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="awsx:ec2:Vpc")
@@ -28,136 +27,136 @@ public class Vpc extends com.pulumi.resources.ComponentResource {
      * 
      */
     @Export(name="eips", type=List.class, parameters={Eip.class})
-    private Output</* @Nullable */ List<Eip>> eips;
+    private Output<List<Eip>> eips;
 
     /**
      * @return The EIPs for any NAT Gateways for the VPC. If no NAT Gateways are specified, this will be an empty list.
      * 
      */
-    public Output<Optional<List<Eip>>> eips() {
-        return Codegen.optional(this.eips);
+    public Output<List<Eip>> eips() {
+        return this.eips;
     }
     /**
      * The Internet Gateway for the VPC.
      * 
      */
     @Export(name="internetGateway", type=InternetGateway.class, parameters={})
-    private Output</* @Nullable */ InternetGateway> internetGateway;
+    private Output<InternetGateway> internetGateway;
 
     /**
      * @return The Internet Gateway for the VPC.
      * 
      */
-    public Output<Optional<InternetGateway>> internetGateway() {
-        return Codegen.optional(this.internetGateway);
+    public Output<InternetGateway> internetGateway() {
+        return this.internetGateway;
     }
     @Export(name="isolatedSubnetIds", type=List.class, parameters={String.class})
-    private Output</* @Nullable */ List<String>> isolatedSubnetIds;
+    private Output<List<String>> isolatedSubnetIds;
 
-    public Output<Optional<List<String>>> isolatedSubnetIds() {
-        return Codegen.optional(this.isolatedSubnetIds);
+    public Output<List<String>> isolatedSubnetIds() {
+        return this.isolatedSubnetIds;
     }
     /**
      * The NAT Gateways for the VPC. If no NAT Gateways are specified, this will be an empty list.
      * 
      */
     @Export(name="natGateways", type=List.class, parameters={NatGateway.class})
-    private Output</* @Nullable */ List<NatGateway>> natGateways;
+    private Output<List<NatGateway>> natGateways;
 
     /**
      * @return The NAT Gateways for the VPC. If no NAT Gateways are specified, this will be an empty list.
      * 
      */
-    public Output<Optional<List<NatGateway>>> natGateways() {
-        return Codegen.optional(this.natGateways);
+    public Output<List<NatGateway>> natGateways() {
+        return this.natGateways;
     }
     @Export(name="privateSubnetIds", type=List.class, parameters={String.class})
-    private Output</* @Nullable */ List<String>> privateSubnetIds;
+    private Output<List<String>> privateSubnetIds;
 
-    public Output<Optional<List<String>>> privateSubnetIds() {
-        return Codegen.optional(this.privateSubnetIds);
+    public Output<List<String>> privateSubnetIds() {
+        return this.privateSubnetIds;
     }
     @Export(name="publicSubnetIds", type=List.class, parameters={String.class})
-    private Output</* @Nullable */ List<String>> publicSubnetIds;
+    private Output<List<String>> publicSubnetIds;
 
-    public Output<Optional<List<String>>> publicSubnetIds() {
-        return Codegen.optional(this.publicSubnetIds);
+    public Output<List<String>> publicSubnetIds() {
+        return this.publicSubnetIds;
     }
     /**
      * The Route Table Associations for the VPC.
      * 
      */
     @Export(name="routeTableAssociations", type=List.class, parameters={RouteTableAssociation.class})
-    private Output</* @Nullable */ List<RouteTableAssociation>> routeTableAssociations;
+    private Output<List<RouteTableAssociation>> routeTableAssociations;
 
     /**
      * @return The Route Table Associations for the VPC.
      * 
      */
-    public Output<Optional<List<RouteTableAssociation>>> routeTableAssociations() {
-        return Codegen.optional(this.routeTableAssociations);
+    public Output<List<RouteTableAssociation>> routeTableAssociations() {
+        return this.routeTableAssociations;
     }
     /**
      * The Route Tables for the VPC.
      * 
      */
     @Export(name="routeTables", type=List.class, parameters={RouteTable.class})
-    private Output</* @Nullable */ List<RouteTable>> routeTables;
+    private Output<List<RouteTable>> routeTables;
 
     /**
      * @return The Route Tables for the VPC.
      * 
      */
-    public Output<Optional<List<RouteTable>>> routeTables() {
-        return Codegen.optional(this.routeTables);
+    public Output<List<RouteTable>> routeTables() {
+        return this.routeTables;
     }
     /**
      * The Routes for the VPC.
      * 
      */
     @Export(name="routes", type=List.class, parameters={Route.class})
-    private Output</* @Nullable */ List<Route>> routes;
+    private Output<List<Route>> routes;
 
     /**
      * @return The Routes for the VPC.
      * 
      */
-    public Output<Optional<List<Route>>> routes() {
-        return Codegen.optional(this.routes);
+    public Output<List<Route>> routes() {
+        return this.routes;
     }
     /**
      * The VPC&#39;s subnets.
      * 
      */
     @Export(name="subnets", type=List.class, parameters={Subnet.class})
-    private Output</* @Nullable */ List<Subnet>> subnets;
+    private Output<List<Subnet>> subnets;
 
     /**
      * @return The VPC&#39;s subnets.
      * 
      */
-    public Output<Optional<List<Subnet>>> subnets() {
-        return Codegen.optional(this.subnets);
+    public Output<List<Subnet>> subnets() {
+        return this.subnets;
     }
     /**
      * The VPC.
      * 
      */
     @Export(name="vpc", type=com.pulumi.aws.ec2.Vpc.class, parameters={})
-    private Output</* @Nullable */ com.pulumi.aws.ec2.Vpc> vpc;
+    private Output<com.pulumi.aws.ec2.Vpc> vpc;
 
     /**
      * @return The VPC.
      * 
      */
-    public Output<Optional<com.pulumi.aws.ec2.Vpc>> vpc() {
-        return Codegen.optional(this.vpc);
+    public Output<com.pulumi.aws.ec2.Vpc> vpc() {
+        return this.vpc;
     }
     @Export(name="vpcId", type=String.class, parameters={})
-    private Output</* @Nullable */ String> vpcId;
+    private Output<String> vpcId;
 
-    public Output<Optional<String>> vpcId() {
-        return Codegen.optional(this.vpcId);
+    public Output<String> vpcId() {
+        return this.vpcId;
     }
 
     /**
