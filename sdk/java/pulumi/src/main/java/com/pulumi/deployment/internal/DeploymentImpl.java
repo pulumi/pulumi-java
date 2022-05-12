@@ -1732,6 +1732,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
+        public CompletableFuture<Integer> registerAndRunAsync(Runnable callback) {
+            try {
+                callback.run(); // this invokes the user code that supplies the future
+            } catch (Exception ex) {
+                return handleExceptionAsync(ex);
+            }
+
+            return whileRunningAsync();
+        }
+
+        @Override
         public <T> void registerTask(String description, CompletableFuture<T> task) {
             Objects.requireNonNull(description);
             Objects.requireNonNull(task);

@@ -45,9 +45,27 @@ public interface Runner {
      */
     <T> void registerTask(String description, CompletableFuture<T> task);
 
+    @Deprecated
     CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback);
 
+    @Deprecated
     CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options);
 
+    @Deprecated
     <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
+
+    /**
+     * Run the callback and start the main loop (handling any errors)
+     * and go through all the registered tasks in a sequence:
+     * <ol>
+     *     <li>run the callback handling any errors</li>
+     *     <li>start the runner loop</li>
+     *     <li>run until all registered futures in the list complete successfully, or any future throws an exception</li>
+     * </ol>
+     * @return exit a status code, one of: {@link #ProcessExitedSuccessfully},
+     *         {@link #ProcessExitedAfterLoggingUserActionableMessage},
+     *         {@link #ProcessExitedBeforeLoggingUserActionableMessage}
+     * @see #registerTask(String, CompletableFuture)
+     */
+    CompletableFuture<Integer> registerAndRunAsync(Runnable callback);
 }
