@@ -48,7 +48,7 @@ type gradleTemplateContext struct {
 	ProjectDescription   string
 	ProjectInceptionYear string
 	Dependencies         map[string]string
-	DeveloperId          string
+	DeveloperID          string
 	DeveloperName        string
 	DeveloperEmail       string
 	LicenceName          string
@@ -63,7 +63,7 @@ func newGradleTemplateContext(
 	ctx := gradleTemplateContext{
 		Version:       pkg.Version.String(),
 		ProjectURL:    pkg.Repository,
-		ProjectGitURL: formatGitUrl(pkg.Repository),
+		ProjectGitURL: formatGitURL(pkg.Repository),
 	}
 
 	if packageInfo.Packages != nil {
@@ -88,7 +88,7 @@ func newGradleTemplateContext(
 		pkg.Homepage == "https://pulumi.io" {
 		ctx.ArtifactID = pkg.Name
 		ctx.GroupID = "com.pulumi"
-		ctx.DeveloperId = "pulumi"
+		ctx.DeveloperID = "pulumi"
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
 		ctx.ProjectDescription = pkg.Description
@@ -103,7 +103,7 @@ func newGradleTemplateContext(
 	return ctx
 }
 
-func formatGitUrl(url string) string {
+func formatGitURL(url string) string {
 	if strings.HasPrefix(url, "https://github.com/") {
 		return fmt.Sprintf("git@github.com/%s.git",
 			strings.TrimPrefix(url, "https://github.com/"))

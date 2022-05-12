@@ -23,7 +23,7 @@ func TestNewGradleTemplateContext(t *testing.T) {
 	assert.Equal(t, "2022", tctx.ProjectInceptionYear)
 	assert.Equal(t, "com.pulumi.eks", tctx.RootProjectName)
 	assert.Equal(t, "pulumi-eks", tctx.ProjectName)
-	assert.Equal(t, "pulumi", tctx.DeveloperId)
+	assert.Equal(t, "pulumi", tctx.DeveloperID)
 	assert.Equal(t, "support@pulumi.com", tctx.DeveloperEmail)
 	assert.Equal(t, "The Apache License, Version 2.0", tctx.LicenceName)
 	assert.Equal(t, "http://www.apache.org/licenses/LICENSE-2.0.txt", tctx.LicenceURL)
