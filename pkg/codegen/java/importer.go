@@ -18,10 +18,8 @@ type PropertyInfo struct {
 
 // PackageInfo represents a Java language-specific info for a package.
 type PackageInfo struct {
-	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
-	Packages               map[string]string `json:"packages,omitempty"`
-	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
-	BasePackage            string            `json:"basePackage"`
+	Packages    map[string]string `json:"packages,omitempty"`
+	BasePackage string            `json:"basePackage"`
 
 	// If set to "gradle" generates a basic set of Gradle build files.
 	BuildFiles string `json:"buildFiles"`

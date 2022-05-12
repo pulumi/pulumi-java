@@ -15,6 +15,7 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/blang/semver"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v3"
 
@@ -36,10 +37,58 @@ type Config struct {
 }
 
 func main() {
-	config := flag.String("config", "pulumi-java-gen.yaml", "path to pulumi-java-gen.yaml")
+	config := flag.String("config", "", "path to a YAML-encoded Config file; "+
+		"if this option is set others take no effect")
+
+	version := flag.String("version", "", "semantic version for the package")
+
+	schema := flag.String("schema", "", "URL or local path to a schema, see "+
+		"https://www.pulumi.com/docs/guides/pulumi-packages/schema/")
+
+	override := flag.String("override", "", "path to a file with overrides for .language.java, see "+
+		"https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific-extensions")
+
+	out := flag.String("out", "", "output path")
+
 	flag.Parse()
 
-	if err := generateJava(*config); err != nil {
+	var rootDir string
+	var cfg *Config
+
+	if config != nil && *config != "" {
+		var err error
+		rootDir, err = filepath.Abs(filepath.Dir(*config))
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		cfg, err = parseConfig(*config)
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		var err error
+		rootDir, err = os.Getwd()
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		cfg = &Config{
+			Schema:  *schema,
+			Out:     *out,
+			Version: *version,
+		}
+
+		if override != nil && *override != "" {
+			pkgInfo, err := parsePackageInfoOverride(*override)
+			if err != nil {
+				log.Fatal(err)
+			}
+			cfg.PackageInfo = pkgInfo
+		}
+	}
+
+	if err := generateJava(rootDir, *cfg); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -68,6 +117,18 @@ func parseConfig(path string) (*Config, error) {
 				"-", "_"))
 	}
 	return &cfg, nil
+}
+
+func parsePackageInfoOverride(path string) (interface{}, error) {
+	bytes, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("Failed to read language override from %s: %w", path, err)
+	}
+	var override interface{}
+	if err := json.Unmarshal(bytes, &override); err != nil {
+		return nil, fmt.Errorf("Failed to parse language override from %s: %w", path, err)
+	}
+	return &override, nil
 }
 
 func readPackageSchema(path string) (*pschema.PackageSpec, error) {
@@ -115,17 +176,7 @@ func convertPackageInfo(mapParsedFromYaml interface{}) (javagen.PackageInfo, err
 	return result, nil
 }
 
-func generateJava(configFile string) error {
-	rootDir, err := filepath.Abs(filepath.Dir(configFile))
-	if err != nil {
-		return err
-	}
-
-	cfg, err := parseConfig(configFile)
-	if err != nil {
-		return err
-	}
-
+func generateJava(rootDir string, cfg Config) error {
 	rawPkgSpec, err := readPackageSchema(cfg.Schema)
 	if err != nil {
 		return fmt.Errorf("failed to read schema from %s: %w", cfg.Schema, err)
@@ -141,6 +192,9 @@ func generateJava(configFile string) error {
 		return fmt.Errorf("failed to import Pulumi schema: %w", err)
 	}
 
+	version := semver.MustParse(cfg.Version)
+	pkg.Version = &version
+
 	pkgInfo, err := convertPackageInfo(cfg.PackageInfo)
 	if err != nil {
 		return err
@@ -148,7 +202,7 @@ func generateJava(configFile string) error {
 
 	pkg.Language["java"] = pkgInfo
 
-	extraFiles, err := readOverlays(rootDir, *cfg)
+	extraFiles, err := readOverlays(rootDir, cfg)
 	if err != nil {
 		return err
 	}
@@ -169,7 +223,14 @@ func generateJava(configFile string) error {
 		}
 	}
 
-	if cfg.VersionFile != "" {
+	if cfg.VersionFile == "" {
+		parts := strings.Split(pkgInfo.BasePackageOrDefault(), ".")
+		cfg.VersionFile = filepath.Join(append(
+			[]string{"src", "main", "resources"},
+			append(parts, pkg.Name, "version.txt")...)...)
+	}
+
+	{
 		f := filepath.Join(outDir, cfg.VersionFile)
 		bytes := []byte(cfg.Version)
 		if err := emitFile(f, bytes); err != nil {
@@ -177,13 +238,14 @@ func generateJava(configFile string) error {
 		}
 	}
 
-	// TODO(t0yv0): Curious, should this be part of GeneratePackage rather than pulumi-java-gen?
-	//              I think that everything under GeneratePackage will end up shipping as part of machinery
-	//              the users will use to build Pulumi Packages (for Java).
-	//              On the other hand, pulumi-java-gen is internal repository helper for us in here.
-	//              I think the plugin.json is something quite official so perhaps we can move?
-	// TODO(pprazak): Would that also include version.txt above? The files are used together.
-	if cfg.PluginFile != "" {
+	if cfg.PluginFile == "" {
+		parts := strings.Split(pkgInfo.BasePackageOrDefault(), ".")
+		cfg.PluginFile = filepath.Join(append(
+			[]string{"src", "main", "resources"},
+			append(parts, pkg.Name, "plugin.json")...)...)
+	}
+
+	{
 		pulumiPlugin := &plugin.PulumiPluginJSON{
 			Resource: true,
 			Name:     pkg.Name,
@@ -198,13 +260,6 @@ func generateJava(configFile string) error {
 		}
 		if err := emitFile(f, bytes); err != nil {
 			return fmt.Errorf("failed to generate plugin file at %s: %w", f, err)
-		}
-	}
-
-	if pkgInfo.BuildFiles == "gradle" {
-		if err := emitFile(filepath.Join(outDir, "gradle.properties"),
-			[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
-			return fmt.Errorf("failed to generate gradle.properties: %w", err)
 		}
 	}
 

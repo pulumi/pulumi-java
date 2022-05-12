@@ -40,7 +40,6 @@ type modContext struct {
 	rootPackageName        string
 	basePackageName        string
 	packages               map[string]string
-	dictionaryConstructors bool
 	configClassPackageName string
 	classQueue             *classQueue
 }
@@ -2136,16 +2135,15 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				pkgName += "." + packageName(info.Packages, modName)
 			}
 			mod = &modContext{
-				pkg:                    p,
-				mod:                    modName,
-				tool:                   tool,
-				packageName:            pkgName,
-				rootPackageName:        rootPackage,
-				basePackageName:        basePackage,
-				packages:               info.Packages,
-				propertyNames:          propertyNames,
-				dictionaryConstructors: info.DictionaryConstructors,
-				classQueue:             newClassQueue(),
+				pkg:             p,
+				mod:             modName,
+				tool:            tool,
+				packageName:     pkgName,
+				rootPackageName: rootPackage,
+				basePackageName: basePackage,
+				packages:        info.Packages,
+				propertyNames:   propertyNames,
+				classQueue:      newClassQueue(),
 			}
 
 			if modName != "" {
@@ -2250,51 +2248,6 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 	return resources, nil
 }
 
-// genGradleProject generates gradle files
-func genGradleProject(pkg *schema.Package,
-	basePackageName string,
-	packageName string,
-	packageInfo PackageInfo,
-	files fs) error {
-	genSettingsFile, err := genSettingsFile(basePackageName + packageName)
-	if err != nil {
-		return err
-	}
-	files.add("settings.gradle", genSettingsFile)
-	genBuildFile, err := genBuildFile(pkg.Name, basePackageName, packageInfo)
-	if err != nil {
-		return err
-	}
-	files.add("build.gradle", genBuildFile)
-	return nil
-}
-
-// genSettingsFile emits settings.gradle
-func genSettingsFile(packageName string) ([]byte, error) {
-	w := &bytes.Buffer{}
-	err := javaSettingsTemplate.Execute(w, javaSettingsTemplateContext{
-		PackageName: packageName,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return w.Bytes(), nil
-}
-
-// genBuildFile emits build.gradle
-func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
-	w := &bytes.Buffer{}
-	err := javaBuildTemplate.Execute(w, javaBuildTemplateContext{
-		Name:            name,
-		BasePackageName: strings.TrimSuffix(basePackageName, "."),
-		PackageInfo:     pkgInfo,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return w.Bytes(), nil
-}
-
 func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
@@ -2313,16 +2266,10 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
+	// Finally, emit the build files if requested.
 	switch info.BuildFiles {
 	case "gradle":
-		// Finally, emit the package metadata.
-		if err := genGradleProject(
-			pkg,
-			info.BasePackageOrDefault(),
-			packageName(info.Packages, pkg.Name),
-			*info,
-			files,
-		); err != nil {
+		if err := genGradleProject(pkg, info, files); err != nil {
 			return nil, err
 		}
 		return files, nil
