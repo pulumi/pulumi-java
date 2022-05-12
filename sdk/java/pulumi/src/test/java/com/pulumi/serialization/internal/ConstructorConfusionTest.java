@@ -6,8 +6,7 @@ import com.pulumi.core.Tuples;
 import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
-import com.pulumi.deployment.Mocks;
+import com.pulumi.test.mock.MonitorMocks;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
@@ -41,13 +40,13 @@ public class ConstructorConfusionTest {
         DeploymentTests.cleanupDeploymentMocks();
     }
 
-    public static class ConfusionMocks implements Mocks {
+    public static class ConfusionMocks implements MonitorMocks {
         @Override
-        public CompletableFuture<Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "test:index/MinifiedConfigMap":
-                    return CompletableFuture.completedFuture(Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of()));
+                    return CompletableFuture.completedFuture(new ResourceResult(Optional.of("i-1234567890abcdef0"), ImmutableMap.of()));
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }

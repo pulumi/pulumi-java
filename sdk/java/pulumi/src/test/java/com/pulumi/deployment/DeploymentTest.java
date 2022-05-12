@@ -28,7 +28,7 @@ public class DeploymentTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
+            .setMocks(new MonitorMocksTest.MyMocks())
             .setSpyGlobalInstance();
     }
 

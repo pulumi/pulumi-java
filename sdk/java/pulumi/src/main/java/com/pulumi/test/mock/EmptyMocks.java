@@ -1,20 +1,16 @@
 package com.pulumi.test.mock;
 
-import com.pulumi.core.Tuples;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
-import com.pulumi.deployment.Mocks;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static java.util.Objects.requireNonNull;
 
-public class EmptyMocks implements Mocks {
+public class EmptyMocks implements MonitorMocks {
 
     @Override
-    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
         requireNonNull(args.type);
         switch (args.type) {
             default:

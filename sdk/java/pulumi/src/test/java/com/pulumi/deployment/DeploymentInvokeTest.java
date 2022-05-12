@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,9 +36,9 @@ public class DeploymentInvokeTest {
     void testCustomInvokes() {
         DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
-                .setMocks(new Mocks() {
+                .setMocks(new MonitorMocks() {
                     @Override
-                    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         return CompletableFuture.completedFuture(null);
                     }
 

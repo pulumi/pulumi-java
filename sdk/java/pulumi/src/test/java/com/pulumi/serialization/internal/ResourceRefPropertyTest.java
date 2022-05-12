@@ -10,8 +10,6 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
-import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.ComponentResource;
@@ -21,6 +19,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -348,7 +347,7 @@ class ResourceRefPropertyTest {
         }
     }
 
-    static class MyMocks implements Mocks {
+    static class MyMocks implements MonitorMocks {
         private final boolean isPreview;
 
         MyMocks(boolean isPreview) {
@@ -361,18 +360,18 @@ class ResourceRefPropertyTest {
         }
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             Objects.requireNonNull(args.type);
             switch (args.type) {
                 case "test:index:resource":
                 case "test:missing:resource":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
+                            new ResourceResult(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
                     );
                 case "test:index:component":
                 case "test:missing:component":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.empty(), ImmutableMap.<String, Object>of())
+                            new ResourceResult(Optional.empty(), ImmutableMap.<String, Object>of())
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));

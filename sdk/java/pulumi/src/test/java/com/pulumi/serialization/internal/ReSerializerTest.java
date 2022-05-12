@@ -3,7 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.gson.JsonParser;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputData;
-import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.MonitorMocksTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DynamicNode;
@@ -31,7 +31,7 @@ class ReSerializerTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
+                .setMocks(new MonitorMocksTest.MyMocks())
                 .setMockGlobalInstance();
     }
 

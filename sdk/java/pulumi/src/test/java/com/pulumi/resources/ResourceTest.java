@@ -5,10 +5,9 @@ import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
-import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -72,7 +71,7 @@ public class ResourceTest {
         }
     }
 
-    static class MyMocks implements Mocks {
+    static class MyMocks implements MonitorMocks {
 
         @Override
         public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
@@ -80,13 +79,13 @@ public class ResourceTest {
         }
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             Objects.requireNonNull(args.type);
             switch (args.type) {
                 case "pulumi:providers:test":
                 case "test:a/b:c":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.empty(), ImmutableMap.<String, Object>of())
+                            new ResourceResult(Optional.empty(), ImmutableMap.<String, Object>of())
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));

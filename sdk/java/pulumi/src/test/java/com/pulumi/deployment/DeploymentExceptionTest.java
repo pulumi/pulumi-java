@@ -5,6 +5,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.exceptions.RunException;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -48,7 +49,7 @@ public class DeploymentExceptionTest {
 
     public static class MyIncorrectStack extends Stack {
         public MyIncorrectStack() {
-            var instance = new MocksTest.Instance("i1", null, null);
+            var instance = new MonitorMocksTest.Instance("i1", null, null);
             var out = instance.getUrn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();
         }
@@ -57,10 +58,10 @@ public class DeploymentExceptionTest {
     static class DeliberateException extends IllegalStateException {
     }
 
-    static class MyIncorrectMocks implements Mocks {
+    static class MyIncorrectMocks implements MonitorMocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":

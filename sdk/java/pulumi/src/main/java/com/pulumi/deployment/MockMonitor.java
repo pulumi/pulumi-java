@@ -11,9 +11,9 @@ import com.pulumi.resources.Resource;
 import com.pulumi.resources.Stack.StackInternal;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
+import com.pulumi.test.mock.MonitorMocks;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.ReadResourceResponse;
@@ -33,14 +33,14 @@ import java.util.concurrent.CompletableFuture;
 
 public class MockMonitor implements Monitor {
 
-    private final Mocks mocks;
+    private final MonitorMocks mocks;
     private final Serializer serializer;
     private final Deserializer deserializer;
 
     private final Map<String, ImmutableMap<String, Object>> registeredResources;
     public final List<Resource> resources;
 
-    public MockMonitor(Mocks mocks, Log log) {
+    public MockMonitor(MonitorMocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
         this.serializer = new Serializer(log);
         this.deserializer = new Deserializer();
@@ -92,22 +92,20 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
-        return mocks.newResourceAsync(new MockResourceArgs(
+        return mocks.newResourceAsync(new MonitorMocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getProperties()),
                 request.getProvider(),
                 request.getId()
-        )).thenCompose(idAndState -> {
-            var id = idAndState.t1;
-            var state = idAndState.t2;
+        )).thenCompose(result -> {
             var urn = Urn.create(request.getParent(), request.getType(), request.getName());
-            return serializeToMap(state)
+            return serializeToMap(result.state)
                     .thenApply(serializedState -> {
                         var builder = ImmutableMap.<String, Object>builder();
                         builder.put("urn", urn);
-                        if (id.isPresent()) {
-                            builder.put("id", id.get());
+                        if (result.id.isPresent()) {
+                            builder.put("id", result.id.get());
                         }
                         builder.put("state", serializedState);
 
@@ -134,26 +132,24 @@ public class MockMonitor implements Monitor {
             );
         }
 
-        return mocks.newResourceAsync(new MockResourceArgs(
+        return mocks.newResourceAsync(new MonitorMocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getObject()),
                 request.getProvider(),
                 request.getImportId()
-        )).thenCompose(idAndState -> {
-            var id = idAndState.t1;
-            var state = idAndState.t2;
+        )).thenCompose(result -> {
             var urn = Urn.create(request.getParent(), request.getType(), request.getName());
-            return serializeToMap(state)
+            return serializeToMap(result.state)
                     .thenApply(serializedState -> {
                         registeredResources.put(urn, ImmutableMap.of(
                                 "urn", urn,
-                                "id", id.isPresent() ? id : request.getImportId(),
+                                "id", result.id.isPresent() ? result.id : request.getImportId(),
                                 "state", serializedState
                         ));
 
                         return RegisterResourceResponse.newBuilder()
-                                .setId(id.isPresent() ? id.get() : request.getImportId())
+                                .setId(result.id.isPresent() ? result.id.get() : request.getImportId())
                                 .setUrn(urn)
                                 .setObject(Serializer.createStruct(serializedState))
                                 .build();

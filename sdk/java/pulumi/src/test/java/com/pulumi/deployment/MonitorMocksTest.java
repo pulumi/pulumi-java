@@ -19,6 +19,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.mock.MonitorMocks;
 import io.grpc.Status;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -37,7 +38,7 @@ import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MocksTest {
+public class MonitorMocksTest {
 
     @AfterEach
     public void printInternalErrorCount() {
@@ -274,19 +275,19 @@ public class MocksTest {
         }
     }
 
-    public static class MyMocks implements Mocks {
+    public static class MyMocks implements MonitorMocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", "203.0.113.12"))
+                            new ResourceResult(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", "203.0.113.12"))
                     );
                 case "pkg:index:MyCustom":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of(args.name + "_id"), args.inputs)
+                            new ResourceResult(Optional.of(args.name + "_id"), args.inputs)
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
@@ -299,10 +300,10 @@ public class MocksTest {
         }
     }
 
-    public static class ThrowingMocks implements Mocks {
+    public static class ThrowingMocks implements MonitorMocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             throw new RuntimeException("Not used");
         }
 
@@ -312,19 +313,19 @@ public class MocksTest {
         }
     }
 
-    public static class MyInvalidMocks implements Mocks {
+    public static class MyInvalidMocks implements MonitorMocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", 0xcb00710c))
+                            new ResourceResult(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", 0xcb00710c))
                     );
                 case "pkg:index:MyCustom":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of(args.name + "_id"), args.inputs)
+                            new ResourceResult(Optional.of(args.name + "_id"), args.inputs)
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));

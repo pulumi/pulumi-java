@@ -30,7 +30,7 @@ public class DeploymentRunnerTest {
     @Test
     void testTerminatesEarlyOnException() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
+            .setMocks(new MonitorMocksTest.MyMocks())
             .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
@@ -68,7 +68,7 @@ public class DeploymentRunnerTest {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
+            .setMocks(new MonitorMocksTest.MyMocks())
             .setStandardLogger(logger)
             .setSpyGlobalInstance();
 

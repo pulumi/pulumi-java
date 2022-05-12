@@ -7,7 +7,7 @@ import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
-import com.pulumi.deployment.Mocks;
+import com.pulumi.test.mock.MonitorMocks;
 import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import com.pulumi.exceptions.RunException;
 import com.pulumi.resources.Resource;
@@ -162,7 +162,7 @@ public class DeploymentTests {
         @Nullable
         private Log log;
         @Nullable
-        private Mocks mocks;
+        private MonitorMocks mocks;
 
         private DeploymentMockBuilder() { /* Empty */ }
 
@@ -194,7 +194,7 @@ public class DeploymentTests {
             return this;
         }
 
-        public DeploymentMockBuilder setMocks(Mocks mocks) {
+        public DeploymentMockBuilder setMocks(MonitorMocks mocks) {
             requireNonNull(mocks);
             this.mocks = mocks;
             return this;

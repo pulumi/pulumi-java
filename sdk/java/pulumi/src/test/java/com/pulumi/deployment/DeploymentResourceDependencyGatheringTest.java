@@ -10,6 +10,7 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -65,7 +66,7 @@ public class DeploymentResourceDependencyGatheringTest {
         }
     }
 
-    static class MyMocks implements Mocks {
+    static class MyMocks implements MonitorMocks {
         private final boolean isPreview;
 
         MyMocks(boolean isPreview) {
@@ -78,11 +79,11 @@ public class DeploymentResourceDependencyGatheringTest {
         }
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             Objects.requireNonNull(args.type);
             if ("test:DeploymentResourceDependencyGatheringTests:resource".equals(args.type)) {
                 return CompletableFuture.completedFuture(
-                        Tuples.of(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
+                        new ResourceResult(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
                 );
             }
             throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));

@@ -6,7 +6,7 @@ import com.pulumi.core.Tuples;
 import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.MonitorMocksTest;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.exceptions.RunException;
 import org.junit.jupiter.api.AfterEach;
@@ -90,7 +90,7 @@ class StackTest {
 
     private <T extends Stack> Tuple2<T, Map<String, Output<?>>> run(Supplier<T> factory) {
         var mock = DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
+                .setMocks(new MonitorMocksTest.MyMocks())
                 .setOptions(new TestOptions("TestProject", "TestStack"))
                 .setSpyGlobalInstance();
 
