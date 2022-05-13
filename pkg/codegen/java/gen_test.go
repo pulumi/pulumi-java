@@ -3,6 +3,7 @@
 package java
 
 import (
+	"os"
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -112,14 +113,15 @@ func TestGeneratePackage(t *testing.T) {
 }
 
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+	version := os.Getenv("PULUMI_JAVA_SDK_VERSION")
+	if version == "" {
+		version = "0.0.1"
+	}
+
 	pkgInfo := PackageInfo{
 		BuildFiles: "gradle",
 		Packages: map[string]string{
-			// Here 0.0.1 is chosen to test against
-			// in-source SDK from Maven Local. The
-			// versions published to Maven Central start
-			// from 0.1.0.
-			"com.pulumi:pulumi": "0.0.1",
+			"com.pulumi:pulumi": version,
 
 			// There are some sprinkled unit tests that
 			// complement testing the generated code at
