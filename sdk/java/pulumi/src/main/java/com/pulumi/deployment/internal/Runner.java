@@ -1,12 +1,8 @@
 package com.pulumi.deployment.internal;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.resources.Stack;
-import com.pulumi.resources.StackOptions;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;

@@ -21,8 +21,8 @@ import com.pulumi.test.TestResult;
 import com.pulumi.test.mock.EmptyMocks;
 import com.pulumi.test.mock.MockEngine;
 import com.pulumi.test.mock.MockMonitor;
+import com.pulumi.test.mock.MockRunner;
 import com.pulumi.test.mock.MonitorMocks;
-import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -328,14 +328,14 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     }
 
     public static Log mockLog() {
-        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
+        return mockLog(defaultLogger(), MockEngine::new);
     }
 
     public static Log mockLog(Logger logger) {
-        return mockLog(logger, () -> Mockito.mock(Engine.class));
+        return mockLog(logger, MockEngine::new);
     }
 
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
-        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
+        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, MockRunner::new, engine));
     }
 }
