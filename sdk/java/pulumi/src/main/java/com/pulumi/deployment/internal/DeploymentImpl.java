@@ -1581,7 +1581,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
-        public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JAVA_TASK_TIMEOUT_IN_MILLIS").or(-1);
 
         public final DeploymentImpl.Config config;
         public final String projectName;
@@ -1742,19 +1741,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             // we don't need the result here, just the future itself
             CompletableFuture<Void> key = task.thenApply(__ -> null);
-            if (DeploymentState.TaskTimeoutInMillis > 0) {
-                key = key.orTimeout(DeploymentState.TaskTimeoutInMillis, TimeUnit.MILLISECONDS).handle(
-                        (value, throwable) -> {
-                            if (throwable != null) {
-                                throw new TaskFailure(String.format(
-                                        "Task (%s) '%s' failed with exception: %s",
-                                        task, description, throwable
-                                ), throwable);
-                            }
-                            return value;
-                        }
-                );
-            }
 
             // We may get several of the same tasks with different descriptions. That can
             // happen when the runtime reuses cached tasks that it knows are value-identical
@@ -1901,12 +1887,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             pid, command, Exceptions.getStackTrace(exception)))
                     .thenApply(exitMessageAndCode);
 
-        }
-    }
-
-    private static final class TaskFailure extends RuntimeException {
-        public TaskFailure(String message, Throwable cause) {
-            super(message, cause);
         }
     }
 
