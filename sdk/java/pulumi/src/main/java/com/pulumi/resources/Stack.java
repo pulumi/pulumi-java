@@ -14,10 +14,16 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static java.util.Objects.requireNonNull;
-
 @ParametersAreNonnullByDefault
-public class Stack extends ComponentResource {
+public final class Stack extends ComponentResource {
+
+    /**
+     * The type name that should be used to construct the root component in the tree of Pulumi resources
+     * allocated by a deployment. This must be kept up to date with
+     * "github.com/pulumi/pulumi/sdk/v3/go/common/resource/stack.RootStackType".
+     */
+    @InternalUse
+    public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
     /**
      * The outputs of this stack, if the <code>init</code> callback exited normally.
@@ -25,41 +31,21 @@ public class Stack extends ComponentResource {
     private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
 
     /**
-     * Create a Stack with stack resources defined in derived class constructor.
-     * Also @see {@link #Stack(StackOptions)}
+     * Create a Stack with stack resources created by the <code>init</code> callback.
+     * An instance of this will be automatically created when
+     * {@link com.pulumi.internal.PulumiInternal#runAsync(Consumer)} is called.
      */
-    public Stack() {
-        this(null);
-    }
-
-    /**
-     * Create a Stack with stack resources defined in derived class constructor.
-     *
-     * @param options optional stack options
-     */
-    public Stack(@Nullable StackOptions options) {
+    @InternalUse
+    private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {
         super(
-                StackInternal.RootPulumiStackTypeName,
+                RootPulumiStackTypeName,
                 String.format("%s-%s", Deployment.getInstance().getProjectName(), Deployment.getInstance().getStackName()),
                 convertOptions(options)
         );
         // set a derived class as the deployment stack
         DeploymentInternal.getInstance().setStack(this);
-    }
-
-    /**
-     * Create a Stack with stack resources created by the <code>init</code> callback.
-     * An instance of this will be automatically created when
-     * any @see {@link com.pulumi.internal.PulumiInternal#runAsync(Consumer)} is called.
-     */
-    @InternalUse
-    private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {
-        this(options);
-        try {
-            this.outputs = Output.of(runInitAsync(init));
-        } finally {
-            this.registerOutputs(this.outputs);
-        }
+        this.outputs = Output.of(runInitAsync(init));
+        DeploymentInternal.getInstance().registerResourceOutputs(this, this.outputs);
     }
 
     private static CompletableFuture<Map<String, Output<?>>> runInitAsync(
@@ -121,35 +107,7 @@ public class Stack extends ComponentResource {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final static class StackInternal extends ComponentResourceInternal {
-
-        private final Stack stack;
-
-        private StackInternal(Stack stack) {
-            super(stack);
-            this.stack = requireNonNull(stack);
-        }
-
-        public static StackInternal from(Stack r) {
-            return new StackInternal(r);
-        }
-
-        /**
-         * Validate the values and register them as stack outputs.
-         */
-        @InternalUse
-        public void registerPropertyOutputs() {
-            this.stack.outputs = Output.of(findOutputs(this.stack));
-            this.stack.registerOutputs(this.stack.outputs);
-        }
-
-        /**
-         * The type name that should be used to construct the root component in the tree of Pulumi resources
-         * allocated by a deployment. This must be kept up to date with
-         * "github.com/pulumi/pulumi/sdk/v3/go/common/resource/stack.RootStackType".
-         */
-        @InternalUse
-        public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
+    public final static class StackInternal {
 
         @InternalUse
         public static Stack of(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {

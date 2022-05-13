@@ -7,10 +7,12 @@ import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ContextInternal;
 import com.pulumi.deployment.internal.DeploymentImpl;
-import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.deployment.internal.Engine;
+import com.pulumi.deployment.internal.EngineLogger;
 import com.pulumi.deployment.internal.Invoke;
 import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.test.PulumiTest;
@@ -22,10 +24,12 @@ import com.pulumi.test.mock.MockMonitor;
 import com.pulumi.test.mock.MonitorMocks;
 import org.mockito.Mockito;
 
+import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,6 +47,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     private final Monitor monitor;
 
     private final Invoke invoke;
+    private final RegisterResourceOutputs registerResourceOutputs;
 
     public PulumiTestInternal(
             Runner runner,
@@ -50,6 +55,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             Monitor monitor,
             Log log,
             Invoke invoke,
+            RegisterResourceOutputs registerResourceOutputs,
             ContextInternal stackContext
     ) {
         super(runner, stackContext);
@@ -57,36 +63,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
         this.invoke = requireNonNull(invoke);
-    }
-
-    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-        return new DeploymentImpl.Config(allConfig, configSecretKeys);
-    }
-
-    public static ImmutableMap<String, String> parseConfig(String configJson) {
-        return DeploymentImpl.Config.parseConfig(configJson);
-    }
-
-    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
-        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
-    }
-
-    public static Logger defaultLogger() {
-        var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
-        standardLogger.setLevel(Level.INFO);
-        return standardLogger;
-    }
-
-    public static Log mockLog() {
-        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
-    }
-
-    public static Log mockLog(Logger logger) {
-        return mockLog(logger, () -> Mockito.mock(Engine.class));
-    }
-
-    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
-        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
+        this.registerResourceOutputs = requireNonNull(registerResourceOutputs);
     }
 
     /**
@@ -115,6 +92,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
      */
     public Invoke invoke() {
         return this.invoke;
+    }
+
+    /**
+     * @return return the {@link RegisterResourceOutputs} used by the test
+     */
+    public RegisterResourceOutputs registerResourceOutputs() {
+        return this.registerResourceOutputs;
     }
 
     /**
@@ -167,10 +151,29 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     public static final class Builder implements PulumiTest.Builder {
 
         private final TestOptions options;
-        private MonitorMocks mocks;
-        private Logger standardLogger;
         private boolean useRealRunner;
+
+        // internal details
+        @Nullable
+        private Engine engine;
+        @Nullable
+        private Monitor monitor;
+        @Nullable
+        private MonitorMocks mocks;
+        @Nullable
+        private Log log;
+
+        // very internal details
+        @Nullable
+        private Logger standardLogger;
+        @Nullable
+        private EngineLogger engineLogger;
+        @Nullable
         private DeploymentImpl.Config internalConfig;
+        @Nullable
+        private DeploymentImpl.DeploymentState state;
+        @Nullable
+        private Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
 
         /**
          * @param options the test options to use
@@ -198,9 +201,9 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          *
          * @param allConfig        the configuration key-value map
          * @param configSecretKeys the secret key names
-         * @return this {@link PulumiTest.Builder}
+         * @return this {@link PulumiTestInternal.Builder}
          */
-        public PulumiTest.Builder config(Map<String, String> allConfig, Set<String> configSecretKeys) {
+        public PulumiTestInternal.Builder config(Map<String, String> allConfig, Set<String> configSecretKeys) {
             return internalConfig(new DeploymentImpl.Config(
                     ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
             ));
@@ -210,15 +213,15 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * Set configuration to use for this test
          *
          * @param allConfig the configuration key-value map
-         * @return this {@link PulumiTest.Builder}
+         * @return this {@link PulumiTestInternal.Builder}
          */
-        public PulumiTest.Builder config(Map<String, String> allConfig) {
+        public PulumiTestInternal.Builder config(Map<String, String> allConfig) {
             return internalConfig(new DeploymentImpl.Config(
                     ImmutableMap.copyOf(allConfig), ImmutableSet.of()
             ));
         }
 
-        private PulumiTest.Builder internalConfig(DeploymentImpl.Config internalConfig) {
+        private PulumiTestInternal.Builder internalConfig(DeploymentImpl.Config internalConfig) {
             this.internalConfig = requireNonNull(internalConfig);
             return this;
         }
@@ -233,6 +236,19 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         }
 
         /**
+         * Modify the deployment factory used in the test
+         *
+         * @param deploymentFactory the factory for
+         * @return this {@link PulumiTestInternal.Builder}
+         */
+        public PulumiTest.Builder deploymentFactory(
+                Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
+        ) {
+            this.deploymentFactory = requireNonNull(deploymentFactory);
+            return this;
+        }
+
+        /**
          * {@inheritDoc}
          */
         @Override
@@ -240,29 +256,86 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.standardLogger == null) {
                 this.standardLogger = defaultLogger();
             }
+            if (this.engineLogger == null) {
+                this.engineLogger = new DeploymentImpl.DefaultEngineLogger(
+                        this.standardLogger,
+                        () -> this.state.runner,
+                        () -> this.engine
+                );
+            }
+            if (this.log == null) {
+                this.log = new Log(this.engineLogger);
+            }
             if (this.mocks == null) {
                 this.mocks = new EmptyMocks();
             }
             if (this.internalConfig == null) {
                 this.internalConfig = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
             }
-            var mockBuilder = DeploymentTests.DeploymentMockBuilder.builder()
-                    .setConfig(this.internalConfig)
-                    .setOptions(this.options)
-                    .setMocks(this.mocks)
-                    .setStandardLogger(this.standardLogger);
-            final DeploymentTests.DeploymentMock mock;
+
             if (this.useRealRunner) {
-                mock = mockBuilder.setSpyGlobalInstance();
+                if (this.deploymentFactory == null) {
+                    this.deploymentFactory = DeploymentImpl::new;
+                } else {
+                    throw new IllegalStateException(
+                            "Setter 'deploymentFactory' cannot be used with 'useRealRunner', use one or the other."
+                    );
+                }
             } else {
-                mock = mockBuilder.setMockGlobalInstance();
+                if (this.deploymentFactory == null) {
+                    this.deploymentFactory = MockDeployment::new;
+                }
             }
-            var ctx = PulumiInternal.contextFromDeployment(mock.deployment);
+
+            if (this.state == null) {
+                this.state = new DeploymentImpl.DeploymentState(
+                        this.internalConfig,
+                        this.standardLogger,
+                        options.projectName(),
+                        options.stackName(),
+                        options.preview(),
+                        new MockEngine(),
+                        new MockMonitor(this.mocks, this.log)
+                );
+            }
+
+            var deployment = deploymentFactory.apply(this.state);
+            var ctx = PulumiInternal.contextFromDeployment(state.log, deployment);
             return new PulumiTestInternal(
-                    mock.runner, mock.engine, mock.monitor, mock.log, mock.deployment, ctx
+                    state.runner, state.engine, state.monitor, log,
+                    deployment, deployment, ctx
             );
         }
 
-        // TODO: port com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder
+    }
+
+    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        return new DeploymentImpl.Config(allConfig, configSecretKeys);
+    }
+
+    public static ImmutableMap<String, String> parseConfig(String configJson) {
+        return DeploymentImpl.Config.parseConfig(configJson);
+    }
+
+    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
+        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
+    }
+
+    public static Logger defaultLogger() {
+        var standardLogger = Logger.getLogger(PulumiTestInternal.class.getName());
+        standardLogger.setLevel(Level.INFO);
+        return standardLogger;
+    }
+
+    public static Log mockLog() {
+        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger) {
+        return mockLog(logger, () -> Mockito.mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
+        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
     }
 }

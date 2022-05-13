@@ -3,14 +3,13 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
 import com.pulumi.test.PulumiTest;
 import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -72,13 +71,6 @@ public class ConstructorConfusionTest {
 
         private MinifiedConfigMap(String name, Output<String> id, @Nullable CustomResourceOptions options) {
             super("test:index/MinifiedConfigMap", name, null, options);
-        }
-    }
-
-    @SuppressWarnings("unused") // will be used by reflection
-    public static class ConfusionStack extends Stack {
-        public ConfusionStack() {
-            ResourcePackages.tryConstruct("test:index/MinifiedConfigMap", "0.0.1", "urn:pulumi:stack::project::test:index/MinifiedConfigMap::name");
         }
     }
 }

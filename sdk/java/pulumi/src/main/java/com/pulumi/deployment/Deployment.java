@@ -3,15 +3,16 @@ package com.pulumi.deployment;
 import com.pulumi.deployment.internal.Call;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.Invoke;
+import com.pulumi.deployment.internal.RegisterResourceOutputs;
 
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
-public interface Deployment extends Invoke, Call {
+public interface Deployment extends Invoke, Call, RegisterResourceOutputs {
 
     /**
      * The current running deployment instance. This is only available from inside the function
-     * passed to @see {@link com.pulumi.deployment.internal.Runner#runAsyncFuture(Supplier)} (or its overloads).
+     * passed to @see {@link com.pulumi.deployment.internal.Runner#registerAndRunAsync(Supplier)} (or its overloads).
      *
      * @throws IllegalStateException if called before 'run' was called
      */

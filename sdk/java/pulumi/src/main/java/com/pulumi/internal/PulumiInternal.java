@@ -2,6 +2,7 @@ package com.pulumi.internal;
 
 import com.pulumi.Config;
 import com.pulumi.Context;
+import com.pulumi.Log;
 import com.pulumi.Pulumi;
 import com.pulumi.context.internal.ConfigContextInternal;
 import com.pulumi.context.internal.ContextInternal;
@@ -13,6 +14,10 @@ import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.deployment.internal.DeploymentImpl.DeploymentState;
+import com.pulumi.deployment.internal.DeploymentInstanceHolder;
+import com.pulumi.deployment.internal.DeploymentInstanceInternal;
+import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
 import com.pulumi.resources.Stack;
@@ -42,19 +47,19 @@ public class PulumiInternal implements Pulumi {
 
     @InternalUse
     public static PulumiInternal fromEnvironment() {
-        var deployment = DeploymentImpl.fromEnvironment();
-        var runner = deployment.getRunner();
-        var ctx = contextFromDeployment(deployment);
-        return new PulumiInternal(runner, ctx);
+        var state = DeploymentState.fromEnvironment();
+        var deployment = new DeploymentImpl(state);
+        var ctx = contextFromDeployment(state.log, deployment);
+        return new PulumiInternal(state.runner, ctx);
     }
 
     // TODO: remove after refactoring Deployment
-    protected static ContextInternal contextFromDeployment(DeploymentImpl deployment) {
+    protected static ContextInternal contextFromDeployment(Log log, DeploymentInternal deployment) {
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(deployment));
         var instance = Deployment.getInstance();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
-        var log = deployment.getLog();
         Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
         var config = new ConfigContextInternal(projectName, configFactory);
         var logging = new LoggingContextInternal(log);
@@ -75,11 +80,12 @@ public class PulumiInternal implements Pulumi {
             Function<ContextInternal, Map<String, Output<?>>> stackCallback
     ) {
         // TODO: is there a way to simplify this nesting doll?
-        final Supplier<CompletableFuture<Map<String, Output<?>>>> nestingDoll = () -> CompletableFuture.supplyAsync(
+        final Supplier<CompletableFuture<Map<String, Output<?>>>> nestingDoll =
                 () -> CompletableFuture.supplyAsync(
-                        () -> stackCallback.apply(this.stackContext)
-                )
-        ).thenCompose(Function.identity());
+                        () -> CompletableFuture.supplyAsync(
+                                () -> stackCallback.apply(this.stackContext)
+                        )
+                ).thenCompose(Function.identity());
 
         return runAsyncFuture(nestingDoll, StackOptions.Empty);
     }

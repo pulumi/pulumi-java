@@ -45,7 +45,6 @@ import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
 import com.pulumi.resources.Stack;
-import com.pulumi.resources.Stack.StackInternal;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -94,6 +93,7 @@ import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -101,7 +101,6 @@ import static java.util.stream.Collectors.toSet;
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
-    private final Log log;
     private final FeatureSupport featureSupport;
     private final PropertiesSerializer serialization;
     private final Deserializer deserializer;
@@ -116,45 +115,28 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RootResource rootResource;
 
     @InternalUse
-    DeploymentImpl() {
-        this(DeploymentState.fromEnvironment());
-    }
-
-    // TODO private Deployment(InlineDeploymentSettings settings)
-
-    @InternalUse
     @VisibleForTesting
     public DeploymentImpl(
             DeploymentState state
     ) {
         this.state = Objects.requireNonNull(state);
-        this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
-        this.serialization = new PropertiesSerializer(this.log);
+        this.serialization = new PropertiesSerializer(state.log);
         this.deserializer = new Deserializer();
-        this.converter = new Converter(this.log, this.deserializer);
-        this.invoke = new InvokeInternal(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
+        this.converter = new Converter(state.log, this.deserializer);
+        this.invoke = new InvokeInternal(state.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
-        this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new InternalCall(this.log, state.monitor, this.prepare, this.serialization, this.converter);
-        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
-        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
+        this.prepare = new Prepare(state.log, this.featureSupport, this.rootResource, this.serialization);
+        this.call = new InternalCall(state.log, state.monitor, this.prepare, this.serialization, this.converter);
+        this.readResource = new ReadResource(state.log, this.prepare, state.monitor);
+        this.registerResource = new RegisterResource(state.log, this.prepare, state.monitor);
         this.readOrRegisterResource = new ReadOrRegisterResource(
-                this.log, state.runner, this.invoke, this.readResource,
+                state.log, state.runner, this.invoke, this.readResource,
                 this.registerResource, this.converter, state.isDryRun
         );
-        this.registerResourceOutputs = new RegisterResourceOutputs(
-                this.log, state.runner, state.monitor, this.featureSupport, this.serialization
+        this.registerResourceOutputs = new RegisterResourceOutputsInternal(
+                state.log, state.runner, state.monitor, this.featureSupport, this.serialization
         );
-    }
-
-    @InternalUse
-    @VisibleForTesting
-    public static DeploymentImpl fromEnvironment() {
-        var state = DeploymentState.fromEnvironment();
-        var impl = new DeploymentImpl(state);
-        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
-        return impl;
     }
 
     @Override
@@ -178,10 +160,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     public Runner getRunner() {
         return this.state.runner;
-    }
-
-    public Log getLog() {
-        return this.log;
     }
 
     @Override
@@ -259,9 +237,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         private static final String ConfigSecretKeysEnvKey = "PULUMI_CONFIG_SECRET_KEYS";
 
-        private ImmutableMap<String, String> allConfig;
+        private final ImmutableMap<String, String> allConfig;
 
-        private ImmutableSet<String> configSecretKeys;
+        private final ImmutableSet<String> configSecretKeys;
 
         @InternalUse
         @VisibleForTesting
@@ -272,52 +250,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private static Config parse() {
             return new Config(parseConfig(), parseConfigSecretKeys());
-        }
-
-        /**
-         * Returns a copy of the full config map.
-         */
-        @InternalUse
-        private ImmutableMap<String, String> getAllConfig() {
-            return allConfig;
-        }
-
-        /**
-         * Returns a copy of the config secret keys.
-         */
-        @InternalUse
-        private ImmutableSet<String> configSecretKeys() {
-            return configSecretKeys;
-        }
-
-        /**
-         * Sets a configuration variable.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setConfig(String key, String value) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .put(key, value)
-                    .build();
-        }
-
-        /**
-         * Appends all provided configuration.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setAllConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .putAll(config)
-                    .build();
-            if (secretKeys != null) {
-                this.configSecretKeys = new ImmutableSet.Builder<String>()
-                        .addAll(this.configSecretKeys)
-                        .addAll(secretKeys)
-                        .build();
-            }
         }
 
         public Optional<String> getConfig(String fullKey) {
@@ -1452,7 +1384,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.registerResourceOutputs.registerResourceOutputs(resource, outputs);
     }
 
-    private static final class RegisterResourceOutputs {
+    private static final class RegisterResourceOutputsInternal implements RegisterResourceOutputs {
 
         private final Log log;
         private final Runner runner;
@@ -1460,7 +1392,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final FeatureSupport featureSupport;
         private final PropertiesSerializer serialization;
 
-        private RegisterResourceOutputs(
+        private RegisterResourceOutputsInternal(
                 Log log,
                 Runner runner,
                 Monitor monitor,
@@ -1544,7 +1476,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (StackInternal.RootPulumiStackTypeName.equals(type)) {
+            if (RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1593,19 +1525,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final Monitor monitor;
         public Runner runner; // late init
         public EngineLogger logger; // late init
+        public final Log log;
 
         private final Logger standardLogger;
 
         @InternalUse
         @VisibleForTesting
-        DeploymentState(
+        public DeploymentState(
                 DeploymentImpl.Config config,
                 Logger standardLogger,
                 String projectName,
                 String stackName,
                 boolean isDryRun,
                 Engine engine,
-                Monitor monitor) {
+                Monitor monitor
+        ) {
             this.config = Objects.requireNonNull(config);
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.projectName = Objects.requireNonNull(projectName);
@@ -1616,6 +1550,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // Use Suppliers to avoid problems with cyclic dependencies
             this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
             this.runner = new DefaultRunner(standardLogger, this.logger);
+            this.log = new Log(logger, DeploymentState.ExcessiveDebugOutput);
         }
 
         /**

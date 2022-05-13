@@ -1,18 +1,14 @@
 package com.pulumi.deployment.internal;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
 import com.pulumi.test.PulumiTest;
-import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
+import java.util.concurrent.atomic.AtomicReference;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.mockito.Mockito.mock;
 
 public class DeploymentInstanceTest {
 
@@ -28,34 +24,25 @@ public class DeploymentInstanceTest {
                 .isThrownBy(DeploymentImpl::getInstance)
                 .withMessageContaining("Trying to acquire Deployment#instance before");
 
-        var options = new TestOptions();
-        var engine = mock(Engine.class);
-        var monitor = mock(Monitor.class);
+        var deploymentReference = new AtomicReference<DeploymentImpl>();
+        var mock = PulumiTestInternal.withDefaults()
+                .deploymentFactory(state -> {
+                    var deployment = new DeploymentImpl(state);
+                    deploymentReference.set(deployment);
+                    return deployment;
+                })
+                .build();
 
-        var config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
-        var state = new DeploymentImpl.DeploymentState(
-                config,
-                PulumiTestInternal.defaultLogger(),
-                options.projectName(),
-                options.stackName(),
-                options.preview(),
-                engine,
-                monitor
-        );
-        var deployment = new DeploymentImpl(state);
-
-        var task = DeploymentInternal.createRunnerAndRunAsync(
-                () -> deployment,
-                runner -> {
+        var result = mock.runTestAsync(
+                ctx -> {
                     // try to double-set the Deployment#instance
-                    DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
-                    return CompletableFuture.completedFuture(1);
+                    DeploymentImpl.setInstance(new DeploymentInstanceInternal(deploymentReference.get()));
                 }
         );
 
         // should not throw until awaited
         assertThatExceptionOfType(CompletionException.class)
-                .isThrownBy(task::join)
+                .isThrownBy(() -> { throw result.join().exceptions().get(0); })
                 .withCauseInstanceOf(IllegalStateException.class)
                 .withMessageContaining("Deployment#instance should only be set once");
     }

@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.resources.Stack.StackInternal.RootPulumiStackTypeName;
+import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
 
 public class MockMonitor implements Monitor {
 
