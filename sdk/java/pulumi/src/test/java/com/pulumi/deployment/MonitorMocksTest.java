@@ -11,7 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.InMemoryLogger;
+import com.pulumi.test.internal.InMemoryLogger;
 import com.pulumi.test.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;

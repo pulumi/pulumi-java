@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
 import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.InMemoryLogger;
+import com.pulumi.test.internal.InMemoryLogger;
 import com.pulumi.serialization.internal.ConverterTests.ContainerSize;
 import org.junit.jupiter.api.Test;
 

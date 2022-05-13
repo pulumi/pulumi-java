@@ -1,6 +1,7 @@
 package com.pulumi.deployment.internal;
 
 import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
+import com.pulumi.test.internal.InMemoryLogger;
 import org.junit.jupiter.api.Test;
 
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;

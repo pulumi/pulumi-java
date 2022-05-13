@@ -1,4 +1,6 @@
-package com.pulumi.deployment.internal;
+package com.pulumi.test.internal;
+
+import com.pulumi.deployment.internal.CountingLogger;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
