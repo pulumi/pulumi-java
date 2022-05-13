@@ -9,6 +9,7 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterAll;
@@ -25,14 +26,15 @@ import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMo
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentResourceDependencyGatheringTest {
-    private static DeploymentTests.DeploymentMock mock;
+
+    private static PulumiTestInternal mock;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
-                .setMocks(new MyMocks(true))
-                .setSpyGlobalInstance();
+        mock = PulumiTestInternal.withOptions(new TestOptions(true))
+                .mocks(new MyMocks(true))
+                .useRealRunner()
+                .build();
     }
 
     @AfterAll
@@ -42,21 +44,18 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
-        assertThat(result.exceptions).isNotNull();
-        assertThat(result.exceptions).isEmpty();
-    }
-
-    public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
-        public DeploysResourcesWithUnknownDependsOnStack() {
-            var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
-                    .dependsOn(OutputTests.unknown())
-                    .build()
-            );
-        }
+        var result = mock.runTestAsync(
+                ctx -> new MyCustomResource("r1", null, CustomResourceOptions.builder()
+                        .dependsOn(OutputTests.unknown())
+                        .build()
+                )
+        ).join();
+        assertThat(result.exceptions()).isNotNull();
+        assertThat(result.exceptions()).isEmpty();
     }
 
     public static final class MyArgs extends ResourceArgs {
+        // Empty
     }
 
     @ResourceType(type = "test:DeploymentResourceDependencyGatheringTests:resource")

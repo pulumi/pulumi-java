@@ -266,8 +266,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private ImmutableSet<String> configSecretKeys;
 
+        @InternalUse
         @VisibleForTesting
-        Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        public Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
             this.allConfig = Objects.requireNonNull(allConfig);
             this.configSecretKeys = Objects.requireNonNull(configSecretKeys);
         }

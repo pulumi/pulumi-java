@@ -1,9 +1,12 @@
 package com.pulumi.test.internal;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ContextInternal;
+import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Invoke;
 import com.pulumi.test.mock.MockEngine;
 import com.pulumi.test.mock.MockMonitor;
@@ -18,6 +21,8 @@ import com.pulumi.test.TestResult;
 import com.pulumi.test.mock.EmptyMocks;
 import com.pulumi.test.mock.MonitorMocks;
 
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
@@ -133,6 +138,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         private MonitorMocks mocks;
         private Logger standardLogger;
         private boolean useRealRunner;
+        private DeploymentImpl.Config internalConfig;
 
         /**
          * @param options the test options to use
@@ -156,6 +162,36 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         }
 
         /**
+         * Set configuration to use for this test
+         *
+         * @param allConfig        the configuration key-value map
+         * @param configSecretKeys the secret key names
+         * @return this {@link PulumiTest.Builder}
+         */
+        public PulumiTest.Builder config(Map<String, String> allConfig, Set<String> configSecretKeys) {
+            return internalConfig(new DeploymentImpl.Config(
+                    ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
+            ));
+        }
+
+        /**
+         * Set configuration to use for this test
+         *
+         * @param allConfig the configuration key-value map
+         * @return this {@link PulumiTest.Builder}
+         */
+        public PulumiTest.Builder config(Map<String, String> allConfig) {
+            return internalConfig(new DeploymentImpl.Config(
+                    ImmutableMap.copyOf(allConfig), ImmutableSet.of()
+            ));
+        }
+
+        private PulumiTest.Builder internalConfig(DeploymentImpl.Config internalConfig) {
+            this.internalConfig = requireNonNull(internalConfig);
+            return this;
+        }
+
+        /**
          * {@inheritDoc}
          */
         @Override
@@ -175,7 +211,11 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.mocks == null) {
                 this.mocks = new EmptyMocks();
             }
+            if (this.internalConfig == null) {
+                this.internalConfig = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
+            }
             var mockBuilder = DeploymentTests.DeploymentMockBuilder.builder()
+                    .setConfig(this.internalConfig)
                     .setOptions(this.options)
                     .setMocks(this.mocks)
                     .setStandardLogger(this.standardLogger);

@@ -9,9 +9,10 @@ import com.pulumi.core.annotations.CustomType.Constructor;
 import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.TestOptions;
 import com.pulumi.resources.InvokeArgs;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
@@ -21,21 +22,19 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentInvokeTest {
 
     @AfterEach
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @Test
     void testCustomInvokes() {
-        DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
-                .setMocks(new MonitorMocks() {
+        PulumiTestInternal.withOptions(new TestOptions(true))
+                .mocks(new MonitorMocks() {
                     @Override
                     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         return CompletableFuture.completedFuture(null);
@@ -53,7 +52,8 @@ public class DeploymentInvokeTest {
                         );
                     }
                 })
-                .setSpyGlobalInstance();
+                .useRealRunner()
+                .build();
 
         var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyValue(r -> {
             assertThat(r).hasSize(1);
