@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableSet;
 import com.pulumi.Log;
 import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import com.pulumi.test.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockEngine;
 import com.pulumi.test.mock.MockMonitor;
 import com.pulumi.test.mock.MonitorMocks;
@@ -12,8 +13,6 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
-import java.util.function.Supplier;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static java.util.Objects.requireNonNull;
@@ -154,7 +153,7 @@ public class DeploymentTests {
 
         private void initUnset() {
             if (this.standardLogger == null) {
-                this.standardLogger = defaultLogger();
+                this.standardLogger = PulumiTestInternal.defaultLogger();
             }
             if (this.logger == null) {
                 this.logger = new DefaultEngineLogger(
@@ -233,39 +232,4 @@ public class DeploymentTests {
         }
     }
 
-    public static void cleanupDeploymentMocks() {
-        // ensure we don't get the error:
-        //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
-        DeploymentImpl.internalUnsafeDestroyInstance(); // FIXME: how to avoid this?
-    }
-
-    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-        return new DeploymentImpl.Config(allConfig, configSecretKeys);
-    }
-
-    public static ImmutableMap<String, String> parseConfig(String configJson) {
-        return DeploymentImpl.Config.parseConfig(configJson);
-    }
-
-    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
-        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
-    }
-
-    public static Logger defaultLogger() {
-        var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
-        standardLogger.setLevel(Level.INFO);
-        return standardLogger;
-    }
-
-    public static Log mockLog() {
-        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
-    }
-
-    public static Log mockLog(Logger logger) {
-        return mockLog(logger, () -> Mockito.mock(Engine.class));
-    }
-
-    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
-        return new Log(new DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
-    }
 }

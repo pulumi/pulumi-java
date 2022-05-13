@@ -15,8 +15,8 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static com.pulumi.deployment.internal.Runner.ProcessExitedAfterLoggingUserActionableMessage;
+import static com.pulumi.test.internal.PulumiTestInternal.defaultLogger;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 

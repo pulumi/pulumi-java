@@ -45,8 +45,7 @@ public abstract class DeploymentInstanceHolder {
 
     @InternalUse
     @VisibleForTesting
-    static void internalUnsafeDestroyInstance() {
+    public static void internalUnsafeDestroyInstance() {
         instance.set(null);
     }
-
 }

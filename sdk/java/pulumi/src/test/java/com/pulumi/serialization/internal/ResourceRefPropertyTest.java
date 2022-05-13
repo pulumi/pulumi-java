@@ -9,15 +9,16 @@ import com.pulumi.core.OutputTests;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Constants;
-import com.pulumi.test.mock.MockCallArgs;
-import com.pulumi.test.TestOptions;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -30,7 +31,6 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.core.OutputTests.waitForValue;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -41,7 +41,7 @@ class ResourceRefPropertyTest {
 
     @AfterEach
     public void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @ParameterizedTest

@@ -2,14 +2,15 @@ package com.pulumi.deployment.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import com.pulumi.test.PulumiTest;
 import com.pulumi.test.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.Mockito.mock;
 
@@ -17,7 +18,7 @@ public class DeploymentInstanceTest {
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @Test
@@ -34,7 +35,7 @@ public class DeploymentInstanceTest {
         var config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
         var state = new DeploymentImpl.DeploymentState(
                 config,
-                DeploymentTests.defaultLogger(),
+                PulumiTestInternal.defaultLogger(),
                 options.projectName(),
                 options.stackName(),
                 options.preview(),

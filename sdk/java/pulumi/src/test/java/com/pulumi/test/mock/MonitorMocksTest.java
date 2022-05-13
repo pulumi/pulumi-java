@@ -36,7 +36,7 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import static com.pulumi.core.OutputTests.waitForValue;
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
+import static com.pulumi.test.internal.PulumiTestInternal.defaultLogger;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;

@@ -11,9 +11,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static com.pulumi.deployment.internal.Runner.ProcessExitedAfterLoggingUserActionableMessage;
 import static com.pulumi.deployment.internal.Runner.ProcessExitedSuccessfully;
+import static com.pulumi.test.internal.PulumiTestInternal.defaultLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentTest {

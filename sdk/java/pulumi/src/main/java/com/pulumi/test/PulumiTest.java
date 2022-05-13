@@ -1,7 +1,7 @@
 package com.pulumi.test;
 
 import com.pulumi.Context;
-import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MonitorMocks;
@@ -60,6 +60,7 @@ public interface PulumiTest {
          * Configure the test with a real task runner.
          * Needed for all tests that use {@link PulumiTest#runAsync(Consumer)}
          * or {@link PulumiTest#runTestAsync(Consumer)}
+         *
          * @return this {@link Builder}
          */
         Builder useRealRunner();
@@ -71,6 +72,8 @@ public interface PulumiTest {
     }
 
     static void cleanup() {
-        DeploymentTests.cleanupDeploymentMocks();
+        // ensure we don't get the error:
+        //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
+        DeploymentImpl.internalUnsafeDestroyInstance(); // FIXME: how to avoid this?
     }
 }

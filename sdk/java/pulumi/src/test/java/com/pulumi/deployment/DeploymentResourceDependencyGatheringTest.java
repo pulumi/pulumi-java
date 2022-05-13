@@ -3,12 +3,11 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
@@ -22,7 +21,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentResourceDependencyGatheringTest {
@@ -39,7 +37,7 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @Test

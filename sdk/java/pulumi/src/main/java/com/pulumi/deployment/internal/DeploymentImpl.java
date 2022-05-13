@@ -46,7 +46,6 @@ import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
 import com.pulumi.resources.Stack;
 import com.pulumi.resources.Stack.StackInternal;
-import com.pulumi.resources.StackOptions;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -80,7 +79,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -94,7 +92,6 @@ import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
 import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
-import static com.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -341,7 +338,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @InternalUse
         @VisibleForTesting
-        static ImmutableMap<String, String> parseConfig(String envConfigJson) {
+        public static ImmutableMap<String, String> parseConfig(String envConfigJson) {
             var parsedConfig = ImmutableMap.<String, String>builder();
 
             var gson = new Gson();
@@ -364,7 +361,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @InternalUse
         @VisibleForTesting
-        static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
+        public static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
             var parsedConfigSecretKeys = ImmutableSet.<String>builder();
 
             var gson = new Gson();
@@ -1876,7 +1873,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     @InternalUse
     @VisibleForTesting
-    static class DefaultEngineLogger implements EngineLogger {
+    public static class DefaultEngineLogger implements EngineLogger {
         private final Supplier<Runner> runner;
         private final Supplier<Engine> engine;
         private final Logger standardLogger;

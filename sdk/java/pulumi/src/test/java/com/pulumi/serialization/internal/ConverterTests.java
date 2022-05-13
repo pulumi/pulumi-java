@@ -19,11 +19,11 @@ import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -39,14 +39,13 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ConverterTests {
 
-    private final static Log log = DeploymentTests.mockLog();
+    private final static Log log = PulumiTestInternal.mockLog();
 
     private static Value createSecretValue(Value value) {
         return Value.newBuilder().setStructValue(
@@ -155,7 +154,7 @@ class ConverterTests {
 
         @AfterEach
         void cleanup() {
-            cleanupDeploymentMocks();
+            PulumiTest.cleanup();
         }
 
         @Test

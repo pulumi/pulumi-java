@@ -3,6 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.gson.JsonParser;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputData;
+import com.pulumi.test.PulumiTest;
 import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MonitorMocksTest;
 import org.junit.jupiter.api.AfterAll;
@@ -18,7 +19,6 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
@@ -36,9 +36,8 @@ class ReSerializerTest {
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
-
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {

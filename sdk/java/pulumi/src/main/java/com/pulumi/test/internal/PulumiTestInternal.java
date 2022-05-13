@@ -7,11 +7,9 @@ import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ContextInternal;
 import com.pulumi.deployment.internal.DeploymentImpl;
-import com.pulumi.deployment.internal.Invoke;
-import com.pulumi.test.mock.MockEngine;
-import com.pulumi.test.mock.MockMonitor;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.Engine;
+import com.pulumi.deployment.internal.Invoke;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.internal.PulumiInternal;
@@ -19,15 +17,19 @@ import com.pulumi.test.PulumiTest;
 import com.pulumi.test.TestOptions;
 import com.pulumi.test.TestResult;
 import com.pulumi.test.mock.EmptyMocks;
+import com.pulumi.test.mock.MockEngine;
+import com.pulumi.test.mock.MockMonitor;
 import com.pulumi.test.mock.MonitorMocks;
+import org.mockito.Mockito;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -55,6 +57,36 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
         this.invoke = requireNonNull(invoke);
+    }
+
+    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        return new DeploymentImpl.Config(allConfig, configSecretKeys);
+    }
+
+    public static ImmutableMap<String, String> parseConfig(String configJson) {
+        return DeploymentImpl.Config.parseConfig(configJson);
+    }
+
+    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
+        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
+    }
+
+    public static Logger defaultLogger() {
+        var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
+        standardLogger.setLevel(Level.INFO);
+        return standardLogger;
+    }
+
+    public static Log mockLog() {
+        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger) {
+        return mockLog(logger, () -> Mockito.mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
+        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
     }
 
     /**

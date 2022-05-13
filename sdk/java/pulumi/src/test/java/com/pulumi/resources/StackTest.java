@@ -6,8 +6,9 @@ import com.pulumi.core.Tuples;
 import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.test.TestOptions;
 import com.pulumi.exceptions.RunException;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.mock.MonitorMocksTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -109,6 +109,6 @@ class StackTest {
 
     @AfterEach
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 }

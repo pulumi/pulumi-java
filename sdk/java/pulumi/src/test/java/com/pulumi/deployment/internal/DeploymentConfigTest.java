@@ -4,8 +4,8 @@ import com.pulumi.deployment.internal.DeploymentImpl.Config;
 import org.junit.jupiter.api.Test;
 
 import static com.pulumi.core.OutputTests.waitForValue;
-import static com.pulumi.deployment.internal.DeploymentTests.parseConfig;
-import static com.pulumi.deployment.internal.DeploymentTests.parseConfigSecretKeys;
+import static com.pulumi.test.internal.PulumiTestInternal.parseConfig;
+import static com.pulumi.test.internal.PulumiTestInternal.parseConfigSecretKeys;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentConfigTest {

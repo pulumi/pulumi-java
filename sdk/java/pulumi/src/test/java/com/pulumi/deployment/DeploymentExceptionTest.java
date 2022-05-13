@@ -1,6 +1,7 @@
 package com.pulumi.deployment;
 
 import com.pulumi.core.internal.Internal;
+import com.pulumi.test.PulumiTest;
 import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
@@ -16,8 +17,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
+import static com.pulumi.test.internal.PulumiTestInternal.defaultLogger;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,7 +38,7 @@ public class DeploymentExceptionTest {
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @Test
