@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -48,7 +49,7 @@ public class Stack extends ComponentResource {
     /**
      * Create a Stack with stack resources created by the <code>init</code> callback.
      * An instance of this will be automatically created when
-     * any @see {@link Deployment#runAsync(Supplier)} overload is called.
+     * any @see {@link com.pulumi.internal.PulumiInternal#runAsync(Consumer)} is called.
      */
     @InternalUse
     private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {

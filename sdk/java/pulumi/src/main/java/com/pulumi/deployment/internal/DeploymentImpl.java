@@ -1734,7 +1734,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @Override
         public CompletableFuture<Integer> registerAndRunAsync(Runnable callback) {
             try {
-                callback.run(); // this invokes the user code that supplies the future
+                callback.run(); // this invokes any code the context of the error handler
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }

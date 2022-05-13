@@ -8,7 +8,6 @@ import com.pulumi.core.Urn;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
-import com.pulumi.resources.Stack.StackInternal;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
 import com.pulumi.test.mock.MonitorMocks;
@@ -20,6 +19,7 @@ import pulumirpc.Resource.ReadResourceResponse;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.RegisterResourceResponse;
+import pulumirpc.Resource.ResourceInvokeRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
 import pulumirpc.Resource.SupportsFeatureResponse;
 
@@ -30,6 +30,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+
+import static com.pulumi.resources.Stack.StackInternal.RootPulumiStackTypeName;
 
 public class MockMonitor implements Monitor {
 
@@ -57,7 +59,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<InvokeResponse> invokeAsync(pulumirpc.Resource.ResourceInvokeRequest request) {
+    public CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request) {
         var args = deserializeToMap(request.getArgs());
 
         CompletableFuture<Map<String, Object>> toBeSerialized;
@@ -123,7 +125,7 @@ public class MockMonitor implements Monitor {
     public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
 
-        if (StackInternal.RootPulumiStackTypeName.equals(request.getType())) {
+        if (RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
                             .setUrn(Urn.create(request.getParent(), request.getType(), request.getName()))

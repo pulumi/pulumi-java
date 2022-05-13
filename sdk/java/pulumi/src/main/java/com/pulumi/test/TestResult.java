@@ -1,36 +1,51 @@
 package com.pulumi.test;
 
-import com.google.common.collect.ImmutableList;
 import com.pulumi.resources.Resource;
+import com.pulumi.resources.Stack;
 
 import java.util.List;
 
 import static java.util.Objects.requireNonNull;
 
 public class TestResult {
+
     private final int exitCode;
-    private final ImmutableList<Resource> resources;
-    private final ImmutableList<Exception> exceptions;
+    private final List<Exception> exceptions;
+    private final List<Resource> resources;
+    private final List<String> errors;
+    private final Stack stack;
 
     public TestResult(
             int exitCode,
-            ImmutableList<Resource> resources,
-            ImmutableList<Exception> exceptions
+            List<Exception> exceptions,
+            List<Resource> resources,
+            List<String> errors,
+            Stack stack
     ) {
         this.exitCode = exitCode;
-        this.resources = requireNonNull(resources);
         this.exceptions = requireNonNull(exceptions);
+        this.resources = requireNonNull(resources);
+        this.errors = requireNonNull(errors);
+        this.stack = requireNonNull(stack);
     }
 
     public int exitCode() {
-        return exitCode;
-    }
-
-    public List<Resource> resources() {
-        return resources;
+        return this.exitCode;
     }
 
     public List<Exception> exceptions() {
-        return exceptions;
+        return this.exceptions;
+    }
+
+    public List<Resource> resources() {
+        return this.resources;
+    }
+
+    public List<String> errors() {
+        return this.errors;
+    }
+
+    public Stack stack() {
+        return this.stack;
     }
 }
