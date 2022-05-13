@@ -3,7 +3,7 @@ package com.pulumi.resources;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.test.TestOptions;
 import com.pulumi.test.mock.MonitorMocks;

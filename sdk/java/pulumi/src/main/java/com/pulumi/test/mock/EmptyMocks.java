@@ -1,7 +1,5 @@
 package com.pulumi.test.mock;
 
-import com.pulumi.deployment.MockCallArgs;
-
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 

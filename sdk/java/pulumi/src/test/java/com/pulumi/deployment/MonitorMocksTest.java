@@ -18,6 +18,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import io.grpc.Status;
 import org.junit.jupiter.api.AfterEach;

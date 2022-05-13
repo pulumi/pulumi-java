@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.test.TestOptions;
 import com.pulumi.resources.InvokeArgs;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

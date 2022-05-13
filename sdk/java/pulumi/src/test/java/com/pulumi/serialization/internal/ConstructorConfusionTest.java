@@ -3,7 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;

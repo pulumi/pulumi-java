@@ -9,7 +9,7 @@ import com.pulumi.core.OutputTests;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Constants;
-import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.TestOptions;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;

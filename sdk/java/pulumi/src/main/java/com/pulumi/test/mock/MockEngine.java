@@ -1,4 +1,4 @@
-package com.pulumi.deployment;
+package com.pulumi.test.mock;
 
 import com.pulumi.deployment.internal.CountingLogger;
 import com.pulumi.deployment.internal.Engine;

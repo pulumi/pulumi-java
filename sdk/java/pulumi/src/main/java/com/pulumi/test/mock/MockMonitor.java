@@ -1,4 +1,4 @@
-package com.pulumi.deployment;
+package com.pulumi.test.mock;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -10,7 +10,6 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
-import com.pulumi.test.mock.MonitorMocks;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeResponse;

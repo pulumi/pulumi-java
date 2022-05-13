@@ -1,8 +1,5 @@
 package com.pulumi.test.mock;
 
-import com.pulumi.core.Tuples;
-import com.pulumi.deployment.MockCallArgs;
-
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
