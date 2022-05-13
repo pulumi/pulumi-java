@@ -1,30 +1,21 @@
 package com.pulumi.deployment.internal;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.pulumi.Log;
-import com.pulumi.core.Output;
+import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.mock.MockEngine;
 import com.pulumi.test.mock.MockMonitor;
-import com.pulumi.test.TestOptions;
 import com.pulumi.test.mock.MonitorMocks;
-import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
-import com.pulumi.exceptions.RunException;
-import com.pulumi.resources.Resource;
-import com.pulumi.resources.Stack;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
-import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Objects.requireNonNull;
 
 public class DeploymentTests {
@@ -67,76 +58,6 @@ public class DeploymentTests {
             this.standardLogger = requireNonNull(standardLogger);
             this.logger = requireNonNull(logger);
             this.log = requireNonNull(log);
-        }
-
-        public void overrideConfig(String key, String value) {
-            this.config.setConfig(key, value);
-        }
-
-        public void overrideConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) {
-            this.config.setAllConfig(config, secretKeys);
-        }
-
-        @Deprecated
-        public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Supplier<T> stackFactory) {
-            return tryTestAsync(stackFactory).thenApply(r -> {
-                if (!r.exceptions.isEmpty()) {
-                    throw new RunException(String.format("Error count: %d, errors: %s",
-                            r.exceptions.size(), r.exceptions.stream()
-                                    .map(Throwable::getMessage)
-                                    .collect(Collectors.joining(", "))
-                    ));
-                }
-                return r.resources;
-            });
-        }
-
-        @Deprecated
-        public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Supplier<T> stackFactory) {
-            if (!(engine instanceof MockEngine)) {
-                throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
-            }
-            if (!(monitor instanceof MockMonitor)) {
-                throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
-            }
-            var mockEngine = (MockEngine) engine;
-            var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsync(stackFactory)
-                    .thenApply(ignore -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new).collect(toImmutableList())
-                    ));
-        }
-
-        @Deprecated
-        public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            if (!(engine instanceof MockEngine)) {
-                throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
-            }
-            if (!(monitor instanceof MockMonitor)) {
-                throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
-            }
-            var mockEngine = (MockEngine) engine;
-            var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsyncFuture(callback)
-                    .thenApply(ignore -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new)
-                                    .collect(toImmutableList())
-                    ));
-        }
-
-        @Deprecated // use TestResult
-        public static class TestAsyncResult {
-            public final ImmutableList<Resource> resources;
-            public final ImmutableList<Exception> exceptions;
-
-            public TestAsyncResult(ImmutableList<Resource> resources, ImmutableList<Exception> exceptions) {
-                this.resources = resources;
-                this.exceptions = exceptions;
-            }
         }
     }
 

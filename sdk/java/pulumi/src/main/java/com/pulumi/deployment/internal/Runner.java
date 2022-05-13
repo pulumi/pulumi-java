@@ -41,11 +41,6 @@ public interface Runner {
     int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
     /**
-     * @return exceptions encountered handled by the runner
-     */
-    List<Exception> getSwallowedExceptions();
-
-    /**
      * Register a task to run asynchronously in a fire-and-forget manner.
      *
      * @param description the task description
@@ -53,15 +48,6 @@ public interface Runner {
      * @param <T>         the task type
      */
     <T> void registerTask(String description, CompletableFuture<T> task);
-
-    @Deprecated
-    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback);
-
-    @Deprecated
-    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options);
-
-    @Deprecated
-    <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
 
     /**
      * Run the callback and start the main loop (handling any errors)

@@ -1692,46 +1692,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
-        @Deprecated
-        public List<Exception> getSwallowedExceptions() {
-            return ImmutableList.copyOf(this.swallowedExceptions);
-        }
-
-        @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
-            try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stack.outputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            return runAsyncFuture(callback, StackOptions.Empty);
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            try {
-                var stack = StackInternal.of(callback, options);
-                // no outputs to register here
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stack.outputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
-        }
-
         @Override
         public <T> CompletableFuture<Result<T>> registerAndRunAsync(Supplier<T> callback) {
             final Optional<T> value;
