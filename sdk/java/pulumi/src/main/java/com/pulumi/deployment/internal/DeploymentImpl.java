@@ -1704,7 +1704,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 // Stack doesn't call RegisterOutputs, so we register them on its behalf.
                 stackInternal.registerPropertyOutputs();
                 registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
+                        Internal.of(stack.outputs()).getDataAsync());
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }
@@ -1723,7 +1723,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var stack = StackInternal.of(callback, options);
                 // no outputs to register here
                 registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+                        Internal.of(stack.outputs()).getDataAsync());
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
             }

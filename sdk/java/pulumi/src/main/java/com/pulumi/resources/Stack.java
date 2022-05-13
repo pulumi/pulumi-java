@@ -1,6 +1,7 @@
 package com.pulumi.resources;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentInternal;
@@ -67,6 +68,33 @@ public class Stack extends ComponentResource {
         return CompletableFuture.supplyAsync(init).thenCompose(Function.identity());
     }
 
+    /**
+     * @return the stack outputs a.k.a. exports
+     */
+    public Output<Map<String, Output<?>>> outputs() {
+        return this.outputs;
+    }
+
+    /**
+     * @param name the output (export) name
+     * @param shape the type shape to case the output value to
+     * @param <T> the output type
+     * @return the stack output (a.k.a. exports) for a given name
+     */
+    public <T> Output<T> output(String name, TypeShape<T> shape) {
+        var output = this.outputs.apply(os -> os.get(name));
+        return output.applyValue(o -> {
+            if (shape.getType().isAssignableFrom(o.getClass())) {
+                return shape.getType().cast(o);
+            }
+            throw new IllegalArgumentException(String.format(
+                    "Cannot cast '%s' to the given shape: '%s",
+                    o.getClass().getTypeName(),
+                    shape.getTypeName()
+            ));
+        });
+    }
+
     @Nullable
     private static ComponentResourceOptions convertOptions(@Nullable StackOptions options) {
         if (options == null) {
@@ -104,11 +132,6 @@ public class Stack extends ComponentResource {
 
         public static StackInternal from(Stack r) {
             return new StackInternal(r);
-        }
-
-        @InternalUse
-        public Output<Map<String, Output<?>>> getOutputs() {
-            return this.stack.outputs;
         }
 
         /**
