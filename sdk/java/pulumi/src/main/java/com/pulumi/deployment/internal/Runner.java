@@ -1,14 +1,22 @@
 package com.pulumi.deployment.internal;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.resources.Stack;
 import com.pulumi.resources.StackOptions;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
+import static java.util.Objects.requireNonNull;
+
+/**
+ * A task {@link CompletableFuture} runner.
+ */
+@InternalUse
 public interface Runner {
 
     /**
@@ -23,11 +31,11 @@ public interface Runner {
 
     /**
      * Exit code indicating a failure that was properly logged.
-     *
+     * <p>
      * Keep track if we already logged the information about an unhandled error to the user.
      * If so, we end with a different exit code. The language host recognizes this and will not print
      * any further messages to the user since we already took care of it.
-     *
+     * <p>
      * 32 was picked to be very unlikely to collide with any other error codes.
      */
     int ProcessExitedAfterLoggingUserActionableMessage = 32;
@@ -39,9 +47,10 @@ public interface Runner {
 
     /**
      * Register a task to run asynchronously in a fire-and-forget manner.
+     *
      * @param description the task description
-     * @param task the task future
-     * @param <T> the task type
+     * @param task        the task future
+     * @param <T>         the task type
      */
     <T> void registerTask(String description, CompletableFuture<T> task);
 
@@ -62,10 +71,46 @@ public interface Runner {
      *     <li>start the runner loop</li>
      *     <li>run until all registered futures in the list complete successfully, or any future throws an exception</li>
      * </ol>
-     * @return exit a status code, one of: {@link #ProcessExitedSuccessfully},
-     *         {@link #ProcessExitedAfterLoggingUserActionableMessage},
-     *         {@link #ProcessExitedBeforeLoggingUserActionableMessage}
+     *
+     * @param callback a callback to call in the context of the error handler
+     * @param <T>      the type of the result
+     * @return a {@link Result<T>} with a value, exceptions and an exit status code
      * @see #registerTask(String, CompletableFuture)
      */
-    CompletableFuture<Integer> registerAndRunAsync(Runnable callback);
+    <T> CompletableFuture<Result<T>> registerAndRunAsync(Supplier<T> callback);
+
+    @InternalUse
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+    class Result<T> {
+        private final int exitCode;
+        private final List<Exception> exceptions;
+        private final Optional<T> result;
+
+        protected Result(
+                int exitCode,
+                List<Exception> exceptions,
+                Optional<T> result
+        ) {
+            this.exitCode = exitCode;
+            this.exceptions = requireNonNull(exceptions);
+            this.result = requireNonNull(result);
+        }
+
+        /**
+         * @return exit status code, one of: {@link #ProcessExitedSuccessfully},
+         * {@link #ProcessExitedAfterLoggingUserActionableMessage},
+         * {@link #ProcessExitedBeforeLoggingUserActionableMessage}
+         */
+        public int exitCode() {
+            return exitCode;
+        }
+
+        public List<Exception> exceptions() {
+            return exceptions;
+        }
+
+        public Optional<T> result() {
+            return this.result;
+        }
+    }
 }

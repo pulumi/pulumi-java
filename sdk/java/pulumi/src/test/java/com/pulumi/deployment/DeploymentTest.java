@@ -3,6 +3,7 @@ package com.pulumi.deployment;
 import com.pulumi.Config;
 import com.pulumi.core.Output;
 import com.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.test.mock.MonitorMocksTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;

@@ -4,9 +4,10 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.internal.InMemoryLogger;
 import com.pulumi.exceptions.RunException;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.internal.InMemoryLogger;
+import com.pulumi.test.mock.MonitorMocksTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

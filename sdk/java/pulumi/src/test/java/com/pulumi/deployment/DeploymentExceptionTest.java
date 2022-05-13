@@ -4,6 +4,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.test.internal.PulumiTestInternal;
 import com.pulumi.test.mock.MockCallArgs;
 import com.pulumi.test.mock.MonitorMocks;
+import com.pulumi.test.mock.MonitorMocksTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ContextInternal;
+import com.pulumi.deployment.internal.Invoke;
 import com.pulumi.test.mock.MockEngine;
 import com.pulumi.test.mock.MockMonitor;
 import com.pulumi.deployment.internal.DeploymentTests;
@@ -34,17 +35,21 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     private final Engine engine;
     private final Monitor monitor;
 
+    private final Invoke invoke;
+
     public PulumiTestInternal(
             Runner runner,
             Engine engine,
             Monitor monitor,
             Log log,
+            Invoke invoke,
             ContextInternal stackContext
     ) {
         super(runner, stackContext);
         this.log = requireNonNull(log);
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
+        this.invoke = requireNonNull(invoke);
     }
 
     /**
@@ -66,6 +71,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
      */
     public Monitor monitor() {
         return this.monitor;
+    }
+
+    /**
+     * @return return the {@link Invoke} used by the test
+     */
+    public Invoke invoke() {
+        return this.invoke;
     }
 
     /**
@@ -91,7 +103,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                         result.exceptions(),
                         ImmutableList.copyOf(mockMonitor.resources),
                         ImmutableList.copyOf(mockEngine.getErrors()),
-                        result.stack()
+                        result.result().orElseThrow()
                 )
         );
     }
@@ -174,7 +186,9 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                 mock = mockBuilder.setMockGlobalInstance();
             }
             var ctx = PulumiInternal.contextFromDeployment(mock.deployment);
-            return new PulumiTestInternal(mock.runner, mock.engine, mock.monitor, mock.log, ctx);
+            return new PulumiTestInternal(
+                    mock.runner, mock.engine, mock.monitor, mock.log, mock.deployment, ctx
+            );
         }
 
         // TODO: port com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder

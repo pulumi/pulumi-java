@@ -1692,6 +1692,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
+        @Deprecated
         public List<Exception> getSwallowedExceptions() {
             return ImmutableList.copyOf(this.swallowedExceptions);
         }
@@ -1732,14 +1733,27 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public CompletableFuture<Integer> registerAndRunAsync(Runnable callback) {
+        public <T> CompletableFuture<Result<T>> registerAndRunAsync(Supplier<T> callback) {
+            final Optional<T> value;
             try {
-                callback.run(); // this invokes any code the context of the error handler
+                value = Optional.ofNullable(callback.get()); // this invokes any code the context of the error handler
             } catch (Exception ex) {
-                return handleExceptionAsync(ex);
+                return handleExceptionAsync(ex).thenApply(
+                        exitCode -> new Result<>(
+                                exitCode,
+                                ImmutableList.copyOf(this.swallowedExceptions),
+                                Optional.empty()
+                        )
+                );
             }
 
-            return whileRunningAsync();
+            return whileRunningAsync().thenApply(
+                    exitCode -> new Result<>(
+                            exitCode,
+                            ImmutableList.copyOf(this.swallowedExceptions),
+                            value
+                    )
+            );
         }
 
         @Override
