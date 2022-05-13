@@ -4,13 +4,14 @@ import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.test.mock.MonitorMocks;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
+import com.pulumi.test.mock.MonitorMocks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,19 +24,25 @@ import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ConstructorConfusionTest {
+
     @Test
-    void TryConstuctNotConfusedByTwoN3Constructors() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
-                .setMocks(new ConfusionMocks())
-                .setSpyGlobalInstance();
-        var resources = mock.testAsync(ConfusionStack::new).join();
-        assertThat(resources).isNotEmpty();
+    void TryConstructNotConfusedByTwoN3Constructors() {
+        var mock = PulumiTestInternal.withOptions(new TestOptions(true))
+                .mocks(new ConfusionMocks())
+                .useRealRunner()
+                .build();
+        var result = mock.runTestAsync(ctx ->
+                ResourcePackages.tryConstruct(
+                        "test:index/MinifiedConfigMap", "0.0.1",
+                        "urn:pulumi:stack::project::test:index/MinifiedConfigMap::name"
+                )
+        ).join();
+        assertThat(result.resources()).isNotEmpty();
     }
 
     @AfterEach
     public void cleanupMocks() {
-        DeploymentTests.cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     public static class ConfusionMocks implements MonitorMocks {
@@ -56,6 +63,7 @@ public class ConstructorConfusionTest {
         }
     }
 
+    @SuppressWarnings("unused") // will be used by reflection
     @ResourceType(type = "test:index/MinifiedConfigMap")
     public static class MinifiedConfigMap extends CustomResource {
         public MinifiedConfigMap(String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
@@ -67,6 +75,7 @@ public class ConstructorConfusionTest {
         }
     }
 
+    @SuppressWarnings("unused") // will be used by reflection
     public static class ConfusionStack extends Stack {
         public ConfusionStack() {
             ResourcePackages.tryConstruct("test:index/MinifiedConfigMap", "0.0.1", "urn:pulumi:stack::project::test:index/MinifiedConfigMap::name");
