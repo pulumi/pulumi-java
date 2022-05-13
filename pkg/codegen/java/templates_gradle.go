@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/blang/semver"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
@@ -60,8 +61,15 @@ func newGradleTemplateContext(
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
 
+	var version semver.Version
+	if pkg.Version == nil {
+		version = semver.MustParse("0.1.0")
+	} else {
+		version = *pkg.Version
+	}
+
 	ctx := gradleTemplateContext{
-		Version:       pkg.Version.String(),
+		Version:       version.String(),
 		ProjectURL:    pkg.Repository,
 		ProjectGitURL: formatGitURL(pkg.Repository),
 	}
@@ -96,8 +104,8 @@ func newGradleTemplateContext(
 		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.ArtifactID)
 	}
 
-	if ctx.RootProjectName == "" && ctx.GroupID != "" && ctx.ArtifactID != "" {
-		ctx.RootProjectName = fmt.Sprintf("%s.%s", ctx.GroupID, ctx.ArtifactID)
+	if ctx.RootProjectName == "" {
+		ctx.RootProjectName = packageInfo.BasePackageOrDefault() + pkg.Name
 	}
 
 	return ctx
