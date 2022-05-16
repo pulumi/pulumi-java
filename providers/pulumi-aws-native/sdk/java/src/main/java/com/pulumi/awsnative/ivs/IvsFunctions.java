@@ -25,6 +25,10 @@ public final class IvsFunctions {
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IVS::Channel
+     * 
+     */
     public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class IvsFunctions {
     public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(GetPlaybackKeyPairArgs args) {
         return getPlaybackKeyPair(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IVS::PlaybackKeyPair
+     * 
+     */
     public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(GetPlaybackKeyPairArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getPlaybackKeyPair", TypeShape.of(GetPlaybackKeyPairResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class IvsFunctions {
     public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(GetRecordingConfigurationArgs args) {
         return getRecordingConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IVS::RecordingConfiguration
+     * 
+     */
     public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(GetRecordingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getRecordingConfiguration", TypeShape.of(GetRecordingConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class IvsFunctions {
     public static CompletableFuture<GetStreamKeyResult> getStreamKey(GetStreamKeyArgs args) {
         return getStreamKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IVS::StreamKey
+     * 
+     */
     public static CompletableFuture<GetStreamKeyResult> getStreamKey(GetStreamKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getStreamKey", TypeShape.of(GetStreamKeyResult.class), args, Utilities.withVersion(options));
     }

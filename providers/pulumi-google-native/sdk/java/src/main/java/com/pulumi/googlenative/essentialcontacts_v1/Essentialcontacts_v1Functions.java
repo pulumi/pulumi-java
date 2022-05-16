@@ -23,6 +23,10 @@ public final class Essentialcontacts_v1Functions {
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
         return getContact(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single contact.
+     * 
+     */
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Essentialcontacts_v1Functions {
     public static CompletableFuture<GetFolderContactResult> getFolderContact(GetFolderContactArgs args) {
         return getFolderContact(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single contact.
+     * 
+     */
     public static CompletableFuture<GetFolderContactResult> getFolderContact(GetFolderContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getFolderContact", TypeShape.of(GetFolderContactResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Essentialcontacts_v1Functions {
     public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(GetOrganizationContactArgs args) {
         return getOrganizationContact(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a single contact.
+     * 
+     */
     public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(GetOrganizationContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getOrganizationContact", TypeShape.of(GetOrganizationContactResult.class), args, Utilities.withVersion(options));
     }

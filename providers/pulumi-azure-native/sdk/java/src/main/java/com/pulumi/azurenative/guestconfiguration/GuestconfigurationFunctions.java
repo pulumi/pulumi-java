@@ -22,6 +22,11 @@ public final class GuestconfigurationFunctions {
     public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args) {
         return getGuestConfigurationAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
     public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class GuestconfigurationFunctions {
     public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args) {
         return getGuestConfigurationHCRPAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
     public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
     }

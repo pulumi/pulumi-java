@@ -19,6 +19,10 @@ public final class Recaptchaenterprise_v1Functions {
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the specified key.
+     * 
+     */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:recaptchaenterprise/v1:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }

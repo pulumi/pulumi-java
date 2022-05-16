@@ -25,6 +25,14 @@ public final class AutoscalingFunctions {
     public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args) {
         return getAutoScalingConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Auto Scaling Configuration resource in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Gets information about the specified autoscaling configuration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Autoscaling/getAutoScalingConfiguration:getAutoScalingConfiguration", TypeShape.of(GetAutoScalingConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class AutoscalingFunctions {
     public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args) {
         return getAutoScalingConfigurations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Auto Scaling Configurations in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Lists autoscaling configurations in the specifed compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Autoscaling/getAutoScalingConfigurations:getAutoScalingConfigurations", TypeShape.of(GetAutoScalingConfigurationsResult.class), args, Utilities.withVersion(options));
     }

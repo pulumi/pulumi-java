@@ -47,6 +47,36 @@ public final class RedisFunctions {
     public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
         return getCache(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Redis Cache
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(RedisFunctions.getCache(GetCacheArgs.builder()
+     *             .name(&#34;myrediscache&#34;)
+     *             .resourceGroupName(&#34;redis-cache&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;primaryAccessKey&#34;, example.apply(getCacheResult -&gt; getCacheResult.getPrimaryAccessKey()));
+     *         ctx.export(&#34;hostname&#34;, example.apply(getCacheResult -&gt; getCacheResult.getHostname()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:redis/getCache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
@@ -84,6 +114,37 @@ public final class RedisFunctions {
     public static CompletableFuture<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args) {
         return getEnterpriseDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Redis Enterprise Database
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(RedisFunctions.getEnterpriseDatabase(GetEnterpriseDatabaseArgs.builder()
+     *             .name(&#34;default&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .clusterId(azurerm_redis_enterprise_cluster.getExample().getId())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;redisEnterpriseDatabasePrimaryKey&#34;, example.apply(getEnterpriseDatabaseResult -&gt; getEnterpriseDatabaseResult.getPrimaryAccessKey()));
+     *         ctx.export(&#34;redisEnterpriseDatabaseSecondaryKey&#34;, example.apply(getEnterpriseDatabaseResult -&gt; getEnterpriseDatabaseResult.getSecondaryAccessKey()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:redis/getEnterpriseDatabase:getEnterpriseDatabase", TypeShape.of(GetEnterpriseDatabaseResult.class), args, Utilities.withVersion(options));
     }

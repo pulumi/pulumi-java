@@ -21,6 +21,10 @@ public final class DevspacesFunctions {
     public static CompletableFuture<GetControllerResult> getController(GetControllerArgs args) {
         return getController(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<GetControllerResult> getController(GetControllerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:getController", TypeShape.of(GetControllerResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class DevspacesFunctions {
     public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(ListControllerConnectionDetailsArgs args) {
         return listControllerConnectionDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(ListControllerConnectionDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:listControllerConnectionDetails", TypeShape.of(ListControllerConnectionDetailsResult.class), args, Utilities.withVersion(options));
     }

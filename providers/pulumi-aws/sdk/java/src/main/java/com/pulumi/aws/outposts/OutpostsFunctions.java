@@ -52,9 +52,63 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetOutpostResult> getOutpost() {
         return getOutpost(GetOutpostArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about an Outposts Outpost.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutpost(GetOutpostArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args) {
         return getOutpost(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about an Outposts Outpost.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutpost(GetOutpostArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpost:getOutpost", TypeShape.of(GetOutpostResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +119,10 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args) {
         return getOutpostInstanceType(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about single Outpost Instance Type.
+     * 
+     */
     public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceType:getOutpostInstanceType", TypeShape.of(GetOutpostInstanceTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -98,6 +156,33 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args) {
         return getOutpostInstanceTypes(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about Outposts Instance Types.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutpostInstanceTypes(GetOutpostInstanceTypesArgs.builder()
+     *             .arn(data.getAws_outposts_outpost().getExample().getArn())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceTypes:getOutpostInstanceTypes", TypeShape.of(GetOutpostInstanceTypesResult.class), args, Utilities.withVersion(options));
     }
@@ -131,9 +216,63 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetOutpostsResult> getOutposts() {
         return getOutposts(GetOutpostsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about multiple Outposts.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutposts(GetOutpostsArgs.builder()
+     *             .siteId(data.getAws_outposts_site().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args) {
         return getOutposts(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about multiple Outposts.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutposts(GetOutpostsArgs.builder()
+     *             .siteId(data.getAws_outposts_site().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutposts:getOutposts", TypeShape.of(GetOutpostsResult.class), args, Utilities.withVersion(options));
     }
@@ -167,9 +306,63 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetSiteResult> getSite() {
         return getSite(GetSiteArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about an Outposts Site.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getSite(GetSiteArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about an Outposts Site.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getSite(GetSiteArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
@@ -201,9 +394,59 @@ public final class OutpostsFunctions {
     public static CompletableFuture<GetSitesResult> getSites() {
         return getSites(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about multiple Outposts Sites.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(OutpostsFunctions.getSites());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args) {
         return getSites(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides details about multiple Outposts Sites.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(OutpostsFunctions.getSites());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
     }

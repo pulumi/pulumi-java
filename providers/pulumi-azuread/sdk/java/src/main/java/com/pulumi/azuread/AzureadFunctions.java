@@ -97,9 +97,131 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit() {
         return getAdministrativeUnit(GetAdministrativeUnitArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an adminisrative unit in Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `AdministrativeUnit.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ### By Group Display Name)
+     * 
+     * *Look up by display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .displayName(&#34;Example-AU&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args) {
         return getAdministrativeUnit(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an adminisrative unit in Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `AdministrativeUnit.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ### By Group Display Name)
+     * 
+     * *Look up by display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .displayName(&#34;Example-AU&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getAdministrativeUnit:getAdministrativeUnit", TypeShape.of(GetAdministrativeUnitResult.class), args, Utilities.withVersion(options));
     }
@@ -142,9 +264,81 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication() {
         return getApplication(GetApplicationArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Application within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplication(GetApplicationArgs.builder()
+     *             .displayName(&#34;My First AzureAD Application&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationObjectId&#34;, example.apply(getApplicationResult -&gt; getApplicationResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Application within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplication(GetApplicationArgs.builder()
+     *             .displayName(&#34;My First AzureAD Application&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationObjectId&#34;, example.apply(getApplicationResult -&gt; getApplicationResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -225,9 +419,157 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds() {
         return getApplicationPublishedAppIds(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to discover application IDs for APIs published by Microsoft.
+     * 
+     * This data source uses an [unofficial source of application IDs](https://github.com/manicminer/hamilton/blob/main/environments/published.go), as there is currently no available official indexed source for applications or APIs published by Microsoft.
+     * 
+     * The app IDs returned by this data source are sourced from the Azure Global (Public) Cloud, however some of them are known to work in government and national clouds.
+     * 
+     * ## Example Usage
+     * 
+     * *Listing well-known application IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         ctx.export(&#34;publishedAppIds&#34;, wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult()));
+     *         }
+     * }
+     * ```
+     * 
+     * *Granting access to an application*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+     *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *             .useExisting(true)
+     *             .build());
+     * 
+     *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+     *             .displayName(&#34;example&#34;)
+     *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+     *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *                 .resourceAccesses(                
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getUser.Read.All()))
+     *                         .type(&#34;Role&#34;)
+     *                         .build(),
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.ReadWrite()))
+     *                         .type(&#34;Scope&#34;)
+     *                         .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args) {
         return getApplicationPublishedAppIds(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to discover application IDs for APIs published by Microsoft.
+     * 
+     * This data source uses an [unofficial source of application IDs](https://github.com/manicminer/hamilton/blob/main/environments/published.go), as there is currently no available official indexed source for applications or APIs published by Microsoft.
+     * 
+     * The app IDs returned by this data source are sourced from the Azure Global (Public) Cloud, however some of them are known to work in government and national clouds.
+     * 
+     * ## Example Usage
+     * 
+     * *Listing well-known application IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         ctx.export(&#34;publishedAppIds&#34;, wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult()));
+     *         }
+     * }
+     * ```
+     * 
+     * *Granting access to an application*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+     *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *             .useExisting(true)
+     *             .build());
+     * 
+     *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+     *             .displayName(&#34;example&#34;)
+     *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+     *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *                 .resourceAccesses(                
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getUser.Read.All()))
+     *                         .type(&#34;Role&#34;)
+     *                         .build(),
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.ReadWrite()))
+     *                         .type(&#34;Scope&#34;)
+     *                         .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getApplicationPublishedAppIds:getApplicationPublishedAppIds", TypeShape.of(GetApplicationPublishedAppIdsResult.class), args, Utilities.withVersion(options));
     }
@@ -266,9 +608,73 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate() {
         return getApplicationTemplate(GetApplicationTemplateArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an Application Template from the [Azure AD App Gallery](https://azuremarketplace.microsoft.com/en-US/marketplace/apps/category/azure-active-directory-apps).
+     * 
+     * ## API Permissions
+     * 
+     * This data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplicationTemplate(GetApplicationTemplateArgs.builder()
+     *             .displayName(&#34;Marketo&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationTemplateId&#34;, example.apply(getApplicationTemplateResult -&gt; getApplicationTemplateResult.getTemplateId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args) {
         return getApplicationTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an Application Template from the [Azure AD App Gallery](https://azuremarketplace.microsoft.com/en-US/marketplace/apps/category/azure-active-directory-apps).
+     * 
+     * ## API Permissions
+     * 
+     * This data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplicationTemplate(GetApplicationTemplateArgs.builder()
+     *             .displayName(&#34;Marketo&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationTemplateId&#34;, example.apply(getApplicationTemplateResult -&gt; getApplicationTemplateResult.getTemplateId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getApplicationTemplate:getApplicationTemplate", TypeShape.of(GetApplicationTemplateResult.class), args, Utilities.withVersion(options));
     }
@@ -305,9 +711,69 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
         return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access the configuration of the AzureAD provider.
+     * 
+     * ## API Permissions
+     * 
+     * No additional roles are required to use this data source.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AzureadFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;objectId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access the configuration of the AzureAD provider.
+     * 
+     * ## API Permissions
+     * 
+     * No additional roles are required to use this data source.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AzureadFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;objectId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -348,9 +814,77 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetDomainsResult> getDomains() {
         return getDomains(GetDomainsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about existing Domains within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Domain.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var aadDomains = Output.of(AzureadFunctions.getDomains());
+     * 
+     *         ctx.export(&#34;domainNames&#34;, aadDomains.apply(getDomainsResult -&gt; getDomainsResult.getDomains()).stream().map(element -&gt; element.getDomainName()).collect(toList()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args) {
         return getDomains(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about existing Domains within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Domain.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var aadDomains = Output.of(AzureadFunctions.getDomains());
+     * 
+     *         ctx.export(&#34;domainNames&#34;, aadDomains.apply(getDomainsResult -&gt; getDomainsResult.getDomains()).stream().map(element -&gt; element.getDomainName()).collect(toList()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getDomains:getDomains", TypeShape.of(GetDomainsResult.class), args, Utilities.withVersion(options));
     }
@@ -394,9 +928,83 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetGroupResult> getGroup() {
         return getGroup(GetGroupArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an Azure Active Directory group.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Group.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ### By Group Display Name)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroup(GetGroupArgs.builder()
+     *             .displayName(&#34;MyGroupName&#34;)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an Azure Active Directory group.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Group.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ### By Group Display Name)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroup(GetGroupArgs.builder()
+     *             .displayName(&#34;MyGroupName&#34;)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -537,9 +1145,277 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetGroupsResult> getGroups() {
         return getGroups(GetGroupsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets Object IDs or Display Names for multiple Azure Active Directory groups.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Group.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by group name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;group-a&#34;,
+     *                 &#34;group-b&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by display name prefix*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sales = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNamePrefix(&#34;sales-&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all mail-enabled groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var mailEnabled = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(true)
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all security-enabled groups that are not mail-enabled*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var securityOnly = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(false)
+     *             .returnAll(true)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
         return getGroups(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets Object IDs or Display Names for multiple Azure Active Directory groups.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Group.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by group name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;group-a&#34;,
+     *                 &#34;group-b&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by display name prefix*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sales = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNamePrefix(&#34;sales-&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all mail-enabled groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var mailEnabled = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(true)
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all security-enabled groups that are not mail-enabled*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var securityOnly = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(false)
+     *             .returnAll(true)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }
@@ -629,9 +1505,175 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal() {
         return getServicePrincipal(GetServicePrincipalArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an existing service principal associated with an application within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by application display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .displayName(&#34;my-awesome-application&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application ID (client ID)*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .applicationId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args) {
         return getServicePrincipal(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an existing service principal associated with an application within Azure Active Directory.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by application display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .displayName(&#34;my-awesome-application&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application ID (client ID)*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .applicationId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getServicePrincipal:getServicePrincipal", TypeShape.of(GetServicePrincipalResult.class), args, Utilities.withVersion(options));
     }
@@ -729,9 +1771,191 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals() {
         return getServicePrincipals(GetServicePrincipalsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets basic information for multiple Azure Active Directory service principals.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by application display names*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;example-app&#34;,
+     *                 &#34;another-app&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application IDs (client IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .applicationIds(            
+     *                 &#34;11111111-0000-0000-0000-000000000000&#34;,
+     *                 &#34;22222222-0000-0000-0000-000000000000&#34;,
+     *                 &#34;33333333-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .objectIds(            
+     *                 &#34;00000000-0000-0000-0000-000000000000&#34;,
+     *                 &#34;00000000-0000-0000-0000-111111111111&#34;,
+     *                 &#34;00000000-0000-0000-0000-222222222222&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args) {
         return getServicePrincipals(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets basic information for multiple Azure Active Directory service principals.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `Application.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * 
+     * *Look up by application display names*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;example-app&#34;,
+     *                 &#34;another-app&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application IDs (client IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .applicationIds(            
+     *                 &#34;11111111-0000-0000-0000-000000000000&#34;,
+     *                 &#34;22222222-0000-0000-0000-000000000000&#34;,
+     *                 &#34;33333333-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .objectIds(            
+     *                 &#34;00000000-0000-0000-0000-000000000000&#34;,
+     *                 &#34;00000000-0000-0000-0000-111111111111&#34;,
+     *                 &#34;00000000-0000-0000-0000-222222222222&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getServicePrincipals:getServicePrincipals", TypeShape.of(GetServicePrincipalsResult.class), args, Utilities.withVersion(options));
     }
@@ -773,9 +1997,79 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetUserResult> getUser() {
         return getUser(GetUserArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an Azure Active Directory user.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `User.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getUser(GetUserArgs.builder()
+     *             .userPrincipalName(&#34;user@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about an Azure Active Directory user.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `User.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getUser(GetUserArgs.builder()
+     *             .userPrincipalName(&#34;user@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
@@ -819,9 +2113,83 @@ public final class AzureadFunctions {
     public static CompletableFuture<GetUsersResult> getUsers() {
         return getUsers(GetUsersArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Gets basic information for multiple Azure Active Directory users.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `User.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(AzureadFunctions.getUsers(GetUsersArgs.builder()
+     *             .userPrincipalNames(            
+     *                 &#34;kat@hashicorp.com&#34;,
+     *                 &#34;byte@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args) {
         return getUsers(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets basic information for multiple Azure Active Directory users.
+     * 
+     * ## API Permissions
+     * 
+     * The following API permissions are required in order to use this data source.
+     * 
+     * When authenticated with a service principal, this data source requires one of the following application roles: `User.Read.All` or `Directory.Read.All`
+     * 
+     * When authenticated with a user principal, this data source does not require any additional roles.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(AzureadFunctions.getUsers(GetUsersArgs.builder()
+     *             .userPrincipalNames(            
+     *                 &#34;kat@hashicorp.com&#34;,
+     *                 &#34;byte@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azuread:index/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
     }

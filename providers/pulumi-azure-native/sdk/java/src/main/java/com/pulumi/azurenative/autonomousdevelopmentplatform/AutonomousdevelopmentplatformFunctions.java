@@ -22,6 +22,11 @@ public final class AutonomousdevelopmentplatformFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * ADP account
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class AutonomousdevelopmentplatformFunctions {
     public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args) {
         return getDataPool(args, InvokeOptions.Empty);
     }
+    /**
+     * ADP Data Pool
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args, Utilities.withVersion(options));
     }

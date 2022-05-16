@@ -23,6 +23,10 @@ public final class PanoramaFunctions {
     public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(GetApplicationInstanceArgs args) {
         return getApplicationInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for ApplicationInstance CloudFormation Resource
+     * 
+     */
     public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(GetApplicationInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getApplicationInstance", TypeShape.of(GetApplicationInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class PanoramaFunctions {
     public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args) {
         return getPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for Package CloudFormation Resource
+     * 
+     */
     public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class PanoramaFunctions {
     public static CompletableFuture<GetPackageVersionResult> getPackageVersion(GetPackageVersionArgs args) {
         return getPackageVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for PackageVersion Resource Type
+     * 
+     */
     public static CompletableFuture<GetPackageVersionResult> getPackageVersion(GetPackageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args, Utilities.withVersion(options));
     }

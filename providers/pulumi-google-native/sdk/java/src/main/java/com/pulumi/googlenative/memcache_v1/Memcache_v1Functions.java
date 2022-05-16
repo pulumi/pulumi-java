@@ -19,6 +19,10 @@ public final class Memcache_v1Functions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:memcache/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }

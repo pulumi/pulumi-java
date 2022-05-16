@@ -23,6 +23,10 @@ public final class KendraFunctions {
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Kendra DataSource
+     * 
+     */
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class KendraFunctions {
     public static CompletableFuture<GetFaqResult> getFaq(GetFaqArgs args) {
         return getFaq(args, InvokeOptions.Empty);
     }
+    /**
+     * A Kendra FAQ resource
+     * 
+     */
     public static CompletableFuture<GetFaqResult> getFaq(GetFaqArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getFaq", TypeShape.of(GetFaqResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class KendraFunctions {
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
         return getIndex(args, InvokeOptions.Empty);
     }
+    /**
+     * A Kendra index
+     * 
+     */
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }

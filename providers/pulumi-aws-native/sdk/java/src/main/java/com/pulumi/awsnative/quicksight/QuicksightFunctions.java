@@ -29,6 +29,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
         return getAnalysis(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::Analysis Resource Type.
+     * 
+     */
     public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::Dashboard Resource Type.
+     * 
+     */
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args) {
         return getDataSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::DataSet Resource Type.
+     * 
+     */
     public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::DataSource Resource Type.
+     * 
+     */
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
         return getTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::Template Resource Type.
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class QuicksightFunctions {
     public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args) {
         return getTheme(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the AWS::QuickSight::Theme Resource Type.
+     * 
+     */
     public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }

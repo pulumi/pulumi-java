@@ -21,6 +21,10 @@ public final class RekognitionFunctions {
     public static CompletableFuture<GetCollectionResult> getCollection(GetCollectionArgs args) {
         return getCollection(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
+     * 
+     */
     public static CompletableFuture<GetCollectionResult> getCollection(GetCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rekognition:getCollection", TypeShape.of(GetCollectionResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class RekognitionFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Rekognition::Project type creates an Amazon Rekognition CustomLabels Project. A project is a grouping of the resources needed to create and manage Dataset and ProjectVersions.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rekognition:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }

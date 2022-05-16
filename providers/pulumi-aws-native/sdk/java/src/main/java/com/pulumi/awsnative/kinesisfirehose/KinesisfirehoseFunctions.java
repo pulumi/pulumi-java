@@ -19,6 +19,10 @@ public final class KinesisfirehoseFunctions {
     public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args) {
         return getDeliveryStream(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
+     * 
+     */
     public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args, Utilities.withVersion(options));
     }

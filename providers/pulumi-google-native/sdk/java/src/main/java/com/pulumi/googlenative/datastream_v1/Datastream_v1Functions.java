@@ -25,6 +25,10 @@ public final class Datastream_v1Functions {
     public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args) {
         return getConnectionProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this method to get details about a connection profile.
+     * 
+     */
     public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Datastream_v1Functions {
     public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(GetPrivateConnectionArgs args) {
         return getPrivateConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this method to get details about a private connectivity configuration.
+     * 
+     */
     public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(GetPrivateConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Datastream_v1Functions {
     public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
         return getRoute(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this method to get details about a route.
+     * 
+     */
     public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Datastream_v1Functions {
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this method to get details about a stream.
+     * 
+     */
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }

@@ -29,6 +29,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args) {
         return getDetector(args, InvokeOptions.Empty);
     }
+    /**
+     * A resource schema for a Detector in Amazon Fraud Detector.
+     * 
+     */
     public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args) {
         return getEntityType(args, InvokeOptions.Empty);
     }
+    /**
+     * An entity type for fraud detector.
+     * 
+     */
     public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEntityType", TypeShape.of(GetEntityTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetEventTypeResult> getEventType(GetEventTypeArgs args) {
         return getEventType(args, InvokeOptions.Empty);
     }
+    /**
+     * A resource schema for an EventType in Amazon Fraud Detector.
+     * 
+     */
     public static CompletableFuture<GetEventTypeResult> getEventType(GetEventTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEventType", TypeShape.of(GetEventTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetLabelResult> getLabel(GetLabelArgs args) {
         return getLabel(args, InvokeOptions.Empty);
     }
+    /**
+     * An label for fraud detector.
+     * 
+     */
     public static CompletableFuture<GetLabelResult> getLabel(GetLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getLabel", TypeShape.of(GetLabelResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetOutcomeResult> getOutcome(GetOutcomeArgs args) {
         return getOutcome(args, InvokeOptions.Empty);
     }
+    /**
+     * An outcome for rule evaluation.
+     * 
+     */
     public static CompletableFuture<GetOutcomeResult> getOutcome(GetOutcomeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getOutcome", TypeShape.of(GetOutcomeResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class FrauddetectorFunctions {
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }
+    /**
+     * A resource schema for a Variable in Amazon Fraud Detector.
+     * 
+     */
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }

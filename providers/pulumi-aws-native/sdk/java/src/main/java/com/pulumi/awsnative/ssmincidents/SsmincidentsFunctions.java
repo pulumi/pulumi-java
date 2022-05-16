@@ -21,6 +21,10 @@ public final class SsmincidentsFunctions {
     public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args) {
         return getReplicationSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource type definition for AWS::SSMIncidents::ReplicationSet
+     * 
+     */
     public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getReplicationSet", TypeShape.of(GetReplicationSetResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class SsmincidentsFunctions {
     public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args) {
         return getResponsePlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource type definition for AWS::SSMIncidents::ResponsePlan
+     * 
+     */
     public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args, Utilities.withVersion(options));
     }

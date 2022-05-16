@@ -25,6 +25,12 @@ public final class IoteventsFunctions {
     public static CompletableFuture<GetAlarmModelResult> getAlarmModel(GetAlarmModelArgs args) {
         return getAlarmModel(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::IoTEvents::AlarmModel resource creates a alarm model. AWS IoT Events alarms help you monitor your data for changes. The data can be metrics that you measure for your equipment and processes. You can create alarms that send notifications when a threshold is breached. Alarms help you detect issues, streamline maintenance, and optimize performance of your equipment and processes.
+     * 
+     * Alarms are instances of alarm models. The alarm model specifies what to detect, when to send notifications, who gets notified, and more. You can also specify one or more supported actions that occur when the alarm state changes. AWS IoT Events routes input attributes derived from your data to the appropriate alarms. If the data that you&#39;re monitoring is outside the specified range, the alarm is invoked. You can also acknowledge the alarms or set them to the snooze mode.
+     * 
+     */
     public static CompletableFuture<GetAlarmModelResult> getAlarmModel(GetAlarmModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getAlarmModel", TypeShape.of(GetAlarmModelResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +41,10 @@ public final class IoteventsFunctions {
     public static CompletableFuture<GetDetectorModelResult> getDetectorModel(GetDetectorModelArgs args) {
         return getDetectorModel(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::IoTEvents::DetectorModel resource creates a detector model. You create a *detector model* (a model of your equipment or process) using *states*. For each state, you define conditional (Boolean) logic that evaluates the incoming inputs to detect significant events. When an event is detected, it can change the state or trigger custom-built or predefined actions using other AWS services. You can define additional events that trigger actions when entering or exiting a state and, optionally, when a condition is met. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
+     * 
+     */
     public static CompletableFuture<GetDetectorModelResult> getDetectorModel(GetDetectorModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getDetectorModel", TypeShape.of(GetDetectorModelResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +55,10 @@ public final class IoteventsFunctions {
     public static CompletableFuture<GetInputResult> getInput(GetInputArgs args) {
         return getInput(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
+     * 
+     */
     public static CompletableFuture<GetInputResult> getInput(GetInputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getInput", TypeShape.of(GetInputResult.class), args, Utilities.withVersion(options));
     }

@@ -23,6 +23,10 @@ public final class Artifactregistry_v1beta2Functions {
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a repository.
+     * 
+     */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta2:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Artifactregistry_v1beta2Functions {
     public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(GetRepositoryIamPolicyArgs args) {
         return getRepositoryIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the IAM policy for a given resource.
+     * 
+     */
     public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(GetRepositoryIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta2:getRepositoryIamPolicy", TypeShape.of(GetRepositoryIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Artifactregistry_v1beta2Functions {
     public static CompletableFuture<GetTagResult> getTag(GetTagArgs args) {
         return getTag(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a tag.
+     * 
+     */
     public static CompletableFuture<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta2:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }

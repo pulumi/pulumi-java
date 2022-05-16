@@ -48,6 +48,35 @@ public final class PrivatelinkFunctions {
     public static CompletableFuture<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args) {
         return getEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access the connection status information about an existing Private Endpoint Connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PrivatelinkFunctions.getEndpointConnection(GetEndpointConnectionArgs.builder()
+     *             .name(&#34;example-private-endpoint&#34;)
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;privateEndpointStatus&#34;, example.apply(getEndpointConnectionResult -&gt; getEndpointConnectionResult.getPrivateServiceConnections()[0].getStatus()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:privatelink/getEndpointConnection:getEndpointConnection", TypeShape.of(GetEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -83,6 +112,35 @@ public final class PrivatelinkFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Private Link Service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PrivatelinkFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;myPrivateLinkService&#34;)
+     *             .resourceGroupName(&#34;PrivateLinkServiceRG&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;privateLinkServiceId&#34;, example.apply(getServiceResult -&gt; getServiceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:privatelink/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -118,6 +176,35 @@ public final class PrivatelinkFunctions {
     public static CompletableFuture<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args) {
         return getServiceEndpointConnections(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access endpoint connection information about an existing Private Link Service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PrivatelinkFunctions.getServiceEndpointConnections(GetServiceEndpointConnectionsArgs.builder()
+     *             .serviceId(azurerm_private_link_service.getExample().getId())
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;privateEndpointStatus&#34;, example.apply(getServiceEndpointConnectionsResult -&gt; getServiceEndpointConnectionsResult.getPrivateEndpointConnections()[0].getStatus()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:privatelink/getServiceEndpointConnections:getServiceEndpointConnections", TypeShape.of(GetServiceEndpointConnectionsResult.class), args, Utilities.withVersion(options));
     }

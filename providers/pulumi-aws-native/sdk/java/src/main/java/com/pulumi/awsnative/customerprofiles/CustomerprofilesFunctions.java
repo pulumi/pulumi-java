@@ -23,6 +23,10 @@ public final class CustomerprofilesFunctions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * A domain defined for 3rd party data source in Profile Service
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class CustomerprofilesFunctions {
     public static CompletableFuture<GetIntegrationResult> getIntegration(GetIntegrationArgs args) {
         return getIntegration(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource schema for creating an Amazon Connect Customer Profiles Integration.
+     * 
+     */
     public static CompletableFuture<GetIntegrationResult> getIntegration(GetIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getIntegration", TypeShape.of(GetIntegrationResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class CustomerprofilesFunctions {
     public static CompletableFuture<GetObjectTypeResult> getObjectType(GetObjectTypeArgs args) {
         return getObjectType(args, InvokeOptions.Empty);
     }
+    /**
+     * An ObjectType resource of Amazon Connect Customer Profiles
+     * 
+     */
     public static CompletableFuture<GetObjectTypeResult> getObjectType(GetObjectTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getObjectType", TypeShape.of(GetObjectTypeResult.class), args, Utilities.withVersion(options));
     }

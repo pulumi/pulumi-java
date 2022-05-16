@@ -46,6 +46,35 @@ public final class DevtestFunctions {
     public static CompletableFuture<GetLabResult> getLab(GetLabArgs args) {
         return getLab(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Dev Test Lab.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DevtestFunctions.getLab(GetLabArgs.builder()
+     *             .name(&#34;example-lab&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;uniqueIdentifier&#34;, example.apply(getLabResult -&gt; getLabResult.getUniqueIdentifier()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLabResult> getLab(GetLabArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:devtest/getLab:getLab", TypeShape.of(GetLabResult.class), args, Utilities.withVersion(options));
     }
@@ -82,6 +111,36 @@ public final class DevtestFunctions {
     public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Dev Test Lab Virtual Network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DevtestFunctions.getVirtualNetwork(GetVirtualNetworkArgs.builder()
+     *             .name(&#34;example-network&#34;)
+     *             .labName(&#34;examplelab&#34;)
+     *             .resourceGroupName(&#34;example-resource&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;labSubnetName&#34;, example.apply(getVirtualNetworkResult -&gt; getVirtualNetworkResult.getAllowedSubnets()[0].getLabSubnetName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:devtest/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }

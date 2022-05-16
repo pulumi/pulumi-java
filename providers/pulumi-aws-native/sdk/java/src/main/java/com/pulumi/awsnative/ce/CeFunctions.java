@@ -19,6 +19,10 @@ public final class CeFunctions {
     public static CompletableFuture<GetCostCategoryResult> getCostCategory(GetCostCategoryArgs args) {
         return getCostCategory(args, InvokeOptions.Empty);
     }
+    /**
+     * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
+     * 
+     */
     public static CompletableFuture<GetCostCategoryResult> getCostCategory(GetCostCategoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ce:getCostCategory", TypeShape.of(GetCostCategoryResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class Retail_v2Functions {
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a Product.
+     * 
+     */
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }

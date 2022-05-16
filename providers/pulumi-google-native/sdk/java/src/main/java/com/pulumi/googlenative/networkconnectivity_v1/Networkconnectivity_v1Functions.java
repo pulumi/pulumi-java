@@ -27,6 +27,10 @@ public final class Networkconnectivity_v1Functions {
     public static CompletableFuture<GetHubResult> getHub(GetHubArgs args) {
         return getHub(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details about the specified hub.
+     * 
+     */
     public static CompletableFuture<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class Networkconnectivity_v1Functions {
     public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args) {
         return getHubIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class Networkconnectivity_v1Functions {
     public static CompletableFuture<GetPolicyBasedRouteIamPolicyResult> getPolicyBasedRouteIamPolicy(GetPolicyBasedRouteIamPolicyArgs args) {
         return getPolicyBasedRouteIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetPolicyBasedRouteIamPolicyResult> getPolicyBasedRouteIamPolicy(GetPolicyBasedRouteIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getPolicyBasedRouteIamPolicy", TypeShape.of(GetPolicyBasedRouteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class Networkconnectivity_v1Functions {
     public static CompletableFuture<GetSpokeResult> getSpoke(GetSpokeArgs args) {
         return getSpoke(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details about the specified spoke.
+     * 
+     */
     public static CompletableFuture<GetSpokeResult> getSpoke(GetSpokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpoke", TypeShape.of(GetSpokeResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class Networkconnectivity_v1Functions {
     public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args) {
         return getSpokeIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args, Utilities.withVersion(options));
     }

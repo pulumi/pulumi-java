@@ -21,6 +21,10 @@ public final class Cloudsearch_v1Functions {
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a datasource. **Note:** This API requires an admin account to execute.
+     * 
+     */
     public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Cloudsearch_v1Functions {
     public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args) {
         return getSearchApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified search application. **Note:** This API requires an admin account to execute.
+     * 
+     */
     public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args, Utilities.withVersion(options));
     }

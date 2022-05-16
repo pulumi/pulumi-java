@@ -48,6 +48,35 @@ public final class SiterecoveryFunctions {
     public static CompletableFuture<GetFabricResult> getFabric(GetFabricArgs args) {
         return getFabric(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Site Recovery Replication Fabric.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var fabric = Output.of(SiterecoveryFunctions.getFabric(GetFabricArgs.builder()
+     *             .name(&#34;primary-fabric&#34;)
+     *             .recoveryVaultName(&#34;tfex-recovery_vault&#34;)
+     *             .resourceGroupName(&#34;tfex-resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFabricResult> getFabric(GetFabricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:siterecovery/getFabric:getFabric", TypeShape.of(GetFabricResult.class), args, Utilities.withVersion(options));
     }
@@ -84,6 +113,36 @@ public final class SiterecoveryFunctions {
     public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args) {
         return getProtectionContainer(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing site recovery services protection container.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var container = Output.of(SiterecoveryFunctions.getProtectionContainer(GetProtectionContainerArgs.builder()
+     *             .name(&#34;primary-container&#34;)
+     *             .recoveryFabricName(&#34;primary-fabric&#34;)
+     *             .recoveryVaultName(&#34;tfex-recovery_vault&#34;)
+     *             .resourceGroupName(&#34;tfex-resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:siterecovery/getProtectionContainer:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +178,35 @@ public final class SiterecoveryFunctions {
     public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
         return getReplicationPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Azure Site Recovery replication policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(SiterecoveryFunctions.getReplicationPolicy(GetReplicationPolicyArgs.builder()
+     *             .name(&#34;replication-policy&#34;)
+     *             .recoveryVaultName(&#34;tfex-recovery_vault&#34;)
+     *             .resourceGroupName(&#34;tfex-resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:siterecovery/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }

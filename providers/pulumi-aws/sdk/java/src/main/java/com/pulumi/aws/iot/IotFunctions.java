@@ -19,9 +19,17 @@ public final class IotFunctions {
     public static CompletableFuture<GetEndpointResult> getEndpoint() {
         return getEndpoint(GetEndpointArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Returns a unique endpoint specific to the AWS account making the call.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns a unique endpoint specific to the AWS account making the call.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iot/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }

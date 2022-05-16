@@ -19,6 +19,10 @@ public final class Firestore_v1beta1Functions {
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
         return getIndex(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an index.
+     * 
+     */
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firestore/v1beta1:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }

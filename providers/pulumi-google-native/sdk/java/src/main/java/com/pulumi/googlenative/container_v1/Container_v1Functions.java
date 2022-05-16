@@ -21,6 +21,10 @@ public final class Container_v1Functions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a specific cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:container/v1:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Container_v1Functions {
     public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args) {
         return getNodePool(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the requested node pool.
+     * 
+     */
     public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:container/v1:getNodePool", TypeShape.of(GetNodePoolResult.class), args, Utilities.withVersion(options));
     }

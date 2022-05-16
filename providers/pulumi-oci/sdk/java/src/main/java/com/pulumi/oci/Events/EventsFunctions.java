@@ -25,6 +25,14 @@ public final class EventsFunctions {
     public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Rule resource in Oracle Cloud Infrastructure Events service.
+     * 
+     * Retrieves a rule.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Events/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class EventsFunctions {
     public static CompletableFuture<GetRulesResult> getRules(GetRulesArgs args) {
         return getRules(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Rules in Oracle Cloud Infrastructure Events service.
+     * 
+     * Lists rules for this compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetRulesResult> getRules(GetRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Events/getRules:getRules", TypeShape.of(GetRulesResult.class), args, Utilities.withVersion(options));
     }

@@ -49,6 +49,34 @@ public final class IotFunctions {
     public static CompletableFuture<GetDpsResult> getDps(GetDpsArgs args) {
         return getDps(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing IotHub Device Provisioning Service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IotFunctions.getDps(GetDpsArgs.builder()
+     *             .name(&#34;iot_hub_dps_test&#34;)
+     *             .resourceGroupName(&#34;iothub_dps_rg&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDpsResult> getDps(GetDpsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:iot/getDps:getDps", TypeShape.of(GetDpsResult.class), args, Utilities.withVersion(options));
     }
@@ -84,6 +112,35 @@ public final class IotFunctions {
     public static CompletableFuture<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args) {
         return getDpsSharedAccessPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IotFunctions.getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .iothubDpsName(azurerm_iothub_dps.getExample().getName())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:iot/getDpsSharedAccessPolicy:getDpsSharedAccessPolicy", TypeShape.of(GetDpsSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +176,35 @@ public final class IotFunctions {
     public static CompletableFuture<GetIotHubResult> getIotHub(GetIotHubArgs args) {
         return getIotHub(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing IoTHub.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IotFunctions.getIotHub(GetIotHubArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getIotHubResult -&gt; getIotHubResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetIotHubResult> getIotHub(GetIotHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:iot/getIotHub:getIotHub", TypeShape.of(GetIotHubResult.class), args, Utilities.withVersion(options));
     }
@@ -154,6 +240,35 @@ public final class IotFunctions {
     public static CompletableFuture<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args) {
         return getSharedAccessPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing IotHub Shared Access Policy
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IotFunctions.getSharedAccessPolicy(GetSharedAccessPolicyArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .iothubName(azurerm_iothub.getExample().getName())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:iot/getSharedAccessPolicy:getSharedAccessPolicy", TypeShape.of(GetSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
     }

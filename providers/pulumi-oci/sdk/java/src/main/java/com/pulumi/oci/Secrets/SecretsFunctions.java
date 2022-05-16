@@ -26,6 +26,15 @@ public final class SecretsFunctions {
     public static CompletableFuture<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args) {
         return getSecretbundle(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Secretbundle resource in Oracle Cloud Infrastructure Secrets service.
+     * 
+     * Gets a secret bundle that matches either the specified `stage`, `label`, or `versionNumber` parameter.
+     * If none of these parameters are provided, the bundle for the secret version marked as `CURRENT` will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Secrets/getSecretbundle:getSecretbundle", TypeShape.of(GetSecretbundleResult.class), args, Utilities.withVersion(options));
     }
@@ -40,6 +49,14 @@ public final class SecretsFunctions {
     public static CompletableFuture<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args) {
         return getSecretbundleVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Secretbundle Versions in Oracle Cloud Infrastructure Secrets service.
+     * 
+     * Lists all secret bundle versions for the specified secret.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Secrets/getSecretbundleVersions:getSecretbundleVersions", TypeShape.of(GetSecretbundleVersionsResult.class), args, Utilities.withVersion(options));
     }

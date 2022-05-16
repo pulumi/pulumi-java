@@ -67,9 +67,113 @@ public final class TpuFunctions {
     public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions() {
         return getTensorflowVersions(GetTensorflowVersionsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(TpuFunctions.getTensorflowVersions());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Configure Basic TPU Node With Available Version
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(TpuFunctions.getTensorflowVersions());
+     * 
+     *         var tpu = new Node(&#34;tpu&#34;, NodeArgs.builder()        
+     *             .zone(&#34;us-central1-b&#34;)
+     *             .acceleratorType(&#34;v3-8&#34;)
+     *             .tensorflowVersion(available.apply(getTensorflowVersionsResult -&gt; getTensorflowVersionsResult.getVersions()[0]))
+     *             .cidrBlock(&#34;10.2.0.0/29&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args) {
         return getTensorflowVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(TpuFunctions.getTensorflowVersions());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Configure Basic TPU Node With Available Version
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(TpuFunctions.getTensorflowVersions());
+     * 
+     *         var tpu = new Node(&#34;tpu&#34;, NodeArgs.builder()        
+     *             .zone(&#34;us-central1-b&#34;)
+     *             .acceleratorType(&#34;v3-8&#34;)
+     *             .tensorflowVersion(available.apply(getTensorflowVersionsResult -&gt; getTensorflowVersionsResult.getVersions()[0]))
+     *             .cidrBlock(&#34;10.2.0.0/29&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:tpu/getTensorflowVersions:getTensorflowVersions", TypeShape.of(GetTensorflowVersionsResult.class), args, Utilities.withVersion(options));
     }

@@ -25,6 +25,10 @@ public final class Route53Functions {
     public static CompletableFuture<GetDNSSECResult> getDNSSEC(GetDNSSECArgs args) {
         return getDNSSEC(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
+     * 
+     */
     public static CompletableFuture<GetDNSSECResult> getDNSSEC(GetDNSSECArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getDNSSEC", TypeShape.of(GetDNSSECResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Route53Functions {
     public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
         return getHealthCheck(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Route53::HealthCheck.
+     * 
+     */
     public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Route53Functions {
     public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args) {
         return getHostedZone(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Route53::HostedZone.
+     * 
+     */
     public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Route53Functions {
     public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(GetKeySigningKeyArgs args) {
         return getKeySigningKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
+     * 
+     */
     public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(GetKeySigningKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getKeySigningKey", TypeShape.of(GetKeySigningKeyResult.class), args, Utilities.withVersion(options));
     }

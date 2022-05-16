@@ -58,6 +58,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetBlobContainerResult> getBlobContainer(GetBlobContainerArgs args) {
         return getBlobContainer(args, InvokeOptions.Empty);
     }
+    /**
+     * Properties of the blob container, including Id, resource name, resource type, Etag.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetBlobContainerResult> getBlobContainer(GetBlobContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainer", TypeShape.of(GetBlobContainerResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +74,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(GetBlobContainerImmutabilityPolicyArgs args) {
         return getBlobContainerImmutabilityPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(GetBlobContainerImmutabilityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainerImmutabilityPolicy", TypeShape.of(GetBlobContainerImmutabilityPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -80,6 +90,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(GetBlobInventoryPolicyArgs args) {
         return getBlobInventoryPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * The storage account blob inventory policy.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(GetBlobInventoryPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobInventoryPolicy", TypeShape.of(GetBlobInventoryPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +106,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(GetBlobServicePropertiesArgs args) {
         return getBlobServiceProperties(args, InvokeOptions.Empty);
     }
+    /**
+     * The properties of a storage account’s Blob service.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(GetBlobServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobServiceProperties", TypeShape.of(GetBlobServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
@@ -102,6 +122,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args) {
         return getEncryptionScope(args, InvokeOptions.Empty);
     }
+    /**
+     * The Encryption Scope resource.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +138,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(GetFileServicePropertiesArgs args) {
         return getFileServiceProperties(args, InvokeOptions.Empty);
     }
+    /**
+     * The properties of File services in storage account.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(GetFileServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileServiceProperties", TypeShape.of(GetFileServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
@@ -124,6 +154,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetFileShareResult> getFileShare(GetFileShareArgs args) {
         return getFileShare(args, InvokeOptions.Empty);
     }
+    /**
+     * Properties of the file share, including Id, resource name, resource type, Etag.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetFileShareResult> getFileShare(GetFileShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileShare", TypeShape.of(GetFileShareResult.class), args, Utilities.withVersion(options));
     }
@@ -135,6 +170,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetLocalUserResult> getLocalUser(GetLocalUserArgs args) {
         return getLocalUser(args, InvokeOptions.Empty);
     }
+    /**
+     * The local user associated with the storage accounts.
+     * API Version: 2021-08-01.
+     * 
+     */
     public static CompletableFuture<GetLocalUserResult> getLocalUser(GetLocalUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getLocalUser", TypeShape.of(GetLocalUserResult.class), args, Utilities.withVersion(options));
     }
@@ -146,6 +186,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(GetManagementPolicyArgs args) {
         return getManagementPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * The Get Storage Account ManagementPolicies operation response.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(GetManagementPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getManagementPolicy", TypeShape.of(GetManagementPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -157,6 +202,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(GetObjectReplicationPolicyArgs args) {
         return getObjectReplicationPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * The replication policy between two storage accounts. Multiple rules can be defined in one policy.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(GetObjectReplicationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getObjectReplicationPolicy", TypeShape.of(GetObjectReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -168,6 +218,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -178,6 +233,10 @@ public final class StorageFunctions {
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
@@ -189,6 +248,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(GetQueueServicePropertiesArgs args) {
         return getQueueServiceProperties(args, InvokeOptions.Empty);
     }
+    /**
+     * The properties of a storage account’s Queue service.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(GetQueueServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueueServiceProperties", TypeShape.of(GetQueueServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
@@ -200,6 +264,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args) {
         return getStorageAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * The storage account.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -211,6 +280,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
+    /**
+     * Properties of the table, including Id, resource name, resource type.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
@@ -222,6 +296,11 @@ public final class StorageFunctions {
     public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(GetTableServicePropertiesArgs args) {
         return getTableServiceProperties(args, InvokeOptions.Empty);
     }
+    /**
+     * The properties of a storage account’s Table service.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(GetTableServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTableServiceProperties", TypeShape.of(GetTableServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
@@ -233,6 +312,11 @@ public final class StorageFunctions {
     public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(ListLocalUserKeysArgs args) {
         return listLocalUserKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * The Storage Account Local User keys.
+     * API Version: 2021-08-01.
+     * 
+     */
     public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(ListLocalUserKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listLocalUserKeys", TypeShape.of(ListLocalUserKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -244,6 +328,11 @@ public final class StorageFunctions {
     public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args) {
         return listStorageAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * The response from the ListKeys operation.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -255,6 +344,11 @@ public final class StorageFunctions {
     public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(ListStorageAccountSASArgs args) {
         return listStorageAccountSAS(args, InvokeOptions.Empty);
     }
+    /**
+     * The List SAS credentials operation response.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(ListStorageAccountSASArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountSAS", TypeShape.of(ListStorageAccountSASResult.class), args, Utilities.withVersion(options));
     }
@@ -266,6 +360,11 @@ public final class StorageFunctions {
     public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(ListStorageAccountServiceSASArgs args) {
         return listStorageAccountServiceSAS(args, InvokeOptions.Empty);
     }
+    /**
+     * The List service SAS credentials operation response.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(ListStorageAccountServiceSASArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountServiceSAS", TypeShape.of(ListStorageAccountServiceSASResult.class), args, Utilities.withVersion(options));
     }

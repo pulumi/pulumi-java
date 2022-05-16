@@ -44,6 +44,35 @@ public final class ManagedapplicationFunctions {
     public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args) {
         return getDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Uses this data source to access information about an existing Managed Application Definition.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ManagedapplicationFunctions.getDefinition(GetDefinitionArgs.builder()
+     *             .name(&#34;example-managedappdef&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getDefinitionResult -&gt; getDefinitionResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:managedapplication/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
     }

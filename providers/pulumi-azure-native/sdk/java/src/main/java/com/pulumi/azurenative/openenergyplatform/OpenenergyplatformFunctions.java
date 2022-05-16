@@ -19,6 +19,10 @@ public final class OpenenergyplatformFunctions {
     public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args) {
         return getEnergyService(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2021-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:openenergyplatform:getEnergyService", TypeShape.of(GetEnergyServiceResult.class), args, Utilities.withVersion(options));
     }

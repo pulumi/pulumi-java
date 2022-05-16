@@ -21,6 +21,10 @@ public final class Storagetransfer_v1Functions {
     public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
         return getAgentPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an agent pool.
+     * 
+     */
     public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storagetransfer/v1:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Storagetransfer_v1Functions {
     public static CompletableFuture<GetTransferJobResult> getTransferJob(GetTransferJobArgs args) {
         return getTransferJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a transfer job.
+     * 
+     */
     public static CompletableFuture<GetTransferJobResult> getTransferJob(GetTransferJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storagetransfer/v1:getTransferJob", TypeShape.of(GetTransferJobResult.class), args, Utilities.withVersion(options));
     }

@@ -23,6 +23,10 @@ public final class TimestreamFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Timestream::Database resource creates a Timestream database.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class TimestreamFunctions {
     public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args) {
         return getScheduledQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+     * 
+     */
     public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class TimestreamFunctions {
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Timestream::Table resource creates a Timestream Table.
+     * 
+     */
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }

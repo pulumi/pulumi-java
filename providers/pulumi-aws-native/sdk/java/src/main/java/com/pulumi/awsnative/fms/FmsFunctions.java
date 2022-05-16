@@ -21,6 +21,10 @@ public final class FmsFunctions {
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class FmsFunctions {
     public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
         return getPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Creates an AWS Firewall Manager policy.
+     * 
+     */
     public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }

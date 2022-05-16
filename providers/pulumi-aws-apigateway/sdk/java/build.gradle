@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_AWS_APIGATEWAY_PROVIDER_SDK_VERSION") ?: "v0.0.7";
+version = System.getenv("PULUMI_AWS_APIGATEWAY_PROVIDER_SDK_VERSION") ?: "0.0.7";
 
 java {
     toolchain {

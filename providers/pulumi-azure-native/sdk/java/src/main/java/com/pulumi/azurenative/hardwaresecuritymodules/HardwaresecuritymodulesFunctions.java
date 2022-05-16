@@ -20,6 +20,11 @@ public final class HardwaresecuritymodulesFunctions {
     public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args) {
         return getDedicatedHsm(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource information with extended details.
+     * API Version: 2018-10-31-preview.
+     * 
+     */
     public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hardwaresecuritymodules:getDedicatedHsm", TypeShape.of(GetDedicatedHsmResult.class), args, Utilities.withVersion(options));
     }

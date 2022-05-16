@@ -52,6 +52,35 @@ public final class CloudwatchFunctions {
     public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args) {
         return getEventBus(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can be used to fetch information about a specific
+     * EventBridge event bus. Use this data source to compute the ARN of
+     * an event bus, given the name of the bus.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getEventBus(GetEventBusArgs.builder()
+     *             .name(&#34;example-bus-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +116,35 @@ public final class CloudwatchFunctions {
     public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args) {
         return getEventConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to retrieve information about an EventBridge connection.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CloudwatchFunctions.getEventConnection(GetEventConnectionArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -122,9 +180,67 @@ public final class CloudwatchFunctions {
     public static CompletableFuture<GetEventSourceResult> getEventSource() {
         return getEventSource(GetEventSourceArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
         return getEventSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -158,6 +274,33 @@ public final class CloudwatchFunctions {
     public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
         return getLogGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about an AWS Cloudwatch Log Group
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroup(GetLogGroupArgs.builder()
+     *             .name(&#34;MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -191,6 +334,33 @@ public final class CloudwatchFunctions {
     public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
         return getLogGroups(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get a list of AWS Cloudwatch Log Groups
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroups(GetLogGroupsArgs.builder()
+     *             .logGroupNamePrefix(&#34;/MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
     }

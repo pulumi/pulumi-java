@@ -37,6 +37,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetDkimResult> getDkim(GetDkimArgs args) {
         return getDkim(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Dkim resource in Oracle Cloud Infrastructure Email service.
+     * 
+     * Retrieves the specified DKIM.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDkimResult> getDkim(GetDkimArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getDkim:getDkim", TypeShape.of(GetDkimResult.class), args, Utilities.withVersion(options));
     }
@@ -51,6 +59,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetDkimsResult> getDkims(GetDkimsArgs args) {
         return getDkims(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Dkims in Oracle Cloud Infrastructure Email service.
+     * 
+     * Lists DKIMs for a email domain.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDkimsResult> getDkims(GetDkimsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getDkims:getDkims", TypeShape.of(GetDkimsResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +81,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetEmailDomainResult> getEmailDomain(GetEmailDomainArgs args) {
         return getEmailDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Email Domain resource in Oracle Cloud Infrastructure Email service.
+     * 
+     * Retrieves the specified email domain.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEmailDomainResult> getEmailDomain(GetEmailDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getEmailDomain:getEmailDomain", TypeShape.of(GetEmailDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +103,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetEmailDomainsResult> getEmailDomains(GetEmailDomainsArgs args) {
         return getEmailDomains(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Email Domains in Oracle Cloud Infrastructure Email service.
+     * 
+     * Lists email domains in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEmailDomainsResult> getEmailDomains(GetEmailDomainsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getEmailDomains:getEmailDomains", TypeShape.of(GetEmailDomainsResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +125,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetSenderResult> getSender(GetSenderArgs args) {
         return getSender(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Sender resource in Oracle Cloud Infrastructure Email service.
+     * 
+     * Gets an approved sender for a given `senderId`.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSenderResult> getSender(GetSenderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getSender:getSender", TypeShape.of(GetSenderResult.class), args, Utilities.withVersion(options));
     }
@@ -107,6 +147,14 @@ public final class EmailFunctions {
     public static CompletableFuture<GetSendersResult> getSenders(GetSendersArgs args) {
         return getSenders(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Senders in Oracle Cloud Infrastructure Email service.
+     * 
+     * Gets a collection of approved sender email addresses and sender IDs.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSendersResult> getSenders(GetSendersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getSenders:getSenders", TypeShape.of(GetSendersResult.class), args, Utilities.withVersion(options));
     }
@@ -122,6 +170,15 @@ public final class EmailFunctions {
     public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args) {
         return getSuppression(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Suppression resource in Oracle Cloud Infrastructure Email service.
+     * 
+     * Gets the details of a suppressed recipient email address for a given
+     * `suppressionId`. Each suppression is given a unique OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getSuppression:getSuppression", TypeShape.of(GetSuppressionResult.class), args, Utilities.withVersion(options));
     }
@@ -138,6 +195,16 @@ public final class EmailFunctions {
     public static CompletableFuture<GetSuppressionsResult> getSuppressions(GetSuppressionsArgs args) {
         return getSuppressions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Suppressions in Oracle Cloud Infrastructure Email service.
+     * 
+     * Gets a list of suppressed recipient email addresses for a user. The
+     * `compartmentId` for suppressions must be a tenancy OCID. The returned list
+     * is sorted by creation time in descending order.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSuppressionsResult> getSuppressions(GetSuppressionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Email/getSuppressions:getSuppressions", TypeShape.of(GetSuppressionsResult.class), args, Utilities.withVersion(options));
     }

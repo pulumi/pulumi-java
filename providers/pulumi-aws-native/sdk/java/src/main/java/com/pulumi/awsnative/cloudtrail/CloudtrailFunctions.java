@@ -19,6 +19,10 @@ public final class CloudtrailFunctions {
     public static CompletableFuture<GetTrailResult> getTrail(GetTrailArgs args) {
         return getTrail(args, InvokeOptions.Empty);
     }
+    /**
+     * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were created.
+     * 
+     */
     public static CompletableFuture<GetTrailResult> getTrail(GetTrailArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudtrail:getTrail", TypeShape.of(GetTrailResult.class), args, Utilities.withVersion(options));
     }

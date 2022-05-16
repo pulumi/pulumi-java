@@ -24,6 +24,11 @@ public final class ElasticsanFunctions {
     public static CompletableFuture<GetElasticSanResult> getElasticSan(GetElasticSanArgs args) {
         return getElasticSan(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for ElasticSan request.
+     * API Version: 2021-11-20-preview.
+     * 
+     */
     public static CompletableFuture<GetElasticSanResult> getElasticSan(GetElasticSanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elasticsan:getElasticSan", TypeShape.of(GetElasticSanResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class ElasticsanFunctions {
     public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for Volume request.
+     * API Version: 2021-11-20-preview.
+     * 
+     */
     public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elasticsan:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class ElasticsanFunctions {
     public static CompletableFuture<GetVolumeGroupResult> getVolumeGroup(GetVolumeGroupArgs args) {
         return getVolumeGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Response for Volume Group request.
+     * API Version: 2021-11-20-preview.
+     * 
+     */
     public static CompletableFuture<GetVolumeGroupResult> getVolumeGroup(GetVolumeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elasticsan:getVolumeGroup", TypeShape.of(GetVolumeGroupResult.class), args, Utilities.withVersion(options));
     }

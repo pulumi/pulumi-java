@@ -25,6 +25,10 @@ public final class ServicecatalogappregistryFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class ServicecatalogappregistryFunctions {
     public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(GetAttributeGroupArgs args) {
         return getAttributeGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
+     * 
+     */
     public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(GetAttributeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroup", TypeShape.of(GetAttributeGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class ServicecatalogappregistryFunctions {
     public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(GetAttributeGroupAssociationArgs args) {
         return getAttributeGroupAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
+     * 
+     */
     public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(GetAttributeGroupAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroupAssociation", TypeShape.of(GetAttributeGroupAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class ServicecatalogappregistryFunctions {
     public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(GetResourceAssociationArgs args) {
         return getResourceAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
+     * 
+     */
     public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(GetResourceAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getResourceAssociation", TypeShape.of(GetResourceAssociationResult.class), args, Utilities.withVersion(options));
     }

@@ -50,6 +50,35 @@ public final class MssqlFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing SQL database.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MssqlFunctions.getDatabase(GetDatabaseArgs.builder()
+     *             .name(&#34;example-mssql-db&#34;)
+     *             .serverId(&#34;example-mssql-server-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;databaseId&#34;, example.apply(getDatabaseResult -&gt; getDatabaseResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mssql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -86,6 +115,36 @@ public final class MssqlFunctions {
     public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args) {
         return getElasticPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing SQL elastic pool.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MssqlFunctions.getElasticPool(GetElasticPoolArgs.builder()
+     *             .name(&#34;mssqlelasticpoolname&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .serverName(&#34;example-sql-server&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;elasticpoolId&#34;, example.apply(getElasticPoolResult -&gt; getElasticPoolResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mssql/getElasticPool:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -120,6 +179,34 @@ public final class MssqlFunctions {
     public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
         return getManagedInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Microsoft SQL Azure Managed Instance.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MssqlFunctions.getManagedInstance(GetManagedInstanceArgs.builder()
+     *             .name(&#34;managedsqlinstance&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mssql/getManagedInstance:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -155,6 +242,35 @@ public final class MssqlFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Microsoft SQL Server.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MssqlFunctions.getServer(GetServerArgs.builder()
+     *             .name(&#34;existingMsSqlServer&#34;)
+     *             .resourceGroupName(&#34;existingResGroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getServerResult -&gt; getServerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mssql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }

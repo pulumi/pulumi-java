@@ -20,6 +20,11 @@ public final class HealthbotFunctions {
     public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
         return getBot(args, InvokeOptions.Empty);
     }
+    /**
+     * HealthBot resource definition
+     * API Version: 2020-12-08.
+     * 
+     */
     public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthbot:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }

@@ -24,6 +24,11 @@ public final class HybridconnectivityFunctions {
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * The endpoint for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class HybridconnectivityFunctions {
     public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args) {
         return listEndpointCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * The endpoint access for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
     public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class HybridconnectivityFunctions {
     public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args) {
         return listEndpointManagedProxyDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Managed Proxy
+     * API Version: 2022-05-01-preview.
+     * 
+     */
     public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
     }

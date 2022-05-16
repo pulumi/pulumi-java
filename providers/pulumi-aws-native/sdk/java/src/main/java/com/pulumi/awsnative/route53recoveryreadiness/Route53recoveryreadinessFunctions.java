@@ -25,6 +25,10 @@ public final class Route53recoveryreadinessFunctions {
     public static CompletableFuture<GetCellResult> getCell(GetCellArgs args) {
         return getCell(args, InvokeOptions.Empty);
     }
+    /**
+     * The API Schema for AWS Route53 Recovery Readiness Cells.
+     * 
+     */
     public static CompletableFuture<GetCellResult> getCell(GetCellArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getCell", TypeShape.of(GetCellResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Route53recoveryreadinessFunctions {
     public static CompletableFuture<GetReadinessCheckResult> getReadinessCheck(GetReadinessCheckArgs args) {
         return getReadinessCheck(args, InvokeOptions.Empty);
     }
+    /**
+     * Aws Route53 Recovery Readiness Check Schema and API specification.
+     * 
+     */
     public static CompletableFuture<GetReadinessCheckResult> getReadinessCheck(GetReadinessCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getReadinessCheck", TypeShape.of(GetReadinessCheckResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Route53recoveryreadinessFunctions {
     public static CompletableFuture<GetRecoveryGroupResult> getRecoveryGroup(GetRecoveryGroupArgs args) {
         return getRecoveryGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
+     * 
+     */
     public static CompletableFuture<GetRecoveryGroupResult> getRecoveryGroup(GetRecoveryGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getRecoveryGroup", TypeShape.of(GetRecoveryGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Route53recoveryreadinessFunctions {
     public static CompletableFuture<GetResourceSetResult> getResourceSet(GetResourceSetArgs args) {
         return getResourceSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for the AWS Route53 Recovery Readiness ResourceSet Resource and API.
+     * 
+     */
     public static CompletableFuture<GetResourceSetResult> getResourceSet(GetResourceSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getResourceSet", TypeShape.of(GetResourceSetResult.class), args, Utilities.withVersion(options));
     }

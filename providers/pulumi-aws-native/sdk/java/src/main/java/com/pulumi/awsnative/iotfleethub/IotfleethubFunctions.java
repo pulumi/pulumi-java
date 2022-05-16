@@ -19,6 +19,10 @@ public final class IotfleethubFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTFleetHub::Application
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotfleethub:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }

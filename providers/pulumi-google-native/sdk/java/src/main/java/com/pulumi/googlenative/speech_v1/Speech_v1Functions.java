@@ -21,6 +21,10 @@ public final class Speech_v1Functions {
     public static CompletableFuture<GetCustomClassResult> getCustomClass(GetCustomClassArgs args) {
         return getCustomClass(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a custom class.
+     * 
+     */
     public static CompletableFuture<GetCustomClassResult> getCustomClass(GetCustomClassArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getCustomClass", TypeShape.of(GetCustomClassResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Speech_v1Functions {
     public static CompletableFuture<GetPhraseSetResult> getPhraseSet(GetPhraseSetArgs args) {
         return getPhraseSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a phrase set.
+     * 
+     */
     public static CompletableFuture<GetPhraseSetResult> getPhraseSet(GetPhraseSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getPhraseSet", TypeShape.of(GetPhraseSetResult.class), args, Utilities.withVersion(options));
     }

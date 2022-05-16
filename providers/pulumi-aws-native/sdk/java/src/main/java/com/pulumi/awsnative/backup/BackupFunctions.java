@@ -27,6 +27,10 @@ public final class BackupFunctions {
     public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args) {
         return getBackupPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Backup::BackupPlan
+     * 
+     */
     public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupPlan", TypeShape.of(GetBackupPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class BackupFunctions {
     public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(GetBackupSelectionArgs args) {
         return getBackupSelection(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Backup::BackupSelection
+     * 
+     */
     public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(GetBackupSelectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupSelection", TypeShape.of(GetBackupSelectionResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class BackupFunctions {
     public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
         return getBackupVault(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Backup::BackupVault
+     * 
+     */
     public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class BackupFunctions {
     public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
         return getFramework(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
+     * 
+     */
     public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class BackupFunctions {
     public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
         return getReportPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains detailed information about a report plan in AWS Backup Audit Manager.
+     * 
+     */
     public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
     }

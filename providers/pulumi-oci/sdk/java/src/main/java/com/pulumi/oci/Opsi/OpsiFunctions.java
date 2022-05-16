@@ -61,6 +61,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetAwrHubResult> getAwrHub(GetAwrHubArgs args) {
         return getAwrHub(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Awr Hub resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of an AWR hub.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAwrHubResult> getAwrHub(GetAwrHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getAwrHub:getAwrHub", TypeShape.of(GetAwrHubResult.class), args, Utilities.withVersion(options));
     }
@@ -76,6 +84,15 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetAwrHubAwrSnapshotResult> getAwrHubAwrSnapshot(GetAwrHubAwrSnapshotArgs args) {
         return getAwrHubAwrSnapshot(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Awr Hub Awr Snapshot resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Lists AWR snapshots for the specified source database in the AWR hub. The difference between the timeGreaterThanOrEqualTo and timeLessThanOrEqualTo should not exceed an elapsed range of 1 day.
+     * The timeGreaterThanOrEqualTo &amp; timeLessThanOrEqualTo params are optional. If these params are not provided, by default last 1 day snapshots will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAwrHubAwrSnapshotResult> getAwrHubAwrSnapshot(GetAwrHubAwrSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getAwrHubAwrSnapshot:getAwrHubAwrSnapshot", TypeShape.of(GetAwrHubAwrSnapshotResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +108,15 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetAwrHubAwrSnapshotsResult> getAwrHubAwrSnapshots(GetAwrHubAwrSnapshotsArgs args) {
         return getAwrHubAwrSnapshots(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Awr Hub Awr Snapshots in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Lists AWR snapshots for the specified source database in the AWR hub. The difference between the timeGreaterThanOrEqualTo and timeLessThanOrEqualTo should not exceed an elapsed range of 1 day.
+     * The timeGreaterThanOrEqualTo &amp; timeLessThanOrEqualTo params are optional. If these params are not provided, by default last 1 day snapshots will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAwrHubAwrSnapshotsResult> getAwrHubAwrSnapshots(GetAwrHubAwrSnapshotsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getAwrHubAwrSnapshots:getAwrHubAwrSnapshots", TypeShape.of(GetAwrHubAwrSnapshotsResult.class), args, Utilities.withVersion(options));
     }
@@ -105,6 +131,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetAwrHubAwrSourcesSummaryResult> getAwrHubAwrSourcesSummary(GetAwrHubAwrSourcesSummaryArgs args) {
         return getAwrHubAwrSourcesSummary(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Awr Hub Awr Sources Summary resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of summary of AWR Sources.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAwrHubAwrSourcesSummaryResult> getAwrHubAwrSourcesSummary(GetAwrHubAwrSourcesSummaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getAwrHubAwrSourcesSummary:getAwrHubAwrSourcesSummary", TypeShape.of(GetAwrHubAwrSourcesSummaryResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +153,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetAwrHubsResult> getAwrHubs(GetAwrHubsArgs args) {
         return getAwrHubs(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Awr Hubs in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of AWR hubs. Either compartmentId or id must be specified. All these resources are expected to be in root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAwrHubsResult> getAwrHubs(GetAwrHubsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getAwrHubs:getAwrHubs", TypeShape.of(GetAwrHubsResult.class), args, Utilities.withVersion(options));
     }
@@ -133,6 +175,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetDatabaseInsightResult> getDatabaseInsight(GetDatabaseInsightArgs args) {
         return getDatabaseInsight(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database Insight resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of a database insight.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseInsightResult> getDatabaseInsight(GetDatabaseInsightArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getDatabaseInsight:getDatabaseInsight", TypeShape.of(GetDatabaseInsightResult.class), args, Utilities.withVersion(options));
     }
@@ -148,9 +198,27 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetDatabaseInsightsResult> getDatabaseInsights() {
         return getDatabaseInsights(GetDatabaseInsightsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of database insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of database insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseInsightsResult> getDatabaseInsights(GetDatabaseInsightsArgs args) {
         return getDatabaseInsights(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of database insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of database insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseInsightsResult> getDatabaseInsights(GetDatabaseInsightsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getDatabaseInsights:getDatabaseInsights", TypeShape.of(GetDatabaseInsightsResult.class), args, Utilities.withVersion(options));
     }
@@ -165,6 +233,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetEnterpriseManagerBridgeResult> getEnterpriseManagerBridge(GetEnterpriseManagerBridgeArgs args) {
         return getEnterpriseManagerBridge(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Enterprise Manager Bridge resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of an Operations Insights Enterprise Manager bridge.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEnterpriseManagerBridgeResult> getEnterpriseManagerBridge(GetEnterpriseManagerBridgeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getEnterpriseManagerBridge:getEnterpriseManagerBridge", TypeShape.of(GetEnterpriseManagerBridgeResult.class), args, Utilities.withVersion(options));
     }
@@ -180,9 +256,27 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetEnterpriseManagerBridgesResult> getEnterpriseManagerBridges() {
         return getEnterpriseManagerBridges(GetEnterpriseManagerBridgesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Enterprise Manager Bridges in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operations Insights Enterprise Manager bridges. Either compartmentId or id must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of bridges in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEnterpriseManagerBridgesResult> getEnterpriseManagerBridges(GetEnterpriseManagerBridgesArgs args) {
         return getEnterpriseManagerBridges(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Enterprise Manager Bridges in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operations Insights Enterprise Manager bridges. Either compartmentId or id must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of bridges in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEnterpriseManagerBridgesResult> getEnterpriseManagerBridges(GetEnterpriseManagerBridgesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getEnterpriseManagerBridges:getEnterpriseManagerBridges", TypeShape.of(GetEnterpriseManagerBridgesResult.class), args, Utilities.withVersion(options));
     }
@@ -197,6 +291,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetExadataInsightResult> getExadataInsight(GetExadataInsightArgs args) {
         return getExadataInsight(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Exadata Insight resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of an Exadata insight.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInsightResult> getExadataInsight(GetExadataInsightArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getExadataInsight:getExadataInsight", TypeShape.of(GetExadataInsightResult.class), args, Utilities.withVersion(options));
     }
@@ -212,9 +314,27 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetExadataInsightsResult> getExadataInsights() {
         return getExadataInsights(GetExadataInsightsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Exadata Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Exadata insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of Exadata insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInsightsResult> getExadataInsights(GetExadataInsightsArgs args) {
         return getExadataInsights(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Exadata Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Exadata insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of Exadata insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInsightsResult> getExadataInsights(GetExadataInsightsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getExadataInsights:getExadataInsights", TypeShape.of(GetExadataInsightsResult.class), args, Utilities.withVersion(options));
     }
@@ -229,6 +349,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetHostInsightResult> getHostInsight(GetHostInsightArgs args) {
         return getHostInsight(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Host Insight resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of a host insight.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHostInsightResult> getHostInsight(GetHostInsightArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getHostInsight:getHostInsight", TypeShape.of(GetHostInsightResult.class), args, Utilities.withVersion(options));
     }
@@ -244,9 +372,27 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetHostInsightsResult> getHostInsights() {
         return getHostInsights(GetHostInsightsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Host Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of host insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of host insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHostInsightsResult> getHostInsights(GetHostInsightsArgs args) {
         return getHostInsights(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Host Insights in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of host insights based on the query parameters specified. Either compartmentId or id query parameter must be specified.
+     * When both compartmentId and compartmentIdInSubtree are specified, a list of host insights in that compartment and in all sub-compartments will be returned.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHostInsightsResult> getHostInsights(GetHostInsightsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getHostInsights:getHostInsights", TypeShape.of(GetHostInsightsResult.class), args, Utilities.withVersion(options));
     }
@@ -261,6 +407,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsPrivateEndpointResult> getOperationsInsightsPrivateEndpoint(GetOperationsInsightsPrivateEndpointArgs args) {
         return getOperationsInsightsPrivateEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Operations Insights Private Endpoint resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets the details of the specified private endpoint.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsPrivateEndpointResult> getOperationsInsightsPrivateEndpoint(GetOperationsInsightsPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsPrivateEndpoint:getOperationsInsightsPrivateEndpoint", TypeShape.of(GetOperationsInsightsPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -275,9 +429,25 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsPrivateEndpointsResult> getOperationsInsightsPrivateEndpoints() {
         return getOperationsInsightsPrivateEndpoints(GetOperationsInsightsPrivateEndpointsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Operations Insights Private Endpoints in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operation Insights private endpoints.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsPrivateEndpointsResult> getOperationsInsightsPrivateEndpoints(GetOperationsInsightsPrivateEndpointsArgs args) {
         return getOperationsInsightsPrivateEndpoints(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Operations Insights Private Endpoints in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operation Insights private endpoints.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsPrivateEndpointsResult> getOperationsInsightsPrivateEndpoints(GetOperationsInsightsPrivateEndpointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsPrivateEndpoints:getOperationsInsightsPrivateEndpoints", TypeShape.of(GetOperationsInsightsPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
@@ -293,6 +463,15 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsWarehouseResult> getOperationsInsightsWarehouse(GetOperationsInsightsWarehouseArgs args) {
         return getOperationsInsightsWarehouse(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Operations Insights Warehouse resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of an Operations Insights Warehouse.
+     * There is only expected to be 1 warehouse per tenant. The warehouse is expected to be in the root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehouseResult> getOperationsInsightsWarehouse(GetOperationsInsightsWarehouseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsWarehouse:getOperationsInsightsWarehouse", TypeShape.of(GetOperationsInsightsWarehouseResult.class), args, Utilities.withVersion(options));
     }
@@ -308,6 +487,15 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsWarehouseResourceUsageSummaryResult> getOperationsInsightsWarehouseResourceUsageSummary(GetOperationsInsightsWarehouseResourceUsageSummaryArgs args) {
         return getOperationsInsightsWarehouseResourceUsageSummary(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Operations Insights Warehouse Resource Usage Summary resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets the details of resources used by an Operations Insights Warehouse.
+     * There is only expected to be 1 warehouse per tenant. The warehouse is expected to be in the root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehouseResourceUsageSummaryResult> getOperationsInsightsWarehouseResourceUsageSummary(GetOperationsInsightsWarehouseResourceUsageSummaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsWarehouseResourceUsageSummary:getOperationsInsightsWarehouseResourceUsageSummary", TypeShape.of(GetOperationsInsightsWarehouseResourceUsageSummaryResult.class), args, Utilities.withVersion(options));
     }
@@ -322,6 +510,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsWarehouseUserResult> getOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserArgs args) {
         return getOperationsInsightsWarehouseUser(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Operations Insights Warehouse User resource in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets details of an Operations Insights Warehouse User.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehouseUserResult> getOperationsInsightsWarehouseUser(GetOperationsInsightsWarehouseUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsWarehouseUser:getOperationsInsightsWarehouseUser", TypeShape.of(GetOperationsInsightsWarehouseUserResult.class), args, Utilities.withVersion(options));
     }
@@ -336,6 +532,14 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsWarehouseUsersResult> getOperationsInsightsWarehouseUsers(GetOperationsInsightsWarehouseUsersArgs args) {
         return getOperationsInsightsWarehouseUsers(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Operations Insights Warehouse Users in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operations Insights Warehouse users. Either compartmentId or id must be specified. All these resources are expected to be in root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehouseUsersResult> getOperationsInsightsWarehouseUsers(GetOperationsInsightsWarehouseUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsWarehouseUsers:getOperationsInsightsWarehouseUsers", TypeShape.of(GetOperationsInsightsWarehouseUsersResult.class), args, Utilities.withVersion(options));
     }
@@ -351,9 +555,27 @@ public final class OpsiFunctions {
     public static CompletableFuture<GetOperationsInsightsWarehousesResult> getOperationsInsightsWarehouses() {
         return getOperationsInsightsWarehouses(GetOperationsInsightsWarehousesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Operations Insights Warehouses in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operations Insights warehouses. Either compartmentId or id must be specified.
+     * There is only expected to be 1 warehouse per tenant. The warehouse is expected to be in the root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehousesResult> getOperationsInsightsWarehouses(GetOperationsInsightsWarehousesArgs args) {
         return getOperationsInsightsWarehouses(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Operations Insights Warehouses in Oracle Cloud Infrastructure Opsi service.
+     * 
+     * Gets a list of Operations Insights warehouses. Either compartmentId or id must be specified.
+     * There is only expected to be 1 warehouse per tenant. The warehouse is expected to be in the root compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOperationsInsightsWarehousesResult> getOperationsInsightsWarehouses(GetOperationsInsightsWarehousesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Opsi/getOperationsInsightsWarehouses:getOperationsInsightsWarehouses", TypeShape.of(GetOperationsInsightsWarehousesResult.class), args, Utilities.withVersion(options));
     }

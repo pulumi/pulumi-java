@@ -19,6 +19,10 @@ public final class Run_v1alpha1Functions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a job.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1alpha1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }

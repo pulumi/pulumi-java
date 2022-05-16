@@ -58,6 +58,45 @@ public final class AccessapprovalFunctions {
     public static CompletableFuture<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args) {
         return getFolderServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the email address of a folder&#39;s Access Approval service account.
+     * 
+     * Each Google Cloud folder has a unique service account used by Access Approval.
+     * When using Access Approval with a
+     * [custom signing key](https://cloud.google.com/cloud-provider-access-management/access-approval/docs/review-approve-access-requests-custom-keys),
+     * this account needs to be granted the `cloudkms.signerVerifier` IAM role on the
+     * Cloud KMS key used to sign approvals.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var serviceAccount = Output.of(AccessapprovalFunctions.getFolderServiceAccount(GetFolderServiceAccountArgs.builder()
+     *             .folderId(&#34;my-folder&#34;)
+     *             .build()));
+     * 
+     *         var iam = new CryptoKeyIAMMember(&#34;iam&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getCrypto_key().getId())
+     *             .role(&#34;roles/cloudkms.signerVerifier&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, serviceAccount.apply(getFolderServiceAccountResult -&gt; getFolderServiceAccountResult.getAccountEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:accessapproval/getFolderServiceAccount:getFolderServiceAccount", TypeShape.of(GetFolderServiceAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -103,6 +142,45 @@ public final class AccessapprovalFunctions {
     public static CompletableFuture<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args) {
         return getOrganizationServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the email address of an organization&#39;s Access Approval service account.
+     * 
+     * Each Google Cloud organization has a unique service account used by Access Approval.
+     * When using Access Approval with a
+     * [custom signing key](https://cloud.google.com/cloud-provider-access-management/access-approval/docs/review-approve-access-requests-custom-keys),
+     * this account needs to be granted the `cloudkms.signerVerifier` IAM role on the
+     * Cloud KMS key used to sign approvals.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var serviceAccount = Output.of(AccessapprovalFunctions.getOrganizationServiceAccount(GetOrganizationServiceAccountArgs.builder()
+     *             .organizationId(&#34;my-organization&#34;)
+     *             .build()));
+     * 
+     *         var iam = new CryptoKeyIAMMember(&#34;iam&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getCrypto_key().getId())
+     *             .role(&#34;roles/cloudkms.signerVerifier&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, serviceAccount.apply(getOrganizationServiceAccountResult -&gt; getOrganizationServiceAccountResult.getAccountEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:accessapproval/getOrganizationServiceAccount:getOrganizationServiceAccount", TypeShape.of(GetOrganizationServiceAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -148,6 +226,45 @@ public final class AccessapprovalFunctions {
     public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
         return getProjectServiceAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Get the email address of a project&#39;s Access Approval service account.
+     * 
+     * Each Google Cloud project has a unique service account used by Access Approval.
+     * When using Access Approval with a
+     * [custom signing key](https://cloud.google.com/cloud-provider-access-management/access-approval/docs/review-approve-access-requests-custom-keys),
+     * this account needs to be granted the `cloudkms.signerVerifier` IAM role on the
+     * Cloud KMS key used to sign approvals.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var serviceAccount = Output.of(AccessapprovalFunctions.getProjectServiceAccount(GetProjectServiceAccountArgs.builder()
+     *             .projectId(&#34;my-project&#34;)
+     *             .build()));
+     * 
+     *         var iam = new CryptoKeyIAMMember(&#34;iam&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getCrypto_key().getId())
+     *             .role(&#34;roles/cloudkms.signerVerifier&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, serviceAccount.apply(getProjectServiceAccountResult -&gt; getProjectServiceAccountResult.getAccountEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:accessapproval/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
     }

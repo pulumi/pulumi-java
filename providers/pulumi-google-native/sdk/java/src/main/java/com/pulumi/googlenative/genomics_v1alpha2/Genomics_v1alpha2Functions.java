@@ -19,6 +19,10 @@ public final class Genomics_v1alpha2Functions {
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
         return getPipeline(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a pipeline based on ID. Caller must have READ permission to the project.
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:genomics/v1alpha2:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }

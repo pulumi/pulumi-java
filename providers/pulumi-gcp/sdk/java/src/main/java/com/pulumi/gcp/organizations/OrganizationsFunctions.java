@@ -58,6 +58,34 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetActiveFolderResult> getActiveFolder(GetActiveFolderArgs args) {
         return getActiveFolder(args, InvokeOptions.Empty);
     }
+    /**
+     * Get an active folder within GCP by `display_name` and `parent`.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var department1 = Output.of(OrganizationsFunctions.getActiveFolder(GetActiveFolderArgs.builder()
+     *             .displayName(&#34;Department 1&#34;)
+     *             .parent(&#34;organizations/1234567&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetActiveFolderResult> getActiveFolder(GetActiveFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getActiveFolder:getActiveFolder", TypeShape.of(GetActiveFolderResult.class), args, Utilities.withVersion(options));
     }
@@ -96,9 +124,73 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount() {
         return getBillingAccount(GetBillingAccountArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about a Google Billing Account.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var acct = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+     *             .displayName(&#34;My Billing Account&#34;)
+     *             .open(true)
+     *             .build()));
+     * 
+     *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+     *             .projectId(&#34;your-project-id&#34;)
+     *             .orgId(&#34;1234567&#34;)
+     *             .billingAccount(acct.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args) {
         return getBillingAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about a Google Billing Account.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var acct = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+     *             .displayName(&#34;My Billing Account&#34;)
+     *             .open(true)
+     *             .build()));
+     * 
+     *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+     *             .projectId(&#34;your-project-id&#34;)
+     *             .orgId(&#34;1234567&#34;)
+     *             .billingAccount(acct.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getBillingAccount:getBillingAccount", TypeShape.of(GetBillingAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -129,9 +221,57 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
         return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(OrganizationsFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;project&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getProject()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(OrganizationsFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;project&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getProject()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -175,9 +315,83 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo() {
         return getClientOpenIdUserInfo(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get OpenID userinfo about the credentials used with the Google provider,
+     * specifically the email.
+     * 
+     * This datasource enables you to export the email of the account you&#39;ve
+     * authenticated the provider with; this can be used alongside
+     * `data.google_client_config`&#39;s `access_token` to perform OpenID Connect
+     * authentication with GKE and configure an RBAC role for the email used.
+     * 
+     * &gt; This resource will only work as expected if the provider is configured to
+     * use the `https://www.googleapis.com/auth/userinfo.email` scope! You will
+     * receive an error otherwise. The provider uses this scope by default.
+     * 
+     * ## Example Usage
+     * ### Exporting An Email
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var me = Output.of(OrganizationsFunctions.getClientOpenIdUserInfo());
+     * 
+     *         ctx.export(&#34;my-email&#34;, me.apply(getClientOpenIdUserInfoResult -&gt; getClientOpenIdUserInfoResult.getEmail()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(InvokeArgs args) {
         return getClientOpenIdUserInfo(args, InvokeOptions.Empty);
     }
+    /**
+     * Get OpenID userinfo about the credentials used with the Google provider,
+     * specifically the email.
+     * 
+     * This datasource enables you to export the email of the account you&#39;ve
+     * authenticated the provider with; this can be used alongside
+     * `data.google_client_config`&#39;s `access_token` to perform OpenID Connect
+     * authentication with GKE and configure an RBAC role for the email used.
+     * 
+     * &gt; This resource will only work as expected if the provider is configured to
+     * use the `https://www.googleapis.com/auth/userinfo.email` scope! You will
+     * receive an error otherwise. The provider uses this scope by default.
+     * 
+     * ## Example Usage
+     * ### Exporting An Email
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var me = Output.of(OrganizationsFunctions.getClientOpenIdUserInfo());
+     * 
+     *         ctx.export(&#34;my-email&#34;, me.apply(getClientOpenIdUserInfoResult -&gt; getClientOpenIdUserInfoResult.getEmail()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getClientOpenIdUserInfo:getClientOpenIdUserInfo", TypeShape.of(GetClientOpenIdUserInfoResult.class), args, Utilities.withVersion(options));
     }
@@ -216,6 +430,38 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args) {
         return getFolder(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about a Google Cloud Folder.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myFolder1 = Output.of(OrganizationsFunctions.getFolder(GetFolderArgs.builder()
+     *             .folder(&#34;folders/12345&#34;)
+     *             .lookupOrganization(true)
+     *             .build()));
+     * 
+     *         final var myFolder2 = Output.of(OrganizationsFunctions.getFolder(GetFolderArgs.builder()
+     *             .folder(&#34;folders/23456&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;myFolder1Organization&#34;, myFolder1.apply(getFolderResult -&gt; getFolderResult.getOrganization()));
+     *         ctx.export(&#34;myFolder2Parent&#34;, myFolder2.apply(getFolderResult -&gt; getFolderResult.getParent()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
@@ -256,6 +502,40 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetFoldersResult> getFolders(GetFoldersArgs args) {
         return getFolders(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a set of folders based on a parent ID. See the
+     * [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list)
+     * for more details.
+     * 
+     * ## Example Usage
+     * ### Searching For Folders At The Root Of An Org
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-org-folders = Output.of(OrganizationsFunctions.getFolders(GetFoldersArgs.builder()
+     *             .parentId(String.format(&#34;organizations/%s&#34;, var_.getOrganization_id()))
+     *             .build()));
+     * 
+     *         final var first-folder = Output.of(OrganizationsFunctions.getFolder(GetFolderArgs.builder()
+     *             .folder(my_org_folders.getFolders()[0].getName())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetFoldersResult> getFolders(GetFoldersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getFolders:getFolders", TypeShape.of(GetFoldersResult.class), args, Utilities.withVersion(options));
     }
@@ -316,9 +596,117 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy() {
         return getIAMPolicy(GetIAMPolicyArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Generates an IAM policy document that may be referenced by and applied to
+     * other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.
+     * 
+     * **Note:** Please review the documentation of the resource that you will be using the datasource with. Some resources such as `gcp.projects.IAMPolicy` and others have limitations in their API methods which are noted on their respective page.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+     *             .auditConfigs(GetIAMPolicyAuditConfig.builder()
+     *                 .auditLogConfigs(                
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .exemptedMembers(&#34;user:you@domain.com&#34;)
+     *                         .logType(&#34;DATA_READ&#34;)
+     *                         .build(),
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .logType(&#34;DATA_WRITE&#34;)
+     *                         .build(),
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .logType(&#34;ADMIN_READ&#34;)
+     *                         .build())
+     *                 .service(&#34;cloudkms.googleapis.com&#34;)
+     *                 .build())
+     *             .bindings(            
+     *                 GetIAMPolicyBinding.builder()
+     *                     .members(&#34;serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com&#34;)
+     *                     .role(&#34;roles/compute.instanceAdmin&#34;)
+     *                     .build(),
+     *                 GetIAMPolicyBinding.builder()
+     *                     .members(&#34;user:alice@gmail.com&#34;)
+     *                     .role(&#34;roles/storage.objectViewer&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * This data source is used to define IAM policies to apply to other resources.
+     * Currently, defining a policy through a datasource and referencing that policy
+     * from another resource is the only way to apply an IAM policy to a resource.
+     * 
+     */
     public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(GetIAMPolicyArgs args) {
         return getIAMPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Generates an IAM policy document that may be referenced by and applied to
+     * other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.
+     * 
+     * **Note:** Please review the documentation of the resource that you will be using the datasource with. Some resources such as `gcp.projects.IAMPolicy` and others have limitations in their API methods which are noted on their respective page.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+     *             .auditConfigs(GetIAMPolicyAuditConfig.builder()
+     *                 .auditLogConfigs(                
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .exemptedMembers(&#34;user:you@domain.com&#34;)
+     *                         .logType(&#34;DATA_READ&#34;)
+     *                         .build(),
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .logType(&#34;DATA_WRITE&#34;)
+     *                         .build(),
+     *                     GetIAMPolicyAuditConfigAuditLogConfig.builder()
+     *                         .logType(&#34;ADMIN_READ&#34;)
+     *                         .build())
+     *                 .service(&#34;cloudkms.googleapis.com&#34;)
+     *                 .build())
+     *             .bindings(            
+     *                 GetIAMPolicyBinding.builder()
+     *                     .members(&#34;serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com&#34;)
+     *                     .role(&#34;roles/compute.instanceAdmin&#34;)
+     *                     .build(),
+     *                 GetIAMPolicyBinding.builder()
+     *                     .members(&#34;user:alice@gmail.com&#34;)
+     *                     .role(&#34;roles/storage.objectViewer&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * This data source is used to define IAM policies to apply to other resources.
+     * Currently, defining a policy through a datasource and referencing that policy
+     * from another resource is the only way to apply an IAM policy to a resource.
+     * 
+     */
     public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(GetIAMPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getIAMPolicy:getIAMPolicy", TypeShape.of(GetIAMPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -355,9 +743,69 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetOrganizationResult> getOrganization() {
         return getOrganization(GetOrganizationArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var org = Output.of(OrganizationsFunctions.getOrganization(GetOrganizationArgs.builder()
+     *             .domain(&#34;example.com&#34;)
+     *             .build()));
+     * 
+     *         var sales = new Folder(&#34;sales&#34;, FolderArgs.builder()        
+     *             .displayName(&#34;Sales&#34;)
+     *             .parent(org.apply(getOrganizationResult -&gt; getOrganizationResult.getName()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
         return getOrganization(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var org = Output.of(OrganizationsFunctions.getOrganization(GetOrganizationArgs.builder()
+     *             .domain(&#34;example.com&#34;)
+     *             .build()));
+     * 
+     *         var sales = new Folder(&#34;sales&#34;, FolderArgs.builder()        
+     *             .displayName(&#34;Sales&#34;)
+     *             .parent(org.apply(getOrganizationResult -&gt; getOrganizationResult.getName()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
@@ -392,9 +840,65 @@ public final class OrganizationsFunctions {
     public static CompletableFuture<GetProjectResult> getProject() {
         return getProject(GetProjectArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get project details.
+     * For more information see
+     * [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var project = Output.of(OrganizationsFunctions.getProject());
+     * 
+     *         ctx.export(&#34;projectNumber&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get project details.
+     * For more information see
+     * [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var project = Output.of(OrganizationsFunctions.getProject());
+     * 
+     *         ctx.export(&#34;projectNumber&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }

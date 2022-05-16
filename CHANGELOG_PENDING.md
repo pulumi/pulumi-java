@@ -11,6 +11,8 @@
 [#558](https://github.com/pulumi/pulumi-java/pull/558)
 - Fix #547: Implement fully qualified imports for generated programs from PCL
 [#596](https://github.com/pulumi/pulumi-java/pull/596)
+- [codegen] make sure all overloads of function invokes have doc comments
+[#581](https://github.com/pulumi/pulumi-java/pull/581)
 
 - GitHub Actions: JDK 'adopt' -> 'temurin'
 

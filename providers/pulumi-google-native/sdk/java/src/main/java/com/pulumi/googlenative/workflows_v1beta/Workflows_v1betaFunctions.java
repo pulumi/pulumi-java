@@ -19,6 +19,10 @@ public final class Workflows_v1betaFunctions {
     public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
         return getWorkflow(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Workflow.
+     * 
+     */
     public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflows/v1beta:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }

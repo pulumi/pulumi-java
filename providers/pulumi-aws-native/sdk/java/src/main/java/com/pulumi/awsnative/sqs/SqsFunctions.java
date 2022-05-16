@@ -19,6 +19,10 @@ public final class SqsFunctions {
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SQS::Queue
+     * 
+     */
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sqs:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }

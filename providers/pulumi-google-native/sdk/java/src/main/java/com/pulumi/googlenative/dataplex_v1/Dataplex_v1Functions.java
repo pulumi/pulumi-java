@@ -45,6 +45,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args) {
         return getAsset(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves an asset resource.
+     * 
+     */
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getAsset", TypeShape.of(GetAssetResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +59,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetContentitemResult> getContentitem(GetContentitemArgs args) {
         return getContentitem(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a content resource.
+     * 
+     */
     public static CompletableFuture<GetContentitemResult> getContentitem(GetContentitemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getContentitem", TypeShape.of(GetContentitemResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +73,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args) {
         return getEntity(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a metadata entity.
+     * 
+     */
     public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
     }
@@ -75,6 +87,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Get environment resource.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +101,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeResult> getLake(GetLakeArgs args) {
         return getLake(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a lake resource.
+     * 
+     */
     public static CompletableFuture<GetLakeResult> getLake(GetLakeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLake", TypeShape.of(GetLakeResult.class), args, Utilities.withVersion(options));
     }
@@ -95,6 +115,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeAssetIamPolicyResult> getLakeAssetIamPolicy(GetLakeAssetIamPolicyArgs args) {
         return getLakeAssetIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeAssetIamPolicyResult> getLakeAssetIamPolicy(GetLakeAssetIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeAssetIamPolicy", TypeShape.of(GetLakeAssetIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -105,6 +129,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeContentIamPolicyResult> getLakeContentIamPolicy(GetLakeContentIamPolicyArgs args) {
         return getLakeContentIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeContentIamPolicyResult> getLakeContentIamPolicy(GetLakeContentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeContentIamPolicy", TypeShape.of(GetLakeContentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +143,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeEnvironmentIamPolicyResult> getLakeEnvironmentIamPolicy(GetLakeEnvironmentIamPolicyArgs args) {
         return getLakeEnvironmentIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeEnvironmentIamPolicyResult> getLakeEnvironmentIamPolicy(GetLakeEnvironmentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeEnvironmentIamPolicy", TypeShape.of(GetLakeEnvironmentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -125,6 +157,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeIamPolicyResult> getLakeIamPolicy(GetLakeIamPolicyArgs args) {
         return getLakeIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeIamPolicyResult> getLakeIamPolicy(GetLakeIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeIamPolicy", TypeShape.of(GetLakeIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -135,6 +171,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeTaskIamPolicyResult> getLakeTaskIamPolicy(GetLakeTaskIamPolicyArgs args) {
         return getLakeTaskIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeTaskIamPolicyResult> getLakeTaskIamPolicy(GetLakeTaskIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeTaskIamPolicy", TypeShape.of(GetLakeTaskIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -145,6 +185,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetLakeZoneIamPolicyResult> getLakeZoneIamPolicy(GetLakeZoneIamPolicyArgs args) {
         return getLakeZoneIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetLakeZoneIamPolicyResult> getLakeZoneIamPolicy(GetLakeZoneIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getLakeZoneIamPolicy", TypeShape.of(GetLakeZoneIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -155,6 +199,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetPartitionResult> getPartition(GetPartitionArgs args) {
         return getPartition(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a metadata partition of an entity.
+     * 
+     */
     public static CompletableFuture<GetPartitionResult> getPartition(GetPartitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
     }
@@ -165,6 +213,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
         return getTask(args, InvokeOptions.Empty);
     }
+    /**
+     * Get task resource.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
@@ -175,6 +227,10 @@ public final class Dataplex_v1Functions {
     public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args) {
         return getZone(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a zone resource.
+     * 
+     */
     public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataplex/v1:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }

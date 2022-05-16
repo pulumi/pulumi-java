@@ -28,6 +28,11 @@ public final class KubernetesconfigurationFunctions {
     public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
         return getExtension(args, InvokeOptions.Empty);
     }
+    /**
+     * The Extension Instance object.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
     public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +44,11 @@ public final class KubernetesconfigurationFunctions {
     public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(GetFluxConfigurationArgs args) {
         return getFluxConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * The Flux Configuration object returned in Get &amp; Put response.
+     * API Version: 2021-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(GetFluxConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getFluxConfiguration", TypeShape.of(GetFluxConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -50,6 +60,11 @@ public final class KubernetesconfigurationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2022-04-02-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +76,11 @@ public final class KubernetesconfigurationFunctions {
     public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args) {
         return getPrivateLinkScope(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure Arc PrivateLinkScope definition.
+     * API Version: 2022-04-02-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args, Utilities.withVersion(options));
     }
@@ -72,6 +92,11 @@ public final class KubernetesconfigurationFunctions {
     public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(GetSourceControlConfigurationArgs args) {
         return getSourceControlConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * The SourceControl Configuration object returned in Get &amp; Put response.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(GetSourceControlConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getSourceControlConfiguration", TypeShape.of(GetSourceControlConfigurationResult.class), args, Utilities.withVersion(options));
     }

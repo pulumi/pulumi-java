@@ -192,6 +192,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args) {
         return getAppServiceEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * App Service Environment ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironment", TypeShape.of(GetAppServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -203,6 +208,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(GetAppServiceEnvironmentPrivateEndpointConnectionArgs args) {
         return getAppServiceEnvironmentPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(GetAppServiceEnvironmentPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironmentPrivateEndpointConnection", TypeShape.of(GetAppServiceEnvironmentPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -214,6 +224,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args) {
         return getAppServicePlan(args, InvokeOptions.Empty);
     }
+    /**
+     * App Service plan.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args, Utilities.withVersion(options));
     }
@@ -225,6 +240,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * SSL certificate for an app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -236,6 +256,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * API connection
+     * API Version: 2016-06-01.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -247,6 +272,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(GetConnectionGatewayArgs args) {
         return getConnectionGateway(args, InvokeOptions.Empty);
     }
+    /**
+     * The gateway definition
+     * API Version: 2016-06-01.
+     * 
+     */
     public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(GetConnectionGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnectionGateway", TypeShape.of(GetConnectionGatewayResult.class), args, Utilities.withVersion(options));
     }
@@ -258,6 +288,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args) {
         return getContainerApp(args, InvokeOptions.Empty);
     }
+    /**
+     * Container App.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getContainerApp", TypeShape.of(GetContainerAppResult.class), args, Utilities.withVersion(options));
     }
@@ -269,6 +304,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetCustomApiResult> getCustomApi(GetCustomApiArgs args) {
         return getCustomApi(args, InvokeOptions.Empty);
     }
+    /**
+     * A custom API
+     * API Version: 2016-06-01.
+     * 
+     */
     public static CompletableFuture<GetCustomApiResult> getCustomApi(GetCustomApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCustomApi", TypeShape.of(GetCustomApiResult.class), args, Utilities.withVersion(options));
     }
@@ -280,6 +320,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(GetKubeEnvironmentArgs args) {
         return getKubeEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * A Kubernetes cluster specialized for web workloads by Azure App Service
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(GetKubeEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getKubeEnvironment", TypeShape.of(GetKubeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -291,6 +336,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetStaticSiteResult> getStaticSite(GetStaticSiteArgs args) {
         return getStaticSite(args, InvokeOptions.Empty);
     }
+    /**
+     * Static Site ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteResult> getStaticSite(GetStaticSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSite", TypeShape.of(GetStaticSiteResult.class), args, Utilities.withVersion(options));
     }
@@ -302,6 +352,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(GetStaticSiteCustomDomainArgs args) {
         return getStaticSiteCustomDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * Static Site Custom Domain Overview ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(GetStaticSiteCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteCustomDomain", TypeShape.of(GetStaticSiteCustomDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -313,6 +368,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(GetStaticSitePrivateEndpointConnectionArgs args) {
         return getStaticSitePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(GetStaticSitePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSitePrivateEndpointConnection", TypeShape.of(GetStaticSitePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -324,6 +384,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args) {
         return getStaticSiteUserProvidedFunctionAppForStaticSite(args, InvokeOptions.Empty);
     }
+    /**
+     * Static Site User Provided Function App ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteUserProvidedFunctionAppForStaticSite", TypeShape.of(GetStaticSiteUserProvidedFunctionAppForStaticSiteResult.class), args, Utilities.withVersion(options));
     }
@@ -335,6 +400,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args) {
         return getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(args, InvokeOptions.Empty);
     }
+    /**
+     * Static Site User Provided Function App ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteUserProvidedFunctionAppForStaticSiteBuild", TypeShape.of(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult.class), args, Utilities.withVersion(options));
     }
@@ -346,6 +416,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args) {
         return getWebApp(args, InvokeOptions.Empty);
     }
+    /**
+     * A web app, a mobile app backend, or an API app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
@@ -357,6 +432,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(GetWebAppDeploymentArgs args) {
         return getWebAppDeployment(args, InvokeOptions.Empty);
     }
+    /**
+     * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(GetWebAppDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDeployment", TypeShape.of(GetWebAppDeploymentResult.class), args, Utilities.withVersion(options));
     }
@@ -368,6 +448,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(GetWebAppDeploymentSlotArgs args) {
         return getWebAppDeploymentSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(GetWebAppDeploymentSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDeploymentSlot", TypeShape.of(GetWebAppDeploymentSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -379,6 +464,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(GetWebAppDiagnosticLogsConfigurationArgs args) {
         return getWebAppDiagnosticLogsConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Configuration of App Service site logs.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(GetWebAppDiagnosticLogsConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDiagnosticLogsConfiguration", TypeShape.of(GetWebAppDiagnosticLogsConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -390,6 +480,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(GetWebAppDomainOwnershipIdentifierArgs args) {
         return getWebAppDomainOwnershipIdentifier(args, InvokeOptions.Empty);
     }
+    /**
+     * A domain specific resource identifier.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(GetWebAppDomainOwnershipIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifier", TypeShape.of(GetWebAppDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
     }
@@ -401,6 +496,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(GetWebAppDomainOwnershipIdentifierSlotArgs args) {
         return getWebAppDomainOwnershipIdentifierSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * A domain specific resource identifier.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(GetWebAppDomainOwnershipIdentifierSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifierSlot", TypeShape.of(GetWebAppDomainOwnershipIdentifierSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -412,6 +512,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(GetWebAppFunctionArgs args) {
         return getWebAppFunction(args, InvokeOptions.Empty);
     }
+    /**
+     * Function information.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(GetWebAppFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppFunction", TypeShape.of(GetWebAppFunctionResult.class), args, Utilities.withVersion(options));
     }
@@ -423,6 +528,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(GetWebAppHostNameBindingArgs args) {
         return getWebAppHostNameBinding(args, InvokeOptions.Empty);
     }
+    /**
+     * A hostname binding object.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(GetWebAppHostNameBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBinding", TypeShape.of(GetWebAppHostNameBindingResult.class), args, Utilities.withVersion(options));
     }
@@ -434,6 +544,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(GetWebAppHostNameBindingSlotArgs args) {
         return getWebAppHostNameBindingSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * A hostname binding object.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(GetWebAppHostNameBindingSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBindingSlot", TypeShape.of(GetWebAppHostNameBindingSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -445,6 +560,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(GetWebAppHybridConnectionArgs args) {
         return getWebAppHybridConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(GetWebAppHybridConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnection", TypeShape.of(GetWebAppHybridConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -456,6 +576,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(GetWebAppHybridConnectionSlotArgs args) {
         return getWebAppHybridConnectionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection contract. This is used to configure a Hybrid Connection.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(GetWebAppHybridConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnectionSlot", TypeShape.of(GetWebAppHybridConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -467,6 +592,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(GetWebAppInstanceFunctionSlotArgs args) {
         return getWebAppInstanceFunctionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Function information.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(GetWebAppInstanceFunctionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppInstanceFunctionSlot", TypeShape.of(GetWebAppInstanceFunctionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -478,6 +608,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(GetWebAppPremierAddOnArgs args) {
         return getWebAppPremierAddOn(args, InvokeOptions.Empty);
     }
+    /**
+     * Premier add-on.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(GetWebAppPremierAddOnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOn", TypeShape.of(GetWebAppPremierAddOnResult.class), args, Utilities.withVersion(options));
     }
@@ -489,6 +624,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(GetWebAppPremierAddOnSlotArgs args) {
         return getWebAppPremierAddOnSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Premier add-on.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(GetWebAppPremierAddOnSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOnSlot", TypeShape.of(GetWebAppPremierAddOnSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -500,6 +640,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(GetWebAppPrivateEndpointConnectionArgs args) {
         return getWebAppPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(GetWebAppPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPrivateEndpointConnection", TypeShape.of(GetWebAppPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -511,6 +656,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(GetWebAppPrivateEndpointConnectionSlotArgs args) {
         return getWebAppPrivateEndpointConnectionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(GetWebAppPrivateEndpointConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPrivateEndpointConnectionSlot", TypeShape.of(GetWebAppPrivateEndpointConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -522,6 +672,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(GetWebAppPublicCertificateArgs args) {
         return getWebAppPublicCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Public certificate object
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(GetWebAppPublicCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificate", TypeShape.of(GetWebAppPublicCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -533,6 +688,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(GetWebAppPublicCertificateSlotArgs args) {
         return getWebAppPublicCertificateSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Public certificate object
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(GetWebAppPublicCertificateSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificateSlot", TypeShape.of(GetWebAppPublicCertificateSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -544,6 +704,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(GetWebAppRelayServiceConnectionArgs args) {
         return getWebAppRelayServiceConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection for an App Service app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(GetWebAppRelayServiceConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppRelayServiceConnection", TypeShape.of(GetWebAppRelayServiceConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -555,6 +720,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(GetWebAppRelayServiceConnectionSlotArgs args) {
         return getWebAppRelayServiceConnectionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection for an App Service app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(GetWebAppRelayServiceConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppRelayServiceConnectionSlot", TypeShape.of(GetWebAppRelayServiceConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -566,6 +736,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(GetWebAppSiteExtensionArgs args) {
         return getWebAppSiteExtension(args, InvokeOptions.Empty);
     }
+    /**
+     * Site Extension Information.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(GetWebAppSiteExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtension", TypeShape.of(GetWebAppSiteExtensionResult.class), args, Utilities.withVersion(options));
     }
@@ -577,6 +752,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(GetWebAppSiteExtensionSlotArgs args) {
         return getWebAppSiteExtensionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Site Extension Information.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(GetWebAppSiteExtensionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtensionSlot", TypeShape.of(GetWebAppSiteExtensionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -588,6 +768,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args) {
         return getWebAppSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * A web app, a mobile app backend, or an API app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -599,6 +784,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(GetWebAppSlotConfigurationNamesArgs args) {
         return getWebAppSlotConfigurationNames(args, InvokeOptions.Empty);
     }
+    /**
+     * Slot Config names azure resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(GetWebAppSlotConfigurationNamesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlotConfigurationNames", TypeShape.of(GetWebAppSlotConfigurationNamesResult.class), args, Utilities.withVersion(options));
     }
@@ -610,6 +800,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(GetWebAppSourceControlArgs args) {
         return getWebAppSourceControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Source control configuration for an app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(GetWebAppSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControl", TypeShape.of(GetWebAppSourceControlResult.class), args, Utilities.withVersion(options));
     }
@@ -621,6 +816,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(GetWebAppSourceControlSlotArgs args) {
         return getWebAppSourceControlSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Source control configuration for an app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(GetWebAppSourceControlSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControlSlot", TypeShape.of(GetWebAppSourceControlSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -632,6 +832,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(GetWebAppSwiftVirtualNetworkConnectionArgs args) {
         return getWebAppSwiftVirtualNetworkConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(GetWebAppSwiftVirtualNetworkConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnection", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -643,6 +848,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(GetWebAppSwiftVirtualNetworkConnectionSlotArgs args) {
         return getWebAppSwiftVirtualNetworkConnectionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(GetWebAppSwiftVirtualNetworkConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnectionSlot", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -654,6 +864,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(GetWebAppVnetConnectionArgs args) {
         return getWebAppVnetConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Virtual Network information contract.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(GetWebAppVnetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnection", TypeShape.of(GetWebAppVnetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -665,6 +880,11 @@ public final class WebFunctions {
     public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(GetWebAppVnetConnectionSlotArgs args) {
         return getWebAppVnetConnectionSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Virtual Network information contract.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(GetWebAppVnetConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnectionSlot", TypeShape.of(GetWebAppVnetConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -676,6 +896,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(ListAppServicePlanHybridConnectionKeysArgs args) {
         return listAppServicePlanHybridConnectionKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(ListAppServicePlanHybridConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listAppServicePlanHybridConnectionKeys", TypeShape.of(ListAppServicePlanHybridConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -687,6 +912,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(ListConnectionConsentLinksArgs args) {
         return listConnectionConsentLinks(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of consent links
+     * API Version: 2016-06-01.
+     * 
+     */
     public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(ListConnectionConsentLinksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionConsentLinks", TypeShape.of(ListConnectionConsentLinksResult.class), args, Utilities.withVersion(options));
     }
@@ -697,6 +927,10 @@ public final class WebFunctions {
     public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(ListConnectionKeysArgs args) {
         return listConnectionKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2015-08-01-preview.
+     * 
+     */
     public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(ListConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionKeys", TypeShape.of(ListConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -708,6 +942,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args) {
         return listContainerAppSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * Container App Secrets Collection ARM resource.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listContainerAppSecrets", TypeShape.of(ListContainerAppSecretsResult.class), args, Utilities.withVersion(options));
     }
@@ -719,6 +958,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(ListCustomApiWsdlInterfacesArgs args) {
         return listCustomApiWsdlInterfaces(args, InvokeOptions.Empty);
     }
+    /**
+     * A list of custom API WSDL interfaces
+     * API Version: 2016-06-01.
+     * 
+     */
     public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(ListCustomApiWsdlInterfacesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listCustomApiWsdlInterfaces", TypeShape.of(ListCustomApiWsdlInterfacesResult.class), args, Utilities.withVersion(options));
     }
@@ -730,9 +974,19 @@ public final class WebFunctions {
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName() {
         return listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Collection of identifiers.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs args) {
         return listSiteIdentifiersAssignedToHostName(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of identifiers.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listSiteIdentifiersAssignedToHostName", TypeShape.of(ListSiteIdentifiersAssignedToHostNameResult.class), args, Utilities.withVersion(options));
     }
@@ -744,6 +998,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(ListStaticSiteAppSettingsArgs args) {
         return listStaticSiteAppSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(ListStaticSiteAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteAppSettings", TypeShape.of(ListStaticSiteAppSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -755,6 +1014,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(ListStaticSiteBuildAppSettingsArgs args) {
         return listStaticSiteBuildAppSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(ListStaticSiteBuildAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteBuildAppSettings", TypeShape.of(ListStaticSiteBuildAppSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -766,6 +1030,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(ListStaticSiteBuildFunctionAppSettingsArgs args) {
         return listStaticSiteBuildFunctionAppSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(ListStaticSiteBuildFunctionAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteBuildFunctionAppSettings", TypeShape.of(ListStaticSiteBuildFunctionAppSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -777,6 +1046,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(ListStaticSiteConfiguredRolesArgs args) {
         return listStaticSiteConfiguredRoles(args, InvokeOptions.Empty);
     }
+    /**
+     * String list resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(ListStaticSiteConfiguredRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteConfiguredRoles", TypeShape.of(ListStaticSiteConfiguredRolesResult.class), args, Utilities.withVersion(options));
     }
@@ -788,6 +1062,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(ListStaticSiteFunctionAppSettingsArgs args) {
         return listStaticSiteFunctionAppSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(ListStaticSiteFunctionAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteFunctionAppSettings", TypeShape.of(ListStaticSiteFunctionAppSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -799,6 +1078,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(ListStaticSiteSecretsArgs args) {
         return listStaticSiteSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(ListStaticSiteSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteSecrets", TypeShape.of(ListStaticSiteSecretsResult.class), args, Utilities.withVersion(options));
     }
@@ -810,6 +1094,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(ListStaticSiteUsersArgs args) {
         return listStaticSiteUsers(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of static site custom users.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(ListStaticSiteUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteUsers", TypeShape.of(ListStaticSiteUsersResult.class), args, Utilities.withVersion(options));
     }
@@ -821,6 +1110,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(ListWebAppApplicationSettingsArgs args) {
         return listWebAppApplicationSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(ListWebAppApplicationSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppApplicationSettings", TypeShape.of(ListWebAppApplicationSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -832,6 +1126,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(ListWebAppApplicationSettingsSlotArgs args) {
         return listWebAppApplicationSettingsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(ListWebAppApplicationSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppApplicationSettingsSlot", TypeShape.of(ListWebAppApplicationSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -843,6 +1142,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(ListWebAppAuthSettingsArgs args) {
         return listWebAppAuthSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * Configuration settings for the Azure App Service Authentication / Authorization feature.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(ListWebAppAuthSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettings", TypeShape.of(ListWebAppAuthSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -854,6 +1158,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(ListWebAppAuthSettingsSlotArgs args) {
         return listWebAppAuthSettingsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Configuration settings for the Azure App Service Authentication / Authorization feature.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(ListWebAppAuthSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettingsSlot", TypeShape.of(ListWebAppAuthSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -865,6 +1174,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(ListWebAppAzureStorageAccountsArgs args) {
         return listWebAppAzureStorageAccounts(args, InvokeOptions.Empty);
     }
+    /**
+     * AzureStorageInfo dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(ListWebAppAzureStorageAccountsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccounts", TypeShape.of(ListWebAppAzureStorageAccountsResult.class), args, Utilities.withVersion(options));
     }
@@ -876,6 +1190,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(ListWebAppAzureStorageAccountsSlotArgs args) {
         return listWebAppAzureStorageAccountsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * AzureStorageInfo dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(ListWebAppAzureStorageAccountsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccountsSlot", TypeShape.of(ListWebAppAzureStorageAccountsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -887,6 +1206,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(ListWebAppBackupConfigurationArgs args) {
         return listWebAppBackupConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Description of a backup which will be performed.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(ListWebAppBackupConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfiguration", TypeShape.of(ListWebAppBackupConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -898,6 +1222,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(ListWebAppBackupConfigurationSlotArgs args) {
         return listWebAppBackupConfigurationSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Description of a backup which will be performed.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(ListWebAppBackupConfigurationSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfigurationSlot", TypeShape.of(ListWebAppBackupConfigurationSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -909,6 +1238,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(ListWebAppBackupStatusSecretsArgs args) {
         return listWebAppBackupStatusSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * Backup description.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(ListWebAppBackupStatusSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupStatusSecrets", TypeShape.of(ListWebAppBackupStatusSecretsResult.class), args, Utilities.withVersion(options));
     }
@@ -920,6 +1254,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(ListWebAppBackupStatusSecretsSlotArgs args) {
         return listWebAppBackupStatusSecretsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Backup description.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(ListWebAppBackupStatusSecretsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupStatusSecretsSlot", TypeShape.of(ListWebAppBackupStatusSecretsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -931,6 +1270,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(ListWebAppConnectionStringsArgs args) {
         return listWebAppConnectionStrings(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(ListWebAppConnectionStringsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStrings", TypeShape.of(ListWebAppConnectionStringsResult.class), args, Utilities.withVersion(options));
     }
@@ -942,6 +1286,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(ListWebAppConnectionStringsSlotArgs args) {
         return listWebAppConnectionStringsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(ListWebAppConnectionStringsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStringsSlot", TypeShape.of(ListWebAppConnectionStringsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -953,6 +1302,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(ListWebAppFunctionKeysArgs args) {
         return listWebAppFunctionKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(ListWebAppFunctionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeys", TypeShape.of(ListWebAppFunctionKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -964,6 +1318,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(ListWebAppFunctionKeysSlotArgs args) {
         return listWebAppFunctionKeysSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(ListWebAppFunctionKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeysSlot", TypeShape.of(ListWebAppFunctionKeysSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -975,6 +1334,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(ListWebAppFunctionSecretsArgs args) {
         return listWebAppFunctionSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(ListWebAppFunctionSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecrets", TypeShape.of(ListWebAppFunctionSecretsResult.class), args, Utilities.withVersion(options));
     }
@@ -986,6 +1350,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(ListWebAppFunctionSecretsSlotArgs args) {
         return listWebAppFunctionSecretsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(ListWebAppFunctionSecretsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecretsSlot", TypeShape.of(ListWebAppFunctionSecretsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -997,6 +1366,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(ListWebAppHostKeysArgs args) {
         return listWebAppHostKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Functions host level keys.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(ListWebAppHostKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHostKeys", TypeShape.of(ListWebAppHostKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -1008,6 +1382,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(ListWebAppHostKeysSlotArgs args) {
         return listWebAppHostKeysSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Functions host level keys.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(ListWebAppHostKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHostKeysSlot", TypeShape.of(ListWebAppHostKeysSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1019,6 +1398,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(ListWebAppHybridConnectionKeysArgs args) {
         return listWebAppHybridConnectionKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * API Version: 2018-11-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(ListWebAppHybridConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeys", TypeShape.of(ListWebAppHybridConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -1030,6 +1414,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(ListWebAppHybridConnectionKeysSlotArgs args) {
         return listWebAppHybridConnectionKeysSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * API Version: 2018-11-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(ListWebAppHybridConnectionKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeysSlot", TypeShape.of(ListWebAppHybridConnectionKeysSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1041,6 +1430,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(ListWebAppMetadataArgs args) {
         return listWebAppMetadata(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(ListWebAppMetadataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppMetadata", TypeShape.of(ListWebAppMetadataResult.class), args, Utilities.withVersion(options));
     }
@@ -1052,6 +1446,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(ListWebAppMetadataSlotArgs args) {
         return listWebAppMetadataSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(ListWebAppMetadataSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppMetadataSlot", TypeShape.of(ListWebAppMetadataSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1063,6 +1462,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(ListWebAppPublishingCredentialsArgs args) {
         return listWebAppPublishingCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(ListWebAppPublishingCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentials", TypeShape.of(ListWebAppPublishingCredentialsResult.class), args, Utilities.withVersion(options));
     }
@@ -1074,6 +1478,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(ListWebAppPublishingCredentialsSlotArgs args) {
         return listWebAppPublishingCredentialsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * User credentials used for publishing activity.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(ListWebAppPublishingCredentialsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentialsSlot", TypeShape.of(ListWebAppPublishingCredentialsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1085,6 +1494,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(ListWebAppSiteBackupsArgs args) {
         return listWebAppSiteBackups(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of backup items.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(ListWebAppSiteBackupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSiteBackups", TypeShape.of(ListWebAppSiteBackupsResult.class), args, Utilities.withVersion(options));
     }
@@ -1096,6 +1510,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(ListWebAppSiteBackupsSlotArgs args) {
         return listWebAppSiteBackupsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of backup items.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(ListWebAppSiteBackupsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSiteBackupsSlot", TypeShape.of(ListWebAppSiteBackupsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1107,6 +1526,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(ListWebAppSitePushSettingsArgs args) {
         return listWebAppSitePushSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * Push settings for the App.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(ListWebAppSitePushSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettings", TypeShape.of(ListWebAppSitePushSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -1118,6 +1542,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(ListWebAppSitePushSettingsSlotArgs args) {
         return listWebAppSitePushSettingsSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Push settings for the App.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(ListWebAppSitePushSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettingsSlot", TypeShape.of(ListWebAppSitePushSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
@@ -1129,6 +1558,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(ListWebAppSyncFunctionTriggersArgs args) {
         return listWebAppSyncFunctionTriggers(args, InvokeOptions.Empty);
     }
+    /**
+     * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(ListWebAppSyncFunctionTriggersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggers", TypeShape.of(ListWebAppSyncFunctionTriggersResult.class), args, Utilities.withVersion(options));
     }
@@ -1140,6 +1574,11 @@ public final class WebFunctions {
     public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(ListWebAppSyncFunctionTriggersSlotArgs args) {
         return listWebAppSyncFunctionTriggersSlot(args, InvokeOptions.Empty);
     }
+    /**
+     * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(ListWebAppSyncFunctionTriggersSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggersSlot", TypeShape.of(ListWebAppSyncFunctionTriggersSlotResult.class), args, Utilities.withVersion(options));
     }

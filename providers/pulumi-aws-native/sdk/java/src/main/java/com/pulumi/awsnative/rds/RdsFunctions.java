@@ -25,6 +25,10 @@ public final class RdsFunctions {
     public static CompletableFuture<GetDBProxyResult> getDBProxy(GetDBProxyArgs args) {
         return getDBProxy(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::RDS::DBProxy
+     * 
+     */
     public static CompletableFuture<GetDBProxyResult> getDBProxy(GetDBProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxy", TypeShape.of(GetDBProxyResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class RdsFunctions {
     public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(GetDBProxyEndpointArgs args) {
         return getDBProxyEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::RDS::DBProxyEndpoint.
+     * 
+     */
     public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(GetDBProxyEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyEndpoint", TypeShape.of(GetDBProxyEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class RdsFunctions {
     public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(GetDBProxyTargetGroupArgs args) {
         return getDBProxyTargetGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::RDS::DBProxyTargetGroup
+     * 
+     */
     public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(GetDBProxyTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyTargetGroup", TypeShape.of(GetDBProxyTargetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class RdsFunctions {
     public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(GetGlobalClusterArgs args) {
         return getGlobalCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::RDS::GlobalCluster
+     * 
+     */
     public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(GetGlobalClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getGlobalCluster", TypeShape.of(GetGlobalClusterResult.class), args, Utilities.withVersion(options));
     }

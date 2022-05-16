@@ -24,6 +24,11 @@ public final class OperationsmanagementFunctions {
     public static CompletableFuture<GetManagementAssociationResult> getManagementAssociation(GetManagementAssociationArgs args) {
         return getManagementAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagementAssociationResult> getManagementAssociation(GetManagementAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementAssociation", TypeShape.of(GetManagementAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class OperationsmanagementFunctions {
     public static CompletableFuture<GetManagementConfigurationResult> getManagementConfiguration(GetManagementConfigurationArgs args) {
         return getManagementConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagementConfigurationResult> getManagementConfiguration(GetManagementConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementConfiguration", TypeShape.of(GetManagementConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class OperationsmanagementFunctions {
     public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args) {
         return getSolution(args, InvokeOptions.Empty);
     }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
     }

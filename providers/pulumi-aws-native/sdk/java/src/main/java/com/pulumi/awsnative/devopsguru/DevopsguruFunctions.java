@@ -21,6 +21,10 @@ public final class DevopsguruFunctions {
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class DevopsguruFunctions {
     public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(GetResourceCollectionArgs args) {
         return getResourceCollection(args, InvokeOptions.Empty);
     }
+    /**
+     * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
+     * 
+     */
     public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(GetResourceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getResourceCollection", TypeShape.of(GetResourceCollectionResult.class), args, Utilities.withVersion(options));
     }

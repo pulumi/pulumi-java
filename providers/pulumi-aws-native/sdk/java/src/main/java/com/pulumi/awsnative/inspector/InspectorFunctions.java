@@ -23,6 +23,10 @@ public final class InspectorFunctions {
     public static CompletableFuture<GetAssessmentTargetResult> getAssessmentTarget(GetAssessmentTargetArgs args) {
         return getAssessmentTarget(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Inspector::AssessmentTarget
+     * 
+     */
     public static CompletableFuture<GetAssessmentTargetResult> getAssessmentTarget(GetAssessmentTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspector:getAssessmentTarget", TypeShape.of(GetAssessmentTargetResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class InspectorFunctions {
     public static CompletableFuture<GetAssessmentTemplateResult> getAssessmentTemplate(GetAssessmentTemplateArgs args) {
         return getAssessmentTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Inspector::AssessmentTemplate
+     * 
+     */
     public static CompletableFuture<GetAssessmentTemplateResult> getAssessmentTemplate(GetAssessmentTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspector:getAssessmentTemplate", TypeShape.of(GetAssessmentTemplateResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class InspectorFunctions {
     public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args) {
         return getResourceGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Inspector::ResourceGroup
+     * 
+     */
     public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspector:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
     }

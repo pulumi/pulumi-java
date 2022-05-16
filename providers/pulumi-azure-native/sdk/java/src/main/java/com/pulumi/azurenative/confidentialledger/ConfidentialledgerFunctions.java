@@ -20,6 +20,11 @@ public final class ConfidentialledgerFunctions {
     public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args) {
         return getLedger(args, InvokeOptions.Empty);
     }
+    /**
+     * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
     public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confidentialledger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }

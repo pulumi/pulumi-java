@@ -25,6 +25,10 @@ public final class EvidentlyFunctions {
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
         return getExperiment(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Evidently::Experiment.
+     * 
+     */
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class EvidentlyFunctions {
     public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
         return getFeature(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Evidently::Feature.
+     * 
+     */
     public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class EvidentlyFunctions {
     public static CompletableFuture<GetLaunchResult> getLaunch(GetLaunchArgs args) {
         return getLaunch(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Evidently::Launch.
+     * 
+     */
     public static CompletableFuture<GetLaunchResult> getLaunch(GetLaunchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getLaunch", TypeShape.of(GetLaunchResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class EvidentlyFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Evidently::Project
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }

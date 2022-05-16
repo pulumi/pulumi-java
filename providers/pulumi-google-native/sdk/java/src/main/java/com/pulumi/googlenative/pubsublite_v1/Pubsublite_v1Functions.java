@@ -23,6 +23,10 @@ public final class Pubsublite_v1Functions {
     public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
         return getReservation(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the reservation configuration.
+     * 
+     */
     public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Pubsublite_v1Functions {
     public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the subscription configuration.
+     * 
+     */
     public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Pubsublite_v1Functions {
     public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the topic configuration.
+     * 
+     */
     public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }

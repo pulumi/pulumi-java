@@ -207,6 +207,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousContainerDatabaseResult> getAutonomousContainerDatabase(GetAutonomousContainerDatabaseArgs args) {
         return getAutonomousContainerDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Container Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Autonomous Container Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousContainerDatabaseResult> getAutonomousContainerDatabase(GetAutonomousContainerDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousContainerDatabase:getAutonomousContainerDatabase", TypeShape.of(GetAutonomousContainerDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -221,6 +229,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousContainerDatabaseDataguardAssociationResult> getAutonomousContainerDatabaseDataguardAssociation(GetAutonomousContainerDatabaseDataguardAssociationArgs args) {
         return getAutonomousContainerDatabaseDataguardAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Container Database Dataguard Association resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets an Autonomous Container Database enabled with Autonomous Data Guard associated with the specified Autonomous Container Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousContainerDatabaseDataguardAssociationResult> getAutonomousContainerDatabaseDataguardAssociation(GetAutonomousContainerDatabaseDataguardAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousContainerDatabaseDataguardAssociation:getAutonomousContainerDatabaseDataguardAssociation", TypeShape.of(GetAutonomousContainerDatabaseDataguardAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -235,6 +251,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousContainerDatabaseDataguardAssociationsResult> getAutonomousContainerDatabaseDataguardAssociations(GetAutonomousContainerDatabaseDataguardAssociationsArgs args) {
         return getAutonomousContainerDatabaseDataguardAssociations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Container Database Dataguard Associations in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the Autonomous Container Databases with Autonomous Data Guard-enabled associated with the specified Autonomous Container Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousContainerDatabaseDataguardAssociationsResult> getAutonomousContainerDatabaseDataguardAssociations(GetAutonomousContainerDatabaseDataguardAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousContainerDatabaseDataguardAssociations:getAutonomousContainerDatabaseDataguardAssociations", TypeShape.of(GetAutonomousContainerDatabaseDataguardAssociationsResult.class), args, Utilities.withVersion(options));
     }
@@ -249,6 +273,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousContainerDatabasesResult> getAutonomousContainerDatabases(GetAutonomousContainerDatabasesArgs args) {
         return getAutonomousContainerDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Container Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the Autonomous Container Databases in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousContainerDatabasesResult> getAutonomousContainerDatabases(GetAutonomousContainerDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousContainerDatabases:getAutonomousContainerDatabases", TypeShape.of(GetAutonomousContainerDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -263,6 +295,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousContainerPatchesResult> getAutonomousContainerPatches(GetAutonomousContainerPatchesArgs args) {
         return getAutonomousContainerPatches(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Container Patches in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the patches applicable to the requested container database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousContainerPatchesResult> getAutonomousContainerPatches(GetAutonomousContainerPatchesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousContainerPatches:getAutonomousContainerPatches", TypeShape.of(GetAutonomousContainerPatchesResult.class), args, Utilities.withVersion(options));
     }
@@ -277,6 +317,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseResult> getAutonomousDatabase(GetAutonomousDatabaseArgs args) {
         return getAutonomousDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the details of the specified Autonomous Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseResult> getAutonomousDatabase(GetAutonomousDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabase:getAutonomousDatabase", TypeShape.of(GetAutonomousDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -291,6 +339,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseBackupResult> getAutonomousDatabaseBackup(GetAutonomousDatabaseBackupArgs args) {
         return getAutonomousDatabaseBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database Backup resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Autonomous Database backup.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseBackupResult> getAutonomousDatabaseBackup(GetAutonomousDatabaseBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseBackup:getAutonomousDatabaseBackup", TypeShape.of(GetAutonomousDatabaseBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -305,9 +361,25 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseBackupsResult> getAutonomousDatabaseBackups() {
         return getAutonomousDatabaseBackups(GetAutonomousDatabaseBackupsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Database Backups in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of Autonomous Database backups based on either the `autonomousDatabaseId` or `compartmentId` specified as a query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseBackupsResult> getAutonomousDatabaseBackups(GetAutonomousDatabaseBackupsArgs args) {
         return getAutonomousDatabaseBackups(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Database Backups in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of Autonomous Database backups based on either the `autonomousDatabaseId` or `compartmentId` specified as a query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseBackupsResult> getAutonomousDatabaseBackups(GetAutonomousDatabaseBackupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseBackups:getAutonomousDatabaseBackups", TypeShape.of(GetAutonomousDatabaseBackupsResult.class), args, Utilities.withVersion(options));
     }
@@ -322,6 +394,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseDataguardAssociationResult> getAutonomousDatabaseDataguardAssociation(GetAutonomousDatabaseDataguardAssociationArgs args) {
         return getAutonomousDatabaseDataguardAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database Dataguard Association resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets an Autonomous Database dataguard assocation for the specified Autonomous Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseDataguardAssociationResult> getAutonomousDatabaseDataguardAssociation(GetAutonomousDatabaseDataguardAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseDataguardAssociation:getAutonomousDatabaseDataguardAssociation", TypeShape.of(GetAutonomousDatabaseDataguardAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -336,6 +416,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseDataguardAssociationsResult> getAutonomousDatabaseDataguardAssociations(GetAutonomousDatabaseDataguardAssociationsArgs args) {
         return getAutonomousDatabaseDataguardAssociations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Database Dataguard Associations in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the Autonomous Data Guard-enabled databases associated with the specified Autonomous Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseDataguardAssociationsResult> getAutonomousDatabaseDataguardAssociations(GetAutonomousDatabaseDataguardAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseDataguardAssociations:getAutonomousDatabaseDataguardAssociations", TypeShape.of(GetAutonomousDatabaseDataguardAssociationsResult.class), args, Utilities.withVersion(options));
     }
@@ -350,6 +438,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseInstanceWalletManagementResult> getAutonomousDatabaseInstanceWalletManagement(GetAutonomousDatabaseInstanceWalletManagementArgs args) {
         return getAutonomousDatabaseInstanceWalletManagement(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database Instance Wallet Management resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the wallet details for the specified Autonomous Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseInstanceWalletManagementResult> getAutonomousDatabaseInstanceWalletManagement(GetAutonomousDatabaseInstanceWalletManagementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseInstanceWalletManagement:getAutonomousDatabaseInstanceWalletManagement", TypeShape.of(GetAutonomousDatabaseInstanceWalletManagementResult.class), args, Utilities.withVersion(options));
     }
@@ -364,9 +460,25 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseRegionalWalletManagementResult> getAutonomousDatabaseRegionalWalletManagement() {
         return getAutonomousDatabaseRegionalWalletManagement(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database Regional Wallet Management resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the Autonomous Database regional wallet details.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseRegionalWalletManagementResult> getAutonomousDatabaseRegionalWalletManagement(InvokeArgs args) {
         return getAutonomousDatabaseRegionalWalletManagement(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Database Regional Wallet Management resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the Autonomous Database regional wallet details.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseRegionalWalletManagementResult> getAutonomousDatabaseRegionalWalletManagement(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseRegionalWalletManagement:getAutonomousDatabaseRegionalWalletManagement", TypeShape.of(GetAutonomousDatabaseRegionalWalletManagementResult.class), args, Utilities.withVersion(options));
     }
@@ -377,6 +489,10 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabaseWalletResult> getAutonomousDatabaseWallet(GetAutonomousDatabaseWalletArgs args) {
         return getAutonomousDatabaseWallet(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabaseWalletResult> getAutonomousDatabaseWallet(GetAutonomousDatabaseWalletArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabaseWallet:getAutonomousDatabaseWallet", TypeShape.of(GetAutonomousDatabaseWalletResult.class), args, Utilities.withVersion(options));
     }
@@ -391,6 +507,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabasesResult> getAutonomousDatabases(GetAutonomousDatabasesArgs args) {
         return getAutonomousDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of Autonomous Databases based on the query parameters specified.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabasesResult> getAutonomousDatabases(GetAutonomousDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabases:getAutonomousDatabases", TypeShape.of(GetAutonomousDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -405,6 +529,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDatabasesClonesResult> getAutonomousDatabasesClones(GetAutonomousDatabasesClonesArgs args) {
         return getAutonomousDatabasesClones(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Databases Clones in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the Autonomous Database clones for the specified Autonomous Database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDatabasesClonesResult> getAutonomousDatabasesClones(GetAutonomousDatabasesClonesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDatabasesClones:getAutonomousDatabasesClones", TypeShape.of(GetAutonomousDatabasesClonesResult.class), args, Utilities.withVersion(options));
     }
@@ -420,6 +552,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDbPreviewVersionsResult> getAutonomousDbPreviewVersions(GetAutonomousDbPreviewVersionsArgs args) {
         return getAutonomousDbPreviewVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Db Preview Versions in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of supported Autonomous Database versions. Note that preview version software is only available for
+     * databases with [shared Exadata infrastructure](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDbPreviewVersionsResult> getAutonomousDbPreviewVersions(GetAutonomousDbPreviewVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDbPreviewVersions:getAutonomousDbPreviewVersions", TypeShape.of(GetAutonomousDbPreviewVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -434,6 +575,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousDbVersionsResult> getAutonomousDbVersions(GetAutonomousDbVersionsArgs args) {
         return getAutonomousDbVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Db Versions in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of supported Autonomous Database versions.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousDbVersionsResult> getAutonomousDbVersions(GetAutonomousDbVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousDbVersions:getAutonomousDbVersions", TypeShape.of(GetAutonomousDbVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -448,6 +597,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousExadataInfrastructureResult> getAutonomousExadataInfrastructure(GetAutonomousExadataInfrastructureArgs args) {
         return getAutonomousExadataInfrastructure(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Exadata Infrastructure resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * **Deprecated.** Use the [GetCloudExadataInfrastructure](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudExadataInfrastructure/GetCloudExadataInfrastructure) operation to get details of an Exadata Infrastructure resource and the [GetCloudAutonomousVmCluster](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudAutonomousVmCluster/GetCloudAutonomousVmCluster) operation to get details of an Autonomous Exadata VM cluster.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousExadataInfrastructureResult> getAutonomousExadataInfrastructure(GetAutonomousExadataInfrastructureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousExadataInfrastructure:getAutonomousExadataInfrastructure", TypeShape.of(GetAutonomousExadataInfrastructureResult.class), args, Utilities.withVersion(options));
     }
@@ -462,6 +619,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousExadataInfrastructureOcpuResult> getAutonomousExadataInfrastructureOcpu(GetAutonomousExadataInfrastructureOcpuArgs args) {
         return getAutonomousExadataInfrastructureOcpu(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Exadata Infrastructure Ocpu resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets details of the available and consumed OCPUs for the specified Autonomous Exadata Infrastructure resource.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousExadataInfrastructureOcpuResult> getAutonomousExadataInfrastructureOcpu(GetAutonomousExadataInfrastructureOcpuArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousExadataInfrastructureOcpu:getAutonomousExadataInfrastructureOcpu", TypeShape.of(GetAutonomousExadataInfrastructureOcpuResult.class), args, Utilities.withVersion(options));
     }
@@ -476,6 +641,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousExadataInfrastructureShapesResult> getAutonomousExadataInfrastructureShapes(GetAutonomousExadataInfrastructureShapesArgs args) {
         return getAutonomousExadataInfrastructureShapes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Exadata Infrastructure Shapes in Oracle Cloud Infrastructure Database service.
+     * 
+     * **Deprecated.**
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousExadataInfrastructureShapesResult> getAutonomousExadataInfrastructureShapes(GetAutonomousExadataInfrastructureShapesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousExadataInfrastructureShapes:getAutonomousExadataInfrastructureShapes", TypeShape.of(GetAutonomousExadataInfrastructureShapesResult.class), args, Utilities.withVersion(options));
     }
@@ -490,6 +663,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousExadataInfrastructuresResult> getAutonomousExadataInfrastructures(GetAutonomousExadataInfrastructuresArgs args) {
         return getAutonomousExadataInfrastructures(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Exadata Infrastructures in Oracle Cloud Infrastructure Database service.
+     * 
+     * **Deprecated.** Use the [ListCloudExadataInfrastructures](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudExadataInfrastructure/ListCloudExadataInfrastructures) operation to list Exadata Infrastructures in the Oracle cloud and the  [ListCloudAutonomousVmClusters](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudAutonomousVmCluster/ListCloudAutonomousVmClusters) operation to list Autonomous Exadata VM clusters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousExadataInfrastructuresResult> getAutonomousExadataInfrastructures(GetAutonomousExadataInfrastructuresArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousExadataInfrastructures:getAutonomousExadataInfrastructures", TypeShape.of(GetAutonomousExadataInfrastructuresResult.class), args, Utilities.withVersion(options));
     }
@@ -504,6 +685,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousPatchResult> getAutonomousPatch(GetAutonomousPatchArgs args) {
         return getAutonomousPatch(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Patch resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about a specific autonomous patch.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousPatchResult> getAutonomousPatch(GetAutonomousPatchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousPatch:getAutonomousPatch", TypeShape.of(GetAutonomousPatchResult.class), args, Utilities.withVersion(options));
     }
@@ -518,6 +707,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousVmClusterResult> getAutonomousVmCluster(GetAutonomousVmClusterArgs args) {
         return getAutonomousVmCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Autonomous Vm Cluster resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Autonomous VM cluster for an Exadata Cloud@Customer system. To get information about an Autonomous VM Cluster in the Oracle cloud, see [GetCloudAutonomousVmCluster](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudAutonomousVmCluster/GetCloudAutonomousVmCluster).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousVmClusterResult> getAutonomousVmCluster(GetAutonomousVmClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousVmCluster:getAutonomousVmCluster", TypeShape.of(GetAutonomousVmClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -532,6 +729,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetAutonomousVmClustersResult> getAutonomousVmClusters(GetAutonomousVmClustersArgs args) {
         return getAutonomousVmClusters(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Autonomous Vm Clusters in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of Exadata Cloud@Customer Autonomous VM clusters in the specified compartment. To list Autonomous VM Clusters in the Oracle Cloud, see [ListCloudAutonomousVmClusters](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudAutonomousVmCluster/ListCloudAutonomousVmClusters).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAutonomousVmClustersResult> getAutonomousVmClusters(GetAutonomousVmClustersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getAutonomousVmClusters:getAutonomousVmClusters", TypeShape.of(GetAutonomousVmClustersResult.class), args, Utilities.withVersion(options));
     }
@@ -546,6 +751,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetBackupDestinationResult> getBackupDestination(GetBackupDestinationArgs args) {
         return getBackupDestination(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Backup Destination resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified backup destination in an Exadata Cloud@Customer system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBackupDestinationResult> getBackupDestination(GetBackupDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getBackupDestination:getBackupDestination", TypeShape.of(GetBackupDestinationResult.class), args, Utilities.withVersion(options));
     }
@@ -560,6 +773,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetBackupDestinationsResult> getBackupDestinations(GetBackupDestinationsArgs args) {
         return getBackupDestinations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Backup Destinations in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of backup destinations in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBackupDestinationsResult> getBackupDestinations(GetBackupDestinationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getBackupDestinations:getBackupDestinations", TypeShape.of(GetBackupDestinationsResult.class), args, Utilities.withVersion(options));
     }
@@ -574,9 +795,25 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetBackupsResult> getBackups() {
         return getBackups(GetBackupsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Backups in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of backups based on the `databaseId` or `compartmentId` specified. Either one of these query parameters must be provided.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBackupsResult> getBackups(GetBackupsArgs args) {
         return getBackups(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Backups in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of backups based on the `databaseId` or `compartmentId` specified. Either one of these query parameters must be provided.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBackupsResult> getBackups(GetBackupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getBackups:getBackups", TypeShape.of(GetBackupsResult.class), args, Utilities.withVersion(options));
     }
@@ -591,6 +828,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudAutonomousVmClusterResult> getCloudAutonomousVmCluster(GetCloudAutonomousVmClusterArgs args) {
         return getCloudAutonomousVmCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Cloud Autonomous Vm Cluster resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Autonomous Exadata VM cluster in the Oracle cloud. For Exadata Cloud@Custustomer systems, see [GetAutonomousVmCluster ](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/AutonomousVmCluster/GetAutonomousVmCluster).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudAutonomousVmClusterResult> getCloudAutonomousVmCluster(GetCloudAutonomousVmClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudAutonomousVmCluster:getCloudAutonomousVmCluster", TypeShape.of(GetCloudAutonomousVmClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -605,6 +850,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudAutonomousVmClustersResult> getCloudAutonomousVmClusters(GetCloudAutonomousVmClustersArgs args) {
         return getCloudAutonomousVmClusters(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Cloud Autonomous Vm Clusters in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists Autonomous Exadata VM clusters in the Oracle cloud. For Exadata Cloud@Customer systems, see [ListAutonomousVmClusters](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/AutonomousVmCluster/ListAutonomousVmClusters).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudAutonomousVmClustersResult> getCloudAutonomousVmClusters(GetCloudAutonomousVmClustersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudAutonomousVmClusters:getCloudAutonomousVmClusters", TypeShape.of(GetCloudAutonomousVmClustersResult.class), args, Utilities.withVersion(options));
     }
@@ -619,6 +872,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudExadataInfrastructureResult> getCloudExadataInfrastructure(GetCloudExadataInfrastructureArgs args) {
         return getCloudExadataInfrastructure(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Cloud Exadata Infrastructure resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified cloud Exadata infrastructure resource. Applies to Exadata Cloud Service instances and Autonomous Database on dedicated Exadata infrastructure only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudExadataInfrastructureResult> getCloudExadataInfrastructure(GetCloudExadataInfrastructureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudExadataInfrastructure:getCloudExadataInfrastructure", TypeShape.of(GetCloudExadataInfrastructureResult.class), args, Utilities.withVersion(options));
     }
@@ -633,6 +894,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudExadataInfrastructuresResult> getCloudExadataInfrastructures(GetCloudExadataInfrastructuresArgs args) {
         return getCloudExadataInfrastructures(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Cloud Exadata Infrastructures in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the cloud Exadata infrastructure resources in the specified compartment. Applies to Exadata Cloud Service instances and Autonomous Database on dedicated Exadata infrastructure only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudExadataInfrastructuresResult> getCloudExadataInfrastructures(GetCloudExadataInfrastructuresArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudExadataInfrastructures:getCloudExadataInfrastructures", TypeShape.of(GetCloudExadataInfrastructuresResult.class), args, Utilities.withVersion(options));
     }
@@ -647,6 +916,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudVmClusterResult> getCloudVmCluster(GetCloudVmClusterArgs args) {
         return getCloudVmCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Cloud Vm Cluster resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified cloud VM cluster. Applies to Exadata Cloud Service instances and Autonomous Database on dedicated Exadata infrastructure only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudVmClusterResult> getCloudVmCluster(GetCloudVmClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudVmCluster:getCloudVmCluster", TypeShape.of(GetCloudVmClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -664,6 +941,17 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudVmClusterIormConfigResult> getCloudVmClusterIormConfig(GetCloudVmClusterIormConfigArgs args) {
         return getCloudVmClusterIormConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Cloud Vm Cluster Iorm Config resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the IORM configuration settings for the specified Cloud Vm Cluster.
+     * All Exadata service instances have default IORM settings.
+     * 
+     * The [GetCloudVmClusterIormConfig](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudVmCluster/GetCloudVmClusterIormConfig/) API is used for this operation with Cloud Vm Cluster.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudVmClusterIormConfigResult> getCloudVmClusterIormConfig(GetCloudVmClusterIormConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudVmClusterIormConfig:getCloudVmClusterIormConfig", TypeShape.of(GetCloudVmClusterIormConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -678,6 +966,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetCloudVmClustersResult> getCloudVmClusters(GetCloudVmClustersArgs args) {
         return getCloudVmClusters(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Cloud Vm Clusters in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the cloud VM clusters in the specified compartment. Applies to Exadata Cloud Service instances and Autonomous Database on dedicated Exadata infrastructure only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCloudVmClustersResult> getCloudVmClusters(GetCloudVmClustersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getCloudVmClusters:getCloudVmClusters", TypeShape.of(GetCloudVmClustersResult.class), args, Utilities.withVersion(options));
     }
@@ -692,6 +988,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDataGuardAssociationResult> getDataGuardAssociation(GetDataGuardAssociationArgs args) {
         return getDataGuardAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Data Guard Association resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the specified Data Guard association&#39;s configuration information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataGuardAssociationResult> getDataGuardAssociation(GetDataGuardAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDataGuardAssociation:getDataGuardAssociation", TypeShape.of(GetDataGuardAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -706,6 +1010,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDataGuardAssociationsResult> getDataGuardAssociations(GetDataGuardAssociationsArgs args) {
         return getDataGuardAssociations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Data Guard Associations in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists all Data Guard associations for the specified database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDataGuardAssociationsResult> getDataGuardAssociations(GetDataGuardAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDataGuardAssociations:getDataGuardAssociations", TypeShape.of(GetDataGuardAssociationsResult.class), args, Utilities.withVersion(options));
     }
@@ -720,6 +1032,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -734,6 +1054,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabasePdbConversionHistoryEntriesResult> getDatabasePdbConversionHistoryEntries(GetDatabasePdbConversionHistoryEntriesArgs args) {
         return getDatabasePdbConversionHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Pdb Conversion History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the pluggable database conversion history for a specified database in a bare metal or virtual machine DB system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabasePdbConversionHistoryEntriesResult> getDatabasePdbConversionHistoryEntries(GetDatabasePdbConversionHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabasePdbConversionHistoryEntries:getDatabasePdbConversionHistoryEntries", TypeShape.of(GetDatabasePdbConversionHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -748,6 +1076,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabasePdbConversionHistoryEntryResult> getDatabasePdbConversionHistoryEntry(GetDatabasePdbConversionHistoryEntryArgs args) {
         return getDatabasePdbConversionHistoryEntry(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database Pdb Conversion History Entry resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the details of operations performed to convert the specified database from non-container (non-CDB) to pluggable (PDB).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabasePdbConversionHistoryEntryResult> getDatabasePdbConversionHistoryEntry(GetDatabasePdbConversionHistoryEntryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabasePdbConversionHistoryEntry:getDatabasePdbConversionHistoryEntry", TypeShape.of(GetDatabasePdbConversionHistoryEntryResult.class), args, Utilities.withVersion(options));
     }
@@ -762,6 +1098,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabaseSoftwareImageResult> getDatabaseSoftwareImage(GetDatabaseSoftwareImageArgs args) {
         return getDatabaseSoftwareImage(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database Software Image resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified database software image.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseSoftwareImageResult> getDatabaseSoftwareImage(GetDatabaseSoftwareImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabaseSoftwareImage:getDatabaseSoftwareImage", TypeShape.of(GetDatabaseSoftwareImageResult.class), args, Utilities.withVersion(options));
     }
@@ -776,6 +1120,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabaseSoftwareImagesResult> getDatabaseSoftwareImages(GetDatabaseSoftwareImagesArgs args) {
         return getDatabaseSoftwareImages(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Software Images in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the database software images in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseSoftwareImagesResult> getDatabaseSoftwareImages(GetDatabaseSoftwareImagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabaseSoftwareImages:getDatabaseSoftwareImages", TypeShape.of(GetDatabaseSoftwareImagesResult.class), args, Utilities.withVersion(options));
     }
@@ -790,6 +1142,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabaseUpgradeHistoryEntriesResult> getDatabaseUpgradeHistoryEntries(GetDatabaseUpgradeHistoryEntriesArgs args) {
         return getDatabaseUpgradeHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Upgrade History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the upgrade history for a specified database in a bare metal or virtual machine DB system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseUpgradeHistoryEntriesResult> getDatabaseUpgradeHistoryEntries(GetDatabaseUpgradeHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabaseUpgradeHistoryEntries:getDatabaseUpgradeHistoryEntries", TypeShape.of(GetDatabaseUpgradeHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -804,6 +1164,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabaseUpgradeHistoryEntryResult> getDatabaseUpgradeHistoryEntry(GetDatabaseUpgradeHistoryEntryArgs args) {
         return getDatabaseUpgradeHistoryEntry(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database Upgrade History Entry resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * gets the upgrade history for a specified database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseUpgradeHistoryEntryResult> getDatabaseUpgradeHistoryEntry(GetDatabaseUpgradeHistoryEntryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabaseUpgradeHistoryEntry:getDatabaseUpgradeHistoryEntry", TypeShape.of(GetDatabaseUpgradeHistoryEntryResult.class), args, Utilities.withVersion(options));
     }
@@ -818,6 +1186,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDatabasesResult> getDatabases(GetDatabasesArgs args) {
         return getDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the databases in the specified Database Home.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabasesResult> getDatabases(GetDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDatabases:getDatabases", TypeShape.of(GetDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -832,6 +1208,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbHomeResult> getDbHome(GetDbHomeArgs args) {
         return getDbHome(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Db Home resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Database Home.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbHomeResult> getDbHome(GetDbHomeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbHome:getDbHome", TypeShape.of(GetDbHomeResult.class), args, Utilities.withVersion(options));
     }
@@ -846,6 +1230,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbHomePatchHistoryEntriesResult> getDbHomePatchHistoryEntries(GetDbHomePatchHistoryEntriesArgs args) {
         return getDbHomePatchHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Home Patch History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the history of patch operations on the specified Database Home.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbHomePatchHistoryEntriesResult> getDbHomePatchHistoryEntries(GetDbHomePatchHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbHomePatchHistoryEntries:getDbHomePatchHistoryEntries", TypeShape.of(GetDbHomePatchHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -860,6 +1252,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbHomePatchesResult> getDbHomePatches(GetDbHomePatchesArgs args) {
         return getDbHomePatches(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Home Patches in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists patches applicable to the requested Database Home.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbHomePatchesResult> getDbHomePatches(GetDbHomePatchesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbHomePatches:getDbHomePatches", TypeShape.of(GetDbHomePatchesResult.class), args, Utilities.withVersion(options));
     }
@@ -872,6 +1272,12 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbHomesResult> getDbHomes(GetDbHomesArgs args) {
         return getDbHomes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Homes in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the Database Homes in the specified DB system and compartment. A Database Home is a directory where Oracle Database software is installed.
+     * 
+     */
     public static CompletableFuture<GetDbHomesResult> getDbHomes(GetDbHomesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbHomes:getDbHomes", TypeShape.of(GetDbHomesResult.class), args, Utilities.withVersion(options));
     }
@@ -886,6 +1292,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbNodeResult> getDbNode(GetDbNodeArgs args) {
         return getDbNode(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Db Node resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified database node.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbNodeResult> getDbNode(GetDbNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbNode:getDbNode", TypeShape.of(GetDbNodeResult.class), args, Utilities.withVersion(options));
     }
@@ -900,6 +1314,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbNodeConsoleConnectionResult> getDbNodeConsoleConnection(GetDbNodeConsoleConnectionArgs args) {
         return getDbNodeConsoleConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Db Node Console Connection resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the specified database node console connection&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbNodeConsoleConnectionResult> getDbNodeConsoleConnection(GetDbNodeConsoleConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbNodeConsoleConnection:getDbNodeConsoleConnection", TypeShape.of(GetDbNodeConsoleConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -914,6 +1336,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbNodeConsoleConnectionsResult> getDbNodeConsoleConnections(GetDbNodeConsoleConnectionsArgs args) {
         return getDbNodeConsoleConnections(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Node Console Connections in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the console connections for the specified database node.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbNodeConsoleConnectionsResult> getDbNodeConsoleConnections(GetDbNodeConsoleConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbNodeConsoleConnections:getDbNodeConsoleConnections", TypeShape.of(GetDbNodeConsoleConnectionsResult.class), args, Utilities.withVersion(options));
     }
@@ -928,6 +1358,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbNodesResult> getDbNodes(GetDbNodesArgs args) {
         return getDbNodes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Nodes in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the database nodes in the specified DB system and compartment. A database node is a server running database software.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbNodesResult> getDbNodes(GetDbNodesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbNodes:getDbNodes", TypeShape.of(GetDbNodesResult.class), args, Utilities.withVersion(options));
     }
@@ -942,6 +1380,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbServerResult> getDbServer(GetDbServerArgs args) {
         return getDbServer(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Db Server resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the Exadata Db server.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbServerResult> getDbServer(GetDbServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbServer:getDbServer", TypeShape.of(GetDbServerResult.class), args, Utilities.withVersion(options));
     }
@@ -956,6 +1402,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbServersResult> getDbServers(GetDbServersArgs args) {
         return getDbServers(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Servers in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the Exadata DB servers in the ExadataInfrastructureId and specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbServersResult> getDbServers(GetDbServersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbServers:getDbServers", TypeShape.of(GetDbServersResult.class), args, Utilities.withVersion(options));
     }
@@ -970,6 +1424,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbSystemHistoryEntriesResult> getDbSystemHistoryEntries(GetDbSystemHistoryEntriesArgs args) {
         return getDbSystemHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db System Patch History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the history of the patch actions performed on the specified DB system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbSystemHistoryEntriesResult> getDbSystemHistoryEntries(GetDbSystemHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbSystemHistoryEntries:getDbSystemHistoryEntries", TypeShape.of(GetDbSystemHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -984,6 +1446,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbSystemPatchesResult> getDbSystemPatches(GetDbSystemPatchesArgs args) {
         return getDbSystemPatches(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db System Patches in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the patches applicable to the specified DB system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbSystemPatchesResult> getDbSystemPatches(GetDbSystemPatchesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbSystemPatches:getDbSystemPatches", TypeShape.of(GetDbSystemPatchesResult.class), args, Utilities.withVersion(options));
     }
@@ -998,6 +1468,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbSystemShapesResult> getDbSystemShapes(GetDbSystemShapesArgs args) {
         return getDbSystemShapes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db System Shapes in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the shapes that can be used to launch a new DB system. The shape determines resources to allocate to the DB system - CPU cores and memory for VM shapes; CPU cores, memory and storage for non-VM (or bare metal) shapes.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbSystemShapesResult> getDbSystemShapes(GetDbSystemShapesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbSystemShapes:getDbSystemShapes", TypeShape.of(GetDbSystemShapesResult.class), args, Utilities.withVersion(options));
     }
@@ -1016,6 +1494,18 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbSystemsResult> getDbSystems(GetDbSystemsArgs args) {
         return getDbSystems(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Systems in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the DB systems in the specified compartment. You can specify a `backupId` to list only the DB systems that support creating a database using this backup in this compartment.
+     * 
+     * **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+     * 
+     * For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbSystemsResult> getDbSystems(GetDbSystemsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbSystems:getDbSystems", TypeShape.of(GetDbSystemsResult.class), args, Utilities.withVersion(options));
     }
@@ -1030,6 +1520,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetDbVersionsResult> getDbVersions(GetDbVersionsArgs args) {
         return getDbVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Db Versions in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of supported Oracle Database versions.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDbVersionsResult> getDbVersions(GetDbVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getDbVersions:getDbVersions", TypeShape.of(GetDbVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -1045,6 +1543,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExadataInfrastructureResult> getExadataInfrastructure(GetExadataInfrastructureArgs args) {
         return getExadataInfrastructure(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Exadata Infrastructure resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified Exadata infrastructure. Applies to Exadata Cloud@Customer instances only.
+     * To get information on an Exadata Cloud Service infrastructure resource, use the  [GetCloudExadataInfrastructure](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudExadataInfrastructure/GetCloudExadataInfrastructure) operation.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInfrastructureResult> getExadataInfrastructure(GetExadataInfrastructureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExadataInfrastructure:getExadataInfrastructure", TypeShape.of(GetExadataInfrastructureResult.class), args, Utilities.withVersion(options));
     }
@@ -1059,6 +1566,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExadataInfrastructureDownloadConfigFileResult> getExadataInfrastructureDownloadConfigFile(GetExadataInfrastructureDownloadConfigFileArgs args) {
         return getExadataInfrastructureDownloadConfigFile(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Exadata Infrastructure Download Config File resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Downloads the configuration file for the specified Exadata Cloud@Customer infrastructure.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInfrastructureDownloadConfigFileResult> getExadataInfrastructureDownloadConfigFile(GetExadataInfrastructureDownloadConfigFileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExadataInfrastructureDownloadConfigFile:getExadataInfrastructureDownloadConfigFile", TypeShape.of(GetExadataInfrastructureDownloadConfigFileResult.class), args, Utilities.withVersion(options));
     }
@@ -1074,6 +1589,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExadataInfrastructuresResult> getExadataInfrastructures(GetExadataInfrastructuresArgs args) {
         return getExadataInfrastructures(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Exadata Infrastructures in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the Exadata infrastructure resources in the specified compartment. Applies to Exadata Cloud@Customer instances only.
+     * To list the Exadata Cloud Service infrastructure resources in a compartment, use the  [ListCloudExadataInfrastructures](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudExadataInfrastructure/ListCloudExadataInfrastructures) operation.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataInfrastructuresResult> getExadataInfrastructures(GetExadataInfrastructuresArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExadataInfrastructures:getExadataInfrastructures", TypeShape.of(GetExadataInfrastructuresResult.class), args, Utilities.withVersion(options));
     }
@@ -1096,6 +1620,22 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExadataIormConfigResult> getExadataIormConfig(GetExadataIormConfigArgs args) {
         return getExadataIormConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Exadata Iorm Config resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the IORM configuration settings for the specified cloud Exadata DB system.
+     * All Exadata service instances have default IORM settings.
+     * 
+     * **Note:** Deprecated for Exadata Cloud Service systems. Use the [new resource model APIs](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaflexsystem.htm#exaflexsystem_topic-resource_model) instead.
+     * 
+     * For Exadata Cloud Service instances, support for this API will end on May 15th, 2021. See [Switching an Exadata DB System to the New Resource Model and APIs](https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaflexsystem_topic-resource_model_conversion.htm) for details on converting existing Exadata DB systems to the new resource model.
+     * 
+     * The [GetCloudVmClusterIormConfig](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudVmCluster/GetCloudVmClusterIormConfig/) API is used for this operation with Exadata systems using the
+     * new resource model.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExadataIormConfigResult> getExadataIormConfig(GetExadataIormConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExadataIormConfig:getExadataIormConfig", TypeShape.of(GetExadataIormConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -1110,6 +1650,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalContainerDatabaseResult> getExternalContainerDatabase(GetExternalContainerDatabaseArgs args) {
         return getExternalContainerDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific External Container Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified external container database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalContainerDatabaseResult> getExternalContainerDatabase(GetExternalContainerDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalContainerDatabase:getExternalContainerDatabase", TypeShape.of(GetExternalContainerDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -1124,6 +1672,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalContainerDatabasesResult> getExternalContainerDatabases(GetExternalContainerDatabasesArgs args) {
         return getExternalContainerDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of External Container Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the external container databases in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalContainerDatabasesResult> getExternalContainerDatabases(GetExternalContainerDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalContainerDatabases:getExternalContainerDatabases", TypeShape.of(GetExternalContainerDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -1138,6 +1694,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalDatabaseConnectorResult> getExternalDatabaseConnector(GetExternalDatabaseConnectorArgs args) {
         return getExternalDatabaseConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific External Database Connector resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified external database connector.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalDatabaseConnectorResult> getExternalDatabaseConnector(GetExternalDatabaseConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalDatabaseConnector:getExternalDatabaseConnector", TypeShape.of(GetExternalDatabaseConnectorResult.class), args, Utilities.withVersion(options));
     }
@@ -1152,6 +1716,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalDatabaseConnectorsResult> getExternalDatabaseConnectors(GetExternalDatabaseConnectorsArgs args) {
         return getExternalDatabaseConnectors(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of External Database Connectors in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the external database connectors in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalDatabaseConnectorsResult> getExternalDatabaseConnectors(GetExternalDatabaseConnectorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalDatabaseConnectors:getExternalDatabaseConnectors", TypeShape.of(GetExternalDatabaseConnectorsResult.class), args, Utilities.withVersion(options));
     }
@@ -1166,6 +1738,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalNonContainerDatabaseResult> getExternalNonContainerDatabase(GetExternalNonContainerDatabaseArgs args) {
         return getExternalNonContainerDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific External Non Container Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about a specific external non-container database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalNonContainerDatabaseResult> getExternalNonContainerDatabase(GetExternalNonContainerDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalNonContainerDatabase:getExternalNonContainerDatabase", TypeShape.of(GetExternalNonContainerDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -1180,6 +1760,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalNonContainerDatabasesResult> getExternalNonContainerDatabases(GetExternalNonContainerDatabasesArgs args) {
         return getExternalNonContainerDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of External Non Container Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the ExternalNonContainerDatabases in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalNonContainerDatabasesResult> getExternalNonContainerDatabases(GetExternalNonContainerDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalNonContainerDatabases:getExternalNonContainerDatabases", TypeShape.of(GetExternalNonContainerDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -1195,6 +1783,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalPluggableDatabaseResult> getExternalPluggableDatabase(GetExternalPluggableDatabaseArgs args) {
         return getExternalPluggableDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific External Pluggable Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about a specific
+     * [external pluggable database](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/datatypes/CreateExternalPluggableDatabaseDetails) resource.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalPluggableDatabaseResult> getExternalPluggableDatabase(GetExternalPluggableDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalPluggableDatabase:getExternalPluggableDatabase", TypeShape.of(GetExternalPluggableDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -1210,6 +1807,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetExternalPluggableDatabasesResult> getExternalPluggableDatabases(GetExternalPluggableDatabasesArgs args) {
         return getExternalPluggableDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of External Pluggable Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the [ExternalPluggableDatabase](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/datatypes/CreateExternalPluggableDatabaseDetails)
+     * resources in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetExternalPluggableDatabasesResult> getExternalPluggableDatabases(GetExternalPluggableDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getExternalPluggableDatabases:getExternalPluggableDatabases", TypeShape.of(GetExternalPluggableDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -1224,6 +1830,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetFlexComponentsResult> getFlexComponents(GetFlexComponentsArgs args) {
         return getFlexComponents(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Flex Components in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the flex components that can be used to launch a new DB system. The flex component determines resources to allocate to the DB system - Database Servers and Storage Servers.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetFlexComponentsResult> getFlexComponents(GetFlexComponentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getFlexComponents:getFlexComponents", TypeShape.of(GetFlexComponentsResult.class), args, Utilities.withVersion(options));
     }
@@ -1238,6 +1852,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetGiVersionsResult> getGiVersions(GetGiVersionsArgs args) {
         return getGiVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Gi Versions in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of supported GI versions for the Exadata Cloud@Customer VM cluster.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetGiVersionsResult> getGiVersions(GetGiVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getGiVersions:getGiVersions", TypeShape.of(GetGiVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -1252,6 +1874,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetKeyStoreResult> getKeyStore(GetKeyStoreArgs args) {
         return getKeyStore(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Key Store resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified key store.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeyStoreResult> getKeyStore(GetKeyStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getKeyStore:getKeyStore", TypeShape.of(GetKeyStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -1266,6 +1896,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetKeyStoresResult> getKeyStores(GetKeyStoresArgs args) {
         return getKeyStores(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Key Stores in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of key stores in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeyStoresResult> getKeyStores(GetKeyStoresArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getKeyStores:getKeyStores", TypeShape.of(GetKeyStoresResult.class), args, Utilities.withVersion(options));
     }
@@ -1280,6 +1918,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetMaintenanceRunResult> getMaintenanceRun(GetMaintenanceRunArgs args) {
         return getMaintenanceRun(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Maintenance Run resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified maintenance run.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaintenanceRunResult> getMaintenanceRun(GetMaintenanceRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getMaintenanceRun:getMaintenanceRun", TypeShape.of(GetMaintenanceRunResult.class), args, Utilities.withVersion(options));
     }
@@ -1294,6 +1940,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetMaintenanceRunsResult> getMaintenanceRuns(GetMaintenanceRunsArgs args) {
         return getMaintenanceRuns(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Maintenance Runs in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the maintenance runs in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMaintenanceRunsResult> getMaintenanceRuns(GetMaintenanceRunsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getMaintenanceRuns:getMaintenanceRuns", TypeShape.of(GetMaintenanceRunsResult.class), args, Utilities.withVersion(options));
     }
@@ -1308,6 +1962,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetPluggableDatabaseResult> getPluggableDatabase(GetPluggableDatabaseArgs args) {
         return getPluggableDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Pluggable Database resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified pluggable database.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPluggableDatabaseResult> getPluggableDatabase(GetPluggableDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getPluggableDatabase:getPluggableDatabase", TypeShape.of(GetPluggableDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -1322,9 +1984,25 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetPluggableDatabasesResult> getPluggableDatabases() {
         return getPluggableDatabases(GetPluggableDatabasesArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Pluggable Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the pluggable databases in a database or compartment. You must provide either a `databaseId` or `compartmentId` value.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPluggableDatabasesResult> getPluggableDatabases(GetPluggableDatabasesArgs args) {
         return getPluggableDatabases(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Pluggable Databases in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the pluggable databases in a database or compartment. You must provide either a `databaseId` or `compartmentId` value.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPluggableDatabasesResult> getPluggableDatabases(GetPluggableDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getPluggableDatabases:getPluggableDatabases", TypeShape.of(GetPluggableDatabasesResult.class), args, Utilities.withVersion(options));
     }
@@ -1339,6 +2017,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterResult> getVmCluster(GetVmClusterArgs args) {
         return getVmCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the VM cluster. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterResult> getVmCluster(GetVmClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmCluster:getVmCluster", TypeShape.of(GetVmClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -1354,6 +2040,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterNetworkResult> getVmClusterNetwork(GetVmClusterNetworkArgs args) {
         return getVmClusterNetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Network resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+     * To get information about a cloud VM cluster in an Exadata Cloud Service instance, use the [GetCloudVmCluster ](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudVmCluster/GetCloudVmCluster) operation.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterNetworkResult> getVmClusterNetwork(GetVmClusterNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterNetwork:getVmClusterNetwork", TypeShape.of(GetVmClusterNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -1368,6 +2063,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterNetworkDownloadConfigFileResult> getVmClusterNetworkDownloadConfigFile(GetVmClusterNetworkDownloadConfigFileArgs args) {
         return getVmClusterNetworkDownloadConfigFile(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Network Download Config File resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Downloads the configuration file for the specified VM cluster network. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterNetworkDownloadConfigFileResult> getVmClusterNetworkDownloadConfigFile(GetVmClusterNetworkDownloadConfigFileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterNetworkDownloadConfigFile:getVmClusterNetworkDownloadConfigFile", TypeShape.of(GetVmClusterNetworkDownloadConfigFileResult.class), args, Utilities.withVersion(options));
     }
@@ -1382,6 +2085,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterNetworksResult> getVmClusterNetworks(GetVmClusterNetworksArgs args) {
         return getVmClusterNetworks(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Cluster Networks in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets a list of the VM cluster networks in the specified compartment. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterNetworksResult> getVmClusterNetworks(GetVmClusterNetworksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterNetworks:getVmClusterNetworks", TypeShape.of(GetVmClusterNetworksResult.class), args, Utilities.withVersion(options));
     }
@@ -1396,6 +2107,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterPatchResult> getVmClusterPatch(GetVmClusterPatchArgs args) {
         return getVmClusterPatch(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Patch resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about a specified patch package.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterPatchResult> getVmClusterPatch(GetVmClusterPatchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterPatch:getVmClusterPatch", TypeShape.of(GetVmClusterPatchResult.class), args, Utilities.withVersion(options));
     }
@@ -1410,6 +2129,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterPatchHistoryEntriesResult> getVmClusterPatchHistoryEntries(GetVmClusterPatchHistoryEntriesArgs args) {
         return getVmClusterPatchHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Cluster Patch History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the history of the patch actions performed on the specified VM cluster in an Exadata Cloud@Customer system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterPatchHistoryEntriesResult> getVmClusterPatchHistoryEntries(GetVmClusterPatchHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterPatchHistoryEntries:getVmClusterPatchHistoryEntries", TypeShape.of(GetVmClusterPatchHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -1424,6 +2151,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterPatchHistoryEntryResult> getVmClusterPatchHistoryEntry(GetVmClusterPatchHistoryEntryArgs args) {
         return getVmClusterPatchHistoryEntry(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Patch History Entry resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the patch history details for the specified patch history entry.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterPatchHistoryEntryResult> getVmClusterPatchHistoryEntry(GetVmClusterPatchHistoryEntryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterPatchHistoryEntry:getVmClusterPatchHistoryEntry", TypeShape.of(GetVmClusterPatchHistoryEntryResult.class), args, Utilities.withVersion(options));
     }
@@ -1438,6 +2173,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterPatchesResult> getVmClusterPatches(GetVmClusterPatchesArgs args) {
         return getVmClusterPatches(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Cluster Patches in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the patches applicable to the specified VM cluster in an Exadata Cloud@Customer system.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterPatchesResult> getVmClusterPatches(GetVmClusterPatchesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterPatches:getVmClusterPatches", TypeShape.of(GetVmClusterPatchesResult.class), args, Utilities.withVersion(options));
     }
@@ -1450,6 +2193,12 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterRecommendedNetworkResult> getVmClusterRecommendedNetwork(GetVmClusterRecommendedNetworkArgs args) {
         return getVmClusterRecommendedNetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Recommended Network resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Generates a recommended Cloud@Customer VM cluster network configuration.
+     * 
+     */
     public static CompletableFuture<GetVmClusterRecommendedNetworkResult> getVmClusterRecommendedNetwork(GetVmClusterRecommendedNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterRecommendedNetwork:getVmClusterRecommendedNetwork", TypeShape.of(GetVmClusterRecommendedNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -1464,6 +2213,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterUpdateResult> getVmClusterUpdate(GetVmClusterUpdateArgs args) {
         return getVmClusterUpdate(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Update resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets information about a specified maintenance update package for a VM cluster. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterUpdateResult> getVmClusterUpdate(GetVmClusterUpdateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterUpdate:getVmClusterUpdate", TypeShape.of(GetVmClusterUpdateResult.class), args, Utilities.withVersion(options));
     }
@@ -1478,6 +2235,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterUpdateHistoryEntriesResult> getVmClusterUpdateHistoryEntries(GetVmClusterUpdateHistoryEntriesArgs args) {
         return getVmClusterUpdateHistoryEntries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Cluster Update History Entries in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the history of the maintenance update actions performed on the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterUpdateHistoryEntriesResult> getVmClusterUpdateHistoryEntries(GetVmClusterUpdateHistoryEntriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterUpdateHistoryEntries:getVmClusterUpdateHistoryEntries", TypeShape.of(GetVmClusterUpdateHistoryEntriesResult.class), args, Utilities.withVersion(options));
     }
@@ -1492,6 +2257,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterUpdateHistoryEntryResult> getVmClusterUpdateHistoryEntry(GetVmClusterUpdateHistoryEntryArgs args) {
         return getVmClusterUpdateHistoryEntry(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vm Cluster Update History Entry resource in Oracle Cloud Infrastructure Database service.
+     * 
+     * Gets the maintenance update history details for the specified update history entry. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterUpdateHistoryEntryResult> getVmClusterUpdateHistoryEntry(GetVmClusterUpdateHistoryEntryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterUpdateHistoryEntry:getVmClusterUpdateHistoryEntry", TypeShape.of(GetVmClusterUpdateHistoryEntryResult.class), args, Utilities.withVersion(options));
     }
@@ -1506,6 +2279,14 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClusterUpdatesResult> getVmClusterUpdates(GetVmClusterUpdatesArgs args) {
         return getVmClusterUpdates(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Cluster Updates in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the maintenance updates that can be applied to the specified VM cluster. Applies to Exadata Cloud@Customer instances only.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClusterUpdatesResult> getVmClusterUpdates(GetVmClusterUpdatesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusterUpdates:getVmClusterUpdates", TypeShape.of(GetVmClusterUpdatesResult.class), args, Utilities.withVersion(options));
     }
@@ -1521,6 +2302,15 @@ public final class DatabaseFunctions {
     public static CompletableFuture<GetVmClustersResult> getVmClusters(GetVmClustersArgs args) {
         return getVmClusters(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vm Clusters in Oracle Cloud Infrastructure Database service.
+     * 
+     * Lists the VM clusters in the specified compartment. Applies to Exadata Cloud@Customer instances only.
+     * To list the cloud VM clusters in an Exadata Cloud Service instance, use the [ListCloudVmClusters ](https://docs.cloud.oracle.com/iaas/api/#/en/database/latest/CloudVmCluster/ListCloudVmClusters) operation.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVmClustersResult> getVmClusters(GetVmClustersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Database/getVmClusters:getVmClusters", TypeShape.of(GetVmClustersResult.class), args, Utilities.withVersion(options));
     }

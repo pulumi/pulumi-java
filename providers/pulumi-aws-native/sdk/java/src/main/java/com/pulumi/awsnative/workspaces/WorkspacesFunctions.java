@@ -19,6 +19,10 @@ public final class WorkspacesFunctions {
     public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(GetConnectionAliasArgs args) {
         return getConnectionAlias(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
+     * 
+     */
     public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(GetConnectionAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:workspaces:getConnectionAlias", TypeShape.of(GetConnectionAliasResult.class), args, Utilities.withVersion(options));
     }

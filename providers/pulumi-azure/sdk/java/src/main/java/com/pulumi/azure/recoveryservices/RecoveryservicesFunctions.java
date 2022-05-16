@@ -43,6 +43,34 @@ public final class RecoveryservicesFunctions {
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to access information about an existing Recovery Services Vault.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var vault = Output.of(RecoveryservicesFunctions.getVault(GetVaultArgs.builder()
+     *             .name(&#34;tfex-recovery_vault&#34;)
+     *             .resourceGroupName(&#34;tfex-resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:recoveryservices/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }

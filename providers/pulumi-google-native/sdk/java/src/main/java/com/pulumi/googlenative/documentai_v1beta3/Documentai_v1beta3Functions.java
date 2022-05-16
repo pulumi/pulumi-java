@@ -19,6 +19,10 @@ public final class Documentai_v1beta3Functions {
     public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args) {
         return getProcessor(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a processor detail.
+     * 
+     */
     public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:documentai/v1beta3:getProcessor", TypeShape.of(GetProcessorResult.class), args, Utilities.withVersion(options));
     }

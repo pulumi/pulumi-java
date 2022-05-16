@@ -37,6 +37,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
         return getBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve the details of a single Backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +51,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args) {
         return getBackupPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve the details of a single BackupPlan.
+     * 
+     */
     public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getBackupPlan", TypeShape.of(GetBackupPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +65,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetBackupPlanBackupIamPolicyResult> getBackupPlanBackupIamPolicy(GetBackupPlanBackupIamPolicyArgs args) {
         return getBackupPlanBackupIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetBackupPlanBackupIamPolicyResult> getBackupPlanBackupIamPolicy(GetBackupPlanBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getBackupPlanBackupIamPolicy", TypeShape.of(GetBackupPlanBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +79,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetBackupPlanBackupVolumeBackupIamPolicyResult> getBackupPlanBackupVolumeBackupIamPolicy(GetBackupPlanBackupVolumeBackupIamPolicyArgs args) {
         return getBackupPlanBackupVolumeBackupIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetBackupPlanBackupVolumeBackupIamPolicyResult> getBackupPlanBackupVolumeBackupIamPolicy(GetBackupPlanBackupVolumeBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getBackupPlanBackupVolumeBackupIamPolicy", TypeShape.of(GetBackupPlanBackupVolumeBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -77,6 +93,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetBackupPlanIamPolicyResult> getBackupPlanIamPolicy(GetBackupPlanIamPolicyArgs args) {
         return getBackupPlanIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetBackupPlanIamPolicyResult> getBackupPlanIamPolicy(GetBackupPlanIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getBackupPlanIamPolicy", TypeShape.of(GetBackupPlanIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +107,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetRestoreResult> getRestore(GetRestoreArgs args) {
         return getRestore(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the details of a single Restore.
+     * 
+     */
     public static CompletableFuture<GetRestoreResult> getRestore(GetRestoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getRestore", TypeShape.of(GetRestoreResult.class), args, Utilities.withVersion(options));
     }
@@ -97,6 +121,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetRestorePlanResult> getRestorePlan(GetRestorePlanArgs args) {
         return getRestorePlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve the details of a single RestorePlan.
+     * 
+     */
     public static CompletableFuture<GetRestorePlanResult> getRestorePlan(GetRestorePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getRestorePlan", TypeShape.of(GetRestorePlanResult.class), args, Utilities.withVersion(options));
     }
@@ -107,6 +135,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetRestorePlanIamPolicyResult> getRestorePlanIamPolicy(GetRestorePlanIamPolicyArgs args) {
         return getRestorePlanIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRestorePlanIamPolicyResult> getRestorePlanIamPolicy(GetRestorePlanIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getRestorePlanIamPolicy", TypeShape.of(GetRestorePlanIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -117,6 +149,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetRestorePlanRestoreIamPolicyResult> getRestorePlanRestoreIamPolicy(GetRestorePlanRestoreIamPolicyArgs args) {
         return getRestorePlanRestoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRestorePlanRestoreIamPolicyResult> getRestorePlanRestoreIamPolicy(GetRestorePlanRestoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getRestorePlanRestoreIamPolicy", TypeShape.of(GetRestorePlanRestoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -127,6 +163,10 @@ public final class Gkebackup_v1Functions {
     public static CompletableFuture<GetRestorePlanRestoreVolumeRestoreIamPolicyResult> getRestorePlanRestoreVolumeRestoreIamPolicy(GetRestorePlanRestoreVolumeRestoreIamPolicyArgs args) {
         return getRestorePlanRestoreVolumeRestoreIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRestorePlanRestoreVolumeRestoreIamPolicyResult> getRestorePlanRestoreVolumeRestoreIamPolicy(GetRestorePlanRestoreVolumeRestoreIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkebackup/v1:getRestorePlanRestoreVolumeRestoreIamPolicy", TypeShape.of(GetRestorePlanRestoreVolumeRestoreIamPolicyResult.class), args, Utilities.withVersion(options));
     }

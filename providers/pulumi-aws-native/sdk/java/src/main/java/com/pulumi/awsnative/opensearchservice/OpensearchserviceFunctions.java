@@ -19,6 +19,10 @@ public final class OpensearchserviceFunctions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opensearchservice:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }

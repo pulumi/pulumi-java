@@ -19,6 +19,10 @@ public final class Bigquerydatatransfer_v1Functions {
     public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args) {
         return getTransferConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns information about a data transfer config.
+     * 
+     */
     public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args, Utilities.withVersion(options));
     }

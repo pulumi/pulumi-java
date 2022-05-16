@@ -23,6 +23,10 @@ public final class Cloudidentity_v1beta1Functions {
     public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
         return getDevice(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified device.
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1beta1:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Cloudidentity_v1beta1Functions {
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a `Group`.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1beta1:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Cloudidentity_v1beta1Functions {
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args) {
         return getMembership(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a `Membership`.
+     * 
+     */
     public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1beta1:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class Firebasedatabase_v1betaFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the DatabaseInstance identified by the specified resource name.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasedatabase/v1beta:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }

@@ -31,6 +31,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
         return getBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets metadata on a pending or completed Backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +45,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the state of a Cloud Spanner database.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -51,6 +59,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about a particular instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +73,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(GetInstanceBackupIamPolicyArgs args) {
         return getInstanceBackupIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
+     * 
+     */
     public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(GetInstanceBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceBackupIamPolicy", TypeShape.of(GetInstanceBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +87,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(GetInstanceDatabaseIamPolicyArgs args) {
         return getInstanceDatabaseIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
+     * 
+     */
     public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(GetInstanceDatabaseIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceDatabaseIamPolicy", TypeShape.of(GetInstanceDatabaseIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +101,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args) {
         return getInstanceIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set. Authorization requires `spanner.instances.getIamPolicy` on resource.
+     * 
+     */
     public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +115,10 @@ public final class Spanner_v1Functions {
     public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args) {
         return getSession(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
+     * 
+     */
     public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }

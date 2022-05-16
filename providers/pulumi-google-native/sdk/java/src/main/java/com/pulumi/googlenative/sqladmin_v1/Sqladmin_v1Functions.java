@@ -25,6 +25,10 @@ public final class Sqladmin_v1Functions {
     public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
         return getBackupRun(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a resource containing information about a backup run.
+     * 
+     */
     public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Sqladmin_v1Functions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a resource containing information about a database inside a Cloud SQL instance.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Sqladmin_v1Functions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a resource containing information about a Cloud SQL instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Sqladmin_v1Functions {
     public static CompletableFuture<GetSslCertResult> getSslCert(GetSslCertArgs args) {
         return getSslCert(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
+     * 
+     */
     public static CompletableFuture<GetSslCertResult> getSslCert(GetSslCertArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getSslCert", TypeShape.of(GetSslCertResult.class), args, Utilities.withVersion(options));
     }

@@ -34,6 +34,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for Application properties.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +50,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(GetApplicationGroupArgs args) {
         return getApplicationGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a ApplicationGroup definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(GetApplicationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplicationGroup", TypeShape.of(GetApplicationGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -56,6 +66,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetHostPoolResult> getHostPool(GetHostPoolArgs args) {
         return getHostPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a HostPool definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetHostPoolResult> getHostPool(GetHostPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getHostPool", TypeShape.of(GetHostPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +82,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(GetMSIXPackageArgs args) {
         return getMSIXPackage(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for MSIX Package properties.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(GetMSIXPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getMSIXPackage", TypeShape.of(GetMSIXPackageResult.class), args, Utilities.withVersion(options));
     }
@@ -78,6 +98,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(GetPrivateEndpointConnectionByHostPoolArgs args) {
         return getPrivateEndpointConnectionByHostPool(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(GetPrivateEndpointConnectionByHostPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getPrivateEndpointConnectionByHostPool", TypeShape.of(GetPrivateEndpointConnectionByHostPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +114,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(GetPrivateEndpointConnectionByWorkspaceArgs args) {
         return getPrivateEndpointConnectionByWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(GetPrivateEndpointConnectionByWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getPrivateEndpointConnectionByWorkspace", TypeShape.of(GetPrivateEndpointConnectionByWorkspaceResult.class), args, Utilities.withVersion(options));
     }
@@ -100,6 +130,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetScalingPlanResult> getScalingPlan(GetScalingPlanArgs args) {
         return getScalingPlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a scaling plan definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetScalingPlanResult> getScalingPlan(GetScalingPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getScalingPlan", TypeShape.of(GetScalingPlanResult.class), args, Utilities.withVersion(options));
     }
@@ -111,6 +146,11 @@ public final class DesktopvirtualizationFunctions {
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a Workspace definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }

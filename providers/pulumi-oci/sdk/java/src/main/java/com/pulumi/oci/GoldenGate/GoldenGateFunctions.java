@@ -37,6 +37,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDatabaseRegistrationResult> getDatabaseRegistration(GetDatabaseRegistrationArgs args) {
         return getDatabaseRegistration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Database Registration resource in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Retrieves a DatabaseRegistration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseRegistrationResult> getDatabaseRegistration(GetDatabaseRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDatabaseRegistration:getDatabaseRegistration", TypeShape.of(GetDatabaseRegistrationResult.class), args, Utilities.withVersion(options));
     }
@@ -51,6 +59,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDatabaseRegistrationsResult> getDatabaseRegistrations(GetDatabaseRegistrationsArgs args) {
         return getDatabaseRegistrations(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Database Registrations in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Lists the DatabaseRegistrations in the compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDatabaseRegistrationsResult> getDatabaseRegistrations(GetDatabaseRegistrationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDatabaseRegistrations:getDatabaseRegistrations", TypeShape.of(GetDatabaseRegistrationsResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +81,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Deployment resource in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Retrieves a deployment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeployment:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +103,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentBackupResult> getDeploymentBackup(GetDeploymentBackupArgs args) {
         return getDeploymentBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Deployment Backup resource in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Retrieves a DeploymentBackup.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentBackupResult> getDeploymentBackup(GetDeploymentBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeploymentBackup:getDeploymentBackup", TypeShape.of(GetDeploymentBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +125,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentBackupsResult> getDeploymentBackups(GetDeploymentBackupsArgs args) {
         return getDeploymentBackups(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Deployment Backups in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Lists the Backups in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentBackupsResult> getDeploymentBackups(GetDeploymentBackupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeploymentBackups:getDeploymentBackups", TypeShape.of(GetDeploymentBackupsResult.class), args, Utilities.withVersion(options));
     }
@@ -107,6 +147,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentUpgradeResult> getDeploymentUpgrade(GetDeploymentUpgradeArgs args) {
         return getDeploymentUpgrade(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Deployment Upgrade resource in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Retrieves a deployment upgrade.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentUpgradeResult> getDeploymentUpgrade(GetDeploymentUpgradeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeploymentUpgrade:getDeploymentUpgrade", TypeShape.of(GetDeploymentUpgradeResult.class), args, Utilities.withVersion(options));
     }
@@ -121,6 +169,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentUpgradesResult> getDeploymentUpgrades(GetDeploymentUpgradesArgs args) {
         return getDeploymentUpgrades(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Deployment Upgrades in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Lists the Deployment Upgrades in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentUpgradesResult> getDeploymentUpgrades(GetDeploymentUpgradesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeploymentUpgrades:getDeploymentUpgrades", TypeShape.of(GetDeploymentUpgradesResult.class), args, Utilities.withVersion(options));
     }
@@ -135,6 +191,14 @@ public final class GoldenGateFunctions {
     public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args) {
         return getDeployments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Deployments in Oracle Cloud Infrastructure Golden Gate service.
+     * 
+     * Lists the Deployments in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:GoldenGate/getDeployments:getDeployments", TypeShape.of(GetDeploymentsResult.class), args, Utilities.withVersion(options));
     }

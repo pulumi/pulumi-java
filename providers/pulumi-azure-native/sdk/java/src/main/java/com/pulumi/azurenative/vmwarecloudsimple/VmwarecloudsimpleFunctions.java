@@ -24,6 +24,11 @@ public final class VmwarecloudsimpleFunctions {
     public static CompletableFuture<GetDedicatedCloudNodeResult> getDedicatedCloudNode(GetDedicatedCloudNodeArgs args) {
         return getDedicatedCloudNode(args, InvokeOptions.Empty);
     }
+    /**
+     * Dedicated cloud node model
+     * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<GetDedicatedCloudNodeResult> getDedicatedCloudNode(GetDedicatedCloudNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getDedicatedCloudNode", TypeShape.of(GetDedicatedCloudNodeResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class VmwarecloudsimpleFunctions {
     public static CompletableFuture<GetDedicatedCloudServiceResult> getDedicatedCloudService(GetDedicatedCloudServiceArgs args) {
         return getDedicatedCloudService(args, InvokeOptions.Empty);
     }
+    /**
+     * Dedicated cloud service model
+     * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<GetDedicatedCloudServiceResult> getDedicatedCloudService(GetDedicatedCloudServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getDedicatedCloudService", TypeShape.of(GetDedicatedCloudServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class VmwarecloudsimpleFunctions {
     public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
         return getVirtualMachine(args, InvokeOptions.Empty);
     }
+    /**
+     * Virtual machine model
+     * API Version: 2019-04-01.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }

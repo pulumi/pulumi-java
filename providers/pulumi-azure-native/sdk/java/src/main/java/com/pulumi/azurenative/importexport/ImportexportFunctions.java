@@ -22,6 +22,11 @@ public final class ImportexportFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Contains the job information.
+     * API Version: 2020-08-01.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class ImportexportFunctions {
     public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args) {
         return listBitLockerKey(args, InvokeOptions.Empty);
     }
+    /**
+     * GetBitLockerKeys response
+     * API Version: 2020-08-01.
+     * 
+     */
     public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args, Utilities.withVersion(options));
     }

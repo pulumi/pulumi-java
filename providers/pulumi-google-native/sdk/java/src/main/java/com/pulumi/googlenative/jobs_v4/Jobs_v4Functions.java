@@ -23,6 +23,10 @@ public final class Jobs_v4Functions {
     public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args) {
         return getCompany(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves specified company.
+     * 
+     */
     public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getCompany", TypeShape.of(GetCompanyResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Jobs_v4Functions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Jobs_v4Functions {
     public static CompletableFuture<GetTenantResult> getTenant(GetTenantArgs args) {
         return getTenant(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves specified tenant.
+     * 
+     */
     public static CompletableFuture<GetTenantResult> getTenant(GetTenantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getTenant", TypeShape.of(GetTenantResult.class), args, Utilities.withVersion(options));
     }

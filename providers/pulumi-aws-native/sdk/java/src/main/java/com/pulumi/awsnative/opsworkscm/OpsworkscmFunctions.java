@@ -19,6 +19,10 @@ public final class OpsworkscmFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::OpsWorksCM::Server
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opsworkscm:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }

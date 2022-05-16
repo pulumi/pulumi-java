@@ -38,6 +38,19 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args) {
         return getAlarm(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alarm resource in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * Gets the specified alarm.
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+     * Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
+     * or transactions, per second (TPS) for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarm:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +70,19 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args) {
         return getAlarmHistoryCollection(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Alarm History Collection resource in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * Get the history of the specified alarm.
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+     * Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
+     * or transactions, per second (TPS) for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarmHistoryCollection:getAlarmHistoryCollection", TypeShape.of(GetAlarmHistoryCollectionResult.class), args, Utilities.withVersion(options));
     }
@@ -76,6 +102,19 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args) {
         return getAlarmStatuses(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Alarm Statuses in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * List the status of each alarm in the specified compartment.
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+     * Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
+     * or transactions, per second (TPS) for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarmStatuses:getAlarmStatuses", TypeShape.of(GetAlarmStatusesResult.class), args, Utilities.withVersion(options));
     }
@@ -95,6 +134,19 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetAlarmsResult> getAlarms(GetAlarmsArgs args) {
         return getAlarms(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Alarms in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * Lists the alarms for the specified compartment.
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * This call is subject to a Monitoring limit that applies to the total number of requests across all alarm operations.
+     * Monitoring might throttle this call to reject an otherwise valid request when the total rate of alarm operations exceeds 10 requests,
+     * or transactions, per second (TPS) for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAlarmsResult> getAlarms(GetAlarmsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarms:getAlarms", TypeShape.of(GetAlarmsResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +165,18 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetMetricDataResult> getMetricData(GetMetricDataArgs args) {
         return getMetricData(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Metric Data in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * Returns aggregated data that match the criteria specified in the request. Compartment OCID required.
+     * For information on metric queries, see [Building Metric Queries](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Tasks/buildingqueries.htm).
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * Transactions Per Second (TPS) per-tenancy limit for this operation: 10.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMetricDataResult> getMetricData(GetMetricDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getMetricData:getMetricData", TypeShape.of(GetMetricDataResult.class), args, Utilities.withVersion(options));
     }
@@ -131,6 +195,18 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetMetricsResult> getMetrics(GetMetricsArgs args) {
         return getMetrics(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Metrics in Oracle Cloud Infrastructure Monitoring service.
+     * 
+     * Returns metric definitions that match the criteria specified in the request. Compartment OCID required.
+     * For information about metrics, see [Metrics Overview](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#MetricsOverview).
+     * For important limits information, see [Limits on Monitoring](https://docs.cloud.oracle.com/iaas/Content/Monitoring/Concepts/monitoringoverview.htm#Limits).
+     * 
+     * Transactions Per Second (TPS) per-tenancy limit for this operation: 10.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMetricsResult> getMetrics(GetMetricsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Monitoring/getMetrics:getMetrics", TypeShape.of(GetMetricsResult.class), args, Utilities.withVersion(options));
     }

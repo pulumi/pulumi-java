@@ -22,6 +22,11 @@ public final class CertificateregistrationFunctions {
     public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(GetAppServiceCertificateOrderArgs args) {
         return getAppServiceCertificateOrder(args, InvokeOptions.Empty);
     }
+    /**
+     * SSL certificate purchase order.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(GetAppServiceCertificateOrderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:certificateregistration:getAppServiceCertificateOrder", TypeShape.of(GetAppServiceCertificateOrderResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class CertificateregistrationFunctions {
     public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(GetAppServiceCertificateOrderCertificateArgs args) {
         return getAppServiceCertificateOrderCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Key Vault container ARM resource for a certificate that is purchased through Azure.
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(GetAppServiceCertificateOrderCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:certificateregistration:getAppServiceCertificateOrderCertificate", TypeShape.of(GetAppServiceCertificateOrderCertificateResult.class), args, Utilities.withVersion(options));
     }

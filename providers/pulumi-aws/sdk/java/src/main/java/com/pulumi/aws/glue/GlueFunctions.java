@@ -46,6 +46,33 @@ public final class GlueFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can be used to fetch information about a specific Glue Connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GlueFunctions.getConnection(GetConnectionArgs.builder()
+     *             .id(&#34;123456789123:connection&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +106,33 @@ public final class GlueFunctions {
     public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args) {
         return getDataCatalogEncryptionSettings(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can be used to fetch information about AWS Glue Data Catalog Encryption Settings.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GlueFunctions.getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs.builder()
+     *             .id(&#34;123456789123&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getDataCatalogEncryptionSettings:getDataCatalogEncryptionSettings", TypeShape.of(GetDataCatalogEncryptionSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -291,6 +345,212 @@ public final class GlueFunctions {
     public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
         return getScript(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
+     * 
+     * ## Example Usage
+     * ### Generate Python Script
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GlueFunctions.getScript(GetScriptArgs.builder()
+     *             .language(&#34;PYTHON&#34;)
+     *             .dagEdges(            
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;datasource0&#34;)
+     *                     .target(&#34;applymapping1&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;applymapping1&#34;)
+     *                     .target(&#34;selectfields2&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;selectfields2&#34;)
+     *                     .target(&#34;resolvechoice3&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;resolvechoice3&#34;)
+     *                     .target(&#34;datasink4&#34;)
+     *                     .build())
+     *             .dagNodes(            
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;datasource0&#34;)
+     *                     .nodeType(&#34;DataSource&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getSource().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getSource().getName()))
+     *                             .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;applymapping1&#34;)
+     *                     .nodeType(&#34;ApplyMapping&#34;)
+     *                     .args(GetScriptDagNodeArg.builder()
+     *                         .name(&#34;mapping&#34;)
+     *                         .value(&#34;[(\&#34;column1\&#34;, \&#34;string\&#34;, \&#34;column1\&#34;, \&#34;string\&#34;)]&#34;)
+     *                         .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;selectfields2&#34;)
+     *                     .nodeType(&#34;SelectFields&#34;)
+     *                     .args(GetScriptDagNodeArg.builder()
+     *                         .name(&#34;paths&#34;)
+     *                         .value(&#34;[\&#34;column1\&#34;]&#34;)
+     *                         .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;resolvechoice3&#34;)
+     *                     .nodeType(&#34;ResolveChoice&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;choice&#34;)
+     *                             .value(&#34;\&#34;MATCH_CATALOG\&#34;&#34;)
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getDestination().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getDestination().getName()))
+     *                             .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;datasink4&#34;)
+     *                     .nodeType(&#34;DataSink&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getDestination().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getDestination().getName()))
+     *                             .build())
+     *                     .build())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;pythonScript&#34;, example.apply(getScriptResult -&gt; getScriptResult.getPythonScript()));
+     *         }
+     * }
+     * ```
+     * ### Generate Scala Code
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GlueFunctions.getScript(GetScriptArgs.builder()
+     *             .language(&#34;SCALA&#34;)
+     *             .dagEdges(            
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;datasource0&#34;)
+     *                     .target(&#34;applymapping1&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;applymapping1&#34;)
+     *                     .target(&#34;selectfields2&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;selectfields2&#34;)
+     *                     .target(&#34;resolvechoice3&#34;)
+     *                     .build(),
+     *                 GetScriptDagEdge.builder()
+     *                     .source(&#34;resolvechoice3&#34;)
+     *                     .target(&#34;datasink4&#34;)
+     *                     .build())
+     *             .dagNodes(            
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;datasource0&#34;)
+     *                     .nodeType(&#34;DataSource&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getSource().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getSource().getName()))
+     *                             .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;applymapping1&#34;)
+     *                     .nodeType(&#34;ApplyMapping&#34;)
+     *                     .args(GetScriptDagNodeArg.builder()
+     *                         .name(&#34;mappings&#34;)
+     *                         .value(&#34;[(\&#34;column1\&#34;, \&#34;string\&#34;, \&#34;column1\&#34;, \&#34;string\&#34;)]&#34;)
+     *                         .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;selectfields2&#34;)
+     *                     .nodeType(&#34;SelectFields&#34;)
+     *                     .args(GetScriptDagNodeArg.builder()
+     *                         .name(&#34;paths&#34;)
+     *                         .value(&#34;[\&#34;column1\&#34;]&#34;)
+     *                         .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;resolvechoice3&#34;)
+     *                     .nodeType(&#34;ResolveChoice&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;choice&#34;)
+     *                             .value(&#34;\&#34;MATCH_CATALOG\&#34;&#34;)
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getDestination().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getDestination().getName()))
+     *                             .build())
+     *                     .build(),
+     *                 GetScriptDagNode.builder()
+     *                     .id(&#34;datasink4&#34;)
+     *                     .nodeType(&#34;DataSink&#34;)
+     *                     .args(                    
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;database&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_database.getDestination().getName()))
+     *                             .build(),
+     *                         GetScriptDagNodeArg.builder()
+     *                             .name(&#34;table_name&#34;)
+     *                             .value(String.format(&#34;\&#34;%s\&#34;&#34;, aws_glue_catalog_table.getDestination().getName()))
+     *                             .build())
+     *                     .build())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;scalaCode&#34;, example.apply(getScriptResult -&gt; getScriptResult.getScalaCode()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }

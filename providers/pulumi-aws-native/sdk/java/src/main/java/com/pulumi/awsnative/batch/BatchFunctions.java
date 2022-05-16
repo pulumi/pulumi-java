@@ -23,6 +23,10 @@ public final class BatchFunctions {
     public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
         return getComputeEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Batch::ComputeEnvironment
+     * 
+     */
     public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class BatchFunctions {
     public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
         return getJobQueue(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Batch::JobQueue
+     * 
+     */
     public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class BatchFunctions {
     public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
         return getSchedulingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type schema for AWS::Batch::SchedulingPolicy
+     * 
+     */
     public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
     }

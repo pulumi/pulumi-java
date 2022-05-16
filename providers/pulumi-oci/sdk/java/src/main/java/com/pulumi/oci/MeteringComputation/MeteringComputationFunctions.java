@@ -31,6 +31,14 @@ public final class MeteringComputationFunctions {
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Configuration resource in Oracle Cloud Infrastructure Metering Computation service.
+     * 
+     * Returns the configurations list for the UI drop-down list.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,14 @@ public final class MeteringComputationFunctions {
     public static CompletableFuture<GetCustomTableResult> getCustomTable(GetCustomTableArgs args) {
         return getCustomTable(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Custom Table resource in Oracle Cloud Infrastructure Metering Computation service.
+     * 
+     * Returns the saved custom table.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCustomTableResult> getCustomTable(GetCustomTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getCustomTable:getCustomTable", TypeShape.of(GetCustomTableResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +75,14 @@ public final class MeteringComputationFunctions {
     public static CompletableFuture<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args) {
         return getCustomTables(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Custom Tables in Oracle Cloud Infrastructure Metering Computation service.
+     * 
+     * Returns the saved custom table list.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getCustomTables:getCustomTables", TypeShape.of(GetCustomTablesResult.class), args, Utilities.withVersion(options));
     }
@@ -73,6 +97,14 @@ public final class MeteringComputationFunctions {
     public static CompletableFuture<GetQueriesResult> getQueries(GetQueriesArgs args) {
         return getQueries(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Queries in Oracle Cloud Infrastructure Metering Computation service.
+     * 
+     * Returns the saved query list.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetQueriesResult> getQueries(GetQueriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getQueries:getQueries", TypeShape.of(GetQueriesResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +119,14 @@ public final class MeteringComputationFunctions {
     public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {
         return getQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Query resource in Oracle Cloud Infrastructure Metering Computation service.
+     * 
+     * Returns the saved query.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getQuery:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
     }

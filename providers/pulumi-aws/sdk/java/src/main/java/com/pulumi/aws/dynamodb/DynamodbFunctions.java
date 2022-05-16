@@ -42,6 +42,33 @@ public final class DynamodbFunctions {
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information about a DynamoDB table.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var tableName = Output.of(DynamodbFunctions.getTable(GetTableArgs.builder()
+     *             .name(&#34;tableName&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:dynamodb/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }

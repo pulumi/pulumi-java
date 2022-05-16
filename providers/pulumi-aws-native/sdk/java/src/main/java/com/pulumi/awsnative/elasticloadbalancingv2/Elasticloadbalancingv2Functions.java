@@ -21,6 +21,10 @@ public final class Elasticloadbalancingv2Functions {
     public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ElasticLoadBalancingV2::Listener
+     * 
+     */
     public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Elasticloadbalancingv2Functions {
     public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args) {
         return getListenerRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
+     * 
+     */
     public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListenerRule", TypeShape.of(GetListenerRuleResult.class), args, Utilities.withVersion(options));
     }

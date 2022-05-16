@@ -64,6 +64,45 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args) {
         return getKMSCryptoKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to a Google Cloud Platform KMS CryptoKey. For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key)
+     * and
+     * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys).
+     * 
+     * A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
+     * Google Cloud KMS KeyRing.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .name(&#34;my-key-ring&#34;)
+     *             .location(&#34;us-central1&#34;)
+     *             .build()));
+     * 
+     *         final var myCryptoKey = Output.of(KmsFunctions.getKMSCryptoKey(GetKMSCryptoKeyArgs.builder()
+     *             .name(&#34;my-crypto-key&#34;)
+     *             .keyRing(myKeyRing.apply(getKMSKeyRingResult -&gt; getKMSKeyRingResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKey:getKMSCryptoKey", TypeShape.of(GetKMSCryptoKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -112,6 +151,48 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args) {
         return getKMSCryptoKeyVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to a Google Cloud Platform KMS CryptoKeyVersion. For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_version)
+     * and
+     * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions).
+     * 
+     * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .name(&#34;my-key-ring&#34;)
+     *             .location(&#34;us-central1&#34;)
+     *             .build()));
+     * 
+     *         final var myCryptoKey = Output.of(KmsFunctions.getKMSCryptoKey(GetKMSCryptoKeyArgs.builder()
+     *             .name(&#34;my-crypto-key&#34;)
+     *             .keyRing(myKeyRing.apply(getKMSKeyRingResult -&gt; getKMSKeyRingResult.getId()))
+     *             .build()));
+     * 
+     *         final var myCryptoKeyVersion = Output.of(KmsFunctions.getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs.builder()
+     *             .cryptoKey(data.getGoogle_kms_crypto_key().getMy_key().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKeyVersion:getKMSCryptoKeyVersion", TypeShape.of(GetKMSCryptoKeyVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -152,6 +233,40 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args) {
         return getKMSKeyRing(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to Google Cloud Platform KMS KeyRing. For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_ring)
+     * and
+     * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings).
+     * 
+     * A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing belongs to a Google Cloud Platform Project
+     * and resides in a specific location.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .location(&#34;us-central1&#34;)
+     *             .name(&#34;my-key-ring&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSKeyRing:getKMSKeyRing", TypeShape.of(GetKMSKeyRingResult.class), args, Utilities.withVersion(options));
     }
@@ -171,6 +286,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args) {
         return getKMSSecret(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source allows you to use data encrypted with Google Cloud KMS
+     * within your resource definitions.
+     * 
+     * For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
+     * 
+     * &gt; **NOTE:** Using this data provider will allow you to conceal secret data within your
+     * resource definitions, but it does not take care of protecting that data in the
+     * logging output, plan output, or state output.  Please take care to secure your secret
+     * data outside of resource definitions.
+     * 
+     */
     public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecret:getKMSSecret", TypeShape.of(GetKMSSecretResult.class), args, Utilities.withVersion(options));
     }
@@ -215,6 +343,44 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args) {
         return getKMSSecretAsymmetric(args, InvokeOptions.Empty);
     }
+    /**
+     * ## get the public key to encrypt the secret with
+     * 
+     * $ gcloud kms keys versions get-public-key 1\
+     *   --project my-project\
+     *   --location us-central1\
+     *   --keyring my-key-ring\
+     *   --key my-crypto-key\
+     *   --output-file public-key.pem
+     * 
+     * ## encrypt secret with the public key
+     * 
+     * $ echo -n my-secret-password |\
+     *   openssl pkeyutl -in -\
+     *     -encrypt\
+     *     -pubin\
+     *     -inkey public-key.pem\
+     *     -pkeyopt rsa_padding_mode:oaep\
+     *     -pkeyopt rsa_oaep_md:sha256\
+     *     -pkeyopt rsa_mgf1_md:sha256 &gt;\
+     *   my-secret-password.enc
+     * 
+     * ## base64 encode the ciphertext
+     * 
+     * $ openssl base64 -in my-secret-password.enc
+     * M7nUoba9EGVTu2LjNjBKGdGVBYjyS/i/AY+4yQMQF0Qf/RfUfX31Jw6+VO9OuThq
+     * ylu/7ihX9XD4bM7yYdXnMv9p1OHQUlorSBSbb/J6n1W9UJhcp6um8Tw8/Isx4f75
+     * 4PskYS6f8Y2ItliGt1/A9iR5BTgGtJBwOxMlgoX2Ggq+Nh4E5SbdoaE5o6CO1nBx
+     * eIPsPEebQ6qC4JehQM3IGuV/lrm58+hZhaXAqNzX1cEYyAt5GYqJIVCiI585SUYs
+     * wRToGyTgaN+zthF0HP9IWlR4Am4LmJ/1OcePTnYw11CkU8wNRbDzVAzogwNH+rXr
+     * LTmf7hxVjBm6bBSVSNFcBKAXFlllubSfIeZ5hgzGqn54OmSf6odO12L5JxllddHc
+     * yAd54vWKs2kJtnsKV2V4ZdkI0w6y1TeI67baFZDNGo6qsCpFMPnvv7d46Pg2VOp1
+     * J6Ivner0NnNHE4MzNmpZRk8WXMwqq4P/gTiT7F/aCX6oFCUQ4AWPQhJYh2dkcOmL
+     * IP+47Veb10aFn61F1CJwpmOOiGNXKdDT1vK8CMnnwhm825K0q/q9Zqpzc1+1ae1z
+     * mSqol1zCoa88CuSN6nTLQlVnN/dzfrGbc0boJPaM0iGhHtSzHk4SWg84LhiJB1q9
+     * A9XFJmOVdkvRY9nnz/iVLAdd0Q3vFtLqCdUYsNN2yh4=
+     * 
+     */
     public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretAsymmetric:getKMSSecretAsymmetric", TypeShape.of(GetKMSSecretAsymmetricResult.class), args, Utilities.withVersion(options));
     }
@@ -236,6 +402,21 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args) {
         return getKMSSecretCiphertext(args, InvokeOptions.Empty);
     }
+    /**
+     * !&gt; **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
+     * 
+     * This data source allows you to encrypt data with Google Cloud KMS and use the
+     * ciphertext within your resource definitions.
+     * 
+     * For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/encrypt-decrypt).
+     * 
+     * &gt; **NOTE:** Using this data source will allow you to conceal secret data within your
+     * resource definitions, but it does not take care of protecting that data in the
+     * logging output, plan output, or state output.  Please take care to secure your secret
+     * data outside of resource definitions.
+     * 
+     */
     public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretCiphertext:getKMSSecretCiphertext", TypeShape.of(GetKMSSecretCiphertextResult.class), args, Utilities.withVersion(options));
     }

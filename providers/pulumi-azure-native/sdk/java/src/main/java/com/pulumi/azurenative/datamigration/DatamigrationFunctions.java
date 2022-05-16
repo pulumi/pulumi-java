@@ -34,6 +34,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetDatabaseMigrationsSqlDbResult> getDatabaseMigrationsSqlDb(GetDatabaseMigrationsSqlDbArgs args) {
         return getDatabaseMigrationsSqlDb(args, InvokeOptions.Empty);
     }
+    /**
+     * Database Migration Resource for SQL Database.
+     * API Version: 2022-03-30-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseMigrationsSqlDbResult> getDatabaseMigrationsSqlDb(GetDatabaseMigrationsSqlDbArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getDatabaseMigrationsSqlDb", TypeShape.of(GetDatabaseMigrationsSqlDbResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +50,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetFileResult> getFile(GetFileArgs args) {
         return getFile(args, InvokeOptions.Empty);
     }
+    /**
+     * A file resource
+     * API Version: 2018-07-15-preview.
+     * 
+     */
     public static CompletableFuture<GetFileResult> getFile(GetFileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getFile", TypeShape.of(GetFileResult.class), args, Utilities.withVersion(options));
     }
@@ -56,6 +66,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * A project resource
+     * API Version: 2018-04-19.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +82,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * A Database Migration Service resource
+     * API Version: 2018-04-19.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -78,6 +98,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(GetSqlMigrationServiceArgs args) {
         return getSqlMigrationService(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL Migration Service.
+     * API Version: 2021-10-30-preview.
+     * 
+     */
     public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(GetSqlMigrationServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getSqlMigrationService", TypeShape.of(GetSqlMigrationServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +114,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
         return getTask(args, InvokeOptions.Empty);
     }
+    /**
+     * A task resource
+     * API Version: 2018-04-19.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
@@ -100,6 +130,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(ListSqlMigrationServiceAuthKeysArgs args) {
         return listSqlMigrationServiceAuthKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * An authentication key.
+     * API Version: 2021-10-30-preview.
+     * 
+     */
     public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(ListSqlMigrationServiceAuthKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceAuthKeys", TypeShape.of(ListSqlMigrationServiceAuthKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -111,6 +146,11 @@ public final class DatamigrationFunctions {
     public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(ListSqlMigrationServiceMonitoringDataArgs args) {
         return listSqlMigrationServiceMonitoringData(args, InvokeOptions.Empty);
     }
+    /**
+     * Integration Runtime Monitoring Data.
+     * API Version: 2021-10-30-preview.
+     * 
+     */
     public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(ListSqlMigrationServiceMonitoringDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceMonitoringData", TypeShape.of(ListSqlMigrationServiceMonitoringDataResult.class), args, Utilities.withVersion(options));
     }

@@ -23,6 +23,10 @@ public final class Connectors_v1Functions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Connection.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Connectors_v1Functions {
     public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args) {
         return getConnectionIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnectionIamPolicy", TypeShape.of(GetConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Connectors_v1Functions {
     public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args) {
         return getProviderIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getProviderIamPolicy", TypeShape.of(GetProviderIamPolicyResult.class), args, Utilities.withVersion(options));
     }

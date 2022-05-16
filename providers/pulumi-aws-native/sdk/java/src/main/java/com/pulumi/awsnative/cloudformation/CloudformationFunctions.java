@@ -39,6 +39,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(GetHookDefaultVersionArgs args) {
         return getHookDefaultVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Set a version as default version for a hook in CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(GetHookDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookDefaultVersion", TypeShape.of(GetHookDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +53,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(GetHookTypeConfigArgs args) {
         return getHookTypeConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Specifies the configuration data for a registered hook in CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(GetHookTypeConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookTypeConfig", TypeShape.of(GetHookTypeConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +67,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetHookVersionResult> getHookVersion(GetHookVersionArgs args) {
         return getHookVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Publishes new or first hook version to AWS CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetHookVersionResult> getHookVersion(GetHookVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookVersion", TypeShape.of(GetHookVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +81,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(GetModuleDefaultVersionArgs args) {
         return getModuleDefaultVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * A module that has been registered in the CloudFormation registry as the default version
+     * 
+     */
     public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(GetModuleDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleDefaultVersion", TypeShape.of(GetModuleDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +95,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetModuleVersionResult> getModuleVersion(GetModuleVersionArgs args) {
         return getModuleVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * A module that has been registered in the CloudFormation registry.
+     * 
+     */
     public static CompletableFuture<GetModuleVersionResult> getModuleVersion(GetModuleVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleVersion", TypeShape.of(GetModuleVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +109,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(GetPublicTypeVersionArgs args) {
         return getPublicTypeVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Test and Publish a resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(GetPublicTypeVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublicTypeVersion", TypeShape.of(GetPublicTypeVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -99,6 +123,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetPublisherResult> getPublisher(GetPublisherArgs args) {
         return getPublisher(args, InvokeOptions.Empty);
     }
+    /**
+     * Register as a publisher in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetPublisherResult> getPublisher(GetPublisherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublisher", TypeShape.of(GetPublisherResult.class), args, Utilities.withVersion(options));
     }
@@ -109,6 +137,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(GetResourceDefaultVersionArgs args) {
         return getResourceDefaultVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * The default version of a resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(GetResourceDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceDefaultVersion", TypeShape.of(GetResourceDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +151,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetResourceVersionResult> getResourceVersion(GetResourceVersionArgs args) {
         return getResourceVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * A resource that has been registered in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetResourceVersionResult> getResourceVersion(GetResourceVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceVersion", TypeShape.of(GetResourceVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -129,6 +165,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetStackSetResult> getStackSet(GetStackSetArgs args) {
         return getStackSet(args, InvokeOptions.Empty);
     }
+    /**
+     * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
+     * 
+     */
     public static CompletableFuture<GetStackSetResult> getStackSet(GetStackSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getStackSet", TypeShape.of(GetStackSetResult.class), args, Utilities.withVersion(options));
     }
@@ -139,6 +179,10 @@ public final class CloudformationFunctions {
     public static CompletableFuture<GetTypeActivationResult> getTypeActivation(GetTypeActivationArgs args) {
         return getTypeActivation(args, InvokeOptions.Empty);
     }
+    /**
+     * Enable a resource that has been published in the CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetTypeActivationResult> getTypeActivation(GetTypeActivationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getTypeActivation", TypeShape.of(GetTypeActivationResult.class), args, Utilities.withVersion(options));
     }
