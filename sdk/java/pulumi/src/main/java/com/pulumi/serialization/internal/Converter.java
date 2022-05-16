@@ -72,7 +72,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
-        log.excessive("Deserialize property[%s]: value=%s", context, value);
+        log.excessive("Deserialize property[%s]: value=%s intended for targetType=%s", context, value, targetType);
         var data = this.deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
