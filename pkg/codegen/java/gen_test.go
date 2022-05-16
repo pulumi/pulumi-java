@@ -113,15 +113,10 @@ func TestGeneratePackage(t *testing.T) {
 }
 
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
-	version := os.Getenv("PULUMI_JAVA_SDK_VERSION")
-	if version == "" {
-		version = "0.0.1"
-	}
-
 	pkgInfo := PackageInfo{
 		BuildFiles: "gradle",
 		Packages: map[string]string{
-			"com.pulumi:pulumi": version,
+			"com.pulumi:pulumi": "0.0.1",
 
 			// There are some sprinkled unit tests that
 			// complement testing the generated code at
