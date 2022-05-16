@@ -72,6 +72,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
+        log.excessive("Deserialize property[%s]: value=%s", context, value);
         var data = this.deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
@@ -101,6 +102,10 @@ public class Converter {
 
     @Nullable
     private Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<?> targetType) {
+        log.excessive(
+                "Convert [%s]: converting '%s' to '%s'",
+                context, value == null ? "null" : value.getClass().getTypeName(), targetType
+        );
         try {
             return tryConvertObjectInner(context, value, targetType);
         } catch (UnsupportedOperationException ex) {

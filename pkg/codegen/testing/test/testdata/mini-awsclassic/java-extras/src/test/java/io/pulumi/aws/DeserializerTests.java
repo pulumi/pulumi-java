@@ -20,8 +20,9 @@ class DeserializerTests {
     void testToleratingProviderNotReturningRequiredProps() {
         var json = "{}";
         TypeShape<GetAmiResult> typeShape = TypeShape.builder(GetAmiResult.class).build();
-        var deserializer = new Deserializer();
-        var converter = new Converter(Log.ignore(), deserializer);
+        var log = Log.ignore();
+        var deserializer = new Deserializer(log);
+        var converter = new Converter(log, deserializer);
         OutputData<GetAmiResult> responseOutput = converter.convertValue(
                 "testContext",
                 parseJsonValue(json),

@@ -5,32 +5,44 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
+import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.core.internal.*;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.Optionals;
+import com.pulumi.core.internal.PulumiCollectors;
+import com.pulumi.core.internal.Reflection;
+import com.pulumi.core.internal.SemanticVersion;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.resources.*;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceOptions;
 import pulumirpc.EngineGrpc;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
+import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.collectingAndThen;
 
+@InternalUse
 public class ResourcePackages {
 
     private static final Supplier<ImmutableMap<String, ImmutableList<Tuple2<Optional<String>, Class<Resource>>>>> resourceTypes =
             Suppliers.memoize(ResourcePackages::discoverResourceTypes); // lazy init
+
+    private final Log log;
 
     @SuppressWarnings("UnstableApiUsage")
     private static ImmutableMap<String, ImmutableList<Tuple2<Optional<String>, Class<Resource>>>> discoverResourceTypes() {
@@ -130,16 +142,33 @@ public class ResourcePackages {
         }
     }
 
+    public ResourcePackages(Log log) {
+        this.log = requireNonNull(log);
+    }
+
     @InternalUse
-    static Optional<Resource> tryConstruct(String type, String version, String urn) {
+    Optional<Resource> tryConstruct(String type, String version, String urn) {
+        this.log.excessive(
+                "Deserialize/ResourcePackages: searching for type=%s version=%s urn=%s",
+                type, version, urn
+        );
         var resourceType = tryGetResourceType(type, version);
         if (resourceType.isEmpty()) {
+            var message = String.format(
+                    "Deserialize/ResourcePackages: can't find a resource: '%s'; version=%s urn=%s",
+                    type, version, urn
+            );
+            this.log.debugOrExcessive(message, message + String.format(
+                    "; Available resources type names:\n %s",
+                    String.join("\n", ResourcePackages.resourceTypes.get().keySet())
+            ));
             return Optional.empty();
         }
 
         if (Reflection.isNestedClass(resourceType.get())) {
             throw new IllegalArgumentException(String.format(
-                    "tryConstruct(String, String, String) cannot be used with nested classes, make class '%s' static or standalone",
+                    "tryConstruct(String, String, String) cannot be used with nested classes, " +
+                            "make class '%s' static or standalone",
                     resourceType.get().getTypeName()
             ));
         }
@@ -165,24 +194,31 @@ public class ResourcePackages {
                                                 " with the following signature:" +
                                                 " `(String name, SomeResourceArgs args, CustomResourceOptions options)`" +
                                                 ", got: `%s`",
-                                        resourceType.get(), cause))
+                                        resourceType.get(), cause
+                                ))
                         ));
 
         constructorInfo.setAccessible(true);
 
+        this.log.excessive(
+                "Deserialize/ResourcePackages: constructing type=%s version=%s urn=%",
+                type, version, urn
+        );
         var resourceOptions = resolveResourceOptions(resourceType.get(), urn);
         try {
             var resource = (Resource) constructorInfo.newInstance(new Object[]{urnName, null, resourceOptions});
             return Optional.of(resource);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new IllegalArgumentException(String.format(
-                    "Couldn't instantiate the '%s' class using constructor: '%s', for resource type: '%s'",
+                    "Couldn't instantiate class '%s' using constructor: '%s', for resource type: '%s'",
                     resourceType.get().getTypeName(), constructorInfo, type
             ));
+        } finally {
+            constructorInfo.setAccessible(false);
         }
     }
 
-    private static ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
+    private ResourceOptions resolveResourceOptions(Class<?> resourceType, String urn) {
         if (CustomResource.class.isAssignableFrom(resourceType)) {
             return CustomResourceOptions.builder().urn(urn).build();
         }
@@ -193,8 +229,8 @@ public class ResourcePackages {
     }
 
     @InternalUse
-    static Optional<Class<Resource>> tryGetResourceType(String name, @Nullable String version) {
-        Objects.requireNonNull(name);
+    Optional<Class<Resource>> tryGetResourceType(String name, @Nullable String version) {
+        requireNonNull(name);
 
         var minimalVersion = !Strings.isNullOrEmpty(version)
                 ? SemanticVersion.parse(version) : SemanticVersion.of(0);
@@ -211,6 +247,4 @@ public class ResourcePackages {
                 .max(comparing(vt -> vt.t1)) // latest, filtered version
                 .map(vt -> vt.t2);
     }
-
-    // TODO
 }

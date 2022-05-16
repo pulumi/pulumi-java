@@ -43,7 +43,7 @@ public class MockMonitor implements Monitor {
     public MockMonitor(Mocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
         this.serializer = new Serializer(log);
-        this.deserializer = new Deserializer();
+        this.deserializer = new Deserializer(log);
         this.registeredResources = Collections.synchronizedMap(new HashMap<>());
         this.resources = Collections.synchronizedList(new LinkedList<>());
     }

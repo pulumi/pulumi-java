@@ -72,7 +72,7 @@ class ConverterTests {
     @SuppressWarnings("unused")
     @CheckReturnValue
     public static <T> T deserializeFromValue(Value value, Class<T> ignored) {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(log);
         //noinspection unchecked
         return (T) deserializer.deserialize(value).getValueNullable();
     }
@@ -121,7 +121,7 @@ class ConverterTests {
 
         @Test
         void testInvokeArgs() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var gson = new Gson();
 
             var args = new ComplexInvokeArgs1(new SimpleInvokeArgs1("value1"));
@@ -136,7 +136,7 @@ class ConverterTests {
 
         @Test
         void testResourceArgs() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var gson = new Gson();
             var args = new ComplexResourceArgs1(Output.of(new SimpleResourceArgs1(Output.of("value2"))));
 
@@ -160,7 +160,7 @@ class ConverterTests {
 
         @Test
         void testTrue() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
 
             var trueValue = Value.newBuilder().setBoolValue(true).build();
             var converter = new Converter(log, deserializer);
@@ -173,7 +173,7 @@ class ConverterTests {
 
         @Test
         void testFalse() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
 
             var falseValue = Value.newBuilder().setBoolValue(false).build();
             var converter = new Converter(log, deserializer);
@@ -186,7 +186,7 @@ class ConverterTests {
 
         @Test
         void testTrueSecret() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var secretValue = createSecretValue(Value.newBuilder().setBoolValue(true).build());
             var converter = new Converter(log, deserializer);
             var data = converter.convertValue(
@@ -199,7 +199,7 @@ class ConverterTests {
 
         @Test
         void testFalseSecret() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var secretValue = createSecretValue(Value.newBuilder().setBoolValue(false).build());
             var converter = new Converter(log, deserializer);
             var data = converter.convertValue(
@@ -212,7 +212,7 @@ class ConverterTests {
 
         @Test
         void testNonBooleanThrows() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var wrongValue = Value.newBuilder().setStringValue("").build();
             var converter = new Converter(log, deserializer);
             assertThatThrownBy(
@@ -228,7 +228,7 @@ class ConverterTests {
                     .setOptions(new TestOptions(true))
                     .setMockGlobalInstance();
 
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = converter.convertValue(
@@ -245,7 +245,7 @@ class ConverterTests {
                     .setOptions(new TestOptions(false))
                     .setMockGlobalInstance();
 
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = converter.convertValue(
@@ -257,7 +257,7 @@ class ConverterTests {
 
         @Test
         void testUnknownValueDeserializesCorrectly() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var unknownValue = Value.newBuilder().setStringValue(Constants.UnknownValue).build();
             var data = converter.convertValue(
@@ -269,7 +269,7 @@ class ConverterTests {
 
         @Test
         void testEmptyStringThrows() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var wrongValue = Value.newBuilder().setStringValue("").build();
             assertThatThrownBy(
@@ -281,7 +281,7 @@ class ConverterTests {
 
         @Test
         void testOptionalTrueWrapped() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var trueValue = Value.newBuilder().setBoolValue(true).build();
             var data = converter.convertValue(
@@ -293,7 +293,7 @@ class ConverterTests {
 
         @Test
         void testOptionalTrueUnwrapped() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var trueValue = Value.newBuilder().setBoolValue(true).build();
             var data = converter.convertValue(
@@ -305,7 +305,7 @@ class ConverterTests {
 
         @Test
         void testOptionalFalseWrapped() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var trueValue = Value.newBuilder().setBoolValue(false).build();
             var data = converter.convertValue(
@@ -317,7 +317,7 @@ class ConverterTests {
 
         @Test
         void testOptionalFalseUnwrapped() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var trueValue = Value.newBuilder().setBoolValue(false).build();
             var data = converter.convertValue(
@@ -329,7 +329,7 @@ class ConverterTests {
 
         @Test
         void testNullToOptionalEmpty() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = converter.convertValue(
@@ -341,7 +341,7 @@ class ConverterTests {
 
         @Test
         void testNullToNullUnwrapped() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = converter.convertValue(
@@ -358,7 +358,7 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerSize.class)
         void testCustomIntEnum(ContainerSize input) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             serializeToValueAsync(input)
                     .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerSize.class))
@@ -372,7 +372,7 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(JarSize.class)
         void testStandardIntEnum(JarSize input) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             serializeToValueAsync(input)
                     .thenApply(value -> converter.convertValue("EnumConverterTests", value, JarSize.class))
@@ -386,7 +386,7 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerColor.class)
         void testCustomStringEnum(ContainerColor input) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             serializeToValueAsync(input)
                     .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerColor.class))
@@ -400,7 +400,7 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerBrightness.class)
         void testCustomDoubleEnum(ContainerBrightness input) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             serializeToValueAsync(input)
                     .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerBrightness.class))
@@ -424,7 +424,7 @@ class ConverterTests {
         @ParameterizedTest
         @MethodSource("com.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesThrows")
         void testConvertingNonconvertibleValuesThrows(Class<?> targetType, Value value) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             assertThatThrownBy(() -> converter.convertValue("EnumConverterTests", value, targetType))
                     .isInstanceOf(UnsupportedOperationException.class)
@@ -437,7 +437,7 @@ class ConverterTests {
 
         @Test
         void testLeft() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var data = converter.convertValue(
                     "EitherConverterTests", Value.newBuilder().setNumberValue(1).build(), TypeShape.either(Integer.class, String.class));
@@ -449,7 +449,7 @@ class ConverterTests {
 
         @Test
         void testRight() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder().setStringValue("foo").build();
             var data = converter.convertValue(
@@ -466,7 +466,7 @@ class ConverterTests {
 
         @Test
         public void ignoreInternalProperty() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder().setStructValue(
                     Struct.newBuilder()
@@ -498,7 +498,7 @@ class ConverterTests {
         @ParameterizedTest
         @MethodSource("com.pulumi.serialization.internal.ConverterTests#testJsons")
         void testJsons(String json, String expected) {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var element = gson.fromJson(json, JsonElement.class);
             serializeToValueAsync(element)
@@ -516,7 +516,7 @@ class ConverterTests {
 
         @Test
         void testEmptyList() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             List<Boolean> emptyList = List.of();
             serializeToValueAsync(emptyList)
@@ -529,7 +529,7 @@ class ConverterTests {
 
         @Test
         void testListWithElement() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var listWithElement = List.of(true);
             serializeToValueAsync(listWithElement)
@@ -545,7 +545,7 @@ class ConverterTests {
 
         @Test
         void testSecretListWithElement() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var secretListWithElement = Output.ofSecret(List.of(true));
             serializeToValueAsync(secretListWithElement)
@@ -563,7 +563,7 @@ class ConverterTests {
 
         @Test
         void testListWithSecretElement() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var listWithSecretElement = List.of(Output.ofSecret(true));
             serializeToValueAsync(listWithSecretElement)
@@ -580,7 +580,7 @@ class ConverterTests {
 
         @Test
         void testListWithUnknownElement() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var listWithUnknownElement = List.of(OutputTests.unknown());
             serializeToValueAsync(listWithUnknownElement)
@@ -594,7 +594,7 @@ class ConverterTests {
 
         @Test
         void testStructWithUnknowns() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder().setStructValue(Struct.newBuilder()
                             .putFields("myString", Value.newBuilder().setStringValue("foo").build())
@@ -611,7 +611,7 @@ class ConverterTests {
 
         @Test
         void testSimpleCase() {
-            var deserializer = new Deserializer();
+            var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder()
                     .setStructValue(

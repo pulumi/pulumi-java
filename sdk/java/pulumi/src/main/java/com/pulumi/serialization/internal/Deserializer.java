@@ -3,6 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Value;
+import com.pulumi.Log;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;
 import com.pulumi.asset.AssetArchive;
@@ -43,8 +44,12 @@ import static java.util.Objects.requireNonNull;
  */
 public class Deserializer {
 
-    public Deserializer() {
-        // Empty
+    private final Log log;
+    private final ResourcePackages resourcePackages;
+
+    public Deserializer(Log log) {
+        this.log = requireNonNull(log);
+        this.resourcePackages = new ResourcePackages(log);
     }
 
     public OutputData<Object> deserialize(Value value) {
@@ -362,7 +367,7 @@ public class Deserializer {
         var qualifiedTypeParts = qualifiedType.split("\\$");
         var type = qualifiedTypeParts[qualifiedTypeParts.length - 1];
 
-        var resource = ResourcePackages.tryConstruct(type, version, urn);
+        var resource = this.resourcePackages.tryConstruct(type, version, urn);
         if (resource.isPresent()) {
             return resource;
         }
