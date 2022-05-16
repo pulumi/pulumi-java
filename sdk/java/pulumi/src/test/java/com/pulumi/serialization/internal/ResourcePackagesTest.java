@@ -2,6 +2,8 @@ package com.pulumi.serialization.internal;
 
 import com.pulumi.Log;
 import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
@@ -68,6 +70,15 @@ public class ResourcePackagesTest {
         );
     }
 
+    @Test
+    void HyphenedComponentResource() {
+        var resourcePackages = new ResourcePackages(Log.ignore());
+        resourcePackages.tryGetResourceType("test-hyphen:index/AComponentResource", "").ifPresentOrElse(
+                type -> assertThat(type).isEqualTo(AComponentResource.class),
+                () -> fail("Test resource not found")
+        );
+    }
+
     @SuppressWarnings("unused") // Accessed by reflection
     @ResourceType(type = "test:index/TestResource", version = "1.0.1-alpha1")
     private static class Version101TestResource extends CustomResource {
@@ -101,6 +112,13 @@ public class ResourcePackagesTest {
     @ResourceType(type = "test:index/UnrelatedResource", version = "1.0.3")
     private static class OtherResource extends CustomResource {
         public OtherResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
+            super(type, name, args, options);
+        }
+    }
+
+    @ResourceType(type = "test-hyphen:index/AComponentResource")
+    private static class AComponentResource extends ComponentResource {
+        public AComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options) {
             super(type, name, args, options);
         }
     }
