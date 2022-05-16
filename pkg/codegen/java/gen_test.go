@@ -3,7 +3,6 @@
 package java
 
 import (
-	"os"
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"

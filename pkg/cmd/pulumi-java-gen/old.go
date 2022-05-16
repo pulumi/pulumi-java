@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Old style main. The style of invocation wtih -config argument
+// Old style main. The style of invocation with -config argument
 // pointing to a YAML-encoded Config file will be phased out when all
 // provider builds move out of the pulumi/pulumi-java repo.
 
