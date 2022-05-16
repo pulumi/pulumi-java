@@ -135,7 +135,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
         this.serialization = new PropertiesSerializer(this.log);
-        this.deserializer = new Deserializer();
+        this.deserializer = new Deserializer(this.log);
         this.converter = new Converter(this.log, this.deserializer);
         this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);

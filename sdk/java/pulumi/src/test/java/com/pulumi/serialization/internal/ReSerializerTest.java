@@ -43,7 +43,7 @@ class ReSerializerTest {
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(mock.log);
         var serialized = new Serializer(mock.log)
                 .serializeAsync("ReSerializerTest", o, true);
 

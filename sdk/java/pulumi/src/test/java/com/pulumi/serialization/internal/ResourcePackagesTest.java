@@ -1,5 +1,6 @@
 package com.pulumi.serialization.internal;
 
+import com.pulumi.Log;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
@@ -15,23 +16,26 @@ public class ResourcePackagesTest {
 
     @Test
     void testUnknownNotFound() {
-        ResourcePackages.tryGetResourceType("test:index/UnknownResource", null).ifPresent(
+        var resourcePackages = new ResourcePackages(Log.ignore());
+
+        resourcePackages.tryGetResourceType("test:index/UnknownResource", null).ifPresent(
                 r -> fail("Unknown resource found: %s", r)
         );
-        ResourcePackages.tryGetResourceType("test:index/UnknownResource", "").ifPresent(
+        resourcePackages.tryGetResourceType("test:index/UnknownResource", "").ifPresent(
                 r -> fail("Unknown resource found: %s", r)
         );
-        ResourcePackages.tryGetResourceType("unknown:index/TestResource", "0.0.1").ifPresent(
+        resourcePackages.tryGetResourceType("unknown:index/TestResource", "0.0.1").ifPresent(
                 r -> fail("Unknown resource found: %s", r)
         );
-        ResourcePackages.tryGetResourceType("unknown:index/AnotherResource", "1.0.0").ifPresent(
+        resourcePackages.tryGetResourceType("unknown:index/AnotherResource", "1.0.0").ifPresent(
                 r -> fail("Resource with non-matching package version found: %s", r)
         );
     }
 
     @Test
     void NullReturnsHighestVersion() {
-        ResourcePackages.tryGetResourceType("test:index/TestResource", null).ifPresentOrElse(
+        var resourcePackages = new ResourcePackages(Log.ignore());
+        resourcePackages.tryGetResourceType("test:index/TestResource", null).ifPresentOrElse(
                 type -> assertThat(type).isEqualTo(Version202TestResource.class),
                 () -> fail("Test resource not found")
         );
@@ -39,7 +43,8 @@ public class ResourcePackagesTest {
 
     @Test
     void BlankReturnsHighestVersion() {
-        ResourcePackages.tryGetResourceType("test:index/TestResource", "").ifPresentOrElse(
+        var resourcePackages = new ResourcePackages(Log.ignore());
+        resourcePackages.tryGetResourceType("test:index/TestResource", "").ifPresentOrElse(
                 type -> assertThat(type).isEqualTo(Version202TestResource.class),
                 () -> fail("Test resource not found")
         );
@@ -47,7 +52,8 @@ public class ResourcePackagesTest {
 
     @Test
     void MajorVersionRespected() {
-        ResourcePackages.tryGetResourceType("test:index/TestResource", "1.0.0").ifPresentOrElse(
+        var resourcePackages = new ResourcePackages(Log.ignore());
+        resourcePackages.tryGetResourceType("test:index/TestResource", "1.0.0").ifPresentOrElse(
                 type -> assertThat(type).isEqualTo(Version102TestResource.class),
                 () -> fail("Test resource not found")
         );
@@ -55,12 +61,14 @@ public class ResourcePackagesTest {
 
     @Test
     void WildcardSelectedIfOthersDontMatch() {
-        ResourcePackages.tryGetResourceType("test:index/TestResource", "3.0.0").ifPresentOrElse(
+        var resourcePackages = new ResourcePackages(Log.ignore());
+        resourcePackages.tryGetResourceType("test:index/TestResource", "3.0.0").ifPresentOrElse(
                 type -> assertThat(type).isEqualTo(WildcardTestResource.class),
                 () -> fail("Test resource not found")
         );
     }
 
+    @SuppressWarnings("unused") // Accessed by reflection
     @ResourceType(type = "test:index/TestResource", version = "1.0.1-alpha1")
     private static class Version101TestResource extends CustomResource {
         public Version101TestResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {
@@ -89,6 +97,7 @@ public class ResourcePackagesTest {
         }
     }
 
+    @SuppressWarnings("unused") // Accessed by reflection
     @ResourceType(type = "test:index/UnrelatedResource", version = "1.0.3")
     private static class OtherResource extends CustomResource {
         public OtherResource(String type, String name, @Nullable ResourceArgs args, @Nullable CustomResourceOptions options) {

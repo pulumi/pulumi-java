@@ -65,7 +65,7 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType1() {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(log);
         var converter = new Converter(log, deserializer);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("s", "str")
@@ -117,7 +117,7 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType2() {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(log);
         var converter = new Converter(log, deserializer);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("c", ImmutableMap.<String, Object>builder()
@@ -221,7 +221,7 @@ class ComplexTypeConverterTest {
     void testUnexpectedNullableComplexType() {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testUnexpectedNullableComplexType");
         var inMemoryLog = DeploymentTests.mockLog(logger);
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(log);
         var converter = new Converter(inMemoryLog, deserializer);
 
         var map = new HashMap<String, Object>();
@@ -257,7 +257,7 @@ class ComplexTypeConverterTest {
     void testEscapedComplexType() {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEscapedComplexType");
         var inMemoryLog = DeploymentTests.mockLog(logger);
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(log);
         var converter = new Converter(inMemoryLog, deserializer);
 
         var map = new HashMap<String, Object>();
