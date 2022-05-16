@@ -9,6 +9,8 @@
 [#542](https://github.com/pulumi/pulumi-java/pull/542)
 - Fix #546: generated Java programs from PCL now also generate custom resource options
 [#558](https://github.com/pulumi/pulumi-java/pull/558)
+- Fix #547: Implement fully qualified imports for generated programs from PCL
+[#596](https://github.com/pulumi/pulumi-java/pull/596)
 
 - GitHub Actions: JDK 'adopt' -> 'temurin'
 
