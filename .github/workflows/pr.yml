@@ -152,6 +152,9 @@ jobs:
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Publish Pulumi Java SDK locally to enable codegen tests
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        env:
+          # Override to match gen_test.go
+          PULUMI_JAVA_SDK_VERSION: 0.0.1
         with:
           arguments: publishToMavenLocal
           build-root-directory: sdk/java
