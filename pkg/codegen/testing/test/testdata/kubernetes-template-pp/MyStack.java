@@ -1,9 +1,20 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.appsv1.Deployment;
+import com.pulumi.kubernetes.appsv1.DeploymentArgs;
+import com.pulumi.kubernetes.appsv1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.appsv1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.corev1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.corev1.inputs.PodSpecArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {

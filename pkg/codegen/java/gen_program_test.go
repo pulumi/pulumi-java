@@ -123,6 +123,10 @@ func TestAwsStaticWebsite(t *testing.T) {
 	compileSingleFile("aws-s3-folder.pp", t)
 }
 
+func TestAwsFargate(t *testing.T) {
+	compileSingleFile("aws-fargate.pp", t)
+}
+
 func TestAwsWebserver(t *testing.T) {
 	compileSingleFile("aws-webserver.pp", t)
 }

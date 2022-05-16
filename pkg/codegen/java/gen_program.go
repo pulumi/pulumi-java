@@ -229,15 +229,301 @@ func containConfigVariables(nodes []pcl.Node) bool {
 	return false
 }
 
-// genPreamble generates import statements, class definition and constructor.
+// Decides when to ignore a module in import definition
+func ignoreModule(module string) bool {
+	return module == "" || module == "index"
+}
+
+func sanitizeImport(name string) string {
+	charactersToRemove := []string{"-", "/"}
+	output := name
+	for _, character := range charactersToRemove {
+		output = strings.ReplaceAll(output, character, "")
+	}
+
+	return output
+}
+
+func pulumiImport(pkg string, module string, member string) string {
+	if ignoreModule(module) {
+		return "com.pulumi." + sanitizeImport(pkg) + "." + member
+	}
+	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
+}
+
+func pulumiInputImport(pkg string, module string, member string) string {
+	if ignoreModule(module) {
+		return "com.pulumi." + sanitizeImport(pkg) + ".inputs." + member
+	}
+	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + ".inputs." + member
+}
+
+// Recursively derives imports from object by using its property type and
+// any nested object property that it instantiates
+func collectObjectImports(object *model.ObjectConsExpression, objectType *schema.ObjectType) []string {
+	imports := make([]string, 0)
+	for _, property := range object.Items {
+		switch property.Value.(type) {
+		case *model.ObjectConsExpression:
+			innerObject := property.Value.(*model.ObjectConsExpression)
+			innerObjectKey := property.Key.(*model.LiteralValueExpression).Value.AsString()
+			objectProperty, found := objectType.Property(innerObjectKey)
+			if found {
+				objectPropertyType := codegen.UnwrapType(objectProperty.Type)
+				switch objectPropertyType.(type) {
+				case *schema.ObjectType:
+					innerObjectType := objectPropertyType.(*schema.ObjectType)
+					fullyQualifiedTypeName := innerObjectType.Token
+					nameParts := strings.Split(fullyQualifiedTypeName, ":")
+					objectTypeName := names.Title(nameParts[len(nameParts)-1])
+					pkg := nameParts[0]
+					module := sanitizeImport(nameParts[1])
+					if innerObjectType.IsInputShape() {
+						objectTypeName = objectTypeName + "Args"
+						imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+					} else {
+						imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+					}
+
+					// recurse into nested object
+					for _, importDef := range collectObjectImports(innerObject, innerObjectType) {
+						imports = append(imports, importDef)
+					}
+				}
+			}
+		}
+	}
+
+	return imports
+}
+
+func collectResourceImports(resource *pcl.Resource) []string {
+	imports := make([]string, 0)
+	pkg, module, name, _ := resource.DecomposeToken()
+	resourceImport := pulumiImport(pkg, module, name)
+	imports = append(imports, resourceImport)
+	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
+		// import args type name
+		argsTypeName := resourceArgsTypeName(resource)
+		resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
+		imports = append(imports, resourceArgsImport)
+		resourceProperties := typedResourceProperties(resource)
+		for _, inputProperty := range resource.Inputs {
+			inputType := resourceProperties[inputProperty.Name]
+			switch inputType.(type) {
+			case *schema.ObjectType:
+				objectType := inputType.(*schema.ObjectType)
+				switch inputProperty.Value.(type) {
+				case *model.ObjectConsExpression:
+					object := inputProperty.Value.(*model.ObjectConsExpression)
+					fullyQualifiedTypeName := objectType.Token
+					nameParts := strings.Split(fullyQualifiedTypeName, ":")
+					objectTypeName := names.Title(nameParts[len(nameParts)-1])
+					if objectType.IsInputShape() {
+						objectTypeName = objectTypeName + "Args"
+					}
+					imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+					for _, importDef := range collectObjectImports(object, objectType) {
+						imports = append(imports, importDef)
+					}
+				}
+			case *schema.ArrayType:
+				arrayType := inputType.(*schema.ArrayType)
+				innerArrayType := arrayType.ElementType
+				switch innerArrayType.(type) {
+				case *schema.ObjectType:
+					objectType := innerArrayType.(*schema.ObjectType)
+					switch inputProperty.Value.(type) {
+					case *model.TupleConsExpression:
+						objects := inputProperty.Value.(*model.TupleConsExpression)
+						for _, item := range objects.Expressions {
+							switch item.(type) {
+							case *model.ObjectConsExpression:
+								object := item.(*model.ObjectConsExpression)
+								fullyQualifiedTypeName := objectType.Token
+								nameParts := strings.Split(fullyQualifiedTypeName, ":")
+								objectTypeName := names.Title(nameParts[len(nameParts)-1])
+								if objectType.IsInputShape() {
+									objectTypeName = objectTypeName + "Args"
+								}
+								imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+								for _, importDef := range collectObjectImports(object, objectType) {
+									imports = append(imports, importDef)
+								}
+							}
+						}
+					case *model.ObjectConsExpression:
+						object := inputProperty.Value.(*model.ObjectConsExpression)
+						fullyQualifiedTypeName := objectType.Token
+						nameParts := strings.Split(fullyQualifiedTypeName, ":")
+						objectTypeName := names.Title(nameParts[len(nameParts)-1])
+						if objectType.IsInputShape() {
+							objectTypeName = objectTypeName + "Args"
+						}
+						imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+						for _, importDef := range collectObjectImports(object, objectType) {
+							imports = append(imports, importDef)
+						}
+					}
+				case *schema.InputType:
+					innerInputType := innerArrayType.(*schema.InputType)
+					switch innerInputType.ElementType.(type) {
+					case *schema.ObjectType:
+						objectType := innerInputType.ElementType.(*schema.ObjectType)
+						switch inputProperty.Value.(type) {
+						case *model.TupleConsExpression:
+							objects := inputProperty.Value.(*model.TupleConsExpression)
+							for _, item := range objects.Expressions {
+								switch item.(type) {
+								case *model.ObjectConsExpression:
+									object := item.(*model.ObjectConsExpression)
+									fullyQualifiedTypeName := objectType.Token
+									nameParts := strings.Split(fullyQualifiedTypeName, ":")
+									objectTypeName := names.Title(nameParts[len(nameParts)-1])
+									if objectType.IsInputShape() {
+										objectTypeName = objectTypeName + "Args"
+									}
+									imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+									for _, importDef := range collectObjectImports(object, objectType) {
+										imports = append(imports, importDef)
+									}
+								}
+							}
+						case *model.ObjectConsExpression:
+							object := inputProperty.Value.(*model.ObjectConsExpression)
+							fullyQualifiedTypeName := objectType.Token
+							nameParts := strings.Split(fullyQualifiedTypeName, ":")
+							objectTypeName := names.Title(nameParts[len(nameParts)-1])
+							if objectType.IsInputShape() {
+								objectTypeName = objectTypeName + "Args"
+							}
+							imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+							for _, importDef := range collectObjectImports(object, objectType) {
+								imports = append(imports, importDef)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return imports
+}
+
+func (g *generator) functionImportDef(tokenArg model.Expression) (string, string) {
+	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
+	tokenRange := tokenArg.SyntaxNode().Range()
+
+	// Compute the resource type from the Pulumi type token.
+	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
+	pkg = sanitizeImport(pkg)
+	module = sanitizeImport(module)
+	if module == "index" || module == "" {
+		importDef := "com.pulumi." + pkg + "." + names.Title(pkg) + "Functions"
+		return importDef, member
+	}
+
+	return pulumiImport(pkg, module, names.Title(module)+"Functions"), member
+}
+
+func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallExpression) []string {
+	imports := make([]string, 0)
+	switch functionCall.Name {
+	case pcl.Invoke:
+		fullyQualifiedFunctionImport, funcName := g.functionImportDef(functionCall.Args[0])
+		imports = append(imports, fullyQualifiedFunctionImport)
+		functionSchema, foundFunction := g.findFunctionSchema(funcName)
+		if foundFunction {
+			invokeArgumentsExpr := functionCall.Args[1]
+			switch invokeArgumentsExpr.(type) {
+			case *model.ObjectConsExpression:
+				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				argumentExprType := functionSchema.Inputs.InputShape
+				fullyQualifiedTypeName := argumentExprType.Token
+				nameParts := strings.Split(fullyQualifiedTypeName, ":")
+				objectTypeName := names.Title(nameParts[len(nameParts)-1])
+				pkg := nameParts[0]
+				// remove the function name from the module import name
+				module := strings.ReplaceAll(sanitizeImport(nameParts[1]), funcName, "")
+				if !strings.HasSuffix(objectTypeName, "Args") {
+					objectTypeName = objectTypeName + "Args"
+				}
+				if argumentExprType.IsInputShape() {
+					imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+				} else {
+					imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+				}
+				for _, importDef := range collectObjectImports(argumentsExpr, functionSchema.Inputs.InputShape) {
+					imports = append(imports, importDef)
+				}
+			}
+		}
+	}
+
+	return imports
+}
+
+// Removes duplicate strings. Useful when collecting a distinct set of imports
+func removeDuplicates(inputs []string) []string {
+	distinctInputs := make([]string, 0)
+	seenTexts := make(map[string]bool)
+	for _, input := range inputs {
+		if _, seen := seenTexts[input]; !seen {
+			seenTexts[input] = true
+			distinctInputs = append(distinctInputs, input)
+		}
+	}
+
+	return distinctInputs
+}
+
+// Collects fully qualified imports from resource or variable definitions.
+// It recursively searches for imports from nested object definitions used in resource
+// configuration or used in function calls
+func (g *generator) collectImports(nodes []pcl.Node) []string {
+	imports := make([]string, 0)
+	for _, node := range nodes {
+		switch node.(type) {
+		case *pcl.Resource:
+			// collect resource imports
+			resource := node.(*pcl.Resource)
+			for _, importDef := range collectResourceImports(resource) {
+				imports = append(imports, importDef)
+			}
+		case *pcl.LocalVariable:
+			localVariable := node.(*pcl.LocalVariable)
+			switch localVariable.Definition.Value.(type) {
+			case *model.FunctionCallExpression:
+				// collect function invoke imports
+				// traverse the args and inner objects recursively
+				functionCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
+				_, isInvokeCall := g.isFunctionInvoke(localVariable)
+				if isInvokeCall {
+					for _, importDef := range g.collectFunctionCallImports(functionCall) {
+						imports = append(imports, importDef)
+					}
+				}
+			}
+		}
+	}
+
+	return removeDuplicates(imports)
+}
+
+// genPreamble generates import statements, main class and stack definition.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.Fgen(w, "package generated_program;")
 	g.genNewline(w)
 	g.genNewline(w)
-	g.genImport(w, "java.util.*")
-	g.genImport(w, "java.io.*")
-	g.genImport(w, "java.nio.*")
-	g.genImport(w, "com.pulumi.*")
+	g.genImport(w, "com.pulumi.Context")
+	g.genImport(w, "com.pulumi.Pulumi")
+	g.genImport(w, "com.pulumi.core.Output")
+	// Write out the specific imports from used nodes
+	for _, importDef := range g.collectImports(nodes) {
+		g.genImport(w, importDef)
+	}
+
 	if containsFunctionCall("toJSON", nodes) {
 		// import static functions from the Serialization class
 		g.Fgen(w, "import static com.pulumi.codegen.internal.Serialization.*;\n")
@@ -245,7 +531,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 
 	if containsRangeExpr(nodes) {
 		// import the KeyedValue<T> class
-		g.Fgen(w, "import com.pulumi.codegen.internal.KeyedValue;\n")
+		g.genImport(w, "com.pulumi.codegen.internal.KeyedValue")
 	}
 
 	if requiresImportingCustomResourceOptions(nodes) {
@@ -253,8 +539,23 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	}
 
 	if containsFunctionCall("readDir", nodes) {
-		g.Fgen(w, "import static com.pulumi.codegen.internal.Files.readDir;\n")
+		g.genImport(w, "static com.pulumi.codegen.internal.Files.readDir")
 	}
+
+	if containsFunctionCall("fileAsset", nodes) {
+		g.genImport(w, "com.pulumi.asset.FileAsset")
+	}
+
+	if containsFunctionCall("fileArchive", nodes) {
+		g.genImport(w, "com.pulumi.asset.FileArchive")
+	}
+
+	g.genImport(w, "java.util.List")
+	g.genImport(w, "java.util.ArrayList")
+	g.genImport(w, "java.util.Map")
+	g.genImport(w, "java.io.File")
+	g.genImport(w, "java.nio.file.Files")
+	g.genImport(w, "java.nio.file.Paths")
 
 	g.genNewline(w)
 	// Emit Stack class signature
@@ -418,21 +719,26 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 	})
 }
 
+func typedResourceProperties(resource *pcl.Resource) map[string]schema.Type {
+	resourceProperties := map[string]schema.Type{}
+	resourceSchema := resource.Schema
+	if resourceSchema != nil && resourceSchema.InputProperties != nil {
+		for _, property := range resourceSchema.InputProperties {
+			if property != nil && property.Type != nil {
+				resourceProperties[property.Name] = codegen.UnwrapType(property.Type)
+			}
+		}
+	}
+
+	return resourceProperties
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
 	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
-		resourceProperties := map[string]schema.Type{}
-		resourceSchema := resource.Schema
-		if resourceSchema != nil && resourceSchema.InputProperties != nil {
-			for _, property := range resourceSchema.InputProperties {
-				if property != nil && property.Type != nil {
-					resourceProperties[property.Name] = codegen.UnwrapType(property.Type)
-				}
-			}
-		}
-
+		resourceProperties := typedResourceProperties(resource)
 		if len(resource.Inputs) == 0 && !hasCustomResourceOptions(resource) {
 			g.Fgenf(w, "new %s(%s)", resourceTypeName, resName)
 		} else if len(resource.Inputs) == 0 && hasCustomResourceOptions(resource) {
@@ -499,7 +805,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
 								g.genIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())
-								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
+								g.Fgenf(w, "%s.applyValue(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
 									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
 									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s()) {\n", g.Indent, resultTypeName, part)
