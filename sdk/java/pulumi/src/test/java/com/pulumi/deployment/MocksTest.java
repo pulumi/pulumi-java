@@ -1,6 +1,7 @@
 package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
+import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
@@ -51,7 +52,7 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsync(MyStack::init).join();
 
         var instance = resources.stream()
                 .filter(r -> r instanceof Instance)
@@ -86,7 +87,7 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsync(MyStack::init).join();
 
         var myCustom = resources.stream()
                 .filter(r -> r instanceof MyCustom)
@@ -109,15 +110,9 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-
-        var stack = resources.stream()
-                .filter(r -> r instanceof MyStack)
-                .map(r -> (MyStack) r)
-                .findFirst();
-        assertThat(stack).isPresent();
-
-        var ip = OutputTests.waitFor(stack.get().publicIp).getValueNullable();
+        var result = mock.tryTestAsync(MyStack::init).join();
+        var stack = MyStack.of(result);
+        var ip = OutputTests.waitFor(stack.publicIp).getValueNullable();
         assertThat(ip).isEqualTo("203.0.113.12");
     }
 
@@ -179,7 +174,7 @@ public class MocksTest {
                 .setStandardLogger(log)
                 .setSpyGlobalInstance();
 
-        var result = mock.tryTestAsync(MyStack::new).join();
+        var result = mock.tryTestAsync(MyStack::init).join();
         var resources = result.resources;
         assertThat(resources).isNotEmpty();
 
@@ -188,13 +183,8 @@ public class MocksTest {
         assertThat(exceptions.stream().map(Throwable::getMessage).collect(Collectors.toList()))
                 .haveAtLeastOne(containsString("Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."));
 
-        var stack = resources.stream()
-                .filter(r -> r instanceof MyStack)
-                .map(r -> (MyStack) r)
-                .findFirst();
-        assertThat(stack).isPresent();
-
-        var ipFuture = Internal.of(stack.get().publicIp).getDataAsync();
+        var stack = MyStack.of(result);
+        var ipFuture = Internal.of(stack.publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
 
         // Wait for all exceptions to propagate. If we do not, these exceptions contaminate the next test.
@@ -262,15 +252,22 @@ public class MocksTest {
         }
     }
 
-    public static class MyStack extends Stack {
-        @Export(type = String.class)
+    public static class MyStack {
         public final Output<String> publicIp;
 
-        public MyStack() {
+        public MyStack(Output<String> publicIp) {
+            this.publicIp = publicIp;
+        }
+
+        public static void init(Context ctx) {
             var myInstance = new Instance("instance", new InstanceArgs(), null);
             //noinspection unused
             var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
-            this.publicIp = myInstance.publicIp;
+            ctx.export("publicIp", myInstance.publicIp);
+        }
+
+        public static MyStack of(DeploymentTests.DeploymentMock.TestAsyncResult result) {
+            return new MyStack(result.getStackOutput("publicIp"));
         }
     }
 

@@ -1,5 +1,6 @@
 package com.pulumi.deployment;
 
+import com.pulumi.Context;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
@@ -40,14 +41,14 @@ public class DeploymentExceptionTest {
     void testUrnFutureDoesNotHangOnException() {
         mock.standardLogger.setLevel(Level.OFF);
 
-        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::new).join())
+        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::init).join())
                 .getRootCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining(DeliberateException.class.getName());
     }
 
-    public static class MyIncorrectStack extends Stack {
-        public MyIncorrectStack() {
+    public static class MyIncorrectStack {
+        public static void init(Context ctx) {
             var instance = new MocksTest.Instance("i1", null, null);
             var out = instance.getUrn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();

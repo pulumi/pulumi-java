@@ -1,5 +1,6 @@
 package com.pulumi.deployment;
 
+import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
@@ -34,7 +35,7 @@ public class DeploymentRunnerTest {
             .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
-        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack::new).join();
+        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack::init).join();
 
         assertThat(mock.runner.getSwallowedExceptions()).hasSize(2);
 
@@ -46,19 +47,26 @@ public class DeploymentRunnerTest {
         assertThat(result.resources).isNotNull();
         assertThat(result.resources).isNotEmpty();
         assertThat(result.resources).hasSize(1);
-        var stack = (TerminatesEarlyOnExceptionStack) result.resources.get(0);
+        var stack = TerminatesEarlyOnExceptionStack.of(result);
         assertThat(Internal.of(stack.slowOutput).getDataAsync()).isNotCompleted();
         assertThat(Internal.of(stack.slowOutput).getValueNullable()).isNotCompleted();
     }
 
-    public static class TerminatesEarlyOnExceptionStack extends Stack {
-        @Export(type = Integer.class)
+    public static class TerminatesEarlyOnExceptionStack {
         public final Output<Integer> slowOutput;
 
-        public TerminatesEarlyOnExceptionStack() {
+        public TerminatesEarlyOnExceptionStack(Output<Integer> slowOutput) {
+            this.slowOutput = slowOutput;
+        }
+
+        public static void init(Context ctx) {
             Output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
-            this.slowOutput = Output.of(new CompletableFuture<Integer>()
-                    .completeOnTimeout(1, 60, TimeUnit.SECONDS));
+            ctx.export("slowOutput",Output.of(new CompletableFuture<Integer>()
+                    .completeOnTimeout(1, 60, TimeUnit.SECONDS)));
+        }
+
+        public static TerminatesEarlyOnExceptionStack of(DeploymentTests.DeploymentMock.TestAsyncResult result) {
+            return new TerminatesEarlyOnExceptionStack(result.getStackOutput("slowOutput"));
         }
     }
 

@@ -1,6 +1,7 @@
 package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
+import com.pulumi.Context;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
@@ -40,7 +41,7 @@ public class ResourceTest {
 
     @Test
     void testProviderPropagation() {
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsync(MyStack::init).join();
 
         var resource = resources.stream()
                 .filter(r -> r.getResourceName().equals("testResource"))
@@ -56,8 +57,8 @@ public class ResourceTest {
         assertThat(provider.get().getResourceType()).isEqualTo("pulumi:providers:test");
     }
 
-    public static class MyStack extends Stack {
-        public MyStack() {
+    public static class MyStack {
+        public static void init(Context ctx) {
             var mod = "test";
             var provider = new ProviderResource(
                     mod, "testProvider", ResourceArgs.Empty, CustomResourceOptions.Empty
