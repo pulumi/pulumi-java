@@ -419,7 +419,7 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
 	pkg = sanitizeImport(pkg)
 	module = sanitizeImport(module)
-	if module == "index" || module == "" {
+	if ignoreModule(module) {
 		importDef := "com.pulumi." + pkg + "." + names.Title(pkg) + "Functions"
 		return importDef, member
 	}
