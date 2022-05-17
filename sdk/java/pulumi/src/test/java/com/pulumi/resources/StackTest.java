@@ -1,5 +1,6 @@
 package com.pulumi.resources;
 
+import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
@@ -7,6 +8,7 @@ import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.exceptions.RunException;
 import org.junit.jupiter.api.AfterEach;
@@ -14,6 +16,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
@@ -22,27 +26,29 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 class StackTest {
 
-    private static class ValidStack extends Stack {
+    private static class ValidStack {
+        public final Output<String> implicitName;
+        public final Output<String> explicitName;
 
-        @Export(name = "foo", type = String.class)
-        private final Output<String> explicitName;
+        public ValidStack(DeploymentTests.DeploymentMock.TestAsyncResult result) {
+            this.implicitName = result.getStackOutput("implicitName");
+            this.explicitName = result.getStackOutput("explicitName");
+        }
 
-        @Export(type = String.class)
-        private final Output<String> implicitName;
-
-        public ValidStack() {
-            this.explicitName = Output.of("bar");
-            this.implicitName = Output.of("buzz");
+        public static void init(Context ctx) {
+            ctx.export("explicitName", Output.of("bar"));
+            ctx.export("implicitName", Output.of("buzz"));
         }
     }
 
     @Test
     void testValidStackInstantiationSucceeds() {
-        var result = run(ValidStack::new);
+        var result = run(ValidStack::init, ValidStack::new);
         assertThat(result.t2).hasSize(3);
         assertThat(result.t2).containsKey("foo");
         assertThat(
@@ -59,52 +65,62 @@ class StackTest {
         );
     }
 
-    private static class NullOutputStack extends Stack {
-        @SuppressWarnings("unused")
-        @Export(name = "foo", type = String.class)
-        public Output<String> foo = null;
+    private static class NullOutputStack {
+        private final Output<String> foo;
+
+        public NullOutputStack(DeploymentTests.DeploymentMock.TestAsyncResult result) {
+            this.foo = result.getStackOutput("foo");
+        }
+
+        public static void init(Context ctx) {
+            Output<String> foo = null;
+            ctx.export("foo", foo);
+        }
     }
 
     @Test
     void testStackWithNullOutputsThrows() {
-        assertThatThrownBy(() -> run(NullOutputStack::new))
+        assertThatThrownBy(() -> run(NullOutputStack::init, NullOutputStack::new))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output(s) 'foo' have no value assigned");
     }
 
-    private static class InvalidOutputTypeStack extends Stack {
-        @Export(name = "foo", type = String.class)
-        public String foo;
+    private static class InvalidOutputTypeStack  {
+        public final Output<String> foo;
 
-        public InvalidOutputTypeStack() {
-            this.foo = "bar";
+        public InvalidOutputTypeStack(DeploymentTests.DeploymentMock.TestAsyncResult result) {
+            this.foo = result.getStackOutput("foo");
+        }
+
+        public static void init(Context ctx) {
+            ctx.export("foo", Output.of("bar"));
         }
     }
 
     @Test
     void testStackWithInvalidOutputTypeThrows() {
-        assertThatThrownBy(() -> run(InvalidOutputTypeStack::new))
+        assertThatThrownBy(() -> run(InvalidOutputTypeStack::init, InvalidOutputTypeStack::new))
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining("Output field(s) 'foo' have incorrect type");
     }
 
-    private <T extends Stack> Tuple2<T, Map<String, Output<?>>> run(Supplier<T> factory) {
+    private <T> Tuple2<T, Map<String, Output<?>>> run(
+            Consumer<Context> factory,
+            Function<DeploymentTests.DeploymentMock.TestAsyncResult, T> parseResult) {
         var mock = DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
                 .setOptions(new TestOptions("TestProject", "TestStack"))
                 .setSpyGlobalInstance();
 
-        var stack = factory.get();
-        Internal.from(stack).registerPropertyOutputs();
-
+        var result = mock.tryTestAsync(factory).join();
         //noinspection unchecked
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
-        // TODO: is this OK that we're called twice?
-        verify(mock.deployment, atLeastOnce()).registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
+        verify(mock.deployment, times(1))
+                .registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
 
         var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
-        return Tuples.of(stack, values);
+        return Tuples.of(parseResult.apply(result), values);
     }
 
     @AfterEach
