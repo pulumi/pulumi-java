@@ -177,7 +177,10 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	args := host.exec.pluginArgs
 	output, err := host.runJavaCommand(ctx, cmd, args)
 	if err != nil {
-		return nil, errors.Wrapf(err, "language host could not run plugin discovery command successfully")
+		// Plugin determination is an advisory feature so it doe not need to escalate to an error.
+		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
+			"returning empty plugins; cause: %s", err)
+		return []plugin.PulumiPluginJSON{}, nil
 	}
 
 	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
@@ -188,7 +191,10 @@ func (host *javaLanguageHost) determinePulumiPackages(
 		if e, ok := err.(*json.SyntaxError); ok {
 			logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
 		}
-		return nil, errors.Wrapf(err, "language host could not unmarshall plugin package information")
+		// Plugin determination is an advisory feature so it doe not need to escalate to an error.
+		logging.V(3).Infof("language host could not unmarshall plugin package information, "+
+			"returning empty plugins; cause: %s", err)
+		return []plugin.PulumiPluginJSON{}, nil
 	}
 
 	return plugins, nil
