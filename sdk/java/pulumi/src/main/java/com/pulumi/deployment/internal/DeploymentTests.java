@@ -19,7 +19,6 @@ import org.mockito.Mockito;
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.logging.Level;
@@ -104,8 +103,7 @@ public class DeploymentTests {
                     ));
         }
 
-        public CompletableFuture<TestAsyncResult> runAsync(
-                Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
+        public CompletableFuture<TestAsyncResult> tryTestAsync(Consumer<Context> stackFactory) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
@@ -114,22 +112,16 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            var helper = new OutputsCaptureHelper(callback);
-            return this.runner.runAsyncFuture(helper::run)
-                    .thenApply(ignore -> new TestAsyncResult(
+            var context = new TestContext();
+            return this.runner.runAsyncFuture(() -> {
+                        stackFactory.accept(context);
+                        return CompletableFuture.completedFuture(context.getStackOutputs());
+                    }).thenApply(ignore -> new TestAsyncResult(
                             ImmutableList.copyOf(mockMonitor.resources),
                             mockEngine.getErrors().stream()
                                     .map(RunException::new)
                                     .collect(toImmutableList()),
-                            helper.getOutputs()));
-        }
-
-        public CompletableFuture<TestAsyncResult> tryTestAsync(Consumer<Context> stackFactory) {
-            return this.runAsync(() -> {
-                var context = new TestContext();
-                stackFactory.accept(context);
-                return CompletableFuture.completedFuture(context.getStackOutputs());
-            });
+                            context.getStackOutputs()));
         }
 
         public CompletableFuture<ImmutableList<Resource>> testAsync(Consumer<Context> stackFactory) {
@@ -382,28 +374,5 @@ public class DeploymentTests {
 
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
         return new Log(new DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
-    }
-
-    private static final class OutputsCaptureHelper {
-        private final static Map<String, Output<?>> emptyOutputs = Map.of();
-
-        private final Supplier<CompletableFuture<Map<String, Output<?>>>> callback;
-
-        private final AtomicReference<CompletableFuture<Map<String, Output<?>>>> ref =
-                new AtomicReference<>(CompletableFuture.completedFuture(emptyOutputs));
-
-        public OutputsCaptureHelper(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            this.callback = callback;
-        }
-
-        public CompletableFuture<Map<String, Output<?>>> run() {
-            var future= callback.get();
-            this.ref.set(future);
-            return future;
-        }
-
-        public Map<String, Output<?>> getOutputs() {
-            return this.ref.get().handle((result, err) -> err == null ? result : emptyOutputs).join();
-        }
     }
 }
