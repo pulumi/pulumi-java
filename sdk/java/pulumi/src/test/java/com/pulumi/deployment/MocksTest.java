@@ -1,7 +1,9 @@
 package com.pulumi.deployment;
 
+import com.google.common.base.Functions;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
+import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
@@ -126,18 +128,21 @@ public class MocksTest {
 
         mock.standardLogger.setLevel(Level.OFF);
 
-        var result = mock.runAsync(
-                () -> mock.deployment.invokeAsync(
-                        "aws:iam/getRole:getRole",
-                        of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
-                ).thenApply(__ -> {
-                    var myInstance = new Instance("instance", new InstanceArgs(), null);
+        var result = mock.tryTestAsync(ctx -> {
+            var invokeResult = mock.deployment.invokeAsync(
+                    "aws:iam/getRole:getRole",
+                    of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole"));
 
-                    return ImmutableMap.<String, Output<?>>builder()
-                            .put("result", Output.of("x"))
-                            .put("instance", Output.of(myInstance.publicIp))
-                            .build();
-                })).join();
+            var publicIp = Output.of(invokeResult.thenApply(__ -> {
+                var myInstance = new Instance("instance", new InstanceArgs(),
+                        CustomResourceOptions.builder()
+                                .build());
+                return myInstance.publicIp;
+            })).apply(Functions.identity());
+
+            ctx.export("result", Output.of("x"));
+            ctx.export("instance", publicIp);
+        }).join();
 
         var resources = result.resources;
         var exceptions = result.exceptions;
