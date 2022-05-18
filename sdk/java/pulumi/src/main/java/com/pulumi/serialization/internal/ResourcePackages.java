@@ -8,6 +8,7 @@ import com.google.common.reflect.ClassPath;
 import com.google.common.reflect.ClassPath.ClassInfo;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
+import com.pulumi.core.Urn;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.Optionals;
@@ -195,9 +196,8 @@ public class ResourcePackages {
             ));
         }
 
-        // TODO: good candidate for an utility function in the Urn class, or a proper class
-        var urnParts = urn.split("::");
-        var urnName = urnParts[3];
+        var urnParsed = Urn.parse(urn);
+        var urnName = urnParsed.name;
 
         // Looking for a constructor with the following signature:
         //
