@@ -229,22 +229,38 @@ func containConfigVariables(nodes []pcl.Node) bool {
 	return false
 }
 
+func cleanModule(module string) string {
+	if strings.Contains(module, "/") {
+		// if it is a function module
+		// e.g. index/getAvailabilityZones
+		moduleParts := strings.Split(module, "/")
+		// unless it is just a version e.g. core/v1
+		// then return it as is
+		if len(moduleParts) == 2 && strings.HasPrefix(moduleParts[1], "v") {
+			return module
+		}
+		return moduleParts[0]
+	}
+
+	return module
+}
+
 // Decides when to ignore a module in import definition
 func ignoreModule(module string) bool {
 	return module == "" || module == "index"
 }
 
+// Removes dashes and replaces slash with underscore
 func sanitizeImport(name string) string {
-	charactersToRemove := []string{"-", "/"}
-	output := name
-	for _, character := range charactersToRemove {
-		output = strings.ReplaceAll(output, character, "")
-	}
-
-	return output
+	// e.g. azure-native becomes azurenative
+	withoutDash := strings.ReplaceAll(name, "-", "")
+	// e.g. kubernetes.core/v1 becomes kubernetes.core_v1
+	replacedSlash := strings.ReplaceAll(withoutDash, "/", "_")
+	return replacedSlash
 }
 
 func pulumiImport(pkg string, module string, member string) string {
+	module = cleanModule(module)
 	if ignoreModule(module) {
 		return "com.pulumi." + sanitizeImport(pkg) + "." + member
 	}
@@ -252,6 +268,7 @@ func pulumiImport(pkg string, module string, member string) string {
 }
 
 func pulumiInputImport(pkg string, module string, member string) string {
+	module = cleanModule(module)
 	if ignoreModule(module) {
 		return "com.pulumi." + sanitizeImport(pkg) + ".inputs." + member
 	}
@@ -262,6 +279,24 @@ func pulumiInputImport(pkg string, module string, member string) string {
 // any nested object property that it instantiates
 func collectObjectImports(object *model.ObjectConsExpression, objectType *schema.ObjectType) []string {
 	imports := make([]string, 0)
+	// add imports of the type itself
+	fullyQualifiedTypeName := objectType.Token
+	nameParts := strings.Split(fullyQualifiedTypeName, ":")
+	objectTypeName := names.Title(nameParts[len(nameParts)-1])
+	pkg := nameParts[0]
+	module := nameParts[1]
+	if objectType.IsInputShape() {
+		if !strings.HasSuffix(objectTypeName, "Args") {
+			objectTypeName = objectTypeName + "Args"
+		}
+
+		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+	} else {
+		imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+	}
+
+	// then check whether one of the properties of this object is an object too
+	// in which case, we call this function recursively
 	for _, property := range object.Items {
 		switch property.Value.(type) {
 		case *model.ObjectConsExpression:
@@ -273,18 +308,6 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 				switch objectPropertyType.(type) {
 				case *schema.ObjectType:
 					innerObjectType := objectPropertyType.(*schema.ObjectType)
-					fullyQualifiedTypeName := innerObjectType.Token
-					nameParts := strings.Split(fullyQualifiedTypeName, ":")
-					objectTypeName := names.Title(nameParts[len(nameParts)-1])
-					pkg := nameParts[0]
-					module := sanitizeImport(nameParts[1])
-					if innerObjectType.IsInputShape() {
-						objectTypeName = objectTypeName + "Args"
-						imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-					} else {
-						imports = append(imports, pulumiImport(pkg, module, objectTypeName))
-					}
-
 					// recurse into nested object
 					for _, importDef := range collectObjectImports(innerObject, innerObjectType) {
 						imports = append(imports, importDef)
@@ -295,6 +318,19 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	}
 
 	return imports
+}
+
+// reduces Array<Input<T>> to just Array<T>
+func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
+	elementType := arrayType.ElementType
+	switch elementType.(type) {
+	case *schema.InputType:
+		inputType := elementType.(*schema.InputType)
+		return &schema.ArrayType{ElementType: inputType.ElementType}
+	default:
+		// return as-is
+		return arrayType
+	}
 }
 
 func collectResourceImports(resource *pcl.Resource) []string {
@@ -316,90 +352,29 @@ func collectResourceImports(resource *pcl.Resource) []string {
 				switch inputProperty.Value.(type) {
 				case *model.ObjectConsExpression:
 					object := inputProperty.Value.(*model.ObjectConsExpression)
-					fullyQualifiedTypeName := objectType.Token
-					nameParts := strings.Split(fullyQualifiedTypeName, ":")
-					objectTypeName := names.Title(nameParts[len(nameParts)-1])
-					if objectType.IsInputShape() {
-						objectTypeName = objectTypeName + "Args"
-					}
-					imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
 					for _, importDef := range collectObjectImports(object, objectType) {
 						imports = append(imports, importDef)
 					}
 				}
 			case *schema.ArrayType:
-				arrayType := inputType.(*schema.ArrayType)
+				arrayType := reduceInputTypeFromArray(inputType.(*schema.ArrayType))
 				innerArrayType := arrayType.ElementType
 				switch innerArrayType.(type) {
 				case *schema.ObjectType:
-					objectType := innerArrayType.(*schema.ObjectType)
+					// found an Array<ElementType> type where ElementType is Object
+					// loop through each element of the array
+					// assume each element is of ElementType
+					arrayInnerTypeAsObject := innerArrayType.(*schema.ObjectType)
 					switch inputProperty.Value.(type) {
 					case *model.TupleConsExpression:
 						objects := inputProperty.Value.(*model.TupleConsExpression)
-						for _, item := range objects.Expressions {
-							switch item.(type) {
+						for _, arrayObject := range objects.Expressions {
+							switch arrayObject.(type) {
 							case *model.ObjectConsExpression:
-								object := item.(*model.ObjectConsExpression)
-								fullyQualifiedTypeName := objectType.Token
-								nameParts := strings.Split(fullyQualifiedTypeName, ":")
-								objectTypeName := names.Title(nameParts[len(nameParts)-1])
-								if objectType.IsInputShape() {
-									objectTypeName = objectTypeName + "Args"
-								}
-								imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-								for _, importDef := range collectObjectImports(object, objectType) {
+								object := arrayObject.(*model.ObjectConsExpression)
+								for _, importDef := range collectObjectImports(object, arrayInnerTypeAsObject) {
 									imports = append(imports, importDef)
 								}
-							}
-						}
-					case *model.ObjectConsExpression:
-						object := inputProperty.Value.(*model.ObjectConsExpression)
-						fullyQualifiedTypeName := objectType.Token
-						nameParts := strings.Split(fullyQualifiedTypeName, ":")
-						objectTypeName := names.Title(nameParts[len(nameParts)-1])
-						if objectType.IsInputShape() {
-							objectTypeName = objectTypeName + "Args"
-						}
-						imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-						for _, importDef := range collectObjectImports(object, objectType) {
-							imports = append(imports, importDef)
-						}
-					}
-				case *schema.InputType:
-					innerInputType := innerArrayType.(*schema.InputType)
-					switch innerInputType.ElementType.(type) {
-					case *schema.ObjectType:
-						objectType := innerInputType.ElementType.(*schema.ObjectType)
-						switch inputProperty.Value.(type) {
-						case *model.TupleConsExpression:
-							objects := inputProperty.Value.(*model.TupleConsExpression)
-							for _, item := range objects.Expressions {
-								switch item.(type) {
-								case *model.ObjectConsExpression:
-									object := item.(*model.ObjectConsExpression)
-									fullyQualifiedTypeName := objectType.Token
-									nameParts := strings.Split(fullyQualifiedTypeName, ":")
-									objectTypeName := names.Title(nameParts[len(nameParts)-1])
-									if objectType.IsInputShape() {
-										objectTypeName = objectTypeName + "Args"
-									}
-									imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-									for _, importDef := range collectObjectImports(object, objectType) {
-										imports = append(imports, importDef)
-									}
-								}
-							}
-						case *model.ObjectConsExpression:
-							object := inputProperty.Value.(*model.ObjectConsExpression)
-							fullyQualifiedTypeName := objectType.Token
-							nameParts := strings.Split(fullyQualifiedTypeName, ":")
-							objectTypeName := names.Title(nameParts[len(nameParts)-1])
-							if objectType.IsInputShape() {
-								objectTypeName = objectTypeName + "Args"
-							}
-							imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-							for _, importDef := range collectObjectImports(object, objectType) {
-								imports = append(imports, importDef)
 							}
 						}
 					}
@@ -440,21 +415,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 			case *model.ObjectConsExpression:
 				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
 				argumentExprType := functionSchema.Inputs.InputShape
-				fullyQualifiedTypeName := argumentExprType.Token
-				nameParts := strings.Split(fullyQualifiedTypeName, ":")
-				objectTypeName := names.Title(nameParts[len(nameParts)-1])
-				pkg := nameParts[0]
-				// remove the function name from the module import name
-				module := strings.ReplaceAll(sanitizeImport(nameParts[1]), funcName, "")
-				if !strings.HasSuffix(objectTypeName, "Args") {
-					objectTypeName = objectTypeName + "Args"
-				}
-				if argumentExprType.IsInputShape() {
-					imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
-				} else {
-					imports = append(imports, pulumiImport(pkg, module, objectTypeName))
-				}
-				for _, importDef := range collectObjectImports(argumentsExpr, functionSchema.Inputs.InputShape) {
+				for _, importDef := range collectObjectImports(argumentsExpr, argumentExprType) {
 					imports = append(imports, importDef)
 				}
 			}
