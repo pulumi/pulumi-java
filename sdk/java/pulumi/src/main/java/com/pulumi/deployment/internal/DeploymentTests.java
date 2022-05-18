@@ -3,6 +3,7 @@ package com.pulumi.deployment.internal;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.deployment.MockEngine;
@@ -18,6 +19,8 @@ import org.mockito.Mockito;
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -78,13 +81,7 @@ public class DeploymentTests {
 
         public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Supplier<T> stackFactory) {
             return tryTestAsync(stackFactory).thenApply(r -> {
-                if (!r.exceptions.isEmpty()) {
-                    throw new RunException(String.format("Error count: %d, errors: %s",
-                            r.exceptions.size(), r.exceptions.stream()
-                                    .map(Throwable::getMessage)
-                                    .collect(Collectors.joining(", "))
-                    ));
-                }
+                r.throwOnError();
                 return r.resources;
             });
         }
@@ -99,14 +96,16 @@ public class DeploymentTests {
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
             return this.runner.runAsync(stackFactory)
-                    .thenApply(ignore -> new TestAsyncResult(
+                    .thenApply(stackObject -> new TestAsyncResult(
                             ImmutableList.copyOf(mockMonitor.resources),
                             mockEngine.getErrors().stream()
-                                    .map(RunException::new).collect(toImmutableList())
+                                    .map(RunException::new).collect(toImmutableList()),
+                            Resource.ResourceInternal.findOutputs(stackObject)
                     ));
         }
 
-        public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
+        public CompletableFuture<TestAsyncResult> runAsync(
+                Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
@@ -115,23 +114,66 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsyncFuture(callback)
+            var helper = new OutputsCaptureHelper(callback);
+            return this.runner.runAsyncFuture(helper::run)
                     .thenApply(ignore -> new TestAsyncResult(
                             ImmutableList.copyOf(mockMonitor.resources),
                             mockEngine.getErrors().stream()
                                     .map(RunException::new)
-                                    .collect(toImmutableList())
-                    ));
+                                    .collect(toImmutableList()),
+                            helper.getOutputs()));
+        }
+
+        public CompletableFuture<TestAsyncResult> tryTestAsync(Consumer<Context> stackFactory) {
+            return this.runAsync(() -> {
+                var context = new TestContext();
+                stackFactory.accept(context);
+                return CompletableFuture.completedFuture(context.getStackOutputs());
+            });
+        }
+
+        public CompletableFuture<ImmutableList<Resource>> testAsync(Consumer<Context> stackFactory) {
+            return this.tryTestAsync(stackFactory).thenApply(result -> {
+                result.throwOnError();
+                return result.resources;
+            });
         }
 
         public static class TestAsyncResult {
             public final ImmutableList<Resource> resources;
             public final ImmutableList<Exception> exceptions;
+            public final Map<String, Output<?>> stackOutputs;
 
-            public TestAsyncResult(ImmutableList<Resource> resources, ImmutableList<Exception> exceptions) {
+            public TestAsyncResult(ImmutableList<Resource> resources,
+                                   ImmutableList<Exception> exceptions,
+                                   Map<String, Output<?>> stackOutputs) {
                 this.resources = resources;
                 this.exceptions = exceptions;
+                this.stackOutputs = stackOutputs;
             }
+
+            public <T> Output<T> getStackOutput(String name) {
+                if (!this.stackOutputs.containsKey(name)) {
+                    return Output.of(CompletableFuture.failedFuture(new StackOutputNotFoundException(name)));
+                }
+                return (Output<T>) this.stackOutputs.get(name);
+            }
+
+            public void throwOnError() {
+                if (!this.exceptions.isEmpty()) {
+                    throw new RunException(String.format("Error count: %d, errors: %s",
+                            this.exceptions.size(), this.exceptions.stream()
+                                    .map(Throwable::getMessage)
+                                    .collect(Collectors.joining(", "))
+                    ));
+                }
+            }
+        }
+    }
+
+    private static final class StackOutputNotFoundException extends RuntimeException {
+        public StackOutputNotFoundException(String stackOutputName) {
+            super(stackOutputName);
         }
     }
 
@@ -340,5 +382,28 @@ public class DeploymentTests {
 
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
         return new Log(new DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
+    }
+
+    private static final class OutputsCaptureHelper {
+        private final static Map<String, Output<?>> emptyOutputs = Map.of();
+
+        private final Supplier<CompletableFuture<Map<String, Output<?>>>> callback;
+
+        private final AtomicReference<CompletableFuture<Map<String, Output<?>>>> ref =
+                new AtomicReference<>(CompletableFuture.completedFuture(emptyOutputs));
+
+        public OutputsCaptureHelper(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
+            this.callback = callback;
+        }
+
+        public CompletableFuture<Map<String, Output<?>>> run() {
+            var future= callback.get();
+            this.ref.set(future);
+            return future;
+        }
+
+        public Map<String, Output<?>> getOutputs() {
+            return this.ref.get().handle((result, err) -> err == null ? result : emptyOutputs).join();
+        }
     }
 }
