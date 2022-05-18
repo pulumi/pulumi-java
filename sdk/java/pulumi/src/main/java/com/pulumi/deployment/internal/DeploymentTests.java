@@ -273,7 +273,7 @@ public class DeploymentTests {
                 );
             }
             if (this.log == null) {
-                this.log = new Log(this.logger);
+                this.log = new Log(this.logger, DeploymentImpl.DeploymentState.ExcessiveDebugOutput);
             }
             if (this.options == null) {
                 this.options = new TestOptions();

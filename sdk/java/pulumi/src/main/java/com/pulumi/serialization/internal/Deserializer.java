@@ -13,6 +13,7 @@ import com.pulumi.asset.FileAsset;
 import com.pulumi.asset.RemoteArchive;
 import com.pulumi.asset.RemoteAsset;
 import com.pulumi.asset.StringAsset;
+import com.pulumi.core.Urn;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.resources.DependencyResource;
@@ -361,12 +362,8 @@ public class Deserializer {
         var version = tryGetStringValue(struct, Constants.ResourceVersionName)
                 .orElse("");
 
-        // TODO: a good candidate for some new URN methods with good unit tests
-        var urnParts = urn.split("::");
-        var qualifiedType = urnParts[2];
-        var qualifiedTypeParts = qualifiedType.split("\\$");
-        var type = qualifiedTypeParts[qualifiedTypeParts.length - 1];
-
+        var urnParsed = Urn.parse(urn);
+        var type = urnParsed.qualifiedType.type.asString();
         var resource = this.resourcePackages.tryConstruct(type, version, urn);
         if (resource.isPresent()) {
             return resource;

@@ -215,12 +215,10 @@ public abstract class Resource {
             } else {
                 // If a provider was specified, add it to the providers map under this type's package so that
                 // any children of this resource inherit its provider.
-                var typeComponents = this.type.split(":");
-                if (typeComponents.length == 3) {
-                    var pkg = typeComponents[0];
-                    thisProviders.put(pkg, provider);
+                var typeComponents = Urn.Type.parse(this.type);
+                if (typeComponents.module.isPresent()) {
+                    thisProviders.put(typeComponents.package_, provider);
                 }
-                // TODO: why do we silently ignore invalid type?
             }
         } else {
             // Note: we've checked above that at most one of options.provider or options.providers is set.
@@ -344,8 +342,12 @@ public abstract class Resource {
             }
 
             var parentInfo = getParentInfo(defaultParent, a);
+            var parentUrn = Optional.ofNullable(parentInfo.parent)
+                    .map(p -> p.getUrn())
+                    .or(() -> Optional.ofNullable(parentInfo.parentUrn));
 
-            return Urn.create(name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
+
+            return Urn.create(stack, project, parentUrn, type, name);
         });
     }
 
@@ -409,7 +411,12 @@ public abstract class Resource {
         }
 
         var urn = Urn.create(
-                aliasName, Output.of(childType), null, parentAlias, null, null);
+                Output.of(Deployment.getInstance().getStackName()),
+                Output.of(Deployment.getInstance().getProjectName()),
+                Optional.of(parentAlias),
+                Output.of(childType),
+                aliasName
+        );
 
         return urn.applyValue(Alias::withUrn);
     }

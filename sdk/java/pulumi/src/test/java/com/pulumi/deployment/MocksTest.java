@@ -78,8 +78,9 @@ public class MocksTest {
         assertThat(id.getResources()).contains(instance.get()).hasSize(1);
 
         var urn = OutputTests.waitFor(instance.get().getUrn());
-        assertThat(urn.getValueNullable()).isEqualTo("urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2" +
-                "/instance:Instance::instance");
+        assertThat(urn.getValueNullable()).isEqualTo(
+                "urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/instance:Instance::instance"
+        );
         assertThat(urn.isKnown()).isTrue();
         assertThat(urn.isSecret()).isFalse();
         assertThat(urn.getResources()).contains(instance.get()).hasSize(1);
