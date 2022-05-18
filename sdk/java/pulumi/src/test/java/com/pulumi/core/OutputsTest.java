@@ -1,11 +1,20 @@
 package com.pulumi.core;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 import static com.pulumi.core.OutputTests.waitFor;
 import static com.pulumi.core.OutputTests.waitForValue;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.util.Lists.newArrayList;
+import static org.junit.jupiter.api.Named.named;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class OutputsTest {
 
@@ -68,5 +77,25 @@ public class OutputsTest {
             var result = Output.format("");
             assertThat(waitForValue(result)).isEqualTo("");
         }).doesNotThrowAnyException();
+    }
+
+    public static Stream<Arguments> testAll() {
+        return Stream.of(
+                arguments(named("0", List.of()), List.of()),
+                arguments(named("1", List.of(Output.of(1))), List.of(1)),
+                arguments(named("2", List.of(Output.of(1), Output.of(2))), List.of(1, 2)),
+                arguments(named("1 and null",
+                        List.of(Output.of(1), Output.ofNullable(null))
+                ), newArrayList(1, null))
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    public void testAll(List<Output<Integer>> list, List<Integer> expected) {
+        assertThat(waitFor(Output.all(list)).getValueNullable())
+                .isNotNull()
+                .hasSize(list.size())
+                .containsExactlyElementsOf(expected);
     }
 }
