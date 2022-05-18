@@ -10,7 +10,6 @@ import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -42,7 +41,7 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::init).join();
+        var result = mock.runTestAsync(DeploysResourcesWithUnknownDependsOnStack::init).join();
         assertThat(result.exceptions).isNotNull();
         assertThat(result.exceptions).isEmpty();
     }

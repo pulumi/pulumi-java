@@ -6,6 +6,7 @@ import com.google.common.collect.ImmutableSet;
 import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
+import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.Mocks;
@@ -17,15 +18,16 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Objects.requireNonNull;
 
 public class DeploymentTests {
@@ -78,14 +80,7 @@ public class DeploymentTests {
             this.config.setAllConfig(config, secretKeys);
         }
 
-        public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Supplier<T> stackFactory) {
-            return tryTestAsync(stackFactory).thenApply(r -> {
-                r.throwOnError();
-                return r.resources;
-            });
-        }
-
-        public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Supplier<T> stackFactory) {
+        public CompletableFuture<TestResult> runTestAsync(Consumer<Context> stackCallback) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
@@ -94,64 +89,75 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsync(stackFactory)
-                    .thenApply(stackObject -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new).collect(toImmutableList()),
-                            Resource.ResourceInternal.findOutputs(stackObject)
+            // TODO: remove this after runner refactoring
+            Function<List<Resource>, Map<String, Output<?>>> outputs = resources -> resources.stream()
+                    .filter(r -> r instanceof Stack)
+                    .map(r -> (Stack) r)
+                    .findFirst()
+                    .map(s -> Internal.from(s).getOutputs())
+                    .map(os -> Internal.of(os).getDataAsync().join().getValueNullable())
+                    .orElseThrow(() -> new IllegalStateException("Unexpected lack of Stack"));
+            var context = new TestContext();
+            return this.runner.runAsyncFuture(() -> {
+                        stackCallback.accept(context);
+                        return CompletableFuture.completedFuture(context.getStackOutputs());
+                    })
+                    .thenApply(exitCode -> new TestResult(
+                            exitCode,
+                            mockMonitor.resources,
+                            runner.getSwallowedExceptions(),
+                            ImmutableList.copyOf(mockEngine.getErrors()),
+                            outputs.apply(mockMonitor.resources)
                     ));
         }
 
-        public CompletableFuture<TestAsyncResult> tryTestAsync(Consumer<Context> stackFactory) {
-            if (!(engine instanceof MockEngine)) {
-                throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
-            }
-            if (!(monitor instanceof MockMonitor)) {
-                throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
-            }
-            var mockEngine = (MockEngine) engine;
-            var mockMonitor = (MockMonitor) monitor;
-            var context = new TestContext();
-            return this.runner.runAsyncFuture(() -> {
-                        stackFactory.accept(context);
-                        return CompletableFuture.completedFuture(context.getStackOutputs());
-                    }).thenApply(ignore -> new TestAsyncResult(
-                            ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.getErrors().stream()
-                                    .map(RunException::new)
-                                    .collect(toImmutableList()),
-                            context.getStackOutputs()));
-        }
-
-        public CompletableFuture<ImmutableList<Resource>> testAsync(Consumer<Context> stackFactory) {
-            return this.tryTestAsync(stackFactory).thenApply(result -> {
-                result.throwOnError();
-                return result.resources;
-            });
-        }
-
-        public static class TestAsyncResult {
-            public final ImmutableList<Resource> resources;
-            public final ImmutableList<Exception> exceptions;
+        public static class TestResult {
+            public final int exitCode;
+            public final List<Resource> resources;
+            public final List<Exception> exceptions;
+            public final List<String> errors;
             public final Map<String, Output<?>> stackOutputs;
 
-            public TestAsyncResult(ImmutableList<Resource> resources,
-                                   ImmutableList<Exception> exceptions,
-                                   Map<String, Output<?>> stackOutputs) {
-                this.resources = resources;
-                this.exceptions = exceptions;
-                this.stackOutputs = stackOutputs;
+            public TestResult(int exitCode,
+                              List<Resource> resources,
+                              List<Exception> exceptions,
+                              List<String> errors,
+                              Map<String, Output<?>> stackOutputs
+            ) {
+                this.exitCode = exitCode;
+                this.resources = ImmutableList.copyOf(resources);
+                this.exceptions = ImmutableList.copyOf(exceptions);
+                this.errors = ImmutableList.copyOf(errors);
+                this.stackOutputs = ImmutableMap.copyOf(stackOutputs);
             }
 
-            public <T> Output<T> getStackOutput(String name) {
+            public Output<Object> stackOutput(String name) {
+                return stackOutput(name, Object.class);
+            }
+
+            public <T> Output<T> stackOutput(String name, Class<T> type) {
                 if (!this.stackOutputs.containsKey(name)) {
-                    return Output.of(CompletableFuture.failedFuture(new StackOutputNotFoundException(name)));
+                    return Output.of(CompletableFuture.failedFuture(
+                            new IllegalArgumentException(String.format(
+                                    "Can't find stack output: '%s', available outputs: %s",
+                                    name, String.join(", ", this.stackOutputs.keySet())
+                            ))
+                    ));
                 }
-                return (Output<T>) this.stackOutputs.get(name);
+                var output = this.stackOutputs.get(name);
+                return output.applyValue(o -> {
+                    if (type.isAssignableFrom(o.getClass())) {
+                        return type.cast(o);
+                    }
+                    throw new IllegalArgumentException(String.format(
+                            "Cannot cast '%s' to the given type: '%s'",
+                            o.getClass().getTypeName(),
+                            type.getTypeName()
+                    ));
+                });
             }
 
-            public void throwOnError() {
+            public TestResult throwOnError() {
                 if (!this.exceptions.isEmpty()) {
                     throw new RunException(String.format("Error count: %d, errors: %s",
                             this.exceptions.size(), this.exceptions.stream()
@@ -159,13 +165,8 @@ public class DeploymentTests {
                                     .collect(Collectors.joining(", "))
                     ));
                 }
+                return this;
             }
-        }
-    }
-
-    private static final class StackOutputNotFoundException extends RuntimeException {
-        public StackOutputNotFoundException(String stackOutputName) {
-            super(stackOutputName);
         }
     }
 

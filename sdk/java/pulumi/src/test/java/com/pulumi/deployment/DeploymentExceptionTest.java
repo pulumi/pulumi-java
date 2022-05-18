@@ -1,11 +1,8 @@
 package com.pulumi.deployment;
 
-import com.pulumi.Context;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.exceptions.RunException;
-import com.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,13 +10,14 @@ import org.junit.jupiter.api.Test;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
 
 public class DeploymentExceptionTest {
 
@@ -40,22 +38,20 @@ public class DeploymentExceptionTest {
     @Test
     void testUrnFutureDoesNotHangOnException() {
         mock.standardLogger.setLevel(Level.OFF);
-
-        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::init).join())
-                .getRootCause()
-                .isInstanceOf(RunException.class)
-                .hasMessageContaining(DeliberateException.class.getName());
-    }
-
-    public static class MyIncorrectStack {
-        public static void init(Context ctx) {
+        assertThatThrownBy(() -> mock.runTestAsync(ctx -> {
             var instance = new MocksTest.Instance("i1", null, null);
             var out = instance.getUrn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();
-        }
+        }).join())
+                .isInstanceOf(CompletionException.class)
+                .hasCauseInstanceOf(DeliberateException.class)
+                .hasMessageContaining("deliberate exception");
     }
 
     static class DeliberateException extends IllegalStateException {
+        public DeliberateException() {
+            super("deliberate exception");
+        }
     }
 
     static class MyIncorrectMocks implements Mocks {

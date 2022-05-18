@@ -33,8 +33,9 @@ public class ConstructorConfusionTest {
                 .setOptions(new TestOptions(true))
                 .setMocks(new ConfusionMocks())
                 .setSpyGlobalInstance();
-        var resources = mock.testAsync(ConfusionStack::init).join();
-        assertThat(resources).isNotEmpty();
+        var result = mock.runTestAsync(ConfusionStack::init).join()
+                .throwOnError();
+        assertThat(result.resources).isNotEmpty();
     }
 
     @AfterEach

@@ -41,9 +41,10 @@ public class ResourceTest {
 
     @Test
     void testProviderPropagation() {
-        var resources = mock.testAsync(MyStack::init).join();
+        var result = mock.runTestAsync(MyStack::init).join()
+                .throwOnError();
 
-        var resource = resources.stream()
+        var resource = result.resources.stream()
                 .filter(r -> r.getResourceName().equals("testResource"))
                 .findFirst()
                 .orElse(null);

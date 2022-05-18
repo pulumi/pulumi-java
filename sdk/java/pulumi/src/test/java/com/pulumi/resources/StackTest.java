@@ -3,19 +3,16 @@ package com.pulumi.resources;
 import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
-import com.pulumi.core.Tuples;
-import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.deployment.MocksTest;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.deployment.internal.DeploymentTests.DeploymentMock.TestResult;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Map;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
+import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,63 +23,29 @@ import static org.mockito.Mockito.verify;
 
 class StackTest {
 
-    private static class ValidStack {
-        public final Output<String> explicitName;
-        public final Output<String> implicitName;
-
-        public ValidStack(DeploymentTests.DeploymentMock.TestAsyncResult result) {
-            this.explicitName = result.getStackOutput("foo");
-            this.implicitName = result.getStackOutput("implicitName");
-       }
-
-        public static void init(Context ctx) {
-            ctx.export("foo", Output.of("bar"));
-            ctx.export("implicitName", Output.of("buzz"));
-        }
-    }
-
     @Test
     void testValidStackInstantiationSucceeds() {
-        var result = run(ValidStack::init, ValidStack::new);
-        assertThat(result.t2).hasSize(2);
-
-        assertThat(result.t2).containsKey("foo");
-        assertThat(
-                OutputTests.waitFor(result.t1.explicitName)
-        ).isSameAs(
-                OutputTests.waitFor(result.t2.get("foo"))
-        );
-
-        assertThat(result.t2).containsKey("implicitName");
-        assertThat(
-                OutputTests.waitFor(result.t1.implicitName)
-        ).isSameAs(
-                OutputTests.waitFor(result.t2.get("implicitName"))
-        );
-    }
-
-    private static class NullOutputStack {
-        public static void init(Context ctx) {
-            Output<String> foo = null;
-            ctx.export("foo", foo);
-        }
+        var result = run(ctx -> {
+            ctx.export("foo", Output.of("bar"));
+        });
+        var foo = waitForValue(result.stackOutput("foo", String.class));
+        assertThat(foo).isEqualTo("bar");
     }
 
     @Test
     void testStackWithNullOutputsThrows() {
-        assertThatThrownBy(() -> run(NullOutputStack::init, __ -> new NullOutputStack()))
-                .hasMessageContaining("The 'output' of an 'export' cannot be 'null'");
+        assertThatThrownBy(() -> run(ctx -> {
+            Output<String> foo = null;
+            ctx.export("foo", foo);
+        })).hasMessageContaining("The 'output' of an 'export' cannot be 'null'");
     }
 
-    private <T> Tuple2<T, Map<String, Output<?>>> run(
-            Consumer<Context> factory,
-            Function<DeploymentTests.DeploymentMock.TestAsyncResult, T> parseResult) {
+    private TestResult run(Consumer<Context> factory) {
         var mock = DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setOptions(new TestOptions("TestProject", "TestStack"))
                 .setSpyGlobalInstance();
 
-        var result = mock.tryTestAsync(factory).join();
+        var result = mock.runTestAsync(factory).join();
         //noinspection unchecked
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
 
@@ -90,7 +53,8 @@ class StackTest {
                 .registerResourceOutputs(any(Resource.class), outputsCaptor.capture());
 
         var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
-        return Tuples.of(parseResult.apply(result), values);
+        assertThat(result.stackOutputs).containsExactlyEntriesOf(values);
+        return result;
     }
 
     @AfterEach
