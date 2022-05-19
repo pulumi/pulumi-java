@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "com.pulumi.plant"
+rootProject.name = "{{ .RootProjectName }}"
 include("lib")

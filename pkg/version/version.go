@@ -12,23 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package version
 
-import (
-	"fmt"
-	"os"
-
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-)
-
-func main() {
-	if isOldStyleArgs(os.Args) {
-		oldStyleMain()
-		return
-	}
-	if err := newPulumiJavaGenCmd().Execute(); err != nil {
-		_, err := fmt.Fprintf(os.Stderr, "An error occurred: %v\n", err)
-		contract.IgnoreError(err)
-		os.Exit(1)
-	}
-}
+// Version is initialized by the Go linker to contain the semver of this build.
+var Version string

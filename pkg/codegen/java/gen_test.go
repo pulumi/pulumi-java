@@ -112,7 +112,26 @@ func TestGeneratePackage(t *testing.T) {
 }
 
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
-	pkgInfo := PackageInfo{BuildFiles: "gradle"}
+	pkgInfo := PackageInfo{
+		BuildFiles: "gradle",
+		Packages: map[string]string{
+			"com.pulumi:pulumi": "0.0.1",
+
+			// There are some sprinkled unit tests that
+			// complement testing the generated code at
+			// runtime, and this is the union of all their
+			// dependencies. It would be more precise to
+			// move the dependencies into the schema for
+			// the individual projects that happen to need
+			// them.
+			"com.google.guava:guava":                 "30.1-jre",
+			"com.google.protobuf:protobuf-java":      "3.12.0",
+			"com.google.protobuf:protobuf-java-util": "3.12.0",
+			"org.assertj:assertj-core":               "3.20.2",
+			"org.junit.jupiter:junit-jupiter-api":    "5.7.2",
+			"org.mockito:mockito-core":               "3.12.4",
+		},
+	}
 	pkg.Language = map[string]interface{}{
 		"java": pkgInfo,
 	}
