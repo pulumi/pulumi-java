@@ -1,6 +1,7 @@
 builds:
 
 - binary: pulumi-language-java
+  id: pulumi-language-java
   dir: pkg
   main: ./cmd/pulumi-language-java
   env:
@@ -18,6 +19,7 @@ builds:
     - -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
 
 - binary: pulumi-java-gen
+  id: pulumi-java-gen
   dir: pkg
   main: ./cmd/pulumi-java-gen
   env:
