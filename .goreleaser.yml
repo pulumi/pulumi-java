@@ -14,6 +14,8 @@ builds:
     - amd64
     - arm64
   mod_timestamp: '{{ .CommitTimestamp }}'
+  ldflags:
+    - -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
 
 - binary: pulumi-java-gen
   dir: pkg
@@ -29,6 +31,8 @@ builds:
     - amd64
     - arm64
   mod_timestamp: '{{ .CommitTimestamp }}'
+  ldflags:
+    - -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
 
 archives:
 - name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
