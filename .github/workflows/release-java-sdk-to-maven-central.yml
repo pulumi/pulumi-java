@@ -38,9 +38,11 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        uses: jaxxstorm/action-install-gh-release@v1.7.0
         with:
           repo: pulumi/pulumictl
+          tag: v0.0.31
+          cache: enable
       - run: ./scripts/versions.sh | tee versions.txt
       - name: Setup versioning env vars
         run: cat versions.txt | tee $GITHUB_ENV
