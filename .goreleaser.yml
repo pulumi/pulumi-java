@@ -1,7 +1,23 @@
 builds:
+
 - binary: pulumi-language-java
   dir: pkg
   main: ./cmd/pulumi-language-java
+  env:
+  - CGO_ENABLED=0
+  - GO111MODULE=on
+  goos:
+    - darwin
+    - windows
+    - linux
+  goarch:
+    - amd64
+    - arm64
+  mod_timestamp: '{{ .CommitTimestamp }}'
+
+- binary: pulumi-java-gen
+  dir: pkg
+  main: ./cmd/pulumi-java-gen
   env:
   - CGO_ENABLED=0
   - GO111MODULE=on
