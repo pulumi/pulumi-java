@@ -3,6 +3,6 @@ out: sdk/java
 overlays:
 - ./build-templates
 pluginFile: src/main/resources/com/pulumi/aws-apigateway/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-apigateway/v0.0.7/schema.yaml
-version: 0.0.7
+schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-apigateway/v0.0.8/schema.yaml
+version: 0.0.8
 versionFile: src/main/resources/com/pulumi/aws-apigateway/version.txt
