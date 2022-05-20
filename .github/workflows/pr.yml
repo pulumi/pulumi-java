@@ -47,7 +47,7 @@ jobs:
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v1.7.0
+        uses: jaxxstorm/action-install-gh-release@v1.7.1
         with:
           repo: pulumi/pulumictl
           version: v0.0.31
