@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -37,35 +36,10 @@ func newPublishCommand() *cobra.Command {
 		"package name; auto-detected if not given")
 
 	cmd.Run = func(cmd *cobra.Command, args []string) {
-		token := os.Getenv("GITHUB_TOKEN")
-		if token == "" {
-			log.Fatalf("GITHUB_TOKEN env var is not set")
-		}
-		autoPkg, version, err := readGradleProperties(dir)
-		if err != nil {
+		token := requireToken()
+		if err := publish(token, dir, pkg); err != nil {
 			log.Fatal(err)
 		}
-		if pkg == "" {
-			pkg = autoPkg
-		}
-		var attempt int
-		for attempt = 1; attempt <= 3; attempt++ {
-			out, err := gradlePublish()
-			if err == nil {
-				if attempt > 1 {
-					log.Printf("publish suceeded on attempt %d\n",
-						attempt)
-				}
-				return
-			}
-			log.Printf("gradle publish failed, retrying (attempt %d): %s\n%s\n",
-				attempt, err, out)
-			if err := deletePackageVersion(token, pkg, version); err != nil {
-				log.Fatal(err)
-			}
-			log.Printf("Deleted version %s\n", version)
-		}
-		log.Fatal(fmt.Errorf("Aborting after %d failed attempts", attempt))
 	}
 
 	return cmd
@@ -86,13 +60,18 @@ func newDeleteVersionCommand() *cobra.Command {
 		log.Fatal(err)
 	}
 	cmd.Run = func(cmd *cobra.Command, args []string) {
-		token := os.Getenv("GITHUB_TOKEN")
-		if token == "" {
-			log.Fatalf("GITHUB_TOKEN env var is not set")
-		}
+		token := requireToken()
 		if err := deletePackageVersion(token, pkg, version); err != nil {
 			log.Fatal(err)
 		}
 	}
 	return cmd
+}
+
+func requireToken() string {
+	token := os.Getenv("GITHUB_TOKEN")
+	if token == "" {
+		log.Fatalf("GITHUB_TOKEN env var is not set")
+	}
+	return token
 }
