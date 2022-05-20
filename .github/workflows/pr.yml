@@ -95,11 +95,7 @@ jobs:
           name: go-binaries
           path: bin/
       - name: Publish Pulumi Java SDK
-        run: |
-          make bin/pulumi-java-builder
-          export PATH=$PATH/bin:$PATH
-          cd sdk/java
-          pulumi-java-builder publish --dir ./pulumi --pkg com.pulumi.pulumi
+        run: make sdk.publish
     strategy:
       fail-fast: true
 
@@ -218,11 +214,7 @@ jobs:
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
           gradle-version: 7.4.1
       - name: Publish
-        run: |
-          make bin/pulumi-java-builder
-          export PATH=$PATH/bin:$PATH
-          cd providers/pulumi-${{ matrix.provider }}/sdk/java
-          pulumi-java-builder publish
+        run: make provider.${{ matrix.provider }}.publish
       # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
         id: newJar
