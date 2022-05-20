@@ -52,6 +52,10 @@ func newPublishCommand() *cobra.Command {
 		for attempt = 1; attempt <= 3; attempt++ {
 			out, err := gradlePublish()
 			if err == nil {
+				if attempt > 1 {
+					log.Printf("publish suceeded on attempt %d\n",
+						attempt)
+				}
 				return
 			}
 			log.Printf("gradle publish failed, retrying (attempt %d): %s\n%s\n",
@@ -59,6 +63,7 @@ func newPublishCommand() *cobra.Command {
 			if err := deletePackageVersion(token, pkg, version); err != nil {
 				log.Fatal(err)
 			}
+			log.Printf("Deleted version %s\n", version)
 		}
 		log.Fatal(fmt.Errorf("Aborting after %d failed attempts", attempt))
 	}

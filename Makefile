@@ -53,6 +53,9 @@ provider.%.build:	provider.%.generate
 provider.%.generate:	bin/pulumi-java-gen
 	./bin/pulumi-java-gen -config providers/pulumi-$*/pulumi-java-gen.yaml
 
+provider.%.publish:	bin/pulumi-java-builder
+	cd providers/pulumi-$*/sdk/java && ../../../../bin/pulumi-java-builder publish
+
 .PHONY: lint_pkg
 lint:: lint_pkg
 lint_pkg:
