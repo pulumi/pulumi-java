@@ -86,6 +86,17 @@ func deleteVersion(token string, versionId versionId) error {
 	return fmt.Errorf("Could not delete package version: %s", buf.String())
 }
 
+func deletePackageVersion(token, pkg, version string) error {
+	vid, err := findVersionId(token, pkg, version)
+	if err != nil {
+		return err
+	}
+	if err := deleteVersion(token, vid); err != nil {
+		return err
+	}
+	return nil
+}
+
 func jsonEncode(x string) (string, error) {
 	var buf bytes.Buffer
 	err := json.NewEncoder(&buf).Encode(x)
