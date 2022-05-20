@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 
 // TODO: use real context after refactoring test framework (and as a consequence DefaultRunner, and PulumiInternal)
-public class TestContext implements Context {
+class TestContext implements Context {
     private final ImmutableMap.Builder<String, Output<?>> exports = ImmutableMap.builder();
 
     public Map<String, Output<?>> getStackOutputs() {
