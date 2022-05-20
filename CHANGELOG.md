@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## 0.2.1 (2022-05-20)
+
+### Improvements
+
+- [provider] Add `pulumi-java-gen` binary encapsulating Java SDK
+  generation to the GitHub releases.
+
 ## 0.2.0 (2022-05-18)
 
 ### Improvements
