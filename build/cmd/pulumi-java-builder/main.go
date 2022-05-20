@@ -30,14 +30,23 @@ func newPublishCommand() *cobra.Command {
 		Short: "Like gradle-publish with retries and GitHub packages cleanup",
 	}
 
+	var dir, pkg string
+	cmd.Flags().StringVar(&dir, "dir", "",
+		"directory to read project properties from")
+	cmd.Flags().StringVar(&pkg, "pkg", "",
+		"package name; auto-detected if not given")
+
 	cmd.Run = func(cmd *cobra.Command, args []string) {
 		token := os.Getenv("GITHUB_TOKEN")
 		if token == "" {
 			log.Fatalf("GITHUB_TOKEN env var is not set")
 		}
-		pkg, version, err := readGradleProperties()
+		autoPkg, version, err := readGradleProperties(dir)
 		if err != nil {
 			log.Fatal(err)
+		}
+		if pkg == "" {
+			pkg = autoPkg
 		}
 		var attempt int
 		for attempt = 1; attempt <= 3; attempt++ {

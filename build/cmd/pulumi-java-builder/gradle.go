@@ -7,12 +7,16 @@ import (
 )
 
 func gradlePublish() (string, error) {
-	out, err := exec.Command("gradle", "publish").Output()
+	cmd := exec.Command("gradle", "publish")
+	out, err := cmd.CombinedOutput()
 	return string(out), err
 }
 
-func readGradleProperties() (string, string, error) {
+func readGradleProperties(dir string) (string, string, error) {
 	cmd := exec.Command("gradle", "properties")
+	if dir != "" {
+		cmd.Dir = dir
+	}
 	out, err := cmd.Output()
 	if err != nil {
 		return "", "", err
