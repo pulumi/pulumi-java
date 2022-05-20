@@ -98,7 +98,7 @@ jobs:
         run: |
           make bin/pulumi-java-builder
           export PATH=$PATH/bin:$PATH
-          cd providers/pulumi-${{ matrix.provider }}/sdk/java
+          cd sdk/java
           pulumi-java-builder publish --dir ./pulumi --pkg com.pulumi.pulumi
     strategy:
       fail-fast: true
