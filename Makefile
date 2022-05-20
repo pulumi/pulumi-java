@@ -5,6 +5,7 @@ build::	ensure build_go build_sdk
 ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
+BLD_FILES := $(shell  find build -name '*.go' -type f)
 
 # Go project rooted at `pkg/` implements Pulumi Java language plugin
 # and Java go as a Go library.
@@ -23,6 +24,9 @@ bin/pulumi-java-gen: ${PKG_FILES}
 	mkdir -p bin
 	cd pkg && go build -o ../bin -ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
 
+bin/pulumi-java-builder: ${BLD_FILES}
+	mkdir -p bin
+	cd build && go build -o ../bin github.com/pulumi/pulumi-java/build/cmd/pulumi-java-builder
 
 # Java SDK is a gradle project rooted at `sdk/java`
 
