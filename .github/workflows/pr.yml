@@ -50,7 +50,7 @@ jobs:
         uses: jaxxstorm/action-install-gh-release@v1.7.1
         with:
           repo: pulumi/pulumictl
-          version: v0.0.31
+          tag: v0.0.31
           cache: enable
       - run: ./scripts/versions.sh | tee versions.txt
       - name: Setup versioning env vars
