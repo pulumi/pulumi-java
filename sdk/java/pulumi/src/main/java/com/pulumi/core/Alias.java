@@ -15,7 +15,7 @@ import static com.pulumi.core.internal.Objects.requireNullState;
  * Alias is a description of prior named used for a resource. It can be processed in the
  * context of a resource creation to determine what the full aliased URN would be.
  * <p>
- * Use @see {@link Urn} in the case where a prior URN is known and can just be specified in
+ * Use {@link com.pulumi.core.internal.Urn} in the case where a prior URN is known and can just be specified in
  * full. Otherwise, provide some subset of the other properties in this type to generate an
  * appropriate {@code urn} from the pre-existing values of the @see {@link com.pulumi.resources.Resource}
  * with certain parts overridden.

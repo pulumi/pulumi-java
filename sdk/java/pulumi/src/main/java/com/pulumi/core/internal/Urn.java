@@ -1,6 +1,6 @@
-package com.pulumi.core;
+package com.pulumi.core.internal;
 
-import com.pulumi.core.internal.Optionals;
+import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -44,6 +44,7 @@ import static java.util.Objects.requireNonNull;
  * </pre>
  * Source: <a href="https://pulumi-developer-docs.readthedocs.io/en/latest/providers/implementers-guide.html?highlight=URN#urns">https://pulumi-developer-docs.readthedocs.io/en/latest/providers/implementers-guide.html?highlight=URN#urns</a>
  */
+@InternalUse
 @ParametersAreNonnullByDefault
 public final class Urn {
 
@@ -137,6 +138,7 @@ public final class Urn {
                 + this.name;
     }
 
+    @InternalUse
     @ParametersAreNonnullByDefault
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public static final class QualifiedTypeName {
@@ -201,6 +203,7 @@ public final class Urn {
         }
     }
 
+    @InternalUse
     @ParametersAreNonnullByDefault
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public static final class Type {
