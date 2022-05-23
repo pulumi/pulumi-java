@@ -8,10 +8,10 @@ import com.pulumi.aws.appmesh.inputs.GetMeshArgs;
 import com.pulumi.aws.appmesh.inputs.GetVirtualServiceArgs;
 import com.pulumi.aws.appmesh.outputs.GetMeshResult;
 import com.pulumi.aws.appmesh.outputs.GetVirtualServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppmeshFunctions {
     /**
@@ -65,7 +65,7 @@ public final class AppmeshFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args) {
+    public static Output<GetMeshResult> getMesh(GetMeshArgs args) {
         return getMesh(args, InvokeOptions.Empty);
     }
     /**
@@ -119,8 +119,8 @@ public final class AppmeshFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:appmesh/getMesh:getMesh", TypeShape.of(GetMeshResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMeshResult> getMesh(GetMeshArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:appmesh/getMesh:getMesh", TypeShape.of(GetMeshResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The App Mesh Virtual Service data source allows details of an App Mesh Virtual Service to be retrieved by its name, mesh_name, and optionally the mesh_owner.
@@ -175,7 +175,7 @@ public final class AppmeshFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args) {
+    public static Output<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args) {
         return getVirtualService(args, InvokeOptions.Empty);
     }
     /**
@@ -231,7 +231,7 @@ public final class AppmeshFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:appmesh/getVirtualService:getVirtualService", TypeShape.of(GetVirtualServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:appmesh/getVirtualService:getVirtualService", TypeShape.of(GetVirtualServiceResult.class), args, Utilities.withVersion(options));
     }
 }

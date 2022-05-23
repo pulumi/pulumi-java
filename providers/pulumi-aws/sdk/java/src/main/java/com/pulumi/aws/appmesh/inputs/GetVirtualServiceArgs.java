@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.appmesh.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="meshName", required=true)
-    private String meshName;
+    private Output<String> meshName;
 
     /**
      * @return The name of the service mesh in which the virtual service exists.
      * 
      */
-    public String meshName() {
+    public Output<String> meshName() {
         return this.meshName;
     }
 
@@ -35,14 +35,14 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="meshOwner")
-    private @Nullable String meshOwner;
+    private Output</* @Nullable */ String> meshOwner;
 
     /**
      * @return The AWS account ID of the service mesh&#39;s owner.
      * 
      */
-    public Optional<String> meshOwner() {
-        return Optional.ofNullable(this.meshOwner);
+    public Output</* @Nullable */ String> meshOwner() {
+        return this.meshOwner;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the virtual service.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -65,14 +65,14 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A map of tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetVirtualServiceArgs() {}
@@ -108,8 +108,29 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder meshName(String meshName) {
+        public Builder meshName(Output<String> meshName) {
             $.meshName = meshName;
+            return this;
+        }
+
+        /**
+         * @param meshName The name of the service mesh in which the virtual service exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder meshName(String meshName) {
+            return meshName(Output.of(meshName));
+        }
+
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder meshOwner(Output</* @Nullable */ String> meshOwner) {
+            $.meshOwner = meshOwner;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder meshOwner(@Nullable String meshOwner) {
-            $.meshOwner = meshOwner;
+            return meshOwner(Output.of(meshOwner));
+        }
+
+        /**
+         * @param name The name of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags A map of tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetVirtualServiceArgs build() {

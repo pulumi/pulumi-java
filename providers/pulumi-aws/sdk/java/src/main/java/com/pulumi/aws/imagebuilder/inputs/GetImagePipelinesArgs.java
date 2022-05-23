@@ -4,10 +4,10 @@
 package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetImagePipelinesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetImagePipelinesFilter> filters;
+    private Output</* @Nullable */ List<GetImagePipelinesFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetImagePipelinesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetImagePipelinesFilter>> filters() {
+        return this.filters;
     }
 
     private GetImagePipelinesArgs() {}
@@ -60,9 +60,19 @@ public final class GetImagePipelinesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetImagePipelinesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetImagePipelinesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetImagePipelinesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

@@ -16,10 +16,10 @@ import com.pulumi.aws.memorydb.outputs.GetParameterGroupResult;
 import com.pulumi.aws.memorydb.outputs.GetSnapshotResult;
 import com.pulumi.aws.memorydb.outputs.GetSubnetGroupResult;
 import com.pulumi.aws.memorydb.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MemorydbFunctions {
     /**
@@ -49,7 +49,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAclResult> getAcl(GetAclArgs args) {
+    public static Output<GetAclResult> getAcl(GetAclArgs args) {
         return getAcl(args, InvokeOptions.Empty);
     }
     /**
@@ -79,8 +79,8 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAclResult> getAcl(GetAclArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getAcl:getAcl", TypeShape.of(GetAclResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAclResult> getAcl(GetAclArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getAcl:getAcl", TypeShape.of(GetAclResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Cluster.
@@ -109,7 +109,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -139,8 +139,8 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Parameter Group.
@@ -169,7 +169,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
+    public static Output<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
         return getParameterGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -199,8 +199,8 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getParameterGroup:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getParameterGroup:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Snapshot.
@@ -229,7 +229,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -259,8 +259,8 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Subnet Group.
@@ -289,7 +289,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
         return getSubnetGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -319,8 +319,8 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB User.
@@ -349,7 +349,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -379,7 +379,7 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:memorydb/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:memorydb/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

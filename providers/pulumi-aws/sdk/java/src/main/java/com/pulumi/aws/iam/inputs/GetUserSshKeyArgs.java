@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encoding", required=true)
-    private String encoding;
+    private Output<String> encoding;
 
     /**
      * @return Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
      * 
      */
-    public String encoding() {
+    public Output<String> encoding() {
         return this.encoding;
     }
 
@@ -32,13 +33,13 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sshPublicKeyId", required=true)
-    private String sshPublicKeyId;
+    private Output<String> sshPublicKeyId;
 
     /**
      * @return The unique identifier for the SSH public key.
      * 
      */
-    public String sshPublicKeyId() {
+    public Output<String> sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
@@ -47,13 +48,13 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="username", required=true)
-    private String username;
+    private Output<String> username;
 
     /**
      * @return The name of the IAM user associated with the SSH public key.
      * 
      */
-    public String username() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -89,8 +90,29 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder encoding(String encoding) {
+        public Builder encoding(Output<String> encoding) {
             $.encoding = encoding;
+            return this;
+        }
+
+        /**
+         * @param encoding Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
+        }
+
+        /**
+         * @param sshPublicKeyId The unique identifier for the SSH public key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sshPublicKeyId(Output<String> sshPublicKeyId) {
+            $.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sshPublicKeyId(String sshPublicKeyId) {
-            $.sshPublicKeyId = sshPublicKeyId;
+            return sshPublicKeyId(Output.of(sshPublicKeyId));
+        }
+
+        /**
+         * @param username The name of the IAM user associated with the SSH public key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder username(Output<String> username) {
+            $.username = username;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetUserSshKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder username(String username) {
-            $.username = username;
-            return this;
+            return username(Output.of(username));
         }
 
         public GetUserSshKeyArgs build() {

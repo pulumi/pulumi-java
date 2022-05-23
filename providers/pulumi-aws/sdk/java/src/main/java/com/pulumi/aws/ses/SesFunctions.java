@@ -9,11 +9,11 @@ import com.pulumi.aws.ses.inputs.GetEmailIdentityArgs;
 import com.pulumi.aws.ses.outputs.GetActiveReceiptRuleSetResult;
 import com.pulumi.aws.ses.outputs.GetDomainIdentityResult;
 import com.pulumi.aws.ses.outputs.GetEmailIdentityResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class SesFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet() {
+    public static Output<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet() {
         return getActiveReceiptRuleSet(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args) {
+    public static Output<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args) {
         return getActiveReceiptRuleSet(args, InvokeOptions.Empty);
     }
     /**
@@ -97,8 +97,8 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ses/getActiveReceiptRuleSet:getActiveReceiptRuleSet", TypeShape.of(GetActiveReceiptRuleSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ses/getActiveReceiptRuleSet:getActiveReceiptRuleSet", TypeShape.of(GetActiveReceiptRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve the SES domain identity
@@ -127,7 +127,7 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args) {
+    public static Output<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args) {
         return getDomainIdentity(args, InvokeOptions.Empty);
     }
     /**
@@ -157,8 +157,8 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ses/getDomainIdentity:getDomainIdentity", TypeShape.of(GetDomainIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ses/getDomainIdentity:getDomainIdentity", TypeShape.of(GetDomainIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve the active SES email identity
@@ -187,7 +187,7 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args) {
+    public static Output<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args) {
         return getEmailIdentity(args, InvokeOptions.Empty);
     }
     /**
@@ -217,7 +217,7 @@ public final class SesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ses/getEmailIdentity:getEmailIdentity", TypeShape.of(GetEmailIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ses/getEmailIdentity:getEmailIdentity", TypeShape.of(GetEmailIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

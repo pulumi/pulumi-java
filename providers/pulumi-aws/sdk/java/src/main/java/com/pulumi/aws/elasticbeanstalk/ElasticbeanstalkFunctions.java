@@ -10,10 +10,10 @@ import com.pulumi.aws.elasticbeanstalk.inputs.GetSolutionStackArgs;
 import com.pulumi.aws.elasticbeanstalk.outputs.GetApplicationResult;
 import com.pulumi.aws.elasticbeanstalk.outputs.GetHostedZoneResult;
 import com.pulumi.aws.elasticbeanstalk.outputs.GetSolutionStackResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ElasticbeanstalkFunctions {
     /**
@@ -45,7 +45,7 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticbeanstalk/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ID of an [elastic beanstalk hosted zone](http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region).
@@ -105,7 +105,7 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone() {
+    public static Output<GetHostedZoneResult> getHostedZone() {
         return getHostedZone(GetHostedZoneArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args) {
+    public static Output<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args) {
         return getHostedZone(args, InvokeOptions.Empty);
     }
     /**
@@ -161,8 +161,8 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getHostedZone:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticbeanstalk/getHostedZone:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the name of a elastic beanstalk solution stack.
@@ -192,7 +192,7 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args) {
+    public static Output<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args) {
         return getSolutionStack(args, InvokeOptions.Empty);
     }
     /**
@@ -223,7 +223,7 @@ public final class ElasticbeanstalkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getSolutionStack:getSolutionStack", TypeShape.of(GetSolutionStackResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticbeanstalk/getSolutionStack:getSolutionStack", TypeShape.of(GetSolutionStackResult.class), args, Utilities.withVersion(options));
     }
 }

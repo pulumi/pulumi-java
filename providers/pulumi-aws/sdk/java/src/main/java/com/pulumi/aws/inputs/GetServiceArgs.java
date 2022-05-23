@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dnsName")
-    private @Nullable String dnsName;
+    private Output</* @Nullable */ String> dnsName;
 
     /**
      * @return DNS name of the service (_e.g.,_ `rds.us-east-1.amazonaws.com`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
      * 
      */
-    public Optional<String> dnsName() {
-        return Optional.ofNullable(this.dnsName);
+    public Output</* @Nullable */ String> dnsName() {
+        return this.dnsName;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return Region of the service (_e.g.,_ `us-west-2`, `ap-northeast-1`).
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reverseDnsName")
-    private @Nullable String reverseDnsName;
+    private Output</* @Nullable */ String> reverseDnsName;
 
     /**
      * @return Reverse DNS name of the service (_e.g.,_ `com.amazonaws.us-west-2.s3`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
      * 
      */
-    public Optional<String> reverseDnsName() {
-        return Optional.ofNullable(this.reverseDnsName);
+    public Output</* @Nullable */ String> reverseDnsName() {
+        return this.reverseDnsName;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reverseDnsPrefix")
-    private @Nullable String reverseDnsPrefix;
+    private Output</* @Nullable */ String> reverseDnsPrefix;
 
     /**
      * @return Prefix of the service (_e.g.,_ `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
      * 
      */
-    public Optional<String> reverseDnsPrefix() {
-        return Optional.ofNullable(this.reverseDnsPrefix);
+    public Output</* @Nullable */ String> reverseDnsPrefix() {
+        return this.reverseDnsPrefix;
     }
 
     /**
@@ -79,14 +79,14 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceId")
-    private @Nullable String serviceId;
+    private Output</* @Nullable */ String> serviceId;
 
     /**
      * @return Service (_e.g.,_ `s3`, `rds`, `ec2`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
      * 
      */
-    public Optional<String> serviceId() {
-        return Optional.ofNullable(this.serviceId);
+    public Output</* @Nullable */ String> serviceId() {
+        return this.serviceId;
     }
 
     private GetServiceArgs() {}
@@ -123,8 +123,29 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dnsName(@Nullable String dnsName) {
+        public Builder dnsName(Output</* @Nullable */ String> dnsName) {
             $.dnsName = dnsName;
+            return this;
+        }
+
+        /**
+         * @param dnsName DNS name of the service (_e.g.,_ `rds.us-east-1.amazonaws.com`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsName(@Nullable String dnsName) {
+            return dnsName(Output.of(dnsName));
+        }
+
+        /**
+         * @param region Region of the service (_e.g.,_ `us-west-2`, `ap-northeast-1`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(Output</* @Nullable */ String> region) {
+            $.region = region;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder region(@Nullable String region) {
-            $.region = region;
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param reverseDnsName Reverse DNS name of the service (_e.g.,_ `com.amazonaws.us-west-2.s3`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reverseDnsName(Output</* @Nullable */ String> reverseDnsName) {
+            $.reverseDnsName = reverseDnsName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder reverseDnsName(@Nullable String reverseDnsName) {
-            $.reverseDnsName = reverseDnsName;
+            return reverseDnsName(Output.of(reverseDnsName));
+        }
+
+        /**
+         * @param reverseDnsPrefix Prefix of the service (_e.g.,_ `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reverseDnsPrefix(Output</* @Nullable */ String> reverseDnsPrefix) {
+            $.reverseDnsPrefix = reverseDnsPrefix;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder reverseDnsPrefix(@Nullable String reverseDnsPrefix) {
-            $.reverseDnsPrefix = reverseDnsPrefix;
+            return reverseDnsPrefix(Output.of(reverseDnsPrefix));
+        }
+
+        /**
+         * @param serviceId Service (_e.g.,_ `s3`, `rds`, `ec2`). One of `dns_name`, `reverse_dns_name`, or `service_id` is required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceId(Output</* @Nullable */ String> serviceId) {
+            $.serviceId = serviceId;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceId(@Nullable String serviceId) {
-            $.serviceId = serviceId;
-            return this;
+            return serviceId(Output.of(serviceId));
         }
 
         public GetServiceArgs build() {

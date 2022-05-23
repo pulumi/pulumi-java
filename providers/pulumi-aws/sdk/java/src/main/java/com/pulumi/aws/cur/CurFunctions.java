@@ -6,10 +6,10 @@ package com.pulumi.aws.cur;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cur.inputs.GetReportDefinitionArgs;
 import com.pulumi.aws.cur.outputs.GetReportDefinitionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CurFunctions {
     /**
@@ -43,7 +43,7 @@ public final class CurFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
+    public static Output<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
         return getReportDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class CurFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cur/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cur/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

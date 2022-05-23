@@ -5,11 +5,11 @@ package com.pulumi.aws.ecrpublic;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ecrpublic.outputs.GetAuthorizationTokenResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class EcrpublicFunctions {
     /**
@@ -37,7 +37,7 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken() {
         return getAuthorizationToken(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +65,7 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args) {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args) {
         return getAuthorizationToken(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +93,7 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecrpublic/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecrpublic/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
 }

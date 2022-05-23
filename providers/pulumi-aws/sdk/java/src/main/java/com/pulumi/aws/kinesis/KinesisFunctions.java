@@ -10,10 +10,10 @@ import com.pulumi.aws.kinesis.inputs.GetStreamConsumerArgs;
 import com.pulumi.aws.kinesis.outputs.GetFirehoseDeliveryStreamResult;
 import com.pulumi.aws.kinesis.outputs.GetStreamConsumerResult;
 import com.pulumi.aws.kinesis.outputs.GetStreamResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KinesisFunctions {
     /**
@@ -45,7 +45,7 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args) {
+    public static Output<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args) {
         return getFirehoseDeliveryStream(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kinesis/getFirehoseDeliveryStream:getFirehoseDeliveryStream", TypeShape.of(GetFirehoseDeliveryStreamResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kinesis/getFirehoseDeliveryStream:getFirehoseDeliveryStream", TypeShape.of(GetFirehoseDeliveryStreamResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a Kinesis Stream for use in other
@@ -110,7 +110,7 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+    public static Output<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kinesis/getStream:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kinesis/getStream:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a Kinesis Stream Consumer.
@@ -176,7 +176,7 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args) {
+    public static Output<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args) {
         return getStreamConsumer(args, InvokeOptions.Empty);
     }
     /**
@@ -209,7 +209,7 @@ public final class KinesisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kinesis/getStreamConsumer:getStreamConsumer", TypeShape.of(GetStreamConsumerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kinesis/getStreamConsumer:getStreamConsumer", TypeShape.of(GetStreamConsumerResult.class), args, Utilities.withVersion(options));
     }
 }

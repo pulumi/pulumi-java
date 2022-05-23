@@ -12,10 +12,10 @@ import com.pulumi.aws.waf.outputs.GetIpsetResult;
 import com.pulumi.aws.waf.outputs.GetRateBasedRuleResult;
 import com.pulumi.aws.waf.outputs.GetRuleResult;
 import com.pulumi.aws.waf.outputs.GetWebAclResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class WafFunctions {
     /**
@@ -45,7 +45,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args) {
         return getIpset(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:waf/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:waf/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
@@ -105,7 +105,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedRuleResult> getRateBasedRule(GetRateBasedRuleArgs args) {
+    public static Output<GetRateBasedRuleResult> getRateBasedRule(GetRateBasedRuleArgs args) {
         return getRateBasedRule(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedRuleResult> getRateBasedRule(GetRateBasedRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:waf/getRateBasedRule:getRateBasedRule", TypeShape.of(GetRateBasedRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRateBasedRuleResult> getRateBasedRule(GetRateBasedRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:waf/getRateBasedRule:getRateBasedRule", TypeShape.of(GetRateBasedRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
@@ -165,7 +165,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -195,8 +195,8 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:waf/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:waf/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
@@ -225,7 +225,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
         return getWebAcl(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +255,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:waf/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:waf/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

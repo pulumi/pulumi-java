@@ -22,10 +22,10 @@ import com.pulumi.aws.connect.outputs.GetLambdaFunctionAssociationResult;
 import com.pulumi.aws.connect.outputs.GetPromptResult;
 import com.pulumi.aws.connect.outputs.GetQueueResult;
 import com.pulumi.aws.connect.outputs.GetQuickConnectResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConnectFunctions {
     /**
@@ -59,7 +59,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args) {
+    public static Output<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args) {
         return getBotAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -93,8 +93,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Contact Flow.
@@ -150,7 +150,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
         return getContactFlow(args, InvokeOptions.Empty);
     }
     /**
@@ -207,8 +207,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getContactFlow:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getContactFlow:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Contact Flow Module.
@@ -264,7 +264,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
         return getContactFlowModule(args, InvokeOptions.Empty);
     }
     /**
@@ -321,8 +321,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getContactFlowModule:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getContactFlowModule:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Hours of Operation.
@@ -378,7 +378,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
         return getHoursOfOperation(args, InvokeOptions.Empty);
     }
     /**
@@ -435,8 +435,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Instance.
@@ -490,7 +490,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance() {
+    public static Output<GetInstanceResult> getInstance() {
         return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -545,7 +545,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -600,8 +600,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Connect Lambda Function Association.
@@ -631,7 +631,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args) {
+    public static Output<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args) {
         return getLambdaFunctionAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -662,8 +662,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Prompt.
@@ -695,7 +695,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args) {
+    public static Output<GetPromptResult> getPrompt(GetPromptArgs args) {
         return getPrompt(args, InvokeOptions.Empty);
     }
     /**
@@ -728,8 +728,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Queue.
@@ -785,7 +785,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -842,8 +842,8 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Quick Connect.
@@ -899,7 +899,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
         return getQuickConnect(args, InvokeOptions.Empty);
     }
     /**
@@ -956,7 +956,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:connect/getQuickConnect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getQuickConnect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
     }
 }

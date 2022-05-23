@@ -17,11 +17,11 @@ import com.pulumi.aws.eks.outputs.GetClusterResult;
 import com.pulumi.aws.eks.outputs.GetClustersResult;
 import com.pulumi.aws.eks.outputs.GetNodeGroupResult;
 import com.pulumi.aws.eks.outputs.GetNodeGroupsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class EksFunctions {
     /**
@@ -53,7 +53,7 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+    public static Output<GetAddonResult> getAddon(GetAddonArgs args) {
         return getAddon(args, InvokeOptions.Empty);
     }
     /**
@@ -85,8 +85,8 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getAddon:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getAddon:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a specific EKS add-on version compatible with an EKS cluster version.
@@ -130,7 +130,7 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args) {
+    public static Output<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args) {
         return getAddonVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -175,8 +175,8 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getAddonVersion:getAddonVersion", TypeShape.of(GetAddonVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getAddonVersion:getAddonVersion", TypeShape.of(GetAddonVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about an EKS Cluster.
@@ -208,7 +208,7 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -241,8 +241,8 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an authentication token to communicate with an EKS cluster.
@@ -253,7 +253,7 @@ public final class EksFunctions {
      * server configured.
      * 
      */
-    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args) {
+    public static Output<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args) {
         return getClusterAuth(args, InvokeOptions.Empty);
     }
     /**
@@ -265,29 +265,29 @@ public final class EksFunctions {
      * server configured.
      * 
      */
-    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getClusterAuth:getClusterAuth", TypeShape.of(GetClusterAuthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getClusterAuth:getClusterAuth", TypeShape.of(GetClusterAuthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve EKS Clusters list
      * 
      */
-    public static CompletableFuture<GetClustersResult> getClusters() {
+    public static Output<GetClustersResult> getClusters() {
         return getClusters(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieve EKS Clusters list
      * 
      */
-    public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args) {
+    public static Output<GetClustersResult> getClusters(InvokeArgs args) {
         return getClusters(args, InvokeOptions.Empty);
     }
     /**
      * Retrieve EKS Clusters list
      * 
      */
-    public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClustersResult> getClusters(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about an EKS Node Group.
@@ -317,7 +317,7 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {
+    public static Output<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {
         return getNodeGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -348,21 +348,21 @@ public final class EksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroup:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getNodeGroup:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve the EKS Node Groups associated with a named EKS cluster. This will allow you to pass a list of Node Group names to other resources.
      * 
      */
-    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args) {
+    public static Output<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args) {
         return getNodeGroups(args, InvokeOptions.Empty);
     }
     /**
      * Retrieve the EKS Node Groups associated with a named EKS cluster. This will allow you to pass a list of Node Group names to other resources.
      * 
      */
-    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroups:getNodeGroups", TypeShape.of(GetNodeGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:eks/getNodeGroups:getNodeGroups", TypeShape.of(GetNodeGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

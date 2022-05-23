@@ -12,10 +12,10 @@ import com.pulumi.aws.ecr.outputs.GetAuthorizationTokenResult;
 import com.pulumi.aws.ecr.outputs.GetCredentialsResult;
 import com.pulumi.aws.ecr.outputs.GetImageResult;
 import com.pulumi.aws.ecr.outputs.GetRepositoryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EcrFunctions {
     /**
@@ -43,7 +43,7 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken() {
         return getAuthorizationToken(GetAuthorizationTokenArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
         return getAuthorizationToken(args, InvokeOptions.Empty);
     }
     /**
@@ -99,14 +99,14 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecr/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecr/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetCredentialsResult> getCredentials(GetCredentialsArgs args) {
+    public static Output<GetCredentialsResult> getCredentials(GetCredentialsArgs args) {
         return getCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCredentialsResult> getCredentials(GetCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecr/getCredentials:getCredentials", TypeShape.of(GetCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCredentialsResult> getCredentials(GetCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecr/getCredentials:getCredentials", TypeShape.of(GetCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
@@ -136,7 +136,7 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -167,8 +167,8 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecr/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecr/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.
@@ -197,7 +197,7 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -227,7 +227,7 @@ public final class EcrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecr/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecr/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

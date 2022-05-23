@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,21 +20,21 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier", required=true)
-    private String dbInstanceIdentifier;
+    private Output<String> dbInstanceIdentifier;
 
     /**
      * @return The name of the RDS instance
      * 
      */
-    public String dbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetInstanceArgs() {}
@@ -68,14 +68,28 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Output<String> dbInstanceIdentifier) {
             $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        /**
+         * @param dbInstanceIdentifier The name of the RDS instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
+        }
+
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetInstanceArgs build() {

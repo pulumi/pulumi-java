@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVpnAttachmentFilter> filters;
+    private Output</* @Nullable */ List<GetVpnAttachmentFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetVpnAttachmentFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVpnAttachmentFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transitGatewayId")
-    private @Nullable String transitGatewayId;
+    private Output</* @Nullable */ String> transitGatewayId;
 
     /**
      * @return Identifier of the EC2 Transit Gateway.
      * 
      */
-    public Optional<String> transitGatewayId() {
-        return Optional.ofNullable(this.transitGatewayId);
+    public Output</* @Nullable */ String> transitGatewayId() {
+        return this.transitGatewayId;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vpnConnectionId")
-    private @Nullable String vpnConnectionId;
+    private Output</* @Nullable */ String> vpnConnectionId;
 
     /**
      * @return Identifier of the EC2 VPN Connection.
      * 
      */
-    public Optional<String> vpnConnectionId() {
-        return Optional.ofNullable(this.vpnConnectionId);
+    public Output</* @Nullable */ String> vpnConnectionId() {
+        return this.vpnConnectionId;
     }
 
     private GetVpnAttachmentArgs() {}
@@ -110,9 +110,19 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpnAttachmentFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetVpnAttachmentFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetVpnAttachmentFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -131,8 +141,29 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
+            return this;
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param transitGatewayId Identifier of the EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayId(Output</* @Nullable */ String> transitGatewayId) {
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
 
@@ -143,7 +174,17 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            $.transitGatewayId = transitGatewayId;
+            return transitGatewayId(Output.of(transitGatewayId));
+        }
+
+        /**
+         * @param vpnConnectionId Identifier of the EC2 VPN Connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnConnectionId(Output</* @Nullable */ String> vpnConnectionId) {
+            $.vpnConnectionId = vpnConnectionId;
             return this;
         }
 
@@ -154,8 +195,7 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
-            $.vpnConnectionId = vpnConnectionId;
-            return this;
+            return vpnConnectionId(Output.of(vpnConnectionId));
         }
 
         public GetVpnAttachmentArgs build() {

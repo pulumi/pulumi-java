@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.secretsmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecretRotationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
     /**
      * @return Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
      * 
      */
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSecretRotationArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder secretId(String secretId) {
+        public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
             return this;
+        }
+
+        /**
+         * @param secretId Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
         }
 
         public GetSecretRotationArgs build() {

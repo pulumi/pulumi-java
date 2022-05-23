@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantTokens")
-    private @Nullable List<String> grantTokens;
+    private Output</* @Nullable */ List<String>> grantTokens;
 
     /**
      * @return List of grant tokens
      * 
      */
-    public Optional<List<String>> grantTokens() {
-        return Optional.ofNullable(this.grantTokens);
+    public Output</* @Nullable */ List<String>> grantTokens() {
+        return this.grantTokens;
     }
 
     /**
@@ -39,7 +39,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return Key identifier which can be one of the following format:
@@ -49,7 +49,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -84,9 +84,19 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder grantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(Output</* @Nullable */ List<String>> grantTokens) {
             $.grantTokens = grantTokens;
             return this;
+        }
+
+        /**
+         * @param grantTokens List of grant tokens
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantTokens(@Nullable List<String> grantTokens) {
+            return grantTokens(Output.of(grantTokens));
         }
 
         /**
@@ -109,9 +119,23 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
+        }
+
+        /**
+         * @param keyId Key identifier which can be one of the following format:
+         * * Key ID. E.g: `1234abcd-12ab-34cd-56ef-1234567890ab`
+         * * Key ARN. E.g.: `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+         * * Alias name. E.g.: `alias/my-key`
+         * * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
 
         public GetKeyArgs build() {

@@ -10,10 +10,10 @@ import com.pulumi.aws.glue.inputs.GetScriptArgs;
 import com.pulumi.aws.glue.outputs.GetConnectionResult;
 import com.pulumi.aws.glue.outputs.GetDataCatalogEncryptionSettingsResult;
 import com.pulumi.aws.glue.outputs.GetScriptResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GlueFunctions {
     /**
@@ -43,7 +43,7 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:glue/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:glue/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about AWS Glue Data Catalog Encryption Settings.
@@ -103,7 +103,7 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args) {
+    public static Output<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args) {
         return getDataCatalogEncryptionSettings(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:glue/getDataCatalogEncryptionSettings:getDataCatalogEncryptionSettings", TypeShape.of(GetDataCatalogEncryptionSettingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:glue/getDataCatalogEncryptionSettings:getDataCatalogEncryptionSettings", TypeShape.of(GetDataCatalogEncryptionSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
@@ -342,7 +342,7 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
+    public static Output<GetScriptResult> getScript(GetScriptArgs args) {
         return getScript(args, InvokeOptions.Empty);
     }
     /**
@@ -551,7 +551,7 @@ public final class GlueFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:glue/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:glue/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }
 }

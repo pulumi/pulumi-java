@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return The name of the lambda function.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -34,13 +34,13 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="input", required=true)
-    private String input;
+    private Output<String> input;
 
     /**
      * @return A string in JSON format that is passed as payload to the lambda function.
      * 
      */
-    public String input() {
+    public Output<String> input() {
         return this.input;
     }
 
@@ -50,15 +50,15 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-    private @Nullable String qualifier;
+    private Output</* @Nullable */ String> qualifier;
 
     /**
      * @return The qualifier (a.k.a version) of the lambda function. Defaults
      * to `$LATEST`.
      * 
      */
-    public Optional<String> qualifier() {
-        return Optional.ofNullable(this.qualifier);
+    public Output</* @Nullable */ String> qualifier() {
+        return this.qualifier;
     }
 
     private GetInvocationArgs() {}
@@ -93,8 +93,29 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName The name of the lambda function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param input A string in JSON format that is passed as payload to the lambda function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder input(Output<String> input) {
+            $.input = input;
             return this;
         }
 
@@ -105,7 +126,18 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder input(String input) {
-            $.input = input;
+            return input(Output.of(input));
+        }
+
+        /**
+         * @param qualifier The qualifier (a.k.a version) of the lambda function. Defaults
+         * to `$LATEST`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder qualifier(Output</* @Nullable */ String> qualifier) {
+            $.qualifier = qualifier;
             return this;
         }
 
@@ -117,8 +149,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder qualifier(@Nullable String qualifier) {
-            $.qualifier = qualifier;
-            return this;
+            return qualifier(Output.of(qualifier));
         }
 
         public GetInvocationArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.aws.cloudtrail.inputs.GetFunctionArgs;
 import com.pulumi.aws.cloudtrail.inputs.GetServiceAccountArgs;
 import com.pulumi.aws.cloudtrail.outputs.GetFunctionResult;
 import com.pulumi.aws.cloudtrail.outputs.GetServiceAccountResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudtrailFunctions {
     /**
@@ -47,7 +47,7 @@ public final class CloudtrailFunctions {
      * 
      */
     @Deprecated /* aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class CloudtrailFunctions {
      * 
      */
     @Deprecated /* aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudtrail/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudtrail/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the Account ID of the [AWS CloudTrail Service Account](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html)
@@ -145,7 +145,7 @@ public final class CloudtrailFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
+    public static Output<GetServiceAccountResult> getServiceAccount() {
         return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class CloudtrailFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
         return getServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -269,7 +269,7 @@ public final class CloudtrailFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudtrail/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudtrail/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

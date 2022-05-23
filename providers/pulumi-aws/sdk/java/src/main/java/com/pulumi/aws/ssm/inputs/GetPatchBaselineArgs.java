@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.ssm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="defaultBaseline")
-    private @Nullable Boolean defaultBaseline;
+    private Output</* @Nullable */ Boolean> defaultBaseline;
 
     /**
      * @return Filters the results against the baselines default_baseline field.
      * 
      */
-    public Optional<Boolean> defaultBaseline() {
-        return Optional.ofNullable(this.defaultBaseline);
+    public Output</* @Nullable */ Boolean> defaultBaseline() {
+        return this.defaultBaseline;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="namePrefix")
-    private @Nullable String namePrefix;
+    private Output</* @Nullable */ String> namePrefix;
 
     /**
      * @return Filter results by the baseline name prefix.
      * 
      */
-    public Optional<String> namePrefix() {
-        return Optional.ofNullable(this.namePrefix);
+    public Output</* @Nullable */ String> namePrefix() {
+        return this.namePrefix;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operatingSystem")
-    private @Nullable String operatingSystem;
+    private Output</* @Nullable */ String> operatingSystem;
 
     /**
      * @return The specified OS for the baseline.
      * 
      */
-    public Optional<String> operatingSystem() {
-        return Optional.ofNullable(this.operatingSystem);
+    public Output</* @Nullable */ String> operatingSystem() {
+        return this.operatingSystem;
     }
 
     /**
@@ -65,13 +65,13 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="owner", required=true)
-    private String owner;
+    private Output<String> owner;
 
     /**
      * @return The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
      * 
      */
-    public String owner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -108,8 +108,29 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder defaultBaseline(@Nullable Boolean defaultBaseline) {
+        public Builder defaultBaseline(Output</* @Nullable */ Boolean> defaultBaseline) {
             $.defaultBaseline = defaultBaseline;
+            return this;
+        }
+
+        /**
+         * @param defaultBaseline Filters the results against the baselines default_baseline field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultBaseline(@Nullable Boolean defaultBaseline) {
+            return defaultBaseline(Output.of(defaultBaseline));
+        }
+
+        /**
+         * @param namePrefix Filter results by the baseline name prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namePrefix(Output</* @Nullable */ String> namePrefix) {
+            $.namePrefix = namePrefix;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder namePrefix(@Nullable String namePrefix) {
-            $.namePrefix = namePrefix;
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        /**
+         * @param operatingSystem The specified OS for the baseline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatingSystem(Output</* @Nullable */ String> operatingSystem) {
+            $.operatingSystem = operatingSystem;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder operatingSystem(@Nullable String operatingSystem) {
-            $.operatingSystem = operatingSystem;
+            return operatingSystem(Output.of(operatingSystem));
+        }
+
+        /**
+         * @param owner The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owner(Output<String> owner) {
+            $.owner = owner;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder owner(String owner) {
-            $.owner = owner;
-            return this;
+            return owner(Output.of(owner));
         }
 
         public GetPatchBaselineArgs build() {

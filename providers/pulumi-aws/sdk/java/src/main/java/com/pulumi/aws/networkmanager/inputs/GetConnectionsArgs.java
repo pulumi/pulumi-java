@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceId")
-    private @Nullable String deviceId;
+    private Output</* @Nullable */ String> deviceId;
 
     /**
      * @return The ID of the device of the connections to retrieve.
      * 
      */
-    public Optional<String> deviceId() {
-        return Optional.ofNullable(this.deviceId);
+    public Output</* @Nullable */ String> deviceId() {
+        return this.deviceId;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the Global Network of the connections to retrieve.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -50,14 +50,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Restricts the list to the connections with these tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetConnectionsArgs() {}
@@ -92,8 +92,29 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deviceId(@Nullable String deviceId) {
+        public Builder deviceId(Output</* @Nullable */ String> deviceId) {
             $.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * @param deviceId The ID of the device of the connections to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(@Nullable String deviceId) {
+            return deviceId(Output.of(deviceId));
+        }
+
+        /**
+         * @param globalNetworkId The ID of the Global Network of the connections to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder globalNetworkId(String globalNetworkId) {
-            $.globalNetworkId = globalNetworkId;
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param tags Restricts the list to the connections with these tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetConnectionsArgs build() {

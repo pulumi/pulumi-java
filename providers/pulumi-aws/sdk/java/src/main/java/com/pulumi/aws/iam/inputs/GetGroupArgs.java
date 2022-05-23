@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return The friendly IAM group name to match.
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -57,9 +58,19 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupName(String groupName) {
+        public Builder groupName(Output<String> groupName) {
             $.groupName = groupName;
             return this;
+        }
+
+        /**
+         * @param groupName The friendly IAM group name to match.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
 
         public GetGroupArgs build() {

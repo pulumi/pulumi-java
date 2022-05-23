@@ -20,10 +20,10 @@ import com.pulumi.aws.cloudfront.outputs.GetOriginAccessIdentityResult;
 import com.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyResult;
 import com.pulumi.aws.cloudfront.outputs.GetRealtimeLogConfigResult;
 import com.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudfrontFunctions {
     /**
@@ -53,7 +53,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy() {
+    public static Output<GetCachePolicyResult> getCachePolicy() {
         return getCachePolicy(GetCachePolicyArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -83,7 +83,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args) {
+    public static Output<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args) {
         return getCachePolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -113,8 +113,8 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getCachePolicy:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getCachePolicy:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve information about a CloudFront distribution.
@@ -143,7 +143,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args) {
+    public static Output<GetDistributionResult> getDistribution(GetDistributionArgs args) {
         return getDistribution(args, InvokeOptions.Empty);
     }
     /**
@@ -173,8 +173,8 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getDistribution:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDistributionResult> getDistribution(GetDistributionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getDistribution:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a CloudFront Function.
@@ -205,7 +205,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
     /**
@@ -237,8 +237,8 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The CloudFront Log Delivery Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS `awslogsdelivery` account for CloudFront bucket logging.
@@ -281,7 +281,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId() {
+    public static Output<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId() {
         return getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -325,7 +325,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args) {
+    public static Output<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args) {
         return getLogDeliveryCanonicalUserId(args, InvokeOptions.Empty);
     }
     /**
@@ -369,14 +369,14 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getLogDeliveryCanonicalUserId:getLogDeliveryCanonicalUserId", TypeShape.of(GetLogDeliveryCanonicalUserIdResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getLogDeliveryCanonicalUserId:getLogDeliveryCanonicalUserId", TypeShape.of(GetLogDeliveryCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args) {
+    public static Output<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args) {
         return getOriginAccessIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginAccessIdentity:getOriginAccessIdentity", TypeShape.of(GetOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getOriginAccessIdentity:getOriginAccessIdentity", TypeShape.of(GetOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -405,7 +405,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy() {
+    public static Output<GetOriginRequestPolicyResult> getOriginRequestPolicy() {
         return getOriginRequestPolicy(GetOriginRequestPolicyArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -435,7 +435,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args) {
+    public static Output<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args) {
         return getOriginRequestPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -465,8 +465,8 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginRequestPolicy:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getOriginRequestPolicy:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides a CloudFront real-time log configuration resource.
@@ -495,7 +495,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args) {
+    public static Output<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args) {
         return getRealtimeLogConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -525,8 +525,8 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getRealtimeLogConfig:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getRealtimeLogConfig:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve information about a CloudFront cache policy.
@@ -555,7 +555,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy() {
+    public static Output<GetResponseHeadersPolicyResult> getResponseHeadersPolicy() {
         return getResponseHeadersPolicy(GetResponseHeadersPolicyArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -585,7 +585,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args) {
+    public static Output<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args) {
         return getResponseHeadersPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -615,7 +615,7 @@ public final class CloudfrontFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudfront/getResponseHeadersPolicy:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudfront/getResponseHeadersPolicy:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

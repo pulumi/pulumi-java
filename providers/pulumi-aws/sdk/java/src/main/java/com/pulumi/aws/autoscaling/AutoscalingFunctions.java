@@ -8,10 +8,10 @@ import com.pulumi.aws.autoscaling.inputs.GetAmiIdsArgs;
 import com.pulumi.aws.autoscaling.inputs.GetGroupArgs;
 import com.pulumi.aws.autoscaling.outputs.GetAmiIdsResult;
 import com.pulumi.aws.autoscaling.outputs.GetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AutoscalingFunctions {
     /**
@@ -60,7 +60,7 @@ public final class AutoscalingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds() {
+    public static Output<GetAmiIdsResult> getAmiIds() {
         return getAmiIds(GetAmiIdsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -109,7 +109,7 @@ public final class AutoscalingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
         return getAmiIds(args, InvokeOptions.Empty);
     }
     /**
@@ -158,8 +158,8 @@ public final class AutoscalingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:autoscaling/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:autoscaling/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing autoscaling group.
@@ -188,7 +188,7 @@ public final class AutoscalingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -218,7 +218,7 @@ public final class AutoscalingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:autoscaling/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:autoscaling/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

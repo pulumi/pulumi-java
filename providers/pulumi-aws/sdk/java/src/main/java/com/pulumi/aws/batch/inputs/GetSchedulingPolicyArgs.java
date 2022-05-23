@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the scheduling policy.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -35,14 +35,14 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetSchedulingPolicyArgs() {}
@@ -76,8 +76,29 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the scheduling policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetSchedulingPolicyArgs build() {

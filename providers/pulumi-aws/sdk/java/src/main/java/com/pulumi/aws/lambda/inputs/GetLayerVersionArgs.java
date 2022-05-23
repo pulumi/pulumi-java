@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibleArchitecture")
-    private @Nullable String compatibleArchitecture;
+    private Output</* @Nullable */ String> compatibleArchitecture;
 
     /**
      * @return Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
      * 
      */
-    public Optional<String> compatibleArchitecture() {
-        return Optional.ofNullable(this.compatibleArchitecture);
+    public Output</* @Nullable */ String> compatibleArchitecture() {
+        return this.compatibleArchitecture;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibleRuntime")
-    private @Nullable String compatibleRuntime;
+    private Output</* @Nullable */ String> compatibleRuntime;
 
     /**
      * @return Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
      * 
      */
-    public Optional<String> compatibleRuntime() {
-        return Optional.ofNullable(this.compatibleRuntime);
+    public Output</* @Nullable */ String> compatibleRuntime() {
+        return this.compatibleRuntime;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="layerName", required=true)
-    private String layerName;
+    private Output<String> layerName;
 
     /**
      * @return Name of the lambda layer.
      * 
      */
-    public String layerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
 
@@ -65,14 +65,14 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-    private @Nullable Integer version;
+    private Output</* @Nullable */ Integer> version;
 
     /**
      * @return Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
      * 
      */
-    public Optional<Integer> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ Integer> version() {
+        return this.version;
     }
 
     private GetLayerVersionArgs() {}
@@ -108,8 +108,29 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
+        public Builder compatibleArchitecture(Output</* @Nullable */ String> compatibleArchitecture) {
             $.compatibleArchitecture = compatibleArchitecture;
+            return this;
+        }
+
+        /**
+         * @param compatibleArchitecture Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
+            return compatibleArchitecture(Output.of(compatibleArchitecture));
+        }
+
+        /**
+         * @param compatibleRuntime Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compatibleRuntime(Output</* @Nullable */ String> compatibleRuntime) {
+            $.compatibleRuntime = compatibleRuntime;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compatibleRuntime(@Nullable String compatibleRuntime) {
-            $.compatibleRuntime = compatibleRuntime;
+            return compatibleRuntime(Output.of(compatibleRuntime));
+        }
+
+        /**
+         * @param layerName Name of the lambda layer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layerName(Output<String> layerName) {
+            $.layerName = layerName;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder layerName(String layerName) {
-            $.layerName = layerName;
+            return layerName(Output.of(layerName));
+        }
+
+        /**
+         * @param version Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ Integer> version) {
+            $.version = version;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder version(@Nullable Integer version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetLayerVersionArgs build() {

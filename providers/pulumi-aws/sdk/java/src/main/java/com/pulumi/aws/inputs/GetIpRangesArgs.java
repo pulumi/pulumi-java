@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-    private @Nullable List<String> regions;
+    private Output</* @Nullable */ List<String>> regions;
 
     /**
      * @return Filter IP ranges by regions (or include all regions, if
@@ -30,8 +30,8 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * (e.g., `eu-central-1`)
      * 
      */
-    public Optional<List<String>> regions() {
-        return Optional.ofNullable(this.regions);
+    public Output</* @Nullable */ List<String>> regions() {
+        return this.regions;
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services", required=true)
-    private List<String> services;
+    private Output<List<String>> services;
 
     /**
      * @return Filter IP ranges by services. Valid items are `amazon`
@@ -53,7 +53,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * [`service` attribute][2] documentation for other possible values.
      * 
      */
-    public List<String> services() {
+    public Output<List<String>> services() {
         return this.services;
     }
 
@@ -62,14 +62,14 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-    private @Nullable String url;
+    private Output</* @Nullable */ String> url;
 
     /**
      * @return Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
      * 
      */
-    public Optional<String> url() {
-        return Optional.ofNullable(this.url);
+    public Output</* @Nullable */ String> url() {
+        return this.url;
     }
 
     private GetIpRangesArgs() {}
@@ -106,9 +106,21 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
+        public Builder regions(Output</* @Nullable */ List<String>> regions) {
             $.regions = regions;
             return this;
+        }
+
+        /**
+         * @param regions Filter IP ranges by regions (or include all regions, if
+         * omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
+         * (e.g., `eu-central-1`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regions(@Nullable List<String> regions) {
+            return regions(Output.of(regions));
         }
 
         /**
@@ -133,9 +145,23 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder services(List<String> services) {
+        public Builder services(Output<List<String>> services) {
             $.services = services;
             return this;
+        }
+
+        /**
+         * @param services Filter IP ranges by services. Valid items are `amazon`
+         * (for amazon.com), `amazon_connect`, `api_gateway`, `cloud9`, `cloudfront`,
+         * `codebuild`, `dynamodb`, `ec2`, `ec2_instance_connect`, `globalaccelerator`,
+         * `route53`, `route53_healthchecks`, `s3` and `workspaces_gateways`. See the
+         * [`service` attribute][2] documentation for other possible values.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder services(List<String> services) {
+            return services(Output.of(services));
         }
 
         /**
@@ -158,9 +184,19 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder url(@Nullable String url) {
+        public Builder url(Output</* @Nullable */ String> url) {
             $.url = url;
             return this;
+        }
+
+        /**
+         * @param url Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder url(@Nullable String url) {
+            return url(Output.of(url));
         }
 
         public GetIpRangesArgs build() {

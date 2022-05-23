@@ -10,10 +10,10 @@ import com.pulumi.aws.redshift.inputs.GetServiceAccountArgs;
 import com.pulumi.aws.redshift.outputs.GetClusterResult;
 import com.pulumi.aws.redshift.outputs.GetOrderableClusterResult;
 import com.pulumi.aws.redshift.outputs.GetServiceAccountResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RedshiftFunctions {
     /**
@@ -63,7 +63,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -113,8 +113,8 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:redshift/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:redshift/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about Redshift Orderable Clusters and valid parameter combinations.
@@ -146,7 +146,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster() {
+    public static Output<GetOrderableClusterResult> getOrderableCluster() {
         return getOrderableCluster(GetOrderableClusterArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -179,7 +179,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args) {
+    public static Output<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args) {
         return getOrderableCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -212,8 +212,8 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:redshift/getOrderableCluster:getOrderableCluster", TypeShape.of(GetOrderableClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:redshift/getOrderableCluster:getOrderableCluster", TypeShape.of(GetOrderableClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the Account ID of the [AWS Redshift Service Account](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
@@ -274,7 +274,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
+    public static Output<GetServiceAccountResult> getServiceAccount() {
         return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -336,7 +336,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
         return getServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -398,7 +398,7 @@ public final class RedshiftFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:redshift/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:redshift/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

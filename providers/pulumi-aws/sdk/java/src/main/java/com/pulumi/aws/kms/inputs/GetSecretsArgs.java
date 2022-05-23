@@ -4,6 +4,7 @@
 package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.aws.kms.inputs.GetSecretsSecret;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secrets", required=true)
-    private List<GetSecretsSecret> secrets;
+    private Output<List<GetSecretsSecret>> secrets;
 
     /**
      * @return One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
      * 
      */
-    public List<GetSecretsSecret> secrets() {
+    public Output<List<GetSecretsSecret>> secrets() {
         return this.secrets;
     }
 
@@ -58,9 +59,19 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder secrets(List<GetSecretsSecret> secrets) {
+        public Builder secrets(Output<List<GetSecretsSecret>> secrets) {
             $.secrets = secrets;
             return this;
+        }
+
+        /**
+         * @param secrets One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secrets(List<GetSecretsSecret> secrets) {
+            return secrets(Output.of(secrets));
         }
 
         /**

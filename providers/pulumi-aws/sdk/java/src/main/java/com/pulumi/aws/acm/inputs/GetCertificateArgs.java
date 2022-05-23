@@ -3,13 +3,13 @@
 
 package com.pulumi.aws.acm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -37,14 +37,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyTypes")
-    private @Nullable List<String> keyTypes;
+    private Output</* @Nullable */ List<String>> keyTypes;
 
     /**
      * @return A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. See the [ACM API Reference](https://docs.aws.amazon.com/acm/latest/APIReference/API_CertificateDetail.html#ACM-Type-CertificateDetail-KeyAlgorithm) for supported key algorithms.
      * 
      */
-    public Optional<List<String>> keyTypes() {
-        return Optional.ofNullable(this.keyTypes);
+    public Output</* @Nullable */ List<String>> keyTypes() {
+        return this.keyTypes;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private Output</* @Nullable */ Boolean> mostRecent;
 
     /**
      * @return If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
      * 
      */
-    public Optional<Boolean> mostRecent() {
-        return Optional.ofNullable(this.mostRecent);
+    public Output</* @Nullable */ Boolean> mostRecent() {
+        return this.mostRecent;
     }
 
     /**
@@ -69,7 +69,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private Output</* @Nullable */ List<String>> statuses;
 
     /**
      * @return A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
@@ -77,8 +77,8 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * are returned.
      * 
      */
-    public Optional<List<String>> statuses() {
-        return Optional.ofNullable(this.statuses);
+    public Output</* @Nullable */ List<String>> statuses() {
+        return this.statuses;
     }
 
     /**
@@ -86,14 +86,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A mapping of tags for the resource.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -101,14 +101,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types")
-    private @Nullable List<String> types;
+    private Output</* @Nullable */ List<String>> types;
 
     /**
      * @return A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
      * 
      */
-    public Optional<List<String>> types() {
-        return Optional.ofNullable(this.types);
+    public Output</* @Nullable */ List<String>> types() {
+        return this.types;
     }
 
     private GetCertificateArgs() {}
@@ -146,8 +146,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(String domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
+            return this;
+        }
+
+        /**
+         * @param domain The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param keyTypes A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. See the [ACM API Reference](https://docs.aws.amazon.com/acm/latest/APIReference/API_CertificateDetail.html#ACM-Type-CertificateDetail-KeyAlgorithm) for supported key algorithms.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyTypes(Output</* @Nullable */ List<String>> keyTypes) {
+            $.keyTypes = keyTypes;
             return this;
         }
 
@@ -158,8 +179,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder keyTypes(@Nullable List<String> keyTypes) {
-            $.keyTypes = keyTypes;
-            return this;
+            return keyTypes(Output.of(keyTypes));
         }
 
         /**
@@ -178,8 +198,31 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
             $.mostRecent = mostRecent;
+            return this;
+        }
+
+        /**
+         * @param mostRecent If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
+            return mostRecent(Output.of(mostRecent));
+        }
+
+        /**
+         * @param statuses A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
+         * `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
+         * are returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(Output</* @Nullable */ List<String>> statuses) {
+            $.statuses = statuses;
             return this;
         }
 
@@ -192,8 +235,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder statuses(@Nullable List<String> statuses) {
-            $.statuses = statuses;
-            return this;
+            return statuses(Output.of(statuses));
         }
 
         /**
@@ -214,8 +256,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
+            return this;
+        }
+
+        /**
+         * @param tags A mapping of tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param types A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder types(Output</* @Nullable */ List<String>> types) {
+            $.types = types;
             return this;
         }
 
@@ -226,8 +289,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder types(@Nullable List<String> types) {
-            $.types = types;
-            return this;
+            return types(Output.of(types));
         }
 
         /**

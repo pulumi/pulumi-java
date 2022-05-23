@@ -6,10 +6,10 @@ package com.pulumi.aws.acm;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.acm.inputs.GetCertificateArgs;
 import com.pulumi.aws.acm.outputs.GetCertificateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AcmFunctions {
     /**
@@ -53,7 +53,7 @@ public final class AcmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +97,7 @@ public final class AcmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:acm/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:acm/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
 }

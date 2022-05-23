@@ -7,11 +7,11 @@ import com.pulumi.aws.lakeformation.inputs.GetPermissionsDataLocation;
 import com.pulumi.aws.lakeformation.inputs.GetPermissionsDatabase;
 import com.pulumi.aws.lakeformation.inputs.GetPermissionsTable;
 import com.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumns;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId")
-    private @Nullable String catalogId;
+    private Output</* @Nullable */ String> catalogId;
 
     /**
      * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    public Optional<String> catalogId() {
-        return Optional.ofNullable(this.catalogId);
+    public Output</* @Nullable */ String> catalogId() {
+        return this.catalogId;
     }
 
     /**
@@ -39,14 +39,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogResource")
-    private @Nullable Boolean catalogResource;
+    private Output</* @Nullable */ Boolean> catalogResource;
 
     /**
      * @return Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> catalogResource() {
-        return Optional.ofNullable(this.catalogResource);
+    public Output</* @Nullable */ Boolean> catalogResource() {
+        return this.catalogResource;
     }
 
     /**
@@ -54,14 +54,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataLocation")
-    private @Nullable GetPermissionsDataLocation dataLocation;
+    private Output</* @Nullable */ GetPermissionsDataLocation> dataLocation;
 
     /**
      * @return Configuration block for a data location resource. Detailed below.
      * 
      */
-    public Optional<GetPermissionsDataLocation> dataLocation() {
-        return Optional.ofNullable(this.dataLocation);
+    public Output</* @Nullable */ GetPermissionsDataLocation> dataLocation() {
+        return this.dataLocation;
     }
 
     /**
@@ -69,14 +69,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="database")
-    private @Nullable GetPermissionsDatabase database;
+    private Output</* @Nullable */ GetPermissionsDatabase> database;
 
     /**
      * @return Configuration block for a database resource. Detailed below.
      * 
      */
-    public Optional<GetPermissionsDatabase> database() {
-        return Optional.ofNullable(this.database);
+    public Output</* @Nullable */ GetPermissionsDatabase> database() {
+        return this.database;
     }
 
     /**
@@ -84,13 +84,13 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principal", required=true)
-    private String principal;
+    private Output<String> principal;
 
     /**
      * @return Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
      * 
      */
-    public String principal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -99,14 +99,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="table")
-    private @Nullable GetPermissionsTable table;
+    private Output</* @Nullable */ GetPermissionsTable> table;
 
     /**
      * @return Configuration block for a table resource. Detailed below.
      * 
      */
-    public Optional<GetPermissionsTable> table() {
-        return Optional.ofNullable(this.table);
+    public Output</* @Nullable */ GetPermissionsTable> table() {
+        return this.table;
     }
 
     /**
@@ -114,14 +114,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableWithColumns")
-    private @Nullable GetPermissionsTableWithColumns tableWithColumns;
+    private Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns;
 
     /**
      * @return Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    public Optional<GetPermissionsTableWithColumns> tableWithColumns() {
-        return Optional.ofNullable(this.tableWithColumns);
+    public Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns() {
+        return this.tableWithColumns;
     }
 
     private GetPermissionsArgs() {}
@@ -160,8 +160,29 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(@Nullable String catalogId) {
+        public Builder catalogId(Output</* @Nullable */ String> catalogId) {
             $.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(@Nullable String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param catalogResource Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogResource(Output</* @Nullable */ Boolean> catalogResource) {
+            $.catalogResource = catalogResource;
             return this;
         }
 
@@ -172,7 +193,17 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder catalogResource(@Nullable Boolean catalogResource) {
-            $.catalogResource = catalogResource;
+            return catalogResource(Output.of(catalogResource));
+        }
+
+        /**
+         * @param dataLocation Configuration block for a data location resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataLocation(Output</* @Nullable */ GetPermissionsDataLocation> dataLocation) {
+            $.dataLocation = dataLocation;
             return this;
         }
 
@@ -183,7 +214,17 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dataLocation(@Nullable GetPermissionsDataLocation dataLocation) {
-            $.dataLocation = dataLocation;
+            return dataLocation(Output.of(dataLocation));
+        }
+
+        /**
+         * @param database Configuration block for a database resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder database(Output</* @Nullable */ GetPermissionsDatabase> database) {
+            $.database = database;
             return this;
         }
 
@@ -194,7 +235,17 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder database(@Nullable GetPermissionsDatabase database) {
-            $.database = database;
+            return database(Output.of(database));
+        }
+
+        /**
+         * @param principal Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principal(Output<String> principal) {
+            $.principal = principal;
             return this;
         }
 
@@ -205,7 +256,17 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder principal(String principal) {
-            $.principal = principal;
+            return principal(Output.of(principal));
+        }
+
+        /**
+         * @param table Configuration block for a table resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder table(Output</* @Nullable */ GetPermissionsTable> table) {
+            $.table = table;
             return this;
         }
 
@@ -216,7 +277,17 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder table(@Nullable GetPermissionsTable table) {
-            $.table = table;
+            return table(Output.of(table));
+        }
+
+        /**
+         * @param tableWithColumns Configuration block for a table with columns resource. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableWithColumns(Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns) {
+            $.tableWithColumns = tableWithColumns;
             return this;
         }
 
@@ -227,8 +298,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableWithColumns(@Nullable GetPermissionsTableWithColumns tableWithColumns) {
-            $.tableWithColumns = tableWithColumns;
-            return this;
+            return tableWithColumns(Output.of(tableWithColumns));
         }
 
         public GetPermissionsArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.aws.acmpca.inputs.GetCertificateArgs;
 import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityArgs;
 import com.pulumi.aws.acmpca.outputs.GetCertificateAuthorityResult;
 import com.pulumi.aws.acmpca.outputs.GetCertificateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AcmpcaFunctions {
     /**
@@ -42,7 +42,7 @@ public final class AcmpcaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class AcmpcaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:acmpca/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:acmpca/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
@@ -103,7 +103,7 @@ public final class AcmpcaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
         return getCertificateAuthority(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class AcmpcaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:acmpca/getCertificateAuthority:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:acmpca/getCertificateAuthority:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
 }

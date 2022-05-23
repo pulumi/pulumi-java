@@ -490,7 +490,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	return nil
 }
 
-func (pt *plainType) genInputType(ctx *classFileContext) error {
+func (pt *plainType) genInputType(ctx *classFileContext, propertiesAsOutputs bool) error {
 	dg := defaultsGen{pt.mod, ctx}
 
 	// Determine property types
@@ -507,6 +507,11 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+
+		if isOutput, _ := propTypes[i].UnOutput(); !isOutput && propertiesAsOutputs {
+			// wrap the property as an output
+			propTypes[i] = propTypes[i].Output()
+		}
 	}
 
 	w := ctx.writer
@@ -1524,7 +1529,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			printCommentFunction(ctx, fun, indent)
 			// Add no args invoke
 			fprintf(w, "    public static %s<%s> %s() {\n",
-				ctx.ref(names.CompletableFuture), returnType, methodName)
+				ctx.ref(names.Output), returnType, methodName)
 			fprintf(w,
 				"        return %s(%s.Empty, %s.Empty);\n",
 				methodName, argsType, invokeOptions)
@@ -1535,7 +1540,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Add args only invoke
 		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsType)
+			ctx.ref(names.Output), returnType, methodName, argsType)
 		fprintf(w,
 			"        return %s(args, %s.Empty);\n",
 			methodName, invokeOptions)
@@ -1544,9 +1549,9 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Add full invoke
 		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsType, invokeOptions)
+			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
 		fprintf(w,
-			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
 		fprintf(w, "    }\n")
 
@@ -1559,8 +1564,12 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
+					args:                  true,
 				}
-				return args.genInputType(ctx)
+
+				// make sure the input properties are outputs
+				propertiesAsOutputs := true
+				return args.genInputType(ctx, propertiesAsOutputs)
 			}); err != nil {
 				return err
 			}
@@ -1761,7 +1770,7 @@ func (mod *modContext) genType(
 		if !obj.IsInputShape() {
 			pt.baseClass = "com.pulumi.resources.InvokeArgs"
 		}
-		return pt.genInputType(ctx)
+		return pt.genInputType(ctx, false)
 	}
 
 	return pt.genOutputType(ctx)
@@ -1991,7 +2000,7 @@ func (mod *modContext) gen(fs fs) error {
 				properties:            r.InputProperties,
 				args:                  true,
 			}
-			return args.genInputType(ctx)
+			return args.genInputType(ctx, false)
 		}); err != nil {
 			return err
 		}
@@ -2008,7 +2017,7 @@ func (mod *modContext) gen(fs fs) error {
 					properties:            r.StateInputs.Properties,
 					args:                  true,
 				}
-				return state.genInputType(ctx)
+				return state.genInputType(ctx, false)
 			}); err != nil {
 				return err
 			}

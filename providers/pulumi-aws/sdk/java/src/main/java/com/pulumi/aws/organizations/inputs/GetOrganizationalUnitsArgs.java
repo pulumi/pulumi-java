@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationalUnitsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="parentId", required=true)
-    private String parentId;
+    private Output<String> parentId;
 
     /**
      * @return The parent ID of the organizational unit.
      * 
      */
-    public String parentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOrganizationalUnitsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder parentId(String parentId) {
+        public Builder parentId(Output<String> parentId) {
             $.parentId = parentId;
             return this;
+        }
+
+        /**
+         * @param parentId The parent ID of the organizational unit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentId(String parentId) {
+            return parentId(Output.of(parentId));
         }
 
         public GetOrganizationalUnitsArgs build() {

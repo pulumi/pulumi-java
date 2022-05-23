@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-    private @Nullable String acceptLanguage;
+    private Output</* @Nullable */ String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Optional<String> acceptLanguage() {
-        return Optional.ofNullable(this.acceptLanguage);
+    public Output</* @Nullable */ String> acceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productId", required=true)
-    private String productId;
+    private Output<String> productId;
 
     /**
      * @return Product identifier.
      * 
      */
-    public String productId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -75,8 +75,29 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(Output</* @Nullable */ String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
+        }
+
+        /**
+         * @param productId Product identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder productId(Output<String> productId) {
+            $.productId = productId;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetLaunchPathsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder productId(String productId) {
-            $.productId = productId;
-            return this;
+            return productId(Output.of(productId));
         }
 
         public GetLaunchPathsArgs build() {

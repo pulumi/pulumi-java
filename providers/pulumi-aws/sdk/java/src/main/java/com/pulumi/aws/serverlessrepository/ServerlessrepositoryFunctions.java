@@ -6,10 +6,10 @@ package com.pulumi.aws.serverlessrepository;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.serverlessrepository.inputs.GetApplicationArgs;
 import com.pulumi.aws.serverlessrepository.outputs.GetApplicationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServerlessrepositoryFunctions {
     /**
@@ -45,7 +45,7 @@ public final class ServerlessrepositoryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class ServerlessrepositoryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:serverlessrepository/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:serverlessrepository/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

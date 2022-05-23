@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.eks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-    private String addonName;
+    private Output<String> addonName;
 
     /**
      * @return Name of the EKS add-on. The name must match one of
      * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
      * 
      */
-    public String addonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
 
@@ -37,21 +37,21 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetAddonArgs() {}
@@ -87,8 +87,30 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder addonName(String addonName) {
+        public Builder addonName(Output<String> addonName) {
             $.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * @param addonName Name of the EKS add-on. The name must match one of
+         * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
+        }
+
+        /**
+         * @param clusterName Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -99,13 +121,16 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
+            return clusterName(Output.of(clusterName));
+        }
+
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetAddonArgs build() {

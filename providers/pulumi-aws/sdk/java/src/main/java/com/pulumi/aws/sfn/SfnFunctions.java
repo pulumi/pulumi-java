@@ -8,10 +8,10 @@ import com.pulumi.aws.sfn.inputs.GetActivityArgs;
 import com.pulumi.aws.sfn.inputs.GetStateMachineArgs;
 import com.pulumi.aws.sfn.outputs.GetActivityResult;
 import com.pulumi.aws.sfn.outputs.GetStateMachineResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SfnFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SfnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActivityResult> getActivity() {
+    public static Output<GetActivityResult> getActivity() {
         return getActivity(GetActivityArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class SfnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args) {
+    public static Output<GetActivityResult> getActivity(GetActivityArgs args) {
         return getActivity(args, InvokeOptions.Empty);
     }
     /**
@@ -101,8 +101,8 @@ public final class SfnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:sfn/getActivity:getActivity", TypeShape.of(GetActivityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActivityResult> getActivity(GetActivityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:sfn/getActivity:getActivity", TypeShape.of(GetActivityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARN of a State Machine in AWS Step
@@ -133,7 +133,7 @@ public final class SfnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {
+    public static Output<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {
         return getStateMachine(args, InvokeOptions.Empty);
     }
     /**
@@ -165,7 +165,7 @@ public final class SfnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:sfn/getStateMachine:getStateMachine", TypeShape.of(GetStateMachineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStateMachineResult> getStateMachine(GetStateMachineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:sfn/getStateMachine:getStateMachine", TypeShape.of(GetStateMachineResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.backup.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planId", required=true)
-    private String planId;
+    private Output<String> planId;
 
     /**
      * @return The backup plan ID associated with the selection of resources.
      * 
      */
-    public String planId() {
+    public Output<String> planId() {
         return this.planId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selectionId", required=true)
-    private String selectionId;
+    private Output<String> selectionId;
 
     /**
      * @return The backup selection ID.
      * 
      */
-    public String selectionId() {
+    public Output<String> selectionId() {
         return this.selectionId;
     }
 
@@ -73,8 +74,29 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder planId(String planId) {
+        public Builder planId(Output<String> planId) {
             $.planId = planId;
+            return this;
+        }
+
+        /**
+         * @param planId The backup plan ID associated with the selection of resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder planId(String planId) {
+            return planId(Output.of(planId));
+        }
+
+        /**
+         * @param selectionId The backup selection ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selectionId(Output<String> selectionId) {
+            $.selectionId = selectionId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder selectionId(String selectionId) {
-            $.selectionId = selectionId;
-            return this;
+            return selectionId(Output.of(selectionId));
         }
 
         public GetSelectionArgs build() {

@@ -12,10 +12,10 @@ import com.pulumi.aws.wafregional.outputs.GetIpsetResult;
 import com.pulumi.aws.wafregional.outputs.GetRateBasedModResult;
 import com.pulumi.aws.wafregional.outputs.GetRuleResult;
 import com.pulumi.aws.wafregional.outputs.GetWebAclResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class WafregionalFunctions {
     /**
@@ -45,7 +45,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args) {
         return getIpset(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafregional/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
@@ -105,7 +105,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
+    public static Output<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
         return getRateBasedMod(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
@@ -165,7 +165,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -195,8 +195,8 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafregional/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
@@ -225,7 +225,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
         return getWebAcl(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +255,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafregional/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

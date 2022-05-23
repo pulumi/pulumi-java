@@ -6,31 +6,31 @@ package com.pulumi.aws.iot;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.iot.inputs.GetEndpointArgs;
 import com.pulumi.aws.iot.outputs.GetEndpointResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class IotFunctions {
     /**
      * Returns a unique endpoint specific to the AWS account making the call.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint() {
+    public static Output<GetEndpointResult> getEndpoint() {
         return getEndpoint(GetEndpointArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Returns a unique endpoint specific to the AWS account making the call.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
     /**
      * Returns a unique endpoint specific to the AWS account making the call.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iot/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iot/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetRouteTableFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetRouteTableFilter> filters;
+    private Output</* @Nullable */ List<GetRouteTableFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    public Optional<List<GetRouteTableFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRouteTableFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Identifier of the EC2 Transit Gateway Route Table.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value tags for the EC2 Transit Gateway Route Table
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetRouteTableArgs() {}
@@ -94,9 +94,19 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetRouteTableFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -115,8 +125,29 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Identifier of the EC2 Transit Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway Route Table
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -127,8 +158,7 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetRouteTableArgs build() {

@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudcontrol;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cloudcontrol.inputs.GetResourceArgs;
 import com.pulumi.aws.cloudcontrol.outputs.GetResourceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudcontrolFunctions {
     /**
@@ -40,7 +40,7 @@ public final class CloudcontrolFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+    public static Output<GetResourceResult> getResource(GetResourceArgs args) {
         return getResource(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class CloudcontrolFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudcontrol/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudcontrol/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
 }

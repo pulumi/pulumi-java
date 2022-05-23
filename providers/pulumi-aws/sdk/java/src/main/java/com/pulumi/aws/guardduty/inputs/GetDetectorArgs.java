@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.guardduty.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetDetectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The ID of the detector.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     private GetDetectorArgs() {}
@@ -59,9 +59,19 @@ public final class GetDetectorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
             return this;
+        }
+
+        /**
+         * @param id The ID of the detector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
         }
 
         public GetDetectorArgs build() {

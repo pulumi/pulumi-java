@@ -6,10 +6,10 @@ package com.pulumi.aws.guardduty;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.guardduty.inputs.GetDetectorArgs;
 import com.pulumi.aws.guardduty.outputs.GetDetectorResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GuarddutyFunctions {
     /**
@@ -37,7 +37,7 @@ public final class GuarddutyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDetectorResult> getDetector() {
+    public static Output<GetDetectorResult> getDetector() {
         return getDetector(GetDetectorArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +65,7 @@ public final class GuarddutyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args) {
+    public static Output<GetDetectorResult> getDetector(GetDetectorArgs args) {
         return getDetector(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +93,7 @@ public final class GuarddutyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:guardduty/getDetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:guardduty/getDetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -11,11 +11,11 @@ import com.pulumi.aws.directconnect.outputs.GetConnectionResult;
 import com.pulumi.aws.directconnect.outputs.GetGatewayResult;
 import com.pulumi.aws.directconnect.outputs.GetLocationResult;
 import com.pulumi.aws.directconnect.outputs.GetLocationsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class DirectconnectFunctions {
     /**
@@ -45,7 +45,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:directconnect/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:directconnect/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a Direct Connect Gateway.
@@ -105,7 +105,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:directconnect/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:directconnect/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a specific AWS Direct Connect location in the current AWS Region.
@@ -168,7 +168,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationResult> getLocation(GetLocationArgs args) {
+    public static Output<GetLocationResult> getLocation(GetLocationArgs args) {
         return getLocation(args, InvokeOptions.Empty);
     }
     /**
@@ -201,8 +201,8 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationResult> getLocation(GetLocationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:directconnect/getLocation:getLocation", TypeShape.of(GetLocationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocationResult> getLocation(GetLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:directconnect/getLocation:getLocation", TypeShape.of(GetLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about the AWS Direct Connect locations in the current AWS Region.
@@ -232,7 +232,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations() {
+    public static Output<GetLocationsResult> getLocations() {
         return getLocations(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -263,7 +263,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations(InvokeArgs args) {
+    public static Output<GetLocationsResult> getLocations(InvokeArgs args) {
         return getLocations(args, InvokeOptions.Empty);
     }
     /**
@@ -294,7 +294,7 @@ public final class DirectconnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:directconnect/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocationsResult> getLocations(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:directconnect/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.sqs;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.sqs.inputs.GetQueueArgs;
 import com.pulumi.aws.sqs.outputs.GetQueueResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SqsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SqsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class SqsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:sqs/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:sqs/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
 }

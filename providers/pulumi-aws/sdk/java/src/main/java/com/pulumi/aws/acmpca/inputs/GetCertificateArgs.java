@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.acmpca.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the certificate issued by the private certificate authority.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -32,13 +33,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-    private String certificateAuthorityArn;
+    private Output<String> certificateAuthorityArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    public String certificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -73,8 +74,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the certificate issued by the private certificate authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param certificateAuthorityArn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            $.certificateAuthorityArn = certificateAuthorityArn;
-            return this;
+            return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
         public GetCertificateArgs build() {

@@ -4,10 +4,10 @@
 package com.pulumi.aws.inputs;
 
 import com.pulumi.aws.inputs.GetAutoscalingGroupsFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAutoscalingGroupsFilter> filters;
+    private Output</* @Nullable */ List<GetAutoscalingGroupsFilter>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
      * 
      */
-    public Optional<List<GetAutoscalingGroupsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAutoscalingGroupsFilter>> filters() {
+        return this.filters;
     }
 
     private GetAutoscalingGroupsArgs() {}
@@ -60,9 +60,19 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetAutoscalingGroupsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

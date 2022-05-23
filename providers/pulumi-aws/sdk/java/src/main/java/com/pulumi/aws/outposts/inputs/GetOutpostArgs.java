@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.outposts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return Amazon Resource Name (ARN).
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Identifier of the Outpost.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the Outpost.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerId")
-    private @Nullable String ownerId;
+    private Output</* @Nullable */ String> ownerId;
 
     /**
      * @return AWS Account identifier of the Outpost owner.
      * 
      */
-    public Optional<String> ownerId() {
-        return Optional.ofNullable(this.ownerId);
+    public Output</* @Nullable */ String> ownerId() {
+        return this.ownerId;
     }
 
     private GetOutpostArgs() {}
@@ -107,8 +107,29 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param id Identifier of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output</* @Nullable */ String> id) {
+            $.id = id;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder id(@Nullable String id) {
-            $.id = id;
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name Name of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param ownerId AWS Account identifier of the Outpost owner.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerId(Output</* @Nullable */ String> ownerId) {
+            $.ownerId = ownerId;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ownerId(@Nullable String ownerId) {
-            $.ownerId = ownerId;
-            return this;
+            return ownerId(Output.of(ownerId));
         }
 
         public GetOutpostArgs build() {

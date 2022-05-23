@@ -8,10 +8,10 @@ import com.pulumi.aws.datapipeline.inputs.GetPipelineArgs;
 import com.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionArgs;
 import com.pulumi.aws.datapipeline.outputs.GetPipelineDefinitionResult;
 import com.pulumi.aws.datapipeline.outputs.GetPipelineResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatapipelineFunctions {
     /**
@@ -41,7 +41,7 @@ public final class DatapipelineFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args) {
         return getPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class DatapipelineFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:datapipeline/getPipeline:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:datapipeline/getPipeline:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific DataPipeline Pipeline Definition.
@@ -101,7 +101,7 @@ public final class DatapipelineFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args) {
+    public static Output<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args) {
         return getPipelineDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -131,7 +131,7 @@ public final class DatapipelineFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:datapipeline/getPipelineDefinition:getPipelineDefinition", TypeShape.of(GetPipelineDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:datapipeline/getPipelineDefinition:getPipelineDefinition", TypeShape.of(GetPipelineDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

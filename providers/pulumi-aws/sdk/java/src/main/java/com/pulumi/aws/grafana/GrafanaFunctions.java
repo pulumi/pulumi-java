@@ -6,10 +6,10 @@ package com.pulumi.aws.grafana;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.grafana.inputs.GetWorkspaceArgs;
 import com.pulumi.aws.grafana.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GrafanaFunctions {
     /**
@@ -40,7 +40,7 @@ public final class GrafanaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class GrafanaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:grafana/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:grafana/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

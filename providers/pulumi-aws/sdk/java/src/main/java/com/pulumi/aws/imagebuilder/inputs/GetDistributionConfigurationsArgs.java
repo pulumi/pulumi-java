@@ -4,10 +4,10 @@
 package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetDistributionConfigurationsFilter> filters;
+    private Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetDistributionConfigurationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters() {
+        return this.filters;
     }
 
     private GetDistributionConfigurationsArgs() {}
@@ -60,9 +60,19 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

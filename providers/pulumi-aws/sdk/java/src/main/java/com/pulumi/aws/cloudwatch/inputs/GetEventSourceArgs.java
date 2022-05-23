@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namePrefix")
-    private @Nullable String namePrefix;
+    private Output</* @Nullable */ String> namePrefix;
 
     /**
      * @return Specifying this limits the results to only those partner event sources with names that start with the specified prefix
      * 
      */
-    public Optional<String> namePrefix() {
-        return Optional.ofNullable(this.namePrefix);
+    public Output</* @Nullable */ String> namePrefix() {
+        return this.namePrefix;
     }
 
     private GetEventSourceArgs() {}
@@ -59,9 +59,19 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(Output</* @Nullable */ String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
+        }
+
+        /**
+         * @param namePrefix Specifying this limits the results to only those partner event sources with names that start with the specified prefix
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namePrefix(@Nullable String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
 
         public GetEventSourceArgs build() {

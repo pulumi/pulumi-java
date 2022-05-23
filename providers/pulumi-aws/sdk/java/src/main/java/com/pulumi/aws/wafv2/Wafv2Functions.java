@@ -12,10 +12,10 @@ import com.pulumi.aws.wafv2.outputs.GetIpSetResult;
 import com.pulumi.aws.wafv2.outputs.GetRegexPatternSetResult;
 import com.pulumi.aws.wafv2.outputs.GetRuleGroupResult;
 import com.pulumi.aws.wafv2.outputs.GetWebAclResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Wafv2Functions {
     /**
@@ -46,7 +46,7 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpSetResult> getIpSet(GetIpSetArgs args) {
+    public static Output<GetIpSetResult> getIpSet(GetIpSetArgs args) {
         return getIpSet(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpSetResult> getIpSet(GetIpSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafv2/getIpSet:getIpSet", TypeShape.of(GetIpSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpSetResult> getIpSet(GetIpSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafv2/getIpSet:getIpSet", TypeShape.of(GetIpSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the summary of a WAFv2 Regex Pattern Set.
@@ -108,7 +108,7 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
+    public static Output<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
         return getRegexPatternSet(args, InvokeOptions.Empty);
     }
     /**
@@ -139,8 +139,8 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafv2/getRegexPatternSet:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafv2/getRegexPatternSet:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the summary of a WAFv2 Rule Group.
@@ -170,7 +170,7 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
+    public static Output<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
         return getRuleGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -201,8 +201,8 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafv2/getRuleGroup:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafv2/getRuleGroup:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the summary of a WAFv2 Web ACL.
@@ -232,7 +232,7 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
         return getWebAcl(args, InvokeOptions.Empty);
     }
     /**
@@ -263,7 +263,7 @@ public final class Wafv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:wafv2/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafv2/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

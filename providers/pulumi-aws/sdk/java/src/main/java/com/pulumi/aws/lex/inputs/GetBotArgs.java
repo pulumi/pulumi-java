@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.lex.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the bot. The name is case sensitive.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,14 +34,14 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private Output</* @Nullable */ String> version;
 
     /**
      * @return The version or alias of the bot.
      * 
      */
-    public Optional<String> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ String> version() {
+        return this.version;
     }
 
     private GetBotArgs() {}
@@ -75,8 +75,29 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the bot. The name is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param version The version or alias of the bot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ String> version) {
+            $.version = version;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetBotArgs build() {

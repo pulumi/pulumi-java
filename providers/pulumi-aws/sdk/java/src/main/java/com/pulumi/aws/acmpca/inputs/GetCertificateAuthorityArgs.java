@@ -4,12 +4,12 @@
 package com.pulumi.aws.acmpca.inputs;
 
 import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfiguration;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -43,7 +43,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="revocationConfigurations")
-    private @Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
+    private Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations;
 
     /**
      * @return Nested attribute containing revocation configuration.
@@ -55,8 +55,8 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
      * 
      */
-    public Optional<List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations() {
-        return Optional.ofNullable(this.revocationConfigurations);
+    public Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations() {
+        return this.revocationConfigurations;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetCertificateAuthorityArgs() {}
@@ -106,8 +106,35 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param revocationConfigurations Nested attribute containing revocation configuration.
+         * * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
+         * * `revocation_configuration.0.crl_configuration.0.custom_cname` - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
+         * * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
+         * * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
+         * * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+         * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder revocationConfigurations(Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations) {
+            $.revocationConfigurations = revocationConfigurations;
             return this;
         }
 
@@ -124,8 +151,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder revocationConfigurations(@Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
-            $.revocationConfigurations = revocationConfigurations;
-            return this;
+            return revocationConfigurations(Output.of(revocationConfigurations));
         }
 
         /**
@@ -150,9 +176,19 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        /**
+         * @param tags Specifies a key-value map of user-defined tags that are attached to the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetCertificateAuthorityArgs build() {

@@ -12,10 +12,10 @@ import com.pulumi.aws.workspaces.outputs.GetBundleResult;
 import com.pulumi.aws.workspaces.outputs.GetDirectoryResult;
 import com.pulumi.aws.workspaces.outputs.GetImageResult;
 import com.pulumi.aws.workspaces.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class WorkspacesFunctions {
     /**
@@ -69,7 +69,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBundleResult> getBundle() {
+    public static Output<GetBundleResult> getBundle() {
         return getBundle(GetBundleArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -123,7 +123,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBundleResult> getBundle(GetBundleArgs args) {
+    public static Output<GetBundleResult> getBundle(GetBundleArgs args) {
         return getBundle(args, InvokeOptions.Empty);
     }
     /**
@@ -177,8 +177,8 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBundleResult> getBundle(GetBundleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:workspaces/getBundle:getBundle", TypeShape.of(GetBundleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBundleResult> getBundle(GetBundleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:workspaces/getBundle:getBundle", TypeShape.of(GetBundleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about an AWS WorkSpaces directory.
@@ -207,7 +207,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
         return getDirectory(args, InvokeOptions.Empty);
     }
     /**
@@ -237,8 +237,8 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:workspaces/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:workspaces/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a Workspaces image.
@@ -267,7 +267,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -297,8 +297,8 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:workspaces/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:workspaces/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a workspace in [AWS Workspaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) Service.
@@ -351,7 +351,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace() {
+    public static Output<GetWorkspaceResult> getWorkspace() {
         return getWorkspace(GetWorkspaceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -405,7 +405,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -459,7 +459,7 @@ public final class WorkspacesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:workspaces/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:workspaces/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

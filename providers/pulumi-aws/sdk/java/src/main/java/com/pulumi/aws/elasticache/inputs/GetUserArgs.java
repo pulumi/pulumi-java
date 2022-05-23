@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.elasticache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,35 +21,35 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessString")
-    private @Nullable String accessString;
+    private Output</* @Nullable */ String> accessString;
 
     /**
      * @return A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
      */
-    public Optional<String> accessString() {
-        return Optional.ofNullable(this.accessString);
+    public Output</* @Nullable */ String> accessString() {
+        return this.accessString;
     }
 
     @Import(name="engine")
-    private @Nullable String engine;
+    private Output</* @Nullable */ String> engine;
 
-    public Optional<String> engine() {
-        return Optional.ofNullable(this.engine);
+    public Output</* @Nullable */ String> engine() {
+        return this.engine;
     }
 
     @Import(name="noPasswordRequired")
-    private @Nullable Boolean noPasswordRequired;
+    private Output</* @Nullable */ Boolean> noPasswordRequired;
 
-    public Optional<Boolean> noPasswordRequired() {
-        return Optional.ofNullable(this.noPasswordRequired);
+    public Output</* @Nullable */ Boolean> noPasswordRequired() {
+        return this.noPasswordRequired;
     }
 
     @Import(name="passwords")
-    private @Nullable List<String> passwords;
+    private Output</* @Nullable */ List<String>> passwords;
 
-    public Optional<List<String>> passwords() {
-        return Optional.ofNullable(this.passwords);
+    public Output</* @Nullable */ List<String>> passwords() {
+        return this.passwords;
     }
 
     /**
@@ -57,13 +57,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The identifier for the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -72,14 +72,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-    private @Nullable String userName;
+    private Output</* @Nullable */ String> userName;
 
     /**
      * @return The user name of the user.
      * 
      */
-    public Optional<String> userName() {
-        return Optional.ofNullable(this.userName);
+    public Output</* @Nullable */ String> userName() {
+        return this.userName;
     }
 
     private GetUserArgs() {}
@@ -117,24 +117,46 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessString(@Nullable String accessString) {
+        public Builder accessString(Output</* @Nullable */ String> accessString) {
             $.accessString = accessString;
             return this;
         }
 
-        public Builder engine(@Nullable String engine) {
+        /**
+         * @param accessString A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessString(@Nullable String accessString) {
+            return accessString(Output.of(accessString));
+        }
+
+        public Builder engine(Output</* @Nullable */ String> engine) {
             $.engine = engine;
             return this;
         }
 
-        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
+        public Builder engine(@Nullable String engine) {
+            return engine(Output.of(engine));
+        }
+
+        public Builder noPasswordRequired(Output</* @Nullable */ Boolean> noPasswordRequired) {
             $.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
-        public Builder passwords(@Nullable List<String> passwords) {
+        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
+            return noPasswordRequired(Output.of(noPasswordRequired));
+        }
+
+        public Builder passwords(Output</* @Nullable */ List<String>> passwords) {
             $.passwords = passwords;
             return this;
+        }
+
+        public Builder passwords(@Nullable List<String> passwords) {
+            return passwords(Output.of(passwords));
         }
 
         public Builder passwords(String... passwords) {
@@ -147,8 +169,29 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userId(String userId) {
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
+            return this;
+        }
+
+        /**
+         * @param userId The identifier for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
+        }
+
+        /**
+         * @param userName The user name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output</* @Nullable */ String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -159,8 +202,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder userName(@Nullable String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetUserArgs build() {

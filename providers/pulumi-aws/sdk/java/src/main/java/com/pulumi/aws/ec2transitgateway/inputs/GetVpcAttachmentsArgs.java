@@ -4,10 +4,10 @@
 package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentsFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVpcAttachmentsFilter> filters;
+    private Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    public Optional<List<GetVpcAttachmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters() {
+        return this.filters;
     }
 
     private GetVpcAttachmentsArgs() {}
@@ -60,9 +60,19 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpcAttachmentsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetVpcAttachmentsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.s3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      */
     @Deprecated /* Use the aws_s3_objects data source instead */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
@@ -35,7 +35,7 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Deprecated /* Use the aws_s3_objects data source instead */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -44,14 +44,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="delimiter")
-    private @Nullable String delimiter;
+    private Output</* @Nullable */ String> delimiter;
 
     /**
      * @return A character used to group keys (Default: none)
      * 
      */
-    public Optional<String> delimiter() {
-        return Optional.ofNullable(this.delimiter);
+    public Output</* @Nullable */ String> delimiter() {
+        return this.delimiter;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="encodingType")
-    private @Nullable String encodingType;
+    private Output</* @Nullable */ String> encodingType;
 
     /**
      * @return Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
      * 
      */
-    public Optional<String> encodingType() {
-        return Optional.ofNullable(this.encodingType);
+    public Output</* @Nullable */ String> encodingType() {
+        return this.encodingType;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fetchOwner")
-    private @Nullable Boolean fetchOwner;
+    private Output</* @Nullable */ Boolean> fetchOwner;
 
     /**
      * @return Boolean specifying whether to populate the owner list (Default: false)
      * 
      */
-    public Optional<Boolean> fetchOwner() {
-        return Optional.ofNullable(this.fetchOwner);
+    public Output</* @Nullable */ Boolean> fetchOwner() {
+        return this.fetchOwner;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxKeys")
-    private @Nullable Integer maxKeys;
+    private Output</* @Nullable */ Integer> maxKeys;
 
     /**
      * @return Maximum object keys to return (Default: 1000)
      * 
      */
-    public Optional<Integer> maxKeys() {
-        return Optional.ofNullable(this.maxKeys);
+    public Output</* @Nullable */ Integer> maxKeys() {
+        return this.maxKeys;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="prefix")
-    private @Nullable String prefix;
+    private Output</* @Nullable */ String> prefix;
 
     /**
      * @return Limits results to object keys with this prefix (Default: none)
      * 
      */
-    public Optional<String> prefix() {
-        return Optional.ofNullable(this.prefix);
+    public Output</* @Nullable */ String> prefix() {
+        return this.prefix;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startAfter")
-    private @Nullable String startAfter;
+    private Output</* @Nullable */ String> startAfter;
 
     /**
      * @return Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
      * 
      */
-    public Optional<String> startAfter() {
-        return Optional.ofNullable(this.startAfter);
+    public Output</* @Nullable */ String> startAfter() {
+        return this.startAfter;
     }
 
     private GetBucketObjectsArgs() {}
@@ -169,8 +169,33 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         @Deprecated /* Use the aws_s3_objects data source instead */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the aws_s3_objects data source instead
+         * 
+         */
+        @Deprecated /* Use the aws_s3_objects data source instead */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param delimiter A character used to group keys (Default: none)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder delimiter(Output</* @Nullable */ String> delimiter) {
+            $.delimiter = delimiter;
             return this;
         }
 
@@ -181,7 +206,17 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder delimiter(@Nullable String delimiter) {
-            $.delimiter = delimiter;
+            return delimiter(Output.of(delimiter));
+        }
+
+        /**
+         * @param encodingType Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encodingType(Output</* @Nullable */ String> encodingType) {
+            $.encodingType = encodingType;
             return this;
         }
 
@@ -192,7 +227,17 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder encodingType(@Nullable String encodingType) {
-            $.encodingType = encodingType;
+            return encodingType(Output.of(encodingType));
+        }
+
+        /**
+         * @param fetchOwner Boolean specifying whether to populate the owner list (Default: false)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fetchOwner(Output</* @Nullable */ Boolean> fetchOwner) {
+            $.fetchOwner = fetchOwner;
             return this;
         }
 
@@ -203,7 +248,17 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder fetchOwner(@Nullable Boolean fetchOwner) {
-            $.fetchOwner = fetchOwner;
+            return fetchOwner(Output.of(fetchOwner));
+        }
+
+        /**
+         * @param maxKeys Maximum object keys to return (Default: 1000)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxKeys(Output</* @Nullable */ Integer> maxKeys) {
+            $.maxKeys = maxKeys;
             return this;
         }
 
@@ -214,7 +269,17 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder maxKeys(@Nullable Integer maxKeys) {
-            $.maxKeys = maxKeys;
+            return maxKeys(Output.of(maxKeys));
+        }
+
+        /**
+         * @param prefix Limits results to object keys with this prefix (Default: none)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefix(Output</* @Nullable */ String> prefix) {
+            $.prefix = prefix;
             return this;
         }
 
@@ -225,7 +290,17 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder prefix(@Nullable String prefix) {
-            $.prefix = prefix;
+            return prefix(Output.of(prefix));
+        }
+
+        /**
+         * @param startAfter Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startAfter(Output</* @Nullable */ String> startAfter) {
+            $.startAfter = startAfter;
             return this;
         }
 
@@ -236,8 +311,7 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder startAfter(@Nullable String startAfter) {
-            $.startAfter = startAfter;
-            return this;
+            return startAfter(Output.of(startAfter));
         }
 
         public GetBucketObjectsArgs build() {

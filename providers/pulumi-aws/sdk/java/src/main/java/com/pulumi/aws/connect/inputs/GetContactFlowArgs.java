@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactFlowId")
-    private @Nullable String contactFlowId;
+    private Output</* @Nullable */ String> contactFlowId;
 
     /**
      * @return Returns information on a specific Contact Flow by contact flow id
      * 
      */
-    public Optional<String> contactFlowId() {
-        return Optional.ofNullable(this.contactFlowId);
+    public Output</* @Nullable */ String> contactFlowId() {
+        return this.contactFlowId;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return Reference to the hosting Amazon Connect Instance
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -50,14 +50,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Returns information on a specific Contact Flow by name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A the map of tags to assign to the Contact Flow.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -80,14 +80,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return Specifies the type of Contact Flow.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetContactFlowArgs() {}
@@ -124,8 +124,29 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactFlowId(@Nullable String contactFlowId) {
+        public Builder contactFlowId(Output</* @Nullable */ String> contactFlowId) {
             $.contactFlowId = contactFlowId;
+            return this;
+        }
+
+        /**
+         * @param contactFlowId Returns information on a specific Contact Flow by contact flow id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactFlowId(@Nullable String contactFlowId) {
+            return contactFlowId(Output.of(contactFlowId));
+        }
+
+        /**
+         * @param instanceId Reference to the hosting Amazon Connect Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output<String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -136,7 +157,17 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder instanceId(String instanceId) {
-            $.instanceId = instanceId;
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param name Returns information on a specific Contact Flow by name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -147,7 +178,17 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags A the map of tags to assign to the Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -158,7 +199,17 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param type Specifies the type of Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -169,8 +220,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetContactFlowArgs build() {

@@ -10,10 +10,10 @@ import com.pulumi.aws.secretsmanager.inputs.GetSecretVersionArgs;
 import com.pulumi.aws.secretsmanager.outputs.GetSecretResult;
 import com.pulumi.aws.secretsmanager.outputs.GetSecretRotationResult;
 import com.pulumi.aws.secretsmanager.outputs.GetSecretVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SecretsmanagerFunctions {
     /**
@@ -66,7 +66,7 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret() {
+    public static Output<GetSecretResult> getSecret() {
         return getSecret(GetSecretArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -119,7 +119,7 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
     /**
@@ -172,8 +172,8 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:secretsmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion` data source.
@@ -203,7 +203,7 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args) {
+    public static Output<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args) {
         return getSecretRotation(args, InvokeOptions.Empty);
     }
     /**
@@ -234,8 +234,8 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecretRotation:getSecretRotation", TypeShape.of(GetSecretRotationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:secretsmanager/getSecretRotation:getSecretRotation", TypeShape.of(GetSecretRotationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source.
@@ -290,7 +290,7 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
         return getSecretVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -346,7 +346,7 @@ public final class SecretsmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:secretsmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
 }

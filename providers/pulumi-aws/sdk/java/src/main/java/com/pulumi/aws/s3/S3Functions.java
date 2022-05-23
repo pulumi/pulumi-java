@@ -17,11 +17,11 @@ import com.pulumi.aws.s3.outputs.GetBucketResult;
 import com.pulumi.aws.s3.outputs.GetCanonicalUserIdResult;
 import com.pulumi.aws.s3.outputs.GetObjectResult;
 import com.pulumi.aws.s3.outputs.GetObjectsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class S3Functions {
     /**
@@ -98,7 +98,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
     /**
@@ -175,8 +175,8 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **NOTE:** The `aws.s3.BucketObject` data source is DEPRECATED and will be removed in a future version! Use `aws.s3.BucketObjectv2` instead, where new features and fixes will be added.
@@ -256,7 +256,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
+    public static Output<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
         return getBucketObject(args, InvokeOptions.Empty);
     }
     /**
@@ -337,8 +337,8 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **NOTE:** The `aws.s3.getBucketObjects` data source is DEPRECATED and will be removed in a future version! Use `aws.s3.getObjects` instead, where new features and fixes will be added.
@@ -348,7 +348,7 @@ public final class S3Functions {
      * The objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
      * 
      */
-    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args) {
+    public static Output<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args) {
         return getBucketObjects(args, InvokeOptions.Empty);
     }
     /**
@@ -359,8 +359,8 @@ public final class S3Functions {
      * The objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
      * 
      */
-    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getBucketObjects:getBucketObjects", TypeShape.of(GetBucketObjectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getBucketObjects:getBucketObjects", TypeShape.of(GetBucketObjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The bucket policy data source returns IAM policy of an S3 bucket.
@@ -392,7 +392,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
+    public static Output<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
         return getBucketPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -425,8 +425,8 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getBucketPolicy:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getBucketPolicy:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
@@ -457,7 +457,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId() {
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId() {
         return getCanonicalUserId(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -489,7 +489,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
         return getCanonicalUserId(args, InvokeOptions.Empty);
     }
     /**
@@ -521,8 +521,8 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The S3 object data source allows access to the metadata and
@@ -600,7 +600,7 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args) {
+    public static Output<GetObjectResult> getObject(GetObjectArgs args) {
         return getObject(args, InvokeOptions.Empty);
     }
     /**
@@ -679,13 +679,13 @@ public final class S3Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args) {
+    public static Output<GetObjectsResult> getObjects(GetObjectsArgs args) {
         return getObjects(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:s3/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:s3/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
     }
 }

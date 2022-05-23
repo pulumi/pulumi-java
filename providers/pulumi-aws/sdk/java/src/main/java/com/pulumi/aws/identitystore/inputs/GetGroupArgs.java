@@ -4,11 +4,11 @@
 package com.pulumi.aws.identitystore.inputs;
 
 import com.pulumi.aws.identitystore.inputs.GetGroupFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-    private List<GetGroupFilter> filters;
+    private Output<List<GetGroupFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
      * 
      */
-    public List<GetGroupFilter> filters() {
+    public Output<List<GetGroupFilter>> filters() {
         return this.filters;
     }
 
@@ -36,14 +36,14 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupId")
-    private @Nullable String groupId;
+    private Output</* @Nullable */ String> groupId;
 
     /**
      * @return The identifier for a group in the Identity Store.
      * 
      */
-    public Optional<String> groupId() {
-        return Optional.ofNullable(this.groupId);
+    public Output</* @Nullable */ String> groupId() {
+        return this.groupId;
     }
 
     /**
@@ -51,13 +51,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityStoreId", required=true)
-    private String identityStoreId;
+    private Output<String> identityStoreId;
 
     /**
      * @return The Identity Store ID associated with the Single Sign-On Instance.
      * 
      */
-    public String identityStoreId() {
+    public Output<String> identityStoreId() {
         return this.identityStoreId;
     }
 
@@ -93,9 +93,19 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<GetGroupFilter> filters) {
+        public Builder filters(Output<List<GetGroupFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(List<GetGroupFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -114,8 +124,29 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(Output</* @Nullable */ String> groupId) {
             $.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * @param groupId The identifier for a group in the Identity Store.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(@Nullable String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param identityStoreId The Identity Store ID associated with the Single Sign-On Instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityStoreId(Output<String> identityStoreId) {
+            $.identityStoreId = identityStoreId;
             return this;
         }
 
@@ -126,8 +157,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder identityStoreId(String identityStoreId) {
-            $.identityStoreId = identityStoreId;
-            return this;
+            return identityStoreId(Output.of(identityStoreId));
         }
 
         public GetGroupArgs build() {

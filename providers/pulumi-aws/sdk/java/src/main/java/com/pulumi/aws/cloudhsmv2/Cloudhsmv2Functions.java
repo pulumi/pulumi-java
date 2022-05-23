@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudhsmv2;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cloudhsmv2.inputs.GetClusterArgs;
 import com.pulumi.aws.cloudhsmv2.outputs.GetClusterResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Cloudhsmv2Functions {
     /**
@@ -39,7 +39,7 @@ public final class Cloudhsmv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class Cloudhsmv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudhsmv2/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudhsmv2/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
 }

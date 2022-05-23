@@ -3,12 +3,12 @@
 
 package com.pulumi.aws.neptune.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engine")
-    private @Nullable String engine;
+    private Output</* @Nullable */ String> engine;
 
     /**
      * @return DB engine. (Default: `neptune`)
      * 
      */
-    public Optional<String> engine() {
-        return Optional.ofNullable(this.engine);
+    public Output</* @Nullable */ String> engine() {
+        return this.engine;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engineVersion")
-    private @Nullable String engineVersion;
+    private Output</* @Nullable */ String> engineVersion;
 
     /**
      * @return Version of the DB engine. For example, `1.0.1.0`, `1.0.1.2`, `1.0.2.2`, and `1.0.3.0`.
      * 
      */
-    public Optional<String> engineVersion() {
-        return Optional.ofNullable(this.engineVersion);
+    public Output</* @Nullable */ String> engineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceClass")
-    private @Nullable String instanceClass;
+    private Output</* @Nullable */ String> instanceClass;
 
     /**
      * @return DB instance class. Examples of classes are `db.r5.large`, `db.r5.xlarge`, `db.r4.large`, `db.r5.4xlarge`, `db.r5.12xlarge`, `db.r4.xlarge`, and `db.t3.medium`.
      * 
      */
-    public Optional<String> instanceClass() {
-        return Optional.ofNullable(this.instanceClass);
+    public Output</* @Nullable */ String> instanceClass() {
+        return this.instanceClass;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="licenseModel")
-    private @Nullable String licenseModel;
+    private Output</* @Nullable */ String> licenseModel;
 
     /**
      * @return License model. (Default: `amazon-license`)
      * 
      */
-    public Optional<String> licenseModel() {
-        return Optional.ofNullable(this.licenseModel);
+    public Output</* @Nullable */ String> licenseModel() {
+        return this.licenseModel;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceClasses")
-    private @Nullable List<String> preferredInstanceClasses;
+    private Output</* @Nullable */ List<String>> preferredInstanceClasses;
 
     /**
      * @return Ordered list of preferred Neptune DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    public Optional<List<String>> preferredInstanceClasses() {
-        return Optional.ofNullable(this.preferredInstanceClasses);
+    public Output</* @Nullable */ List<String>> preferredInstanceClasses() {
+        return this.preferredInstanceClasses;
     }
 
     /**
@@ -96,14 +96,14 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vpc")
-    private @Nullable Boolean vpc;
+    private Output</* @Nullable */ Boolean> vpc;
 
     /**
      * @return Enable to show only VPC offerings.
      * 
      */
-    public Optional<Boolean> vpc() {
-        return Optional.ofNullable(this.vpc);
+    public Output</* @Nullable */ Boolean> vpc() {
+        return this.vpc;
     }
 
     private GetOrderableDbInstanceArgs() {}
@@ -141,8 +141,29 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder engine(@Nullable String engine) {
+        public Builder engine(Output</* @Nullable */ String> engine) {
             $.engine = engine;
+            return this;
+        }
+
+        /**
+         * @param engine DB engine. (Default: `neptune`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder engine(@Nullable String engine) {
+            return engine(Output.of(engine));
+        }
+
+        /**
+         * @param engineVersion Version of the DB engine. For example, `1.0.1.0`, `1.0.1.2`, `1.0.2.2`, and `1.0.3.0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder engineVersion(Output</* @Nullable */ String> engineVersion) {
+            $.engineVersion = engineVersion;
             return this;
         }
 
@@ -153,7 +174,17 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder engineVersion(@Nullable String engineVersion) {
-            $.engineVersion = engineVersion;
+            return engineVersion(Output.of(engineVersion));
+        }
+
+        /**
+         * @param instanceClass DB instance class. Examples of classes are `db.r5.large`, `db.r5.xlarge`, `db.r4.large`, `db.r5.4xlarge`, `db.r5.12xlarge`, `db.r4.xlarge`, and `db.t3.medium`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceClass(Output</* @Nullable */ String> instanceClass) {
+            $.instanceClass = instanceClass;
             return this;
         }
 
@@ -164,7 +195,17 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder instanceClass(@Nullable String instanceClass) {
-            $.instanceClass = instanceClass;
+            return instanceClass(Output.of(instanceClass));
+        }
+
+        /**
+         * @param licenseModel License model. (Default: `amazon-license`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder licenseModel(Output</* @Nullable */ String> licenseModel) {
+            $.licenseModel = licenseModel;
             return this;
         }
 
@@ -175,7 +216,17 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder licenseModel(@Nullable String licenseModel) {
-            $.licenseModel = licenseModel;
+            return licenseModel(Output.of(licenseModel));
+        }
+
+        /**
+         * @param preferredInstanceClasses Ordered list of preferred Neptune DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredInstanceClasses(Output</* @Nullable */ List<String>> preferredInstanceClasses) {
+            $.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
 
@@ -186,8 +237,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
-            $.preferredInstanceClasses = preferredInstanceClasses;
-            return this;
+            return preferredInstanceClasses(Output.of(preferredInstanceClasses));
         }
 
         /**
@@ -206,9 +256,19 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder vpc(@Nullable Boolean vpc) {
+        public Builder vpc(Output</* @Nullable */ Boolean> vpc) {
             $.vpc = vpc;
             return this;
+        }
+
+        /**
+         * @param vpc Enable to show only VPC offerings.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpc(@Nullable Boolean vpc) {
+            return vpc(Output.of(vpc));
         }
 
         public GetOrderableDbInstanceArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.cloudformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the CloudFormation Type. For example, `arn:aws:cloudformation:us-west-2::type/resource/AWS-EC2-VPC`.
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return CloudFormation Registry Type. For example, `RESOURCE`.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="typeName")
-    private @Nullable String typeName;
+    private Output</* @Nullable */ String> typeName;
 
     /**
      * @return CloudFormation Type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    public Optional<String> typeName() {
-        return Optional.ofNullable(this.typeName);
+    public Output</* @Nullable */ String> typeName() {
+        return this.typeName;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionId")
-    private @Nullable String versionId;
+    private Output</* @Nullable */ String> versionId;
 
     /**
      * @return Identifier of the CloudFormation Type version.
      * 
      */
-    public Optional<String> versionId() {
-        return Optional.ofNullable(this.versionId);
+    public Output</* @Nullable */ String> versionId() {
+        return this.versionId;
     }
 
     private GetCloudFormationTypeArgs() {}
@@ -107,8 +107,29 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the CloudFormation Type. For example, `arn:aws:cloudformation:us-west-2::type/resource/AWS-EC2-VPC`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param type CloudFormation Registry Type. For example, `RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
+            return type(Output.of(type));
+        }
+
+        /**
+         * @param typeName CloudFormation Type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeName(Output</* @Nullable */ String> typeName) {
+            $.typeName = typeName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder typeName(@Nullable String typeName) {
-            $.typeName = typeName;
+            return typeName(Output.of(typeName));
+        }
+
+        /**
+         * @param versionId Identifier of the CloudFormation Type version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(Output</* @Nullable */ String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder versionId(@Nullable String versionId) {
-            $.versionId = versionId;
-            return this;
+            return versionId(Output.of(versionId));
         }
 
         public GetCloudFormationTypeArgs build() {

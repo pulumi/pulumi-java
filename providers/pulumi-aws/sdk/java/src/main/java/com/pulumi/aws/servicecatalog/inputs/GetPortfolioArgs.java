@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-    private @Nullable String acceptLanguage;
+    private Output</* @Nullable */ String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Optional<String> acceptLanguage() {
-        return Optional.ofNullable(this.acceptLanguage);
+    public Output</* @Nullable */ String> acceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return Portfolio identifier.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -50,14 +50,14 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags applied to the portfolio.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetPortfolioArgs() {}
@@ -92,8 +92,29 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(Output</* @Nullable */ String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
+        }
+
+        /**
+         * @param id Portfolio identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder id(String id) {
-            $.id = id;
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param tags Tags applied to the portfolio.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetPortfolioArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetPortfolioArgs build() {

@@ -13,11 +13,11 @@ import com.pulumi.aws.organizations.outputs.GetDelegatedServicesResult;
 import com.pulumi.aws.organizations.outputs.GetOrganizationResult;
 import com.pulumi.aws.organizations.outputs.GetOrganizationalUnitsResult;
 import com.pulumi.aws.organizations.outputs.GetResourceTagsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class OrganizationsFunctions {
     /**
@@ -47,7 +47,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators() {
+    public static Output<GetDelegatedAdministratorsResult> getDelegatedAdministrators() {
         return getDelegatedAdministrators(GetDelegatedAdministratorsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args) {
+    public static Output<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args) {
         return getDelegatedAdministrators(args, InvokeOptions.Empty);
     }
     /**
@@ -107,8 +107,8 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:organizations/getDelegatedAdministrators:getDelegatedAdministrators", TypeShape.of(GetDelegatedAdministratorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:organizations/getDelegatedAdministrators:getDelegatedAdministrators", TypeShape.of(GetDelegatedAdministratorsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a list the AWS services for which the specified account is a delegated administrator
@@ -137,7 +137,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args) {
+    public static Output<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args) {
         return getDelegatedServices(args, InvokeOptions.Empty);
     }
     /**
@@ -167,8 +167,8 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:organizations/getDelegatedServices:getDelegatedServices", TypeShape.of(GetDelegatedServicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:organizations/getDelegatedServices:getDelegatedServices", TypeShape.of(GetDelegatedServicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about the organization that the user&#39;s account belongs to
@@ -243,7 +243,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization() {
+    public static Output<GetOrganizationResult> getOrganization() {
         return getOrganization(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -319,7 +319,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization(InvokeArgs args) {
+    public static Output<GetOrganizationResult> getOrganization(InvokeArgs args) {
         return getOrganization(args, InvokeOptions.Empty);
     }
     /**
@@ -395,8 +395,8 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationResult> getOrganization(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
@@ -427,7 +427,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args) {
+    public static Output<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args) {
         return getOrganizationalUnits(args, InvokeOptions.Empty);
     }
     /**
@@ -459,8 +459,8 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:organizations/getOrganizationalUnits:getOrganizationalUnits", TypeShape.of(GetOrganizationalUnitsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:organizations/getOrganizationalUnits:getOrganizationalUnits", TypeShape.of(GetOrganizationalUnitsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get tags attached to the specified AWS Organizations resource.
@@ -489,7 +489,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args) {
+    public static Output<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args) {
         return getResourceTags(args, InvokeOptions.Empty);
     }
     /**
@@ -519,7 +519,7 @@ public final class OrganizationsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:organizations/getResourceTags:getResourceTags", TypeShape.of(GetResourceTagsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:organizations/getResourceTags:getResourceTags", TypeShape.of(GetResourceTagsResult.class), args, Utilities.withVersion(options));
     }
 }

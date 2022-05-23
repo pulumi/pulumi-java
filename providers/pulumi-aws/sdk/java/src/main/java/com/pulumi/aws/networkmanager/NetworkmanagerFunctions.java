@@ -24,10 +24,10 @@ import com.pulumi.aws.networkmanager.outputs.GetLinkResult;
 import com.pulumi.aws.networkmanager.outputs.GetLinksResult;
 import com.pulumi.aws.networkmanager.outputs.GetSiteResult;
 import com.pulumi.aws.networkmanager.outputs.GetSitesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NetworkmanagerFunctions {
     /**
@@ -58,7 +58,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about connections.
@@ -120,7 +120,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
+    public static Output<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
         return getConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -151,8 +151,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a device.
@@ -182,7 +182,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args) {
         return getDevice(args, InvokeOptions.Empty);
     }
     /**
@@ -213,8 +213,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about devices.
@@ -244,7 +244,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDevicesResult> getDevices(GetDevicesArgs args) {
+    public static Output<GetDevicesResult> getDevices(GetDevicesArgs args) {
         return getDevices(args, InvokeOptions.Empty);
     }
     /**
@@ -275,8 +275,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a global network.
@@ -305,7 +305,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args) {
+    public static Output<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args) {
         return getGlobalNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -335,8 +335,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getGlobalNetwork:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getGlobalNetwork:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about global networks.
@@ -365,7 +365,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworks() {
+    public static Output<GetGlobalNetworksResult> getGlobalNetworks() {
         return getGlobalNetworks(GetGlobalNetworksArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -395,7 +395,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args) {
+    public static Output<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args) {
         return getGlobalNetworks(args, InvokeOptions.Empty);
     }
     /**
@@ -425,8 +425,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getGlobalNetworks:getGlobalNetworks", TypeShape.of(GetGlobalNetworksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getGlobalNetworks:getGlobalNetworks", TypeShape.of(GetGlobalNetworksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a link.
@@ -456,7 +456,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinkResult> getLink(GetLinkArgs args) {
+    public static Output<GetLinkResult> getLink(GetLinkArgs args) {
         return getLink(args, InvokeOptions.Empty);
     }
     /**
@@ -487,8 +487,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getLink:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getLink:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about link.
@@ -518,7 +518,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinksResult> getLinks(GetLinksArgs args) {
+    public static Output<GetLinksResult> getLinks(GetLinksArgs args) {
         return getLinks(args, InvokeOptions.Empty);
     }
     /**
@@ -549,8 +549,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinksResult> getLinks(GetLinksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getLinks:getLinks", TypeShape.of(GetLinksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinksResult> getLinks(GetLinksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getLinks:getLinks", TypeShape.of(GetLinksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a site.
@@ -580,7 +580,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+    public static Output<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
     /**
@@ -611,8 +611,8 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about sites.
@@ -642,7 +642,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSitesResult> getSites(GetSitesArgs args) {
+    public static Output<GetSitesResult> getSites(GetSitesArgs args) {
         return getSites(args, InvokeOptions.Empty);
     }
     /**
@@ -673,7 +673,7 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSitesResult> getSites(GetSitesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:networkmanager/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSitesResult> getSites(GetSitesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:networkmanager/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
     }
 }

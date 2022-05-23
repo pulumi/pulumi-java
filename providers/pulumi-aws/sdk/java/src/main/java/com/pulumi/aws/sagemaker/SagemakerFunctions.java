@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.sagemaker.inputs.GetPrebuiltEcrImageArgs;
 import com.pulumi.aws.sagemaker.outputs.GetPrebuiltEcrImageResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SagemakerFunctions {
     /**
@@ -44,7 +44,7 @@ public final class SagemakerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args) {
+    public static Output<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args) {
         return getPrebuiltEcrImage(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class SagemakerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:sagemaker/getPrebuiltEcrImage:getPrebuiltEcrImage", TypeShape.of(GetPrebuiltEcrImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:sagemaker/getPrebuiltEcrImage:getPrebuiltEcrImage", TypeShape.of(GetPrebuiltEcrImageResult.class), args, Utilities.withVersion(options));
     }
 }

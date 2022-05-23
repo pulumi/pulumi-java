@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.glue.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataCatalogEncryptionSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return The ID of the Data Catalog. This is typically the AWS account ID.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDataCatalogEncryptionSettingsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
+        }
+
+        /**
+         * @param catalogId The ID of the Data Catalog. This is typically the AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
 
         public GetDataCatalogEncryptionSettingsArgs build() {

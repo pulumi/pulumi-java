@@ -10,10 +10,10 @@ import com.pulumi.aws.apigatewayv2.inputs.GetExportArgs;
 import com.pulumi.aws.apigatewayv2.outputs.GetApiResult;
 import com.pulumi.aws.apigatewayv2.outputs.GetApisResult;
 import com.pulumi.aws.apigatewayv2.outputs.GetExportResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Apigatewayv2Functions {
     /**
@@ -43,7 +43,7 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args) {
+    public static Output<GetApiResult> getApi(GetApiArgs args) {
         return getApi(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigatewayv2/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigatewayv2/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about multiple Amazon API Gateway Version 2 APIs.
@@ -103,7 +103,7 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApisResult> getApis() {
+    public static Output<GetApisResult> getApis() {
         return getApis(GetApisArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApisResult> getApis(GetApisArgs args) {
+    public static Output<GetApisResult> getApis(GetApisArgs args) {
         return getApis(args, InvokeOptions.Empty);
     }
     /**
@@ -163,8 +163,8 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApisResult> getApis(GetApisArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigatewayv2/getApis:getApis", TypeShape.of(GetApisResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApisResult> getApis(GetApisArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigatewayv2/getApis:getApis", TypeShape.of(GetApisResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Exports a definition of an API in a particular output format and specification.
@@ -195,7 +195,7 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+    public static Output<GetExportResult> getExport(GetExportArgs args) {
         return getExport(args, InvokeOptions.Empty);
     }
     /**
@@ -227,7 +227,7 @@ public final class Apigatewayv2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigatewayv2/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigatewayv2/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
 }

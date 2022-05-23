@@ -10,10 +10,10 @@ import com.pulumi.aws.batch.inputs.GetSchedulingPolicyArgs;
 import com.pulumi.aws.batch.outputs.GetComputeEnvironmentResult;
 import com.pulumi.aws.batch.outputs.GetJobQueueResult;
 import com.pulumi.aws.batch.outputs.GetSchedulingPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BatchFunctions {
     /**
@@ -44,7 +44,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
+    public static Output<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
         return getComputeEnvironment(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:batch/getComputeEnvironment:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:batch/getComputeEnvironment:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Batch Job Queue data source allows access to details of a specific
@@ -106,7 +106,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
+    public static Output<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
         return getJobQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -137,8 +137,8 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:batch/getJobQueue:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:batch/getJobQueue:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Batch Scheduling Policy data source allows access to details of a specific Scheduling Policy within AWS Batch.
@@ -167,7 +167,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
+    public static Output<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
         return getSchedulingPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -197,7 +197,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:batch/getSchedulingPolicy:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:batch/getSchedulingPolicy:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

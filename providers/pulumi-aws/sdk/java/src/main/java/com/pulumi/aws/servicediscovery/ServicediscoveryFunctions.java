@@ -6,10 +6,10 @@ package com.pulumi.aws.servicediscovery;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.servicediscovery.inputs.GetDnsNamespaceArgs;
 import com.pulumi.aws.servicediscovery.outputs.GetDnsNamespaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServicediscoveryFunctions {
     /**
@@ -40,7 +40,7 @@ public final class ServicediscoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args) {
+    public static Output<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args) {
         return getDnsNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class ServicediscoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicediscovery/getDnsNamespace:getDnsNamespace", TypeShape.of(GetDnsNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicediscovery/getDnsNamespace:getDnsNamespace", TypeShape.of(GetDnsNamespaceResult.class), args, Utilities.withVersion(options));
     }
 }

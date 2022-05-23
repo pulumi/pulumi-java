@@ -15,11 +15,11 @@ import com.pulumi.aws.outposts.outputs.GetOutpostResult;
 import com.pulumi.aws.outposts.outputs.GetOutpostsResult;
 import com.pulumi.aws.outposts.outputs.GetSiteResult;
 import com.pulumi.aws.outposts.outputs.GetSitesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class OutpostsFunctions {
     /**
@@ -49,7 +49,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostResult> getOutpost() {
+    public static Output<GetOutpostResult> getOutpost() {
         return getOutpost(GetOutpostArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args) {
+    public static Output<GetOutpostResult> getOutpost(GetOutpostArgs args) {
         return getOutpost(args, InvokeOptions.Empty);
     }
     /**
@@ -109,22 +109,22 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getOutpost:getOutpost", TypeShape.of(GetOutpostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOutpostResult> getOutpost(GetOutpostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getOutpost:getOutpost", TypeShape.of(GetOutpostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about single Outpost Instance Type.
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args) {
+    public static Output<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args) {
         return getOutpostInstanceType(args, InvokeOptions.Empty);
     }
     /**
      * Information about single Outpost Instance Type.
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceType:getOutpostInstanceType", TypeShape.of(GetOutpostInstanceTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getOutpostInstanceType:getOutpostInstanceType", TypeShape.of(GetOutpostInstanceTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about Outposts Instance Types.
@@ -153,7 +153,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args) {
+    public static Output<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args) {
         return getOutpostInstanceTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -183,8 +183,8 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceTypes:getOutpostInstanceTypes", TypeShape.of(GetOutpostInstanceTypesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getOutpostInstanceTypes:getOutpostInstanceTypes", TypeShape.of(GetOutpostInstanceTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about multiple Outposts.
@@ -213,7 +213,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostsResult> getOutposts() {
+    public static Output<GetOutpostsResult> getOutposts() {
         return getOutposts(GetOutpostsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -243,7 +243,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args) {
+    public static Output<GetOutpostsResult> getOutposts(GetOutpostsArgs args) {
         return getOutposts(args, InvokeOptions.Empty);
     }
     /**
@@ -273,8 +273,8 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getOutposts:getOutposts", TypeShape.of(GetOutpostsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOutpostsResult> getOutposts(GetOutpostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getOutposts:getOutposts", TypeShape.of(GetOutpostsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Outposts Site.
@@ -303,7 +303,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite() {
+    public static Output<GetSiteResult> getSite() {
         return getSite(GetSiteArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -333,7 +333,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+    public static Output<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
     /**
@@ -363,8 +363,8 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about multiple Outposts Sites.
@@ -391,7 +391,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSitesResult> getSites() {
+    public static Output<GetSitesResult> getSites() {
         return getSites(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -419,7 +419,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args) {
+    public static Output<GetSitesResult> getSites(InvokeArgs args) {
         return getSites(args, InvokeOptions.Empty);
     }
     /**
@@ -447,7 +447,7 @@ public final class OutpostsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:outposts/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSitesResult> getSites(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:outposts/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
     }
 }

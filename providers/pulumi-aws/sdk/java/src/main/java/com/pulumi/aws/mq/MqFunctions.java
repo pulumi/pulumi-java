@@ -6,10 +6,10 @@ package com.pulumi.aws.mq;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.mq.inputs.GetBrokerArgs;
 import com.pulumi.aws.mq.outputs.GetBrokerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MqFunctions {
     /**
@@ -46,7 +46,7 @@ public final class MqFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBrokerResult> getBroker() {
+    public static Output<GetBrokerResult> getBroker() {
         return getBroker(GetBrokerArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -83,7 +83,7 @@ public final class MqFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args) {
+    public static Output<GetBrokerResult> getBroker(GetBrokerArgs args) {
         return getBroker(args, InvokeOptions.Empty);
     }
     /**
@@ -120,7 +120,7 @@ public final class MqFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:mq/getBroker:getBroker", TypeShape.of(GetBrokerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBrokerResult> getBroker(GetBrokerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:mq/getBroker:getBroker", TypeShape.of(GetBrokerResult.class), args, Utilities.withVersion(options));
     }
 }

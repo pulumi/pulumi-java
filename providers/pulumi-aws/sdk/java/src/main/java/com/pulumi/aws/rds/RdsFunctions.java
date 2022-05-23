@@ -24,10 +24,10 @@ import com.pulumi.aws.rds.outputs.GetOrderableDbInstanceResult;
 import com.pulumi.aws.rds.outputs.GetProxyResult;
 import com.pulumi.aws.rds.outputs.GetSnapshotResult;
 import com.pulumi.aws.rds.outputs.GetSubnetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RdsFunctions {
     /**
@@ -57,7 +57,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate() {
+    public static Output<GetCertificateResult> getCertificate() {
         return getCertificate(GetCertificateArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -87,7 +87,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -117,8 +117,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about an RDS cluster.
@@ -147,7 +147,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -177,8 +177,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.
@@ -223,7 +223,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot() {
+    public static Output<GetClusterSnapshotResult> getClusterSnapshot() {
         return getClusterSnapshot(GetClusterSnapshotArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -269,7 +269,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args) {
+    public static Output<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args) {
         return getClusterSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -315,8 +315,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getClusterSnapshot:getClusterSnapshot", TypeShape.of(GetClusterSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getClusterSnapshot:getClusterSnapshot", TypeShape.of(GetClusterSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about an RDS engine version.
@@ -349,7 +349,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
+    public static Output<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
         return getEngineVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -383,8 +383,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -436,7 +436,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventCategoriesResult> getEventCategories() {
+    public static Output<GetEventCategoriesResult> getEventCategories() {
         return getEventCategories(GetEventCategoriesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -489,7 +489,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args) {
+    public static Output<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args) {
         return getEventCategories(args, InvokeOptions.Empty);
     }
     /**
@@ -542,8 +542,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getEventCategories:getEventCategories", TypeShape.of(GetEventCategoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getEventCategories:getEventCategories", TypeShape.of(GetEventCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an RDS instance
@@ -572,7 +572,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -602,8 +602,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about RDS orderable DB instances and valid parameter combinations.
@@ -671,7 +671,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
+    public static Output<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
         return getOrderableDbInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -740,8 +740,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a DB Proxy.
@@ -770,7 +770,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProxyResult> getProxy(GetProxyArgs args) {
+    public static Output<GetProxyResult> getProxy(GetProxyArgs args) {
         return getProxy(args, InvokeOptions.Empty);
     }
     /**
@@ -800,8 +800,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProxyResult> getProxy(GetProxyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getProxy:getProxy", TypeShape.of(GetProxyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProxyResult> getProxy(GetProxyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getProxy:getProxy", TypeShape.of(GetProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a DB Snapshot for use when provisioning DB instances
@@ -852,7 +852,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot() {
+    public static Output<GetSnapshotResult> getSnapshot() {
         return getSnapshot(GetSnapshotArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -904,7 +904,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -956,8 +956,8 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an RDS subnet group.
@@ -986,7 +986,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
         return getSubnetGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -1016,7 +1016,7 @@ public final class RdsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:rds/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:rds/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

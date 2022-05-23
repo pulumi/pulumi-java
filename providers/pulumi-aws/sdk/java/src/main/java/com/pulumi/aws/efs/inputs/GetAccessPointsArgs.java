@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.efs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessPointsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId", required=true)
-    private String fileSystemId;
+    private Output<String> fileSystemId;
 
     /**
      * @return EFS File System identifier.
      * 
      */
-    public String fileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessPointsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(String fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
+        }
+
+        /**
+         * @param fileSystemId EFS File System identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
 
         public GetAccessPointsArgs build() {

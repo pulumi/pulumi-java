@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.codecommit.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-    private String repositoryName;
+    private Output<String> repositoryName;
 
     /**
      * @return The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    public String repositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -57,9 +58,19 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder repositoryName(String repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
+        }
+
+        /**
+         * @param repositoryName The name for the repository. This needs to be less than 100 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
 
         public GetRepositoryArgs build() {

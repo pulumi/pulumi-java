@@ -6,10 +6,10 @@ package com.pulumi.aws.opensearch;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.opensearch.inputs.GetDomainArgs;
 import com.pulumi.aws.opensearch.outputs.GetDomainResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class OpensearchFunctions {
     /**
@@ -39,7 +39,7 @@ public final class OpensearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class OpensearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:opensearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:opensearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.dynamodb;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.dynamodb.inputs.GetTableArgs;
 import com.pulumi.aws.dynamodb.outputs.GetTableResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DynamodbFunctions {
     /**
@@ -39,7 +39,7 @@ public final class DynamodbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class DynamodbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:dynamodb/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:dynamodb/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

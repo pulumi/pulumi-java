@@ -16,10 +16,10 @@ import com.pulumi.aws.ssm.outputs.GetMaintenanceWindowsResult;
 import com.pulumi.aws.ssm.outputs.GetParameterResult;
 import com.pulumi.aws.ssm.outputs.GetParametersByPathResult;
 import com.pulumi.aws.ssm.outputs.GetPatchBaselineResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SsmFunctions {
     /**
@@ -77,7 +77,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args) {
+    public static Output<GetDocumentResult> getDocument(GetDocumentArgs args) {
         return getDocument(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getDocument:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getDocument:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the instance IDs of SSM managed instances.
@@ -168,7 +168,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances() {
+    public static Output<GetInstancesResult> getInstances() {
         return getInstances(GetInstancesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -201,7 +201,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args) {
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args) {
         return getInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -234,8 +234,8 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the window IDs of SSM maintenance windows.
@@ -267,7 +267,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows() {
+    public static Output<GetMaintenanceWindowsResult> getMaintenanceWindows() {
         return getMaintenanceWindows(GetMaintenanceWindowsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -300,7 +300,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args) {
+    public static Output<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args) {
         return getMaintenanceWindows(args, InvokeOptions.Empty);
     }
     /**
@@ -333,8 +333,8 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getMaintenanceWindows:getMaintenanceWindows", TypeShape.of(GetMaintenanceWindowsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaintenanceWindowsResult> getMaintenanceWindows(GetMaintenanceWindowsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getMaintenanceWindows:getMaintenanceWindows", TypeShape.of(GetMaintenanceWindowsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides an SSM Parameter data source.
@@ -365,7 +365,7 @@ public final class SsmFunctions {
      * &gt; **Note:** The data source is currently following the behavior of the [SSM API](https://docs.aws.amazon.com/sdk-for-go/api/service/ssm/#Parameter) to return a string value, regardless of parameter type.
      * 
      */
-    public static CompletableFuture<GetParameterResult> getParameter(GetParameterArgs args) {
+    public static Output<GetParameterResult> getParameter(GetParameterArgs args) {
         return getParameter(args, InvokeOptions.Empty);
     }
     /**
@@ -397,14 +397,14 @@ public final class SsmFunctions {
      * &gt; **Note:** The data source is currently following the behavior of the [SSM API](https://docs.aws.amazon.com/sdk-for-go/api/service/ssm/#Parameter) to return a string value, regardless of parameter type.
      * 
      */
-    public static CompletableFuture<GetParameterResult> getParameter(GetParameterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getParameter:getParameter", TypeShape.of(GetParameterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetParameterResult> getParameter(GetParameterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getParameter:getParameter", TypeShape.of(GetParameterResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args) {
+    public static Output<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args) {
         return getParametersByPath(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getParametersByPath:getParametersByPath", TypeShape.of(GetParametersByPathResult.class), args, Utilities.withVersion(options));
+    public static Output<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getParametersByPath:getParametersByPath", TypeShape.of(GetParametersByPathResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
@@ -463,7 +463,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args) {
+    public static Output<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args) {
         return getPatchBaseline(args, InvokeOptions.Empty);
     }
     /**
@@ -523,7 +523,7 @@ public final class SsmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ssm/getPatchBaseline:getPatchBaseline", TypeShape.of(GetPatchBaselineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ssm/getPatchBaseline:getPatchBaseline", TypeShape.of(GetPatchBaselineResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -30,10 +30,10 @@ import com.pulumi.aws.imagebuilder.outputs.GetImageRecipesResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImageResult;
 import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationResult;
 import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ImagebuilderFunctions {
     /**
@@ -63,7 +63,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args) {
         return getComponent(args, InvokeOptions.Empty);
     }
     /**
@@ -93,8 +93,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Components matching the specified criteria.
@@ -127,7 +127,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents() {
+    public static Output<GetComponentsResult> getComponents() {
         return getComponents(GetComponentsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +161,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args) {
+    public static Output<GetComponentsResult> getComponents(GetComponentsArgs args) {
         return getComponents(args, InvokeOptions.Empty);
     }
     /**
@@ -195,8 +195,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image builder Container Recipe.
@@ -225,7 +225,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
         return getContainerRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -255,8 +255,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipe:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getContainerRecipe:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Container Recipes matching the specified criteria.
@@ -289,7 +289,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes() {
+    public static Output<GetContainerRecipesResult> getContainerRecipes() {
         return getContainerRecipes(GetContainerRecipesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -323,7 +323,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args) {
+    public static Output<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args) {
         return getContainerRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -357,8 +357,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipes:getContainerRecipes", TypeShape.of(GetContainerRecipesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getContainerRecipes:getContainerRecipes", TypeShape.of(GetContainerRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Distribution Configuration.
@@ -387,7 +387,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
         return getDistributionConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -417,8 +417,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
@@ -450,7 +450,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations() {
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations() {
         return getDistributionConfigurations(GetDistributionConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -483,7 +483,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args) {
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args) {
         return getDistributionConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -516,8 +516,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Image.
@@ -547,7 +547,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -578,8 +578,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Image Pipeline.
@@ -608,7 +608,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
         return getImagePipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -638,8 +638,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Image Pipelines matching the specified criteria.
@@ -671,7 +671,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines() {
+    public static Output<GetImagePipelinesResult> getImagePipelines() {
         return getImagePipelines(GetImagePipelinesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -704,7 +704,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args) {
+    public static Output<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args) {
         return getImagePipelines(args, InvokeOptions.Empty);
     }
     /**
@@ -737,8 +737,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipelines:getImagePipelines", TypeShape.of(GetImagePipelinesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImagePipelines:getImagePipelines", TypeShape.of(GetImagePipelinesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Image Recipe.
@@ -767,7 +767,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
         return getImageRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -797,8 +797,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipe:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImageRecipe:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Image Recipes matching the specified criteria.
@@ -831,7 +831,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes() {
+    public static Output<GetImageRecipesResult> getImageRecipes() {
         return getImageRecipes(GetImageRecipesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -865,7 +865,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args) {
+    public static Output<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args) {
         return getImageRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -899,8 +899,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipes:getImageRecipes", TypeShape.of(GetImageRecipesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImageRecipes:getImageRecipes", TypeShape.of(GetImageRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Infrastructure Configuration.
@@ -929,7 +929,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
         return getInfrastructureConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -959,8 +959,8 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and names of Image Builder Infrastructure Configurations matching the specified criteria.
@@ -992,7 +992,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations() {
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations() {
         return getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1025,7 +1025,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args) {
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args) {
         return getInfrastructureConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -1058,7 +1058,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfigurations:getInfrastructureConfigurations", TypeShape.of(GetInfrastructureConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getInfrastructureConfigurations:getInfrastructureConfigurations", TypeShape.of(GetInfrastructureConfigurationsResult.class), args, Utilities.withVersion(options));
     }
 }

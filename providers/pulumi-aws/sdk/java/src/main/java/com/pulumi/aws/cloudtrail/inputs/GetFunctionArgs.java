@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudtrail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the CloudFront function.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stage", required=true)
-    private String stage;
+    private Output<String> stage;
 
     /**
      * @return The function’s stage, either `DEVELOPMENT` or `LIVE`.
      * 
      */
-    public String stage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -73,8 +74,29 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of the CloudFront function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param stage The function’s stage, either `DEVELOPMENT` or `LIVE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stage(Output<String> stage) {
+            $.stage = stage;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stage(String stage) {
-            $.stage = stage;
-            return this;
+            return stage(Output.of(stage));
         }
 
         public GetFunctionArgs build() {

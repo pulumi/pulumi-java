@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetInstancesFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetInstancesFilter> filters;
+    private Output</* @Nullable */ List<GetInstancesFilter>> filters;
 
     /**
      * @return One or more name/value pairs to use as filters. There are
@@ -32,8 +32,8 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-instances in the AWS CLI reference][1].
      * 
      */
-    public Optional<List<GetInstancesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetInstancesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -41,14 +41,14 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceStateNames")
-    private @Nullable List<String> instanceStateNames;
+    private Output</* @Nullable */ List<String>> instanceStateNames;
 
     /**
      * @return A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
      * 
      */
-    public Optional<List<String>> instanceStateNames() {
-        return Optional.ofNullable(this.instanceStateNames);
+    public Output</* @Nullable */ List<String>> instanceStateNames() {
+        return this.instanceStateNames;
     }
 
     /**
@@ -57,15 +57,15 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTags")
-    private @Nullable Map<String,String> instanceTags;
+    private Output</* @Nullable */ Map<String,String>> instanceTags;
 
     /**
      * @return A map of tags, each pair of which must
      * exactly match a pair on desired instances.
      * 
      */
-    public Optional<Map<String,String>> instanceTags() {
-        return Optional.ofNullable(this.instanceTags);
+    public Output</* @Nullable */ Map<String,String>> instanceTags() {
+        return this.instanceTags;
     }
 
     private GetInstancesArgs() {}
@@ -102,9 +102,21 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetInstancesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are
+         * several valid keys, for a full reference, check out
+         * [describe-instances in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -125,9 +137,19 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
+        public Builder instanceStateNames(Output</* @Nullable */ List<String>> instanceStateNames) {
             $.instanceStateNames = instanceStateNames;
             return this;
+        }
+
+        /**
+         * @param instanceStateNames A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
+            return instanceStateNames(Output.of(instanceStateNames));
         }
 
         /**
@@ -147,9 +169,20 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
+        public Builder instanceTags(Output</* @Nullable */ Map<String,String>> instanceTags) {
             $.instanceTags = instanceTags;
             return this;
+        }
+
+        /**
+         * @param instanceTags A map of tags, each pair of which must
+         * exactly match a pair on desired instances.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
+            return instanceTags(Output.of(instanceTags));
         }
 
         public GetInstancesArgs build() {

@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-    private @Nullable Map<String,String> parameters;
+    private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
      * @return A key-value map of query string parameters `sdk_type` properties of the SDK. For SDK Type of `objectivec` or `swift`, a parameter named `classPrefix` is required. For SDK Type of `android`, parameters named `groupId`, `artifactId`, `artifactVersion`, and `invokerPackage` are required. For SDK Type of `java`, parameters named `serviceName` and `javaPackageName` are required.
      * 
      */
-    public Optional<Map<String,String>> parameters() {
-        return Optional.ofNullable(this.parameters);
+    public Output</* @Nullable */ Map<String,String>> parameters() {
+        return this.parameters;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The identifier of the associated REST API.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -50,13 +50,13 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkType", required=true)
-    private String sdkType;
+    private Output<String> sdkType;
 
     /**
      * @return The language for the generated SDK. Currently `java`, `javascript`, `android`, `objectivec` (for iOS), `swift` (for iOS), and `ruby` are supported.
      * 
      */
-    public String sdkType() {
+    public Output<String> sdkType() {
         return this.sdkType;
     }
 
@@ -65,13 +65,13 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-    private String stageName;
+    private Output<String> stageName;
 
     /**
      * @return The name of the Stage that will be exported.
      * 
      */
-    public String stageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 
@@ -108,8 +108,29 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(Output</* @Nullable */ Map<String,String>> parameters) {
             $.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * @param parameters A key-value map of query string parameters `sdk_type` properties of the SDK. For SDK Type of `objectivec` or `swift`, a parameter named `classPrefix` is required. For SDK Type of `android`, parameters named `groupId`, `artifactId`, `artifactVersion`, and `invokerPackage` are required. For SDK Type of `java`, parameters named `serviceName` and `javaPackageName` are required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameters(@Nullable Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        /**
+         * @param restApiId The identifier of the associated REST API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(Output<String> restApiId) {
+            $.restApiId = restApiId;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restApiId(String restApiId) {
-            $.restApiId = restApiId;
+            return restApiId(Output.of(restApiId));
+        }
+
+        /**
+         * @param sdkType The language for the generated SDK. Currently `java`, `javascript`, `android`, `objectivec` (for iOS), `swift` (for iOS), and `ruby` are supported.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sdkType(Output<String> sdkType) {
+            $.sdkType = sdkType;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sdkType(String sdkType) {
-            $.sdkType = sdkType;
+            return sdkType(Output.of(sdkType));
+        }
+
+        /**
+         * @param stageName The name of the Stage that will be exported.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stageName(Output<String> stageName) {
+            $.stageName = stageName;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stageName(String stageName) {
-            $.stageName = stageName;
-            return this;
+            return stageName(Output.of(stageName));
         }
 
         public GetSdkArgs build() {

@@ -10,10 +10,10 @@ import com.pulumi.aws.applicationloadbalancing.inputs.GetTargetGroupArgs;
 import com.pulumi.aws.applicationloadbalancing.outputs.GetListenerResult;
 import com.pulumi.aws.applicationloadbalancing.outputs.GetLoadBalancerResult;
 import com.pulumi.aws.applicationloadbalancing.outputs.GetTargetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApplicationloadbalancingFunctions {
     /**
@@ -62,7 +62,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getListener has been deprecated in favor of aws.alb.getListener */
-    public static CompletableFuture<GetListenerResult> getListener() {
+    public static Output<GetListenerResult> getListener() {
         return getListener(GetListenerArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getListener has been deprecated in favor of aws.alb.getListener */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+    public static Output<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
     /**
@@ -160,8 +160,8 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getListener has been deprecated in favor of aws.alb.getListener */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:applicationloadbalancing/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
@@ -204,7 +204,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getLoadBalancer has been deprecated in favor of aws.alb.getLoadBalancer */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer() {
+    public static Output<GetLoadBalancerResult> getLoadBalancer() {
         return getLoadBalancer(GetLoadBalancerArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -248,7 +248,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getLoadBalancer has been deprecated in favor of aws.alb.getLoadBalancer */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
         return getLoadBalancer(args, InvokeOptions.Empty);
     }
     /**
@@ -292,8 +292,8 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getLoadBalancer has been deprecated in favor of aws.alb.getLoadBalancer */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:applicationloadbalancing/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
@@ -336,7 +336,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getTargetGroup has been deprecated in favor of aws.alb.getTargetGroup */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup() {
+    public static Output<GetTargetGroupResult> getTargetGroup() {
         return getTargetGroup(GetTargetGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -380,7 +380,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getTargetGroup has been deprecated in favor of aws.alb.getTargetGroup */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
+    public static Output<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
         return getTargetGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -424,7 +424,7 @@ public final class ApplicationloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.applicationloadbalancing.getTargetGroup has been deprecated in favor of aws.alb.getTargetGroup */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:applicationloadbalancing/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.elasticsearch;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.elasticsearch.inputs.GetDomainArgs;
 import com.pulumi.aws.elasticsearch.outputs.GetDomainResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ElasticsearchFunctions {
     /**
@@ -39,7 +39,7 @@ public final class ElasticsearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class ElasticsearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticsearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticsearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

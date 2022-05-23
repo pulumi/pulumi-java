@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeEnvironmentName", required=true)
-    private String computeEnvironmentName;
+    private Output<String> computeEnvironmentName;
 
     /**
      * @return The name of the Batch Compute Environment
      * 
      */
-    public String computeEnvironmentName() {
+    public Output<String> computeEnvironmentName() {
         return this.computeEnvironmentName;
     }
 
@@ -35,14 +35,14 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetComputeEnvironmentArgs() {}
@@ -76,8 +76,29 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder computeEnvironmentName(String computeEnvironmentName) {
+        public Builder computeEnvironmentName(Output<String> computeEnvironmentName) {
             $.computeEnvironmentName = computeEnvironmentName;
+            return this;
+        }
+
+        /**
+         * @param computeEnvironmentName The name of the Batch Compute Environment
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeEnvironmentName(String computeEnvironmentName) {
+            return computeEnvironmentName(Output.of(computeEnvironmentName));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetComputeEnvironmentArgs build() {

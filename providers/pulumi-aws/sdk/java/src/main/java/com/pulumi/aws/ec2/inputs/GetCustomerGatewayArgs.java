@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetCustomerGatewayFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetCustomerGatewayFilter> filters;
+    private Output</* @Nullable */ List<GetCustomerGatewayFilter>> filters;
 
     /**
      * @return One or more [name-value pairs][dcg-filters] to filter by.
      * 
      */
-    public Optional<List<GetCustomerGatewayFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCustomerGatewayFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The ID of the gateway.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Map of key-value pairs assigned to the gateway.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetCustomerGatewayArgs() {}
@@ -94,9 +94,19 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetCustomerGatewayFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetCustomerGatewayFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more [name-value pairs][dcg-filters] to filter by.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetCustomerGatewayFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -115,8 +125,29 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param tags Map of key-value pairs assigned to the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -127,8 +158,7 @@ public final class GetCustomerGatewayArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetCustomerGatewayArgs build() {

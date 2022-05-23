@@ -4,12 +4,12 @@
 package com.pulumi.aws.inputs;
 
 import com.pulumi.aws.inputs.GetAvailabilityZonesFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="allAvailabilityZones")
-    private @Nullable Boolean allAvailabilityZones;
+    private Output</* @Nullable */ Boolean> allAvailabilityZones;
 
     /**
      * @return Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
      * 
      */
-    public Optional<Boolean> allAvailabilityZones() {
-        return Optional.ofNullable(this.allAvailabilityZones);
+    public Output</* @Nullable */ Boolean> allAvailabilityZones() {
+        return this.allAvailabilityZones;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeNames")
-    private @Nullable List<String> excludeNames;
+    private Output</* @Nullable */ List<String>> excludeNames;
 
     /**
      * @return List of Availability Zone names to exclude.
      * 
      */
-    public Optional<List<String>> excludeNames() {
-        return Optional.ofNullable(this.excludeNames);
+    public Output</* @Nullable */ List<String>> excludeNames() {
+        return this.excludeNames;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeZoneIds")
-    private @Nullable List<String> excludeZoneIds;
+    private Output</* @Nullable */ List<String>> excludeZoneIds;
 
     /**
      * @return List of Availability Zone IDs to exclude.
      * 
      */
-    public Optional<List<String>> excludeZoneIds() {
-        return Optional.ofNullable(this.excludeZoneIds);
+    public Output</* @Nullable */ List<String>> excludeZoneIds() {
+        return this.excludeZoneIds;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAvailabilityZonesFilter> filters;
+    private Output</* @Nullable */ List<GetAvailabilityZonesFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetAvailabilityZonesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAvailabilityZonesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -85,7 +85,7 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Allows to filter list of Availability Zones based on their
@@ -94,8 +94,8 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * to which the underlying AWS account has access, regardless of their state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetAvailabilityZonesArgs() {}
@@ -132,8 +132,29 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+        public Builder allAvailabilityZones(Output</* @Nullable */ Boolean> allAvailabilityZones) {
             $.allAvailabilityZones = allAvailabilityZones;
+            return this;
+        }
+
+        /**
+         * @param allAvailabilityZones Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+            return allAvailabilityZones(Output.of(allAvailabilityZones));
+        }
+
+        /**
+         * @param excludeNames List of Availability Zone names to exclude.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeNames(Output</* @Nullable */ List<String>> excludeNames) {
+            $.excludeNames = excludeNames;
             return this;
         }
 
@@ -144,8 +165,7 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder excludeNames(@Nullable List<String> excludeNames) {
-            $.excludeNames = excludeNames;
-            return this;
+            return excludeNames(Output.of(excludeNames));
         }
 
         /**
@@ -164,9 +184,19 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
+        public Builder excludeZoneIds(Output</* @Nullable */ List<String>> excludeZoneIds) {
             $.excludeZoneIds = excludeZoneIds;
             return this;
+        }
+
+        /**
+         * @param excludeZoneIds List of Availability Zone IDs to exclude.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
+            return excludeZoneIds(Output.of(excludeZoneIds));
         }
 
         /**
@@ -185,9 +215,19 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetAvailabilityZonesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -209,9 +249,22 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state Allows to filter list of Availability Zones based on their
+         * current state. Can be either `&#34;available&#34;`, `&#34;information&#34;`, `&#34;impaired&#34;` or
+         * `&#34;unavailable&#34;`. By default the list includes a complete set of Availability Zones
+         * to which the underlying AWS account has access, regardless of their state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetAvailabilityZonesArgs build() {

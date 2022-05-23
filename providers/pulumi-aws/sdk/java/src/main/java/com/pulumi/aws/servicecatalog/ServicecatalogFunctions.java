@@ -14,10 +14,10 @@ import com.pulumi.aws.servicecatalog.outputs.GetLaunchPathsResult;
 import com.pulumi.aws.servicecatalog.outputs.GetPortfolioConstraintsResult;
 import com.pulumi.aws.servicecatalog.outputs.GetPortfolioResult;
 import com.pulumi.aws.servicecatalog.outputs.GetProductResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServicecatalogFunctions {
     /**
@@ -49,7 +49,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args) {
+    public static Output<GetConstraintResult> getConstraint(GetConstraintArgs args) {
         return getConstraint(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicecatalog/getConstraint:getConstraint", TypeShape.of(GetConstraintResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConstraintResult> getConstraint(GetConstraintArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicecatalog/getConstraint:getConstraint", TypeShape.of(GetConstraintResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.
@@ -112,7 +112,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args) {
+    public static Output<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args) {
         return getLaunchPaths(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicecatalog/getLaunchPaths:getLaunchPaths", TypeShape.of(GetLaunchPathsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicecatalog/getLaunchPaths:getLaunchPaths", TypeShape.of(GetLaunchPathsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information for a Service Catalog Portfolio.
@@ -173,7 +173,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args) {
+    public static Output<GetPortfolioResult> getPortfolio(GetPortfolioArgs args) {
         return getPortfolio(args, InvokeOptions.Empty);
     }
     /**
@@ -203,8 +203,8 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolio:getPortfolio", TypeShape.of(GetPortfolioResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPortfolioResult> getPortfolio(GetPortfolioArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicecatalog/getPortfolio:getPortfolio", TypeShape.of(GetPortfolioResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information on Service Catalog Portfolio Constraints.
@@ -234,7 +234,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args) {
+    public static Output<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args) {
         return getPortfolioConstraints(args, InvokeOptions.Empty);
     }
     /**
@@ -265,8 +265,8 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolioConstraints:getPortfolioConstraints", TypeShape.of(GetPortfolioConstraintsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicecatalog/getPortfolioConstraints:getPortfolioConstraints", TypeShape.of(GetPortfolioConstraintsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information on a Service Catalog Product.
@@ -298,7 +298,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+    public static Output<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
     /**
@@ -331,7 +331,7 @@ public final class ServicecatalogFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicecatalog/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicecatalog/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hoursOfOperationId")
-    private @Nullable String hoursOfOperationId;
+    private Output</* @Nullable */ String> hoursOfOperationId;
 
     /**
      * @return Returns information on a specific Hours of Operation by hours of operation id
      * 
      */
-    public Optional<String> hoursOfOperationId() {
-        return Optional.ofNullable(this.hoursOfOperationId);
+    public Output</* @Nullable */ String> hoursOfOperationId() {
+        return this.hoursOfOperationId;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return Reference to the hosting Amazon Connect Instance
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -50,14 +50,14 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Returns information on a specific Hours of Operation by name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A map of tags to assign to the Hours of Operation.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetHoursOfOperationArgs() {}
@@ -108,8 +108,29 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
+        public Builder hoursOfOperationId(Output</* @Nullable */ String> hoursOfOperationId) {
             $.hoursOfOperationId = hoursOfOperationId;
+            return this;
+        }
+
+        /**
+         * @param hoursOfOperationId Returns information on a specific Hours of Operation by hours of operation id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
+            return hoursOfOperationId(Output.of(hoursOfOperationId));
+        }
+
+        /**
+         * @param instanceId Reference to the hosting Amazon Connect Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output<String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder instanceId(String instanceId) {
-            $.instanceId = instanceId;
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param name Returns information on a specific Hours of Operation by name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags A map of tags to assign to the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetHoursOfOperationArgs build() {

@@ -6,10 +6,10 @@ package com.pulumi.aws.transfer;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.transfer.inputs.GetServerArgs;
 import com.pulumi.aws.transfer.outputs.GetServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class TransferFunctions {
     /**
@@ -40,7 +40,7 @@ public final class TransferFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+    public static Output<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class TransferFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:transfer/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:transfer/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
 }

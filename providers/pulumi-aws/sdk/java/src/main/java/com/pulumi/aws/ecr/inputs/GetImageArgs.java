@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.ecr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageDigest")
-    private @Nullable String imageDigest;
+    private Output</* @Nullable */ String> imageDigest;
 
     /**
      * @return The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
      * 
      */
-    public Optional<String> imageDigest() {
-        return Optional.ofNullable(this.imageDigest);
+    public Output</* @Nullable */ String> imageDigest() {
+        return this.imageDigest;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageTag")
-    private @Nullable String imageTag;
+    private Output</* @Nullable */ String> imageTag;
 
     /**
      * @return The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
      * 
      */
-    public Optional<String> imageTag() {
-        return Optional.ofNullable(this.imageTag);
+    public Output</* @Nullable */ String> imageTag() {
+        return this.imageTag;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId")
-    private @Nullable String registryId;
+    private Output</* @Nullable */ String> registryId;
 
     /**
      * @return The ID of the Registry where the repository resides.
      * 
      */
-    public Optional<String> registryId() {
-        return Optional.ofNullable(this.registryId);
+    public Output</* @Nullable */ String> registryId() {
+        return this.registryId;
     }
 
     /**
@@ -64,13 +64,13 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-    private String repositoryName;
+    private Output<String> repositoryName;
 
     /**
      * @return The name of the ECR Repository.
      * 
      */
-    public String repositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -107,8 +107,29 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(Output</* @Nullable */ String> imageDigest) {
             $.imageDigest = imageDigest;
+            return this;
+        }
+
+        /**
+         * @param imageDigest The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageDigest(@Nullable String imageDigest) {
+            return imageDigest(Output.of(imageDigest));
+        }
+
+        /**
+         * @param imageTag The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageTag(Output</* @Nullable */ String> imageTag) {
+            $.imageTag = imageTag;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder imageTag(@Nullable String imageTag) {
-            $.imageTag = imageTag;
+            return imageTag(Output.of(imageTag));
+        }
+
+        /**
+         * @param registryId The ID of the Registry where the repository resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output</* @Nullable */ String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder registryId(@Nullable String registryId) {
-            $.registryId = registryId;
+            return registryId(Output.of(registryId));
+        }
+
+        /**
+         * @param repositoryName The name of the ECR Repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryName(Output<String> repositoryName) {
+            $.repositoryName = repositoryName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder repositoryName(String repositoryName) {
-            $.repositoryName = repositoryName;
-            return this;
+            return repositoryName(Output.of(repositoryName));
         }
 
         public GetImageArgs build() {

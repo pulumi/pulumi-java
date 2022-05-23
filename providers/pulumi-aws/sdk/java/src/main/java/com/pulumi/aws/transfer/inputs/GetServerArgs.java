@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.transfer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverId", required=true)
-    private String serverId;
+    private Output<String> serverId;
 
     /**
      * @return ID for an SFTP server.
      * 
      */
-    public String serverId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -57,9 +58,19 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder serverId(String serverId) {
+        public Builder serverId(Output<String> serverId) {
             $.serverId = serverId;
             return this;
+        }
+
+        /**
+         * @param serverId ID for an SFTP server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverId(String serverId) {
+            return serverId(Output.of(serverId));
         }
 
         public GetServerArgs build() {

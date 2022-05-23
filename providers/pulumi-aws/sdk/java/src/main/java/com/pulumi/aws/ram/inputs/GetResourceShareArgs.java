@@ -4,12 +4,12 @@
 package com.pulumi.aws.ram.inputs;
 
 import com.pulumi.aws.ram.inputs.GetResourceShareFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetResourceShareFilter> filters;
+    private Output</* @Nullable */ List<GetResourceShareFilter>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
      * 
      */
-    public Optional<List<GetResourceShareFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetResourceShareFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the tag key to filter on.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,13 +52,13 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceOwner", required=true)
-    private String resourceOwner;
+    private Output<String> resourceOwner;
 
     /**
      * @return The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
      * 
      */
-    public String resourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner;
     }
 
@@ -67,14 +67,14 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The Tags attached to the RAM share
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetResourceShareArgs() {}
@@ -110,9 +110,19 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetResourceShareFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -131,8 +141,29 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the tag key to filter on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceOwner The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceOwner(Output<String> resourceOwner) {
+            $.resourceOwner = resourceOwner;
             return this;
         }
 
@@ -143,7 +174,17 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceOwner(String resourceOwner) {
-            $.resourceOwner = resourceOwner;
+            return resourceOwner(Output.of(resourceOwner));
+        }
+
+        /**
+         * @param tags The Tags attached to the RAM share
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -154,8 +195,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetResourceShareArgs build() {

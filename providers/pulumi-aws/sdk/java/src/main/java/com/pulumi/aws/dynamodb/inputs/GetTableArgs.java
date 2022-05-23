@@ -4,11 +4,11 @@
 package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.aws.dynamodb.inputs.GetTableServerSideEncryption;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,28 +21,28 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the DynamoDB table.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="serverSideEncryption")
-    private @Nullable GetTableServerSideEncryption serverSideEncryption;
+    private Output</* @Nullable */ GetTableServerSideEncryption> serverSideEncryption;
 
-    public Optional<GetTableServerSideEncryption> serverSideEncryption() {
-        return Optional.ofNullable(this.serverSideEncryption);
+    public Output</* @Nullable */ GetTableServerSideEncryption> serverSideEncryption() {
+        return this.serverSideEncryption;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetTableArgs() {}
@@ -77,19 +77,37 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable GetTableServerSideEncryption serverSideEncryption) {
+        /**
+         * @param name The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder serverSideEncryption(Output</* @Nullable */ GetTableServerSideEncryption> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder serverSideEncryption(@Nullable GetTableServerSideEncryption serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
+        }
+
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetTableArgs build() {

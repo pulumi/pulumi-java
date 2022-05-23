@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.directconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationCode", required=true)
-    private String locationCode;
+    private Output<String> locationCode;
 
     /**
      * @return The code for the location to retrieve.
      * 
      */
-    public String locationCode() {
+    public Output<String> locationCode() {
         return this.locationCode;
     }
 
@@ -57,9 +58,19 @@ public final class GetLocationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder locationCode(String locationCode) {
+        public Builder locationCode(Output<String> locationCode) {
             $.locationCode = locationCode;
             return this;
+        }
+
+        /**
+         * @param locationCode The code for the location to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationCode(String locationCode) {
+            return locationCode(Output.of(locationCode));
         }
 
         public GetLocationArgs build() {

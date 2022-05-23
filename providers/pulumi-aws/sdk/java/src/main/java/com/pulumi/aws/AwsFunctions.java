@@ -34,11 +34,11 @@ import com.pulumi.aws.outputs.GetPrefixListResult;
 import com.pulumi.aws.outputs.GetRegionResult;
 import com.pulumi.aws.outputs.GetRegionsResult;
 import com.pulumi.aws.outputs.GetServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class AwsFunctions {
     /**
@@ -89,7 +89,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmi has been deprecated in favor of aws.ec2.getAmi */
-    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+    public static Output<GetAmiResult> getAmi(GetAmiArgs args) {
         return getAmi(args, InvokeOptions.Empty);
     }
     /**
@@ -140,8 +140,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmi has been deprecated in favor of aws.ec2.getAmi */
-    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a list of AMI IDs matching the specified criteria.
@@ -178,7 +178,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
         return getAmiIds(args, InvokeOptions.Empty);
     }
     /**
@@ -216,8 +216,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Parses an Amazon Resource Name (ARN) into its constituent parts.
@@ -246,7 +246,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetArnResult> getArn(GetArnArgs args) {
+    public static Output<GetArnResult> getArn(GetArnArgs args) {
         return getArn(args, InvokeOptions.Empty);
     }
     /**
@@ -276,8 +276,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetArnResult> getArn(GetArnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getArn:getArn", TypeShape.of(GetArnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetArnResult> getArn(GetArnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getArn:getArn", TypeShape.of(GetArnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Autoscaling Groups data source allows access to the list of AWS
@@ -329,7 +329,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
-    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups() {
+    public static Output<GetAutoscalingGroupsResult> getAutoscalingGroups() {
         return getAutoscalingGroups(GetAutoscalingGroupsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -382,7 +382,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
-    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args) {
+    public static Output<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args) {
         return getAutoscalingGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -435,8 +435,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
-    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getAutoscalingGroups:getAutoscalingGroups", TypeShape.of(GetAutoscalingGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getAutoscalingGroups:getAutoscalingGroups", TypeShape.of(GetAutoscalingGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.getAvailabilityZone` provides details about a specific availability zone (AZ)
@@ -452,7 +452,7 @@ public final class AwsFunctions {
      * which provides a list of the available zones.
      * 
      */
-    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone() {
+    public static Output<GetAvailabilityZoneResult> getAvailabilityZone() {
         return getAvailabilityZone(GetAvailabilityZoneArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -469,7 +469,7 @@ public final class AwsFunctions {
      * which provides a list of the available zones.
      * 
      */
-    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args) {
+    public static Output<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args) {
         return getAvailabilityZone(args, InvokeOptions.Empty);
     }
     /**
@@ -486,8 +486,8 @@ public final class AwsFunctions {
      * which provides a list of the available zones.
      * 
      */
-    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getAvailabilityZone:getAvailabilityZone", TypeShape.of(GetAvailabilityZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getAvailabilityZone:getAvailabilityZone", TypeShape.of(GetAvailabilityZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Availability Zones data source allows access to the list of AWS
@@ -588,7 +588,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones() {
+    public static Output<GetAvailabilityZonesResult> getAvailabilityZones() {
         return getAvailabilityZones(GetAvailabilityZonesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -690,7 +690,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args) {
+    public static Output<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args) {
         return getAvailabilityZones(args, InvokeOptions.Empty);
     }
     /**
@@ -792,8 +792,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getAvailabilityZones:getAvailabilityZones", TypeShape.of(GetAvailabilityZonesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getAvailabilityZones:getAvailabilityZones", TypeShape.of(GetAvailabilityZonesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of permitting in S3 bucket policy.
@@ -863,7 +863,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount() {
+    public static Output<GetBillingServiceAccountResult> getBillingServiceAccount() {
         return getBillingServiceAccount(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -934,7 +934,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args) {
+    public static Output<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args) {
         return getBillingServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -1005,8 +1005,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getBillingServiceAccount:getBillingServiceAccount", TypeShape.of(GetBillingServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getBillingServiceAccount:getBillingServiceAccount", TypeShape.of(GetBillingServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the access to the effective Account ID, User ID, and ARN in
@@ -1037,7 +1037,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity() {
+    public static Output<GetCallerIdentityResult> getCallerIdentity() {
         return getCallerIdentity(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1069,7 +1069,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args) {
+    public static Output<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args) {
         return getCallerIdentity(args, InvokeOptions.Empty);
     }
     /**
@@ -1101,8 +1101,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getCallerIdentity:getCallerIdentity", TypeShape.of(GetCallerIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getCallerIdentity:getCallerIdentity", TypeShape.of(GetCallerIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
@@ -1137,7 +1137,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId() {
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId() {
         return getCanonicalUserId(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1173,7 +1173,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
         return getCanonicalUserId(args, InvokeOptions.Empty);
     }
     /**
@@ -1209,8 +1209,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -1268,7 +1268,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags() {
+    public static Output<GetDefaultTagsResult> getDefaultTags() {
         return getDefaultTags(GetDefaultTagsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1327,7 +1327,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args) {
+    public static Output<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args) {
         return getDefaultTags(args, InvokeOptions.Empty);
     }
     /**
@@ -1386,8 +1386,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getDefaultTags:getDefaultTags", TypeShape.of(GetDefaultTagsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getDefaultTags:getDefaultTags", TypeShape.of(GetDefaultTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Eip` provides details about a specific Elastic IP.
@@ -1490,7 +1490,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp() {
+    public static Output<GetElasticIpResult> getElasticIp() {
         return getElasticIp(GetElasticIpArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1594,7 +1594,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
+    public static Output<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
         return getElasticIp(args, InvokeOptions.Empty);
     }
     /**
@@ -1698,8 +1698,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
+    public static Output<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
@@ -1745,7 +1745,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpRangesResult> getIpRanges(GetIpRangesArgs args) {
+    public static Output<GetIpRangesResult> getIpRanges(GetIpRangesArgs args) {
         return getIpRanges(args, InvokeOptions.Empty);
     }
     /**
@@ -1792,8 +1792,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpRangesResult> getIpRanges(GetIpRangesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getIpRanges:getIpRanges", TypeShape.of(GetIpRangesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpRangesResult> getIpRanges(GetIpRangesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getIpRanges:getIpRanges", TypeShape.of(GetIpRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to lookup current AWS partition in which this provider is working
@@ -1828,7 +1828,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPartitionResult> getPartition() {
+    public static Output<GetPartitionResult> getPartition() {
         return getPartition(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1864,7 +1864,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args) {
+    public static Output<GetPartitionResult> getPartition(InvokeArgs args) {
         return getPartition(args, InvokeOptions.Empty);
     }
     /**
@@ -1900,8 +1900,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getPartition:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPartitionResult> getPartition(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getPartition:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -1977,7 +1977,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList() {
+    public static Output<GetPrefixListResult> getPrefixList() {
         return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2054,7 +2054,7 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
+    public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
         return getPrefixList(args, InvokeOptions.Empty);
     }
     /**
@@ -2131,8 +2131,8 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.getRegion` provides details about a specific AWS region.
@@ -2167,7 +2167,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionResult> getRegion() {
+    public static Output<GetRegionResult> getRegion() {
         return getRegion(GetRegionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2203,7 +2203,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionResult> getRegion(GetRegionArgs args) {
+    public static Output<GetRegionResult> getRegion(GetRegionArgs args) {
         return getRegion(args, InvokeOptions.Empty);
     }
     /**
@@ -2239,8 +2239,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionResult> getRegion(GetRegionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getRegion:getRegion", TypeShape.of(GetRegionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegionResult> getRegion(GetRegionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getRegion:getRegion", TypeShape.of(GetRegionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about AWS Regions. Can be used to filter regions i.e., by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source.
@@ -2319,7 +2319,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions() {
+    public static Output<GetRegionsResult> getRegions() {
         return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2399,7 +2399,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args) {
         return getRegions(args, InvokeOptions.Empty);
     }
     /**
@@ -2479,8 +2479,8 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to compose and decompose AWS service DNS names.
@@ -2557,7 +2557,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService() {
+    public static Output<GetServiceResult> getService() {
         return getService(GetServiceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2635,7 +2635,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -2713,7 +2713,7 @@ public final class AwsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:index/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:index/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -10,10 +10,10 @@ import com.pulumi.aws.elb.inputs.GetServiceAccountArgs;
 import com.pulumi.aws.elb.outputs.GetHostedZoneIdResult;
 import com.pulumi.aws.elb.outputs.GetLoadBalancerResult;
 import com.pulumi.aws.elb.outputs.GetServiceAccountResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ElbFunctions {
     /**
@@ -53,7 +53,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId() {
+    public static Output<GetHostedZoneIdResult> getHostedZoneId() {
         return getHostedZoneId(GetHostedZoneIdArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +93,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args) {
+    public static Output<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args) {
         return getHostedZoneId(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elb/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elb/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a &#34;classic&#34; Elastic Load Balancer (ELB).
@@ -171,7 +171,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
         return getLoadBalancer(args, InvokeOptions.Empty);
     }
     /**
@@ -209,8 +209,8 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the Account ID of the [AWS Elastic Load Balancing Service Account](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy)
@@ -283,7 +283,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
+    public static Output<GetServiceAccountResult> getServiceAccount() {
         return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -357,7 +357,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
         return getServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -431,7 +431,7 @@ public final class ElbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elb/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elb/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ import com.pulumi.aws.lambda.outputs.GetFunctionResult;
 import com.pulumi.aws.lambda.outputs.GetFunctionUrlResult;
 import com.pulumi.aws.lambda.outputs.GetInvocationResult;
 import com.pulumi.aws.lambda.outputs.GetLayerVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class LambdaFunctions {
     /**
@@ -50,7 +50,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args) {
         return getAlias(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Lambda Code Signing Config. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail).
@@ -113,7 +113,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
+    public static Output<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
         return getCodeSigningConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -145,8 +145,8 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getCodeSigningConfig:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getCodeSigningConfig:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Lambda Function.
@@ -177,7 +177,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
     /**
@@ -209,8 +209,8 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Lambda function URL.
@@ -241,7 +241,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args) {
+    public static Output<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args) {
         return getFunctionUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -273,8 +273,8 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getFunctionUrl:getFunctionUrl", TypeShape.of(GetFunctionUrlResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getFunctionUrl:getFunctionUrl", TypeShape.of(GetFunctionUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to invoke custom lambda functions as data source.
@@ -282,7 +282,7 @@ public final class LambdaFunctions {
      * invocation type.
      * 
      */
-    public static CompletableFuture<GetInvocationResult> getInvocation(GetInvocationArgs args) {
+    public static Output<GetInvocationResult> getInvocation(GetInvocationArgs args) {
         return getInvocation(args, InvokeOptions.Empty);
     }
     /**
@@ -291,8 +291,8 @@ public final class LambdaFunctions {
      * invocation type.
      * 
      */
-    public static CompletableFuture<GetInvocationResult> getInvocation(GetInvocationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getInvocation:getInvocation", TypeShape.of(GetInvocationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvocationResult> getInvocation(GetInvocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getInvocation:getInvocation", TypeShape.of(GetInvocationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Lambda Layer Version.
@@ -323,7 +323,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args) {
+    public static Output<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args) {
         return getLayerVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -355,7 +355,7 @@ public final class LambdaFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lambda/getLayerVersion:getLayerVersion", TypeShape.of(GetLayerVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lambda/getLayerVersion:getLayerVersion", TypeShape.of(GetLayerVersionResult.class), args, Utilities.withVersion(options));
     }
 }

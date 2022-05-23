@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return The name of the container definition
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="taskDefinition", required=true)
-    private String taskDefinition;
+    private Output<String> taskDefinition;
 
     /**
      * @return The ARN of the task definition which contains the container
      * 
      */
-    public String taskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition;
     }
 
@@ -73,8 +74,29 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder containerName(String containerName) {
+        public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * @param containerName The name of the container definition
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param taskDefinition The ARN of the task definition which contains the container
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskDefinition(Output<String> taskDefinition) {
+            $.taskDefinition = taskDefinition;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder taskDefinition(String taskDefinition) {
-            $.taskDefinition = taskDefinition;
-            return this;
+            return taskDefinition(Output.of(taskDefinition));
         }
 
         public GetContainerDefinitionArgs build() {

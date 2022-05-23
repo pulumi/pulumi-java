@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.workspaces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoryId")
-    private @Nullable String directoryId;
+    private Output</* @Nullable */ String> directoryId;
 
     /**
      * @return The ID of the directory for the WorkSpace. You have to specify `user_name` along with `directory_id`. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    public Optional<String> directoryId() {
-        return Optional.ofNullable(this.directoryId);
+    public Output</* @Nullable */ String> directoryId() {
+        return this.directoryId;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags for the WorkSpace.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-    private @Nullable String userName;
+    private Output</* @Nullable */ String> userName;
 
     /**
      * @return The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    public Optional<String> userName() {
-        return Optional.ofNullable(this.userName);
+    public Output</* @Nullable */ String> userName() {
+        return this.userName;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceId")
-    private @Nullable String workspaceId;
+    private Output</* @Nullable */ String> workspaceId;
 
     /**
      * @return The ID of the WorkSpace. You cannot combine this parameter with `directory_id`.
      * 
      */
-    public Optional<String> workspaceId() {
-        return Optional.ofNullable(this.workspaceId);
+    public Output</* @Nullable */ String> workspaceId() {
+        return this.workspaceId;
     }
 
     private GetWorkspaceArgs() {}
@@ -108,8 +108,29 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder directoryId(@Nullable String directoryId) {
+        public Builder directoryId(Output</* @Nullable */ String> directoryId) {
             $.directoryId = directoryId;
+            return this;
+        }
+
+        /**
+         * @param directoryId The ID of the directory for the WorkSpace. You have to specify `user_name` along with `directory_id`. You cannot combine this parameter with `workspace_id`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder directoryId(@Nullable String directoryId) {
+            return directoryId(Output.of(directoryId));
+        }
+
+        /**
+         * @param tags The tags for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param userName The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace. You cannot combine this parameter with `workspace_id`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output</* @Nullable */ String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder userName(@Nullable String userName) {
-            $.userName = userName;
+            return userName(Output.of(userName));
+        }
+
+        /**
+         * @param workspaceId The ID of the WorkSpace. You cannot combine this parameter with `directory_id`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceId(Output</* @Nullable */ String> workspaceId) {
+            $.workspaceId = workspaceId;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceId(@Nullable String workspaceId) {
-            $.workspaceId = workspaceId;
-            return this;
+            return workspaceId(Output.of(workspaceId));
         }
 
         public GetWorkspaceArgs build() {

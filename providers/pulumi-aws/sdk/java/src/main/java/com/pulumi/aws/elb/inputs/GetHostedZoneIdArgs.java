@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.elb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,15 +20,15 @@ public final class GetHostedZoneIdArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return Name of the region whose AWS ELB HostedZoneId is desired.
      * Defaults to the region from the AWS provider configuration.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     private GetHostedZoneIdArgs() {}
@@ -62,9 +62,20 @@ public final class GetHostedZoneIdArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
+        public Builder region(Output</* @Nullable */ String> region) {
             $.region = region;
             return this;
+        }
+
+        /**
+         * @param region Name of the region whose AWS ELB HostedZoneId is desired.
+         * Defaults to the region from the AWS provider configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(@Nullable String region) {
+            return region(Output.of(region));
         }
 
         public GetHostedZoneIdArgs build() {

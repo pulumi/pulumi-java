@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudwatch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupNamePrefix", required=true)
-    private String logGroupNamePrefix;
+    private Output<String> logGroupNamePrefix;
 
     /**
      * @return The group prefix of the Cloudwatch log groups to list
      * 
      */
-    public String logGroupNamePrefix() {
+    public Output<String> logGroupNamePrefix() {
         return this.logGroupNamePrefix;
     }
 
@@ -57,9 +58,19 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logGroupNamePrefix(String logGroupNamePrefix) {
+        public Builder logGroupNamePrefix(Output<String> logGroupNamePrefix) {
             $.logGroupNamePrefix = logGroupNamePrefix;
             return this;
+        }
+
+        /**
+         * @param logGroupNamePrefix The group prefix of the Cloudwatch log groups to list
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logGroupNamePrefix(String logGroupNamePrefix) {
+            return logGroupNamePrefix(Output.of(logGroupNamePrefix));
         }
 
         public GetLogGroupsArgs build() {

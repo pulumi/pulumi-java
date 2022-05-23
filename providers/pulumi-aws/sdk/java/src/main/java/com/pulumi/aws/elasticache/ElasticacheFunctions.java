@@ -10,10 +10,10 @@ import com.pulumi.aws.elasticache.inputs.GetUserArgs;
 import com.pulumi.aws.elasticache.outputs.GetClusterResult;
 import com.pulumi.aws.elasticache.outputs.GetReplicationGroupResult;
 import com.pulumi.aws.elasticache.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ElasticacheFunctions {
     /**
@@ -43,7 +43,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticache/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an Elasticache Replication Group.
@@ -103,7 +103,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
+    public static Output<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
         return getReplicationGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an Elasticache User.
@@ -163,7 +163,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -193,7 +193,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:elasticache/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

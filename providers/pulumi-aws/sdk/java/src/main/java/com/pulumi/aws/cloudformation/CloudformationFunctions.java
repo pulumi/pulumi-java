@@ -10,10 +10,10 @@ import com.pulumi.aws.cloudformation.inputs.GetStackArgs;
 import com.pulumi.aws.cloudformation.outputs.GetCloudFormationTypeResult;
 import com.pulumi.aws.cloudformation.outputs.GetExportResult;
 import com.pulumi.aws.cloudformation.outputs.GetStackResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudformationFunctions {
     /**
@@ -44,7 +44,7 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType() {
+    public static Output<GetCloudFormationTypeResult> getCloudFormationType() {
         return getCloudFormationType(GetCloudFormationTypeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args) {
+    public static Output<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args) {
         return getCloudFormationType(args, InvokeOptions.Empty);
     }
     /**
@@ -106,8 +106,8 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudformation/getCloudFormationType:getCloudFormationType", TypeShape.of(GetCloudFormationTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudformation/getCloudFormationType:getCloudFormationType", TypeShape.of(GetCloudFormationTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The CloudFormation Export data source allows access to stack
@@ -145,7 +145,7 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+    public static Output<GetExportResult> getExport(GetExportArgs args) {
         return getExport(args, InvokeOptions.Empty);
     }
     /**
@@ -184,8 +184,8 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudformation/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudformation/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The CloudFormation Stack data source allows access to stack
@@ -222,7 +222,7 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args) {
+    public static Output<GetStackResult> getStack(GetStackArgs args) {
         return getStack(args, InvokeOptions.Empty);
     }
     /**
@@ -260,7 +260,7 @@ public final class CloudformationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudformation/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudformation/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
     }
 }

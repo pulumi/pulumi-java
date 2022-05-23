@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.servicediscovery.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the namespace.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-    private String type;
+    private Output<String> type;
 
     /**
      * @return The type of the namespace. Allowed values are `DNS_PUBLIC` or `DNS_PRIVATE`.
      * 
      */
-    public String type() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -73,8 +74,29 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param type The type of the namespace. Allowed values are `DNS_PUBLIC` or `DNS_PRIVATE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDnsNamespaceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder type(String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetDnsNamespaceArgs build() {

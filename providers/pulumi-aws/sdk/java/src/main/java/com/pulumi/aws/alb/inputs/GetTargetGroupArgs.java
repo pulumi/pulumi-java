@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.alb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return The full ARN of the target group.
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -35,21 +35,21 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The unique name of the target group.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetTargetGroupArgs() {}
@@ -84,8 +84,29 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The full ARN of the target group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param name The unique name of the target group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -96,13 +117,16 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetTargetGroupArgs build() {

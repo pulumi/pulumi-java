@@ -6,10 +6,10 @@ package com.pulumi.aws.ec2clientvpn;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ec2clientvpn.inputs.GetEndpointArgs;
 import com.pulumi.aws.ec2clientvpn.outputs.GetEndpointResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Ec2clientvpnFunctions {
     /**
@@ -65,7 +65,7 @@ public final class Ec2clientvpnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint() {
+    public static Output<GetEndpointResult> getEndpoint() {
         return getEndpoint(GetEndpointArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -121,7 +121,7 @@ public final class Ec2clientvpnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -177,7 +177,7 @@ public final class Ec2clientvpnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2clientvpn/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2clientvpn/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

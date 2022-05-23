@@ -14,11 +14,11 @@ import com.pulumi.aws.ebs.outputs.GetEncryptionByDefaultResult;
 import com.pulumi.aws.ebs.outputs.GetSnapshotIdsResult;
 import com.pulumi.aws.ebs.outputs.GetSnapshotResult;
 import com.pulumi.aws.ebs.outputs.GetVolumeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class EbsFunctions {
     /**
@@ -52,7 +52,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey() {
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey() {
         return getDefaultKmsKey(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -86,7 +86,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args) {
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args) {
         return getDefaultKmsKey(args, InvokeOptions.Empty);
     }
     /**
@@ -120,8 +120,8 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getDefaultKmsKey:getDefaultKmsKey", TypeShape.of(GetDefaultKmsKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getDefaultKmsKey:getDefaultKmsKey", TypeShape.of(GetDefaultKmsKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
@@ -129,7 +129,7 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes() {
+    public static Output<GetEbsVolumesResult> getEbsVolumes() {
         return getEbsVolumes(GetEbsVolumesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -138,7 +138,7 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args) {
+    public static Output<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args) {
         return getEbsVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getEbsVolumes:getEbsVolumes", TypeShape.of(GetEbsVolumesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getEbsVolumes:getEbsVolumes", TypeShape.of(GetEbsVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
@@ -175,7 +175,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault() {
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault() {
         return getEncryptionByDefault(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -203,7 +203,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args) {
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args) {
         return getEncryptionByDefault(args, InvokeOptions.Empty);
     }
     /**
@@ -231,8 +231,8 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
@@ -271,7 +271,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot() {
+    public static Output<GetSnapshotResult> getSnapshot() {
         return getSnapshot(GetSnapshotArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -311,7 +311,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -351,8 +351,8 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a list of EBS Snapshot IDs matching the specified
@@ -391,7 +391,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds() {
+    public static Output<GetSnapshotIdsResult> getSnapshotIds() {
         return getSnapshotIds(GetSnapshotIdsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -431,7 +431,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args) {
+    public static Output<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args) {
         return getSnapshotIds(args, InvokeOptions.Empty);
     }
     /**
@@ -471,8 +471,8 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshotIds:getSnapshotIds", TypeShape.of(GetSnapshotIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getSnapshotIds:getSnapshotIds", TypeShape.of(GetSnapshotIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an EBS volume for use in other
@@ -511,7 +511,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume() {
+    public static Output<GetVolumeResult> getVolume() {
         return getVolume(GetVolumeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -551,7 +551,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -591,7 +591,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ebs/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
 }

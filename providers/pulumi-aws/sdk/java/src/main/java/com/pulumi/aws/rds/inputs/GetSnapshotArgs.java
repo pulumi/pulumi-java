@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier")
-    private @Nullable String dbInstanceIdentifier;
+    private Output</* @Nullable */ String> dbInstanceIdentifier;
 
     /**
      * @return Returns the list of snapshots created by the specific db_instance
      * 
      */
-    public Optional<String> dbInstanceIdentifier() {
-        return Optional.ofNullable(this.dbInstanceIdentifier);
+    public Output</* @Nullable */ String> dbInstanceIdentifier() {
+        return this.dbInstanceIdentifier;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSnapshotIdentifier")
-    private @Nullable String dbSnapshotIdentifier;
+    private Output</* @Nullable */ String> dbSnapshotIdentifier;
 
     /**
      * @return Returns information on a specific snapshot_id.
      * 
      */
-    public Optional<String> dbSnapshotIdentifier() {
-        return Optional.ofNullable(this.dbSnapshotIdentifier);
+    public Output</* @Nullable */ String> dbSnapshotIdentifier() {
+        return this.dbSnapshotIdentifier;
     }
 
     /**
@@ -51,15 +51,15 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includePublic")
-    private @Nullable Boolean includePublic;
+    private Output</* @Nullable */ Boolean> includePublic;
 
     /**
      * @return Set this value to true to include manual DB snapshots that are public and can be
      * copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
      * 
      */
-    public Optional<Boolean> includePublic() {
-        return Optional.ofNullable(this.includePublic);
+    public Output</* @Nullable */ Boolean> includePublic() {
+        return this.includePublic;
     }
 
     /**
@@ -69,7 +69,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeShared")
-    private @Nullable Boolean includeShared;
+    private Output</* @Nullable */ Boolean> includeShared;
 
     /**
      * @return Set this value to true to include shared manual DB snapshots from other
@@ -77,8 +77,8 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * The default is `false`.
      * 
      */
-    public Optional<Boolean> includeShared() {
-        return Optional.ofNullable(this.includeShared);
+    public Output</* @Nullable */ Boolean> includeShared() {
+        return this.includeShared;
     }
 
     /**
@@ -87,15 +87,15 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private Output</* @Nullable */ Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most
      * recent Snapshot.
      * 
      */
-    public Optional<Boolean> mostRecent() {
-        return Optional.ofNullable(this.mostRecent);
+    public Output</* @Nullable */ Boolean> mostRecent() {
+        return this.mostRecent;
     }
 
     /**
@@ -105,7 +105,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotType")
-    private @Nullable String snapshotType;
+    private Output</* @Nullable */ String> snapshotType;
 
     /**
      * @return The type of snapshots to be returned. If you don&#39;t specify a SnapshotType
@@ -113,8 +113,8 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
      * 
      */
-    public Optional<String> snapshotType() {
-        return Optional.ofNullable(this.snapshotType);
+    public Output</* @Nullable */ String> snapshotType() {
+        return this.snapshotType;
     }
 
     private GetSnapshotArgs() {}
@@ -152,8 +152,29 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Output</* @Nullable */ String> dbInstanceIdentifier) {
             $.dbInstanceIdentifier = dbInstanceIdentifier;
+            return this;
+        }
+
+        /**
+         * @param dbInstanceIdentifier Returns the list of snapshots created by the specific db_instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
+        }
+
+        /**
+         * @param dbSnapshotIdentifier Returns information on a specific snapshot_id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSnapshotIdentifier(Output</* @Nullable */ String> dbSnapshotIdentifier) {
+            $.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
 
@@ -164,7 +185,18 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
-            $.dbSnapshotIdentifier = dbSnapshotIdentifier;
+            return dbSnapshotIdentifier(Output.of(dbSnapshotIdentifier));
+        }
+
+        /**
+         * @param includePublic Set this value to true to include manual DB snapshots that are public and can be
+         * copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includePublic(Output</* @Nullable */ Boolean> includePublic) {
+            $.includePublic = includePublic;
             return this;
         }
 
@@ -176,7 +208,19 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder includePublic(@Nullable Boolean includePublic) {
-            $.includePublic = includePublic;
+            return includePublic(Output.of(includePublic));
+        }
+
+        /**
+         * @param includeShared Set this value to true to include shared manual DB snapshots from other
+         * AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
+         * The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeShared(Output</* @Nullable */ Boolean> includeShared) {
+            $.includeShared = includeShared;
             return this;
         }
 
@@ -189,7 +233,18 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder includeShared(@Nullable Boolean includeShared) {
-            $.includeShared = includeShared;
+            return includeShared(Output.of(includeShared));
+        }
+
+        /**
+         * @param mostRecent If more than one result is returned, use the most
+         * recent Snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+            $.mostRecent = mostRecent;
             return this;
         }
 
@@ -201,7 +256,19 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            $.mostRecent = mostRecent;
+            return mostRecent(Output.of(mostRecent));
+        }
+
+        /**
+         * @param snapshotType The type of snapshots to be returned. If you don&#39;t specify a SnapshotType
+         * value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
+         * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snapshotType(Output</* @Nullable */ String> snapshotType) {
+            $.snapshotType = snapshotType;
             return this;
         }
 
@@ -214,8 +281,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder snapshotType(@Nullable String snapshotType) {
-            $.snapshotType = snapshotType;
-            return this;
+            return snapshotType(Output.of(snapshotType));
         }
 
         public GetSnapshotArgs build() {

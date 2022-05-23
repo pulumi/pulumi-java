@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.ecr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryId")
-    private @Nullable String registryId;
+    private Output</* @Nullable */ String> registryId;
 
     /**
      * @return AWS account ID of the ECR Repository. If not specified the default account is assumed.
      * 
      */
-    public Optional<String> registryId() {
-        return Optional.ofNullable(this.registryId);
+    public Output</* @Nullable */ String> registryId() {
+        return this.registryId;
     }
 
     private GetAuthorizationTokenArgs() {}
@@ -59,9 +59,19 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder registryId(@Nullable String registryId) {
+        public Builder registryId(Output</* @Nullable */ String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        /**
+         * @param registryId AWS account ID of the ECR Repository. If not specified the default account is assumed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(@Nullable String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetAuthorizationTokenArgs build() {

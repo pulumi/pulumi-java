@@ -5,11 +5,11 @@ package com.pulumi.aws.inspector;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.inspector.outputs.GetRulesPackagesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class InspectorFunctions {
     /**
@@ -53,7 +53,7 @@ public final class InspectorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages() {
+    public static Output<GetRulesPackagesResult> getRulesPackages() {
         return getRulesPackages(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +97,7 @@ public final class InspectorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(InvokeArgs args) {
+    public static Output<GetRulesPackagesResult> getRulesPackages(InvokeArgs args) {
         return getRulesPackages(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public final class InspectorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:inspector/getRulesPackages:getRulesPackages", TypeShape.of(GetRulesPackagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRulesPackagesResult> getRulesPackages(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:inspector/getRulesPackages:getRulesPackages", TypeShape.of(GetRulesPackagesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -14,10 +14,10 @@ import com.pulumi.aws.backup.outputs.GetPlanResult;
 import com.pulumi.aws.backup.outputs.GetReportPlanResult;
 import com.pulumi.aws.backup.outputs.GetSelectionResult;
 import com.pulumi.aws.backup.outputs.GetVaultResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BackupFunctions {
     /**
@@ -47,7 +47,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
+    public static Output<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
         return getFramework(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:backup/getFramework:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:backup/getFramework:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing backup plan.
@@ -107,7 +107,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args) {
+    public static Output<GetPlanResult> getPlan(GetPlanArgs args) {
         return getPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -137,8 +137,8 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:backup/getPlan:getPlan", TypeShape.of(GetPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPlanResult> getPlan(GetPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:backup/getPlan:getPlan", TypeShape.of(GetPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing backup report plan.
@@ -167,7 +167,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
+    public static Output<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
         return getReportPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -197,8 +197,8 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:backup/getReportPlan:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:backup/getReportPlan:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing backup selection.
@@ -228,7 +228,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args) {
+    public static Output<GetSelectionResult> getSelection(GetSelectionArgs args) {
         return getSelection(args, InvokeOptions.Empty);
     }
     /**
@@ -259,8 +259,8 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:backup/getSelection:getSelection", TypeShape.of(GetSelectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSelectionResult> getSelection(GetSelectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:backup/getSelection:getSelection", TypeShape.of(GetSelectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information on an existing backup vault.
@@ -289,7 +289,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+    public static Output<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
     /**
@@ -319,7 +319,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:backup/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:backup/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
 }

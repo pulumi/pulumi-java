@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.sfn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) that identifies the activity.
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name that identifies the activity.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetActivityArgs() {}
@@ -75,8 +75,29 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) that identifies the activity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param name The name that identifies the activity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetActivityArgs build() {

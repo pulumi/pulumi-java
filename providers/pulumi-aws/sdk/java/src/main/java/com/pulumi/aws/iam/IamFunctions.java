@@ -31,11 +31,11 @@ import com.pulumi.aws.iam.outputs.GetSessionContextResult;
 import com.pulumi.aws.iam.outputs.GetUserResult;
 import com.pulumi.aws.iam.outputs.GetUserSshKeyResult;
 import com.pulumi.aws.iam.outputs.GetUsersResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class IamFunctions {
     /**
@@ -65,7 +65,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountAliasResult> getAccountAlias() {
+    public static Output<GetAccountAliasResult> getAccountAlias() {
         return getAccountAlias(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -95,7 +95,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(InvokeArgs args) {
+    public static Output<GetAccountAliasResult> getAccountAlias(InvokeArgs args) {
         return getAccountAlias(args, InvokeOptions.Empty);
     }
     /**
@@ -125,8 +125,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getAccountAlias:getAccountAlias", TypeShape.of(GetAccountAliasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountAliasResult> getAccountAlias(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getAccountAlias:getAccountAlias", TypeShape.of(GetAccountAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -157,7 +157,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -189,8 +189,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -221,7 +221,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
+    public static Output<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
         return getInstanceProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -253,8 +253,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getInstanceProfile:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getInstanceProfile:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -306,7 +306,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider() {
+    public static Output<GetOpenidConnectProviderResult> getOpenidConnectProvider() {
         return getOpenidConnectProvider(GetOpenidConnectProviderArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -359,7 +359,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args) {
+    public static Output<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args) {
         return getOpenidConnectProvider(args, InvokeOptions.Empty);
     }
     /**
@@ -412,8 +412,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getOpenidConnectProvider:getOpenidConnectProvider", TypeShape.of(GetOpenidConnectProviderResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOpenidConnectProviderResult> getOpenidConnectProvider(GetOpenidConnectProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getOpenidConnectProvider:getOpenidConnectProvider", TypeShape.of(GetOpenidConnectProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -466,7 +466,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy() {
+    public static Output<GetPolicyResult> getPolicy() {
         return getPolicy(GetPolicyArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -520,7 +520,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args) {
         return getPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -574,8 +574,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getPolicy:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getPolicy:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Generates an IAM policy document in JSON format for use with resources that expect policy documents such as `aws.iam.Policy`.
@@ -1014,7 +1014,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument() {
+    public static Output<GetPolicyDocumentResult> getPolicyDocument() {
         return getPolicyDocument(GetPolicyDocumentArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1454,7 +1454,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args) {
+    public static Output<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args) {
         return getPolicyDocument(args, InvokeOptions.Empty);
     }
     /**
@@ -1894,8 +1894,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -1926,7 +1926,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
+    public static Output<GetRoleResult> getRole(GetRoleArgs args) {
         return getRole(args, InvokeOptions.Empty);
     }
     /**
@@ -1958,8 +1958,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getRole:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getRole:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and Names of IAM Roles.
@@ -2081,7 +2081,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRolesResult> getRoles() {
+    public static Output<GetRolesResult> getRoles() {
         return getRoles(GetRolesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2204,7 +2204,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRolesResult> getRoles(GetRolesArgs args) {
+    public static Output<GetRolesResult> getRoles(GetRolesArgs args) {
         return getRoles(args, InvokeOptions.Empty);
     }
     /**
@@ -2327,8 +2327,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRolesResult> getRoles(GetRolesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getRoles:getRoles", TypeShape.of(GetRolesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRolesResult> getRoles(GetRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getRoles:getRoles", TypeShape.of(GetRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -2359,7 +2359,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args) {
+    public static Output<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args) {
         return getSamlProvider(args, InvokeOptions.Empty);
     }
     /**
@@ -2391,8 +2391,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getSamlProvider:getSamlProvider", TypeShape.of(GetSamlProviderResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getSamlProvider:getSamlProvider", TypeShape.of(GetSamlProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to lookup information about IAM Server Certificates.
@@ -2432,7 +2432,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerCertificateResult> getServerCertificate() {
+    public static Output<GetServerCertificateResult> getServerCertificate() {
         return getServerCertificate(GetServerCertificateArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2473,7 +2473,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args) {
+    public static Output<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args) {
         return getServerCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -2514,14 +2514,14 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getServerCertificate:getServerCertificate", TypeShape.of(GetServerCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getServerCertificate:getServerCertificate", TypeShape.of(GetServerCertificateResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSessionContextResult> getSessionContext(GetSessionContextArgs args) {
+    public static Output<GetSessionContextResult> getSessionContext(GetSessionContextArgs args) {
         return getSessionContext(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionContextResult> getSessionContext(GetSessionContextArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getSessionContext:getSessionContext", TypeShape.of(GetSessionContextResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSessionContextResult> getSessionContext(GetSessionContextArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getSessionContext:getSessionContext", TypeShape.of(GetSessionContextResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can be used to fetch information about a specific
@@ -2552,7 +2552,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -2584,8 +2584,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a SSH public key associated with the specified IAM user.
@@ -2616,7 +2616,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args) {
+    public static Output<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args) {
         return getUserSshKey(args, InvokeOptions.Empty);
     }
     /**
@@ -2648,8 +2648,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getUserSshKey:getUserSshKey", TypeShape.of(GetUserSshKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getUserSshKey:getUserSshKey", TypeShape.of(GetUserSshKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ARNs and Names of IAM Users.
@@ -2723,7 +2723,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers() {
+    public static Output<GetUsersResult> getUsers() {
         return getUsers(GetUsersArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2798,7 +2798,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args) {
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args) {
         return getUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -2873,7 +2873,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:iam/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:iam/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
     }
 }

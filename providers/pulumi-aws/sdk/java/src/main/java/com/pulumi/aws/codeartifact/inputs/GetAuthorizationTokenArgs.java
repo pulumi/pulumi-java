@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.codeartifact.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The name of the domain that is in scope for the generated authorization token.
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -35,14 +35,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-    private @Nullable String domainOwner;
+    private Output</* @Nullable */ String> domainOwner;
 
     /**
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Optional<String> domainOwner() {
-        return Optional.ofNullable(this.domainOwner);
+    public Output</* @Nullable */ String> domainOwner() {
+        return this.domainOwner;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="durationSeconds")
-    private @Nullable Integer durationSeconds;
+    private Output</* @Nullable */ Integer> durationSeconds;
 
     /**
      * @return The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
      * 
      */
-    public Optional<Integer> durationSeconds() {
-        return Optional.ofNullable(this.durationSeconds);
+    public Output</* @Nullable */ Integer> durationSeconds() {
+        return this.durationSeconds;
     }
 
     private GetAuthorizationTokenArgs() {}
@@ -92,8 +92,29 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domain(String domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
+            return this;
+        }
+
+        /**
+         * @param domain The name of the domain that is in scope for the generated authorization token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwner(Output</* @Nullable */ String> domainOwner) {
+            $.domainOwner = domainOwner;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder domainOwner(@Nullable String domainOwner) {
-            $.domainOwner = domainOwner;
+            return domainOwner(Output.of(domainOwner));
+        }
+
+        /**
+         * @param durationSeconds The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder durationSeconds(Output</* @Nullable */ Integer> durationSeconds) {
+            $.durationSeconds = durationSeconds;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            $.durationSeconds = durationSeconds;
-            return this;
+            return durationSeconds(Output.of(durationSeconds));
         }
 
         public GetAuthorizationTokenArgs build() {

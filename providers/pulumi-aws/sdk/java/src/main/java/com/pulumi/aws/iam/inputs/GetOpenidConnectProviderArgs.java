@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) specifying the OpenID Connect provider.
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Map of resource tags for the IAM OIDC provider.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="url")
-    private @Nullable String url;
+    private Output</* @Nullable */ String> url;
 
     /**
      * @return The URL of the OpenID Connect provider.
      * 
      */
-    public Optional<String> url() {
-        return Optional.ofNullable(this.url);
+    public Output</* @Nullable */ String> url() {
+        return this.url;
     }
 
     private GetOpenidConnectProviderArgs() {}
@@ -92,8 +92,29 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) specifying the OpenID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param tags Map of resource tags for the IAM OIDC provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param url The URL of the OpenID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder url(Output</* @Nullable */ String> url) {
+            $.url = url;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetOpenidConnectProviderArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder url(@Nullable String url) {
-            $.url = url;
-            return this;
+            return url(Output.of(url));
         }
 
         public GetOpenidConnectProviderArgs build() {

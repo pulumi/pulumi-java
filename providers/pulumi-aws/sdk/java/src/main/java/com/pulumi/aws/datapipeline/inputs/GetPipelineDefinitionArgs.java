@@ -4,11 +4,11 @@
 package com.pulumi.aws.datapipeline.inputs;
 
 import com.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionParameterValue;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameterValues")
-    private @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
+    private Output</* @Nullable */ List<GetPipelineDefinitionParameterValue>> parameterValues;
 
     /**
      * @return Parameter values used in the pipeline definition. See below
      * 
      */
-    public Optional<List<GetPipelineDefinitionParameterValue>> parameterValues() {
-        return Optional.ofNullable(this.parameterValues);
+    public Output</* @Nullable */ List<GetPipelineDefinitionParameterValue>> parameterValues() {
+        return this.parameterValues;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pipelineId", required=true)
-    private String pipelineId;
+    private Output<String> pipelineId;
 
     /**
      * @return ID of the pipeline.
      * 
      */
-    public String pipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId;
     }
 
@@ -77,9 +77,19 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder parameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
+        public Builder parameterValues(Output</* @Nullable */ List<GetPipelineDefinitionParameterValue>> parameterValues) {
             $.parameterValues = parameterValues;
             return this;
+        }
+
+        /**
+         * @param parameterValues Parameter values used in the pipeline definition. See below
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
+            return parameterValues(Output.of(parameterValues));
         }
 
         /**
@@ -98,9 +108,19 @@ public final class GetPipelineDefinitionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder pipelineId(String pipelineId) {
+        public Builder pipelineId(Output<String> pipelineId) {
             $.pipelineId = pipelineId;
             return this;
+        }
+
+        /**
+         * @param pipelineId ID of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pipelineId(String pipelineId) {
+            return pipelineId(Output.of(pipelineId));
         }
 
         public GetPipelineDefinitionArgs build() {

@@ -4,11 +4,11 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetSpotPriceFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-    private @Nullable String availabilityZone;
+    private Output</* @Nullable */ String> availabilityZone;
 
     /**
      * @return The availability zone in which to query Spot price information.
      * 
      */
-    public Optional<String> availabilityZone() {
-        return Optional.ofNullable(this.availabilityZone);
+    public Output</* @Nullable */ String> availabilityZone() {
+        return this.availabilityZone;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetSpotPriceFilter> filters;
+    private Output</* @Nullable */ List<GetSpotPriceFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetSpotPriceFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSpotPriceFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType")
-    private @Nullable String instanceType;
+    private Output</* @Nullable */ String> instanceType;
 
     /**
      * @return The type of instance for which to query Spot Price information.
      * 
      */
-    public Optional<String> instanceType() {
-        return Optional.ofNullable(this.instanceType);
+    public Output</* @Nullable */ String> instanceType() {
+        return this.instanceType;
     }
 
     private GetSpotPriceArgs() {}
@@ -93,8 +93,29 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(Output</* @Nullable */ String> availabilityZone) {
             $.availabilityZone = availabilityZone;
+            return this;
+        }
+
+        /**
+         * @param availabilityZone The availability zone in which to query Spot price information.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityZone(@Nullable String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(Output</* @Nullable */ List<GetSpotPriceFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
@@ -105,8 +126,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         /**
@@ -125,9 +145,19 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceType(@Nullable String instanceType) {
+        public Builder instanceType(Output</* @Nullable */ String> instanceType) {
             $.instanceType = instanceType;
             return this;
+        }
+
+        /**
+         * @param instanceType The type of instance for which to query Spot Price information.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceType(@Nullable String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
 
         public GetSpotPriceArgs build() {

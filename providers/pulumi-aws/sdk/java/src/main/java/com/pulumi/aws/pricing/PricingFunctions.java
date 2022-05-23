@@ -6,10 +6,10 @@ package com.pulumi.aws.pricing;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.pricing.inputs.GetProductArgs;
 import com.pulumi.aws.pricing.outputs.GetProductResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PricingFunctions {
     /**
@@ -99,7 +99,7 @@ public final class PricingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+    public static Output<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
     /**
@@ -189,7 +189,7 @@ public final class PricingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:pricing/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:pricing/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
 }

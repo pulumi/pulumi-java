@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="carrierGatewayId")
-    private @Nullable String carrierGatewayId;
+    private Output</* @Nullable */ String> carrierGatewayId;
 
     /**
      * @return EC2 Carrier Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> carrierGatewayId() {
-        return Optional.ofNullable(this.carrierGatewayId);
+    public Output</* @Nullable */ String> carrierGatewayId() {
+        return this.carrierGatewayId;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="coreNetworkArn")
-    private @Nullable String coreNetworkArn;
+    private Output</* @Nullable */ String> coreNetworkArn;
 
     /**
      * @return Core network ARN of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> coreNetworkArn() {
-        return Optional.ofNullable(this.coreNetworkArn);
+    public Output</* @Nullable */ String> coreNetworkArn() {
+        return this.coreNetworkArn;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationCidrBlock")
-    private @Nullable String destinationCidrBlock;
+    private Output</* @Nullable */ String> destinationCidrBlock;
 
     /**
      * @return CIDR block of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> destinationCidrBlock() {
-        return Optional.ofNullable(this.destinationCidrBlock);
+    public Output</* @Nullable */ String> destinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationIpv6CidrBlock")
-    private @Nullable String destinationIpv6CidrBlock;
+    private Output</* @Nullable */ String> destinationIpv6CidrBlock;
 
     /**
      * @return IPv6 CIDR block of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> destinationIpv6CidrBlock() {
-        return Optional.ofNullable(this.destinationIpv6CidrBlock);
+    public Output</* @Nullable */ String> destinationIpv6CidrBlock() {
+        return this.destinationIpv6CidrBlock;
     }
 
     /**
@@ -79,14 +79,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationPrefixListId")
-    private @Nullable String destinationPrefixListId;
+    private Output</* @Nullable */ String> destinationPrefixListId;
 
     /**
      * @return The ID of a managed prefix list destination of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> destinationPrefixListId() {
-        return Optional.ofNullable(this.destinationPrefixListId);
+    public Output</* @Nullable */ String> destinationPrefixListId() {
+        return this.destinationPrefixListId;
     }
 
     /**
@@ -94,14 +94,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="egressOnlyGatewayId")
-    private @Nullable String egressOnlyGatewayId;
+    private Output</* @Nullable */ String> egressOnlyGatewayId;
 
     /**
      * @return Egress Only Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> egressOnlyGatewayId() {
-        return Optional.ofNullable(this.egressOnlyGatewayId);
+    public Output</* @Nullable */ String> egressOnlyGatewayId() {
+        return this.egressOnlyGatewayId;
     }
 
     /**
@@ -109,14 +109,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId")
-    private @Nullable String gatewayId;
+    private Output</* @Nullable */ String> gatewayId;
 
     /**
      * @return Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> gatewayId() {
-        return Optional.ofNullable(this.gatewayId);
+    public Output</* @Nullable */ String> gatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -124,14 +124,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private Output</* @Nullable */ String> instanceId;
 
     /**
      * @return Instance ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> instanceId() {
-        return Optional.ofNullable(this.instanceId);
+    public Output</* @Nullable */ String> instanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -139,14 +139,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayId")
-    private @Nullable String localGatewayId;
+    private Output</* @Nullable */ String> localGatewayId;
 
     /**
      * @return Local Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> localGatewayId() {
-        return Optional.ofNullable(this.localGatewayId);
+    public Output</* @Nullable */ String> localGatewayId() {
+        return this.localGatewayId;
     }
 
     /**
@@ -154,14 +154,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayId")
-    private @Nullable String natGatewayId;
+    private Output</* @Nullable */ String> natGatewayId;
 
     /**
      * @return NAT Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> natGatewayId() {
-        return Optional.ofNullable(this.natGatewayId);
+    public Output</* @Nullable */ String> natGatewayId() {
+        return this.natGatewayId;
     }
 
     /**
@@ -169,14 +169,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-    private @Nullable String networkInterfaceId;
+    private Output</* @Nullable */ String> networkInterfaceId;
 
     /**
      * @return Network Interface ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> networkInterfaceId() {
-        return Optional.ofNullable(this.networkInterfaceId);
+    public Output</* @Nullable */ String> networkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -184,13 +184,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableId", required=true)
-    private String routeTableId;
+    private Output<String> routeTableId;
 
     /**
      * @return The ID of the specific Route Table containing the Route entry.
      * 
      */
-    public String routeTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -199,14 +199,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transitGatewayId")
-    private @Nullable String transitGatewayId;
+    private Output</* @Nullable */ String> transitGatewayId;
 
     /**
      * @return EC2 Transit Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> transitGatewayId() {
-        return Optional.ofNullable(this.transitGatewayId);
+    public Output</* @Nullable */ String> transitGatewayId() {
+        return this.transitGatewayId;
     }
 
     /**
@@ -214,14 +214,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcPeeringConnectionId")
-    private @Nullable String vpcPeeringConnectionId;
+    private Output</* @Nullable */ String> vpcPeeringConnectionId;
 
     /**
      * @return VPC Peering Connection ID of the Route belonging to the Route Table.
      * 
      */
-    public Optional<String> vpcPeeringConnectionId() {
-        return Optional.ofNullable(this.vpcPeeringConnectionId);
+    public Output</* @Nullable */ String> vpcPeeringConnectionId() {
+        return this.vpcPeeringConnectionId;
     }
 
     private GetRouteArgs() {}
@@ -267,8 +267,29 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
+        public Builder carrierGatewayId(Output</* @Nullable */ String> carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
+            return this;
+        }
+
+        /**
+         * @param carrierGatewayId EC2 Carrier Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
+            return carrierGatewayId(Output.of(carrierGatewayId));
+        }
+
+        /**
+         * @param coreNetworkArn Core network ARN of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(Output</* @Nullable */ String> coreNetworkArn) {
+            $.coreNetworkArn = coreNetworkArn;
             return this;
         }
 
@@ -279,7 +300,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder coreNetworkArn(@Nullable String coreNetworkArn) {
-            $.coreNetworkArn = coreNetworkArn;
+            return coreNetworkArn(Output.of(coreNetworkArn));
+        }
+
+        /**
+         * @param destinationCidrBlock CIDR block of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationCidrBlock(Output</* @Nullable */ String> destinationCidrBlock) {
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
@@ -290,7 +321,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            $.destinationCidrBlock = destinationCidrBlock;
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
+        }
+
+        /**
+         * @param destinationIpv6CidrBlock IPv6 CIDR block of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpv6CidrBlock(Output</* @Nullable */ String> destinationIpv6CidrBlock) {
+            $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
 
@@ -301,7 +342,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
-            $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
+            return destinationIpv6CidrBlock(Output.of(destinationIpv6CidrBlock));
+        }
+
+        /**
+         * @param destinationPrefixListId The ID of a managed prefix list destination of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationPrefixListId(Output</* @Nullable */ String> destinationPrefixListId) {
+            $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
@@ -312,7 +363,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
-            $.destinationPrefixListId = destinationPrefixListId;
+            return destinationPrefixListId(Output.of(destinationPrefixListId));
+        }
+
+        /**
+         * @param egressOnlyGatewayId Egress Only Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder egressOnlyGatewayId(Output</* @Nullable */ String> egressOnlyGatewayId) {
+            $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
@@ -323,7 +384,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
-            $.egressOnlyGatewayId = egressOnlyGatewayId;
+            return egressOnlyGatewayId(Output.of(egressOnlyGatewayId));
+        }
+
+        /**
+         * @param gatewayId Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayId(Output</* @Nullable */ String> gatewayId) {
+            $.gatewayId = gatewayId;
             return this;
         }
 
@@ -334,7 +405,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder gatewayId(@Nullable String gatewayId) {
-            $.gatewayId = gatewayId;
+            return gatewayId(Output.of(gatewayId));
+        }
+
+        /**
+         * @param instanceId Instance ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -345,7 +426,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder instanceId(@Nullable String instanceId) {
-            $.instanceId = instanceId;
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param localGatewayId Local Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localGatewayId(Output</* @Nullable */ String> localGatewayId) {
+            $.localGatewayId = localGatewayId;
             return this;
         }
 
@@ -356,7 +447,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            $.localGatewayId = localGatewayId;
+            return localGatewayId(Output.of(localGatewayId));
+        }
+
+        /**
+         * @param natGatewayId NAT Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natGatewayId(Output</* @Nullable */ String> natGatewayId) {
+            $.natGatewayId = natGatewayId;
             return this;
         }
 
@@ -367,7 +468,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder natGatewayId(@Nullable String natGatewayId) {
-            $.natGatewayId = natGatewayId;
+            return natGatewayId(Output.of(natGatewayId));
+        }
+
+        /**
+         * @param networkInterfaceId Network Interface ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkInterfaceId(Output</* @Nullable */ String> networkInterfaceId) {
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -378,7 +489,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            $.networkInterfaceId = networkInterfaceId;
+            return networkInterfaceId(Output.of(networkInterfaceId));
+        }
+
+        /**
+         * @param routeTableId The ID of the specific Route Table containing the Route entry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeTableId(Output<String> routeTableId) {
+            $.routeTableId = routeTableId;
             return this;
         }
 
@@ -389,7 +510,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder routeTableId(String routeTableId) {
-            $.routeTableId = routeTableId;
+            return routeTableId(Output.of(routeTableId));
+        }
+
+        /**
+         * @param transitGatewayId EC2 Transit Gateway ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayId(Output</* @Nullable */ String> transitGatewayId) {
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
 
@@ -400,7 +531,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            $.transitGatewayId = transitGatewayId;
+            return transitGatewayId(Output.of(transitGatewayId));
+        }
+
+        /**
+         * @param vpcPeeringConnectionId VPC Peering Connection ID of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcPeeringConnectionId(Output</* @Nullable */ String> vpcPeeringConnectionId) {
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
 
@@ -411,8 +552,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
-            return this;
+            return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
         }
 
         public GetRouteArgs build() {

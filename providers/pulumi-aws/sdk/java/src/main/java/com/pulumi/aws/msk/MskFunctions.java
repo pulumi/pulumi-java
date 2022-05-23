@@ -12,10 +12,10 @@ import com.pulumi.aws.msk.outputs.GetBrokerNodesResult;
 import com.pulumi.aws.msk.outputs.GetClusterResult;
 import com.pulumi.aws.msk.outputs.GetConfigurationResult;
 import com.pulumi.aws.msk.outputs.GetKafkaVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MskFunctions {
     /**
@@ -45,7 +45,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args) {
+    public static Output<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args) {
         return getBrokerNodes(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:msk/getBrokerNodes:getBrokerNodes", TypeShape.of(GetBrokerNodesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:msk/getBrokerNodes:getBrokerNodes", TypeShape.of(GetBrokerNodesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on an Amazon MSK Cluster.
@@ -105,7 +105,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:msk/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:msk/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on an Amazon MSK Configuration.
@@ -165,7 +165,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -195,8 +195,8 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:msk/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:msk/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on a Amazon MSK Kafka Version
@@ -232,7 +232,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion() {
+    public static Output<GetKafkaVersionResult> getKafkaVersion() {
         return getKafkaVersion(GetKafkaVersionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -269,7 +269,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args) {
+    public static Output<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args) {
         return getKafkaVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -306,7 +306,7 @@ public final class MskFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:msk/getKafkaVersion:getKafkaVersion", TypeShape.of(GetKafkaVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:msk/getKafkaVersion:getKafkaVersion", TypeShape.of(GetKafkaVersionResult.class), args, Utilities.withVersion(options));
     }
 }

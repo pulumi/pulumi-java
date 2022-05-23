@@ -8,10 +8,10 @@ import com.pulumi.aws.signer.inputs.GetSigningJobArgs;
 import com.pulumi.aws.signer.inputs.GetSigningProfileArgs;
 import com.pulumi.aws.signer.outputs.GetSigningJobResult;
 import com.pulumi.aws.signer.outputs.GetSigningProfileResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SignerFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SignerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSigningJobResult> getSigningJob(GetSigningJobArgs args) {
+    public static Output<GetSigningJobResult> getSigningJob(GetSigningJobArgs args) {
         return getSigningJob(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class SignerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSigningJobResult> getSigningJob(GetSigningJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:signer/getSigningJob:getSigningJob", TypeShape.of(GetSigningJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSigningJobResult> getSigningJob(GetSigningJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:signer/getSigningJob:getSigningJob", TypeShape.of(GetSigningJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Signer Signing Profile.
@@ -101,7 +101,7 @@ public final class SignerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args) {
+    public static Output<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args) {
         return getSigningProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -131,7 +131,7 @@ public final class SignerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:signer/getSigningProfile:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:signer/getSigningProfile:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args, Utilities.withVersion(options));
     }
 }

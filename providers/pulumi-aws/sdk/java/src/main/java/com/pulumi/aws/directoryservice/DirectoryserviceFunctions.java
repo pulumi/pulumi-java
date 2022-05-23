@@ -6,10 +6,10 @@ package com.pulumi.aws.directoryservice;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.directoryservice.inputs.GetDirectoryArgs;
 import com.pulumi.aws.directoryservice.outputs.GetDirectoryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DirectoryserviceFunctions {
     /**
@@ -39,7 +39,7 @@ public final class DirectoryserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
         return getDirectory(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +69,7 @@ public final class DirectoryserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:directoryservice/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:directoryservice/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }
 }

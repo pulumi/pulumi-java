@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceType")
-    private @Nullable String sourceType;
+    private Output</* @Nullable */ String> sourceType;
 
     /**
      * @return The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
      * 
      */
-    public Optional<String> sourceType() {
-        return Optional.ofNullable(this.sourceType);
+    public Output</* @Nullable */ String> sourceType() {
+        return this.sourceType;
     }
 
     private GetEventCategoriesArgs() {}
@@ -59,9 +59,19 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder sourceType(@Nullable String sourceType) {
+        public Builder sourceType(Output</* @Nullable */ String> sourceType) {
             $.sourceType = sourceType;
             return this;
+        }
+
+        /**
+         * @param sourceType The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceType(@Nullable String sourceType) {
+            return sourceType(Output.of(sourceType));
         }
 
         public GetEventCategoriesArgs build() {

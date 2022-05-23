@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceAlias")
-    private @Nullable String instanceAlias;
+    private Output</* @Nullable */ String> instanceAlias;
 
     /**
      * @return Returns information on a specific connect instance by alias
      * 
      */
-    public Optional<String> instanceAlias() {
-        return Optional.ofNullable(this.instanceAlias);
+    public Output</* @Nullable */ String> instanceAlias() {
+        return this.instanceAlias;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private Output</* @Nullable */ String> instanceId;
 
     /**
      * @return Returns information on a specific connect instance by id
      * 
      */
-    public Optional<String> instanceId() {
-        return Optional.ofNullable(this.instanceId);
+    public Output</* @Nullable */ String> instanceId() {
+        return this.instanceId;
     }
 
     private GetInstanceArgs() {}
@@ -75,8 +75,29 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceAlias(@Nullable String instanceAlias) {
+        public Builder instanceAlias(Output</* @Nullable */ String> instanceAlias) {
             $.instanceAlias = instanceAlias;
+            return this;
+        }
+
+        /**
+         * @param instanceAlias Returns information on a specific connect instance by alias
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceAlias(@Nullable String instanceAlias) {
+            return instanceAlias(Output.of(instanceAlias));
+        }
+
+        /**
+         * @param instanceId Returns information on a specific connect instance by id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder instanceId(@Nullable String instanceId) {
-            $.instanceId = instanceId;
-            return this;
+            return instanceId(Output.of(instanceId));
         }
 
         public GetInstanceArgs build() {

@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetCoipPoolFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCoipPoolArgs Empty = new GetCoipPoolArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetCoipPoolFilter> filters;
+    private Output</* @Nullable */ List<GetCoipPoolFilter>> filters;
 
-    public Optional<List<GetCoipPoolFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCoipPoolFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -29,14 +29,14 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayRouteTableId")
-    private @Nullable String localGatewayRouteTableId;
+    private Output</* @Nullable */ String> localGatewayRouteTableId;
 
     /**
      * @return Local Gateway Route Table Id assigned to desired COIP Pool
      * 
      */
-    public Optional<String> localGatewayRouteTableId() {
-        return Optional.ofNullable(this.localGatewayRouteTableId);
+    public Output</* @Nullable */ String> localGatewayRouteTableId() {
+        return this.localGatewayRouteTableId;
     }
 
     /**
@@ -44,14 +44,14 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolId")
-    private @Nullable String poolId;
+    private Output</* @Nullable */ String> poolId;
 
     /**
      * @return The id of the specific COIP Pool to retrieve.
      * 
      */
-    public Optional<String> poolId() {
-        return Optional.ofNullable(this.poolId);
+    public Output</* @Nullable */ String> poolId() {
+        return this.poolId;
     }
 
     /**
@@ -60,15 +60,15 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A mapping of tags, each pair of which must exactly match
      * a pair on the desired COIP Pool.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetCoipPoolArgs() {}
@@ -98,9 +98,13 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCoipPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetCoipPoolFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetCoipPoolFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCoipPoolFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCoipPoolFilter... filters) {
@@ -113,8 +117,29 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(Output</* @Nullable */ String> localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
+            return this;
+        }
+
+        /**
+         * @param localGatewayRouteTableId Local Gateway Route Table Id assigned to desired COIP Pool
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
+        }
+
+        /**
+         * @param poolId The id of the specific COIP Pool to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder poolId(Output</* @Nullable */ String> poolId) {
+            $.poolId = poolId;
             return this;
         }
 
@@ -125,7 +150,18 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder poolId(@Nullable String poolId) {
-            $.poolId = poolId;
+            return poolId(Output.of(poolId));
+        }
+
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired COIP Pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -137,8 +173,7 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetCoipPoolArgs build() {

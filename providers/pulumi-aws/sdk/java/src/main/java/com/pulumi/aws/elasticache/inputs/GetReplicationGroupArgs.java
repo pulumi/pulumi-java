@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="replicationGroupId", required=true)
-    private String replicationGroupId;
+    private Output<String> replicationGroupId;
 
     /**
      * @return The identifier for the replication group.
      * 
      */
-    public String replicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetReplicationGroupArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder replicationGroupId(String replicationGroupId) {
+        public Builder replicationGroupId(Output<String> replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
+        }
+
+        /**
+         * @param replicationGroupId The identifier for the replication group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder replicationGroupId(String replicationGroupId) {
+            return replicationGroupId(Output.of(replicationGroupId));
         }
 
         public GetReplicationGroupArgs build() {

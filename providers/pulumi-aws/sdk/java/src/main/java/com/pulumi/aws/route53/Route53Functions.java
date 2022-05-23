@@ -16,10 +16,10 @@ import com.pulumi.aws.route53.outputs.GetResolverRuleResult;
 import com.pulumi.aws.route53.outputs.GetResolverRulesResult;
 import com.pulumi.aws.route53.outputs.GetTrafficPolicyDocumentResult;
 import com.pulumi.aws.route53.outputs.GetZoneResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Route53Functions {
     /**
@@ -53,7 +53,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args) {
+    public static Output<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args) {
         return getDelegationSet(args, InvokeOptions.Empty);
     }
     /**
@@ -87,8 +87,8 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getDelegationSet:getDelegationSet", TypeShape.of(GetDelegationSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getDelegationSet:getDelegationSet", TypeShape.of(GetDelegationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.route53.ResolverEndpoint` provides details about a specific Route53 Resolver Endpoint.
@@ -143,7 +143,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint() {
+    public static Output<GetResolverEndpointResult> getResolverEndpoint() {
         return getResolverEndpoint(GetResolverEndpointArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -199,7 +199,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
         return getResolverEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -255,8 +255,8 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
@@ -288,7 +288,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRuleResult> getResolverRule() {
+    public static Output<GetResolverRuleResult> getResolverRule() {
         return getResolverRule(GetResolverRuleArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -321,7 +321,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args) {
+    public static Output<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args) {
         return getResolverRule(args, InvokeOptions.Empty);
     }
     /**
@@ -354,8 +354,8 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getResolverRule:getResolverRule", TypeShape.of(GetResolverRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getResolverRule:getResolverRule", TypeShape.of(GetResolverRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.route53.getResolverRules` provides details about a set of Route53 Resolver rules.
@@ -410,7 +410,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRulesResult> getResolverRules() {
+    public static Output<GetResolverRulesResult> getResolverRules() {
         return getResolverRules(GetResolverRulesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -466,7 +466,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args) {
+    public static Output<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args) {
         return getResolverRules(args, InvokeOptions.Empty);
     }
     /**
@@ -522,8 +522,8 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getResolverRules:getResolverRules", TypeShape.of(GetResolverRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getResolverRules:getResolverRules", TypeShape.of(GetResolverRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Generates an Route53 traffic policy document in JSON format for use with resources that expect policy documents such as [`aws.route53.TrafficPolicy`](https://www.terraform.io/docs/providers/aws/r/route53_traffic_policy.html).
@@ -583,7 +583,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument() {
+    public static Output<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument() {
         return getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -644,7 +644,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args) {
+    public static Output<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args) {
         return getTrafficPolicyDocument(args, InvokeOptions.Empty);
     }
     /**
@@ -705,8 +705,8 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getTrafficPolicyDocument:getTrafficPolicyDocument", TypeShape.of(GetTrafficPolicyDocumentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getTrafficPolicyDocument:getTrafficPolicyDocument", TypeShape.of(GetTrafficPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
@@ -748,7 +748,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone() {
+    public static Output<GetZoneResult> getZone() {
         return getZone(GetZoneArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -791,7 +791,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args) {
+    public static Output<GetZoneResult> getZone(GetZoneArgs args) {
         return getZone(args, InvokeOptions.Empty);
     }
     /**
@@ -834,7 +834,7 @@ public final class Route53Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:route53/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:route53/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
 }

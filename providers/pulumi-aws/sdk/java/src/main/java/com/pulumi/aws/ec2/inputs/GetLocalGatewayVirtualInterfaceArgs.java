@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters;
+    private Output</* @Nullable */ List<GetLocalGatewayVirtualInterfaceFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaces.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetLocalGatewayVirtualInterfaceFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetLocalGatewayVirtualInterfaceFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Identifier of EC2 Local Gateway Virtual Interface.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetLocalGatewayVirtualInterfaceArgs() {}
@@ -94,9 +94,19 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetLocalGatewayVirtualInterfaceFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaces.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -115,8 +125,29 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Identifier of EC2 Local Gateway Virtual Interface.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -127,8 +158,7 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends com.pulumi.resour
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetLocalGatewayVirtualInterfaceArgs build() {

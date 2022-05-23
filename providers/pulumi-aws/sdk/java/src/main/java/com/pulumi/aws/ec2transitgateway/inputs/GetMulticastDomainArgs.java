@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2transitgateway.inputs;
 
 import com.pulumi.aws.ec2transitgateway.inputs.GetMulticastDomainFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetMulticastDomainFilter> filters;
+    private Output</* @Nullable */ List<GetMulticastDomainFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    public Optional<List<GetMulticastDomainFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetMulticastDomainFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value tags for the EC2 Transit Gateway Multicast Domain.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="transitGatewayMulticastDomainId")
-    private @Nullable String transitGatewayMulticastDomainId;
+    private Output</* @Nullable */ String> transitGatewayMulticastDomainId;
 
     /**
      * @return Identifier of the EC2 Transit Gateway Multicast Domain.
      * 
      */
-    public Optional<String> transitGatewayMulticastDomainId() {
-        return Optional.ofNullable(this.transitGatewayMulticastDomainId);
+    public Output</* @Nullable */ String> transitGatewayMulticastDomainId() {
+        return this.transitGatewayMulticastDomainId;
     }
 
     private GetMulticastDomainArgs() {}
@@ -94,9 +94,19 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetMulticastDomainFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetMulticastDomainFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetMulticastDomainFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -115,8 +125,29 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
+            return this;
+        }
+
+        /**
+         * @param tags Key-value tags for the EC2 Transit Gateway Multicast Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param transitGatewayMulticastDomainId Identifier of the EC2 Transit Gateway Multicast Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayMulticastDomainId(Output</* @Nullable */ String> transitGatewayMulticastDomainId) {
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
 
@@ -127,8 +158,7 @@ public final class GetMulticastDomainArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder transitGatewayMulticastDomainId(@Nullable String transitGatewayMulticastDomainId) {
-            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
-            return this;
+            return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
         }
 
         public GetMulticastDomainArgs build() {

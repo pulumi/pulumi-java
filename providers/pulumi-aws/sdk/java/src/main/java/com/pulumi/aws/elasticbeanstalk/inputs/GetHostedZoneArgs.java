@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.elasticbeanstalk.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetHostedZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return The region you&#39;d like the zone for. By default, fetches the current region.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     private GetHostedZoneArgs() {}
@@ -59,9 +59,19 @@ public final class GetHostedZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
+        public Builder region(Output</* @Nullable */ String> region) {
             $.region = region;
             return this;
+        }
+
+        /**
+         * @param region The region you&#39;d like the zone for. By default, fetches the current region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(@Nullable String region) {
+            return region(Output.of(region));
         }
 
         public GetHostedZoneArgs build() {

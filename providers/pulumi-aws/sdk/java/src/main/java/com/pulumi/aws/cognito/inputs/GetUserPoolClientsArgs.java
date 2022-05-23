@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cognito.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserPoolClientsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userPoolId", required=true)
-    private String userPoolId;
+    private Output<String> userPoolId;
 
     /**
      * @return The Cognito user pool ID.
      * 
      */
-    public String userPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -57,9 +58,19 @@ public final class GetUserPoolClientsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder userPoolId(String userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             $.userPoolId = userPoolId;
             return this;
+        }
+
+        /**
+         * @param userPoolId The Cognito user pool ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
         }
 
         public GetUserPoolClientsArgs build() {

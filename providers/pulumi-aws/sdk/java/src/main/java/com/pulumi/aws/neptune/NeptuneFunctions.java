@@ -8,10 +8,10 @@ import com.pulumi.aws.neptune.inputs.GetEngineVersionArgs;
 import com.pulumi.aws.neptune.inputs.GetOrderableDbInstanceArgs;
 import com.pulumi.aws.neptune.outputs.GetEngineVersionResult;
 import com.pulumi.aws.neptune.outputs.GetOrderableDbInstanceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NeptuneFunctions {
     /**
@@ -44,7 +44,7 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion() {
+    public static Output<GetEngineVersionResult> getEngineVersion() {
         return getEngineVersion(GetEngineVersionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
+    public static Output<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
         return getEngineVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -110,8 +110,8 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:neptune/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:neptune/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about Neptune orderable DB instances.
@@ -144,7 +144,7 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance() {
+    public static Output<GetOrderableDbInstanceResult> getOrderableDbInstance() {
         return getOrderableDbInstance(GetOrderableDbInstanceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -178,7 +178,7 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
+    public static Output<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
         return getOrderableDbInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -212,7 +212,7 @@ public final class NeptuneFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:neptune/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:neptune/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

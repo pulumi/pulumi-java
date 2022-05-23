@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.redshift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterType")
-    private @Nullable String clusterType;
+    private Output</* @Nullable */ String> clusterType;
 
     /**
      * @return Reshift Cluster typeE.g., `multi-node` or `single-node`
      * 
      */
-    public Optional<String> clusterType() {
-        return Optional.ofNullable(this.clusterType);
+    public Output</* @Nullable */ String> clusterType() {
+        return this.clusterType;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterVersion")
-    private @Nullable String clusterVersion;
+    private Output</* @Nullable */ String> clusterVersion;
 
     /**
      * @return Redshift Cluster versionE.g., `1.0`
      * 
      */
-    public Optional<String> clusterVersion() {
-        return Optional.ofNullable(this.clusterVersion);
+    public Output</* @Nullable */ String> clusterVersion() {
+        return this.clusterVersion;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="nodeType")
-    private @Nullable String nodeType;
+    private Output</* @Nullable */ String> nodeType;
 
     /**
      * @return Redshift Cluster node typeE.g., `dc2.8xlarge`
      * 
      */
-    public Optional<String> nodeType() {
-        return Optional.ofNullable(this.nodeType);
+    public Output</* @Nullable */ String> nodeType() {
+        return this.nodeType;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preferredNodeTypes")
-    private @Nullable List<String> preferredNodeTypes;
+    private Output</* @Nullable */ List<String>> preferredNodeTypes;
 
     /**
      * @return Ordered list of preferred Redshift Cluster node types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    public Optional<List<String>> preferredNodeTypes() {
-        return Optional.ofNullable(this.preferredNodeTypes);
+    public Output</* @Nullable */ List<String>> preferredNodeTypes() {
+        return this.preferredNodeTypes;
     }
 
     private GetOrderableClusterArgs() {}
@@ -108,8 +108,29 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder clusterType(@Nullable String clusterType) {
+        public Builder clusterType(Output</* @Nullable */ String> clusterType) {
             $.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * @param clusterType Reshift Cluster typeE.g., `multi-node` or `single-node`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterType(@Nullable String clusterType) {
+            return clusterType(Output.of(clusterType));
+        }
+
+        /**
+         * @param clusterVersion Redshift Cluster versionE.g., `1.0`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterVersion(Output</* @Nullable */ String> clusterVersion) {
+            $.clusterVersion = clusterVersion;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder clusterVersion(@Nullable String clusterVersion) {
-            $.clusterVersion = clusterVersion;
+            return clusterVersion(Output.of(clusterVersion));
+        }
+
+        /**
+         * @param nodeType Redshift Cluster node typeE.g., `dc2.8xlarge`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nodeType(Output</* @Nullable */ String> nodeType) {
+            $.nodeType = nodeType;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder nodeType(@Nullable String nodeType) {
-            $.nodeType = nodeType;
+            return nodeType(Output.of(nodeType));
+        }
+
+        /**
+         * @param preferredNodeTypes Ordered list of preferred Redshift Cluster node types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredNodeTypes(Output</* @Nullable */ List<String>> preferredNodeTypes) {
+            $.preferredNodeTypes = preferredNodeTypes;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
-            $.preferredNodeTypes = preferredNodeTypes;
-            return this;
+            return preferredNodeTypes(Output.of(preferredNodeTypes));
         }
 
         /**

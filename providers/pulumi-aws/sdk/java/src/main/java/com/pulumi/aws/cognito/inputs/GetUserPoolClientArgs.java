@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cognito.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientId", required=true)
-    private String clientId;
+    private Output<String> clientId;
 
     /**
      * @return Client Id of the user pool.
      * 
      */
-    public String clientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -32,13 +33,13 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userPoolId", required=true)
-    private String userPoolId;
+    private Output<String> userPoolId;
 
     /**
      * @return User pool the client belongs to.
      * 
      */
-    public String userPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -73,8 +74,29 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder clientId(String clientId) {
+        public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * @param clientId Client Id of the user pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
+        }
+
+        /**
+         * @param userPoolId User pool the client belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userPoolId(Output<String> userPoolId) {
+            $.userPoolId = userPoolId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder userPoolId(String userPoolId) {
-            $.userPoolId = userPoolId;
-            return this;
+            return userPoolId(Output.of(userPoolId));
         }
 
         public GetUserPoolClientArgs build() {

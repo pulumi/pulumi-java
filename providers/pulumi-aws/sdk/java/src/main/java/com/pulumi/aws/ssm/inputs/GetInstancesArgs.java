@@ -4,10 +4,10 @@
 package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.aws.ssm.inputs.GetInstancesFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetInstancesFilter> filters;
+    private Output</* @Nullable */ List<GetInstancesFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetInstancesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetInstancesFilter>> filters() {
+        return this.filters;
     }
 
     private GetInstancesArgs() {}
@@ -60,9 +60,19 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetInstancesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

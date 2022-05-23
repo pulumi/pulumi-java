@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cidrBlock")
-    private @Nullable String cidrBlock;
+    private Output</* @Nullable */ String> cidrBlock;
 
     /**
      * @return The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> cidrBlock() {
-        return Optional.ofNullable(this.cidrBlock);
+    public Output</* @Nullable */ String> cidrBlock() {
+        return this.cidrBlock;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVpcPeeringConnectionFilter> filters;
+    private Output</* @Nullable */ List<GetVpcPeeringConnectionFilter>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetVpcPeeringConnectionFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVpcPeeringConnectionFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The ID of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ownerId")
-    private @Nullable String ownerId;
+    private Output</* @Nullable */ String> ownerId;
 
     /**
      * @return The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> ownerId() {
-        return Optional.ofNullable(this.ownerId);
+    public Output</* @Nullable */ String> ownerId() {
+        return this.ownerId;
     }
 
     /**
@@ -82,14 +82,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerCidrBlock")
-    private @Nullable String peerCidrBlock;
+    private Output</* @Nullable */ String> peerCidrBlock;
 
     /**
      * @return The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> peerCidrBlock() {
-        return Optional.ofNullable(this.peerCidrBlock);
+    public Output</* @Nullable */ String> peerCidrBlock() {
+        return this.peerCidrBlock;
     }
 
     /**
@@ -97,14 +97,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerOwnerId")
-    private @Nullable String peerOwnerId;
+    private Output</* @Nullable */ String> peerOwnerId;
 
     /**
      * @return The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> peerOwnerId() {
-        return Optional.ofNullable(this.peerOwnerId);
+    public Output</* @Nullable */ String> peerOwnerId() {
+        return this.peerOwnerId;
     }
 
     /**
@@ -112,14 +112,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerRegion")
-    private @Nullable String peerRegion;
+    private Output</* @Nullable */ String> peerRegion;
 
     /**
      * @return The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> peerRegion() {
-        return Optional.ofNullable(this.peerRegion);
+    public Output</* @Nullable */ String> peerRegion() {
+        return this.peerRegion;
     }
 
     /**
@@ -127,14 +127,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerVpcId")
-    private @Nullable String peerVpcId;
+    private Output</* @Nullable */ String> peerVpcId;
 
     /**
      * @return The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> peerVpcId() {
-        return Optional.ofNullable(this.peerVpcId);
+    public Output</* @Nullable */ String> peerVpcId() {
+        return this.peerVpcId;
     }
 
     /**
@@ -142,14 +142,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return The region of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     /**
@@ -157,14 +157,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     /**
@@ -173,15 +173,15 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired VPC Peering Connection.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -189,14 +189,14 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private Output</* @Nullable */ String> vpcId;
 
     /**
      * @return The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    public Optional<String> vpcId() {
-        return Optional.ofNullable(this.vpcId);
+    public Output</* @Nullable */ String> vpcId() {
+        return this.vpcId;
     }
 
     private GetVpcPeeringConnectionArgs() {}
@@ -240,8 +240,29 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder cidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(Output</* @Nullable */ String> cidrBlock) {
             $.cidrBlock = cidrBlock;
+            return this;
+        }
+
+        /**
+         * @param cidrBlock The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cidrBlock(@Nullable String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(Output</* @Nullable */ List<GetVpcPeeringConnectionFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
@@ -252,8 +273,7 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder filters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         /**
@@ -272,8 +292,29 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The ID of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param ownerId The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerId(Output</* @Nullable */ String> ownerId) {
+            $.ownerId = ownerId;
             return this;
         }
 
@@ -284,7 +325,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder ownerId(@Nullable String ownerId) {
-            $.ownerId = ownerId;
+            return ownerId(Output.of(ownerId));
+        }
+
+        /**
+         * @param peerCidrBlock The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerCidrBlock(Output</* @Nullable */ String> peerCidrBlock) {
+            $.peerCidrBlock = peerCidrBlock;
             return this;
         }
 
@@ -295,7 +346,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder peerCidrBlock(@Nullable String peerCidrBlock) {
-            $.peerCidrBlock = peerCidrBlock;
+            return peerCidrBlock(Output.of(peerCidrBlock));
+        }
+
+        /**
+         * @param peerOwnerId The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerOwnerId(Output</* @Nullable */ String> peerOwnerId) {
+            $.peerOwnerId = peerOwnerId;
             return this;
         }
 
@@ -306,7 +367,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder peerOwnerId(@Nullable String peerOwnerId) {
-            $.peerOwnerId = peerOwnerId;
+            return peerOwnerId(Output.of(peerOwnerId));
+        }
+
+        /**
+         * @param peerRegion The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerRegion(Output</* @Nullable */ String> peerRegion) {
+            $.peerRegion = peerRegion;
             return this;
         }
 
@@ -317,7 +388,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder peerRegion(@Nullable String peerRegion) {
-            $.peerRegion = peerRegion;
+            return peerRegion(Output.of(peerRegion));
+        }
+
+        /**
+         * @param peerVpcId The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerVpcId(Output</* @Nullable */ String> peerVpcId) {
+            $.peerVpcId = peerVpcId;
             return this;
         }
 
@@ -328,7 +409,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder peerVpcId(@Nullable String peerVpcId) {
-            $.peerVpcId = peerVpcId;
+            return peerVpcId(Output.of(peerVpcId));
+        }
+
+        /**
+         * @param region The region of the requester VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(Output</* @Nullable */ String> region) {
+            $.region = region;
             return this;
         }
 
@@ -339,7 +430,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder region(@Nullable String region) {
-            $.region = region;
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param status The status of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -350,7 +451,18 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
+            return status(Output.of(status));
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -362,7 +474,17 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(Output</* @Nullable */ String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -373,8 +495,7 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+            return vpcId(Output.of(vpcId));
         }
 
         public GetVpcPeeringConnectionArgs build() {

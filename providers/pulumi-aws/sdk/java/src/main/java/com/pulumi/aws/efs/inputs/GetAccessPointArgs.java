@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.efs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPointId", required=true)
-    private String accessPointId;
+    private Output<String> accessPointId;
 
     /**
      * @return The ID that identifies the file system.
      * 
      */
-    public String accessPointId() {
+    public Output<String> accessPointId() {
         return this.accessPointId;
     }
 
@@ -35,14 +35,14 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value mapping of resource tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetAccessPointArgs() {}
@@ -76,8 +76,29 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessPointId(String accessPointId) {
+        public Builder accessPointId(Output<String> accessPointId) {
             $.accessPointId = accessPointId;
+            return this;
+        }
+
+        /**
+         * @param accessPointId The ID that identifies the file system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessPointId(String accessPointId) {
+            return accessPointId(Output.of(accessPointId));
+        }
+
+        /**
+         * @param tags Key-value mapping of resource tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetAccessPointArgs build() {

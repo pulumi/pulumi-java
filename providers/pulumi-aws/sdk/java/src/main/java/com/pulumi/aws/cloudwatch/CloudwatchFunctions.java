@@ -14,10 +14,10 @@ import com.pulumi.aws.cloudwatch.outputs.GetEventConnectionResult;
 import com.pulumi.aws.cloudwatch.outputs.GetEventSourceResult;
 import com.pulumi.aws.cloudwatch.outputs.GetLogGroupResult;
 import com.pulumi.aws.cloudwatch.outputs.GetLogGroupsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudwatchFunctions {
     /**
@@ -49,7 +49,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args) {
+    public static Output<GetEventBusResult> getEventBus(GetEventBusArgs args) {
         return getEventBus(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventBusResult> getEventBus(GetEventBusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve information about an EventBridge connection.
@@ -113,7 +113,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args) {
+    public static Output<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args) {
         return getEventConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -145,8 +145,8 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
@@ -177,7 +177,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventSourceResult> getEventSource() {
+    public static Output<GetEventSourceResult> getEventSource() {
         return getEventSource(GetEventSourceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -209,7 +209,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
+    public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
         return getEventSource(args, InvokeOptions.Empty);
     }
     /**
@@ -241,8 +241,8 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an AWS Cloudwatch Log Group
@@ -271,7 +271,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
+    public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
         return getLogGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -301,8 +301,8 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a list of AWS Cloudwatch Log Groups
@@ -331,7 +331,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
+    public static Output<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
         return getLogGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -361,7 +361,7 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

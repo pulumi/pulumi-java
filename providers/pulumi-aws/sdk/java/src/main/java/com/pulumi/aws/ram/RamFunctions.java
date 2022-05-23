@@ -6,10 +6,10 @@ package com.pulumi.aws.ram;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ram.inputs.GetResourceShareArgs;
 import com.pulumi.aws.ram.outputs.GetResourceShareResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RamFunctions {
     /**
@@ -67,7 +67,7 @@ public final class RamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args) {
+    public static Output<GetResourceShareResult> getResourceShare(GetResourceShareArgs args) {
         return getResourceShare(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +125,7 @@ public final class RamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ram/getResourceShare:getResourceShare", TypeShape.of(GetResourceShareResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceShareResult> getResourceShare(GetResourceShareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ram/getResourceShare:getResourceShare", TypeShape.of(GetResourceShareResult.class), args, Utilities.withVersion(options));
     }
 }

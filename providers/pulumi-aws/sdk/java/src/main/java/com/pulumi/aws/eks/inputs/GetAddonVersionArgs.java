@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.eks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-    private String addonName;
+    private Output<String> addonName;
 
     /**
      * @return Name of the EKS add-on. The name must match one of
      * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
      * 
      */
-    public String addonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
 
@@ -37,13 +37,13 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kubernetesVersion", required=true)
-    private String kubernetesVersion;
+    private Output<String> kubernetesVersion;
 
     /**
      * @return Version of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public String kubernetesVersion() {
+    public Output<String> kubernetesVersion() {
         return this.kubernetesVersion;
     }
 
@@ -52,14 +52,14 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private Output</* @Nullable */ Boolean> mostRecent;
 
     /**
      * @return Determines if the most recent or default version of the addon should be returned.
      * 
      */
-    public Optional<Boolean> mostRecent() {
-        return Optional.ofNullable(this.mostRecent);
+    public Output</* @Nullable */ Boolean> mostRecent() {
+        return this.mostRecent;
     }
 
     private GetAddonVersionArgs() {}
@@ -95,8 +95,30 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder addonName(String addonName) {
+        public Builder addonName(Output<String> addonName) {
             $.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * @param addonName Name of the EKS add-on. The name must match one of
+         * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
+        }
+
+        /**
+         * @param kubernetesVersion Version of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kubernetesVersion(Output<String> kubernetesVersion) {
+            $.kubernetesVersion = kubernetesVersion;
             return this;
         }
 
@@ -107,7 +129,17 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
-            $.kubernetesVersion = kubernetesVersion;
+            return kubernetesVersion(Output.of(kubernetesVersion));
+        }
+
+        /**
+         * @param mostRecent Determines if the most recent or default version of the addon should be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+            $.mostRecent = mostRecent;
             return this;
         }
 
@@ -118,8 +150,7 @@ public final class GetAddonVersionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            $.mostRecent = mostRecent;
-            return this;
+            return mostRecent(Output.of(mostRecent));
         }
 
         public GetAddonVersionArgs build() {

@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.aws.ec2.inputs.GetNatGatewayFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetNatGatewayFilter> filters;
+    private Output</* @Nullable */ List<GetNatGatewayFilter>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetNatGatewayFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNatGatewayFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The id of the specific Nat Gateway to retrieve.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The state of the NAT gateway (pending | failed | available | deleting | deleted ).
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId")
-    private @Nullable String subnetId;
+    private Output</* @Nullable */ String> subnetId;
 
     /**
      * @return The id of subnet that the Nat Gateway resides in.
      * 
      */
-    public Optional<String> subnetId() {
-        return Optional.ofNullable(this.subnetId);
+    public Output</* @Nullable */ String> subnetId() {
+        return this.subnetId;
     }
 
     /**
@@ -83,15 +83,15 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired Nat Gateway.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -99,14 +99,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private Output</* @Nullable */ String> vpcId;
 
     /**
      * @return The id of the VPC that the Nat Gateway resides in.
      * 
      */
-    public Optional<String> vpcId() {
-        return Optional.ofNullable(this.vpcId);
+    public Output</* @Nullable */ String> vpcId() {
+        return this.vpcId;
     }
 
     private GetNatGatewayArgs() {}
@@ -144,9 +144,19 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetNatGatewayFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetNatGatewayFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetNatGatewayFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -165,8 +175,29 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The id of the specific Nat Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state The state of the NAT gateway (pending | failed | available | deleting | deleted ).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -177,7 +208,17 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param subnetId The id of subnet that the Nat Gateway resides in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetId(Output</* @Nullable */ String> subnetId) {
+            $.subnetId = subnetId;
             return this;
         }
 
@@ -188,7 +229,18 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder subnetId(@Nullable String subnetId) {
-            $.subnetId = subnetId;
+            return subnetId(Output.of(subnetId));
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired Nat Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -200,7 +252,17 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId The id of the VPC that the Nat Gateway resides in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(Output</* @Nullable */ String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -211,8 +273,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+            return vpcId(Output.of(vpcId));
         }
 
         public GetNatGatewayArgs build() {

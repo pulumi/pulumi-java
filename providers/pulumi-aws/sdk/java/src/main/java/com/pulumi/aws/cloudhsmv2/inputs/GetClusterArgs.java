@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.cloudhsmv2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
     /**
      * @return The id of Cloud HSM v2 cluster.
      * 
      */
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -34,14 +34,14 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterState")
-    private @Nullable String clusterState;
+    private Output</* @Nullable */ String> clusterState;
 
     /**
      * @return The state of the cluster to be found.
      * 
      */
-    public Optional<String> clusterState() {
-        return Optional.ofNullable(this.clusterState);
+    public Output</* @Nullable */ String> clusterState() {
+        return this.clusterState;
     }
 
     private GetClusterArgs() {}
@@ -75,8 +75,29 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId The id of Cloud HSM v2 cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param clusterState The state of the cluster to be found.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterState(Output</* @Nullable */ String> clusterState) {
+            $.clusterState = clusterState;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterState(@Nullable String clusterState) {
-            $.clusterState = clusterState;
-            return this;
+            return clusterState(Output.of(clusterState));
         }
 
         public GetClusterArgs build() {

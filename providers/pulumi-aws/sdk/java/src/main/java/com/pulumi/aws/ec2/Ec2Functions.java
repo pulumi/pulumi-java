@@ -109,11 +109,11 @@ import com.pulumi.aws.ec2.outputs.GetVpcPeeringConnectionsResult;
 import com.pulumi.aws.ec2.outputs.GetVpcResult;
 import com.pulumi.aws.ec2.outputs.GetVpcsResult;
 import com.pulumi.aws.ec2.outputs.GetVpnGatewayResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class Ec2Functions {
     /**
@@ -160,7 +160,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+    public static Output<GetAmiResult> getAmi(GetAmiArgs args) {
         return getAmi(args, InvokeOptions.Empty);
     }
     /**
@@ -207,8 +207,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a list of AMI IDs matching the specified criteria.
@@ -241,7 +241,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
         return getAmiIds(args, InvokeOptions.Empty);
     }
     /**
@@ -275,8 +275,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific EC2 Customer-Owned IP Pool.
@@ -313,7 +313,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCoipPoolResult> getCoipPool() {
+    public static Output<GetCoipPoolResult> getCoipPool() {
         return getCoipPool(GetCoipPoolArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -351,7 +351,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args) {
+    public static Output<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args) {
         return getCoipPool(args, InvokeOptions.Empty);
     }
     /**
@@ -389,29 +389,29 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getCoipPool:getCoipPool", TypeShape.of(GetCoipPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getCoipPool:getCoipPool", TypeShape.of(GetCoipPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetCoipPoolsResult> getCoipPools() {
+    public static Output<GetCoipPoolsResult> getCoipPools() {
         return getCoipPools(GetCoipPoolsArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args) {
+    public static Output<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args) {
         return getCoipPools(args, InvokeOptions.Empty);
     }
     /**
      * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getCoipPools:getCoipPools", TypeShape.of(GetCoipPoolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getCoipPools:getCoipPools", TypeShape.of(GetCoipPoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an existing AWS Customer Gateway.
@@ -455,7 +455,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway() {
+    public static Output<GetCustomerGatewayResult> getCustomerGateway() {
         return getCustomerGateway(GetCustomerGatewayArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -500,7 +500,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args) {
+    public static Output<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args) {
         return getCustomerGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -545,8 +545,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getCustomerGateway:getCustomerGateway", TypeShape.of(GetCustomerGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getCustomerGateway:getCustomerGateway", TypeShape.of(GetCustomerGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an EC2 Dedicated Host.
@@ -579,7 +579,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost() {
+    public static Output<GetDedicatedHostResult> getDedicatedHost() {
         return getDedicatedHost(GetDedicatedHostArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -613,7 +613,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
+    public static Output<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
         return getDedicatedHost(args, InvokeOptions.Empty);
     }
     /**
@@ -647,8 +647,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides a list of Elastic IPs in a region.
@@ -681,7 +681,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEipsResult> getEips() {
+    public static Output<GetEipsResult> getEips() {
         return getEips(GetEipsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -715,7 +715,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEipsResult> getEips(GetEipsArgs args) {
+    public static Output<GetEipsResult> getEips(GetEipsArgs args) {
         return getEips(args, InvokeOptions.Empty);
     }
     /**
@@ -749,8 +749,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEipsResult> getEips(GetEipsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getEips:getEips", TypeShape.of(GetEipsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEipsResult> getEips(GetEipsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getEips:getEips", TypeShape.of(GetEipsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Eip` provides details about a specific Elastic IP.
@@ -849,7 +849,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp() {
+    public static Output<GetElasticIpResult> getElasticIp() {
         return getElasticIp(GetElasticIpArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -949,7 +949,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
+    public static Output<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
         return getElasticIp(args, InvokeOptions.Empty);
     }
     /**
@@ -1049,8 +1049,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
+    public static Output<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the ID of an Amazon EC2 Instance for use in other
@@ -1089,7 +1089,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance() {
+    public static Output<GetInstanceResult> getInstance() {
         return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1129,7 +1129,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -1169,8 +1169,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get characteristics for a single EC2 Instance Type.
@@ -1199,7 +1199,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args) {
+    public static Output<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args) {
         return getInstanceType(args, InvokeOptions.Empty);
     }
     /**
@@ -1229,8 +1229,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceType:getInstanceType", TypeShape.of(GetInstanceTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstanceType:getInstanceType", TypeShape.of(GetInstanceTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about single EC2 Instance Type Offering.
@@ -1267,7 +1267,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering() {
+    public static Output<GetInstanceTypeOfferingResult> getInstanceTypeOffering() {
         return getInstanceTypeOffering(GetInstanceTypeOfferingArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1305,7 +1305,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args) {
+    public static Output<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args) {
         return getInstanceTypeOffering(args, InvokeOptions.Empty);
     }
     /**
@@ -1343,8 +1343,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypeOffering:getInstanceTypeOffering", TypeShape.of(GetInstanceTypeOfferingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstanceTypeOffering:getInstanceTypeOffering", TypeShape.of(GetInstanceTypeOfferingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about EC2 Instance Type Offerings.
@@ -1384,7 +1384,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings() {
+    public static Output<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings() {
         return getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1425,7 +1425,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args) {
+    public static Output<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args) {
         return getInstanceTypeOfferings(args, InvokeOptions.Empty);
     }
     /**
@@ -1466,8 +1466,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypeOfferings:getInstanceTypeOfferings", TypeShape.of(GetInstanceTypeOfferingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstanceTypeOfferings:getInstanceTypeOfferings", TypeShape.of(GetInstanceTypeOfferingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about EC2 Instance Types.
@@ -1514,7 +1514,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes() {
+    public static Output<GetInstanceTypesResult> getInstanceTypes() {
         return getInstanceTypes(GetInstanceTypesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1562,7 +1562,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args) {
+    public static Output<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args) {
         return getInstanceTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -1610,8 +1610,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypes:getInstanceTypes", TypeShape.of(GetInstanceTypesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstanceTypes:getInstanceTypes", TypeShape.of(GetInstanceTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
@@ -1623,7 +1623,7 @@ public final class Ec2Functions {
      * and you&#39;d need to re-run `apply` every time an instance comes up or dies.
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances() {
+    public static Output<GetInstancesResult> getInstances() {
         return getInstances(GetInstancesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1636,7 +1636,7 @@ public final class Ec2Functions {
      * and you&#39;d need to re-run `apply` every time an instance comes up or dies.
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args) {
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args) {
         return getInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -1649,8 +1649,8 @@ public final class Ec2Functions {
      * and you&#39;d need to re-run `apply` every time an instance comes up or dies.
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
@@ -1684,7 +1684,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway() {
+    public static Output<GetInternetGatewayResult> getInternetGateway() {
         return getInternetGateway(GetInternetGatewayArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1719,7 +1719,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args) {
+    public static Output<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args) {
         return getInternetGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -1754,8 +1754,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getInternetGateway:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getInternetGateway:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -1790,7 +1790,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args) {
+    public static Output<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args) {
         return getIpamPreviewNextCidr(args, InvokeOptions.Empty);
     }
     /**
@@ -1826,8 +1826,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getIpamPreviewNextCidr:getIpamPreviewNextCidr", TypeShape.of(GetIpamPreviewNextCidrResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getIpamPreviewNextCidr:getIpamPreviewNextCidr", TypeShape.of(GetIpamPreviewNextCidrResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a specific EC2 Key Pair.
@@ -1865,7 +1865,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyPairResult> getKeyPair() {
+    public static Output<GetKeyPairResult> getKeyPair() {
         return getKeyPair(GetKeyPairArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1904,7 +1904,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args) {
+    public static Output<GetKeyPairResult> getKeyPair(GetKeyPairArgs args) {
         return getKeyPair(args, InvokeOptions.Empty);
     }
     /**
@@ -1943,8 +1943,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getKeyPair:getKeyPair", TypeShape.of(GetKeyPairResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyPairResult> getKeyPair(GetKeyPairArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getKeyPair:getKeyPair", TypeShape.of(GetKeyPairResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Launch Configuration.
@@ -1973,7 +1973,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args) {
+    public static Output<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args) {
         return getLaunchConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -2003,8 +2003,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchConfiguration:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLaunchConfiguration:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a Launch Template.
@@ -2058,7 +2058,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate() {
+    public static Output<GetLaunchTemplateResult> getLaunchTemplate() {
         return getLaunchTemplate(GetLaunchTemplateArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2113,7 +2113,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args) {
+    public static Output<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args) {
         return getLaunchTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -2168,8 +2168,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchTemplate:getLaunchTemplate", TypeShape.of(GetLaunchTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLaunchTemplate:getLaunchTemplate", TypeShape.of(GetLaunchTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an EC2 Local Gateway.
@@ -2202,7 +2202,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway() {
+    public static Output<GetLocalGatewayResult> getLocalGateway() {
         return getLocalGateway(GetLocalGatewayArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2236,7 +2236,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args) {
+    public static Output<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args) {
         return getLocalGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -2270,8 +2270,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGateway:getLocalGateway", TypeShape.of(GetLocalGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGateway:getLocalGateway", TypeShape.of(GetLocalGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an EC2 Local Gateway Route Table.
@@ -2307,7 +2307,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable() {
+    public static Output<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable() {
         return getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2344,7 +2344,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args) {
+    public static Output<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args) {
         return getLocalGatewayRouteTable(args, InvokeOptions.Empty);
     }
     /**
@@ -2381,29 +2381,29 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayRouteTable:getLocalGatewayRouteTable", TypeShape.of(GetLocalGatewayRouteTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGatewayRouteTable:getLocalGatewayRouteTable", TypeShape.of(GetLocalGatewayRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables() {
+    public static Output<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables() {
         return getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args) {
+    public static Output<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args) {
         return getLocalGatewayRouteTables(args, InvokeOptions.Empty);
     }
     /**
      * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
      * 
      */
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayRouteTables:getLocalGatewayRouteTables", TypeShape.of(GetLocalGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGatewayRouteTables:getLocalGatewayRouteTables", TypeShape.of(GetLocalGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
@@ -2411,7 +2411,7 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface() {
+    public static Output<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface() {
         return getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2420,7 +2420,7 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args) {
+    public static Output<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args) {
         return getLocalGatewayVirtualInterface(args, InvokeOptions.Empty);
     }
     /**
@@ -2429,8 +2429,8 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterface:getLocalGatewayVirtualInterface", TypeShape.of(GetLocalGatewayVirtualInterfaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGatewayVirtualInterface:getLocalGatewayVirtualInterface", TypeShape.of(GetLocalGatewayVirtualInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an EC2 Local Gateway Virtual Interface Group. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
@@ -2459,7 +2459,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup() {
+    public static Output<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup() {
         return getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2489,7 +2489,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args) {
+    public static Output<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args) {
         return getLocalGatewayVirtualInterfaceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -2519,8 +2519,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterfaceGroup:getLocalGatewayVirtualInterfaceGroup", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGatewayVirtualInterfaceGroup:getLocalGatewayVirtualInterfaceGroup", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
@@ -2547,7 +2547,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups() {
+    public static Output<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups() {
         return getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2575,7 +2575,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args) {
+    public static Output<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args) {
         return getLocalGatewayVirtualInterfaceGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -2603,8 +2603,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterfaceGroups:getLocalGatewayVirtualInterfaceGroups", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGatewayVirtualInterfaceGroups:getLocalGatewayVirtualInterfaceGroups", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information for multiple EC2 Local Gateways, such as their identifiers.
@@ -2636,7 +2636,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways() {
+    public static Output<GetLocalGatewaysResult> getLocalGateways() {
         return getLocalGateways(GetLocalGatewaysArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2669,7 +2669,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args) {
+    public static Output<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args) {
         return getLocalGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -2702,8 +2702,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGateways:getLocalGateways", TypeShape.of(GetLocalGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getLocalGateways:getLocalGateways", TypeShape.of(GetLocalGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.ManagedPrefixList` provides details about a specific AWS prefix list or
@@ -2761,7 +2761,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList() {
+    public static Output<GetManagedPrefixListResult> getManagedPrefixList() {
         return getManagedPrefixList(GetManagedPrefixListArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2820,7 +2820,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args) {
+    public static Output<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args) {
         return getManagedPrefixList(args, InvokeOptions.Empty);
     }
     /**
@@ -2879,8 +2879,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getManagedPrefixList:getManagedPrefixList", TypeShape.of(GetManagedPrefixListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getManagedPrefixList:getManagedPrefixList", TypeShape.of(GetManagedPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Nat Gateway.
@@ -2935,7 +2935,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway() {
+    public static Output<GetNatGatewayResult> getNatGateway() {
         return getNatGateway(GetNatGatewayArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2991,7 +2991,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
         return getNatGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -3047,29 +3047,29 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource can be useful for getting back a list of NAT gateway ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetNatGatewaysResult> getNatGateways() {
+    public static Output<GetNatGatewaysResult> getNatGateways() {
         return getNatGateways(GetNatGatewaysArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a list of NAT gateway ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args) {
+    public static Output<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args) {
         return getNatGateways(args, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a list of NAT gateway ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateways:getNatGateways", TypeShape.of(GetNatGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getNatGateways:getNatGateways", TypeShape.of(GetNatGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -3152,7 +3152,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls() {
+    public static Output<GetNetworkAclsResult> getNetworkAcls() {
         return getNetworkAcls(GetNetworkAclsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3236,7 +3236,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args) {
+    public static Output<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args) {
         return getNetworkAcls(args, InvokeOptions.Empty);
     }
     /**
@@ -3320,8 +3320,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkAcls:getNetworkAcls", TypeShape.of(GetNetworkAclsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getNetworkAcls:getNetworkAcls", TypeShape.of(GetNetworkAclsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a Network Interface.
@@ -3350,7 +3350,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface() {
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface() {
         return getNetworkInterface(GetNetworkInterfaceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3380,7 +3380,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
         return getNetworkInterface(args, InvokeOptions.Empty);
     }
     /**
@@ -3410,8 +3410,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -3491,7 +3491,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces() {
+    public static Output<GetNetworkInterfacesResult> getNetworkInterfaces() {
         return getNetworkInterfaces(GetNetworkInterfacesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3572,7 +3572,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args) {
+    public static Output<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args) {
         return getNetworkInterfaces(args, InvokeOptions.Empty);
     }
     /**
@@ -3653,8 +3653,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterfaces:getNetworkInterfaces", TypeShape.of(GetNetworkInterfacesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getNetworkInterfaces:getNetworkInterfaces", TypeShape.of(GetNetworkInterfacesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -3726,7 +3726,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList() {
+    public static Output<GetPrefixListResult> getPrefixList() {
         return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3799,7 +3799,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
+    public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
         return getPrefixList(args, InvokeOptions.Empty);
     }
     /**
@@ -3872,8 +3872,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Route` provides details about a specific Route.
@@ -3917,7 +3917,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+    public static Output<GetRouteResult> getRoute(GetRouteArgs args) {
         return getRoute(args, InvokeOptions.Empty);
     }
     /**
@@ -3962,8 +3962,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getRoute:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getRoute:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.RouteTable` provides details about a specific Route Table.
@@ -4004,7 +4004,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable() {
+    public static Output<GetRouteTableResult> getRouteTable() {
         return getRouteTable(GetRouteTableArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4046,7 +4046,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
         return getRouteTable(args, InvokeOptions.Empty);
     }
     /**
@@ -4088,29 +4088,29 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables() {
+    public static Output<GetRouteTablesResult> getRouteTables() {
         return getRouteTables(GetRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args) {
+    public static Output<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args) {
         return getRouteTables(args, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
      * 
      */
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.SecurityGroup` provides details about a specific Security Group.
@@ -4153,7 +4153,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup() {
+    public static Output<GetSecurityGroupResult> getSecurityGroup() {
         return getSecurityGroup(GetSecurityGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4197,7 +4197,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args) {
+    public static Output<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args) {
         return getSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -4241,8 +4241,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get IDs and VPC membership of Security Groups that are created
@@ -4304,7 +4304,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups() {
+    public static Output<GetSecurityGroupsResult> getSecurityGroups() {
         return getSecurityGroups(GetSecurityGroupsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4367,7 +4367,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args) {
+    public static Output<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args) {
         return getSecurityGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -4430,8 +4430,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroups:getSecurityGroups", TypeShape.of(GetSecurityGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSecurityGroups:getSecurityGroups", TypeShape.of(GetSecurityGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides a way to check whether serial console access is enabled for your AWS account in the current AWS region.
@@ -4458,7 +4458,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess() {
+    public static Output<GetSerialConsoleAccessResult> getSerialConsoleAccess() {
         return getSerialConsoleAccess(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4486,7 +4486,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args) {
+    public static Output<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args) {
         return getSerialConsoleAccess(args, InvokeOptions.Empty);
     }
     /**
@@ -4514,8 +4514,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSerialConsoleAccess:getSerialConsoleAccess", TypeShape.of(GetSerialConsoleAccessResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSerialConsoleAccess:getSerialConsoleAccess", TypeShape.of(GetSerialConsoleAccessResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about most recent Spot Price for a given EC2 instance.
@@ -4549,7 +4549,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpotPriceResult> getSpotPrice() {
+    public static Output<GetSpotPriceResult> getSpotPrice() {
         return getSpotPrice(GetSpotPriceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4584,7 +4584,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args) {
+    public static Output<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args) {
         return getSpotPrice(args, InvokeOptions.Empty);
     }
     /**
@@ -4619,8 +4619,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSpotPrice:getSpotPrice", TypeShape.of(GetSpotPriceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSpotPrice:getSpotPrice", TypeShape.of(GetSpotPriceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Subnet` provides details about a specific VPC subnet.
@@ -4692,7 +4692,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet() {
+    public static Output<GetSubnetResult> getSubnet() {
         return getSubnet(GetSubnetArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4765,7 +4765,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args) {
         return getSubnet(args, InvokeOptions.Empty);
     }
     /**
@@ -4838,8 +4838,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
@@ -4849,7 +4849,7 @@ public final class Ec2Functions {
      * &gt; **NOTE:** The `aws.ec2.getSubnetIds` data source has been deprecated and will be removed in a future version. Use the `aws.ec2.getSubnets` data source instead.
      * 
      */
-    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args) {
+    public static Output<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args) {
         return getSubnetIds(args, InvokeOptions.Empty);
     }
     /**
@@ -4860,29 +4860,29 @@ public final class Ec2Functions {
      * &gt; **NOTE:** The `aws.ec2.getSubnetIds` data source has been deprecated and will be removed in a future version. Use the `aws.ec2.getSubnets` data source instead.
      * 
      */
-    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSubnetIds:getSubnetIds", TypeShape.of(GetSubnetIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSubnetIds:getSubnetIds", TypeShape.of(GetSubnetIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource can be useful for getting back a set of subnet IDs.
      * 
      */
-    public static CompletableFuture<GetSubnetsResult> getSubnets() {
+    public static Output<GetSubnetsResult> getSubnets() {
         return getSubnets(GetSubnetsArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a set of subnet IDs.
      * 
      */
-    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args) {
+    public static Output<GetSubnetsResult> getSubnets(GetSubnetsArgs args) {
         return getSubnets(args, InvokeOptions.Empty);
     }
     /**
      * This resource can be useful for getting back a set of subnet IDs.
      * 
      */
-    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getSubnets:getSubnets", TypeShape.of(GetSubnetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetsResult> getSubnets(GetSubnetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getSubnets:getSubnets", TypeShape.of(GetSubnetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information for multiple EC2 Transit Gateway Route Tables, such as their identifiers.
@@ -4912,7 +4912,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables() {
+    public static Output<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables() {
         return getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4943,7 +4943,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args) {
+    public static Output<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args) {
         return getTransitGatewayRouteTables(args, InvokeOptions.Empty);
     }
     /**
@@ -4974,8 +4974,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getTransitGatewayRouteTables:getTransitGatewayRouteTables", TypeShape.of(GetTransitGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getTransitGatewayRouteTables:getTransitGatewayRouteTables", TypeShape.of(GetTransitGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Vpc` provides details about a specific VPC.
@@ -4985,7 +4985,7 @@ public final class Ec2Functions {
      * VPC.
      * 
      */
-    public static CompletableFuture<GetVpcResult> getVpc() {
+    public static Output<GetVpcResult> getVpc() {
         return getVpc(GetVpcArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -4996,7 +4996,7 @@ public final class Ec2Functions {
      * VPC.
      * 
      */
-    public static CompletableFuture<GetVpcResult> getVpc(GetVpcArgs args) {
+    public static Output<GetVpcResult> getVpc(GetVpcArgs args) {
         return getVpc(args, InvokeOptions.Empty);
     }
     /**
@@ -5007,8 +5007,8 @@ public final class Ec2Functions {
      * VPC.
      * 
      */
-    public static CompletableFuture<GetVpcResult> getVpc(GetVpcArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpc:getVpc", TypeShape.of(GetVpcResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcResult> getVpc(GetVpcArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpc:getVpc", TypeShape.of(GetVpcResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about an EC2 DHCP Options configuration.
@@ -5068,7 +5068,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions() {
+    public static Output<GetVpcDhcpOptionsResult> getVpcDhcpOptions() {
         return getVpcDhcpOptions(GetVpcDhcpOptionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5129,7 +5129,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args) {
+    public static Output<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args) {
         return getVpcDhcpOptions(args, InvokeOptions.Empty);
     }
     /**
@@ -5190,8 +5190,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcDhcpOptions:getVpcDhcpOptions", TypeShape.of(GetVpcDhcpOptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcDhcpOptions:getVpcDhcpOptions", TypeShape.of(GetVpcDhcpOptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VPC Endpoint data source provides details about
@@ -5227,7 +5227,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint() {
+    public static Output<GetVpcEndpointResult> getVpcEndpoint() {
         return getVpcEndpoint(GetVpcEndpointArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5264,7 +5264,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args) {
+    public static Output<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args) {
         return getVpcEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -5301,8 +5301,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpoint:getVpcEndpoint", TypeShape.of(GetVpcEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcEndpoint:getVpcEndpoint", TypeShape.of(GetVpcEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VPC Endpoint Service data source details about a specific service that
@@ -5390,7 +5390,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService() {
+    public static Output<GetVpcEndpointServiceResult> getVpcEndpointService() {
         return getVpcEndpointService(GetVpcEndpointServiceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5479,7 +5479,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args) {
+    public static Output<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args) {
         return getVpcEndpointService(args, InvokeOptions.Empty);
     }
     /**
@@ -5568,8 +5568,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpointService:getVpcEndpointService", TypeShape.of(GetVpcEndpointServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcEndpointService:getVpcEndpointService", TypeShape.of(GetVpcEndpointServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.VpcIpamPool` provides details about an IPAM pool.
@@ -5619,7 +5619,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool() {
+    public static Output<GetVpcIamPoolResult> getVpcIamPool() {
         return getVpcIamPool(GetVpcIamPoolArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5670,7 +5670,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args) {
+    public static Output<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args) {
         return getVpcIamPool(args, InvokeOptions.Empty);
     }
     /**
@@ -5721,8 +5721,8 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcIamPool:getVpcIamPool", TypeShape.of(GetVpcIamPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcIamPool:getVpcIamPool", TypeShape.of(GetVpcIamPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VPC Peering Connection data source provides details about
@@ -5763,7 +5763,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection() {
+    public static Output<GetVpcPeeringConnectionResult> getVpcPeeringConnection() {
         return getVpcPeeringConnection(GetVpcPeeringConnectionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5805,7 +5805,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args) {
+    public static Output<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args) {
         return getVpcPeeringConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -5847,15 +5847,15 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcPeeringConnection:getVpcPeeringConnection", TypeShape.of(GetVpcPeeringConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcPeeringConnection:getVpcPeeringConnection", TypeShape.of(GetVpcPeeringConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get IDs of Amazon VPC peering connections
      * To get more details on each connection, use the data resource `aws.ec2.VpcPeeringConnection`
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections() {
+    public static Output<GetVpcPeeringConnectionsResult> getVpcPeeringConnections() {
         return getVpcPeeringConnections(GetVpcPeeringConnectionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5863,7 +5863,7 @@ public final class Ec2Functions {
      * To get more details on each connection, use the data resource `aws.ec2.VpcPeeringConnection`
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args) {
+    public static Output<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args) {
         return getVpcPeeringConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -5871,8 +5871,8 @@ public final class Ec2Functions {
      * To get more details on each connection, use the data resource `aws.ec2.VpcPeeringConnection`
      * 
      */
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcPeeringConnections:getVpcPeeringConnections", TypeShape.of(GetVpcPeeringConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcPeeringConnections:getVpcPeeringConnections", TypeShape.of(GetVpcPeeringConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource can be useful for getting back a list of VPC Ids for a region.
@@ -5880,7 +5880,7 @@ public final class Ec2Functions {
      * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of &#34;production&#34;.
      * 
      */
-    public static CompletableFuture<GetVpcsResult> getVpcs() {
+    public static Output<GetVpcsResult> getVpcs() {
         return getVpcs(GetVpcsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5889,7 +5889,7 @@ public final class Ec2Functions {
      * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of &#34;production&#34;.
      * 
      */
-    public static CompletableFuture<GetVpcsResult> getVpcs(GetVpcsArgs args) {
+    public static Output<GetVpcsResult> getVpcs(GetVpcsArgs args) {
         return getVpcs(args, InvokeOptions.Empty);
     }
     /**
@@ -5898,8 +5898,8 @@ public final class Ec2Functions {
      * The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of &#34;production&#34;.
      * 
      */
-    public static CompletableFuture<GetVpcsResult> getVpcs(GetVpcsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpcs:getVpcs", TypeShape.of(GetVpcsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcsResult> getVpcs(GetVpcsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpcs:getVpcs", TypeShape.of(GetVpcsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VPN Gateway data source provides details about
@@ -5933,7 +5933,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway() {
+    public static Output<GetVpnGatewayResult> getVpnGateway() {
         return getVpnGateway(GetVpnGatewayArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -5968,7 +5968,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
         return getVpnGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -6003,7 +6003,7 @@ public final class Ec2Functions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ec2/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

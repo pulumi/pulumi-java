@@ -12,10 +12,10 @@ import com.pulumi.aws.efs.outputs.GetAccessPointResult;
 import com.pulumi.aws.efs.outputs.GetAccessPointsResult;
 import com.pulumi.aws.efs.outputs.GetFileSystemResult;
 import com.pulumi.aws.efs.outputs.GetMountTargetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EfsFunctions {
     /**
@@ -45,7 +45,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
+    public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
         return getAccessPoint(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:efs/getAccessPoint:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:efs/getAccessPoint:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about multiple Elastic File System (EFS) Access Points.
@@ -105,7 +105,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args) {
+    public static Output<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args) {
         return getAccessPoints(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:efs/getAccessPoints:getAccessPoints", TypeShape.of(GetAccessPointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:efs/getAccessPoints:getAccessPoints", TypeShape.of(GetAccessPointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about an Elastic File System (EFS) File System.
@@ -171,7 +171,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFileSystemResult> getFileSystem() {
+    public static Output<GetFileSystemResult> getFileSystem() {
         return getFileSystem(GetFileSystemArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args) {
+    public static Output<GetFileSystemResult> getFileSystem(GetFileSystemArgs args) {
         return getFileSystem(args, InvokeOptions.Empty);
     }
     /**
@@ -243,8 +243,8 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:efs/getFileSystem:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFileSystemResult> getFileSystem(GetFileSystemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:efs/getFileSystem:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about an Elastic File System Mount Target (EFS).
@@ -275,7 +275,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMountTargetResult> getMountTarget() {
+    public static Output<GetMountTargetResult> getMountTarget() {
         return getMountTarget(GetMountTargetArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -307,7 +307,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args) {
+    public static Output<GetMountTargetResult> getMountTarget(GetMountTargetArgs args) {
         return getMountTarget(args, InvokeOptions.Empty);
     }
     /**
@@ -339,7 +339,7 @@ public final class EfsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:efs/getMountTarget:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMountTargetResult> getMountTarget(GetMountTargetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:efs/getMountTarget:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
     }
 }

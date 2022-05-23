@@ -4,11 +4,11 @@
 package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.GetImageRecipesFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetImageRecipesFilter> filters;
+    private Output</* @Nullable */ List<GetImageRecipesFilter>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetImageRecipesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetImageRecipesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-    private @Nullable String owner;
+    private Output</* @Nullable */ String> owner;
 
     /**
      * @return The owner of the image recipes. Valid values are `Self`, `Shared` and `Amazon`. Defaults to `Self`.
      * 
      */
-    public Optional<String> owner() {
-        return Optional.ofNullable(this.owner);
+    public Output</* @Nullable */ String> owner() {
+        return this.owner;
     }
 
     private GetImageRecipesArgs() {}
@@ -77,9 +77,19 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetImageRecipesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetImageRecipesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetImageRecipesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**
@@ -98,9 +108,19 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owner(@Nullable String owner) {
+        public Builder owner(Output</* @Nullable */ String> owner) {
             $.owner = owner;
             return this;
+        }
+
+        /**
+         * @param owner The owner of the image recipes. Valid values are `Self`, `Shared` and `Amazon`. Defaults to `Self`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owner(@Nullable String owner) {
+            return owner(Output.of(owner));
         }
 
         public GetImageRecipesArgs build() {

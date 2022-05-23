@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.secretsmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
     /**
      * @return Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
      * 
      */
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -34,14 +34,14 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionId")
-    private @Nullable String versionId;
+    private Output</* @Nullable */ String> versionId;
 
     /**
      * @return Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
      * 
      */
-    public Optional<String> versionId() {
-        return Optional.ofNullable(this.versionId);
+    public Output</* @Nullable */ String> versionId() {
+        return this.versionId;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionStage")
-    private @Nullable String versionStage;
+    private Output</* @Nullable */ String> versionStage;
 
     /**
      * @return Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
      * 
      */
-    public Optional<String> versionStage() {
-        return Optional.ofNullable(this.versionStage);
+    public Output</* @Nullable */ String> versionStage() {
+        return this.versionStage;
     }
 
     private GetSecretVersionArgs() {}
@@ -91,8 +91,29 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder secretId(String secretId) {
+        public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
+            return this;
+        }
+
+        /**
+         * @param secretId Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
+        }
+
+        /**
+         * @param versionId Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(Output</* @Nullable */ String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder versionId(@Nullable String versionId) {
-            $.versionId = versionId;
+            return versionId(Output.of(versionId));
+        }
+
+        /**
+         * @param versionStage Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionStage(Output</* @Nullable */ String> versionStage) {
+            $.versionStage = versionStage;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder versionStage(@Nullable String versionStage) {
-            $.versionStage = versionStage;
-            return this;
+            return versionStage(Output.of(versionStage));
         }
 
         public GetSecretVersionArgs build() {

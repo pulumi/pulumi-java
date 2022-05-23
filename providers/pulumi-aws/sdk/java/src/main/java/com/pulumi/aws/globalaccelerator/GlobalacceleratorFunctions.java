@@ -6,10 +6,10 @@ package com.pulumi.aws.globalaccelerator;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.globalaccelerator.inputs.GetAcceleratorArgs;
 import com.pulumi.aws.globalaccelerator.outputs.GetAcceleratorResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GlobalacceleratorFunctions {
     /**
@@ -43,7 +43,7 @@ public final class GlobalacceleratorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator() {
+    public static Output<GetAcceleratorResult> getAccelerator() {
         return getAccelerator(GetAcceleratorArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class GlobalacceleratorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
+    public static Output<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
         return getAccelerator(args, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class GlobalacceleratorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:globalaccelerator/getAccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:globalaccelerator/getAccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }
 }

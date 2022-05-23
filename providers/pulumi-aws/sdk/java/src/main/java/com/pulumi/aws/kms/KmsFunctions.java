@@ -16,10 +16,10 @@ import com.pulumi.aws.kms.outputs.GetKeyResult;
 import com.pulumi.aws.kms.outputs.GetPublicKeyResult;
 import com.pulumi.aws.kms.outputs.GetSecretResult;
 import com.pulumi.aws.kms.outputs.GetSecretsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KmsFunctions {
     /**
@@ -51,7 +51,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args) {
         return getAlias(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
@@ -127,7 +127,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCipherTextResult> getCipherText(GetCipherTextArgs args) {
+    public static Output<GetCipherTextResult> getCipherText(GetCipherTextArgs args) {
         return getCipherText(args, InvokeOptions.Empty);
     }
     /**
@@ -171,8 +171,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCipherTextResult> getCipherText(GetCipherTextArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getCipherText:getCipherText", TypeShape.of(GetCipherTextResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCipherTextResult> getCipherText(GetCipherTextArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getCipherText:getCipherText", TypeShape.of(GetCipherTextResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get detailed information about
@@ -216,7 +216,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -261,8 +261,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the public key about the specified KMS Key with flexible key id input. This can be useful to reference key alias without having to hard code the ARN as input.
@@ -303,7 +303,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args) {
+    public static Output<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args) {
         return getPublicKey(args, InvokeOptions.Empty);
     }
     /**
@@ -345,27 +345,27 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getPublicKey:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getPublicKey:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Decrypt multiple secrets from data encrypted with the AWS KMS service.
      * 
      */
-    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args) {
+    public static Output<GetSecretsResult> getSecrets(GetSecretsArgs args) {
         return getSecrets(args, InvokeOptions.Empty);
     }
     /**
      * Decrypt multiple secrets from data encrypted with the AWS KMS service.
      * 
      */
-    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:kms/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:kms/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

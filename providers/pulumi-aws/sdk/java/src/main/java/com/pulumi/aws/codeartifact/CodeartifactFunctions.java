@@ -8,10 +8,10 @@ import com.pulumi.aws.codeartifact.inputs.GetAuthorizationTokenArgs;
 import com.pulumi.aws.codeartifact.inputs.GetRepositoryEndpointArgs;
 import com.pulumi.aws.codeartifact.outputs.GetAuthorizationTokenResult;
 import com.pulumi.aws.codeartifact.outputs.GetRepositoryEndpointResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CodeartifactFunctions {
     /**
@@ -41,7 +41,7 @@ public final class CodeartifactFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
         return getAuthorizationToken(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class CodeartifactFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:codeartifact/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:codeartifact/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
@@ -103,7 +103,7 @@ public final class CodeartifactFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args) {
+    public static Output<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args) {
         return getRepositoryEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -135,7 +135,7 @@ public final class CodeartifactFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:codeartifact/getRepositoryEndpoint:getRepositoryEndpoint", TypeShape.of(GetRepositoryEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:codeartifact/getRepositoryEndpoint:getRepositoryEndpoint", TypeShape.of(GetRepositoryEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

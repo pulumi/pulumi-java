@@ -4,10 +4,10 @@
 package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.aws.autoscaling.inputs.GetAmiIdsFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAmiIdsFilter> filters;
+    private Output</* @Nullable */ List<GetAmiIdsFilter>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
      * 
      */
-    public Optional<List<GetAmiIdsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAmiIdsFilter>> filters() {
+        return this.filters;
     }
 
     private GetAmiIdsArgs() {}
@@ -60,9 +60,19 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetAmiIdsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         /**

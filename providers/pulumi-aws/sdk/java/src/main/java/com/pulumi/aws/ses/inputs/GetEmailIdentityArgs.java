@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ses.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEmailIdentityArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="email", required=true)
-    private String email;
+    private Output<String> email;
 
     /**
      * @return The email identity.
      * 
      */
-    public String email() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -57,9 +58,19 @@ public final class GetEmailIdentityArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder email(String email) {
+        public Builder email(Output<String> email) {
             $.email = email;
             return this;
+        }
+
+        /**
+         * @param email The email identity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
 
         public GetEmailIdentityArgs build() {

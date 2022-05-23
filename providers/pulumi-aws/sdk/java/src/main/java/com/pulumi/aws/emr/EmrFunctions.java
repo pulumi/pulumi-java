@@ -6,10 +6,10 @@ package com.pulumi.aws.emr;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.emr.inputs.GetReleaseLabelsArgs;
 import com.pulumi.aws.emr.outputs.GetReleaseLabelsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EmrFunctions {
     /**
@@ -42,7 +42,7 @@ public final class EmrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels() {
+    public static Output<GetReleaseLabelsResult> getReleaseLabels() {
         return getReleaseLabels(GetReleaseLabelsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class EmrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args) {
+    public static Output<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args) {
         return getReleaseLabels(args, InvokeOptions.Empty);
     }
     /**
@@ -108,7 +108,7 @@ public final class EmrFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:emr/getReleaseLabels:getReleaseLabels", TypeShape.of(GetReleaseLabelsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:emr/getReleaseLabels:getReleaseLabels", TypeShape.of(GetReleaseLabelsResult.class), args, Utilities.withVersion(options));
     }
 }

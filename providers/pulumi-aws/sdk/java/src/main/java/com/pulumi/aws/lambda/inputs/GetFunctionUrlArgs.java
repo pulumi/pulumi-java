@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return he name (or ARN) of the Lambda function.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -34,14 +34,14 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-    private @Nullable String qualifier;
+    private Output</* @Nullable */ String> qualifier;
 
     /**
      * @return The alias name or `&#34;$LATEST&#34;`.
      * 
      */
-    public Optional<String> qualifier() {
-        return Optional.ofNullable(this.qualifier);
+    public Output</* @Nullable */ String> qualifier() {
+        return this.qualifier;
     }
 
     private GetFunctionUrlArgs() {}
@@ -75,8 +75,29 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName he name (or ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param qualifier The alias name or `&#34;$LATEST&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder qualifier(Output</* @Nullable */ String> qualifier) {
+            $.qualifier = qualifier;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder qualifier(@Nullable String qualifier) {
-            $.qualifier = qualifier;
-            return this;
+            return qualifier(Output.of(qualifier));
         }
 
         public GetFunctionUrlArgs build() {

@@ -10,10 +10,10 @@ import com.pulumi.aws.lb.inputs.GetTargetGroupArgs;
 import com.pulumi.aws.lb.outputs.GetListenerResult;
 import com.pulumi.aws.lb.outputs.GetLoadBalancerResult;
 import com.pulumi.aws.lb.outputs.GetTargetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class LbFunctions {
     /**
@@ -58,7 +58,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener() {
+    public static Output<GetListenerResult> getListener() {
         return getListener(GetListenerArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+    public static Output<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
     /**
@@ -148,8 +148,8 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lb/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lb/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
@@ -188,7 +188,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer() {
+    public static Output<GetLoadBalancerResult> getLoadBalancer() {
         return getLoadBalancer(GetLoadBalancerArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -228,7 +228,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
         return getLoadBalancer(args, InvokeOptions.Empty);
     }
     /**
@@ -268,8 +268,8 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
@@ -308,7 +308,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup() {
+    public static Output<GetTargetGroupResult> getTargetGroup() {
         return getTargetGroup(GetTargetGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -348,7 +348,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
+    public static Output<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
         return getTargetGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -388,7 +388,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:lb/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:lb/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

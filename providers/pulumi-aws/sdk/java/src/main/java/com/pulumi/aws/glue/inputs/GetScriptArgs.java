@@ -5,11 +5,11 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.aws.glue.inputs.GetScriptDagEdge;
 import com.pulumi.aws.glue.inputs.GetScriptDagNode;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagEdges", required=true)
-    private List<GetScriptDagEdge> dagEdges;
+    private Output<List<GetScriptDagEdge>> dagEdges;
 
     /**
      * @return A list of the edges in the DAG. Defined below.
      * 
      */
-    public List<GetScriptDagEdge> dagEdges() {
+    public Output<List<GetScriptDagEdge>> dagEdges() {
         return this.dagEdges;
     }
 
@@ -37,13 +37,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagNodes", required=true)
-    private List<GetScriptDagNode> dagNodes;
+    private Output<List<GetScriptDagNode>> dagNodes;
 
     /**
      * @return A list of the nodes in the DAG. Defined below.
      * 
      */
-    public List<GetScriptDagNode> dagNodes() {
+    public Output<List<GetScriptDagNode>> dagNodes() {
         return this.dagNodes;
     }
 
@@ -52,14 +52,14 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="language")
-    private @Nullable String language;
+    private Output</* @Nullable */ String> language;
 
     /**
      * @return The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
      * 
      */
-    public Optional<String> language() {
-        return Optional.ofNullable(this.language);
+    public Output</* @Nullable */ String> language() {
+        return this.language;
     }
 
     private GetScriptArgs() {}
@@ -94,9 +94,19 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagEdges(List<GetScriptDagEdge> dagEdges) {
+        public Builder dagEdges(Output<List<GetScriptDagEdge>> dagEdges) {
             $.dagEdges = dagEdges;
             return this;
+        }
+
+        /**
+         * @param dagEdges A list of the edges in the DAG. Defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dagEdges(List<GetScriptDagEdge> dagEdges) {
+            return dagEdges(Output.of(dagEdges));
         }
 
         /**
@@ -115,9 +125,19 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
+        public Builder dagNodes(Output<List<GetScriptDagNode>> dagNodes) {
             $.dagNodes = dagNodes;
             return this;
+        }
+
+        /**
+         * @param dagNodes A list of the nodes in the DAG. Defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
+            return dagNodes(Output.of(dagNodes));
         }
 
         /**
@@ -136,9 +156,19 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder language(@Nullable String language) {
+        public Builder language(Output</* @Nullable */ String> language) {
             $.language = language;
             return this;
+        }
+
+        /**
+         * @param language The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder language(@Nullable String language) {
+            return language(Output.of(language));
         }
 
         public GetScriptArgs build() {

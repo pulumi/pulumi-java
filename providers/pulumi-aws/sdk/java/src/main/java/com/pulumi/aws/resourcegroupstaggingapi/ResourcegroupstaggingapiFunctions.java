@@ -6,10 +6,10 @@ package com.pulumi.aws.resourcegroupstaggingapi;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesArgs;
 import com.pulumi.aws.resourcegroupstaggingapi.outputs.GetResourcesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ResourcegroupstaggingapiFunctions {
     /**
@@ -87,7 +87,7 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources() {
+    public static Output<GetResourcesResult> getResources() {
         return getResources(GetResourcesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -165,7 +165,7 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args) {
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args) {
         return getResources(args, InvokeOptions.Empty);
     }
     /**
@@ -243,7 +243,7 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:resourcegroupstaggingapi/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:resourcegroupstaggingapi/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
     }
 }

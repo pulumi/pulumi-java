@@ -3,10 +3,10 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetOriginRequestPolicyArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The identifier for the origin request policy.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetOriginRequestPolicyArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Unique name to identify the origin request policy.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetOriginRequestPolicyArgs() {}
@@ -75,8 +75,29 @@ public final class GetOriginRequestPolicyArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The identifier for the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name Unique name to identify the origin request policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetOriginRequestPolicyArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetOriginRequestPolicyArgs build() {

@@ -187,6 +187,13 @@ func (ts TypeShape) Optional() TypeShape {
 	}
 }
 
+func (ts TypeShape) Output() TypeShape {
+	return TypeShape{
+		Type:       names.Output,
+		Parameters: []TypeShape{ts},
+	}
+}
+
 func (ts TypeShape) UnOptional() (bool, TypeShape) {
 	if ts.Type.Equal(names.Optional) {
 		return true, ts.Parameters[0]

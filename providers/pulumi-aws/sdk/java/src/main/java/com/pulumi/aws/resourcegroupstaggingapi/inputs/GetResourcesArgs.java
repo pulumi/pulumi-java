@@ -4,12 +4,12 @@
 package com.pulumi.aws.resourcegroupstaggingapi.inputs;
 
 import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesTagFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludeCompliantResources")
-    private @Nullable Boolean excludeCompliantResources;
+    private Output</* @Nullable */ Boolean> excludeCompliantResources;
 
     /**
      * @return Specifies whether to exclude resources that are compliant with the tag policy. You can use this parameter only if the `include_compliance_details` argument is also set to `true`.
      * 
      */
-    public Optional<Boolean> excludeCompliantResources() {
-        return Optional.ofNullable(this.excludeCompliantResources);
+    public Output</* @Nullable */ Boolean> excludeCompliantResources() {
+        return this.excludeCompliantResources;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeComplianceDetails")
-    private @Nullable Boolean includeComplianceDetails;
+    private Output</* @Nullable */ Boolean> includeComplianceDetails;
 
     /**
      * @return Specifies whether to include details regarding the compliance with the effective tag policy.
      * 
      */
-    public Optional<Boolean> includeComplianceDetails() {
-        return Optional.ofNullable(this.includeComplianceDetails);
+    public Output</* @Nullable */ Boolean> includeComplianceDetails() {
+        return this.includeComplianceDetails;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceArnLists")
-    private @Nullable List<String> resourceArnLists;
+    private Output</* @Nullable */ List<String>> resourceArnLists;
 
     /**
      * @return Specifies a list of ARNs of resources for which you want to retrieve tag data. Conflicts with `filter`.
      * 
      */
-    public Optional<List<String>> resourceArnLists() {
-        return Optional.ofNullable(this.resourceArnLists);
+    public Output</* @Nullable */ List<String>> resourceArnLists() {
+        return this.resourceArnLists;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypeFilters")
-    private @Nullable List<String> resourceTypeFilters;
+    private Output</* @Nullable */ List<String>> resourceTypeFilters;
 
     /**
      * @return The constraints on the resources that you want returned. The format of each resource type is `service:resourceType`. For example, specifying a resource type of `ec2` returns all Amazon EC2 resources (which includes EC2 instances). Specifying a resource type of `ec2:instance` returns only EC2 instances.
      * 
      */
-    public Optional<List<String>> resourceTypeFilters() {
-        return Optional.ofNullable(this.resourceTypeFilters);
+    public Output</* @Nullable */ List<String>> resourceTypeFilters() {
+        return this.resourceTypeFilters;
     }
 
     /**
@@ -82,14 +82,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagFilters")
-    private @Nullable List<GetResourcesTagFilter> tagFilters;
+    private Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters;
 
     /**
      * @return Specifies a list of Tag Filters (keys and values) to restrict the output to only those resources that have the specified tag and, if included, the specified value. See Tag Filter below. Conflicts with `resource_arn_list`.
      * 
      */
-    public Optional<List<GetResourcesTagFilter>> tagFilters() {
-        return Optional.ofNullable(this.tagFilters);
+    public Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters() {
+        return this.tagFilters;
     }
 
     private GetResourcesArgs() {}
@@ -126,8 +126,29 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder excludeCompliantResources(@Nullable Boolean excludeCompliantResources) {
+        public Builder excludeCompliantResources(Output</* @Nullable */ Boolean> excludeCompliantResources) {
             $.excludeCompliantResources = excludeCompliantResources;
+            return this;
+        }
+
+        /**
+         * @param excludeCompliantResources Specifies whether to exclude resources that are compliant with the tag policy. You can use this parameter only if the `include_compliance_details` argument is also set to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeCompliantResources(@Nullable Boolean excludeCompliantResources) {
+            return excludeCompliantResources(Output.of(excludeCompliantResources));
+        }
+
+        /**
+         * @param includeComplianceDetails Specifies whether to include details regarding the compliance with the effective tag policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeComplianceDetails(Output</* @Nullable */ Boolean> includeComplianceDetails) {
+            $.includeComplianceDetails = includeComplianceDetails;
             return this;
         }
 
@@ -138,7 +159,17 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder includeComplianceDetails(@Nullable Boolean includeComplianceDetails) {
-            $.includeComplianceDetails = includeComplianceDetails;
+            return includeComplianceDetails(Output.of(includeComplianceDetails));
+        }
+
+        /**
+         * @param resourceArnLists Specifies a list of ARNs of resources for which you want to retrieve tag data. Conflicts with `filter`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceArnLists(Output</* @Nullable */ List<String>> resourceArnLists) {
+            $.resourceArnLists = resourceArnLists;
             return this;
         }
 
@@ -149,8 +180,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceArnLists(@Nullable List<String> resourceArnLists) {
-            $.resourceArnLists = resourceArnLists;
-            return this;
+            return resourceArnLists(Output.of(resourceArnLists));
         }
 
         /**
@@ -169,9 +199,19 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+        public Builder resourceTypeFilters(Output</* @Nullable */ List<String>> resourceTypeFilters) {
             $.resourceTypeFilters = resourceTypeFilters;
             return this;
+        }
+
+        /**
+         * @param resourceTypeFilters The constraints on the resources that you want returned. The format of each resource type is `service:resourceType`. For example, specifying a resource type of `ec2` returns all Amazon EC2 resources (which includes EC2 instances). Specifying a resource type of `ec2:instance` returns only EC2 instances.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+            return resourceTypeFilters(Output.of(resourceTypeFilters));
         }
 
         /**
@@ -190,9 +230,19 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
+        public Builder tagFilters(Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters) {
             $.tagFilters = tagFilters;
             return this;
+        }
+
+        /**
+         * @param tagFilters Specifies a list of Tag Filters (keys and values) to restrict the output to only those resources that have the specified tag and, if included, the specified value. See Tag Filter below. Conflicts with `resource_arn_list`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
+            return tagFilters(Output.of(tagFilters));
         }
 
         /**

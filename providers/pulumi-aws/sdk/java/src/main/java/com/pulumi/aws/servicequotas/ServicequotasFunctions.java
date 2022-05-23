@@ -8,10 +8,10 @@ import com.pulumi.aws.servicequotas.inputs.GetServiceArgs;
 import com.pulumi.aws.servicequotas.inputs.GetServiceQuotaArgs;
 import com.pulumi.aws.servicequotas.outputs.GetServiceQuotaResult;
 import com.pulumi.aws.servicequotas.outputs.GetServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServicequotasFunctions {
     /**
@@ -43,7 +43,7 @@ public final class ServicequotasFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class ServicequotasFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicequotas/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicequotas/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a Service Quota.
@@ -113,7 +113,7 @@ public final class ServicequotasFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args) {
+    public static Output<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args) {
         return getServiceQuota(args, InvokeOptions.Empty);
     }
     /**
@@ -151,7 +151,7 @@ public final class ServicequotasFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:servicequotas/getServiceQuota:getServiceQuota", TypeShape.of(GetServiceQuotaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:servicequotas/getServiceQuota:getServiceQuota", TypeShape.of(GetServiceQuotaResult.class), args, Utilities.withVersion(options));
     }
 }

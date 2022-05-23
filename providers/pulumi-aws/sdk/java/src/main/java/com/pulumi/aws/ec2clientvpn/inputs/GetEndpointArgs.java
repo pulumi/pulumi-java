@@ -4,12 +4,12 @@
 package com.pulumi.aws.ec2clientvpn.inputs;
 
 import com.pulumi.aws.ec2clientvpn.inputs.GetEndpointFilter;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientVpnEndpointId")
-    private @Nullable String clientVpnEndpointId;
+    private Output</* @Nullable */ String> clientVpnEndpointId;
 
     /**
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Optional<String> clientVpnEndpointId() {
-        return Optional.ofNullable(this.clientVpnEndpointId);
+    public Output</* @Nullable */ String> clientVpnEndpointId() {
+        return this.clientVpnEndpointId;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetEndpointFilter> filters;
+    private Output</* @Nullable */ List<GetEndpointFilter>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    public Optional<List<GetEndpointFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetEndpointFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Map of tags, each pair of which must exactly match a pair on the desired endpoint.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetEndpointArgs() {}
@@ -94,8 +94,29 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Output</* @Nullable */ String> clientVpnEndpointId) {
             $.clientVpnEndpointId = clientVpnEndpointId;
+            return this;
+        }
+
+        /**
+         * @param clientVpnEndpointId The ID of the Client VPN endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
+            return clientVpnEndpointId(Output.of(clientVpnEndpointId));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(Output</* @Nullable */ List<GetEndpointFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
@@ -106,8 +127,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder filters(@Nullable List<GetEndpointFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         /**
@@ -126,9 +146,19 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        /**
+         * @param tags Map of tags, each pair of which must exactly match a pair on the desired endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetEndpointArgs build() {

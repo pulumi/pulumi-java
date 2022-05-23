@@ -12,10 +12,10 @@ import com.pulumi.aws.ecs.outputs.GetClusterResult;
 import com.pulumi.aws.ecs.outputs.GetContainerDefinitionResult;
 import com.pulumi.aws.ecs.outputs.GetServiceResult;
 import com.pulumi.aws.ecs.outputs.GetTaskDefinitionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EcsFunctions {
     /**
@@ -46,7 +46,7 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecs/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecs/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ECS container definition data source allows access to details of
@@ -109,7 +109,7 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args) {
+    public static Output<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args) {
         return getContainerDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecs/getContainerDefinition:getContainerDefinition", TypeShape.of(GetContainerDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecs/getContainerDefinition:getContainerDefinition", TypeShape.of(GetContainerDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ECS Service data source allows access to details of a specific
@@ -173,7 +173,7 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -205,8 +205,8 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecs/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecs/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ECS task definition data source allows access to details of
@@ -264,7 +264,7 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {
+    public static Output<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {
         return getTaskDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -323,7 +323,7 @@ public final class EcsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ecs/getTaskDefinition:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecs/getTaskDefinition:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -18,10 +18,10 @@ import com.pulumi.aws.apigateway.outputs.GetResourceResult;
 import com.pulumi.aws.apigateway.outputs.GetRestApiResult;
 import com.pulumi.aws.apigateway.outputs.GetSdkResult;
 import com.pulumi.aws.apigateway.outputs.GetVpcLinkResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApigatewayFunctions {
     /**
@@ -51,7 +51,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
+    public static Output<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
         return getDomainName(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getDomainName:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getDomainName:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -111,7 +111,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+    public static Output<GetExportResult> getExport(GetExportArgs args) {
         return getExport(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the name and value of a pre-existing API Key, for
@@ -172,7 +172,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -203,8 +203,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the id of a Resource in API Gateway.
@@ -239,7 +239,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+    public static Output<GetResourceResult> getResource(GetResourceArgs args) {
         return getResource(args, InvokeOptions.Empty);
     }
     /**
@@ -275,8 +275,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the id and root_resource_id of a REST API in
@@ -308,7 +308,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRestApiResult> getRestApi(GetRestApiArgs args) {
+    public static Output<GetRestApiResult> getRestApi(GetRestApiArgs args) {
         return getRestApi(args, InvokeOptions.Empty);
     }
     /**
@@ -341,8 +341,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRestApiResult> getRestApi(GetRestApiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getRestApi:getRestApi", TypeShape.of(GetRestApiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRestApiResult> getRestApi(GetRestApiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getRestApi:getRestApi", TypeShape.of(GetRestApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -377,7 +377,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSdkResult> getSdk(GetSdkArgs args) {
+    public static Output<GetSdkResult> getSdk(GetSdkArgs args) {
         return getSdk(args, InvokeOptions.Empty);
     }
     /**
@@ -413,8 +413,8 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSdkResult> getSdk(GetSdkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getSdk:getSdk", TypeShape.of(GetSdkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSdkResult> getSdk(GetSdkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getSdk:getSdk", TypeShape.of(GetSdkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the id of a VPC Link in
@@ -446,7 +446,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args) {
+    public static Output<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args) {
         return getVpcLink(args, InvokeOptions.Empty);
     }
     /**
@@ -479,7 +479,7 @@ public final class ApigatewayFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:apigateway/getVpcLink:getVpcLink", TypeShape.of(GetVpcLinkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:apigateway/getVpcLink:getVpcLink", TypeShape.of(GetVpcLinkResult.class), args, Utilities.withVersion(options));
     }
 }

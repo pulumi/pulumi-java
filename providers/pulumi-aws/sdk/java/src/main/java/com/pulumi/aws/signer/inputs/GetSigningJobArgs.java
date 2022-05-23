@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.signer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSigningJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobId", required=true)
-    private String jobId;
+    private Output<String> jobId;
 
     /**
      * @return The ID of the signing job on output.
      * 
      */
-    public String jobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSigningJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder jobId(String jobId) {
+        public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
+        }
+
+        /**
+         * @param jobId The ID of the signing job on output.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
 
         public GetSigningJobArgs build() {

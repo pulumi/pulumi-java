@@ -3,11 +3,11 @@
 
 package com.pulumi.aws.ssoadmin.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private Output</* @Nullable */ String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the permission set.
      * 
      */
-    public Optional<String> arn() {
-        return Optional.ofNullable(this.arn);
+    public Output</* @Nullable */ String> arn() {
+        return this.arn;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="instanceArn", required=true)
-    private String instanceArn;
+    private Output<String> instanceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
      * 
      */
-    public String instanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -50,14 +50,14 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the SSO Permission Set.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetPermissionSetArgs() {}
@@ -108,8 +108,29 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(Output</* @Nullable */ String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the permission set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param instanceArn The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceArn(Output<String> instanceArn) {
+            $.instanceArn = instanceArn;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder instanceArn(String instanceArn) {
-            $.instanceArn = instanceArn;
+            return instanceArn(Output.of(instanceArn));
+        }
+
+        /**
+         * @param name The name of the SSO Permission Set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetPermissionSetArgs build() {

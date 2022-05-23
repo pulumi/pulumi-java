@@ -6,10 +6,10 @@ package com.pulumi.aws.sns;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.sns.inputs.GetTopicArgs;
 import com.pulumi.aws.sns.outputs.GetTopicResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SnsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class SnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:sns/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:sns/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }
