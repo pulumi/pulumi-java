@@ -1,6 +1,7 @@
 package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
+import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.Tuples.Tuple2;
@@ -32,8 +33,9 @@ public class ConstructorConfusionTest {
                 .setOptions(new TestOptions(true))
                 .setMocks(new ConfusionMocks())
                 .setSpyGlobalInstance();
-        var resources = mock.testAsync(ConfusionStack::new).join();
-        assertThat(resources).isNotEmpty();
+        var result = mock.runTestAsync(ConfusionStack::init).join()
+                .throwOnError();
+        assertThat(result.resources).isNotEmpty();
     }
 
     @AfterEach
@@ -70,8 +72,8 @@ public class ConstructorConfusionTest {
         }
     }
 
-    public static class ConfusionStack extends Stack {
-        public ConfusionStack() {
+    public static class ConfusionStack  {
+        public static void init(Context context) {
             ResourcePackages.tryConstruct("test:index/MinifiedConfigMap", "0.0.1", "urn:pulumi:stack::project::test:index/MinifiedConfigMap::name");
         }
     }
