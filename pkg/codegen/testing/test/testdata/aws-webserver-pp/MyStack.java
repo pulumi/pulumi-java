@@ -1,9 +1,21 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.AwsFunctions;
+import com.pulumi.aws.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
@@ -33,7 +45,7 @@ public class App {
             .tags(Map.of("Name", "web-server-www"))
             .instanceType("t2.micro")
             .securityGroups(securityGroup.name())
-            .ami(ami.apply(getAmiResult -> getAmiResult.id()))
+            .ami(ami.applyValue(getAmiResult -> getAmiResult.id()))
             .userData("""
 #!/bin/bash
 echo "Hello, World!" > index.html

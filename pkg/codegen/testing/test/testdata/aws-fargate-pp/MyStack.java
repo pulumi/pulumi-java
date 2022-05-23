@@ -1,11 +1,41 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.inputs.GetVpcArgs;
+import com.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.ecs.Cluster;
+import com.pulumi.aws.iam.Role;
+import com.pulumi.aws.iam.RoleArgs;
+import com.pulumi.aws.iam.RolePolicyAttachment;
+import com.pulumi.aws.iam.RolePolicyAttachmentArgs;
+import com.pulumi.aws.elasticloadbalancingv2.LoadBalancer;
+import com.pulumi.aws.elasticloadbalancingv2.LoadBalancerArgs;
+import com.pulumi.aws.elasticloadbalancingv2.TargetGroup;
+import com.pulumi.aws.elasticloadbalancingv2.TargetGroupArgs;
+import com.pulumi.aws.elasticloadbalancingv2.Listener;
+import com.pulumi.aws.elasticloadbalancingv2.ListenerArgs;
+import com.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionArgs;
+import com.pulumi.aws.ecs.TaskDefinition;
+import com.pulumi.aws.ecs.TaskDefinitionArgs;
+import com.pulumi.aws.ecs.Service;
+import com.pulumi.aws.ecs.ServiceArgs;
+import com.pulumi.aws.ecs.inputs.ServiceNetworkConfigurationArgs;
+import com.pulumi.aws.ecs.inputs.ServiceLoadBalancerArgs;
 import static com.pulumi.codegen.internal.Serialization.*;
 import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
@@ -18,11 +48,11 @@ public class App {
             .build()));
 
         final var subnets = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .build()));
 
         var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()        
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .egress(SecurityGroupEgressArgs.builder()
                 .protocol("-1")
                 .fromPort(0)
@@ -60,7 +90,7 @@ public class App {
             .build());
 
         var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()        
-            .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+            .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
             .securityGroups(webSecurityGroup.id())
             .build());
 
@@ -68,7 +98,7 @@ public class App {
             .port(80)
             .protocol("HTTP")
             .targetType("ip")
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
+            .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
             .build());
 
         var webListener = new Listener("webListener", ListenerArgs.builder()        
@@ -106,7 +136,7 @@ public class App {
             .taskDefinition(appTask.arn())
             .networkConfiguration(ServiceNetworkConfigurationArgs.builder()
                 .assignPublicIp(true)
-                .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+                .subnets(subnets.applyValue(getSubnetIdsResult -> getSubnetIdsResult.ids()))
                 .securityGroups(webSecurityGroup.id())
                 .build())
             .loadBalancers(ServiceLoadBalancerArgs.builder()
