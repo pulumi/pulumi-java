@@ -95,18 +95,7 @@ jobs:
           name: go-binaries
           path: bin/
       - name: Publish Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        # Note 1: Ignore errors. Since this publishes on push and tag
-        # triggers, it is possible for the same commit (and
-        # -alpha-$commithash version) to be published twice, yiedling
-        # `Could not PUT Received 409 from server: Conflict`. Ignoring
-        # errors works around this. If the cause of the error is
-        # different, that is it is a real substantial error,
-        # downstream tests should fail to find the JAR in the repo.
-        continue-on-error: true
-        with:
-          arguments: publish
-          build-root-directory: sdk/java
+        run: make sdk.publish
     strategy:
       fail-fast: true
 
@@ -225,14 +214,7 @@ jobs:
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
           gradle-version: 7.4.1
       - name: Publish
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        # See Note 1.
-        continue-on-error: true
-        with:
-          arguments: publish
-          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
-          gradle-version: 7.4.1
-
+        run: make provider.${{ matrix.provider }}.publish
       # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
         id: newJar
@@ -334,14 +316,7 @@ jobs:
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
           gradle-version: 7.4.1
       - name: Publish
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        # See Note 1.
-        continue-on-error: true
-        with:
-          arguments: publish
-          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
-          gradle-version: 7.4.1
-
+        run: make provider.${{ matrix.provider }}.publish
       # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
         id: newJar
