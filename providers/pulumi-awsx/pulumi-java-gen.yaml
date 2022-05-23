@@ -1,8 +1,8 @@
 artifactID: awsx
-version: 1.0.0-beta.2
-schema: https://raw.githubusercontent.com/pulumi/pulumi-awsx/v1.0.0-beta.2/awsx/schema.json
 out: sdk/java
-versionFile: src/main/resources/com/pulumi/awsx/version.txt
-pluginFile: src/main/resources/com/pulumi/awsx/plugin.json
 overlays:
-  - "./build-templates"
+- ./build-templates
+pluginFile: src/main/resources/com/pulumi/awsx/plugin.json
+schema: https://raw.githubusercontent.com/pulumi/pulumi-awsx/v1.0.0-beta.5/awsx/schema.json
+version: 1.0.0-beta.5
+versionFile: src/main/resources/com/pulumi/awsx/version.txt
