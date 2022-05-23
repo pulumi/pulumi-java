@@ -3,6 +3,6 @@ out: sdk/java
 overlays:
 - ./build-templates
 pluginFile: src/main/resources/com/pulumi/awsx/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-awsx/v1.0.0-beta.3/awsx/schema.json
-version: 1.0.0-beta.3
+schema: https://raw.githubusercontent.com/pulumi/pulumi-awsx/v1.0.0-beta.4/awsx/schema.json
+version: 1.0.0-beta.4
 versionFile: src/main/resources/com/pulumi/awsx/version.txt
