@@ -3,28 +3,25 @@ package com.pulumi.core;
 import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.pulumi.core.internal.Objects.requireFalseState;
 import static com.pulumi.core.internal.Objects.requireNullState;
+import static java.util.Objects.requireNonNull;
 
 /**
  * Alias is a description of prior named used for a resource. It can be processed in the
  * context of a resource creation to determine what the full aliased URN would be.
  * <p>
- * Use {@link com.pulumi.core.internal.Urn} in the case where a prior URN is known and can just be specified in
- * full. Otherwise, provide some subset of the other properties in this type to generate an
- * appropriate {@code urn} from the pre-existing values of the @see {@link com.pulumi.resources.Resource}
- * with certain parts overridden.
- * <p>
- * The presence of a property indicates if its value should be used. If absent (i.e. "null"), then the value is not used.
+ * The presence of a property indicates if its value should be used.
+ * If absent (i.e. "null"), then the value is not used.
  * <p>
  * Note: because of the above, there needs to be special handling to indicate that the previous
  * "parent" of a @see {@link com.pulumi.resources.Resource} was "null".
- * Specifically, pass in: Alias.noParent()
+ * Specifically, pass in: {@link Alias#noParent()}
+ * @see <a href="https://www.pulumi.com/docs/intro/concepts/resources/options/aliases/">www.pulumi.com/docs/intro/concepts/resources/options/aliases/</a>
  */
 public class Alias {
 
@@ -43,11 +40,6 @@ public class Alias {
     @Nullable
     private final Output<String> parentUrn;
     private final boolean noParent;
-
-    @SuppressWarnings("unused")
-    private Alias() {
-        throw new UnsupportedOperationException("static class");
-    }
 
     private Alias(
             @Nullable String urn,
@@ -69,7 +61,13 @@ public class Alias {
         this.noParent = noParent;
     }
 
-    // No parent can indicate a root resource
+    /**
+     * Create an {@link Alias} with no parent.
+     * No parent can indicate a root resource.
+     * @return an {@link Alias} instance with no parent
+     * @see #builder()
+     * @see #withUrn(String)
+     */
     public static Alias noParent() {
         return new Alias(
                 null, // TODO what about all those values???
@@ -83,9 +81,23 @@ public class Alias {
         );
     }
 
+    /**
+     * Create an {@link Alias} for a given URN.
+     *
+     * @param urn the URN to use.
+     * @return an {@link Alias} instance with the given {@code urn}
+     * @see Alias#noParent()
+     * @see <a href="https://www.pulumi.com/docs/intro/concepts/resources/names/#urns">www.pulumi.com/docs/intro/concepts/resources/names/#urns</a>
+     */
+    /* Internal documentation:
+     * Use {@link com.pulumi.core.internal.Urn} in the case where a prior URN is known and can just be specified in
+     * full. Otherwise, provide some subset of the other properties in this type to generate an
+     * appropriate {@code urn} from the pre-existing values of the @see {@link com.pulumi.resources.Resource}
+     * with certain parts overridden.
+     */
     public static Alias withUrn(String urn) {
         return new Alias(
-                Objects.requireNonNull(urn),
+                requireNonNull(urn),
                 null,
                 null,
                 null,
@@ -96,10 +108,18 @@ public class Alias {
         );
     }
 
+    /**
+     * @return an {@link Alias} {@link Builder}
+     * @see #withUrn(String)
+     * @see #noParent()
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * The {@link Alias} {@link Builder}
+     */
     public static final class Builder {
         @Nullable
         private Output<String> name;
