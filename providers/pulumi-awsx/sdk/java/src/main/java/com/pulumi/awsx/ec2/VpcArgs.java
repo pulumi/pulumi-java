@@ -5,6 +5,7 @@ package com.pulumi.awsx.ec2;
 
 import com.pulumi.awsx.ec2.inputs.NatGatewayConfigurationArgs;
 import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+import com.pulumi.awsx.ec2.inputs.VpcEndpointSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -297,6 +298,21 @@ public final class VpcArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * A list of VPC Endpoints specs to be deployed as part of the VPC
+     * 
+     */
+    @Import(name="vpcEndpointSpecs")
+    private @Nullable List<VpcEndpointSpecArgs> vpcEndpointSpecs;
+
+    /**
+     * @return A list of VPC Endpoints specs to be deployed as part of the VPC
+     * 
+     */
+    public Optional<List<VpcEndpointSpecArgs>> vpcEndpointSpecs() {
+        return Optional.ofNullable(this.vpcEndpointSpecs);
+    }
+
     private VpcArgs() {}
 
     private VpcArgs(VpcArgs $) {
@@ -318,6 +334,7 @@ public final class VpcArgs extends com.pulumi.resources.ResourceArgs {
         this.numberOfAvailabilityZones = $.numberOfAvailabilityZones;
         this.subnetSpecs = $.subnetSpecs;
         this.tags = $.tags;
+        this.vpcEndpointSpecs = $.vpcEndpointSpecs;
     }
 
     public static Builder builder() {
@@ -690,6 +707,27 @@ public final class VpcArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcEndpointSpecs A list of VPC Endpoints specs to be deployed as part of the VPC
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcEndpointSpecs(@Nullable List<VpcEndpointSpecArgs> vpcEndpointSpecs) {
+            $.vpcEndpointSpecs = vpcEndpointSpecs;
+            return this;
+        }
+
+        /**
+         * @param vpcEndpointSpecs A list of VPC Endpoints specs to be deployed as part of the VPC
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcEndpointSpecs(VpcEndpointSpecArgs... vpcEndpointSpecs) {
+            return vpcEndpointSpecs(List.of(vpcEndpointSpecs));
         }
 
         public VpcArgs build() {

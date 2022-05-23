@@ -10,6 +10,7 @@ import com.pulumi.aws.ec2.Route;
 import com.pulumi.aws.ec2.RouteTable;
 import com.pulumi.aws.ec2.RouteTableAssociation;
 import com.pulumi.aws.ec2.Subnet;
+import com.pulumi.aws.ec2.VpcEndpoint;
 import com.pulumi.awsx.Utilities;
 import com.pulumi.awsx.ec2.VpcArgs;
 import com.pulumi.core.Output;
@@ -151,6 +152,20 @@ public class Vpc extends com.pulumi.resources.ComponentResource {
      */
     public Output<com.pulumi.aws.ec2.Vpc> vpc() {
         return this.vpc;
+    }
+    /**
+     * The VPC Endpoints that are enabled
+     * 
+     */
+    @Export(name="vpcEndpoints", type=List.class, parameters={VpcEndpoint.class})
+    private Output<List<VpcEndpoint>> vpcEndpoints;
+
+    /**
+     * @return The VPC Endpoints that are enabled
+     * 
+     */
+    public Output<List<VpcEndpoint>> vpcEndpoints() {
+        return this.vpcEndpoints;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
