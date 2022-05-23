@@ -13,9 +13,9 @@ import com.pulumi.asset.FileAsset;
 import com.pulumi.asset.RemoteArchive;
 import com.pulumi.asset.RemoteAsset;
 import com.pulumi.asset.StringAsset;
-import com.pulumi.core.Urn;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.Urn;
 import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.Resource;
 

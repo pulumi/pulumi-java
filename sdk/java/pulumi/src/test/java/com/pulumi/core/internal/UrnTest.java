@@ -1,6 +1,6 @@
-package com.pulumi.core;
+package com.pulumi.core.internal;
 
-import com.pulumi.resources.CustomTimeouts;
+import com.pulumi.core.Output;
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
