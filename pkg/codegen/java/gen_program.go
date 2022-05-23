@@ -252,6 +252,7 @@ func ignoreModule(module string) bool {
 
 // Removes dashes and replaces slash with underscore
 func sanitizeImport(name string) string {
+	// TODO to be revised when https://github.com/pulumi/pulumi-java/issues/381 is resolved
 	// e.g. azure-native becomes azurenative
 	withoutDash := strings.ReplaceAll(name, "-", "")
 	// e.g. kubernetes.core/v1 becomes kubernetes.core_v1
