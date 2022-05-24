@@ -3,11 +3,17 @@ package com.pulumi.deployment.internal;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.Log;
+import com.pulumi.context.internal.ConfigContextInternal;
+import com.pulumi.context.internal.ContextInternal;
+import com.pulumi.context.internal.LoggingContextInternal;
+import com.pulumi.context.internal.OutputContextInternal;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MockDeployment;
+import com.pulumi.core.internal.OutputFactory;
+import com.pulumi.deployment.EmptyMocks;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.MockRunner;
@@ -36,6 +42,7 @@ public class DeploymentTests {
         throw new UnsupportedOperationException("static class");
     }
 
+    // TODO: should be possible to merge this with MockDeployment
     public static final class DeploymentMock {
         public final TestOptions options;
         public final Runner runner;
@@ -97,10 +104,22 @@ public class DeploymentTests {
                     .map(s -> Internal.from(s).getOutputs())
                     .map(os -> Internal.of(os).getDataAsync().join().getValueNullable())
                     .orElseThrow(() -> new IllegalStateException("Unexpected lack of Stack"));
-            var context = new TestContext();
+
+            Function<String, Config> configFactory = (name) -> new Config(this.config, name);
+            var configContext = new ConfigContextInternal(this.options.getProjectName(), configFactory);
+            var loggingContext = new LoggingContextInternal(this.log);
+            var outputFactory = new OutputFactory(this.runner);
+            var outputsContext = new OutputContextInternal(outputFactory);
+            var exports = Map.<String, Output<?>>of();
+
+            var context = new ContextInternal(
+                    this.options.getProjectName(),
+                    this.options.getStackName(),
+                    loggingContext, configContext, outputsContext, exports
+            );
             return this.runner.runAsyncFuture(() -> {
                         stackCallback.accept(context);
-                        return CompletableFuture.completedFuture(context.getStackOutputs());
+                        return CompletableFuture.completedFuture(context.exports());
                     })
                     .thenApply(exitCode -> new TestResult(
                             exitCode,
@@ -177,13 +196,13 @@ public class DeploymentTests {
         @Nullable
         private Runner runner;
         @Nullable
-        private Monitor monitor;
+        private MockMonitor monitor;
         @Nullable
         private DeploymentImpl.Config config;
         @Nullable
         private DeploymentImpl.DeploymentState state;
         @Nullable
-        private Engine engine;
+        private MockEngine engine;
         @Nullable
         private EngineLogger logger;
         @Nullable
@@ -210,18 +229,6 @@ public class DeploymentTests {
         public DeploymentMockBuilder setRunner(Runner runner) {
             requireNonNull(runner);
             this.runner = runner;
-            return this;
-        }
-
-        public DeploymentMockBuilder setEngine(Engine engine) {
-            requireNonNull(engine);
-            this.engine = engine;
-            return this;
-        }
-
-        public DeploymentMockBuilder setMonitor(Monitor monitor) {
-            requireNonNull(monitor);
-            this.monitor = monitor;
             return this;
         }
 
@@ -293,7 +300,7 @@ public class DeploymentTests {
                 this.engine = new MockEngine();
             }
             if (this.mocks == null) {
-                throw new IllegalArgumentException("mocks are required");
+                this.mocks = new EmptyMocks();
             }
             if (this.monitor == null) {
                 this.monitor = new MockMonitor(this.mocks, this.log);
@@ -318,11 +325,13 @@ public class DeploymentTests {
                 this.deploymentFactory = DeploymentImpl::new;
             }
             var deployment = deploymentFactory.apply(this.state);
+            // FIXME: this is needed because we create runner inside DeploymentState currently
+            this.runner = deployment.getRunner();
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
             return new DeploymentMock(
-                    options, deployment.getRunner(), engine, monitor, deployment,
-                    config, state, standardLogger, logger, log
+                    this.options, this.runner, this.engine, this.monitor, deployment,
+                    this.config, this.state, this.standardLogger, this.logger, this.log
             );
         }
     }
