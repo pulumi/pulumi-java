@@ -26,10 +26,10 @@ import com.pulumi.azurenative.containerservice.outputs.ListManagedClusterAccessP
 import com.pulumi.azurenative.containerservice.outputs.ListManagedClusterAdminCredentialsResult;
 import com.pulumi.azurenative.containerservice.outputs.ListManagedClusterMonitoringUserCredentialsResult;
 import com.pulumi.azurenative.containerservice.outputs.ListManagedClusterUserCredentialsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ContainerserviceFunctions {
     /**
@@ -37,7 +37,7 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
+    public static Output<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
         return getAgentPool(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * maintenance configuration.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args) {
+    public static Output<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args) {
         return getMaintenanceConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -61,15 +61,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Managed cluster.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args) {
+    public static Output<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args) {
         return getManagedCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -77,15 +77,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A managed cluster snapshot resource.
      * API Version: 2022-02-02-preview.
      * 
      */
-    public static CompletableFuture<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args) {
+    public static Output<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args) {
         return getManagedClusterSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -93,15 +93,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2022-02-02-preview.
      * 
      */
-    public static CompletableFuture<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getManagedClusterSnapshot", TypeShape.of(GetManagedClusterSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedClusterSnapshotResult> getManagedClusterSnapshot(GetManagedClusterSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getManagedClusterSnapshot", TypeShape.of(GetManagedClusterSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OpenShift Managed cluster.
      * API Version: 2019-04-30.
      * 
      */
-    public static CompletableFuture<GetOpenShiftManagedClusterResult> getOpenShiftManagedCluster(GetOpenShiftManagedClusterArgs args) {
+    public static Output<GetOpenShiftManagedClusterResult> getOpenShiftManagedCluster(GetOpenShiftManagedClusterArgs args) {
         return getOpenShiftManagedCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -109,15 +109,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2019-04-30.
      * 
      */
-    public static CompletableFuture<GetOpenShiftManagedClusterResult> getOpenShiftManagedCluster(GetOpenShiftManagedClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getOpenShiftManagedCluster", TypeShape.of(GetOpenShiftManagedClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOpenShiftManagedClusterResult> getOpenShiftManagedCluster(GetOpenShiftManagedClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getOpenShiftManagedCluster", TypeShape.of(GetOpenShiftManagedClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A private endpoint connection
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -125,15 +125,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A node pool snapshot resource.
      * API Version: 2021-08-01.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -141,15 +141,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-08-01.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Managed cluster Access Profile.
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterAccessProfileResult> listManagedClusterAccessProfile(ListManagedClusterAccessProfileArgs args) {
+    public static Output<ListManagedClusterAccessProfileResult> listManagedClusterAccessProfile(ListManagedClusterAccessProfileArgs args) {
         return listManagedClusterAccessProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -157,15 +157,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterAccessProfileResult> listManagedClusterAccessProfile(ListManagedClusterAccessProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterAccessProfile", TypeShape.of(ListManagedClusterAccessProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<ListManagedClusterAccessProfileResult> listManagedClusterAccessProfile(ListManagedClusterAccessProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:listManagedClusterAccessProfile", TypeShape.of(ListManagedClusterAccessProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of credential result response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterAdminCredentialsResult> listManagedClusterAdminCredentials(ListManagedClusterAdminCredentialsArgs args) {
+    public static Output<ListManagedClusterAdminCredentialsResult> listManagedClusterAdminCredentials(ListManagedClusterAdminCredentialsArgs args) {
         return listManagedClusterAdminCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -173,15 +173,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterAdminCredentialsResult> listManagedClusterAdminCredentials(ListManagedClusterAdminCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterAdminCredentials", TypeShape.of(ListManagedClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListManagedClusterAdminCredentialsResult> listManagedClusterAdminCredentials(ListManagedClusterAdminCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:listManagedClusterAdminCredentials", TypeShape.of(ListManagedClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of credential result response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterMonitoringUserCredentialsResult> listManagedClusterMonitoringUserCredentials(ListManagedClusterMonitoringUserCredentialsArgs args) {
+    public static Output<ListManagedClusterMonitoringUserCredentialsResult> listManagedClusterMonitoringUserCredentials(ListManagedClusterMonitoringUserCredentialsArgs args) {
         return listManagedClusterMonitoringUserCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -189,15 +189,15 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterMonitoringUserCredentialsResult> listManagedClusterMonitoringUserCredentials(ListManagedClusterMonitoringUserCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterMonitoringUserCredentials", TypeShape.of(ListManagedClusterMonitoringUserCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListManagedClusterMonitoringUserCredentialsResult> listManagedClusterMonitoringUserCredentials(ListManagedClusterMonitoringUserCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:listManagedClusterMonitoringUserCredentials", TypeShape.of(ListManagedClusterMonitoringUserCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of credential result response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterUserCredentialsResult> listManagedClusterUserCredentials(ListManagedClusterUserCredentialsArgs args) {
+    public static Output<ListManagedClusterUserCredentialsResult> listManagedClusterUserCredentials(ListManagedClusterUserCredentialsArgs args) {
         return listManagedClusterUserCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -205,7 +205,7 @@ public final class ContainerserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListManagedClusterUserCredentialsResult> listManagedClusterUserCredentials(ListManagedClusterUserCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterUserCredentials", TypeShape.of(ListManagedClusterUserCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListManagedClusterUserCredentialsResult> listManagedClusterUserCredentials(ListManagedClusterUserCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerservice:listManagedClusterUserCredentials", TypeShape.of(ListManagedClusterUserCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

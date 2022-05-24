@@ -12,10 +12,10 @@ import com.pulumi.azure.batch.outputs.GetAccountResult;
 import com.pulumi.azure.batch.outputs.GetApplicationResult;
 import com.pulumi.azure.batch.outputs.GetCertificateResult;
 import com.pulumi.azure.batch.outputs.GetPoolResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BatchFunctions {
     /**
@@ -47,7 +47,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -79,8 +79,8 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:batch/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:batch/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Batch Application instance.
@@ -112,7 +112,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -145,8 +145,8 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:batch/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:batch/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing certificate in a Batch Account.
@@ -178,7 +178,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -211,8 +211,8 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:batch/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:batch/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Batch pool
@@ -243,7 +243,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
+    public static Output<GetPoolResult> getPool(GetPoolArgs args) {
         return getPool(args, InvokeOptions.Empty);
     }
     /**
@@ -275,7 +275,7 @@ public final class BatchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:batch/getPool:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:batch/getPool:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }
 }

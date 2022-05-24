@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="documentationVersion", required=true)
-    private String documentationVersion;
+    private Output<String> documentationVersion;
 
     /**
      * @return The version identifier of the API documentation snapshot.
      * 
      */
-    public String documentationVersion() {
+    public Output<String> documentationVersion() {
         return this.documentationVersion;
     }
 
@@ -32,13 +33,13 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The identifier of the API.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder documentationVersion(String documentationVersion) {
+        public Builder documentationVersion(Output<String> documentationVersion) {
             $.documentationVersion = documentationVersion;
+            return this;
+        }
+
+        /**
+         * @param documentationVersion The version identifier of the API documentation snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder documentationVersion(String documentationVersion) {
+            return documentationVersion(Output.of(documentationVersion));
+        }
+
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(Output<String> restApiId) {
+            $.restApiId = restApiId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDocumentationVersionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder restApiId(String restApiId) {
-            $.restApiId = restApiId;
-            return this;
+            return restApiId(Output.of(restApiId));
         }
 
         public GetDocumentationVersionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserAssessmentComparisonArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="comparisonUserAssessmentId", required=true)
-    private String comparisonUserAssessmentId;
+    private Output<String> comparisonUserAssessmentId;
 
     /**
      * @return The OCID of the baseline user assessment.
      * 
      */
-    public String comparisonUserAssessmentId() {
+    public Output<String> comparisonUserAssessmentId() {
         return this.comparisonUserAssessmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetUserAssessmentComparisonArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="userAssessmentId", required=true)
-    private String userAssessmentId;
+    private Output<String> userAssessmentId;
 
     /**
      * @return The OCID of the user assessment.
      * 
      */
-    public String userAssessmentId() {
+    public Output<String> userAssessmentId() {
         return this.userAssessmentId;
     }
 
@@ -73,8 +74,29 @@ public final class GetUserAssessmentComparisonArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder comparisonUserAssessmentId(String comparisonUserAssessmentId) {
+        public Builder comparisonUserAssessmentId(Output<String> comparisonUserAssessmentId) {
             $.comparisonUserAssessmentId = comparisonUserAssessmentId;
+            return this;
+        }
+
+        /**
+         * @param comparisonUserAssessmentId The OCID of the baseline user assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder comparisonUserAssessmentId(String comparisonUserAssessmentId) {
+            return comparisonUserAssessmentId(Output.of(comparisonUserAssessmentId));
+        }
+
+        /**
+         * @param userAssessmentId The OCID of the user assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userAssessmentId(Output<String> userAssessmentId) {
+            $.userAssessmentId = userAssessmentId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetUserAssessmentComparisonArgs extends com.pulumi.resources.
          * 
          */
         public Builder userAssessmentId(String userAssessmentId) {
-            $.userAssessmentId = userAssessmentId;
-            return this;
+            return userAssessmentId(Output.of(userAssessmentId));
         }
 
         public GetUserAssessmentComparisonArgs build() {

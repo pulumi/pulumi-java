@@ -58,10 +58,10 @@ import com.pulumi.azurenative.documentdb.outputs.GetTableResourceTableResult;
 import com.pulumi.azurenative.documentdb.outputs.ListDatabaseAccountConnectionStringsResult;
 import com.pulumi.azurenative.documentdb.outputs.ListDatabaseAccountKeysResult;
 import com.pulumi.azurenative.documentdb.outputs.ListNotebookWorkspaceConnectionInfoResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DocumentdbFunctions {
     /**
@@ -69,7 +69,7 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args) {
+    public static Output<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args) {
         return getCassandraCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -77,15 +77,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraCluster", TypeShape.of(GetCassandraClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getCassandraCluster", TypeShape.of(GetCassandraClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A managed Cassandra data center.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args) {
+    public static Output<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args) {
         return getCassandraDataCenter(args, InvokeOptions.Empty);
     }
     /**
@@ -93,15 +93,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraDataCenter", TypeShape.of(GetCassandraDataCenterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getCassandraDataCenter", TypeShape.of(GetCassandraDataCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Cassandra keyspace.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args) {
+    public static Output<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args) {
         return getCassandraResourceCassandraKeyspace(args, InvokeOptions.Empty);
     }
     /**
@@ -109,15 +109,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraKeyspace", TypeShape.of(GetCassandraResourceCassandraKeyspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getCassandraResourceCassandraKeyspace", TypeShape.of(GetCassandraResourceCassandraKeyspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Cassandra table.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args) {
+    public static Output<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args) {
         return getCassandraResourceCassandraTable(args, InvokeOptions.Empty);
     }
     /**
@@ -125,15 +125,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraTable", TypeShape.of(GetCassandraResourceCassandraTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getCassandraResourceCassandraTable", TypeShape.of(GetCassandraResourceCassandraTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Cassandra view.
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args) {
+    public static Output<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args) {
         return getCassandraResourceCassandraView(args, InvokeOptions.Empty);
     }
     /**
@@ -141,15 +141,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraView", TypeShape.of(GetCassandraResourceCassandraViewResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getCassandraResourceCassandraView", TypeShape.of(GetCassandraResourceCassandraViewResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB database account.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args) {
+    public static Output<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args) {
         return getDatabaseAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -157,15 +157,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getDatabaseAccount", TypeShape.of(GetDatabaseAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getDatabaseAccount", TypeShape.of(GetDatabaseAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Graph resource.
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args) {
+    public static Output<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args) {
         return getGraphResourceGraph(args, InvokeOptions.Empty);
     }
     /**
@@ -173,15 +173,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGraphResourceGraph", TypeShape.of(GetGraphResourceGraphResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getGraphResourceGraph", TypeShape.of(GetGraphResourceGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Gremlin database.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args) {
+    public static Output<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args) {
         return getGremlinResourceGremlinDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -189,15 +189,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinDatabase", TypeShape.of(GetGremlinResourceGremlinDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getGremlinResourceGremlinDatabase", TypeShape.of(GetGremlinResourceGremlinDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Gremlin graph.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args) {
+    public static Output<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args) {
         return getGremlinResourceGremlinGraph(args, InvokeOptions.Empty);
     }
     /**
@@ -205,15 +205,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinGraph", TypeShape.of(GetGremlinResourceGremlinGraphResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getGremlinResourceGremlinGraph", TypeShape.of(GetGremlinResourceGremlinGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB MongoDB collection.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args) {
+    public static Output<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args) {
         return getMongoDBResourceMongoDBCollection(args, InvokeOptions.Empty);
     }
     /**
@@ -221,15 +221,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoDBCollection", TypeShape.of(GetMongoDBResourceMongoDBCollectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getMongoDBResourceMongoDBCollection", TypeShape.of(GetMongoDBResourceMongoDBCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB MongoDB database.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args) {
+    public static Output<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args) {
         return getMongoDBResourceMongoDBDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -237,15 +237,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoDBDatabase", TypeShape.of(GetMongoDBResourceMongoDBDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getMongoDBResourceMongoDBDatabase", TypeShape.of(GetMongoDBResourceMongoDBDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Mongo Role Definition.
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args) {
+    public static Output<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args) {
         return getMongoDBResourceMongoRoleDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -253,15 +253,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoRoleDefinition", TypeShape.of(GetMongoDBResourceMongoRoleDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getMongoDBResourceMongoRoleDefinition", TypeShape.of(GetMongoDBResourceMongoRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB User Definition
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args) {
+    public static Output<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args) {
         return getMongoDBResourceMongoUserDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -269,15 +269,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoUserDefinition", TypeShape.of(GetMongoDBResourceMongoUserDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getMongoDBResourceMongoUserDefinition", TypeShape.of(GetMongoDBResourceMongoUserDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A notebook workspace resource
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args) {
+    public static Output<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args) {
         return getNotebookWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -285,15 +285,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getNotebookWorkspace", TypeShape.of(GetNotebookWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getNotebookWorkspace", TypeShape.of(GetNotebookWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A private endpoint connection
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -301,15 +301,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Properties for the database account.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -317,15 +317,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB container.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args) {
+    public static Output<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args) {
         return getSqlResourceSqlContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -333,15 +333,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlContainer", TypeShape.of(GetSqlResourceSqlContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlContainer", TypeShape.of(GetSqlResourceSqlContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB SQL database.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args) {
+    public static Output<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args) {
         return getSqlResourceSqlDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -349,15 +349,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlDatabase", TypeShape.of(GetSqlResourceSqlDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlDatabase", TypeShape.of(GetSqlResourceSqlDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Role Assignment
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args) {
+    public static Output<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args) {
         return getSqlResourceSqlRoleAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -365,15 +365,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleAssignment", TypeShape.of(GetSqlResourceSqlRoleAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlRoleAssignment", TypeShape.of(GetSqlResourceSqlRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB SQL Role Definition.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args) {
+    public static Output<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args) {
         return getSqlResourceSqlRoleDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -381,15 +381,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleDefinition", TypeShape.of(GetSqlResourceSqlRoleDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlRoleDefinition", TypeShape.of(GetSqlResourceSqlRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB storedProcedure.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args) {
+    public static Output<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args) {
         return getSqlResourceSqlStoredProcedure(args, InvokeOptions.Empty);
     }
     /**
@@ -397,15 +397,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlStoredProcedure", TypeShape.of(GetSqlResourceSqlStoredProcedureResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlStoredProcedure", TypeShape.of(GetSqlResourceSqlStoredProcedureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB trigger.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args) {
+    public static Output<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args) {
         return getSqlResourceSqlTrigger(args, InvokeOptions.Empty);
     }
     /**
@@ -413,15 +413,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlTrigger", TypeShape.of(GetSqlResourceSqlTriggerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlTrigger", TypeShape.of(GetSqlResourceSqlTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB userDefinedFunction.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args) {
+    public static Output<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args) {
         return getSqlResourceSqlUserDefinedFunction(args, InvokeOptions.Empty);
     }
     /**
@@ -429,15 +429,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlUserDefinedFunction", TypeShape.of(GetSqlResourceSqlUserDefinedFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getSqlResourceSqlUserDefinedFunction", TypeShape.of(GetSqlResourceSqlUserDefinedFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure Cosmos DB Table.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args) {
+    public static Output<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args) {
         return getTableResourceTable(args, InvokeOptions.Empty);
     }
     /**
@@ -445,15 +445,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:getTableResourceTable", TypeShape.of(GetTableResourceTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:getTableResourceTable", TypeShape.of(GetTableResourceTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The connection strings for the given database account.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args) {
+    public static Output<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args) {
         return listDatabaseAccountConnectionStrings(args, InvokeOptions.Empty);
     }
     /**
@@ -461,15 +461,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountConnectionStrings", TypeShape.of(ListDatabaseAccountConnectionStringsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:listDatabaseAccountConnectionStrings", TypeShape.of(ListDatabaseAccountConnectionStringsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The access keys for the given database account.
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args) {
+    public static Output<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args) {
         return listDatabaseAccountKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -477,15 +477,15 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountKeys", TypeShape.of(ListDatabaseAccountKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:listDatabaseAccountKeys", TypeShape.of(ListDatabaseAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The connection info for the given notebook workspace
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args) {
+    public static Output<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args) {
         return listNotebookWorkspaceConnectionInfo(args, InvokeOptions.Empty);
     }
     /**
@@ -493,7 +493,7 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:documentdb:listNotebookWorkspaceConnectionInfo", TypeShape.of(ListNotebookWorkspaceConnectionInfoResult.class), args, Utilities.withVersion(options));
+    public static Output<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:documentdb:listNotebookWorkspaceConnectionInfo", TypeShape.of(ListNotebookWorkspaceConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
 }

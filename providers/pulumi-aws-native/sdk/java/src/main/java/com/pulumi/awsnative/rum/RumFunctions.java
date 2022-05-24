@@ -6,24 +6,24 @@ package com.pulumi.awsnative.rum;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.rum.inputs.GetAppMonitorArgs;
 import com.pulumi.awsnative.rum.outputs.GetAppMonitorResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RumFunctions {
     /**
      * Resource Type definition for AWS::RUM::AppMonitor
      * 
      */
-    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args) {
+    public static Output<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args) {
         return getAppMonitor(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::RUM::AppMonitor
      * 
      */
-    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:rum:getAppMonitor", TypeShape.of(GetAppMonitorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:rum:getAppMonitor", TypeShape.of(GetAppMonitorResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -12,10 +12,10 @@ import com.pulumi.azure.iot.outputs.GetDpsResult;
 import com.pulumi.azure.iot.outputs.GetDpsSharedAccessPolicyResult;
 import com.pulumi.azure.iot.outputs.GetIotHubResult;
 import com.pulumi.azure.iot.outputs.GetSharedAccessPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class IotFunctions {
     /**
@@ -46,7 +46,7 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDpsResult> getDps(GetDpsArgs args) {
+    public static Output<GetDpsResult> getDps(GetDpsArgs args) {
         return getDps(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDpsResult> getDps(GetDpsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:iot/getDps:getDps", TypeShape.of(GetDpsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDpsResult> getDps(GetDpsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:iot/getDps:getDps", TypeShape.of(GetDpsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy
@@ -109,7 +109,7 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args) {
+    public static Output<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args) {
         return getDpsSharedAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:iot/getDpsSharedAccessPolicy:getDpsSharedAccessPolicy", TypeShape.of(GetDpsSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDpsSharedAccessPolicyResult> getDpsSharedAccessPolicy(GetDpsSharedAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:iot/getDpsSharedAccessPolicy:getDpsSharedAccessPolicy", TypeShape.of(GetDpsSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing IoTHub.
@@ -173,7 +173,7 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIotHubResult> getIotHub(GetIotHubArgs args) {
+    public static Output<GetIotHubResult> getIotHub(GetIotHubArgs args) {
         return getIotHub(args, InvokeOptions.Empty);
     }
     /**
@@ -205,8 +205,8 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIotHubResult> getIotHub(GetIotHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:iot/getIotHub:getIotHub", TypeShape.of(GetIotHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIotHubResult> getIotHub(GetIotHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:iot/getIotHub:getIotHub", TypeShape.of(GetIotHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing IotHub Shared Access Policy
@@ -237,7 +237,7 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args) {
+    public static Output<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args) {
         return getSharedAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -269,7 +269,7 @@ public final class IotFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:iot/getSharedAccessPolicy:getSharedAccessPolicy", TypeShape.of(GetSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedAccessPolicyResult> getSharedAccessPolicy(GetSharedAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:iot/getSharedAccessPolicy:getSharedAccessPolicy", TypeShape.of(GetSharedAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

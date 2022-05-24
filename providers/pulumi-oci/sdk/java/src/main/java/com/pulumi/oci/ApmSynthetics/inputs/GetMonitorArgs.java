@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmSynthetics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMonitorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetMonitorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorId", required=true)
-    private String monitorId;
+    private Output<String> monitorId;
 
     /**
      * @return The OCID of the monitor.
      * 
      */
-    public String monitorId() {
+    public Output<String> monitorId() {
         return this.monitorId;
     }
 
@@ -73,8 +74,29 @@ public final class GetMonitorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param monitorId The OCID of the monitor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorId(Output<String> monitorId) {
+            $.monitorId = monitorId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMonitorArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder monitorId(String monitorId) {
-            $.monitorId = monitorId;
-            return this;
+            return monitorId(Output.of(monitorId));
         }
 
         public GetMonitorArgs build() {

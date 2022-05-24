@@ -6,10 +6,10 @@ package com.pulumi.azurenative.confluent;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.confluent.inputs.GetOrganizationArgs;
 import com.pulumi.azurenative.confluent.outputs.GetOrganizationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConfluentFunctions {
     /**
@@ -17,7 +17,7 @@ public final class ConfluentFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
+    public static Output<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
         return getOrganization(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class ConfluentFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
 }

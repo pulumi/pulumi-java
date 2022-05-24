@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,14 +34,14 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Optional, used to expand the properties within share&#39;s properties.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +64,13 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareName", required=true)
-    private String shareName;
+    private Output<String> shareName;
 
     /**
      * @return The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
      * 
      */
-    public String shareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -107,8 +107,29 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param expand Optional, used to expand the properties within share&#39;s properties.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareName The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareName(Output<String> shareName) {
+            $.shareName = shareName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder shareName(String shareName) {
-            $.shareName = shareName;
-            return this;
+            return shareName(Output.of(shareName));
         }
 
         public GetFileShareArgs build() {

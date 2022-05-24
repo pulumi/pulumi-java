@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dedicatedCloudNodeName", required=true)
-    private String dedicatedCloudNodeName;
+    private Output<String> dedicatedCloudNodeName;
 
     /**
      * @return dedicated cloud node name
      * 
      */
-    public String dedicatedCloudNodeName() {
+    public Output<String> dedicatedCloudNodeName() {
         return this.dedicatedCloudNodeName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder dedicatedCloudNodeName(String dedicatedCloudNodeName) {
+        public Builder dedicatedCloudNodeName(Output<String> dedicatedCloudNodeName) {
             $.dedicatedCloudNodeName = dedicatedCloudNodeName;
+            return this;
+        }
+
+        /**
+         * @param dedicatedCloudNodeName dedicated cloud node name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedCloudNodeName(String dedicatedCloudNodeName) {
+            return dedicatedCloudNodeName(Output.of(dedicatedCloudNodeName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDedicatedCloudNodeArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDedicatedCloudNodeArgs build() {

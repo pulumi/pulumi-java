@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetShapesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetShapesFilter> filters;
+    private Output</* @Nullable */ List<GetShapesFilter>> filters;
 
-    public Optional<List<GetShapesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetShapesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private Output</* @Nullable */ String> imageId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an image.
      * 
      */
-    public Optional<String> imageId() {
-        return Optional.ofNullable(this.imageId);
+    public Output</* @Nullable */ String> imageId() {
+        return this.imageId;
     }
 
     private GetShapesArgs() {}
@@ -101,8 +101,29 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -113,13 +134,16 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetShapesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetShapesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetShapesFilter... filters) {
@@ -132,9 +156,19 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(Output</* @Nullable */ String> imageId) {
             $.imageId = imageId;
             return this;
+        }
+
+        /**
+         * @param imageId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(@Nullable String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         public GetShapesArgs build() {

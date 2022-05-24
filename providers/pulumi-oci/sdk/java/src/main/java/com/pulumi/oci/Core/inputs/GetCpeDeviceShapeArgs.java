@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCpeDeviceShapeArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpeDeviceShapeId", required=true)
-    private String cpeDeviceShapeId;
+    private Output<String> cpeDeviceShapeId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the CPE device shape.
      * 
      */
-    public String cpeDeviceShapeId() {
+    public Output<String> cpeDeviceShapeId() {
         return this.cpeDeviceShapeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCpeDeviceShapeArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder cpeDeviceShapeId(String cpeDeviceShapeId) {
+        public Builder cpeDeviceShapeId(Output<String> cpeDeviceShapeId) {
             $.cpeDeviceShapeId = cpeDeviceShapeId;
             return this;
+        }
+
+        /**
+         * @param cpeDeviceShapeId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the CPE device shape.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cpeDeviceShapeId(String cpeDeviceShapeId) {
+            return cpeDeviceShapeId(Output.of(cpeDeviceShapeId));
         }
 
         public GetCpeDeviceShapeArgs build() {

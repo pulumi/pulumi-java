@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-    private String shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     /**
      * @return The name of the shareSubscription.
      * 
      */
-    public String shareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -62,13 +63,13 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="triggerName", required=true)
-    private String triggerName;
+    private Output<String> triggerName;
 
     /**
      * @return The name of the trigger.
      * 
      */
-    public String triggerName() {
+    public Output<String> triggerName() {
         return this.triggerName;
     }
 
@@ -105,8 +106,29 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            $.shareSubscriptionName = shareSubscriptionName;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
+        }
+
+        /**
+         * @param triggerName The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder triggerName(Output<String> triggerName) {
+            $.triggerName = triggerName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder triggerName(String triggerName) {
-            $.triggerName = triggerName;
-            return this;
+            return triggerName(Output.of(triggerName));
         }
 
         public GetTriggerArgs build() {

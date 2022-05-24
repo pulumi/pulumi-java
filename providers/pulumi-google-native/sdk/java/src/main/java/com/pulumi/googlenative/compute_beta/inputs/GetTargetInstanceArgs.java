@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetTargetInstanceArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTargetInstanceArgs Empty = new GetTargetInstanceArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="targetInstance", required=true)
-    private String targetInstance;
+    private Output<String> targetInstance;
 
-    public String targetInstance() {
+    public Output<String> targetInstance() {
         return this.targetInstance;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +61,31 @@ public final class GetTargetInstanceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetTargetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder targetInstance(String targetInstance) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder targetInstance(Output<String> targetInstance) {
             $.targetInstance = targetInstance;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder targetInstance(String targetInstance) {
+            return targetInstance(Output.of(targetInstance));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetTargetInstanceArgs build() {

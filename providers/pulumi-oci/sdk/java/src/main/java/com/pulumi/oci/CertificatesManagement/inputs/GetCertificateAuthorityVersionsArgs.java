@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.CertificatesManagement.inputs.GetCertificateAuthorityVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetCertificateAuthorityVersionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="certificateAuthorityId", required=true)
-    private String certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
     /**
      * @return The OCID of the certificate authority (CA).
      * 
      */
-    public String certificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCertificateAuthorityVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetCertificateAuthorityVersionsFilter>> filters;
 
-    public Optional<List<GetCertificateAuthorityVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCertificateAuthorityVersionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetCertificateAuthorityVersionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="versionNumber")
-    private @Nullable String versionNumber;
+    private Output</* @Nullable */ String> versionNumber;
 
     /**
      * @return A filter that returns only resources that match the specified version number. The default value is 0, which means that this filter is not applied.
      * 
      */
-    public Optional<String> versionNumber() {
-        return Optional.ofNullable(this.versionNumber);
+    public Output</* @Nullable */ String> versionNumber() {
+        return this.versionNumber;
     }
 
     private GetCertificateAuthorityVersionsArgs() {}
@@ -85,14 +85,28 @@ public final class GetCertificateAuthorityVersionsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder certificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCertificateAuthorityVersionsFilter> filters) {
+        /**
+         * @param certificateAuthorityId The OCID of the certificate authority (CA).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCertificateAuthorityVersionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCertificateAuthorityVersionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCertificateAuthorityVersionsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetCertificateAuthorityVersionsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder versionNumber(@Nullable String versionNumber) {
+        public Builder versionNumber(Output</* @Nullable */ String> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
+        }
+
+        /**
+         * @param versionNumber A filter that returns only resources that match the specified version number. The default value is 0, which means that this filter is not applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionNumber(@Nullable String versionNumber) {
+            return versionNumber(Output.of(versionNumber));
         }
 
         public GetCertificateAuthorityVersionsArgs build() {

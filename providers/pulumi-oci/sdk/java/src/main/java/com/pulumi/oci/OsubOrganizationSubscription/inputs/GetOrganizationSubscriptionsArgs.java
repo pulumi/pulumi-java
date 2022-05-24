@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OsubOrganizationSubscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OsubOrganizationSubscription.inputs.GetOrganizationSubscriptionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetOrganizationSubscriptionsFilter> filters;
+    private Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters;
 
-    public Optional<List<GetOrganizationSubscriptionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subscriptionIds", required=true)
-    private String subscriptionIds;
+    private Output<String> subscriptionIds;
 
     /**
      * @return Comma separated list of subscription ids, pass &#34;DUMMY&#34; as value
      * 
      */
-    public String subscriptionIds() {
+    public Output<String> subscriptionIds() {
         return this.subscriptionIds;
     }
 
@@ -58,14 +58,14 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetOrganizationSubscriptionsArgs() {}
@@ -101,14 +101,28 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetOrganizationSubscriptionsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetOrganizationSubscriptionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetOrganizationSubscriptionsFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder subscriptionIds(String subscriptionIds) {
+        public Builder subscriptionIds(Output<String> subscriptionIds) {
             $.subscriptionIds = subscriptionIds;
+            return this;
+        }
+
+        /**
+         * @param subscriptionIds Comma separated list of subscription ids, pass &#34;DUMMY&#34; as value
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionIds(String subscriptionIds) {
+            return subscriptionIds(Output.of(subscriptionIds));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetOrganizationSubscriptionsArgs build() {

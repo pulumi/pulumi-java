@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Logging.inputs.GetLogSavedSearchesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLogSavedSearchesFilter> filters;
+    private Output</* @Nullable */ List<GetLogSavedSearchesFilter>> filters;
 
-    public Optional<List<GetLogSavedSearchesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetLogSavedSearchesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logSavedSearchId")
-    private @Nullable String logSavedSearchId;
+    private Output</* @Nullable */ String> logSavedSearchId;
 
     /**
      * @return OCID of the LogSavedSearch
      * 
      */
-    public Optional<String> logSavedSearchId() {
-        return Optional.ofNullable(this.logSavedSearchId);
+    public Output</* @Nullable */ String> logSavedSearchId() {
+        return this.logSavedSearchId;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Resource name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetLogSavedSearchesArgs() {}
@@ -101,14 +101,28 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLogSavedSearchesFilter> filters) {
+        /**
+         * @param compartmentId Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetLogSavedSearchesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetLogSavedSearchesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetLogSavedSearchesFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder logSavedSearchId(@Nullable String logSavedSearchId) {
+        public Builder logSavedSearchId(Output</* @Nullable */ String> logSavedSearchId) {
             $.logSavedSearchId = logSavedSearchId;
+            return this;
+        }
+
+        /**
+         * @param logSavedSearchId OCID of the LogSavedSearch
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logSavedSearchId(@Nullable String logSavedSearchId) {
+            return logSavedSearchId(Output.of(logSavedSearchId));
+        }
+
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetLogSavedSearchesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetLogSavedSearchesArgs build() {

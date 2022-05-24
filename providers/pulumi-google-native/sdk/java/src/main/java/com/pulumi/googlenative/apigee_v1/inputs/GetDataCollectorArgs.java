@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetDataCollectorArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDataCollectorArgs Empty = new GetDataCollectorArgs();
 
     @Import(name="datacollectorId", required=true)
-    private String datacollectorId;
+    private Output<String> datacollectorId;
 
-    public String datacollectorId() {
+    public Output<String> datacollectorId() {
         return this.datacollectorId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetDataCollectorArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetDataCollectorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datacollectorId(String datacollectorId) {
+        public Builder datacollectorId(Output<String> datacollectorId) {
             $.datacollectorId = datacollectorId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder datacollectorId(String datacollectorId) {
+            return datacollectorId(Output.of(datacollectorId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetDataCollectorArgs build() {

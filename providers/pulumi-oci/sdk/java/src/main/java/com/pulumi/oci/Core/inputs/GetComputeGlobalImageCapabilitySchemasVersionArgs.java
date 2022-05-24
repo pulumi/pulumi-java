@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionArgs extends com
      * 
      */
     @Import(name="computeGlobalImageCapabilitySchemaId", required=true)
-    private String computeGlobalImageCapabilitySchemaId;
+    private Output<String> computeGlobalImageCapabilitySchemaId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
      * 
      */
-    public String computeGlobalImageCapabilitySchemaId() {
+    public Output<String> computeGlobalImageCapabilitySchemaId() {
         return this.computeGlobalImageCapabilitySchemaId;
     }
 
@@ -32,13 +33,13 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionArgs extends com
      * 
      */
     @Import(name="computeGlobalImageCapabilitySchemaVersionName", required=true)
-    private String computeGlobalImageCapabilitySchemaVersionName;
+    private Output<String> computeGlobalImageCapabilitySchemaVersionName;
 
     /**
      * @return The name of the compute global image capability schema version
      * 
      */
-    public String computeGlobalImageCapabilitySchemaVersionName() {
+    public Output<String> computeGlobalImageCapabilitySchemaVersionName() {
         return this.computeGlobalImageCapabilitySchemaVersionName;
     }
 
@@ -73,8 +74,29 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionArgs extends com
          * @return builder
          * 
          */
-        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+        public Builder computeGlobalImageCapabilitySchemaId(Output<String> computeGlobalImageCapabilitySchemaId) {
             $.computeGlobalImageCapabilitySchemaId = computeGlobalImageCapabilitySchemaId;
+            return this;
+        }
+
+        /**
+         * @param computeGlobalImageCapabilitySchemaId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+            return computeGlobalImageCapabilitySchemaId(Output.of(computeGlobalImageCapabilitySchemaId));
+        }
+
+        /**
+         * @param computeGlobalImageCapabilitySchemaVersionName The name of the compute global image capability schema version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeGlobalImageCapabilitySchemaVersionName(Output<String> computeGlobalImageCapabilitySchemaVersionName) {
+            $.computeGlobalImageCapabilitySchemaVersionName = computeGlobalImageCapabilitySchemaVersionName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionArgs extends com
          * 
          */
         public Builder computeGlobalImageCapabilitySchemaVersionName(String computeGlobalImageCapabilitySchemaVersionName) {
-            $.computeGlobalImageCapabilitySchemaVersionName = computeGlobalImageCapabilitySchemaVersionName;
-            return this;
+            return computeGlobalImageCapabilitySchemaVersionName(Output.of(computeGlobalImageCapabilitySchemaVersionName));
         }
 
         public GetComputeGlobalImageCapabilitySchemasVersionArgs build() {

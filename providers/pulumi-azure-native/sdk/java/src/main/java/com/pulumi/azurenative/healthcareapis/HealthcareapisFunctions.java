@@ -20,10 +20,10 @@ import com.pulumi.azurenative.healthcareapis.outputs.GetPrivateEndpointConnectio
 import com.pulumi.azurenative.healthcareapis.outputs.GetServiceResult;
 import com.pulumi.azurenative.healthcareapis.outputs.GetWorkspacePrivateEndpointConnectionResult;
 import com.pulumi.azurenative.healthcareapis.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class HealthcareapisFunctions {
     /**
@@ -31,7 +31,7 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetDicomServiceResult> getDicomService(GetDicomServiceArgs args) {
+    public static Output<GetDicomServiceResult> getDicomService(GetDicomServiceArgs args) {
         return getDicomService(args, InvokeOptions.Empty);
     }
     /**
@@ -39,15 +39,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetDicomServiceResult> getDicomService(GetDicomServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getDicomService", TypeShape.of(GetDicomServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDicomServiceResult> getDicomService(GetDicomServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getDicomService", TypeShape.of(GetDicomServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of Fhir Service
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetFhirServiceResult> getFhirService(GetFhirServiceArgs args) {
+    public static Output<GetFhirServiceResult> getFhirService(GetFhirServiceArgs args) {
         return getFhirService(args, InvokeOptions.Empty);
     }
     /**
@@ -55,15 +55,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetFhirServiceResult> getFhirService(GetFhirServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getFhirService", TypeShape.of(GetFhirServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFhirServiceResult> getFhirService(GetFhirServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getFhirService", TypeShape.of(GetFhirServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * IoT Connector definition.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetIotConnectorResult> getIotConnector(GetIotConnectorArgs args) {
+    public static Output<GetIotConnectorResult> getIotConnector(GetIotConnectorArgs args) {
         return getIotConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -71,15 +71,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetIotConnectorResult> getIotConnector(GetIotConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getIotConnector", TypeShape.of(GetIotConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIotConnectorResult> getIotConnector(GetIotConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getIotConnector", TypeShape.of(GetIotConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * IoT Connector FHIR destination definition.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetIotConnectorFhirDestinationResult> getIotConnectorFhirDestination(GetIotConnectorFhirDestinationArgs args) {
+    public static Output<GetIotConnectorFhirDestinationResult> getIotConnectorFhirDestination(GetIotConnectorFhirDestinationArgs args) {
         return getIotConnectorFhirDestination(args, InvokeOptions.Empty);
     }
     /**
@@ -87,15 +87,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetIotConnectorFhirDestinationResult> getIotConnectorFhirDestination(GetIotConnectorFhirDestinationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getIotConnectorFhirDestination", TypeShape.of(GetIotConnectorFhirDestinationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIotConnectorFhirDestinationResult> getIotConnectorFhirDestination(GetIotConnectorFhirDestinationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getIotConnectorFhirDestination", TypeShape.of(GetIotConnectorFhirDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -103,15 +103,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -119,15 +119,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace resource.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -135,15 +135,15 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args) {
+    public static Output<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args) {
         return getWorkspacePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -151,7 +151,7 @@ public final class HealthcareapisFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getWorkspacePrivateEndpointConnection", TypeShape.of(GetWorkspacePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthcareapis:getWorkspacePrivateEndpointConnection", TypeShape.of(GetWorkspacePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

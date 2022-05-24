@@ -3,11 +3,11 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the Image.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private @Nullable String nameRegex;
+    private Output</* @Nullable */ String> nameRegex;
 
     /**
      * @return Regex pattern of the image to match.
      * 
      */
-    public Optional<String> nameRegex() {
-        return Optional.ofNullable(this.nameRegex);
+    public Output</* @Nullable */ String> nameRegex() {
+        return this.nameRegex;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where this Image exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,14 +65,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortDescending")
-    private @Nullable Boolean sortDescending;
+    private Output</* @Nullable */ Boolean> sortDescending;
 
     /**
      * @return By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.
      * 
      */
-    public Optional<Boolean> sortDescending() {
-        return Optional.ofNullable(this.sortDescending);
+    public Output</* @Nullable */ Boolean> sortDescending() {
+        return this.sortDescending;
     }
 
     private GetImageArgs() {}
@@ -108,8 +108,29 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param nameRegex Regex pattern of the image to match.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameRegex(Output</* @Nullable */ String> nameRegex) {
+            $.nameRegex = nameRegex;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder nameRegex(@Nullable String nameRegex) {
-            $.nameRegex = nameRegex;
+            return nameRegex(Output.of(nameRegex));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where this Image exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sortDescending By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortDescending(Output</* @Nullable */ Boolean> sortDescending) {
+            $.sortDescending = sortDescending;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sortDescending(@Nullable Boolean sortDescending) {
-            $.sortDescending = sortDescending;
-            return this;
+            return sortDescending(Output.of(sortDescending));
         }
 
         public GetImageArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudtasks_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetQueueArgs Empty = new GetQueueArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="queueId", required=true)
-    private String queueId;
+    private Output<String> queueId;
 
-    public String queueId() {
+    public Output<String> queueId() {
         return this.queueId;
     }
 
@@ -61,19 +61,31 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQueueArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder queueId(String queueId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder queueId(Output<String> queueId) {
             $.queueId = queueId;
             return this;
+        }
+
+        public Builder queueId(String queueId) {
+            return queueId(Output.of(queueId));
         }
 
         public GetQueueArgs build() {

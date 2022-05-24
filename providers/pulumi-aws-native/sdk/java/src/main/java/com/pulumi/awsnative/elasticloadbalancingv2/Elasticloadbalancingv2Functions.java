@@ -8,38 +8,38 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerArgs;
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerRuleArgs;
 import com.pulumi.awsnative.elasticloadbalancingv2.outputs.GetListenerResult;
 import com.pulumi.awsnative.elasticloadbalancingv2.outputs.GetListenerRuleResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Elasticloadbalancingv2Functions {
     /**
      * Resource Type definition for AWS::ElasticLoadBalancingV2::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+    public static Output<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::ElasticLoadBalancingV2::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:elasticloadbalancingv2:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
      * 
      */
-    public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args) {
+    public static Output<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args) {
         return getListenerRule(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
      * 
      */
-    public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListenerRule", TypeShape.of(GetListenerRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:elasticloadbalancingv2:getListenerRule", TypeShape.of(GetListenerRuleResult.class), args, Utilities.withVersion(options));
     }
 }

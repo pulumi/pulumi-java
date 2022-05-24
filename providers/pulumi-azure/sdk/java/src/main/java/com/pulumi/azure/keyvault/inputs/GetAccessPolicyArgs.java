@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Management Template. Possible values are: `Key Management`,
@@ -27,7 +28,7 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * `Secret &amp; Certificate Management`,  `Key, Secret, &amp; Certificate Management`
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -63,9 +64,21 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Management Template. Possible values are: `Key Management`,
+         * `Secret Management`, `Certificate Management`, `Key &amp; Secret Management`, `Key &amp; Certificate Management`,
+         * `Secret &amp; Certificate Management`,  `Key, Secret, &amp; Certificate Management`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetAccessPolicyArgs build() {

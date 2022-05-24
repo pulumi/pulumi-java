@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Mysql.inputs.GetMysqlBackupsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-    private @Nullable String backupId;
+    private Output</* @Nullable */ String> backupId;
 
     /**
      * @return Backup OCID
      * 
      */
-    public Optional<String> backupId() {
-        return Optional.ofNullable(this.backupId);
+    public Output</* @Nullable */ String> backupId() {
+        return this.backupId;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,14 +51,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationType")
-    private @Nullable String creationType;
+    private Output</* @Nullable */ String> creationType;
 
     /**
      * @return Backup creationType
      * 
      */
-    public Optional<String> creationType() {
-        return Optional.ofNullable(this.creationType);
+    public Output</* @Nullable */ String> creationType() {
+        return this.creationType;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private @Nullable String dbSystemId;
+    private Output</* @Nullable */ String> dbSystemId;
 
     /**
      * @return The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> dbSystemId() {
-        return Optional.ofNullable(this.dbSystemId);
+    public Output</* @Nullable */ String> dbSystemId() {
+        return this.dbSystemId;
     }
 
     /**
@@ -81,21 +81,21 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMysqlBackupsFilter> filters;
+    private Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters;
 
-    public Optional<List<GetMysqlBackupsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Backup Lifecycle State
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetMysqlBackupsArgs() {}
@@ -149,8 +149,29 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(@Nullable String backupId) {
+        public Builder backupId(Output</* @Nullable */ String> backupId) {
             $.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * @param backupId Backup OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupId(@Nullable String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -161,7 +182,17 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param creationType Backup creationType
+         * 
+         * @return builder
+         * 
+         */
+        public Builder creationType(Output</* @Nullable */ String> creationType) {
+            $.creationType = creationType;
             return this;
         }
 
@@ -172,7 +203,17 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder creationType(@Nullable String creationType) {
-            $.creationType = creationType;
+            return creationType(Output.of(creationType));
+        }
+
+        /**
+         * @param dbSystemId The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+            $.dbSystemId = dbSystemId;
             return this;
         }
 
@@ -183,7 +224,17 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemId(@Nullable String dbSystemId) {
-            $.dbSystemId = dbSystemId;
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        /**
+         * @param displayName A filter to return only the resource matching the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -194,13 +245,16 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetMysqlBackupsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetMysqlBackupsFilter... filters) {
@@ -213,9 +267,19 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state Backup Lifecycle State
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetMysqlBackupsArgs build() {

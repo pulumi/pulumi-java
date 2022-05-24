@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsubSubscription;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.OsubSubscription.outputs.GetCommitmentsResult;
 import com.pulumi.oci.OsubSubscription.outputs.GetRatecardsResult;
 import com.pulumi.oci.OsubSubscription.outputs.GetSubscriptionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OsubSubscriptionFunctions {
     /**
@@ -26,7 +26,7 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCommitmentResult> getCommitment(GetCommitmentArgs args) {
+    public static Output<GetCommitmentResult> getCommitment(GetCommitmentArgs args) {
         return getCommitment(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCommitmentResult> getCommitment(GetCommitmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getCommitment:getCommitment", TypeShape.of(GetCommitmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCommitmentResult> getCommitment(GetCommitmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubSubscription/getCommitment:getCommitment", TypeShape.of(GetCommitmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Commitments in Oracle Cloud Infrastructure Osub Subscription service.
@@ -48,7 +48,7 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args) {
+    public static Output<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args) {
         return getCommitments(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getCommitments:getCommitments", TypeShape.of(GetCommitmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCommitmentsResult> getCommitments(GetCommitmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubSubscription/getCommitments:getCommitments", TypeShape.of(GetCommitmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ratecards in Oracle Cloud Infrastructure Osub Subscription service.
@@ -71,7 +71,7 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRatecardsResult> getRatecards(GetRatecardsArgs args) {
+    public static Output<GetRatecardsResult> getRatecards(GetRatecardsArgs args) {
         return getRatecards(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRatecardsResult> getRatecards(GetRatecardsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getRatecards:getRatecards", TypeShape.of(GetRatecardsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRatecardsResult> getRatecards(GetRatecardsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubSubscription/getRatecards:getRatecards", TypeShape.of(GetRatecardsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Subscriptions in Oracle Cloud Infrastructure Osub Subscription service.
@@ -97,7 +97,7 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class OsubSubscriptionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubSubscription/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubSubscription/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
 }

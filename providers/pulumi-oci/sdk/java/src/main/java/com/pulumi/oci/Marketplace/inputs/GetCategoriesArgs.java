@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Marketplace.inputs.GetCategoriesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetCategoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCategoriesFilter> filters;
+    private Output</* @Nullable */ List<GetCategoriesFilter>> filters;
 
-    public Optional<List<GetCategoriesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCategoriesFilter>> filters() {
+        return this.filters;
     }
 
     private GetCategoriesArgs() {}
@@ -69,14 +69,28 @@ public final class GetCategoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCategoriesFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCategoriesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCategoriesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCategoriesFilter... filters) {

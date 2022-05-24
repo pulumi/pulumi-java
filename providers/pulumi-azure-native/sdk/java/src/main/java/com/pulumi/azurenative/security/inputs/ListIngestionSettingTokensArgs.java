@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListIngestionSettingTokensArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="ingestionSettingName", required=true)
-    private String ingestionSettingName;
+    private Output<String> ingestionSettingName;
 
     /**
      * @return Name of the ingestion setting
      * 
      */
-    public String ingestionSettingName() {
+    public Output<String> ingestionSettingName() {
         return this.ingestionSettingName;
     }
 
@@ -57,9 +58,19 @@ public final class ListIngestionSettingTokensArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder ingestionSettingName(String ingestionSettingName) {
+        public Builder ingestionSettingName(Output<String> ingestionSettingName) {
             $.ingestionSettingName = ingestionSettingName;
             return this;
+        }
+
+        /**
+         * @param ingestionSettingName Name of the ingestion setting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ingestionSettingName(String ingestionSettingName) {
+            return ingestionSettingName(Output.of(ingestionSettingName));
         }
 
         public ListIngestionSettingTokensArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetInterconnectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInterconnectArgs Empty = new GetInterconnectArgs();
 
     @Import(name="interconnect", required=true)
-    private String interconnect;
+    private Output<String> interconnect;
 
-    public String interconnect() {
+    public Output<String> interconnect() {
         return this.interconnect;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetInterconnectArgs() {}
@@ -53,14 +53,22 @@ public final class GetInterconnectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInterconnectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder interconnect(String interconnect) {
+        public Builder interconnect(Output<String> interconnect) {
             $.interconnect = interconnect;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder interconnect(String interconnect) {
+            return interconnect(Output.of(interconnect));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetInterconnectArgs build() {

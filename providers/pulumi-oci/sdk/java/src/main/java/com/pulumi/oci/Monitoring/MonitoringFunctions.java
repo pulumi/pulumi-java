@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Monitoring;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.oci.Monitoring.outputs.GetAlarmsResult;
 import com.pulumi.oci.Monitoring.outputs.GetMetricDataResult;
 import com.pulumi.oci.Monitoring.outputs.GetMetricsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class MonitoringFunctions {
     /**
@@ -35,7 +35,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args) {
+    public static Output<GetAlarmResult> getAlarm(GetAlarmArgs args) {
         return getAlarm(args, InvokeOptions.Empty);
     }
     /**
@@ -51,8 +51,8 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarm:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getAlarm:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Alarm History Collection resource in Oracle Cloud Infrastructure Monitoring service.
@@ -67,7 +67,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args) {
+    public static Output<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args) {
         return getAlarmHistoryCollection(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarmHistoryCollection:getAlarmHistoryCollection", TypeShape.of(GetAlarmHistoryCollectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlarmHistoryCollectionResult> getAlarmHistoryCollection(GetAlarmHistoryCollectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getAlarmHistoryCollection:getAlarmHistoryCollection", TypeShape.of(GetAlarmHistoryCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alarm Statuses in Oracle Cloud Infrastructure Monitoring service.
@@ -99,7 +99,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args) {
+    public static Output<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args) {
         return getAlarmStatuses(args, InvokeOptions.Empty);
     }
     /**
@@ -115,8 +115,8 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarmStatuses:getAlarmStatuses", TypeShape.of(GetAlarmStatusesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlarmStatusesResult> getAlarmStatuses(GetAlarmStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getAlarmStatuses:getAlarmStatuses", TypeShape.of(GetAlarmStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alarms in Oracle Cloud Infrastructure Monitoring service.
@@ -131,7 +131,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmsResult> getAlarms(GetAlarmsArgs args) {
+    public static Output<GetAlarmsResult> getAlarms(GetAlarmsArgs args) {
         return getAlarms(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlarmsResult> getAlarms(GetAlarmsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getAlarms:getAlarms", TypeShape.of(GetAlarmsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlarmsResult> getAlarms(GetAlarmsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getAlarms:getAlarms", TypeShape.of(GetAlarmsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Metric Data in Oracle Cloud Infrastructure Monitoring service.
@@ -162,7 +162,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMetricDataResult> getMetricData(GetMetricDataArgs args) {
+    public static Output<GetMetricDataResult> getMetricData(GetMetricDataArgs args) {
         return getMetricData(args, InvokeOptions.Empty);
     }
     /**
@@ -177,8 +177,8 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMetricDataResult> getMetricData(GetMetricDataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getMetricData:getMetricData", TypeShape.of(GetMetricDataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMetricDataResult> getMetricData(GetMetricDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getMetricData:getMetricData", TypeShape.of(GetMetricDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Metrics in Oracle Cloud Infrastructure Monitoring service.
@@ -192,7 +192,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMetricsResult> getMetrics(GetMetricsArgs args) {
+    public static Output<GetMetricsResult> getMetrics(GetMetricsArgs args) {
         return getMetrics(args, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMetricsResult> getMetrics(GetMetricsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Monitoring/getMetrics:getMetrics", TypeShape.of(GetMetricsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMetricsResult> getMetrics(GetMetricsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Monitoring/getMetrics:getMetrics", TypeShape.of(GetMetricsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetHmacKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHmacKeyArgs Empty = new GetHmacKeyArgs();
 
     @Import(name="accessId", required=true)
-    private String accessId;
+    private Output<String> accessId;
 
-    public String accessId() {
+    public Output<String> accessId() {
         return this.accessId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private Output</* @Nullable */ String> userProject;
 
-    public Optional<String> userProject() {
-        return Optional.ofNullable(this.userProject);
+    public Output</* @Nullable */ String> userProject() {
+        return this.userProject;
     }
 
     private GetHmacKeyArgs() {}
@@ -61,19 +61,31 @@ public final class GetHmacKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHmacKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessId(String accessId) {
+        public Builder accessId(Output<String> accessId) {
             $.accessId = accessId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder accessId(String accessId) {
+            return accessId(Output.of(accessId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder userProject(Output</* @Nullable */ String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(@Nullable String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetHmacKeyArgs build() {

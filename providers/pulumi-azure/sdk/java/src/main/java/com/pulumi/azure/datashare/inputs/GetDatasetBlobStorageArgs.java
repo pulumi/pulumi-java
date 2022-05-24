@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatasetBlobStorageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataShareId", required=true)
-    private String dataShareId;
+    private Output<String> dataShareId;
 
     /**
      * @return The ID of the Data Share in which this Data Share Blob Storage Dataset should be created.
      * 
      */
-    public String dataShareId() {
+    public Output<String> dataShareId() {
         return this.dataShareId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatasetBlobStorageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Data Share Blob Storage Dataset.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetDatasetBlobStorageArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder dataShareId(String dataShareId) {
+        public Builder dataShareId(Output<String> dataShareId) {
             $.dataShareId = dataShareId;
+            return this;
+        }
+
+        /**
+         * @param dataShareId The ID of the Data Share in which this Data Share Blob Storage Dataset should be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataShareId(String dataShareId) {
+            return dataShareId(Output.of(dataShareId));
+        }
+
+        /**
+         * @param name The name of this Data Share Blob Storage Dataset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDatasetBlobStorageArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetDatasetBlobStorageArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationStatusArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="managementEndpoint", required=true)
-    private String managementEndpoint;
+    private Output<String> managementEndpoint;
 
     /**
      * @return The service endpoint to perform management operations against. See Vault Management endpoint.
      * 
      */
-    public String managementEndpoint() {
+    public Output<String> managementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationStatusArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="replicationId", required=true)
-    private String replicationId;
+    private Output<String> replicationId;
 
     /**
      * @return replicationId associated with an operation on a resource
      * 
      */
-    public String replicationId() {
+    public Output<String> replicationId() {
         return this.replicationId;
     }
 
@@ -73,8 +74,29 @@ public final class GetReplicationStatusArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder managementEndpoint(String managementEndpoint) {
+        public Builder managementEndpoint(Output<String> managementEndpoint) {
             $.managementEndpoint = managementEndpoint;
+            return this;
+        }
+
+        /**
+         * @param managementEndpoint The service endpoint to perform management operations against. See Vault Management endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementEndpoint(String managementEndpoint) {
+            return managementEndpoint(Output.of(managementEndpoint));
+        }
+
+        /**
+         * @param replicationId replicationId associated with an operation on a resource
+         * 
+         * @return builder
+         * 
+         */
+        public Builder replicationId(Output<String> replicationId) {
+            $.replicationId = replicationId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetReplicationStatusArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder replicationId(String replicationId) {
-            $.replicationId = replicationId;
-            return this;
+            return replicationId(Output.of(replicationId));
         }
 
         public GetReplicationStatusArgs build() {

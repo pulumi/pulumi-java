@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBuildRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildRunId", required=true)
-    private String buildRunId;
+    private Output<String> buildRunId;
 
     /**
      * @return Unique build run identifier.
      * 
      */
-    public String buildRunId() {
+    public Output<String> buildRunId() {
         return this.buildRunId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBuildRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder buildRunId(String buildRunId) {
+        public Builder buildRunId(Output<String> buildRunId) {
             $.buildRunId = buildRunId;
             return this;
+        }
+
+        /**
+         * @param buildRunId Unique build run identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildRunId(String buildRunId) {
+            return buildRunId(Output.of(buildRunId));
         }
 
         public GetBuildRunArgs build() {

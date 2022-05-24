@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return Name of of the certificate to get.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedInstanceName", required=true)
-    private String managedInstanceName;
+    private Output<String> managedInstanceName;
 
     /**
      * @return The name of the managed instance.
      * 
      */
-    public String managedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
+            return this;
+        }
+
+        /**
+         * @param certificateName Name of of the certificate to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
          * 
          */
         public Builder managedInstanceName(String managedInstanceName) {
-            $.managedInstanceName = managedInstanceName;
+            return managedInstanceName(Output.of(managedInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetServerTrustCertificateArgs build() {

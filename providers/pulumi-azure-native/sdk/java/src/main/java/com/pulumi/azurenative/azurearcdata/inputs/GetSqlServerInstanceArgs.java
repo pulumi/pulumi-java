@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurearcdata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sqlServerInstanceName", required=true)
-    private String sqlServerInstanceName;
+    private Output<String> sqlServerInstanceName;
 
     /**
      * @return Name of SQL Server Instance
      * 
      */
-    public String sqlServerInstanceName() {
+    public Output<String> sqlServerInstanceName() {
         return this.sqlServerInstanceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlServerInstanceName Name of SQL Server Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlServerInstanceName(Output<String> sqlServerInstanceName) {
+            $.sqlServerInstanceName = sqlServerInstanceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder sqlServerInstanceName(String sqlServerInstanceName) {
-            $.sqlServerInstanceName = sqlServerInstanceName;
-            return this;
+            return sqlServerInstanceName(Output.of(sqlServerInstanceName));
         }
 
         public GetSqlServerInstanceArgs build() {

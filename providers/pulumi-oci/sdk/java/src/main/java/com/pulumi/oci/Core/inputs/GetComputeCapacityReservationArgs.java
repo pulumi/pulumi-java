@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetComputeCapacityReservationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="capacityReservationId", required=true)
-    private String capacityReservationId;
+    private Output<String> capacityReservationId;
 
     /**
      * @return The OCID of the compute capacity reservation.
      * 
      */
-    public String capacityReservationId() {
+    public Output<String> capacityReservationId() {
         return this.capacityReservationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetComputeCapacityReservationArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder capacityReservationId(String capacityReservationId) {
+        public Builder capacityReservationId(Output<String> capacityReservationId) {
             $.capacityReservationId = capacityReservationId;
             return this;
+        }
+
+        /**
+         * @param capacityReservationId The OCID of the compute capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationId(String capacityReservationId) {
+            return capacityReservationId(Output.of(capacityReservationId));
         }
 
         public GetComputeCapacityReservationArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbSystemPatchesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDbSystemPatchesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbSystemId", required=true)
-    private String dbSystemId;
+    private Output<String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbSystemId() {
+    public Output<String> dbSystemId() {
         return this.dbSystemId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbSystemPatchesFilter> filters;
+    private Output</* @Nullable */ List<GetDbSystemPatchesFilter>> filters;
 
-    public Optional<List<GetDbSystemPatchesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbSystemPatchesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDbSystemPatchesArgs() {}
@@ -69,14 +69,28 @@ public final class GetDbSystemPatchesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbSystemId(String dbSystemId) {
+        public Builder dbSystemId(Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbSystemPatchesFilter> filters) {
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(String dbSystemId) {
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbSystemPatchesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDbSystemPatchesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbSystemPatchesFilter... filters) {

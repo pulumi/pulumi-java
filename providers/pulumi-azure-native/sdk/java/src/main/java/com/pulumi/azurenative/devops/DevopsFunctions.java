@@ -6,10 +6,10 @@ package com.pulumi.azurenative.devops;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.devops.inputs.GetPipelineArgs;
 import com.pulumi.azurenative.devops.outputs.GetPipelineResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DevopsFunctions {
     /**
@@ -17,7 +17,7 @@ public final class DevopsFunctions {
      * API Version: 2020-07-13-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args) {
         return getPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class DevopsFunctions {
      * API Version: 2020-07-13-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:devops:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:devops:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

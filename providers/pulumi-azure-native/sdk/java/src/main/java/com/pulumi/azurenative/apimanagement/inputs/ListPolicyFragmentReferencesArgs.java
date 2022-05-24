@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return A resource identifier.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -35,13 +35,13 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -50,13 +50,13 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -65,14 +65,14 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="skip")
-    private @Nullable Integer skip;
+    private Output</* @Nullable */ Integer> skip;
 
     /**
      * @return Number of records to skip.
      * 
      */
-    public Optional<Integer> skip() {
-        return Optional.ofNullable(this.skip);
+    public Output</* @Nullable */ Integer> skip() {
+        return this.skip;
     }
 
     /**
@@ -80,14 +80,14 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private Output</* @Nullable */ Integer> top;
 
     /**
      * @return Number of records to return.
      * 
      */
-    public Optional<Integer> top() {
-        return Optional.ofNullable(this.top);
+    public Output</* @Nullable */ Integer> top() {
+        return this.top;
     }
 
     private ListPolicyFragmentReferencesArgs() {}
@@ -124,8 +124,29 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id A resource identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -136,7 +157,17 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -147,7 +178,17 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param skip Number of records to skip.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skip(Output</* @Nullable */ Integer> skip) {
+            $.skip = skip;
             return this;
         }
 
@@ -158,7 +199,17 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * 
          */
         public Builder skip(@Nullable Integer skip) {
-            $.skip = skip;
+            return skip(Output.of(skip));
+        }
+
+        /**
+         * @param top Number of records to return.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(Output</* @Nullable */ Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -169,8 +220,7 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * 
          */
         public Builder top(@Nullable Integer top) {
-            $.top = top;
-            return this;
+            return top(Output.of(top));
         }
 
         public ListPolicyFragmentReferencesArgs build() {

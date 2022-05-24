@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Opsi.inputs.GetHostInsightsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return A flag to search all resources within a given compartment and all sub-compartments.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enterpriseManagerBridgeId")
-    private @Nullable String enterpriseManagerBridgeId;
+    private Output</* @Nullable */ String> enterpriseManagerBridgeId;
 
     /**
      * @return Unique Enterprise Manager bridge identifier
      * 
      */
-    public Optional<String> enterpriseManagerBridgeId() {
-        return Optional.ofNullable(this.enterpriseManagerBridgeId);
+    public Output</* @Nullable */ String> enterpriseManagerBridgeId() {
+        return this.enterpriseManagerBridgeId;
     }
 
     /**
@@ -67,21 +67,21 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exadataInsightId")
-    private @Nullable String exadataInsightId;
+    private Output</* @Nullable */ String> exadataInsightId;
 
     /**
      * @return [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
      * 
      */
-    public Optional<String> exadataInsightId() {
-        return Optional.ofNullable(this.exadataInsightId);
+    public Output</* @Nullable */ String> exadataInsightId() {
+        return this.exadataInsightId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetHostInsightsFilter> filters;
+    private Output</* @Nullable */ List<GetHostInsightsFilter>> filters;
 
-    public Optional<List<GetHostInsightsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetHostInsightsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostTypes")
-    private @Nullable List<String> hostTypes;
+    private Output</* @Nullable */ List<String>> hostTypes;
 
     /**
      * @return Filter by one or more host types. Possible value is EXTERNAL-HOST.
      * 
      */
-    public Optional<List<String>> hostTypes() {
-        return Optional.ofNullable(this.hostTypes);
+    public Output</* @Nullable */ List<String>> hostTypes() {
+        return this.hostTypes;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Optional list of host insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private Output</* @Nullable */ List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Optional<List<String>> states() {
-        return Optional.ofNullable(this.states);
+    public Output</* @Nullable */ List<String>> states() {
+        return this.states;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private Output</* @Nullable */ List<String>> statuses;
 
     /**
      * @return Resource Status
      * 
      */
-    public Optional<List<String>> statuses() {
-        return Optional.ofNullable(this.statuses);
+    public Output</* @Nullable */ List<String>> statuses() {
+        return this.statuses;
     }
 
     private GetHostInsightsArgs() {}
@@ -182,8 +182,29 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree A flag to search all resources within a given compartment and all sub-compartments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -194,7 +215,17 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param enterpriseManagerBridgeId Unique Enterprise Manager bridge identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enterpriseManagerBridgeId(Output</* @Nullable */ String> enterpriseManagerBridgeId) {
+            $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
             return this;
         }
 
@@ -205,7 +236,17 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder enterpriseManagerBridgeId(@Nullable String enterpriseManagerBridgeId) {
-            $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
+            return enterpriseManagerBridgeId(Output.of(enterpriseManagerBridgeId));
+        }
+
+        /**
+         * @param exadataInsightId [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInsightId(Output</* @Nullable */ String> exadataInsightId) {
+            $.exadataInsightId = exadataInsightId;
             return this;
         }
 
@@ -216,13 +257,16 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder exadataInsightId(@Nullable String exadataInsightId) {
-            $.exadataInsightId = exadataInsightId;
+            return exadataInsightId(Output.of(exadataInsightId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetHostInsightsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetHostInsightsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetHostInsightsFilter... filters) {
@@ -235,9 +279,19 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostTypes(@Nullable List<String> hostTypes) {
+        public Builder hostTypes(Output</* @Nullable */ List<String>> hostTypes) {
             $.hostTypes = hostTypes;
             return this;
+        }
+
+        /**
+         * @param hostTypes Filter by one or more host types. Possible value is EXTERNAL-HOST.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostTypes(@Nullable List<String> hostTypes) {
+            return hostTypes(Output.of(hostTypes));
         }
 
         /**
@@ -256,8 +310,29 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Optional list of host insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param states Lifecycle states
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(Output</* @Nullable */ List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -268,8 +343,7 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+            return states(Output.of(states));
         }
 
         /**
@@ -288,9 +362,19 @@ public final class GetHostInsightsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
+        public Builder statuses(Output</* @Nullable */ List<String>> statuses) {
             $.statuses = statuses;
             return this;
+        }
+
+        /**
+         * @param statuses Resource Status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(@Nullable List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**

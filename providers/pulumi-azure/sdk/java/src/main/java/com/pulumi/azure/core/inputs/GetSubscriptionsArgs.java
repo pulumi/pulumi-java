@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayNameContains")
-    private @Nullable String displayNameContains;
+    private Output</* @Nullable */ String> displayNameContains;
 
     /**
      * @return A case-insensitive value which must be contained within the `display_name` field, used to filter the results
      * 
      */
-    public Optional<String> displayNameContains() {
-        return Optional.ofNullable(this.displayNameContains);
+    public Output</* @Nullable */ String> displayNameContains() {
+        return this.displayNameContains;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayNamePrefix")
-    private @Nullable String displayNamePrefix;
+    private Output</* @Nullable */ String> displayNamePrefix;
 
     /**
      * @return A case-insensitive prefix which can be used to filter on the `display_name` field
      * 
      */
-    public Optional<String> displayNamePrefix() {
-        return Optional.ofNullable(this.displayNamePrefix);
+    public Output</* @Nullable */ String> displayNamePrefix() {
+        return this.displayNamePrefix;
     }
 
     private GetSubscriptionsArgs() {}
@@ -75,8 +75,29 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayNameContains(@Nullable String displayNameContains) {
+        public Builder displayNameContains(Output</* @Nullable */ String> displayNameContains) {
             $.displayNameContains = displayNameContains;
+            return this;
+        }
+
+        /**
+         * @param displayNameContains A case-insensitive value which must be contained within the `display_name` field, used to filter the results
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameContains(@Nullable String displayNameContains) {
+            return displayNameContains(Output.of(displayNameContains));
+        }
+
+        /**
+         * @param displayNamePrefix A case-insensitive prefix which can be used to filter on the `display_name` field
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNamePrefix(Output</* @Nullable */ String> displayNamePrefix) {
+            $.displayNamePrefix = displayNamePrefix;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder displayNamePrefix(@Nullable String displayNamePrefix) {
-            $.displayNamePrefix = displayNamePrefix;
-            return this;
+            return displayNamePrefix(Output.of(displayNamePrefix));
         }
 
         public GetSubscriptionsArgs build() {

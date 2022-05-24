@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,20 +18,20 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceGuardProxyName", required=true)
-    private String resourceGuardProxyName;
+    private Output<String> resourceGuardProxyName;
 
-    public String resourceGuardProxyName() {
+    public Output<String> resourceGuardProxyName() {
         return this.resourceGuardProxyName;
     }
 
@@ -39,13 +40,13 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -81,13 +82,38 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder resourceGuardProxyName(String resourceGuardProxyName) {
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder resourceGuardProxyName(Output<String> resourceGuardProxyName) {
             $.resourceGuardProxyName = resourceGuardProxyName;
+            return this;
+        }
+
+        public Builder resourceGuardProxyName(String resourceGuardProxyName) {
+            return resourceGuardProxyName(Output.of(resourceGuardProxyName));
+        }
+
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -98,8 +124,7 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetResourceGuardProxyArgs build() {

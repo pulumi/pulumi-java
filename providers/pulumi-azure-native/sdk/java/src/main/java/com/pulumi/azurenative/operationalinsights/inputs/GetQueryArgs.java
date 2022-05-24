@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.operationalinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return The id of a specific query defined in the Log Analytics QueryPack
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -32,13 +33,13 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryPackName", required=true)
-    private String queryPackName;
+    private Output<String> queryPackName;
 
     /**
      * @return The name of the Log Analytics QueryPack resource.
      * 
      */
-    public String queryPackName() {
+    public Output<String> queryPackName() {
         return this.queryPackName;
     }
 
@@ -47,13 +48,13 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The id of a specific query defined in the Log Analytics QueryPack
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queryPackName(Output<String> queryPackName) {
+            $.queryPackName = queryPackName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder queryPackName(String queryPackName) {
-            $.queryPackName = queryPackName;
+            return queryPackName(Output.of(queryPackName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetQueryArgs build() {

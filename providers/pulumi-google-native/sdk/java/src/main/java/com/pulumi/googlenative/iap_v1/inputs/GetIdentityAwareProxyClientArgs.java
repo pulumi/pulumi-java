@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.iap_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetIdentityAwareProxyClientArgs extends com.pulumi.resources.
     public static final GetIdentityAwareProxyClientArgs Empty = new GetIdentityAwareProxyClientArgs();
 
     @Import(name="brandId", required=true)
-    private String brandId;
+    private Output<String> brandId;
 
-    public String brandId() {
+    public Output<String> brandId() {
         return this.brandId;
     }
 
     @Import(name="identityAwareProxyClientId", required=true)
-    private String identityAwareProxyClientId;
+    private Output<String> identityAwareProxyClientId;
 
-    public String identityAwareProxyClientId() {
+    public Output<String> identityAwareProxyClientId() {
         return this.identityAwareProxyClientId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetIdentityAwareProxyClientArgs() {}
@@ -61,19 +61,31 @@ public final class GetIdentityAwareProxyClientArgs extends com.pulumi.resources.
             $ = new GetIdentityAwareProxyClientArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder brandId(String brandId) {
+        public Builder brandId(Output<String> brandId) {
             $.brandId = brandId;
             return this;
         }
 
-        public Builder identityAwareProxyClientId(String identityAwareProxyClientId) {
+        public Builder brandId(String brandId) {
+            return brandId(Output.of(brandId));
+        }
+
+        public Builder identityAwareProxyClientId(Output<String> identityAwareProxyClientId) {
             $.identityAwareProxyClientId = identityAwareProxyClientId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder identityAwareProxyClientId(String identityAwareProxyClientId) {
+            return identityAwareProxyClientId(Output.of(identityAwareProxyClientId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetIdentityAwareProxyClientArgs build() {

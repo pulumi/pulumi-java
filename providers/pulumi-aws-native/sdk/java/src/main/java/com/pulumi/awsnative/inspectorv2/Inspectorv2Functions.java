@@ -6,24 +6,24 @@ package com.pulumi.awsnative.inspectorv2;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.inspectorv2.inputs.GetFilterArgs;
 import com.pulumi.awsnative.inspectorv2.outputs.GetFilterResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Inspectorv2Functions {
     /**
      * Inspector Filter resource schema
      * 
      */
-    public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args) {
+    public static Output<GetFilterResult> getFilter(GetFilterArgs args) {
         return getFilter(args, InvokeOptions.Empty);
     }
     /**
      * Inspector Filter resource schema
      * 
      */
-    public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFilterResult> getFilter(GetFilterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args, Utilities.withVersion(options));
     }
 }

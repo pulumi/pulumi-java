@@ -56,10 +56,10 @@ import com.pulumi.azurenative.containerregistry.outputs.ListRunLogSasUrlResult;
 import com.pulumi.azurenative.containerregistry.outputs.ListTaskDetailsResult;
 import com.pulumi.azurenative.containerregistry.outputs.ListTaskRunDetailsResult;
 import com.pulumi.azurenative.containerregistry.outputs.ListWebhookEventsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ContainerregistryFunctions {
     /**
@@ -68,7 +68,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
+    public static Output<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
         return getAgentPool(args, InvokeOptions.Empty);
     }
     /**
@@ -77,15 +77,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The result of get log link operation.
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args) {
+    public static Output<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args) {
         return getBuildLogLink(args, InvokeOptions.Empty);
     }
     /**
@@ -93,15 +93,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getBuildLogLink", TypeShape.of(GetBuildLogLinkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getBuildLogLink", TypeShape.of(GetBuildLogLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a connected registry for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args) {
+    public static Output<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args) {
         return getConnectedRegistry(args, InvokeOptions.Empty);
     }
     /**
@@ -109,15 +109,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getConnectedRegistry", TypeShape.of(GetConnectedRegistryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getConnectedRegistry", TypeShape.of(GetConnectedRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents an export pipeline for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args) {
+    public static Output<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args) {
         return getExportPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -125,15 +125,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getExportPipeline", TypeShape.of(GetExportPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getExportPipeline", TypeShape.of(GetExportPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents an import pipeline for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args) {
+    public static Output<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args) {
         return getImportPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -141,15 +141,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getImportPipeline", TypeShape.of(GetImportPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getImportPipeline", TypeShape.of(GetImportPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a pipeline run for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args) {
+    public static Output<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args) {
         return getPipelineRun(args, InvokeOptions.Empty);
     }
     /**
@@ -157,15 +157,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getPipelineRun", TypeShape.of(GetPipelineRunResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getPipelineRun", TypeShape.of(GetPipelineRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a private endpoint connection for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -173,15 +173,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a container registry.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args) {
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args) {
         return getRegistry(args, InvokeOptions.Empty);
     }
     /**
@@ -189,15 +189,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The properties of a response to source upload request.
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args) {
+    public static Output<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args) {
         return getRegistryBuildSourceUploadUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -205,15 +205,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryBuildSourceUploadUrl", TypeShape.of(GetRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getRegistryBuildSourceUploadUrl", TypeShape.of(GetRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The result of a request to get the administrator login credentials for a container registry.
      * API Version: 2016-06-27-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args) {
+    public static Output<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args) {
         return getRegistryCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -221,15 +221,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2016-06-27-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryCredentials", TypeShape.of(GetRegistryCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getRegistryCredentials", TypeShape.of(GetRegistryCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a replication for a container registry.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetReplicationResult> getReplication(GetReplicationArgs args) {
+    public static Output<GetReplicationResult> getReplication(GetReplicationArgs args) {
         return getReplication(args, InvokeOptions.Empty);
     }
     /**
@@ -237,15 +237,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetReplicationResult> getReplication(GetReplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getReplication", TypeShape.of(GetReplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationResult> getReplication(GetReplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getReplication", TypeShape.of(GetReplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a scope map for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeMapResult> getScopeMap(GetScopeMapArgs args) {
+    public static Output<GetScopeMapResult> getScopeMap(GetScopeMapArgs args) {
         return getScopeMap(args, InvokeOptions.Empty);
     }
     /**
@@ -253,8 +253,8 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeMapResult> getScopeMap(GetScopeMapArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getScopeMap", TypeShape.of(GetScopeMapResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScopeMapResult> getScopeMap(GetScopeMapArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getScopeMap", TypeShape.of(GetScopeMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The task that has the ARM resource and task properties.
@@ -262,7 +262,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
+    public static Output<GetTaskResult> getTask(GetTaskArgs args) {
         return getTask(args, InvokeOptions.Empty);
     }
     /**
@@ -271,8 +271,8 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The task run that has the ARM resource and properties.
@@ -280,7 +280,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskRunResult> getTaskRun(GetTaskRunArgs args) {
+    public static Output<GetTaskRunResult> getTaskRun(GetTaskRunArgs args) {
         return getTaskRun(args, InvokeOptions.Empty);
     }
     /**
@@ -289,15 +289,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskRunResult> getTaskRun(GetTaskRunArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getTaskRun", TypeShape.of(GetTaskRunResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaskRunResult> getTaskRun(GetTaskRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getTaskRun", TypeShape.of(GetTaskRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a token for a container registry.
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTokenResult> getToken(GetTokenArgs args) {
+    public static Output<GetTokenResult> getToken(GetTokenArgs args) {
         return getToken(args, InvokeOptions.Empty);
     }
     /**
@@ -305,15 +305,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTokenResult> getToken(GetTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getToken", TypeShape.of(GetTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTokenResult> getToken(GetTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getToken", TypeShape.of(GetTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a webhook for a container registry.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
+    public static Output<GetWebhookResult> getWebhook(GetWebhookArgs args) {
         return getWebhook(args, InvokeOptions.Empty);
     }
     /**
@@ -321,15 +321,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The configuration of service URI and custom headers for the webhook.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args) {
+    public static Output<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args) {
         return getWebhookCallbackConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -337,15 +337,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhookCallbackConfig", TypeShape.of(GetWebhookCallbackConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:getWebhookCallbackConfig", TypeShape.of(GetWebhookCallbackConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The QueueStatus of Agent Pool
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args) {
+    public static Output<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args) {
         return listAgentPoolQueueStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -353,15 +353,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listAgentPoolQueueStatus", TypeShape.of(ListAgentPoolQueueStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listAgentPoolQueueStatus", TypeShape.of(ListAgentPoolQueueStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of build arguments for a build step.
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args) {
+    public static Output<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args) {
         return listBuildStepBuildArguments(args, InvokeOptions.Empty);
     }
     /**
@@ -369,15 +369,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildStepBuildArguments", TypeShape.of(ListBuildStepBuildArgumentsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listBuildStepBuildArguments", TypeShape.of(ListBuildStepBuildArgumentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The properties of the source code repository.
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args) {
+    public static Output<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args) {
         return listBuildTaskSourceRepositoryProperties(args, InvokeOptions.Empty);
     }
     /**
@@ -385,15 +385,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildTaskSourceRepositoryProperties", TypeShape.of(ListBuildTaskSourceRepositoryPropertiesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listBuildTaskSourceRepositoryProperties", TypeShape.of(ListBuildTaskSourceRepositoryPropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The properties of a response to source upload request.
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args) {
+    public static Output<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args) {
         return listRegistryBuildSourceUploadUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -401,15 +401,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryBuildSourceUploadUrl", TypeShape.of(ListRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
+    public static Output<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listRegistryBuildSourceUploadUrl", TypeShape.of(ListRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The response from the ListCredentials operation.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args) {
+    public static Output<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args) {
         return listRegistryCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -417,15 +417,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryCredentials", TypeShape.of(ListRegistryCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listRegistryCredentials", TypeShape.of(ListRegistryCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The result of get log link operation.
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args) {
+    public static Output<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args) {
         return listRunLogSasUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -433,8 +433,8 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRunLogSasUrl", TypeShape.of(ListRunLogSasUrlResult.class), args, Utilities.withVersion(options));
+    public static Output<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listRunLogSasUrl", TypeShape.of(ListRunLogSasUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The task that has the ARM resource and task properties.
@@ -442,7 +442,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args) {
+    public static Output<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args) {
         return listTaskDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -451,8 +451,8 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listTaskDetails", TypeShape.of(ListTaskDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listTaskDetails", TypeShape.of(ListTaskDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The task run that has the ARM resource and properties.
@@ -460,7 +460,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args) {
+    public static Output<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args) {
         return listTaskRunDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -469,15 +469,15 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listTaskRunDetails", TypeShape.of(ListTaskRunDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listTaskRunDetails", TypeShape.of(ListTaskRunDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The result of a request to list events for a webhook.
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args) {
+    public static Output<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args) {
         return listWebhookEvents(args, InvokeOptions.Empty);
     }
     /**
@@ -485,7 +485,7 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listWebhookEvents", TypeShape.of(ListWebhookEventsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:containerregistry:listWebhookEvents", TypeShape.of(ListWebhookEventsResult.class), args, Utilities.withVersion(options));
     }
 }

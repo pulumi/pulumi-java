@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultId", required=true)
-    private String keyVaultId;
+    private Output<String> keyVaultId;
 
     /**
      * @return Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
      * 
      */
-    public String keyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -34,13 +34,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Key Vault Certificate.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,14 +49,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private Output</* @Nullable */ String> version;
 
     /**
      * @return Specifies the version of the certificate to look up.  (Defaults to latest)
      * 
      */
-    public Optional<String> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ String> version() {
+        return this.version;
     }
 
     private GetCertificateArgs() {}
@@ -91,8 +91,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyVaultId(String keyVaultId) {
+        public Builder keyVaultId(Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
+            return this;
+        }
+
+        /**
+         * @param keyVaultId Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
+        }
+
+        /**
+         * @param name Specifies the name of the Key Vault Certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param version Specifies the version of the certificate to look up.  (Defaults to latest)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ String> version) {
+            $.version = version;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetCertificateArgs build() {

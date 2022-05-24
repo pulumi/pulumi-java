@@ -6,10 +6,10 @@ package com.pulumi.azure.trafficmanager;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.trafficmanager.inputs.GetGeographicalLocationArgs;
 import com.pulumi.azure.trafficmanager.outputs.GetGeographicalLocationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class TrafficmanagerFunctions {
     /**
@@ -45,7 +45,7 @@ public final class TrafficmanagerFunctions {
      * 
      */
     @Deprecated /* azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager */
-    public static CompletableFuture<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args) {
+    public static Output<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args) {
         return getGeographicalLocation(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class TrafficmanagerFunctions {
      * 
      */
     @Deprecated /* azure.trafficmanager.getGeographicalLocation has been deprecated in favor of azure.network.getTrafficManager */
-    public static CompletableFuture<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:trafficmanager/getGeographicalLocation:getGeographicalLocation", TypeShape.of(GetGeographicalLocationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGeographicalLocationResult> getGeographicalLocation(GetGeographicalLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:trafficmanager/getGeographicalLocation:getGeographicalLocation", TypeShape.of(GetGeographicalLocationResult.class), args, Utilities.withVersion(options));
     }
 }

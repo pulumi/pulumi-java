@@ -6,10 +6,10 @@ package com.pulumi.azure.connections;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.connections.inputs.GetManagedApiArgs;
 import com.pulumi.azure.connections.outputs.GetManagedApiResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConnectionsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class ConnectionsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedApiResult> getManagedApi(GetManagedApiArgs args) {
+    public static Output<GetManagedApiResult> getManagedApi(GetManagedApiArgs args) {
         return getManagedApi(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class ConnectionsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedApiResult> getManagedApi(GetManagedApiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:connections/getManagedApi:getManagedApi", TypeShape.of(GetManagedApiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedApiResult> getManagedApi(GetManagedApiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:connections/getManagedApi:getManagedApi", TypeShape.of(GetManagedApiResult.class), args, Utilities.withVersion(options));
     }
 }

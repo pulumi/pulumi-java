@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNetworkInsightsAnalysisArgs extends com.pulumi.resources.I
     public static final GetNetworkInsightsAnalysisArgs Empty = new GetNetworkInsightsAnalysisArgs();
 
     @Import(name="networkInsightsAnalysisId", required=true)
-    private String networkInsightsAnalysisId;
+    private Output<String> networkInsightsAnalysisId;
 
-    public String networkInsightsAnalysisId() {
+    public Output<String> networkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;
     }
 
@@ -43,9 +44,13 @@ public final class GetNetworkInsightsAnalysisArgs extends com.pulumi.resources.I
             $ = new GetNetworkInsightsAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkInsightsAnalysisId(String networkInsightsAnalysisId) {
+        public Builder networkInsightsAnalysisId(Output<String> networkInsightsAnalysisId) {
             $.networkInsightsAnalysisId = networkInsightsAnalysisId;
             return this;
+        }
+
+        public Builder networkInsightsAnalysisId(String networkInsightsAnalysisId) {
+            return networkInsightsAnalysisId(Output.of(networkInsightsAnalysisId));
         }
 
         public GetNetworkInsightsAnalysisArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.NetworkLoadBalancer;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -31,7 +32,6 @@ import com.pulumi.oci.NetworkLoadBalancer.outputs.GetNetworkLoadBalancersPolicie
 import com.pulumi.oci.NetworkLoadBalancer.outputs.GetNetworkLoadBalancersProtocolsResult;
 import com.pulumi.oci.NetworkLoadBalancer.outputs.GetNetworkLoadBalancersResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class NetworkLoadBalancerFunctions {
     /**
@@ -42,7 +42,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args) {
+    public static Output<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args) {
         return getBackendHealth(args, InvokeOptions.Empty);
     }
     /**
@@ -53,8 +53,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getBackendHealth:getBackendHealth", TypeShape.of(GetBackendHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getBackendHealth:getBackendHealth", TypeShape.of(GetBackendHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Backend Set resource in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -64,7 +64,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetResult> getBackendSet(GetBackendSetArgs args) {
+    public static Output<GetBackendSetResult> getBackendSet(GetBackendSetArgs args) {
         return getBackendSet(args, InvokeOptions.Empty);
     }
     /**
@@ -75,14 +75,14 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetResult> getBackendSet(GetBackendSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getBackendSet:getBackendSet", TypeShape.of(GetBackendSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendSetResult> getBackendSet(GetBackendSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getBackendSet:getBackendSet", TypeShape.of(GetBackendSetResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args) {
+    public static Output<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args) {
         return getBackendSetHealth(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getBackendSetHealth:getBackendSetHealth", TypeShape.of(GetBackendSetHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getBackendSetHealth:getBackendSetHealth", TypeShape.of(GetBackendSetHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Backend Sets in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -92,7 +92,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args) {
+    public static Output<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args) {
         return getBackendSets(args, InvokeOptions.Empty);
     }
     /**
@@ -103,8 +103,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getBackendSets:getBackendSets", TypeShape.of(GetBackendSetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getBackendSets:getBackendSets", TypeShape.of(GetBackendSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Backends in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -114,7 +114,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendsResult> getBackends(GetBackendsArgs args) {
+    public static Output<GetBackendsResult> getBackends(GetBackendsArgs args) {
         return getBackends(args, InvokeOptions.Empty);
     }
     /**
@@ -125,8 +125,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendsResult> getBackends(GetBackendsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getBackends:getBackends", TypeShape.of(GetBackendsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendsResult> getBackends(GetBackendsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getBackends:getBackends", TypeShape.of(GetBackendsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Listener resource in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -136,7 +136,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+    public static Output<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listeners in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -158,7 +158,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenersResult> getListeners(GetListenersArgs args) {
+    public static Output<GetListenersResult> getListeners(GetListenersArgs args) {
         return getListeners(args, InvokeOptions.Empty);
     }
     /**
@@ -169,8 +169,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenersResult> getListeners(GetListenersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getListeners:getListeners", TypeShape.of(GetListenersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenersResult> getListeners(GetListenersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getListeners:getListeners", TypeShape.of(GetListenersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Network Load Balancer resource in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -180,7 +180,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancerResult> getNetworkLoadBalancer(GetNetworkLoadBalancerArgs args) {
+    public static Output<GetNetworkLoadBalancerResult> getNetworkLoadBalancer(GetNetworkLoadBalancerArgs args) {
         return getNetworkLoadBalancer(args, InvokeOptions.Empty);
     }
     /**
@@ -191,8 +191,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancerResult> getNetworkLoadBalancer(GetNetworkLoadBalancerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getNetworkLoadBalancer:getNetworkLoadBalancer", TypeShape.of(GetNetworkLoadBalancerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkLoadBalancerResult> getNetworkLoadBalancer(GetNetworkLoadBalancerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getNetworkLoadBalancer:getNetworkLoadBalancer", TypeShape.of(GetNetworkLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Network Load Balancer Health resource in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -202,7 +202,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancerHealthResult> getNetworkLoadBalancerHealth(GetNetworkLoadBalancerHealthArgs args) {
+    public static Output<GetNetworkLoadBalancerHealthResult> getNetworkLoadBalancerHealth(GetNetworkLoadBalancerHealthArgs args) {
         return getNetworkLoadBalancerHealth(args, InvokeOptions.Empty);
     }
     /**
@@ -213,8 +213,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancerHealthResult> getNetworkLoadBalancerHealth(GetNetworkLoadBalancerHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getNetworkLoadBalancerHealth:getNetworkLoadBalancerHealth", TypeShape.of(GetNetworkLoadBalancerHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkLoadBalancerHealthResult> getNetworkLoadBalancerHealth(GetNetworkLoadBalancerHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getNetworkLoadBalancerHealth:getNetworkLoadBalancerHealth", TypeShape.of(GetNetworkLoadBalancerHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Load Balancers in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -224,7 +224,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersResult> getNetworkLoadBalancers(GetNetworkLoadBalancersArgs args) {
+    public static Output<GetNetworkLoadBalancersResult> getNetworkLoadBalancers(GetNetworkLoadBalancersArgs args) {
         return getNetworkLoadBalancers(args, InvokeOptions.Empty);
     }
     /**
@@ -235,8 +235,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersResult> getNetworkLoadBalancers(GetNetworkLoadBalancersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getNetworkLoadBalancers:getNetworkLoadBalancers", TypeShape.of(GetNetworkLoadBalancersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkLoadBalancersResult> getNetworkLoadBalancers(GetNetworkLoadBalancersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getNetworkLoadBalancers:getNetworkLoadBalancers", TypeShape.of(GetNetworkLoadBalancersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Load Balancers Policies in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -246,7 +246,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies() {
+    public static Output<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies() {
         return getNetworkLoadBalancersPolicies(GetNetworkLoadBalancersPoliciesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -257,7 +257,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies(GetNetworkLoadBalancersPoliciesArgs args) {
+    public static Output<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies(GetNetworkLoadBalancersPoliciesArgs args) {
         return getNetworkLoadBalancersPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -268,8 +268,8 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies(GetNetworkLoadBalancersPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getNetworkLoadBalancersPolicies:getNetworkLoadBalancersPolicies", TypeShape.of(GetNetworkLoadBalancersPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkLoadBalancersPoliciesResult> getNetworkLoadBalancersPolicies(GetNetworkLoadBalancersPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getNetworkLoadBalancersPolicies:getNetworkLoadBalancersPolicies", TypeShape.of(GetNetworkLoadBalancersPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Load Balancers Protocols in Oracle Cloud Infrastructure Network Load Balancer service.
@@ -280,7 +280,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols() {
+    public static Output<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols() {
         return getNetworkLoadBalancersProtocols(GetNetworkLoadBalancersProtocolsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -292,7 +292,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols(GetNetworkLoadBalancersProtocolsArgs args) {
+    public static Output<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols(GetNetworkLoadBalancersProtocolsArgs args) {
         return getNetworkLoadBalancersProtocols(args, InvokeOptions.Empty);
     }
     /**
@@ -304,7 +304,7 @@ public final class NetworkLoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols(GetNetworkLoadBalancersProtocolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:NetworkLoadBalancer/getNetworkLoadBalancersProtocols:getNetworkLoadBalancersProtocols", TypeShape.of(GetNetworkLoadBalancersProtocolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkLoadBalancersProtocolsResult> getNetworkLoadBalancersProtocols(GetNetworkLoadBalancersProtocolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:NetworkLoadBalancer/getNetworkLoadBalancersProtocols:getNetworkLoadBalancersProtocols", TypeShape.of(GetNetworkLoadBalancersProtocolsResult.class), args, Utilities.withVersion(options));
     }
 }

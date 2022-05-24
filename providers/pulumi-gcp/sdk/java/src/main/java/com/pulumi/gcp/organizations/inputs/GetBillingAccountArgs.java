@@ -3,11 +3,11 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="billingAccount")
-    private @Nullable String billingAccount;
+    private Output</* @Nullable */ String> billingAccount;
 
     /**
      * @return The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    public Optional<String> billingAccount() {
-        return Optional.ofNullable(this.billingAccount);
+    public Output</* @Nullable */ String> billingAccount() {
+        return this.billingAccount;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the billing account.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="open")
-    private @Nullable Boolean open;
+    private Output</* @Nullable */ Boolean> open;
 
     /**
      * @return `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    public Optional<Boolean> open() {
-        return Optional.ofNullable(this.open);
+    public Output</* @Nullable */ Boolean> open() {
+        return this.open;
     }
 
     private GetBillingAccountArgs() {}
@@ -92,8 +92,29 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder billingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(Output</* @Nullable */ String> billingAccount) {
             $.billingAccount = billingAccount;
+            return this;
+        }
+
+        /**
+         * @param billingAccount The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccount(@Nullable String billingAccount) {
+            return billingAccount(Output.of(billingAccount));
+        }
+
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param open `true` if the billing account is open, `false` if the billing account is closed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder open(Output</* @Nullable */ Boolean> open) {
+            $.open = open;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder open(@Nullable Boolean open) {
-            $.open = open;
-            return this;
+            return open(Output.of(open));
         }
 
         public GetBillingAccountArgs build() {

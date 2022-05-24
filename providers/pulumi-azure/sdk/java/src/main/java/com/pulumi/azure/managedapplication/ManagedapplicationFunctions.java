@@ -6,10 +6,10 @@ package com.pulumi.azure.managedapplication;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.managedapplication.inputs.GetDefinitionArgs;
 import com.pulumi.azure.managedapplication.outputs.GetDefinitionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagedapplicationFunctions {
     /**
@@ -41,7 +41,7 @@ public final class ManagedapplicationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args) {
+    public static Output<GetDefinitionResult> getDefinition(GetDefinitionArgs args) {
         return getDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class ManagedapplicationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:managedapplication/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:managedapplication/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

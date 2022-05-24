@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmExtensionName", required=true)
-    private String vmExtensionName;
+    private Output<String> vmExtensionName;
 
     /**
      * @return The name of the virtual machine extension.
      * 
      */
-    public String vmExtensionName() {
+    public Output<String> vmExtensionName() {
         return this.vmExtensionName;
     }
 
@@ -64,13 +64,13 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmName", required=true)
-    private String vmName;
+    private Output<String> vmName;
 
     /**
      * @return The name of the virtual machine containing the extension.
      * 
      */
-    public String vmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -107,8 +107,29 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmExtensionName The name of the virtual machine extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmExtensionName(Output<String> vmExtensionName) {
+            $.vmExtensionName = vmExtensionName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder vmExtensionName(String vmExtensionName) {
-            $.vmExtensionName = vmExtensionName;
+            return vmExtensionName(Output.of(vmExtensionName));
+        }
+
+        /**
+         * @param vmName The name of the virtual machine containing the extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmName(Output<String> vmName) {
+            $.vmName = vmName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetVirtualMachineExtensionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder vmName(String vmName) {
-            $.vmName = vmName;
-            return this;
+            return vmName(Output.of(vmName));
         }
 
         public GetVirtualMachineExtensionArgs build() {

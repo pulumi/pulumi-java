@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoadBalancerRoutingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the specified load balancer.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLoadBalancerRoutingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="routingPolicyName", required=true)
-    private String routingPolicyName;
+    private Output<String> routingPolicyName;
 
     /**
      * @return The name of the routing policy to retrieve.  Example: `example_routing_policy`
      * 
      */
-    public String routingPolicyName() {
+    public Output<String> routingPolicyName() {
         return this.routingPolicyName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLoadBalancerRoutingPolicyArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the specified load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
+        }
+
+        /**
+         * @param routingPolicyName The name of the routing policy to retrieve.  Example: `example_routing_policy`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routingPolicyName(Output<String> routingPolicyName) {
+            $.routingPolicyName = routingPolicyName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLoadBalancerRoutingPolicyArgs extends com.pulumi.resources
          * 
          */
         public Builder routingPolicyName(String routingPolicyName) {
-            $.routingPolicyName = routingPolicyName;
-            return this;
+            return routingPolicyName(Output.of(routingPolicyName));
         }
 
         public GetLoadBalancerRoutingPolicyArgs build() {

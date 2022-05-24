@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Optimizer.inputs.GetRecommendationsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="categoryId", required=true)
-    private String categoryId;
+    private Output<String> categoryId;
 
     /**
      * @return The unique OCID associated with the category.
      * 
      */
-    public String categoryId() {
+    public Output<String> categoryId() {
         return this.categoryId;
     }
 
@@ -37,13 +37,13 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,21 +52,21 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentIdInSubtree", required=true)
-    private Boolean compartmentIdInSubtree;
+    private Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of `accessLevel`.
      * 
      */
-    public Boolean compartmentIdInSubtree() {
+    public Output<Boolean> compartmentIdInSubtree() {
         return this.compartmentIdInSubtree;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRecommendationsFilter> filters;
+    private Output</* @Nullable */ List<GetRecommendationsFilter>> filters;
 
-    public Optional<List<GetRecommendationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRecommendationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter that returns results that match the lifecycle state specified.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return A filter that returns recommendations that match the status specified.
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     private GetRecommendationsArgs() {}
@@ -150,8 +150,29 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder categoryId(String categoryId) {
+        public Builder categoryId(Output<String> categoryId) {
             $.categoryId = categoryId;
+            return this;
+        }
+
+        /**
+         * @param categoryId The unique OCID associated with the category.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categoryId(String categoryId) {
+            return categoryId(Output.of(categoryId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -162,7 +183,17 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of `accessLevel`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -173,13 +204,16 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetRecommendationsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetRecommendationsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRecommendationsFilter... filters) {
@@ -192,8 +226,29 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Optional. A filter that returns results that match the name specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter that returns results that match the lifecycle state specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -204,7 +259,17 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param status A filter that returns recommendations that match the status specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -215,8 +280,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
-            return this;
+            return status(Output.of(status));
         }
 
         public GetRecommendationsArgs build() {

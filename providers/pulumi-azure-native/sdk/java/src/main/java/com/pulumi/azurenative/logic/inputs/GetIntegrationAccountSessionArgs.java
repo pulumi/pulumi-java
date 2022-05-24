@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sessionName", required=true)
-    private String sessionName;
+    private Output<String> sessionName;
 
     /**
      * @return The integration account session name.
      * 
      */
-    public String sessionName() {
+    public Output<String> sessionName() {
         return this.sessionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder integrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
+            return this;
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sessionName The integration account session name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionName(Output<String> sessionName) {
+            $.sessionName = sessionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
          * 
          */
         public Builder sessionName(String sessionName) {
-            $.sessionName = sessionName;
-            return this;
+            return sessionName(Output.of(sessionName));
         }
 
         public GetIntegrationAccountSessionArgs build() {

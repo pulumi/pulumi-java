@@ -6,10 +6,10 @@ package com.pulumi.azure.recoveryservices;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.recoveryservices.inputs.GetVaultArgs;
 import com.pulumi.azure.recoveryservices.outputs.GetVaultResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RecoveryservicesFunctions {
     /**
@@ -40,7 +40,7 @@ public final class RecoveryservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+    public static Output<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class RecoveryservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:recoveryservices/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:recoveryservices/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
 }

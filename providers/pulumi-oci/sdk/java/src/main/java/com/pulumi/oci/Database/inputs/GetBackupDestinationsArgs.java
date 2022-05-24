@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetBackupDestinationsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBackupDestinationsFilter> filters;
+    private Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters;
 
-    public Optional<List<GetBackupDestinationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return A filter to return only resources that match the given type of the Backup Destination.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetBackupDestinationsArgs() {}
@@ -85,14 +85,28 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBackupDestinationsFilter> filters) {
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetBackupDestinationsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBackupDestinationsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(Output</* @Nullable */ String> type) {
             $.type = type;
             return this;
+        }
+
+        /**
+         * @param type A filter to return only resources that match the given type of the Backup Destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable String type) {
+            return type(Output.of(type));
         }
 
         public GetBackupDestinationsArgs build() {

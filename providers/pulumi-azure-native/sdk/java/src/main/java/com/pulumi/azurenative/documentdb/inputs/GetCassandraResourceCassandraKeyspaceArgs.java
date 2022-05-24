@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.documentdb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return Cosmos DB database account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="keyspaceName", required=true)
-    private String keyspaceName;
+    private Output<String> keyspaceName;
 
     /**
      * @return Cosmos DB keyspace name.
      * 
      */
-    public String keyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param keyspaceName Cosmos DB keyspace name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyspaceName(Output<String> keyspaceName) {
+            $.keyspaceName = keyspaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
          * 
          */
         public Builder keyspaceName(String keyspaceName) {
-            $.keyspaceName = keyspaceName;
+            return keyspaceName(Output.of(keyspaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCassandraResourceCassandraKeyspaceArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCassandraResourceCassandraKeyspaceArgs build() {

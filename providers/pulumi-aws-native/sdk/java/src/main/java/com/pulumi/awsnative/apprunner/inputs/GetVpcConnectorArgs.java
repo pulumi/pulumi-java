@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apprunner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVpcConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcConnectorArn", required=true)
-    private String vpcConnectorArn;
+    private Output<String> vpcConnectorArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of this VPC connector.
      * 
      */
-    public String vpcConnectorArn() {
+    public Output<String> vpcConnectorArn() {
         return this.vpcConnectorArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetVpcConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcConnectorArn(String vpcConnectorArn) {
+        public Builder vpcConnectorArn(Output<String> vpcConnectorArn) {
             $.vpcConnectorArn = vpcConnectorArn;
             return this;
+        }
+
+        /**
+         * @param vpcConnectorArn The Amazon Resource Name (ARN) of this VPC connector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcConnectorArn(String vpcConnectorArn) {
+            return vpcConnectorArn(Output.of(vpcConnectorArn));
         }
 
         public GetVpcConnectorArgs build() {

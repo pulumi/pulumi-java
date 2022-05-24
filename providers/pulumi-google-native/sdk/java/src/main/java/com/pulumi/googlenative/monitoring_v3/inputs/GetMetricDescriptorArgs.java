@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetMetricDescriptorArgs extends com.pulumi.resources.InvokeAr
     public static final GetMetricDescriptorArgs Empty = new GetMetricDescriptorArgs();
 
     @Import(name="metricDescriptorId", required=true)
-    private String metricDescriptorId;
+    private Output<String> metricDescriptorId;
 
-    public String metricDescriptorId() {
+    public Output<String> metricDescriptorId() {
         return this.metricDescriptorId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetMetricDescriptorArgs() {}
@@ -53,14 +53,22 @@ public final class GetMetricDescriptorArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMetricDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder metricDescriptorId(String metricDescriptorId) {
+        public Builder metricDescriptorId(Output<String> metricDescriptorId) {
             $.metricDescriptorId = metricDescriptorId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder metricDescriptorId(String metricDescriptorId) {
+            return metricDescriptorId(Output.of(metricDescriptorId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetMetricDescriptorArgs build() {

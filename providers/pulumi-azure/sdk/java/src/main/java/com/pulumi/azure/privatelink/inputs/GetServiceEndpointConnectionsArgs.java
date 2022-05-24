@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.privatelink.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceEndpointConnectionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the private link service resides.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceEndpointConnectionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
     /**
      * @return The resource ID of the private link service.
      * 
      */
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetServiceEndpointConnectionsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the private link service resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceId The resource ID of the private link service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceId(Output<String> serviceId) {
+            $.serviceId = serviceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetServiceEndpointConnectionsArgs extends com.pulumi.resource
          * 
          */
         public Builder serviceId(String serviceId) {
-            $.serviceId = serviceId;
-            return this;
+            return serviceId(Output.of(serviceId));
         }
 
         public GetServiceEndpointConnectionsArgs build() {

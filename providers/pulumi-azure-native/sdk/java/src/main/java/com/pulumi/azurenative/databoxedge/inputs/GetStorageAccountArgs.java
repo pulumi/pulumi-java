@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.databoxedge.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deviceName", required=true)
-    private String deviceName;
+    private Output<String> deviceName;
 
     /**
      * @return The device name.
      * 
      */
-    public String deviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storageAccountName", required=true)
-    private String storageAccountName;
+    private Output<String> storageAccountName;
 
     /**
      * @return The storage account name.
      * 
      */
-    public String storageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -89,8 +90,29 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder deviceName(String deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param storageAccountName The storage account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountName(Output<String> storageAccountName) {
+            $.storageAccountName = storageAccountName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder storageAccountName(String storageAccountName) {
-            $.storageAccountName = storageAccountName;
-            return this;
+            return storageAccountName(Output.of(storageAccountName));
         }
 
         public GetStorageAccountArgs build() {

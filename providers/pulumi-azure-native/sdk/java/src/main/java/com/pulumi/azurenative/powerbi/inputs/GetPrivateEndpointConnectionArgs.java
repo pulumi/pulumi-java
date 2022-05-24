@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.powerbi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="azureResourceName", required=true)
-    private String azureResourceName;
+    private Output<String> azureResourceName;
 
     /**
      * @return The name of the Azure resource.
      * 
      */
-    public String azureResourceName() {
+    public Output<String> azureResourceName() {
         return this.azureResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointName", required=true)
-    private String privateEndpointName;
+    private Output<String> privateEndpointName;
 
     /**
      * @return The name of the private endpoint.
      * 
      */
-    public String privateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder azureResourceName(String azureResourceName) {
+        public Builder azureResourceName(Output<String> azureResourceName) {
             $.azureResourceName = azureResourceName;
+            return this;
+        }
+
+        /**
+         * @param azureResourceName The name of the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder azureResourceName(String azureResourceName) {
+            return azureResourceName(Output.of(azureResourceName));
+        }
+
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointName(Output<String> privateEndpointName) {
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder privateEndpointName(String privateEndpointName) {
-            $.privateEndpointName = privateEndpointName;
+            return privateEndpointName(Output.of(privateEndpointName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="networkInterfaceName", required=true)
-    private String networkInterfaceName;
+    private Output<String> networkInterfaceName;
 
     /**
      * @return The name of the network interface.
      * 
      */
-    public String networkInterfaceName() {
+    public Output<String> networkInterfaceName() {
         return this.networkInterfaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="tapConfigurationName", required=true)
-    private String tapConfigurationName;
+    private Output<String> tapConfigurationName;
 
     /**
      * @return The name of the tap configuration.
      * 
      */
-    public String tapConfigurationName() {
+    public Output<String> tapConfigurationName() {
         return this.tapConfigurationName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder networkInterfaceName(String networkInterfaceName) {
+        public Builder networkInterfaceName(Output<String> networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkInterfaceName(String networkInterfaceName) {
+            return networkInterfaceName(Output.of(networkInterfaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tapConfigurationName The name of the tap configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tapConfigurationName(Output<String> tapConfigurationName) {
+            $.tapConfigurationName = tapConfigurationName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
          * 
          */
         public Builder tapConfigurationName(String tapConfigurationName) {
-            $.tapConfigurationName = tapConfigurationName;
-            return this;
+            return tapConfigurationName(Output.of(tapConfigurationName));
         }
 
         public GetNetworkInterfaceTapConfigurationArgs build() {

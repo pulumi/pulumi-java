@@ -4,11 +4,11 @@
 package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.azurenative.compute.enums.IntervalInMins;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="blobContainerSasUri", required=true)
-    private String blobContainerSasUri;
+    private Output<String> blobContainerSasUri;
 
     /**
      * @return SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
      * 
      */
-    public String blobContainerSasUri() {
+    public Output<String> blobContainerSasUri() {
         return this.blobContainerSasUri;
     }
 
@@ -36,13 +36,13 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="fromTime", required=true)
-    private String fromTime;
+    private Output<String> fromTime;
 
     /**
      * @return From time of the query
      * 
      */
-    public String fromTime() {
+    public Output<String> fromTime() {
         return this.fromTime;
     }
 
@@ -51,14 +51,14 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="groupByClientApplicationId")
-    private @Nullable Boolean groupByClientApplicationId;
+    private Output</* @Nullable */ Boolean> groupByClientApplicationId;
 
     /**
      * @return Group query result by Client Application ID.
      * 
      */
-    public Optional<Boolean> groupByClientApplicationId() {
-        return Optional.ofNullable(this.groupByClientApplicationId);
+    public Output</* @Nullable */ Boolean> groupByClientApplicationId() {
+        return this.groupByClientApplicationId;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="groupByOperationName")
-    private @Nullable Boolean groupByOperationName;
+    private Output</* @Nullable */ Boolean> groupByOperationName;
 
     /**
      * @return Group query result by Operation Name.
      * 
      */
-    public Optional<Boolean> groupByOperationName() {
-        return Optional.ofNullable(this.groupByOperationName);
+    public Output</* @Nullable */ Boolean> groupByOperationName() {
+        return this.groupByOperationName;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="groupByResourceName")
-    private @Nullable Boolean groupByResourceName;
+    private Output</* @Nullable */ Boolean> groupByResourceName;
 
     /**
      * @return Group query result by Resource Name.
      * 
      */
-    public Optional<Boolean> groupByResourceName() {
-        return Optional.ofNullable(this.groupByResourceName);
+    public Output</* @Nullable */ Boolean> groupByResourceName() {
+        return this.groupByResourceName;
     }
 
     /**
@@ -96,14 +96,14 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="groupByThrottlePolicy")
-    private @Nullable Boolean groupByThrottlePolicy;
+    private Output</* @Nullable */ Boolean> groupByThrottlePolicy;
 
     /**
      * @return Group query result by Throttle Policy applied.
      * 
      */
-    public Optional<Boolean> groupByThrottlePolicy() {
-        return Optional.ofNullable(this.groupByThrottlePolicy);
+    public Output</* @Nullable */ Boolean> groupByThrottlePolicy() {
+        return this.groupByThrottlePolicy;
     }
 
     /**
@@ -111,14 +111,14 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="groupByUserAgent")
-    private @Nullable Boolean groupByUserAgent;
+    private Output</* @Nullable */ Boolean> groupByUserAgent;
 
     /**
      * @return Group query result by User Agent.
      * 
      */
-    public Optional<Boolean> groupByUserAgent() {
-        return Optional.ofNullable(this.groupByUserAgent);
+    public Output</* @Nullable */ Boolean> groupByUserAgent() {
+        return this.groupByUserAgent;
     }
 
     /**
@@ -126,13 +126,13 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="intervalLength", required=true)
-    private IntervalInMins intervalLength;
+    private Output<IntervalInMins> intervalLength;
 
     /**
      * @return Interval value in minutes used to create LogAnalytics call rate logs.
      * 
      */
-    public IntervalInMins intervalLength() {
+    public Output<IntervalInMins> intervalLength() {
         return this.intervalLength;
     }
 
@@ -141,13 +141,13 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The location upon which virtual-machine-sizes is queried.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -156,13 +156,13 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
      * 
      */
     @Import(name="toTime", required=true)
-    private String toTime;
+    private Output<String> toTime;
 
     /**
      * @return To time of the query
      * 
      */
-    public String toTime() {
+    public Output<String> toTime() {
         return this.toTime;
     }
 
@@ -205,8 +205,29 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * @return builder
          * 
          */
-        public Builder blobContainerSasUri(String blobContainerSasUri) {
+        public Builder blobContainerSasUri(Output<String> blobContainerSasUri) {
             $.blobContainerSasUri = blobContainerSasUri;
+            return this;
+        }
+
+        /**
+         * @param blobContainerSasUri SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blobContainerSasUri(String blobContainerSasUri) {
+            return blobContainerSasUri(Output.of(blobContainerSasUri));
+        }
+
+        /**
+         * @param fromTime From time of the query
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fromTime(Output<String> fromTime) {
+            $.fromTime = fromTime;
             return this;
         }
 
@@ -217,7 +238,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder fromTime(String fromTime) {
-            $.fromTime = fromTime;
+            return fromTime(Output.of(fromTime));
+        }
+
+        /**
+         * @param groupByClientApplicationId Group query result by Client Application ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByClientApplicationId(Output</* @Nullable */ Boolean> groupByClientApplicationId) {
+            $.groupByClientApplicationId = groupByClientApplicationId;
             return this;
         }
 
@@ -228,7 +259,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder groupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
-            $.groupByClientApplicationId = groupByClientApplicationId;
+            return groupByClientApplicationId(Output.of(groupByClientApplicationId));
+        }
+
+        /**
+         * @param groupByOperationName Group query result by Operation Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByOperationName(Output</* @Nullable */ Boolean> groupByOperationName) {
+            $.groupByOperationName = groupByOperationName;
             return this;
         }
 
@@ -239,7 +280,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder groupByOperationName(@Nullable Boolean groupByOperationName) {
-            $.groupByOperationName = groupByOperationName;
+            return groupByOperationName(Output.of(groupByOperationName));
+        }
+
+        /**
+         * @param groupByResourceName Group query result by Resource Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByResourceName(Output</* @Nullable */ Boolean> groupByResourceName) {
+            $.groupByResourceName = groupByResourceName;
             return this;
         }
 
@@ -250,7 +301,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder groupByResourceName(@Nullable Boolean groupByResourceName) {
-            $.groupByResourceName = groupByResourceName;
+            return groupByResourceName(Output.of(groupByResourceName));
+        }
+
+        /**
+         * @param groupByThrottlePolicy Group query result by Throttle Policy applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByThrottlePolicy(Output</* @Nullable */ Boolean> groupByThrottlePolicy) {
+            $.groupByThrottlePolicy = groupByThrottlePolicy;
             return this;
         }
 
@@ -261,7 +322,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder groupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
-            $.groupByThrottlePolicy = groupByThrottlePolicy;
+            return groupByThrottlePolicy(Output.of(groupByThrottlePolicy));
+        }
+
+        /**
+         * @param groupByUserAgent Group query result by User Agent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByUserAgent(Output</* @Nullable */ Boolean> groupByUserAgent) {
+            $.groupByUserAgent = groupByUserAgent;
             return this;
         }
 
@@ -272,7 +343,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder groupByUserAgent(@Nullable Boolean groupByUserAgent) {
-            $.groupByUserAgent = groupByUserAgent;
+            return groupByUserAgent(Output.of(groupByUserAgent));
+        }
+
+        /**
+         * @param intervalLength Interval value in minutes used to create LogAnalytics call rate logs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder intervalLength(Output<IntervalInMins> intervalLength) {
+            $.intervalLength = intervalLength;
             return this;
         }
 
@@ -283,7 +364,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder intervalLength(IntervalInMins intervalLength) {
-            $.intervalLength = intervalLength;
+            return intervalLength(Output.of(intervalLength));
+        }
+
+        /**
+         * @param location The location upon which virtual-machine-sizes is queried.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -294,7 +385,17 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder location(String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param toTime To time of the query
+         * 
+         * @return builder
+         * 
+         */
+        public Builder toTime(Output<String> toTime) {
+            $.toTime = toTime;
             return this;
         }
 
@@ -305,8 +406,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
          * 
          */
         public Builder toTime(String toTime) {
-            $.toTime = toTime;
-            return this;
+            return toTime(Output.of(toTime));
         }
 
         public GetLogAnalyticExportRequestRateByIntervalArgs build() {

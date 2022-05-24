@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.glue.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionId", required=true)
-    private String versionId;
+    private Output<String> versionId;
 
     /**
      * @return Represents the version ID associated with the schema version.
      * 
      */
-    public String versionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder versionId(String versionId) {
+        public Builder versionId(Output<String> versionId) {
             $.versionId = versionId;
             return this;
+        }
+
+        /**
+         * @param versionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
 
         public GetSchemaVersionArgs build() {

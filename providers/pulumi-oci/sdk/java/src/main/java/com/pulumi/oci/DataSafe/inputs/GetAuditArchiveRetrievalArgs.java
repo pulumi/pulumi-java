@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAuditArchiveRetrievalArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="auditArchiveRetrievalId", required=true)
-    private String auditArchiveRetrievalId;
+    private Output<String> auditArchiveRetrievalId;
 
     /**
      * @return OCID of the archive retrieval.
      * 
      */
-    public String auditArchiveRetrievalId() {
+    public Output<String> auditArchiveRetrievalId() {
         return this.auditArchiveRetrievalId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAuditArchiveRetrievalArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder auditArchiveRetrievalId(String auditArchiveRetrievalId) {
+        public Builder auditArchiveRetrievalId(Output<String> auditArchiveRetrievalId) {
             $.auditArchiveRetrievalId = auditArchiveRetrievalId;
             return this;
+        }
+
+        /**
+         * @param auditArchiveRetrievalId OCID of the archive retrieval.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditArchiveRetrievalId(String auditArchiveRetrievalId) {
+            return auditArchiveRetrievalId(Output.of(auditArchiveRetrievalId));
         }
 
         public GetAuditArchiveRetrievalArgs build() {

@@ -16,94 +16,94 @@ import com.pulumi.awsnative.wafv2.outputs.GetRegexPatternSetResult;
 import com.pulumi.awsnative.wafv2.outputs.GetRuleGroupResult;
 import com.pulumi.awsnative.wafv2.outputs.GetWebACLAssociationResult;
 import com.pulumi.awsnative.wafv2.outputs.GetWebACLResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Wafv2Functions {
     /**
      * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
      * 
      */
-    public static CompletableFuture<GetIPSetResult> getIPSet(GetIPSetArgs args) {
+    public static Output<GetIPSetResult> getIPSet(GetIPSetArgs args) {
         return getIPSet(args, InvokeOptions.Empty);
     }
     /**
      * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
      * 
      */
-    public static CompletableFuture<GetIPSetResult> getIPSet(GetIPSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getIPSet", TypeShape.of(GetIPSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIPSetResult> getIPSet(GetIPSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getIPSet", TypeShape.of(GetIPSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A WAFv2 Logging Configuration Resource Provider
      * 
      */
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args) {
+    public static Output<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args) {
         return getLoggingConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * A WAFv2 Logging Configuration Resource Provider
      * 
      */
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
+    public static Output<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
         return getRegexPatternSet(args, InvokeOptions.Empty);
     }
     /**
      * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a RuleGroup, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a RuleGroup, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the RuleGroup with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a RuleGroup, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
+    public static Output<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
         return getRuleGroup(args, InvokeOptions.Empty);
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a RuleGroup, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a RuleGroup, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the RuleGroup with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a RuleGroup, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a WebACL, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a WebACL, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the WebACL with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a WebACL, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetWebACLResult> getWebACL(GetWebACLArgs args) {
+    public static Output<GetWebACLResult> getWebACL(GetWebACLArgs args) {
         return getWebACL(args, InvokeOptions.Empty);
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a WebACL, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a WebACL, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the WebACL with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a WebACL, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetWebACLResult> getWebACL(GetWebACLArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getWebACL", TypeShape.of(GetWebACLResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebACLResult> getWebACL(GetWebACLArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getWebACL", TypeShape.of(GetWebACLResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
      * 
      */
-    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args) {
+    public static Output<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args) {
         return getWebACLAssociation(args, InvokeOptions.Empty);
     }
     /**
      * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
      * 
      */
-    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:wafv2:getWebACLAssociation", TypeShape.of(GetWebACLAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:wafv2:getWebACLAssociation", TypeShape.of(GetWebACLAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

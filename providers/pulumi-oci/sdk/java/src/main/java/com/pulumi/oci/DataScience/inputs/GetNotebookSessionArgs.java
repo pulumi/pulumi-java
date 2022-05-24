@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNotebookSessionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="notebookSessionId", required=true)
-    private String notebookSessionId;
+    private Output<String> notebookSessionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the notebook session.
      * 
      */
-    public String notebookSessionId() {
+    public Output<String> notebookSessionId() {
         return this.notebookSessionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNotebookSessionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder notebookSessionId(String notebookSessionId) {
+        public Builder notebookSessionId(Output<String> notebookSessionId) {
             $.notebookSessionId = notebookSessionId;
             return this;
+        }
+
+        /**
+         * @param notebookSessionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the notebook session.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notebookSessionId(String notebookSessionId) {
+            return notebookSessionId(Output.of(notebookSessionId));
         }
 
         public GetNotebookSessionArgs build() {

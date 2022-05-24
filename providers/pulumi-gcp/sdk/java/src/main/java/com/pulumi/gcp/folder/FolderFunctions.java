@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.folder;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.folder.inputs.GetOrganizationPolicyArgs;
 import com.pulumi.gcp.folder.outputs.GetOrganizationPolicyResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class FolderFunctions {
     /**
@@ -43,7 +43,7 @@ public final class FolderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
+    public static Output<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
         return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class FolderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:folder/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:folder/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

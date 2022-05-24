@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.FileStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotId", required=true)
-    private String snapshotId;
+    private Output<String> snapshotId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the snapshot.
      * 
      */
-    public String snapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder snapshotId(String snapshotId) {
+        public Builder snapshotId(Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
+        }
+
+        /**
+         * @param snapshotId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
 
         public GetSnapshotArgs build() {

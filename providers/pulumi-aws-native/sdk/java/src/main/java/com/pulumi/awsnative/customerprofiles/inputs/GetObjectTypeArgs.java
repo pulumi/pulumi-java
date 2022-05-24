@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.customerprofiles.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,13 +33,13 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectTypeName", required=true)
-    private String objectTypeName;
+    private Output<String> objectTypeName;
 
     /**
      * @return The name of the profile object type.
      * 
      */
-    public String objectTypeName() {
+    public Output<String> objectTypeName() {
         return this.objectTypeName;
     }
 
@@ -73,8 +74,29 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param objectTypeName The name of the profile object type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectTypeName(Output<String> objectTypeName) {
+            $.objectTypeName = objectTypeName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder objectTypeName(String objectTypeName) {
-            $.objectTypeName = objectTypeName;
-            return this;
+            return objectTypeName(Output.of(objectTypeName));
         }
 
         public GetObjectTypeArgs build() {

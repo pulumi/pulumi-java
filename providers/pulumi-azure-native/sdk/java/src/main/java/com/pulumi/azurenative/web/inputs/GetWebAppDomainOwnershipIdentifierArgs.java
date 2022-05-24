@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
      * 
      */
     @Import(name="domainOwnershipIdentifierName", required=true)
-    private String domainOwnershipIdentifierName;
+    private Output<String> domainOwnershipIdentifierName;
 
     /**
      * @return Name of domain ownership identifier.
      * 
      */
-    public String domainOwnershipIdentifierName() {
+    public Output<String> domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder domainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
+        public Builder domainOwnershipIdentifierName(Output<String> domainOwnershipIdentifierName) {
             $.domainOwnershipIdentifierName = domainOwnershipIdentifierName;
+            return this;
+        }
+
+        /**
+         * @param domainOwnershipIdentifierName Name of domain ownership identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
+            return domainOwnershipIdentifierName(Output.of(domainOwnershipIdentifierName));
+        }
+
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWebAppDomainOwnershipIdentifierArgs build() {

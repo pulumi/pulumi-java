@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.kendra.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="indexId", required=true)
-    private String indexId;
+    private Output<String> indexId;
 
-    public String indexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
 
@@ -51,14 +52,22 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder indexId(String indexId) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder indexId(Output<String> indexId) {
             $.indexId = indexId;
             return this;
+        }
+
+        public Builder indexId(String indexId) {
+            return indexId(Output.of(indexId));
         }
 
         public GetDataSourceArgs build() {

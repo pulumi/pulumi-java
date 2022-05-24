@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Mysql.inputs.GetChannelsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelId")
-    private @Nullable String channelId;
+    private Output</* @Nullable */ String> channelId;
 
     /**
      * @return The OCID of the Channel.
      * 
      */
-    public Optional<String> channelId() {
-        return Optional.ofNullable(this.channelId);
+    public Output</* @Nullable */ String> channelId() {
+        return this.channelId;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,14 +52,14 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private @Nullable String dbSystemId;
+    private Output</* @Nullable */ String> dbSystemId;
 
     /**
      * @return The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> dbSystemId() {
-        return Optional.ofNullable(this.dbSystemId);
+    public Output</* @Nullable */ String> dbSystemId() {
+        return this.dbSystemId;
     }
 
     /**
@@ -67,21 +67,21 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetChannelsFilter> filters;
+    private Output</* @Nullable */ List<GetChannelsFilter>> filters;
 
-    public Optional<List<GetChannelsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetChannelsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isEnabled")
-    private @Nullable Boolean isEnabled;
+    private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
      * @return If true, returns only Channels that are enabled. If false, returns only Channels that are disabled.
      * 
      */
-    public Optional<Boolean> isEnabled() {
-        return Optional.ofNullable(this.isEnabled);
+    public Output</* @Nullable */ Boolean> isEnabled() {
+        return this.isEnabled;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The LifecycleState of the Channel.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetChannelsArgs() {}
@@ -150,8 +150,29 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder channelId(@Nullable String channelId) {
+        public Builder channelId(Output</* @Nullable */ String> channelId) {
             $.channelId = channelId;
+            return this;
+        }
+
+        /**
+         * @param channelId The OCID of the Channel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder channelId(@Nullable String channelId) {
+            return channelId(Output.of(channelId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -162,7 +183,17 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbSystemId The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+            $.dbSystemId = dbSystemId;
             return this;
         }
 
@@ -173,7 +204,17 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemId(@Nullable String dbSystemId) {
-            $.dbSystemId = dbSystemId;
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        /**
+         * @param displayName A filter to return only the resource matching the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -184,13 +225,16 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetChannelsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetChannelsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetChannelsFilter... filters) {
@@ -203,8 +247,29 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(Output</* @Nullable */ Boolean> isEnabled) {
             $.isEnabled = isEnabled;
+            return this;
+        }
+
+        /**
+         * @param isEnabled If true, returns only Channels that are enabled. If false, returns only Channels that are disabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        /**
+         * @param state The LifecycleState of the Channel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -215,8 +280,7 @@ public final class GetChannelsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetChannelsArgs build() {

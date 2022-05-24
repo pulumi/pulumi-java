@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.binaryauthorization_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetAttestorArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAttestorArgs Empty = new GetAttestorArgs();
 
     @Import(name="attestorId", required=true)
-    private String attestorId;
+    private Output<String> attestorId;
 
-    public String attestorId() {
+    public Output<String> attestorId() {
         return this.attestorId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetAttestorArgs() {}
@@ -53,14 +53,22 @@ public final class GetAttestorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAttestorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder attestorId(String attestorId) {
+        public Builder attestorId(Output<String> attestorId) {
             $.attestorId = attestorId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder attestorId(String attestorId) {
+            return attestorId(Output.of(attestorId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetAttestorArgs build() {

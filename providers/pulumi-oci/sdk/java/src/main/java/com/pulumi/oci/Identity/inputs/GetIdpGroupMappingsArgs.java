@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetIdpGroupMappingsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetIdpGroupMappingsArgs extends com.pulumi.resources.InvokeAr
     public static final GetIdpGroupMappingsArgs Empty = new GetIdpGroupMappingsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIdpGroupMappingsFilter> filters;
+    private Output</* @Nullable */ List<GetIdpGroupMappingsFilter>> filters;
 
-    public Optional<List<GetIdpGroupMappingsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIdpGroupMappingsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetIdpGroupMappingsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="identityProviderId", required=true)
-    private String identityProviderId;
+    private Output<String> identityProviderId;
 
     /**
      * @return The OCID of the identity provider.
      * 
      */
-    public String identityProviderId() {
+    public Output<String> identityProviderId() {
         return this.identityProviderId;
     }
 
@@ -63,9 +63,13 @@ public final class GetIdpGroupMappingsArgs extends com.pulumi.resources.InvokeAr
             $ = new GetIdpGroupMappingsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIdpGroupMappingsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetIdpGroupMappingsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIdpGroupMappingsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIdpGroupMappingsFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetIdpGroupMappingsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder identityProviderId(String identityProviderId) {
+        public Builder identityProviderId(Output<String> identityProviderId) {
             $.identityProviderId = identityProviderId;
             return this;
+        }
+
+        /**
+         * @param identityProviderId The OCID of the identity provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityProviderId(String identityProviderId) {
+            return identityProviderId(Output.of(identityProviderId));
         }
 
         public GetIdpGroupMappingsArgs build() {

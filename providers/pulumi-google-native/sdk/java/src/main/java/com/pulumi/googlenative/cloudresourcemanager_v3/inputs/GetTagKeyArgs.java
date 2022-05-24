@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudresourcemanager_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetTagKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTagKeyArgs Empty = new GetTagKeyArgs();
 
     @Import(name="tagKeyId", required=true)
-    private String tagKeyId;
+    private Output<String> tagKeyId;
 
-    public String tagKeyId() {
+    public Output<String> tagKeyId() {
         return this.tagKeyId;
     }
 
@@ -43,9 +44,13 @@ public final class GetTagKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTagKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder tagKeyId(String tagKeyId) {
+        public Builder tagKeyId(Output<String> tagKeyId) {
             $.tagKeyId = tagKeyId;
             return this;
+        }
+
+        public Builder tagKeyId(String tagKeyId) {
+            return tagKeyId(Output.of(tagKeyId));
         }
 
         public GetTagKeyArgs build() {

@@ -12,66 +12,66 @@ import com.pulumi.awsnative.acmpca.outputs.GetCertificateAuthorityActivationResu
 import com.pulumi.awsnative.acmpca.outputs.GetCertificateAuthorityResult;
 import com.pulumi.awsnative.acmpca.outputs.GetCertificateResult;
 import com.pulumi.awsnative.acmpca.outputs.GetPermissionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AcmpcaFunctions {
     /**
      * A certificate issued via a private certificate authority
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
      * A certificate issued via a private certificate authority
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:acmpca:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Private certificate authority.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
         return getCertificateAuthority(args, InvokeOptions.Empty);
     }
     /**
      * Private certificate authority.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:acmpca:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Used to install the certificate authority certificate and update the certificate authority status.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivation(GetCertificateAuthorityActivationArgs args) {
+    public static Output<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivation(GetCertificateAuthorityActivationArgs args) {
         return getCertificateAuthorityActivation(args, InvokeOptions.Empty);
     }
     /**
      * Used to install the certificate authority certificate and update the certificate authority status.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivation(GetCertificateAuthorityActivationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivation(GetCertificateAuthorityActivationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Permission set on private certificate authority
      * 
      */
-    public static CompletableFuture<GetPermissionResult> getPermission(GetPermissionArgs args) {
+    public static Output<GetPermissionResult> getPermission(GetPermissionArgs args) {
         return getPermission(args, InvokeOptions.Empty);
     }
     /**
      * Permission set on private certificate authority
      * 
      */
-    public static CompletableFuture<GetPermissionResult> getPermission(GetPermissionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getPermission", TypeShape.of(GetPermissionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPermissionResult> getPermission(GetPermissionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:acmpca:getPermission", TypeShape.of(GetPermissionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="associatedData")
-    private @Nullable Map<String,Object> associatedData;
+    private Output</* @Nullable */ Map<String,Object>> associatedData;
 
     /**
      * @return Information that can be used to provide an encryption context for the  encrypted data. The length of the string representation of the associatedData must be fewer than 4096 characters.
      * 
      */
-    public Optional<Map<String,Object>> associatedData() {
-        return Optional.ofNullable(this.associatedData);
+    public Output</* @Nullable */ Map<String,Object>> associatedData() {
+        return this.associatedData;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ciphertext", required=true)
-    private String ciphertext;
+    private Output<String> ciphertext;
 
     /**
      * @return The encrypted data to decrypt.
      * 
      */
-    public String ciphertext() {
+    public Output<String> ciphertext() {
         return this.ciphertext;
     }
 
@@ -51,13 +51,13 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cryptoEndpoint", required=true)
-    private String cryptoEndpoint;
+    private Output<String> cryptoEndpoint;
 
     /**
      * @return The service endpoint to perform cryptographic operations against. Cryptographic operations include &#39;Encrypt,&#39; &#39;Decrypt,&#39; and &#39;GenerateDataEncryptionKey&#39; operations. see Vault Crypto endpoint.
      * 
      */
-    public String cryptoEndpoint() {
+    public Output<String> cryptoEndpoint() {
         return this.cryptoEndpoint;
     }
 
@@ -66,13 +66,13 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return The OCID of the key used to encrypt the ciphertext.
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -109,8 +109,29 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder associatedData(@Nullable Map<String,Object> associatedData) {
+        public Builder associatedData(Output</* @Nullable */ Map<String,Object>> associatedData) {
             $.associatedData = associatedData;
+            return this;
+        }
+
+        /**
+         * @param associatedData Information that can be used to provide an encryption context for the  encrypted data. The length of the string representation of the associatedData must be fewer than 4096 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associatedData(@Nullable Map<String,Object> associatedData) {
+            return associatedData(Output.of(associatedData));
+        }
+
+        /**
+         * @param ciphertext The encrypted data to decrypt.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciphertext(Output<String> ciphertext) {
+            $.ciphertext = ciphertext;
             return this;
         }
 
@@ -121,7 +142,17 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder ciphertext(String ciphertext) {
-            $.ciphertext = ciphertext;
+            return ciphertext(Output.of(ciphertext));
+        }
+
+        /**
+         * @param cryptoEndpoint The service endpoint to perform cryptographic operations against. Cryptographic operations include &#39;Encrypt,&#39; &#39;Decrypt,&#39; and &#39;GenerateDataEncryptionKey&#39; operations. see Vault Crypto endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoEndpoint(Output<String> cryptoEndpoint) {
+            $.cryptoEndpoint = cryptoEndpoint;
             return this;
         }
 
@@ -132,7 +163,17 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder cryptoEndpoint(String cryptoEndpoint) {
-            $.cryptoEndpoint = cryptoEndpoint;
+            return cryptoEndpoint(Output.of(cryptoEndpoint));
+        }
+
+        /**
+         * @param keyId The OCID of the key used to encrypt the ciphertext.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(Output<String> keyId) {
+            $.keyId = keyId;
             return this;
         }
 
@@ -143,8 +184,7 @@ public final class GetDecryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder keyId(String keyId) {
-            $.keyId = keyId;
-            return this;
+            return keyId(Output.of(keyId));
         }
 
         public GetDecryptedDataArgs build() {

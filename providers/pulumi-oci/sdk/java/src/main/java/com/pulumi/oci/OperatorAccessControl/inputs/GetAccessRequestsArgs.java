@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OperatorAccessControl.inputs.GetAccessRequestsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAccessRequestsFilter> filters;
+    private Output</* @Nullable */ List<GetAccessRequestsFilter>> filters;
 
-    public Optional<List<GetAccessRequestsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAccessRequestsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceName")
-    private @Nullable String resourceName;
+    private Output</* @Nullable */ String> resourceName;
 
     /**
      * @return A filter to return only resources that match the given ResourceName.
      * 
      */
-    public Optional<String> resourceName() {
-        return Optional.ofNullable(this.resourceName);
+    public Output</* @Nullable */ String> resourceName() {
+        return this.resourceName;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceType")
-    private @Nullable String resourceType;
+    private Output</* @Nullable */ String> resourceType;
 
     /**
      * @return A filter to return only lists of resources that match the entire given service type.
      * 
      */
-    public Optional<String> resourceType() {
-        return Optional.ofNullable(this.resourceType);
+    public Output</* @Nullable */ String> resourceType() {
+        return this.resourceType;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources whose lifecycleState matches the given AccessRequest lifecycleState.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeEnd")
-    private @Nullable String timeEnd;
+    private Output</* @Nullable */ String> timeEnd;
 
     /**
      * @return Query start time in UTC in ISO 8601 format(inclusive). Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). timeIntervalStart and timeIntervalEnd parameters are used together.
      * 
      */
-    public Optional<String> timeEnd() {
-        return Optional.ofNullable(this.timeEnd);
+    public Output</* @Nullable */ String> timeEnd() {
+        return this.timeEnd;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeStart")
-    private @Nullable String timeStart;
+    private Output</* @Nullable */ String> timeStart;
 
     /**
      * @return Query start time in UTC in ISO 8601 format(inclusive). Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). timeIntervalStart and timeIntervalEnd parameters are used together.
      * 
      */
-    public Optional<String> timeStart() {
-        return Optional.ofNullable(this.timeStart);
+    public Output</* @Nullable */ String> timeStart() {
+        return this.timeStart;
     }
 
     private GetAccessRequestsArgs() {}
@@ -149,14 +149,28 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAccessRequestsFilter> filters) {
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAccessRequestsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetAccessRequestsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAccessRequestsFilter... filters) {
@@ -169,8 +183,29 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceName(@Nullable String resourceName) {
+        public Builder resourceName(Output</* @Nullable */ String> resourceName) {
             $.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * @param resourceName A filter to return only resources that match the given ResourceName.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(@Nullable String resourceName) {
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceType A filter to return only lists of resources that match the entire given service type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output</* @Nullable */ String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -181,7 +216,17 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceType(@Nullable String resourceType) {
-            $.resourceType = resourceType;
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param state A filter to return only resources whose lifecycleState matches the given AccessRequest lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -192,7 +237,17 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeEnd Query start time in UTC in ISO 8601 format(inclusive). Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). timeIntervalStart and timeIntervalEnd parameters are used together.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeEnd(Output</* @Nullable */ String> timeEnd) {
+            $.timeEnd = timeEnd;
             return this;
         }
 
@@ -203,7 +258,17 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder timeEnd(@Nullable String timeEnd) {
-            $.timeEnd = timeEnd;
+            return timeEnd(Output.of(timeEnd));
+        }
+
+        /**
+         * @param timeStart Query start time in UTC in ISO 8601 format(inclusive). Example 2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). timeIntervalStart and timeIntervalEnd parameters are used together.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStart(Output</* @Nullable */ String> timeStart) {
+            $.timeStart = timeStart;
             return this;
         }
 
@@ -214,8 +279,7 @@ public final class GetAccessRequestsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder timeStart(@Nullable String timeStart) {
-            $.timeStart = timeStart;
-            return this;
+            return timeStart(Output.of(timeStart));
         }
 
         public GetAccessRequestsArgs build() {

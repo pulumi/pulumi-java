@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Kms;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -29,7 +30,6 @@ import com.pulumi.oci.Kms.outputs.GetVaultResult;
 import com.pulumi.oci.Kms.outputs.GetVaultUsageResult;
 import com.pulumi.oci.Kms.outputs.GetVaultsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class KmsFunctions {
     /**
@@ -40,7 +40,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args) {
+    public static Output<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args) {
         return getDecryptedData(args, InvokeOptions.Empty);
     }
     /**
@@ -51,8 +51,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getDecryptedData:getDecryptedData", TypeShape.of(GetDecryptedDataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getDecryptedData:getDecryptedData", TypeShape.of(GetDecryptedDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The `oci.Kms.EncryptedData` data source provides details about a specific EncryptedData
@@ -64,7 +64,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args) {
+    public static Output<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args) {
         return getEncryptedData(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getEncryptedData:getEncryptedData", TypeShape.of(GetEncryptedDataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getEncryptedData:getEncryptedData", TypeShape.of(GetEncryptedDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Key resource in Oracle Cloud Infrastructure Kms service.
@@ -93,7 +93,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -109,8 +109,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Key Version resource in Oracle Cloud Infrastructure Kms service.
@@ -125,7 +125,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args) {
+    public static Output<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args) {
         return getKeyVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getKeyVersion:getKeyVersion", TypeShape.of(GetKeyVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getKeyVersion:getKeyVersion", TypeShape.of(GetKeyVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Key Versions in Oracle Cloud Infrastructure Kms service.
@@ -158,7 +158,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args) {
+    public static Output<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args) {
         return getKeyVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -175,8 +175,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getKeyVersions:getKeyVersions", TypeShape.of(GetKeyVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getKeyVersions:getKeyVersions", TypeShape.of(GetKeyVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Keys in Oracle Cloud Infrastructure Kms service.
@@ -191,7 +191,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args) {
+    public static Output<GetKeysResult> getKeys(GetKeysArgs args) {
         return getKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -207,8 +207,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Replication Status resource in Oracle Cloud Infrastructure Kms service.
@@ -221,7 +221,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args) {
+    public static Output<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args) {
         return getReplicationStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -235,8 +235,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getReplicationStatus:getReplicationStatus", TypeShape.of(GetReplicationStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getReplicationStatus:getReplicationStatus", TypeShape.of(GetReplicationStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vault resource in Oracle Cloud Infrastructure Kms service.
@@ -251,7 +251,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+    public static Output<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
     /**
@@ -267,8 +267,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vault Replicas in Oracle Cloud Infrastructure Kms service.
@@ -283,7 +283,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args) {
+    public static Output<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args) {
         return getVaultReplicas(args, InvokeOptions.Empty);
     }
     /**
@@ -299,8 +299,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getVaultReplicas:getVaultReplicas", TypeShape.of(GetVaultReplicasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getVaultReplicas:getVaultReplicas", TypeShape.of(GetVaultReplicasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vault Usage resource in Oracle Cloud Infrastructure Kms service.
@@ -310,7 +310,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args) {
+    public static Output<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args) {
         return getVaultUsage(args, InvokeOptions.Empty);
     }
     /**
@@ -321,8 +321,8 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getVaultUsage:getVaultUsage", TypeShape.of(GetVaultUsageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getVaultUsage:getVaultUsage", TypeShape.of(GetVaultUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vaults in Oracle Cloud Infrastructure Kms service.
@@ -337,7 +337,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultsResult> getVaults(GetVaultsArgs args) {
+    public static Output<GetVaultsResult> getVaults(GetVaultsArgs args) {
         return getVaults(args, InvokeOptions.Empty);
     }
     /**
@@ -353,7 +353,7 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultsResult> getVaults(GetVaultsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Kms/getVaults:getVaults", TypeShape.of(GetVaultsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultsResult> getVaults(GetVaultsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Kms/getVaults:getVaults", TypeShape.of(GetVaultsResult.class), args, Utilities.withVersion(options));
     }
 }

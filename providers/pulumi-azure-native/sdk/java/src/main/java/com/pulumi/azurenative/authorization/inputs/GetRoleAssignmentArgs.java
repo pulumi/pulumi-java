@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleAssignmentName", required=true)
-    private String roleAssignmentName;
+    private Output<String> roleAssignmentName;
 
     /**
      * @return The name of the role assignment. It can be any valid GUID.
      * 
      */
-    public String roleAssignmentName() {
+    public Output<String> roleAssignmentName() {
         return this.roleAssignmentName;
     }
 
@@ -34,13 +34,13 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the operation or resource. Valid scopes are: subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -49,14 +49,14 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tenantId")
-    private @Nullable String tenantId;
+    private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant ID for cross-tenant request
      * 
      */
-    public Optional<String> tenantId() {
-        return Optional.ofNullable(this.tenantId);
+    public Output</* @Nullable */ String> tenantId() {
+        return this.tenantId;
     }
 
     private GetRoleAssignmentArgs() {}
@@ -91,8 +91,29 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder roleAssignmentName(String roleAssignmentName) {
+        public Builder roleAssignmentName(Output<String> roleAssignmentName) {
             $.roleAssignmentName = roleAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param roleAssignmentName The name of the role assignment. It can be any valid GUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleAssignmentName(String roleAssignmentName) {
+            return roleAssignmentName(Output.of(roleAssignmentName));
+        }
+
+        /**
+         * @param scope The scope of the operation or resource. Valid scopes are: subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param tenantId Tenant ID for cross-tenant request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenantId(Output</* @Nullable */ String> tenantId) {
+            $.tenantId = tenantId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder tenantId(@Nullable String tenantId) {
-            $.tenantId = tenantId;
-            return this;
+            return tenantId(Output.of(tenantId));
         }
 
         public GetRoleAssignmentArgs build() {

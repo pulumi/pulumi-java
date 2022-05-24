@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.gameservices;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.gameservices.inputs.GetGameServerDeploymentRolloutArgs;
 import com.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class GameservicesFunctions {
     /**
@@ -41,7 +41,7 @@ public final class GameservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args) {
+    public static Output<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args) {
         return getGameServerDeploymentRollout(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class GameservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args, Utilities.withVersion(options));
     }
 }

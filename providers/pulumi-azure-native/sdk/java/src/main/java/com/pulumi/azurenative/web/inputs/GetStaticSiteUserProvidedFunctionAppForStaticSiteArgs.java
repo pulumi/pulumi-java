@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="functionAppName", required=true)
-    private String functionAppName;
+    private Output<String> functionAppName;
 
     /**
      * @return Name of the function app registered with the static site.
      * 
      */
-    public String functionAppName() {
+    public Output<String> functionAppName() {
         return this.functionAppName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the static site.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
          * @return builder
          * 
          */
-        public Builder functionAppName(String functionAppName) {
+        public Builder functionAppName(Output<String> functionAppName) {
             $.functionAppName = functionAppName;
+            return this;
+        }
+
+        /**
+         * @param functionAppName Name of the function app registered with the static site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionAppName(String functionAppName) {
+            return functionAppName(Output.of(functionAppName));
+        }
+
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs build() {

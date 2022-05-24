@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetAvailabilityDomainsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetAvailabilityDomainsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAvailabilityDomainsFilter> filters;
+    private Output</* @Nullable */ List<GetAvailabilityDomainsFilter>> filters;
 
-    public Optional<List<GetAvailabilityDomainsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAvailabilityDomainsFilter>> filters() {
+        return this.filters;
     }
 
     private GetAvailabilityDomainsArgs() {}
@@ -69,14 +69,28 @@ public final class GetAvailabilityDomainsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAvailabilityDomainsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAvailabilityDomainsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetAvailabilityDomainsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAvailabilityDomainsFilter... filters) {

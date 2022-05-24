@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Limits;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.oci.Limits.outputs.GetQuotasResult;
 import com.pulumi.oci.Limits.outputs.GetResourceAvailabilityResult;
 import com.pulumi.oci.Limits.outputs.GetServicesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class LimitsFunctions {
     /**
@@ -32,7 +32,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLimitDefinitionsResult> getLimitDefinitions(GetLimitDefinitionsArgs args) {
+    public static Output<GetLimitDefinitionsResult> getLimitDefinitions(GetLimitDefinitionsArgs args) {
         return getLimitDefinitions(args, InvokeOptions.Empty);
     }
     /**
@@ -45,8 +45,8 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLimitDefinitionsResult> getLimitDefinitions(GetLimitDefinitionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getLimitDefinitions:getLimitDefinitions", TypeShape.of(GetLimitDefinitionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLimitDefinitionsResult> getLimitDefinitions(GetLimitDefinitionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getLimitDefinitions:getLimitDefinitions", TypeShape.of(GetLimitDefinitionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Limit Values in Oracle Cloud Infrastructure Limits service.
@@ -56,7 +56,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLimitValuesResult> getLimitValues(GetLimitValuesArgs args) {
+    public static Output<GetLimitValuesResult> getLimitValues(GetLimitValuesArgs args) {
         return getLimitValues(args, InvokeOptions.Empty);
     }
     /**
@@ -67,8 +67,8 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLimitValuesResult> getLimitValues(GetLimitValuesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getLimitValues:getLimitValues", TypeShape.of(GetLimitValuesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLimitValuesResult> getLimitValues(GetLimitValuesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getLimitValues:getLimitValues", TypeShape.of(GetLimitValuesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Quota resource in Oracle Cloud Infrastructure Limits service.
@@ -78,7 +78,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQuotaResult> getQuota(GetQuotaArgs args) {
+    public static Output<GetQuotaResult> getQuota(GetQuotaArgs args) {
         return getQuota(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQuotaResult> getQuota(GetQuotaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getQuota:getQuota", TypeShape.of(GetQuotaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQuotaResult> getQuota(GetQuotaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getQuota:getQuota", TypeShape.of(GetQuotaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Quotas in Oracle Cloud Infrastructure Limits service.
@@ -100,7 +100,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQuotasResult> getQuotas(GetQuotasArgs args) {
+    public static Output<GetQuotasResult> getQuotas(GetQuotasArgs args) {
         return getQuotas(args, InvokeOptions.Empty);
     }
     /**
@@ -111,8 +111,8 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQuotasResult> getQuotas(GetQuotasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getQuotas:getQuotas", TypeShape.of(GetQuotasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQuotasResult> getQuotas(GetQuotasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getQuotas:getQuotas", TypeShape.of(GetQuotasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Resource Availability resource in Oracle Cloud Infrastructure Limits service.
@@ -125,7 +125,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceAvailabilityResult> getResourceAvailability(GetResourceAvailabilityArgs args) {
+    public static Output<GetResourceAvailabilityResult> getResourceAvailability(GetResourceAvailabilityArgs args) {
         return getResourceAvailability(args, InvokeOptions.Empty);
     }
     /**
@@ -139,8 +139,8 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceAvailabilityResult> getResourceAvailability(GetResourceAvailabilityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getResourceAvailability:getResourceAvailability", TypeShape.of(GetResourceAvailabilityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceAvailabilityResult> getResourceAvailability(GetResourceAvailabilityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getResourceAvailability:getResourceAvailability", TypeShape.of(GetResourceAvailabilityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Services in Oracle Cloud Infrastructure Limits service.
@@ -151,7 +151,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServicesResult> getServices(GetServicesArgs args) {
+    public static Output<GetServicesResult> getServices(GetServicesArgs args) {
         return getServices(args, InvokeOptions.Empty);
     }
     /**
@@ -163,7 +163,7 @@ public final class LimitsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServicesResult> getServices(GetServicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Limits/getServices:getServices", TypeShape.of(GetServicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicesResult> getServices(GetServicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Limits/getServices:getServices", TypeShape.of(GetServicesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.storagecache.inputs.GetCacheArgs;
 import com.pulumi.azurenative.storagecache.inputs.GetStorageTargetArgs;
 import com.pulumi.azurenative.storagecache.outputs.GetCacheResult;
 import com.pulumi.azurenative.storagecache.outputs.GetStorageTargetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class StoragecacheFunctions {
     /**
@@ -19,7 +19,7 @@ public final class StoragecacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
+    public static Output<GetCacheResult> getCache(GetCacheArgs args) {
         return getCache(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class StoragecacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:storagecache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:storagecache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Type of the Storage Target.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args) {
+    public static Output<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args) {
         return getStorageTarget(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class StoragecacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:storagecache:getStorageTarget", TypeShape.of(GetStorageTargetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:storagecache:getStorageTarget", TypeShape.of(GetStorageTargetResult.class), args, Utilities.withVersion(options));
     }
 }

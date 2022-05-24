@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="securityPartnerProviderName", required=true)
-    private String securityPartnerProviderName;
+    private Output<String> securityPartnerProviderName;
 
     /**
      * @return The name of the Security Partner Provider.
      * 
      */
-    public String securityPartnerProviderName() {
+    public Output<String> securityPartnerProviderName() {
         return this.securityPartnerProviderName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityPartnerProviderName The name of the Security Partner Provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityPartnerProviderName(Output<String> securityPartnerProviderName) {
+            $.securityPartnerProviderName = securityPartnerProviderName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSecurityPartnerProviderArgs extends com.pulumi.resources.I
          * 
          */
         public Builder securityPartnerProviderName(String securityPartnerProviderName) {
-            $.securityPartnerProviderName = securityPartnerProviderName;
-            return this;
+            return securityPartnerProviderName(Output.of(securityPartnerProviderName));
         }
 
         public GetSecurityPartnerProviderArgs build() {

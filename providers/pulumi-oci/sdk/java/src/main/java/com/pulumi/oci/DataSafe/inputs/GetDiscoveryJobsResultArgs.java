@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiscoveryJobsResultArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="discoveryJobId", required=true)
-    private String discoveryJobId;
+    private Output<String> discoveryJobId;
 
     /**
      * @return The OCID of the discovery job.
      * 
      */
-    public String discoveryJobId() {
+    public Output<String> discoveryJobId() {
         return this.discoveryJobId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDiscoveryJobsResultArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resultKey", required=true)
-    private String resultKey;
+    private Output<String> resultKey;
 
     /**
      * @return The unique key that identifies the discovery result.
      * 
      */
-    public String resultKey() {
+    public Output<String> resultKey() {
         return this.resultKey;
     }
 
@@ -73,8 +74,29 @@ public final class GetDiscoveryJobsResultArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder discoveryJobId(String discoveryJobId) {
+        public Builder discoveryJobId(Output<String> discoveryJobId) {
             $.discoveryJobId = discoveryJobId;
+            return this;
+        }
+
+        /**
+         * @param discoveryJobId The OCID of the discovery job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder discoveryJobId(String discoveryJobId) {
+            return discoveryJobId(Output.of(discoveryJobId));
+        }
+
+        /**
+         * @param resultKey The unique key that identifies the discovery result.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resultKey(Output<String> resultKey) {
+            $.resultKey = resultKey;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDiscoveryJobsResultArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resultKey(String resultKey) {
-            $.resultKey = resultKey;
-            return this;
+            return resultKey(Output.of(resultKey));
         }
 
         public GetDiscoveryJobsResultArgs build() {

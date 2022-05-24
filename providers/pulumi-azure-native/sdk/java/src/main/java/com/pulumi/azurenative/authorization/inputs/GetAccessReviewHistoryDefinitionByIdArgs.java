@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
      * 
      */
     @Import(name="historyDefinitionId", required=true)
-    private String historyDefinitionId;
+    private Output<String> historyDefinitionId;
 
     /**
      * @return The id of the access review history definition.
      * 
      */
-    public String historyDefinitionId() {
+    public Output<String> historyDefinitionId() {
         return this.historyDefinitionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder historyDefinitionId(String historyDefinitionId) {
+        public Builder historyDefinitionId(Output<String> historyDefinitionId) {
             $.historyDefinitionId = historyDefinitionId;
             return this;
+        }
+
+        /**
+         * @param historyDefinitionId The id of the access review history definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder historyDefinitionId(String historyDefinitionId) {
+            return historyDefinitionId(Output.of(historyDefinitionId));
         }
 
         public GetAccessReviewHistoryDefinitionByIdArgs build() {

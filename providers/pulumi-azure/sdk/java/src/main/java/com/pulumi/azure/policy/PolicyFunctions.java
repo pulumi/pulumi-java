@@ -10,10 +10,10 @@ import com.pulumi.azure.policy.inputs.GetVirtualMachineConfigurationAssignmentAr
 import com.pulumi.azure.policy.outputs.GetPolicyDefintionResult;
 import com.pulumi.azure.policy.outputs.GetPolicySetDefinitionResult;
 import com.pulumi.azure.policy.outputs.GetVirtualMachineConfigurationAssignmentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PolicyFunctions {
     /**
@@ -44,7 +44,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDefintionResult> getPolicyDefintion() {
+    public static Output<GetPolicyDefintionResult> getPolicyDefintion() {
         return getPolicyDefintion(GetPolicyDefintionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDefintionResult> getPolicyDefintion(GetPolicyDefintionArgs args) {
+    public static Output<GetPolicyDefintionResult> getPolicyDefintion(GetPolicyDefintionArgs args) {
         return getPolicyDefintion(args, InvokeOptions.Empty);
     }
     /**
@@ -106,8 +106,8 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyDefintionResult> getPolicyDefintion(GetPolicyDefintionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:policy/getPolicyDefintion:getPolicyDefintion", TypeShape.of(GetPolicyDefintionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyDefintionResult> getPolicyDefintion(GetPolicyDefintionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:policy/getPolicyDefintion:getPolicyDefintion", TypeShape.of(GetPolicyDefintionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Policy Set Definition.
@@ -137,7 +137,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition() {
+    public static Output<GetPolicySetDefinitionResult> getPolicySetDefinition() {
         return getPolicySetDefinition(GetPolicySetDefinitionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -168,7 +168,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args) {
+    public static Output<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args) {
         return getPolicySetDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -199,8 +199,8 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:policy/getPolicySetDefinition:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:policy/getPolicySetDefinition:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Guest Configuration Policy.
@@ -232,7 +232,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineConfigurationAssignmentResult> getVirtualMachineConfigurationAssignment(GetVirtualMachineConfigurationAssignmentArgs args) {
+    public static Output<GetVirtualMachineConfigurationAssignmentResult> getVirtualMachineConfigurationAssignment(GetVirtualMachineConfigurationAssignmentArgs args) {
         return getVirtualMachineConfigurationAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -265,7 +265,7 @@ public final class PolicyFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineConfigurationAssignmentResult> getVirtualMachineConfigurationAssignment(GetVirtualMachineConfigurationAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:policy/getVirtualMachineConfigurationAssignment:getVirtualMachineConfigurationAssignment", TypeShape.of(GetVirtualMachineConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineConfigurationAssignmentResult> getVirtualMachineConfigurationAssignment(GetVirtualMachineConfigurationAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:policy/getVirtualMachineConfigurationAssignment:getVirtualMachineConfigurationAssignment", TypeShape.of(GetVirtualMachineConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

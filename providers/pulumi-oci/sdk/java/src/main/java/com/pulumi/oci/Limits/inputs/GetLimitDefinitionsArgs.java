@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Limits.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Limits.inputs.GetLimitDefinitionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the parent compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLimitDefinitionsFilter> filters;
+    private Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters;
 
-    public Optional<List<GetLimitDefinitionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Optional field, filter for a specific resource limit.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName")
-    private @Nullable String serviceName;
+    private Output</* @Nullable */ String> serviceName;
 
     /**
      * @return The target service name.
      * 
      */
-    public Optional<String> serviceName() {
-        return Optional.ofNullable(this.serviceName);
+    public Output</* @Nullable */ String> serviceName() {
+        return this.serviceName;
     }
 
     private GetLimitDefinitionsArgs() {}
@@ -101,14 +101,28 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLimitDefinitionsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the parent compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetLimitDefinitionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetLimitDefinitionsFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Optional field, filter for a specific resource limit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param serviceName The target service name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output</* @Nullable */ String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serviceName(@Nullable String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetLimitDefinitionsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurearcdata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="postgresInstanceName", required=true)
-    private String postgresInstanceName;
+    private Output<String> postgresInstanceName;
 
     /**
      * @return Name of Postgres Instance
      * 
      */
-    public String postgresInstanceName() {
+    public Output<String> postgresInstanceName() {
         return this.postgresInstanceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder postgresInstanceName(String postgresInstanceName) {
+        public Builder postgresInstanceName(Output<String> postgresInstanceName) {
             $.postgresInstanceName = postgresInstanceName;
+            return this;
+        }
+
+        /**
+         * @param postgresInstanceName Name of Postgres Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder postgresInstanceName(String postgresInstanceName) {
+            return postgresInstanceName(Output.of(postgresInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPostgresInstanceArgs build() {

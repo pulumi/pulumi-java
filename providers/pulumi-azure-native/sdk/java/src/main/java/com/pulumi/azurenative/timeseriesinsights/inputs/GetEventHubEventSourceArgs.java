@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.timeseriesinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="eventSourceName", required=true)
-    private String eventSourceName;
+    private Output<String> eventSourceName;
 
     /**
      * @return The name of the Time Series Insights event source associated with the specified environment.
      * 
      */
-    public String eventSourceName() {
+    public Output<String> eventSourceName() {
         return this.eventSourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder environmentName(String environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param eventSourceName The name of the Time Series Insights event source associated with the specified environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSourceName(Output<String> eventSourceName) {
+            $.eventSourceName = eventSourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder eventSourceName(String eventSourceName) {
-            $.eventSourceName = eventSourceName;
+            return eventSourceName(Output.of(eventSourceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEventHubEventSourceArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDnsForwardingRulesetArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dnsForwardingRulesetName", required=true)
-    private String dnsForwardingRulesetName;
+    private Output<String> dnsForwardingRulesetName;
 
     /**
      * @return The name of the DNS forwarding ruleset.
      * 
      */
-    public String dnsForwardingRulesetName() {
+    public Output<String> dnsForwardingRulesetName() {
         return this.dnsForwardingRulesetName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDnsForwardingRulesetArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDnsForwardingRulesetArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder dnsForwardingRulesetName(String dnsForwardingRulesetName) {
+        public Builder dnsForwardingRulesetName(Output<String> dnsForwardingRulesetName) {
             $.dnsForwardingRulesetName = dnsForwardingRulesetName;
+            return this;
+        }
+
+        /**
+         * @param dnsForwardingRulesetName The name of the DNS forwarding ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsForwardingRulesetName(String dnsForwardingRulesetName) {
+            return dnsForwardingRulesetName(Output.of(dnsForwardingRulesetName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDnsForwardingRulesetArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDnsForwardingRulesetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.providerhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerNamespace", required=true)
-    private String providerNamespace;
+    private Output<String> providerNamespace;
 
     /**
      * @return The name of the resource provider hosted within ProviderHub.
      * 
      */
-    public String providerNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return The resource type.
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -73,8 +74,29 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder providerNamespace(String providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
+            return this;
+        }
+
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerNamespace(String providerNamespace) {
+            return providerNamespace(Output.of(providerNamespace));
+        }
+
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
-            return this;
+            return resourceType(Output.of(resourceType));
         }
 
         public GetResourceTypeRegistrationArgs build() {

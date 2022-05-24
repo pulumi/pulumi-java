@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetPublicAdvertisedPrefixArgs extends com.pulumi.resources.In
     public static final GetPublicAdvertisedPrefixArgs Empty = new GetPublicAdvertisedPrefixArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="publicAdvertisedPrefix", required=true)
-    private String publicAdvertisedPrefix;
+    private Output<String> publicAdvertisedPrefix;
 
-    public String publicAdvertisedPrefix() {
+    public Output<String> publicAdvertisedPrefix() {
         return this.publicAdvertisedPrefix;
     }
 
@@ -53,14 +53,22 @@ public final class GetPublicAdvertisedPrefixArgs extends com.pulumi.resources.In
             $ = new GetPublicAdvertisedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder publicAdvertisedPrefix(String publicAdvertisedPrefix) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder publicAdvertisedPrefix(Output<String> publicAdvertisedPrefix) {
             $.publicAdvertisedPrefix = publicAdvertisedPrefix;
             return this;
+        }
+
+        public Builder publicAdvertisedPrefix(String publicAdvertisedPrefix) {
+            return publicAdvertisedPrefix(Output.of(publicAdvertisedPrefix));
         }
 
         public GetPublicAdvertisedPrefixArgs build() {

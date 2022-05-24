@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.FileStorage;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.oci.FileStorage.outputs.GetMountTargetsResult;
 import com.pulumi.oci.FileStorage.outputs.GetSnapshotResult;
 import com.pulumi.oci.FileStorage.outputs.GetSnapshotsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class FileStorageFunctions {
     /**
@@ -30,7 +30,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportSetsResult> getExportSets(GetExportSetsArgs args) {
+    public static Output<GetExportSetsResult> getExportSets(GetExportSetsArgs args) {
         return getExportSets(args, InvokeOptions.Empty);
     }
     /**
@@ -41,8 +41,8 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportSetsResult> getExportSets(GetExportSetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getExportSets:getExportSets", TypeShape.of(GetExportSetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportSetsResult> getExportSets(GetExportSetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getExportSets:getExportSets", TypeShape.of(GetExportSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Exports in Oracle Cloud Infrastructure File Storage service.
@@ -54,7 +54,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportsResult> getExports() {
+    public static Output<GetExportsResult> getExports() {
         return getExports(GetExportsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -67,7 +67,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportsResult> getExports(GetExportsArgs args) {
+    public static Output<GetExportsResult> getExports(GetExportsArgs args) {
         return getExports(args, InvokeOptions.Empty);
     }
     /**
@@ -80,8 +80,8 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportsResult> getExports(GetExportsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getExports:getExports", TypeShape.of(GetExportsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportsResult> getExports(GetExportsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getExports:getExports", TypeShape.of(GetExportsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of File Systems in Oracle Cloud Infrastructure File Storage service.
@@ -91,7 +91,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFileSystemsResult> getFileSystems(GetFileSystemsArgs args) {
+    public static Output<GetFileSystemsResult> getFileSystems(GetFileSystemsArgs args) {
         return getFileSystems(args, InvokeOptions.Empty);
     }
     /**
@@ -102,8 +102,8 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFileSystemsResult> getFileSystems(GetFileSystemsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getFileSystems:getFileSystems", TypeShape.of(GetFileSystemsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFileSystemsResult> getFileSystems(GetFileSystemsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getFileSystems:getFileSystems", TypeShape.of(GetFileSystemsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Mount Targets in Oracle Cloud Infrastructure File Storage service.
@@ -113,7 +113,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMountTargetsResult> getMountTargets(GetMountTargetsArgs args) {
+    public static Output<GetMountTargetsResult> getMountTargets(GetMountTargetsArgs args) {
         return getMountTargets(args, InvokeOptions.Empty);
     }
     /**
@@ -124,8 +124,8 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMountTargetsResult> getMountTargets(GetMountTargetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getMountTargets:getMountTargets", TypeShape.of(GetMountTargetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMountTargetsResult> getMountTargets(GetMountTargetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getMountTargets:getMountTargets", TypeShape.of(GetMountTargetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Snapshot resource in Oracle Cloud Infrastructure File Storage service.
@@ -135,7 +135,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -146,8 +146,8 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Snapshots in Oracle Cloud Infrastructure File Storage service.
@@ -157,7 +157,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSnapshotsResult> getSnapshots(GetSnapshotsArgs args) {
+    public static Output<GetSnapshotsResult> getSnapshots(GetSnapshotsArgs args) {
         return getSnapshots(args, InvokeOptions.Empty);
     }
     /**
@@ -168,7 +168,7 @@ public final class FileStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSnapshotsResult> getSnapshots(GetSnapshotsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:FileStorage/getSnapshots:getSnapshots", TypeShape.of(GetSnapshotsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotsResult> getSnapshots(GetSnapshotsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:FileStorage/getSnapshots:getSnapshots", TypeShape.of(GetSnapshotsResult.class), args, Utilities.withVersion(options));
     }
 }

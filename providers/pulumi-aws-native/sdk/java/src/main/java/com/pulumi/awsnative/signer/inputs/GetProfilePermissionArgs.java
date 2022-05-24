@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.signer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetProfilePermissionArgs extends com.pulumi.resources.InvokeA
     public static final GetProfilePermissionArgs Empty = new GetProfilePermissionArgs();
 
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
     @Import(name="statementId", required=true)
-    private String statementId;
+    private Output<String> statementId;
 
-    public String statementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -51,14 +52,22 @@ public final class GetProfilePermissionArgs extends com.pulumi.resources.InvokeA
             $ = new GetProfilePermissionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder profileName(String profileName) {
+        public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
-        public Builder statementId(String statementId) {
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
+        }
+
+        public Builder statementId(Output<String> statementId) {
             $.statementId = statementId;
             return this;
+        }
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
 
         public GetProfilePermissionArgs build() {

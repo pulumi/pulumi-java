@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.scheduler.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobCollectionName", required=true)
-    private String jobCollectionName;
+    private Output<String> jobCollectionName;
 
     /**
      * @return The job collection name.
      * 
      */
-    public String jobCollectionName() {
+    public Output<String> jobCollectionName() {
         return this.jobCollectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The job name.
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -47,13 +48,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder jobCollectionName(String jobCollectionName) {
+        public Builder jobCollectionName(Output<String> jobCollectionName) {
             $.jobCollectionName = jobCollectionName;
+            return this;
+        }
+
+        /**
+         * @param jobCollectionName The job collection name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobCollectionName(String jobCollectionName) {
+            return jobCollectionName(Output.of(jobCollectionName));
+        }
+
+        /**
+         * @param jobName The job name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(Output<String> jobName) {
+            $.jobName = jobName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobName(String jobName) {
-            $.jobName = jobName;
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetJobArgs build() {

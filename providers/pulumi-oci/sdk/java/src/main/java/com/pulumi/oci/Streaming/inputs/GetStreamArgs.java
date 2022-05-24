@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Streaming.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streamId", required=true)
-    private String streamId;
+    private Output<String> streamId;
 
     /**
      * @return The OCID of the stream.
      * 
      */
-    public String streamId() {
+    public Output<String> streamId() {
         return this.streamId;
     }
 
@@ -57,9 +58,19 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder streamId(String streamId) {
+        public Builder streamId(Output<String> streamId) {
             $.streamId = streamId;
             return this;
+        }
+
+        /**
+         * @param streamId The OCID of the stream.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder streamId(String streamId) {
+            return streamId(Output.of(streamId));
         }
 
         public GetStreamArgs build() {

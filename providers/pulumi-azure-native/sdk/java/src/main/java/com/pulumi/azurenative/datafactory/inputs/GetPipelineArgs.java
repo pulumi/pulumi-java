@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineName", required=true)
-    private String pipelineName;
+    private Output<String> pipelineName;
 
     /**
      * @return The pipeline name.
      * 
      */
-    public String pipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder factoryName(String factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
+            return this;
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param pipelineName The pipeline name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pipelineName(Output<String> pipelineName) {
+            $.pipelineName = pipelineName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder pipelineName(String pipelineName) {
-            $.pipelineName = pipelineName;
+            return pipelineName(Output.of(pipelineName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPipelineArgs build() {

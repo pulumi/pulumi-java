@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appstream.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetApplicationFleetAssociationArgs extends com.pulumi.resourc
     public static final GetApplicationFleetAssociationArgs Empty = new GetApplicationFleetAssociationArgs();
 
     @Import(name="applicationArn", required=true)
-    private String applicationArn;
+    private Output<String> applicationArn;
 
-    public String applicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
 
     @Import(name="fleetName", required=true)
-    private String fleetName;
+    private Output<String> fleetName;
 
-    public String fleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
 
@@ -51,14 +52,22 @@ public final class GetApplicationFleetAssociationArgs extends com.pulumi.resourc
             $ = new GetApplicationFleetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applicationArn(String applicationArn) {
+        public Builder applicationArn(Output<String> applicationArn) {
             $.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder fleetName(String fleetName) {
+        public Builder applicationArn(String applicationArn) {
+            return applicationArn(Output.of(applicationArn));
+        }
+
+        public Builder fleetName(Output<String> fleetName) {
             $.fleetName = fleetName;
             return this;
+        }
+
+        public Builder fleetName(String fleetName) {
+            return fleetName(Output.of(fleetName));
         }
 
         public GetApplicationFleetAssociationArgs build() {

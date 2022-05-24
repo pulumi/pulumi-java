@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.ml_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetJobIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobIamPolicyArgs Empty = new GetJobIamPolicyArgs();
 
     @Import(name="jobId", required=true)
-    private String jobId;
+    private Output<String> jobId;
 
-    public String jobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetJobIamPolicyArgs() {}
@@ -61,19 +61,31 @@ public final class GetJobIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder jobId(String jobId) {
+        public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetJobIamPolicyArgs build() {

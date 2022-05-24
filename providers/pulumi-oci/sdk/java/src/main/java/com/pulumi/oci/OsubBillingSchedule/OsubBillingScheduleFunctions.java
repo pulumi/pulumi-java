@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.OsubBillingSchedule;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.OsubBillingSchedule.inputs.GetBillingScheduleArgs;
 import com.pulumi.oci.OsubBillingSchedule.outputs.GetBillingScheduleResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OsubBillingScheduleFunctions {
     /**
@@ -21,7 +21,7 @@ public final class OsubBillingScheduleFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args) {
+    public static Output<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args) {
         return getBillingSchedule(args, InvokeOptions.Empty);
     }
     /**
@@ -33,7 +33,7 @@ public final class OsubBillingScheduleFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubBillingSchedule/getBillingSchedule:getBillingSchedule", TypeShape.of(GetBillingScheduleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubBillingSchedule/getBillingSchedule:getBillingSchedule", TypeShape.of(GetBillingScheduleResult.class), args, Utilities.withVersion(options));
     }
 }

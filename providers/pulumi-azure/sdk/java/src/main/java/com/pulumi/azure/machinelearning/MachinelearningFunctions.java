@@ -6,10 +6,10 @@ package com.pulumi.azure.machinelearning;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.machinelearning.inputs.GetWorkspaceArgs;
 import com.pulumi.azure.machinelearning.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MachinelearningFunctions {
     /**
@@ -41,7 +41,7 @@ public final class MachinelearningFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class MachinelearningFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:machinelearning/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:machinelearning/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

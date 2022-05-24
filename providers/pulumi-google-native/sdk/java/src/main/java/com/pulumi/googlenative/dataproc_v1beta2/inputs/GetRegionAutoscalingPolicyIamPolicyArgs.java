@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.re
     public static final GetRegionAutoscalingPolicyIamPolicyArgs Empty = new GetRegionAutoscalingPolicyIamPolicyArgs();
 
     @Import(name="autoscalingPolicyId", required=true)
-    private String autoscalingPolicyId;
+    private Output<String> autoscalingPolicyId;
 
-    public String autoscalingPolicyId() {
+    public Output<String> autoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -69,24 +69,40 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.re
             $ = new GetRegionAutoscalingPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder autoscalingPolicyId(String autoscalingPolicyId) {
+        public Builder autoscalingPolicyId(Output<String> autoscalingPolicyId) {
             $.autoscalingPolicyId = autoscalingPolicyId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder autoscalingPolicyId(String autoscalingPolicyId) {
+            return autoscalingPolicyId(Output.of(autoscalingPolicyId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
+        }
+
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
         }
 
         public GetRegionAutoscalingPolicyIamPolicyArgs build() {

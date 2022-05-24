@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="departmentId", required=true)
-    private String departmentId;
+    private Output<String> departmentId;
 
     /**
      * @return Department ID
      * 
      */
-    public String departmentId() {
+    public Output<String> departmentId() {
         return this.departmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reportName", required=true)
-    private String reportName;
+    private Output<String> reportName;
 
     /**
      * @return Report Name.
      * 
      */
-    public String reportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -73,8 +74,29 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder departmentId(String departmentId) {
+        public Builder departmentId(Output<String> departmentId) {
             $.departmentId = departmentId;
+            return this;
+        }
+
+        /**
+         * @param departmentId Department ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder departmentId(String departmentId) {
+            return departmentId(Output.of(departmentId));
+        }
+
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportName(Output<String> reportName) {
+            $.reportName = reportName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder reportName(String reportName) {
-            $.reportName = reportName;
-            return this;
+            return reportName(Output.of(reportName));
         }
 
         public GetReportByDepartmentArgs build() {

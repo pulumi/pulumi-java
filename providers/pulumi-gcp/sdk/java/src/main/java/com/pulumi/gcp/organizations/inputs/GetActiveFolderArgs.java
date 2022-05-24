@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-    private String displayName;
+    private Output<String> displayName;
 
     /**
      * @return The folder&#39;s display name.
      * 
      */
-    public String displayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-    private String parent;
+    private Output<String> parent;
 
     /**
      * @return The resource name of the parent Folder or Organization.
      * 
      */
-    public String parent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -73,8 +74,29 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(String displayName) {
+        public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName The folder&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param parent The resource name of the parent Folder or Organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parent(Output<String> parent) {
+            $.parent = parent;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder parent(String parent) {
-            $.parent = parent;
-            return this;
+            return parent(Output.of(parent));
         }
 
         public GetActiveFolderArgs build() {

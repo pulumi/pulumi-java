@@ -3,11 +3,11 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
     /**
      * @return The name of the Compute Instance to read output from.
      * 
      */
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -35,13 +35,13 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port", required=true)
-    private Integer port;
+    private Output<Integer> port;
 
     /**
      * @return The number of the serial port to read output from. Possible values are 1-4.
      * 
      */
-    public Integer port() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -51,15 +51,15 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The project in which the Compute Instance exists. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -68,15 +68,15 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zone")
-    private @Nullable String zone;
+    private Output</* @Nullable */ String> zone;
 
     /**
      * @return The zone in which the Compute Instance exists.
      * If it is not provided, the provider zone is used.
      * 
      */
-    public Optional<String> zone() {
-        return Optional.ofNullable(this.zone);
+    public Output</* @Nullable */ String> zone() {
+        return this.zone;
     }
 
     private GetInstanceSerialPortArgs() {}
@@ -112,8 +112,29 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder instance(String instance) {
+        public Builder instance(Output<String> instance) {
             $.instance = instance;
+            return this;
+        }
+
+        /**
+         * @param instance The name of the Compute Instance to read output from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        /**
+         * @param port The number of the serial port to read output from. Possible values are 1-4.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder port(Output<Integer> port) {
+            $.port = port;
             return this;
         }
 
@@ -124,7 +145,18 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder port(Integer port) {
-            $.port = port;
+            return port(Output.of(port));
+        }
+
+        /**
+         * @param project The project in which the Compute Instance exists. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -136,7 +168,18 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param zone The zone in which the Compute Instance exists.
+         * If it is not provided, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zone(Output</* @Nullable */ String> zone) {
+            $.zone = zone;
             return this;
         }
 
@@ -148,8 +191,7 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder zone(@Nullable String zone) {
-            $.zone = zone;
-            return this;
+            return zone(Output.of(zone));
         }
 
         public GetInstanceSerialPortArgs build() {

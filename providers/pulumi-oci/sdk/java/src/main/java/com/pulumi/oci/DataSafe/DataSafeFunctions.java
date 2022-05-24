@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -165,7 +166,6 @@ import com.pulumi.oci.DataSafe.outputs.GetUserAssessmentUsersResult;
 import com.pulumi.oci.DataSafe.outputs.GetUserAssessmentsResult;
 import com.pulumi.oci.Utilities;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataSafeFunctions {
     /**
@@ -176,7 +176,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args) {
+    public static Output<GetAlertResult> getAlert(GetAlertArgs args) {
         return getAlert(args, InvokeOptions.Empty);
     }
     /**
@@ -187,8 +187,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlert:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlert:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Alert Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -198,7 +198,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args) {
+    public static Output<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args) {
         return getAlertAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -209,8 +209,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertAnalytic:getAlertAnalytic", TypeShape.of(GetAlertAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertAnalyticResult> getAlertAnalytic(GetAlertAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlertAnalytic:getAlertAnalytic", TypeShape.of(GetAlertAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alert Policies in Oracle Cloud Infrastructure Data Safe service.
@@ -220,7 +220,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args) {
+    public static Output<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args) {
         return getAlertPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -231,8 +231,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicies:getAlertPolicies", TypeShape.of(GetAlertPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertPoliciesResult> getAlertPolicies(GetAlertPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlertPolicies:getAlertPolicies", TypeShape.of(GetAlertPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Alert Policy resource in Oracle Cloud Infrastructure Data Safe service.
@@ -242,7 +242,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args) {
+    public static Output<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args) {
         return getAlertPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -253,8 +253,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicy:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertPolicyResult> getAlertPolicy(GetAlertPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlertPolicy:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Alert Policy Rule resource in Oracle Cloud Infrastructure Data Safe service.
@@ -265,7 +265,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args) {
+    public static Output<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args) {
         return getAlertPolicyRule(args, InvokeOptions.Empty);
     }
     /**
@@ -277,8 +277,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicyRule:getAlertPolicyRule", TypeShape.of(GetAlertPolicyRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertPolicyRuleResult> getAlertPolicyRule(GetAlertPolicyRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlertPolicyRule:getAlertPolicyRule", TypeShape.of(GetAlertPolicyRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alert Policy Rules in Oracle Cloud Infrastructure Data Safe service.
@@ -289,7 +289,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args) {
+    public static Output<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args) {
         return getAlertPolicyRules(args, InvokeOptions.Empty);
     }
     /**
@@ -301,8 +301,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlertPolicyRules:getAlertPolicyRules", TypeShape.of(GetAlertPolicyRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertPolicyRulesResult> getAlertPolicyRules(GetAlertPolicyRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlertPolicyRules:getAlertPolicyRules", TypeShape.of(GetAlertPolicyRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alerts in Oracle Cloud Infrastructure Data Safe service.
@@ -312,7 +312,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertsResult> getAlerts(GetAlertsArgs args) {
+    public static Output<GetAlertsResult> getAlerts(GetAlertsArgs args) {
         return getAlerts(args, InvokeOptions.Empty);
     }
     /**
@@ -323,8 +323,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertsResult> getAlerts(GetAlertsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAlerts:getAlerts", TypeShape.of(GetAlertsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertsResult> getAlerts(GetAlertsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAlerts:getAlerts", TypeShape.of(GetAlertsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Archive Retrieval resource in Oracle Cloud Infrastructure Data Safe service.
@@ -334,7 +334,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args) {
+    public static Output<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args) {
         return getAuditArchiveRetrieval(args, InvokeOptions.Empty);
     }
     /**
@@ -345,8 +345,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditArchiveRetrieval:getAuditArchiveRetrieval", TypeShape.of(GetAuditArchiveRetrievalResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditArchiveRetrievalResult> getAuditArchiveRetrieval(GetAuditArchiveRetrievalArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditArchiveRetrieval:getAuditArchiveRetrieval", TypeShape.of(GetAuditArchiveRetrievalResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Archive Retrievals in Oracle Cloud Infrastructure Data Safe service.
@@ -356,7 +356,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args) {
+    public static Output<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args) {
         return getAuditArchiveRetrievals(args, InvokeOptions.Empty);
     }
     /**
@@ -367,8 +367,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditArchiveRetrievals:getAuditArchiveRetrievals", TypeShape.of(GetAuditArchiveRetrievalsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditArchiveRetrievalsResult> getAuditArchiveRetrievals(GetAuditArchiveRetrievalsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditArchiveRetrievals:getAuditArchiveRetrievals", TypeShape.of(GetAuditArchiveRetrievalsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Event resource in Oracle Cloud Infrastructure Data Safe service.
@@ -390,7 +390,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args) {
+    public static Output<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args) {
         return getAuditEvent(args, InvokeOptions.Empty);
     }
     /**
@@ -413,8 +413,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEvent:getAuditEvent", TypeShape.of(GetAuditEventResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditEventResult> getAuditEvent(GetAuditEventArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditEvent:getAuditEvent", TypeShape.of(GetAuditEventResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Event Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -429,7 +429,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args) {
+    public static Output<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args) {
         return getAuditEventAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -445,8 +445,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEventAnalytic:getAuditEventAnalytic", TypeShape.of(GetAuditEventAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditEventAnalyticResult> getAuditEventAnalytic(GetAuditEventAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditEventAnalytic:getAuditEventAnalytic", TypeShape.of(GetAuditEventAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Data Safe service.
@@ -468,7 +468,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args) {
+    public static Output<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args) {
         return getAuditEvents(args, InvokeOptions.Empty);
     }
     /**
@@ -491,8 +491,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditEvents:getAuditEvents", TypeShape.of(GetAuditEventsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditEventsResult> getAuditEvents(GetAuditEventsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditEvents:getAuditEvents", TypeShape.of(GetAuditEventsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Policies in Oracle Cloud Infrastructure Data Safe service.
@@ -516,7 +516,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args) {
+    public static Output<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args) {
         return getAuditPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -541,8 +541,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditPolicies:getAuditPolicies", TypeShape.of(GetAuditPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditPoliciesResult> getAuditPolicies(GetAuditPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditPolicies:getAuditPolicies", TypeShape.of(GetAuditPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Policy resource in Oracle Cloud Infrastructure Data Safe service.
@@ -552,7 +552,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args) {
+    public static Output<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args) {
         return getAuditPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -563,8 +563,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditPolicy:getAuditPolicy", TypeShape.of(GetAuditPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditPolicyResult> getAuditPolicy(GetAuditPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditPolicy:getAuditPolicy", TypeShape.of(GetAuditPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Profile resource in Oracle Cloud Infrastructure Data Safe service.
@@ -574,7 +574,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args) {
+    public static Output<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args) {
         return getAuditProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -585,8 +585,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfile:getAuditProfile", TypeShape.of(GetAuditProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileResult> getAuditProfile(GetAuditProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfile:getAuditProfile", TypeShape.of(GetAuditProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Profile Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -608,7 +608,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args) {
+    public static Output<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args) {
         return getAuditProfileAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -631,8 +631,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAnalytic:getAuditProfileAnalytic", TypeShape.of(GetAuditProfileAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileAnalyticResult> getAuditProfileAnalytic(GetAuditProfileAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfileAnalytic:getAuditProfileAnalytic", TypeShape.of(GetAuditProfileAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Profile Available Audit Volume resource in Oracle Cloud Infrastructure Data Safe service.
@@ -642,7 +642,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args) {
+    public static Output<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args) {
         return getAuditProfileAvailableAuditVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -653,8 +653,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAvailableAuditVolume:getAuditProfileAvailableAuditVolume", TypeShape.of(GetAuditProfileAvailableAuditVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileAvailableAuditVolumeResult> getAuditProfileAvailableAuditVolume(GetAuditProfileAvailableAuditVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfileAvailableAuditVolume:getAuditProfileAvailableAuditVolume", TypeShape.of(GetAuditProfileAvailableAuditVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Profile Available Audit Volumes in Oracle Cloud Infrastructure Data Safe service.
@@ -664,7 +664,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args) {
+    public static Output<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args) {
         return getAuditProfileAvailableAuditVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -675,8 +675,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileAvailableAuditVolumes:getAuditProfileAvailableAuditVolumes", TypeShape.of(GetAuditProfileAvailableAuditVolumesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileAvailableAuditVolumesResult> getAuditProfileAvailableAuditVolumes(GetAuditProfileAvailableAuditVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfileAvailableAuditVolumes:getAuditProfileAvailableAuditVolumes", TypeShape.of(GetAuditProfileAvailableAuditVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Profile Collected Audit Volume resource in Oracle Cloud Infrastructure Data Safe service.
@@ -686,7 +686,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args) {
+    public static Output<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args) {
         return getAuditProfileCollectedAuditVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -697,8 +697,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileCollectedAuditVolume:getAuditProfileCollectedAuditVolume", TypeShape.of(GetAuditProfileCollectedAuditVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileCollectedAuditVolumeResult> getAuditProfileCollectedAuditVolume(GetAuditProfileCollectedAuditVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfileCollectedAuditVolume:getAuditProfileCollectedAuditVolume", TypeShape.of(GetAuditProfileCollectedAuditVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Profile Collected Audit Volumes in Oracle Cloud Infrastructure Data Safe service.
@@ -708,7 +708,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args) {
+    public static Output<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args) {
         return getAuditProfileCollectedAuditVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -719,8 +719,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfileCollectedAuditVolumes:getAuditProfileCollectedAuditVolumes", TypeShape.of(GetAuditProfileCollectedAuditVolumesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfileCollectedAuditVolumesResult> getAuditProfileCollectedAuditVolumes(GetAuditProfileCollectedAuditVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfileCollectedAuditVolumes:getAuditProfileCollectedAuditVolumes", TypeShape.of(GetAuditProfileCollectedAuditVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Profiles in Oracle Cloud Infrastructure Data Safe service.
@@ -744,7 +744,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args) {
+    public static Output<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args) {
         return getAuditProfiles(args, InvokeOptions.Empty);
     }
     /**
@@ -769,8 +769,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditProfiles:getAuditProfiles", TypeShape.of(GetAuditProfilesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditProfilesResult> getAuditProfiles(GetAuditProfilesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditProfiles:getAuditProfiles", TypeShape.of(GetAuditProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Trail resource in Oracle Cloud Infrastructure Data Safe service.
@@ -780,7 +780,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args) {
+    public static Output<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args) {
         return getAuditTrail(args, InvokeOptions.Empty);
     }
     /**
@@ -791,8 +791,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrail:getAuditTrail", TypeShape.of(GetAuditTrailResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditTrailResult> getAuditTrail(GetAuditTrailArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditTrail:getAuditTrail", TypeShape.of(GetAuditTrailResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Audit Trail Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -814,7 +814,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args) {
+    public static Output<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args) {
         return getAuditTrailAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -837,8 +837,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrailAnalytic:getAuditTrailAnalytic", TypeShape.of(GetAuditTrailAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditTrailAnalyticResult> getAuditTrailAnalytic(GetAuditTrailAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditTrailAnalytic:getAuditTrailAnalytic", TypeShape.of(GetAuditTrailAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Trails in Oracle Cloud Infrastructure Data Safe service.
@@ -861,7 +861,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args) {
+    public static Output<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args) {
         return getAuditTrails(args, InvokeOptions.Empty);
     }
     /**
@@ -885,8 +885,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getAuditTrails:getAuditTrails", TypeShape.of(GetAuditTrailsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuditTrailsResult> getAuditTrails(GetAuditTrailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getAuditTrails:getAuditTrails", TypeShape.of(GetAuditTrailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compatible Formats For Data Type resource in Oracle Cloud Infrastructure Data Safe service.
@@ -902,7 +902,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType() {
+    public static Output<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType() {
         return getCompatibleFormatsForDataType(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -919,7 +919,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args) {
+    public static Output<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args) {
         return getCompatibleFormatsForDataType(args, InvokeOptions.Empty);
     }
     /**
@@ -936,8 +936,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getCompatibleFormatsForDataType:getCompatibleFormatsForDataType", TypeShape.of(GetCompatibleFormatsForDataTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCompatibleFormatsForDataTypeResult> getCompatibleFormatsForDataType(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getCompatibleFormatsForDataType:getCompatibleFormatsForDataType", TypeShape.of(GetCompatibleFormatsForDataTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compatible Formats For Sensitive Type resource in Oracle Cloud Infrastructure Data Safe service.
@@ -950,7 +950,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args) {
+    public static Output<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args) {
         return getCompatibleFormatsForSensitiveType(args, InvokeOptions.Empty);
     }
     /**
@@ -964,8 +964,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getCompatibleFormatsForSensitiveType:getCompatibleFormatsForSensitiveType", TypeShape.of(GetCompatibleFormatsForSensitiveTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCompatibleFormatsForSensitiveTypeResult> getCompatibleFormatsForSensitiveType(GetCompatibleFormatsForSensitiveTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getCompatibleFormatsForSensitiveType:getCompatibleFormatsForSensitiveType", TypeShape.of(GetCompatibleFormatsForSensitiveTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Data Safe Configuration resource in Oracle Cloud Infrastructure Data Safe service.
@@ -975,7 +975,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args) {
+    public static Output<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args) {
         return getDataSafeConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -986,8 +986,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafeConfiguration:getDataSafeConfiguration", TypeShape.of(GetDataSafeConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSafeConfigurationResult> getDataSafeConfiguration(GetDataSafeConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDataSafeConfiguration:getDataSafeConfiguration", TypeShape.of(GetDataSafeConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Data Safe Private Endpoint resource in Oracle Cloud Infrastructure Data Safe service.
@@ -997,7 +997,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args) {
+    public static Output<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args) {
         return getDataSafePrivateEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -1008,8 +1008,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafePrivateEndpoint:getDataSafePrivateEndpoint", TypeShape.of(GetDataSafePrivateEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSafePrivateEndpointResult> getDataSafePrivateEndpoint(GetDataSafePrivateEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDataSafePrivateEndpoint:getDataSafePrivateEndpoint", TypeShape.of(GetDataSafePrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Data Safe Private Endpoints in Oracle Cloud Infrastructure Data Safe service.
@@ -1019,7 +1019,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args) {
+    public static Output<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args) {
         return getDataSafePrivateEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -1030,8 +1030,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDataSafePrivateEndpoints:getDataSafePrivateEndpoints", TypeShape.of(GetDataSafePrivateEndpointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSafePrivateEndpointsResult> getDataSafePrivateEndpoints(GetDataSafePrivateEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDataSafePrivateEndpoints:getDataSafePrivateEndpoints", TypeShape.of(GetDataSafePrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Discovery Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1041,7 +1041,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args) {
+    public static Output<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args) {
         return getDiscoveryAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -1052,8 +1052,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryAnalytic:getDiscoveryAnalytic", TypeShape.of(GetDiscoveryAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryAnalyticResult> getDiscoveryAnalytic(GetDiscoveryAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDiscoveryAnalytic:getDiscoveryAnalytic", TypeShape.of(GetDiscoveryAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Discovery Analytics in Oracle Cloud Infrastructure Data Safe service.
@@ -1063,7 +1063,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args) {
+    public static Output<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args) {
         return getDiscoveryAnalytics(args, InvokeOptions.Empty);
     }
     /**
@@ -1074,8 +1074,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryAnalytics:getDiscoveryAnalytics", TypeShape.of(GetDiscoveryAnalyticsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryAnalyticsResult> getDiscoveryAnalytics(GetDiscoveryAnalyticsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDiscoveryAnalytics:getDiscoveryAnalytics", TypeShape.of(GetDiscoveryAnalyticsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Discovery Job resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1085,7 +1085,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args) {
+    public static Output<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args) {
         return getDiscoveryJob(args, InvokeOptions.Empty);
     }
     /**
@@ -1096,8 +1096,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJob:getDiscoveryJob", TypeShape.of(GetDiscoveryJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDiscoveryJob:getDiscoveryJob", TypeShape.of(GetDiscoveryJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Discovery Jobs Result resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1107,7 +1107,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args) {
+    public static Output<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args) {
         return getDiscoveryJobsResult(args, InvokeOptions.Empty);
     }
     /**
@@ -1118,8 +1118,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJobsResult:getDiscoveryJobsResult", TypeShape.of(GetDiscoveryJobsResultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobsResultResult> getDiscoveryJobsResult(GetDiscoveryJobsResultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDiscoveryJobsResult:getDiscoveryJobsResult", TypeShape.of(GetDiscoveryJobsResultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Discovery Jobs Results in Oracle Cloud Infrastructure Data Safe service.
@@ -1129,7 +1129,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args) {
+    public static Output<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args) {
         return getDiscoveryJobsResults(args, InvokeOptions.Empty);
     }
     /**
@@ -1140,8 +1140,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getDiscoveryJobsResults:getDiscoveryJobsResults", TypeShape.of(GetDiscoveryJobsResultsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobsResultsResult> getDiscoveryJobsResults(GetDiscoveryJobsResultsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getDiscoveryJobsResults:getDiscoveryJobsResults", TypeShape.of(GetDiscoveryJobsResultsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Library Masking Format resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1151,7 +1151,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args) {
+    public static Output<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args) {
         return getLibraryMaskingFormat(args, InvokeOptions.Empty);
     }
     /**
@@ -1162,8 +1162,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getLibraryMaskingFormat:getLibraryMaskingFormat", TypeShape.of(GetLibraryMaskingFormatResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLibraryMaskingFormatResult> getLibraryMaskingFormat(GetLibraryMaskingFormatArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getLibraryMaskingFormat:getLibraryMaskingFormat", TypeShape.of(GetLibraryMaskingFormatResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Library Masking Formats in Oracle Cloud Infrastructure Data Safe service.
@@ -1173,7 +1173,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args) {
+    public static Output<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args) {
         return getLibraryMaskingFormats(args, InvokeOptions.Empty);
     }
     /**
@@ -1184,8 +1184,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getLibraryMaskingFormats:getLibraryMaskingFormats", TypeShape.of(GetLibraryMaskingFormatsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLibraryMaskingFormatsResult> getLibraryMaskingFormats(GetLibraryMaskingFormatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getLibraryMaskingFormats:getLibraryMaskingFormats", TypeShape.of(GetLibraryMaskingFormatsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of List User Grants in Oracle Cloud Infrastructure Data Safe service.
@@ -1198,7 +1198,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args) {
+    public static Output<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args) {
         return getListUserGrants(args, InvokeOptions.Empty);
     }
     /**
@@ -1212,8 +1212,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getListUserGrants:getListUserGrants", TypeShape.of(GetListUserGrantsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListUserGrantsResult> getListUserGrants(GetListUserGrantsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getListUserGrants:getListUserGrants", TypeShape.of(GetListUserGrantsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Masking Analytic resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1223,7 +1223,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args) {
+    public static Output<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args) {
         return getMaskingAnalytic(args, InvokeOptions.Empty);
     }
     /**
@@ -1234,8 +1234,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingAnalytic:getMaskingAnalytic", TypeShape.of(GetMaskingAnalyticResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingAnalyticResult> getMaskingAnalytic(GetMaskingAnalyticArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingAnalytic:getMaskingAnalytic", TypeShape.of(GetMaskingAnalyticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Masking Analytics in Oracle Cloud Infrastructure Data Safe service.
@@ -1245,7 +1245,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args) {
+    public static Output<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args) {
         return getMaskingAnalytics(args, InvokeOptions.Empty);
     }
     /**
@@ -1256,8 +1256,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingAnalytics:getMaskingAnalytics", TypeShape.of(GetMaskingAnalyticsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingAnalyticsResult> getMaskingAnalytics(GetMaskingAnalyticsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingAnalytics:getMaskingAnalytics", TypeShape.of(GetMaskingAnalyticsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Masking Policies in Oracle Cloud Infrastructure Data Safe service.
@@ -1267,7 +1267,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args) {
+    public static Output<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args) {
         return getMaskingPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -1278,8 +1278,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPolicies:getMaskingPolicies", TypeShape.of(GetMaskingPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingPoliciesResult> getMaskingPolicies(GetMaskingPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingPolicies:getMaskingPolicies", TypeShape.of(GetMaskingPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Masking Policies Masking Column resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1289,7 +1289,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args) {
+    public static Output<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args) {
         return getMaskingPoliciesMaskingColumn(args, InvokeOptions.Empty);
     }
     /**
@@ -1300,8 +1300,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPoliciesMaskingColumn:getMaskingPoliciesMaskingColumn", TypeShape.of(GetMaskingPoliciesMaskingColumnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingPoliciesMaskingColumnResult> getMaskingPoliciesMaskingColumn(GetMaskingPoliciesMaskingColumnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingPoliciesMaskingColumn:getMaskingPoliciesMaskingColumn", TypeShape.of(GetMaskingPoliciesMaskingColumnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Masking Policies Masking Columns in Oracle Cloud Infrastructure Data Safe service.
@@ -1311,7 +1311,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args) {
+    public static Output<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args) {
         return getMaskingPoliciesMaskingColumns(args, InvokeOptions.Empty);
     }
     /**
@@ -1322,8 +1322,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPoliciesMaskingColumns:getMaskingPoliciesMaskingColumns", TypeShape.of(GetMaskingPoliciesMaskingColumnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingPoliciesMaskingColumnsResult> getMaskingPoliciesMaskingColumns(GetMaskingPoliciesMaskingColumnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingPoliciesMaskingColumns:getMaskingPoliciesMaskingColumns", TypeShape.of(GetMaskingPoliciesMaskingColumnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Masking Policy resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1333,7 +1333,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args) {
+    public static Output<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args) {
         return getMaskingPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -1344,8 +1344,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingPolicy:getMaskingPolicy", TypeShape.of(GetMaskingPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingPolicyResult> getMaskingPolicy(GetMaskingPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingPolicy:getMaskingPolicy", TypeShape.of(GetMaskingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Masking Report resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1355,7 +1355,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args) {
+    public static Output<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args) {
         return getMaskingReport(args, InvokeOptions.Empty);
     }
     /**
@@ -1366,8 +1366,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReport:getMaskingReport", TypeShape.of(GetMaskingReportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingReportResult> getMaskingReport(GetMaskingReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingReport:getMaskingReport", TypeShape.of(GetMaskingReportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Masking Reports Masked Columns in Oracle Cloud Infrastructure Data Safe service.
@@ -1377,7 +1377,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args) {
+    public static Output<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args) {
         return getMaskingReportMaskedColumns(args, InvokeOptions.Empty);
     }
     /**
@@ -1388,8 +1388,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReportMaskedColumns:getMaskingReportMaskedColumns", TypeShape.of(GetMaskingReportMaskedColumnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingReportMaskedColumnsResult> getMaskingReportMaskedColumns(GetMaskingReportMaskedColumnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingReportMaskedColumns:getMaskingReportMaskedColumns", TypeShape.of(GetMaskingReportMaskedColumnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Masking Reports in Oracle Cloud Infrastructure Data Safe service.
@@ -1399,7 +1399,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args) {
+    public static Output<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args) {
         return getMaskingReports(args, InvokeOptions.Empty);
     }
     /**
@@ -1410,8 +1410,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReports:getMaskingReports", TypeShape.of(GetMaskingReportsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingReportsResult> getMaskingReports(GetMaskingReportsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingReports:getMaskingReports", TypeShape.of(GetMaskingReportsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Masking Reports Masked Column resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1421,7 +1421,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args) {
+    public static Output<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args) {
         return getMaskingReportsMaskedColumn(args, InvokeOptions.Empty);
     }
     /**
@@ -1432,8 +1432,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getMaskingReportsMaskedColumn:getMaskingReportsMaskedColumn", TypeShape.of(GetMaskingReportsMaskedColumnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaskingReportsMaskedColumnResult> getMaskingReportsMaskedColumn(GetMaskingReportsMaskedColumnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getMaskingReportsMaskedColumn:getMaskingReportsMaskedColumn", TypeShape.of(GetMaskingReportsMaskedColumnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific On Prem Connector resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1443,7 +1443,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args) {
+    public static Output<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args) {
         return getOnpremConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -1454,8 +1454,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getOnpremConnector:getOnpremConnector", TypeShape.of(GetOnpremConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnpremConnectorResult> getOnpremConnector(GetOnpremConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getOnpremConnector:getOnpremConnector", TypeShape.of(GetOnpremConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of On Prem Connectors in Oracle Cloud Infrastructure Data Safe service.
@@ -1465,7 +1465,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args) {
+    public static Output<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args) {
         return getOnpremConnectors(args, InvokeOptions.Empty);
     }
     /**
@@ -1476,8 +1476,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getOnpremConnectors:getOnpremConnectors", TypeShape.of(GetOnpremConnectorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnpremConnectorsResult> getOnpremConnectors(GetOnpremConnectorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getOnpremConnectors:getOnpremConnectors", TypeShape.of(GetOnpremConnectorsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Report resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1487,7 +1487,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportResult> getReport(GetReportArgs args) {
+    public static Output<GetReportResult> getReport(GetReportArgs args) {
         return getReport(args, InvokeOptions.Empty);
     }
     /**
@@ -1498,8 +1498,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportResult> getReport(GetReportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getReport:getReport", TypeShape.of(GetReportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportResult> getReport(GetReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getReport:getReport", TypeShape.of(GetReportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Report Content resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1509,7 +1509,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportContentResult> getReportContent(GetReportContentArgs args) {
+    public static Output<GetReportContentResult> getReportContent(GetReportContentArgs args) {
         return getReportContent(args, InvokeOptions.Empty);
     }
     /**
@@ -1520,8 +1520,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportContentResult> getReportContent(GetReportContentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportContent:getReportContent", TypeShape.of(GetReportContentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportContentResult> getReportContent(GetReportContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getReportContent:getReportContent", TypeShape.of(GetReportContentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Report Definition resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1531,7 +1531,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
+    public static Output<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
         return getReportDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -1542,8 +1542,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Report Definitions in Oracle Cloud Infrastructure Data Safe service.
@@ -1555,7 +1555,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args) {
+    public static Output<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args) {
         return getReportDefinitions(args, InvokeOptions.Empty);
     }
     /**
@@ -1568,8 +1568,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getReportDefinitions:getReportDefinitions", TypeShape.of(GetReportDefinitionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportDefinitionsResult> getReportDefinitions(GetReportDefinitionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getReportDefinitions:getReportDefinitions", TypeShape.of(GetReportDefinitionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Reports in Oracle Cloud Infrastructure Data Safe service.
@@ -1579,7 +1579,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportsResult> getReports(GetReportsArgs args) {
+    public static Output<GetReportsResult> getReports(GetReportsArgs args) {
         return getReports(args, InvokeOptions.Empty);
     }
     /**
@@ -1590,8 +1590,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportsResult> getReports(GetReportsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getReports:getReports", TypeShape.of(GetReportsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportsResult> getReports(GetReportsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getReports:getReports", TypeShape.of(GetReportsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Security Assessment resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1601,7 +1601,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args) {
+    public static Output<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args) {
         return getSecurityAssessment(args, InvokeOptions.Empty);
     }
     /**
@@ -1612,8 +1612,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessment:getSecurityAssessment", TypeShape.of(GetSecurityAssessmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityAssessmentResult> getSecurityAssessment(GetSecurityAssessmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSecurityAssessment:getSecurityAssessment", TypeShape.of(GetSecurityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Security Assessment Comparison resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1623,7 +1623,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args) {
+    public static Output<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args) {
         return getSecurityAssessmentComparison(args, InvokeOptions.Empty);
     }
     /**
@@ -1634,14 +1634,14 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessmentComparison:getSecurityAssessmentComparison", TypeShape.of(GetSecurityAssessmentComparisonResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityAssessmentComparisonResult> getSecurityAssessmentComparison(GetSecurityAssessmentComparisonArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSecurityAssessmentComparison:getSecurityAssessmentComparison", TypeShape.of(GetSecurityAssessmentComparisonResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSecurityAssessmentFindingResult> getSecurityAssessmentFinding(GetSecurityAssessmentFindingArgs args) {
+    public static Output<GetSecurityAssessmentFindingResult> getSecurityAssessmentFinding(GetSecurityAssessmentFindingArgs args) {
         return getSecurityAssessmentFinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityAssessmentFindingResult> getSecurityAssessmentFinding(GetSecurityAssessmentFindingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessmentFinding:getSecurityAssessmentFinding", TypeShape.of(GetSecurityAssessmentFindingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityAssessmentFindingResult> getSecurityAssessmentFinding(GetSecurityAssessmentFindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSecurityAssessmentFinding:getSecurityAssessmentFinding", TypeShape.of(GetSecurityAssessmentFindingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Security Assessment Findings in Oracle Cloud Infrastructure Data Safe service.
@@ -1651,7 +1651,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args) {
+    public static Output<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args) {
         return getSecurityAssessmentFindings(args, InvokeOptions.Empty);
     }
     /**
@@ -1662,8 +1662,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessmentFindings:getSecurityAssessmentFindings", TypeShape.of(GetSecurityAssessmentFindingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityAssessmentFindingsResult> getSecurityAssessmentFindings(GetSecurityAssessmentFindingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSecurityAssessmentFindings:getSecurityAssessmentFindings", TypeShape.of(GetSecurityAssessmentFindingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Security Assessments in Oracle Cloud Infrastructure Data Safe service.
@@ -1687,7 +1687,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args) {
+    public static Output<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args) {
         return getSecurityAssessments(args, InvokeOptions.Empty);
     }
     /**
@@ -1712,8 +1712,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSecurityAssessments:getSecurityAssessments", TypeShape.of(GetSecurityAssessmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityAssessmentsResult> getSecurityAssessments(GetSecurityAssessmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSecurityAssessments:getSecurityAssessments", TypeShape.of(GetSecurityAssessmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Sensitive Data Model resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1723,7 +1723,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args) {
+    public static Output<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args) {
         return getSensitiveDataModel(args, InvokeOptions.Empty);
     }
     /**
@@ -1734,8 +1734,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModel:getSensitiveDataModel", TypeShape.of(GetSensitiveDataModelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveDataModelResult> getSensitiveDataModel(GetSensitiveDataModelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveDataModel:getSensitiveDataModel", TypeShape.of(GetSensitiveDataModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sensitive Data Models in Oracle Cloud Infrastructure Data Safe service.
@@ -1745,7 +1745,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args) {
+    public static Output<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args) {
         return getSensitiveDataModels(args, InvokeOptions.Empty);
     }
     /**
@@ -1756,8 +1756,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModels:getSensitiveDataModels", TypeShape.of(GetSensitiveDataModelsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveDataModelsResult> getSensitiveDataModels(GetSensitiveDataModelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveDataModels:getSensitiveDataModels", TypeShape.of(GetSensitiveDataModelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Sensitive Data Models Sensitive Column resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1767,7 +1767,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args) {
+    public static Output<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args) {
         return getSensitiveDataModelsSensitiveColumn(args, InvokeOptions.Empty);
     }
     /**
@@ -1778,8 +1778,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModelsSensitiveColumn:getSensitiveDataModelsSensitiveColumn", TypeShape.of(GetSensitiveDataModelsSensitiveColumnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveDataModelsSensitiveColumnResult> getSensitiveDataModelsSensitiveColumn(GetSensitiveDataModelsSensitiveColumnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveDataModelsSensitiveColumn:getSensitiveDataModelsSensitiveColumn", TypeShape.of(GetSensitiveDataModelsSensitiveColumnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sensitive Data Models Sensitive Columns in Oracle Cloud Infrastructure Data Safe service.
@@ -1789,7 +1789,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args) {
+    public static Output<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args) {
         return getSensitiveDataModelsSensitiveColumns(args, InvokeOptions.Empty);
     }
     /**
@@ -1800,8 +1800,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveDataModelsSensitiveColumns:getSensitiveDataModelsSensitiveColumns", TypeShape.of(GetSensitiveDataModelsSensitiveColumnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveDataModelsSensitiveColumnsResult> getSensitiveDataModelsSensitiveColumns(GetSensitiveDataModelsSensitiveColumnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveDataModelsSensitiveColumns:getSensitiveDataModelsSensitiveColumns", TypeShape.of(GetSensitiveDataModelsSensitiveColumnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Sensitive Type resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1811,7 +1811,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args) {
+    public static Output<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args) {
         return getSensitiveType(args, InvokeOptions.Empty);
     }
     /**
@@ -1822,8 +1822,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveType:getSensitiveType", TypeShape.of(GetSensitiveTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveTypeResult> getSensitiveType(GetSensitiveTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveType:getSensitiveType", TypeShape.of(GetSensitiveTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sensitive Types in Oracle Cloud Infrastructure Data Safe service.
@@ -1833,7 +1833,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args) {
+    public static Output<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args) {
         return getSensitiveTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -1844,8 +1844,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getSensitiveTypes:getSensitiveTypes", TypeShape.of(GetSensitiveTypesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSensitiveTypesResult> getSensitiveTypes(GetSensitiveTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getSensitiveTypes:getSensitiveTypes", TypeShape.of(GetSensitiveTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Target Alert Policy Association resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1855,7 +1855,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args) {
+    public static Output<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args) {
         return getTargetAlertPolicyAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -1866,8 +1866,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetAlertPolicyAssociation:getTargetAlertPolicyAssociation", TypeShape.of(GetTargetAlertPolicyAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetAlertPolicyAssociationResult> getTargetAlertPolicyAssociation(GetTargetAlertPolicyAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetAlertPolicyAssociation:getTargetAlertPolicyAssociation", TypeShape.of(GetTargetAlertPolicyAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Alert Policy Associations in Oracle Cloud Infrastructure Data Safe service.
@@ -1877,7 +1877,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args) {
+    public static Output<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args) {
         return getTargetAlertPolicyAssociations(args, InvokeOptions.Empty);
     }
     /**
@@ -1888,8 +1888,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetAlertPolicyAssociations:getTargetAlertPolicyAssociations", TypeShape.of(GetTargetAlertPolicyAssociationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetAlertPolicyAssociationsResult> getTargetAlertPolicyAssociations(GetTargetAlertPolicyAssociationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetAlertPolicyAssociations:getTargetAlertPolicyAssociations", TypeShape.of(GetTargetAlertPolicyAssociationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Target Database resource in Oracle Cloud Infrastructure Data Safe service.
@@ -1899,7 +1899,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args) {
+    public static Output<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args) {
         return getTargetDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -1910,14 +1910,14 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabase:getTargetDatabase", TypeShape.of(GetTargetDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabaseResult> getTargetDatabase(GetTargetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabase:getTargetDatabase", TypeShape.of(GetTargetDatabaseResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetTargetDatabaseRoleResult> getTargetDatabaseRole(GetTargetDatabaseRoleArgs args) {
+    public static Output<GetTargetDatabaseRoleResult> getTargetDatabaseRole(GetTargetDatabaseRoleArgs args) {
         return getTargetDatabaseRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetDatabaseRoleResult> getTargetDatabaseRole(GetTargetDatabaseRoleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabaseRole:getTargetDatabaseRole", TypeShape.of(GetTargetDatabaseRoleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabaseRoleResult> getTargetDatabaseRole(GetTargetDatabaseRoleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabaseRole:getTargetDatabaseRole", TypeShape.of(GetTargetDatabaseRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Database Roles in Oracle Cloud Infrastructure Data Safe service.
@@ -1927,7 +1927,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args) {
+    public static Output<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args) {
         return getTargetDatabaseRoles(args, InvokeOptions.Empty);
     }
     /**
@@ -1938,8 +1938,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabaseRoles:getTargetDatabaseRoles", TypeShape.of(GetTargetDatabaseRolesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabaseRolesResult> getTargetDatabaseRoles(GetTargetDatabaseRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabaseRoles:getTargetDatabaseRoles", TypeShape.of(GetTargetDatabaseRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Databases in Oracle Cloud Infrastructure Data Safe service.
@@ -1949,7 +1949,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args) {
+    public static Output<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args) {
         return getTargetDatabases(args, InvokeOptions.Empty);
     }
     /**
@@ -1960,8 +1960,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabases:getTargetDatabases", TypeShape.of(GetTargetDatabasesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabasesResult> getTargetDatabases(GetTargetDatabasesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabases:getTargetDatabases", TypeShape.of(GetTargetDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Databases Columns in Oracle Cloud Infrastructure Data Safe service.
@@ -1971,7 +1971,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args) {
+    public static Output<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args) {
         return getTargetDatabasesColumns(args, InvokeOptions.Empty);
     }
     /**
@@ -1982,8 +1982,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesColumns:getTargetDatabasesColumns", TypeShape.of(GetTargetDatabasesColumnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabasesColumnsResult> getTargetDatabasesColumns(GetTargetDatabasesColumnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabasesColumns:getTargetDatabasesColumns", TypeShape.of(GetTargetDatabasesColumnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Databases Schemas in Oracle Cloud Infrastructure Data Safe service.
@@ -1993,7 +1993,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args) {
+    public static Output<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args) {
         return getTargetDatabasesSchemas(args, InvokeOptions.Empty);
     }
     /**
@@ -2004,8 +2004,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesSchemas:getTargetDatabasesSchemas", TypeShape.of(GetTargetDatabasesSchemasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabasesSchemasResult> getTargetDatabasesSchemas(GetTargetDatabasesSchemasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabasesSchemas:getTargetDatabasesSchemas", TypeShape.of(GetTargetDatabasesSchemasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Target Databases Tables in Oracle Cloud Infrastructure Data Safe service.
@@ -2015,7 +2015,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args) {
+    public static Output<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args) {
         return getTargetDatabasesTables(args, InvokeOptions.Empty);
     }
     /**
@@ -2026,8 +2026,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getTargetDatabasesTables:getTargetDatabasesTables", TypeShape.of(GetTargetDatabasesTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetDatabasesTablesResult> getTargetDatabasesTables(GetTargetDatabasesTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getTargetDatabasesTables:getTargetDatabasesTables", TypeShape.of(GetTargetDatabasesTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific User Assessment resource in Oracle Cloud Infrastructure Data Safe service.
@@ -2037,7 +2037,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args) {
+    public static Output<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args) {
         return getUserAssessment(args, InvokeOptions.Empty);
     }
     /**
@@ -2048,8 +2048,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessment:getUserAssessment", TypeShape.of(GetUserAssessmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssessmentResult> getUserAssessment(GetUserAssessmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getUserAssessment:getUserAssessment", TypeShape.of(GetUserAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific User Assessment Comparison resource in Oracle Cloud Infrastructure Data Safe service.
@@ -2059,7 +2059,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args) {
+    public static Output<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args) {
         return getUserAssessmentComparison(args, InvokeOptions.Empty);
     }
     /**
@@ -2070,8 +2070,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentComparison:getUserAssessmentComparison", TypeShape.of(GetUserAssessmentComparisonResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssessmentComparisonResult> getUserAssessmentComparison(GetUserAssessmentComparisonArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getUserAssessmentComparison:getUserAssessmentComparison", TypeShape.of(GetUserAssessmentComparisonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of User Assessment User Analytics in Oracle Cloud Infrastructure Data Safe service.
@@ -2095,7 +2095,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args) {
+    public static Output<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args) {
         return getUserAssessmentUserAnalytics(args, InvokeOptions.Empty);
     }
     /**
@@ -2120,8 +2120,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentUserAnalytics:getUserAssessmentUserAnalytics", TypeShape.of(GetUserAssessmentUserAnalyticsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssessmentUserAnalyticsResult> getUserAssessmentUserAnalytics(GetUserAssessmentUserAnalyticsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getUserAssessmentUserAnalytics:getUserAssessmentUserAnalytics", TypeShape.of(GetUserAssessmentUserAnalyticsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of User Assessment Users in Oracle Cloud Infrastructure Data Safe service.
@@ -2134,7 +2134,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args) {
+    public static Output<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args) {
         return getUserAssessmentUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -2148,8 +2148,8 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessmentUsers:getUserAssessmentUsers", TypeShape.of(GetUserAssessmentUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssessmentUsersResult> getUserAssessmentUsers(GetUserAssessmentUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getUserAssessmentUsers:getUserAssessmentUsers", TypeShape.of(GetUserAssessmentUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of User Assessments in Oracle Cloud Infrastructure Data Safe service.
@@ -2173,7 +2173,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args) {
+    public static Output<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args) {
         return getUserAssessments(args, InvokeOptions.Empty);
     }
     /**
@@ -2198,7 +2198,7 @@ public final class DataSafeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataSafe/getUserAssessments:getUserAssessments", TypeShape.of(GetUserAssessmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssessmentsResult> getUserAssessments(GetUserAssessmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataSafe/getUserAssessments:getUserAssessments", TypeShape.of(GetUserAssessmentsResult.class), args, Utilities.withVersion(options));
     }
 }

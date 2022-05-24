@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="policyName", required=true)
-    private String policyName;
+    private Output<String> policyName;
 
     /**
      * @return Replication policy name.
      * 
      */
-    public String policyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder policyName(String policyName) {
+        public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * @param policyName Replication policy name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetReplicationPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.alertsmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionRuleName", required=true)
-    private String actionRuleName;
+    private Output<String> actionRuleName;
 
     /**
      * @return The name of action rule that needs to be fetched
      * 
      */
-    public String actionRuleName() {
+    public Output<String> actionRuleName() {
         return this.actionRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group name where the resource is created.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder actionRuleName(String actionRuleName) {
+        public Builder actionRuleName(Output<String> actionRuleName) {
             $.actionRuleName = actionRuleName;
+            return this;
+        }
+
+        /**
+         * @param actionRuleName The name of action rule that needs to be fetched
+         * 
+         * @return builder
+         * 
+         */
+        public Builder actionRuleName(String actionRuleName) {
+            return actionRuleName(Output.of(actionRuleName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group name where the resource is created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetActionRuleByNameArgs build() {

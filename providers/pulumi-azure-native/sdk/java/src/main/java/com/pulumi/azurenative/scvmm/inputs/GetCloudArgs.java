@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.scvmm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudName", required=true)
-    private String cloudName;
+    private Output<String> cloudName;
 
     /**
      * @return Name of the Cloud.
      * 
      */
-    public String cloudName() {
+    public Output<String> cloudName() {
         return this.cloudName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCloudArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cloudName(String cloudName) {
+        public Builder cloudName(Output<String> cloudName) {
             $.cloudName = cloudName;
+            return this;
+        }
+
+        /**
+         * @param cloudName Name of the Cloud.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudName(String cloudName) {
+            return cloudName(Output.of(cloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCloudArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCloudArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetShapeFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,31 +17,31 @@ public final class GetShapeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetShapeArgs Empty = new GetShapeArgs();
 
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetShapeFilter> filters;
+    private Output</* @Nullable */ List<GetShapeFilter>> filters;
 
-    public Optional<List<GetShapeFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetShapeFilter>> filters() {
+        return this.filters;
     }
 
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private Output</* @Nullable */ String> imageId;
 
-    public Optional<String> imageId() {
-        return Optional.ofNullable(this.imageId);
+    public Output</* @Nullable */ String> imageId() {
+        return this.imageId;
     }
 
     private GetShapeArgs() {}
@@ -71,28 +71,44 @@ public final class GetShapeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetShapeArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetShapeFilter> filters) {
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetShapeFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetShapeFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetShapeFilter... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(Output</* @Nullable */ String> imageId) {
             $.imageId = imageId;
             return this;
+        }
+
+        public Builder imageId(@Nullable String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         public GetShapeArgs build() {

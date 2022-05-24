@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.logz.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="emailAddress")
-    private @Nullable String emailAddress;
+    private Output</* @Nullable */ String> emailAddress;
 
     /**
      * @return Email of the user used by Logz for contacting them if needed
      * 
      */
-    public Optional<String> emailAddress() {
-        return Optional.ofNullable(this.emailAddress);
+    public Output</* @Nullable */ String> emailAddress() {
+        return this.emailAddress;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitorName", required=true)
-    private String monitorName;
+    private Output<String> monitorName;
 
     /**
      * @return Monitor resource name
      * 
      */
-    public String monitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -49,13 +49,13 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder emailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(Output</* @Nullable */ String> emailAddress) {
             $.emailAddress = emailAddress;
+            return this;
+        }
+
+        /**
+         * @param emailAddress Email of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
+        public Builder emailAddress(@Nullable String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
+        }
+
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorName(Output<String> monitorName) {
+            $.monitorName = monitorName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder monitorName(String monitorName) {
-            $.monitorName = monitorName;
+            return monitorName(Output.of(monitorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListMonitorUserRolesArgs build() {

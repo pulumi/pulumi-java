@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceId", required=true)
-    private String deviceId;
+    private Output<String> deviceId;
 
     /**
      * @return The ID of the device
      * 
      */
-    public String deviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -47,13 +48,13 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="linkId", required=true)
-    private String linkId;
+    private Output<String> linkId;
 
     /**
      * @return The ID of the link
      * 
      */
-    public String linkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
 
@@ -89,8 +90,29 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder deviceId(String deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * @param deviceId The ID of the device
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder globalNetworkId(String globalNetworkId) {
-            $.globalNetworkId = globalNetworkId;
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param linkId The ID of the link
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkId(Output<String> linkId) {
+            $.linkId = linkId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder linkId(String linkId) {
-            $.linkId = linkId;
-            return this;
+            return linkId(Output.of(linkId));
         }
 
         public GetLinkAssociationArgs build() {

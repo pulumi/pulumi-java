@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Storage Sync Group.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSyncId", required=true)
-    private String storageSyncId;
+    private Output<String> storageSyncId;
 
     /**
      * @return The resource ID of the Storage Sync where this Storage Sync Group is.
      * 
      */
-    public String storageSyncId() {
+    public Output<String> storageSyncId() {
         return this.storageSyncId;
     }
 
@@ -73,8 +74,29 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this Storage Sync Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param storageSyncId The resource ID of the Storage Sync where this Storage Sync Group is.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageSyncId(Output<String> storageSyncId) {
+            $.storageSyncId = storageSyncId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageSyncId(String storageSyncId) {
-            $.storageSyncId = storageSyncId;
-            return this;
+            return storageSyncId(Output.of(storageSyncId));
         }
 
         public GetSyncGroupArgs build() {

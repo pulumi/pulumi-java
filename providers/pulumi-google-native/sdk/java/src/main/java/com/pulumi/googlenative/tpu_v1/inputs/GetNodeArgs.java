@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.tpu_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetNodeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodeArgs Empty = new GetNodeArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="nodeId", required=true)
-    private String nodeId;
+    private Output<String> nodeId;
 
-    public String nodeId() {
+    public Output<String> nodeId() {
         return this.nodeId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetNodeArgs() {}
@@ -61,19 +61,31 @@ public final class GetNodeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodeArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder nodeId(String nodeId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder nodeId(Output<String> nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder nodeId(String nodeId) {
+            return nodeId(Output.of(nodeId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetNodeArgs build() {

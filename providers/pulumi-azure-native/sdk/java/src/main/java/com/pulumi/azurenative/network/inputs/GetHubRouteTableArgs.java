@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VirtualHub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="routeTableName", required=true)
-    private String routeTableName;
+    private Output<String> routeTableName;
 
     /**
      * @return The name of the RouteTable.
      * 
      */
-    public String routeTableName() {
+    public Output<String> routeTableName() {
         return this.routeTableName;
     }
 
@@ -47,13 +48,13 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="virtualHubName", required=true)
-    private String virtualHubName;
+    private Output<String> virtualHubName;
 
     /**
      * @return The name of the VirtualHub.
      * 
      */
-    public String virtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -89,8 +90,29 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeTableName The name of the RouteTable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeTableName(Output<String> routeTableName) {
+            $.routeTableName = routeTableName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder routeTableName(String routeTableName) {
-            $.routeTableName = routeTableName;
+            return routeTableName(Output.of(routeTableName));
+        }
+
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualHubName(Output<String> virtualHubName) {
+            $.virtualHubName = virtualHubName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetHubRouteTableArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder virtualHubName(String virtualHubName) {
-            $.virtualHubName = virtualHubName;
-            return this;
+            return virtualHubName(Output.of(virtualHubName));
         }
 
         public GetHubRouteTableArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
     /**
      * @return The OCID of the group.
      * 
      */
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
+        }
+
+        /**
+         * @param groupId The OCID of the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
 
         public GetGroupArgs build() {

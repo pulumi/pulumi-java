@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="p2SVpnServerConfigurationName", required=true)
-    private String p2SVpnServerConfigurationName;
+    private Output<String> p2SVpnServerConfigurationName;
 
     /**
      * @return The name of the P2SVpnServerConfiguration.
      * 
      */
-    public String p2SVpnServerConfigurationName() {
+    public Output<String> p2SVpnServerConfigurationName() {
         return this.p2SVpnServerConfigurationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the P2SVpnServerConfiguration.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="virtualWanName", required=true)
-    private String virtualWanName;
+    private Output<String> virtualWanName;
 
     /**
      * @return The name of the VirtualWan.
      * 
      */
-    public String virtualWanName() {
+    public Output<String> virtualWanName() {
         return this.virtualWanName;
     }
 
@@ -89,8 +90,29 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
+        public Builder p2SVpnServerConfigurationName(Output<String> p2SVpnServerConfigurationName) {
             $.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
+            return this;
+        }
+
+        /**
+         * @param p2SVpnServerConfigurationName The name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
+            return p2SVpnServerConfigurationName(Output.of(p2SVpnServerConfigurationName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualWanName The name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualWanName(Output<String> virtualWanName) {
+            $.virtualWanName = virtualWanName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
          * 
          */
         public Builder virtualWanName(String virtualWanName) {
-            $.virtualWanName = virtualWanName;
-            return this;
+            return virtualWanName(Output.of(virtualWanName));
         }
 
         public GetP2sVpnServerConfigurationArgs build() {

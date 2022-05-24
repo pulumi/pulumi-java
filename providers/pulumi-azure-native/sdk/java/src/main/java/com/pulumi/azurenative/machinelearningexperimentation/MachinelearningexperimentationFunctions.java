@@ -10,10 +10,10 @@ import com.pulumi.azurenative.machinelearningexperimentation.inputs.GetWorkspace
 import com.pulumi.azurenative.machinelearningexperimentation.outputs.GetAccountResult;
 import com.pulumi.azurenative.machinelearningexperimentation.outputs.GetProjectResult;
 import com.pulumi.azurenative.machinelearningexperimentation.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MachinelearningexperimentationFunctions {
     /**
@@ -21,7 +21,7 @@ public final class MachinelearningexperimentationFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class MachinelearningexperimentationFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningexperimentation:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningexperimentation:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a machine learning project.
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class MachinelearningexperimentationFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningexperimentation:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningexperimentation:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a machine learning team account workspace.
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class MachinelearningexperimentationFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningexperimentation:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningexperimentation:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

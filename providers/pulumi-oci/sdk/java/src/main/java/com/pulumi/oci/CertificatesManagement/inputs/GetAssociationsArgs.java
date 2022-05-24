@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.CertificatesManagement.inputs.GetAssociationsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associatedResourceId")
-    private @Nullable String associatedResourceId;
+    private Output</* @Nullable */ String> associatedResourceId;
 
     /**
      * @return A filter that returns only resources that match the given OCID of an associated Oracle Cloud Infrastructure resource.
      * 
      */
-    public Optional<String> associatedResourceId() {
-        return Optional.ofNullable(this.associatedResourceId);
+    public Output</* @Nullable */ String> associatedResourceId() {
+        return this.associatedResourceId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associationId")
-    private @Nullable String associationId;
+    private Output</* @Nullable */ String> associationId;
 
     /**
      * @return The OCID of the association. If the parameter is set to null, the service lists all associations.
      * 
      */
-    public Optional<String> associationId() {
-        return Optional.ofNullable(this.associationId);
+    public Output</* @Nullable */ String> associationId() {
+        return this.associationId;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associationType")
-    private @Nullable String associationType;
+    private Output</* @Nullable */ String> associationType;
 
     /**
      * @return Type of associations to list. If the parameter is set to null, the service lists all types of associations.
      * 
      */
-    public Optional<String> associationType() {
-        return Optional.ofNullable(this.associationType);
+    public Output</* @Nullable */ String> associationType() {
+        return this.associationType;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificatesResourceId")
-    private @Nullable String certificatesResourceId;
+    private Output</* @Nullable */ String> certificatesResourceId;
 
     /**
      * @return A filter that returns only resources that match the given OCID of a certificate-related resource.
      * 
      */
-    public Optional<String> certificatesResourceId() {
-        return Optional.ofNullable(this.certificatesResourceId);
+    public Output</* @Nullable */ String> certificatesResourceId() {
+        return this.certificatesResourceId;
     }
 
     /**
@@ -81,21 +81,21 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return A filter that returns only resources that match the given compartment OCID.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAssociationsFilter> filters;
+    private Output</* @Nullable */ List<GetAssociationsFilter>> filters;
 
-    public Optional<List<GetAssociationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAssociationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter that returns only resources that match the specified name.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetAssociationsArgs() {}
@@ -149,8 +149,29 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder associatedResourceId(@Nullable String associatedResourceId) {
+        public Builder associatedResourceId(Output</* @Nullable */ String> associatedResourceId) {
             $.associatedResourceId = associatedResourceId;
+            return this;
+        }
+
+        /**
+         * @param associatedResourceId A filter that returns only resources that match the given OCID of an associated Oracle Cloud Infrastructure resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associatedResourceId(@Nullable String associatedResourceId) {
+            return associatedResourceId(Output.of(associatedResourceId));
+        }
+
+        /**
+         * @param associationId The OCID of the association. If the parameter is set to null, the service lists all associations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationId(Output</* @Nullable */ String> associationId) {
+            $.associationId = associationId;
             return this;
         }
 
@@ -161,7 +182,17 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder associationId(@Nullable String associationId) {
-            $.associationId = associationId;
+            return associationId(Output.of(associationId));
+        }
+
+        /**
+         * @param associationType Type of associations to list. If the parameter is set to null, the service lists all types of associations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationType(Output</* @Nullable */ String> associationType) {
+            $.associationType = associationType;
             return this;
         }
 
@@ -172,7 +203,17 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder associationType(@Nullable String associationType) {
-            $.associationType = associationType;
+            return associationType(Output.of(associationType));
+        }
+
+        /**
+         * @param certificatesResourceId A filter that returns only resources that match the given OCID of a certificate-related resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificatesResourceId(Output</* @Nullable */ String> certificatesResourceId) {
+            $.certificatesResourceId = certificatesResourceId;
             return this;
         }
 
@@ -183,7 +224,17 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder certificatesResourceId(@Nullable String certificatesResourceId) {
-            $.certificatesResourceId = certificatesResourceId;
+            return certificatesResourceId(Output.of(certificatesResourceId));
+        }
+
+        /**
+         * @param compartmentId A filter that returns only resources that match the given compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -194,13 +245,16 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAssociationsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAssociationsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAssociationsFilter... filters) {
@@ -213,9 +267,19 @@ public final class GetAssociationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name A filter that returns only resources that match the specified name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
         }
 
         public GetAssociationsArgs build() {

@@ -12,10 +12,10 @@ import com.pulumi.azurenative.billing.outputs.GetBillingRoleAssignmentByBillingA
 import com.pulumi.azurenative.billing.outputs.GetBillingRoleAssignmentByDepartmentResult;
 import com.pulumi.azurenative.billing.outputs.GetBillingRoleAssignmentByEnrollmentAccountResult;
 import com.pulumi.azurenative.billing.outputs.ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BillingFunctions {
     /**
@@ -23,7 +23,7 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args) {
+    public static Output<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args) {
         return getBillingRoleAssignmentByBillingAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -31,15 +31,15 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByBillingAccount", TypeShape.of(GetBillingRoleAssignmentByBillingAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:billing:getBillingRoleAssignmentByBillingAccount", TypeShape.of(GetBillingRoleAssignmentByBillingAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The role assignment
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args) {
+    public static Output<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args) {
         return getBillingRoleAssignmentByDepartment(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByDepartment", TypeShape.of(GetBillingRoleAssignmentByDepartmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:billing:getBillingRoleAssignmentByDepartment", TypeShape.of(GetBillingRoleAssignmentByDepartmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The role assignment
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args) {
+    public static Output<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args) {
         return getBillingRoleAssignmentByEnrollmentAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByEnrollmentAccount", TypeShape.of(GetBillingRoleAssignmentByEnrollmentAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:billing:getBillingRoleAssignmentByEnrollmentAccount", TypeShape.of(GetBillingRoleAssignmentByEnrollmentAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of invoice section properties with create subscription permission.
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args) {
+    public static Output<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args) {
         return listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class BillingFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:billing:listBillingAccountInvoiceSectionsByCreateSubscriptionPermission", TypeShape.of(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:billing:listBillingAccountInvoiceSectionsByCreateSubscriptionPermission", TypeShape.of(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult.class), args, Utilities.withVersion(options));
     }
 }

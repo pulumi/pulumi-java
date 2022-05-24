@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.auditmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAssessmentArgs Empty = new GetAssessmentArgs();
 
     @Import(name="assessmentId", required=true)
-    private String assessmentId;
+    private Output<String> assessmentId;
 
-    public String assessmentId() {
+    public Output<String> assessmentId() {
         return this.assessmentId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder assessmentId(String assessmentId) {
+        public Builder assessmentId(Output<String> assessmentId) {
             $.assessmentId = assessmentId;
             return this;
+        }
+
+        public Builder assessmentId(String assessmentId) {
+            return assessmentId(Output.of(assessmentId));
         }
 
         public GetAssessmentArgs build() {

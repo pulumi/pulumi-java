@@ -6,10 +6,10 @@ package com.pulumi.azure.cognitive;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.cognitive.inputs.GetAccountArgs;
 import com.pulumi.azure.cognitive.outputs.GetAccountResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CognitiveFunctions {
     /**
@@ -41,7 +41,7 @@ public final class CognitiveFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class CognitiveFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:cognitive/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cognitive/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Waf.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkAddressListArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="networkAddressListId", required=true)
-    private String networkAddressListId;
+    private Output<String> networkAddressListId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the NetworkAddressList.
      * 
      */
-    public String networkAddressListId() {
+    public Output<String> networkAddressListId() {
         return this.networkAddressListId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNetworkAddressListArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder networkAddressListId(String networkAddressListId) {
+        public Builder networkAddressListId(Output<String> networkAddressListId) {
             $.networkAddressListId = networkAddressListId;
             return this;
+        }
+
+        /**
+         * @param networkAddressListId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the NetworkAddressList.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkAddressListId(String networkAddressListId) {
+            return networkAddressListId(Output.of(networkAddressListId));
         }
 
         public GetNetworkAddressListArgs build() {

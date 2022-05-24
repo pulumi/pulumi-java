@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.GenericArtifactsContent;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.GenericArtifactsContent.inputs.GetGenericArtifactsContentA
 import com.pulumi.oci.GenericArtifactsContent.outputs.GetArtifactByPathResult;
 import com.pulumi.oci.GenericArtifactsContent.outputs.GetGenericArtifactsContentResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class GenericArtifactsContentFunctions {
     /**
@@ -22,7 +22,7 @@ public final class GenericArtifactsContentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args) {
+    public static Output<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args) {
         return getArtifactByPath(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class GenericArtifactsContentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:GenericArtifactsContent/getArtifactByPath:getArtifactByPath", TypeShape.of(GetArtifactByPathResult.class), args, Utilities.withVersion(options));
+    public static Output<GetArtifactByPathResult> getArtifactByPath(GetArtifactByPathArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:GenericArtifactsContent/getArtifactByPath:getArtifactByPath", TypeShape.of(GetArtifactByPathResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Generic Artifacts Content resource in Oracle Cloud Infrastructure Generic Artifacts Content service.
@@ -44,7 +44,7 @@ public final class GenericArtifactsContentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args) {
+    public static Output<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args) {
         return getGenericArtifactsContent(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +55,7 @@ public final class GenericArtifactsContentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:GenericArtifactsContent/getGenericArtifactsContent:getGenericArtifactsContent", TypeShape.of(GetGenericArtifactsContentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGenericArtifactsContentResult> getGenericArtifactsContent(GetGenericArtifactsContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:GenericArtifactsContent/getGenericArtifactsContent:getGenericArtifactsContent", TypeShape.of(GetGenericArtifactsContentResult.class), args, Utilities.withVersion(options));
     }
 }

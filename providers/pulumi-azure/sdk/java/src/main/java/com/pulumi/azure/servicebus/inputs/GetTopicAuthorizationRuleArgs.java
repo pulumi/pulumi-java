@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the ServiceBus Topic Authorization Rule resource.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,21 +34,21 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private Output</* @Nullable */ String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Optional<String> namespaceName() {
-        return Optional.ofNullable(this.namespaceName);
+    public Output</* @Nullable */ String> namespaceName() {
+        return this.namespaceName;
     }
 
     @Import(name="queueName")
-    private @Nullable String queueName;
+    private Output</* @Nullable */ String> queueName;
 
-    public Optional<String> queueName() {
-        return Optional.ofNullable(this.queueName);
+    public Output</* @Nullable */ String> queueName() {
+        return this.queueName;
     }
 
     /**
@@ -56,21 +56,21 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private Output</* @Nullable */ String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the ServiceBus Namespace exists.
      * 
      */
-    public Optional<String> resourceGroupName() {
-        return Optional.ofNullable(this.resourceGroupName);
+    public Output</* @Nullable */ String> resourceGroupName() {
+        return this.resourceGroupName;
     }
 
     @Import(name="topicId")
-    private @Nullable String topicId;
+    private Output</* @Nullable */ String> topicId;
 
-    public Optional<String> topicId() {
-        return Optional.ofNullable(this.topicId);
+    public Output</* @Nullable */ String> topicId() {
+        return this.topicId;
     }
 
     /**
@@ -78,14 +78,14 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="topicName")
-    private @Nullable String topicName;
+    private Output</* @Nullable */ String> topicName;
 
     /**
      * @return The name of the ServiceBus Topic.
      * 
      */
-    public Optional<String> topicName() {
-        return Optional.ofNullable(this.topicName);
+    public Output</* @Nullable */ String> topicName() {
+        return this.topicName;
     }
 
     private GetTopicAuthorizationRuleArgs() {}
@@ -123,8 +123,29 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the ServiceBus Topic Authorization Rule resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName The name of the ServiceBus Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output</* @Nullable */ String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -135,12 +156,26 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder namespaceName(@Nullable String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        public Builder queueName(Output</* @Nullable */ String> queueName) {
+            $.queueName = queueName;
             return this;
         }
 
         public Builder queueName(@Nullable String queueName) {
-            $.queueName = queueName;
+            return queueName(Output.of(queueName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the ServiceBus Namespace exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -151,12 +186,26 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder topicId(Output</* @Nullable */ String> topicId) {
+            $.topicId = topicId;
             return this;
         }
 
         public Builder topicId(@Nullable String topicId) {
-            $.topicId = topicId;
+            return topicId(Output.of(topicId));
+        }
+
+        /**
+         * @param topicName The name of the ServiceBus Topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(Output</* @Nullable */ String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -167,8 +216,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder topicName(@Nullable String topicName) {
-            $.topicName = topicName;
-            return this;
+            return topicName(Output.of(topicName));
         }
 
         public GetTopicAuthorizationRuleArgs build() {

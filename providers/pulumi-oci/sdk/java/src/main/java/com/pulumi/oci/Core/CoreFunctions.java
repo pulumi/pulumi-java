@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -277,7 +278,6 @@ import com.pulumi.oci.Core.outputs.GetVolumeResult;
 import com.pulumi.oci.Core.outputs.GetVolumesResult;
 import com.pulumi.oci.Utilities;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class CoreFunctions {
     /**
@@ -288,7 +288,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResult> getAppCatalogListing(GetAppCatalogListingArgs args) {
+    public static Output<GetAppCatalogListingResult> getAppCatalogListing(GetAppCatalogListingArgs args) {
         return getAppCatalogListing(args, InvokeOptions.Empty);
     }
     /**
@@ -299,8 +299,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResult> getAppCatalogListing(GetAppCatalogListingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getAppCatalogListing:getAppCatalogListing", TypeShape.of(GetAppCatalogListingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppCatalogListingResult> getAppCatalogListing(GetAppCatalogListingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getAppCatalogListing:getAppCatalogListing", TypeShape.of(GetAppCatalogListingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific App Catalog Listing Resource Version resource in Oracle Cloud Infrastructure Core service.
@@ -310,7 +310,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResourceVersionResult> getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionArgs args) {
+    public static Output<GetAppCatalogListingResourceVersionResult> getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionArgs args) {
         return getAppCatalogListingResourceVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -321,8 +321,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResourceVersionResult> getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getAppCatalogListingResourceVersion:getAppCatalogListingResourceVersion", TypeShape.of(GetAppCatalogListingResourceVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppCatalogListingResourceVersionResult> getAppCatalogListingResourceVersion(GetAppCatalogListingResourceVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getAppCatalogListingResourceVersion:getAppCatalogListingResourceVersion", TypeShape.of(GetAppCatalogListingResourceVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of App Catalog Listing Resource Versions in Oracle Cloud Infrastructure Core service.
@@ -332,7 +332,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResourceVersionsResult> getAppCatalogListingResourceVersions(GetAppCatalogListingResourceVersionsArgs args) {
+    public static Output<GetAppCatalogListingResourceVersionsResult> getAppCatalogListingResourceVersions(GetAppCatalogListingResourceVersionsArgs args) {
         return getAppCatalogListingResourceVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -343,8 +343,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingResourceVersionsResult> getAppCatalogListingResourceVersions(GetAppCatalogListingResourceVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getAppCatalogListingResourceVersions:getAppCatalogListingResourceVersions", TypeShape.of(GetAppCatalogListingResourceVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppCatalogListingResourceVersionsResult> getAppCatalogListingResourceVersions(GetAppCatalogListingResourceVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getAppCatalogListingResourceVersions:getAppCatalogListingResourceVersions", TypeShape.of(GetAppCatalogListingResourceVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of App Catalog Listings in Oracle Cloud Infrastructure Core service.
@@ -354,7 +354,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingsResult> getAppCatalogListings() {
+    public static Output<GetAppCatalogListingsResult> getAppCatalogListings() {
         return getAppCatalogListings(GetAppCatalogListingsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -365,7 +365,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingsResult> getAppCatalogListings(GetAppCatalogListingsArgs args) {
+    public static Output<GetAppCatalogListingsResult> getAppCatalogListings(GetAppCatalogListingsArgs args) {
         return getAppCatalogListings(args, InvokeOptions.Empty);
     }
     /**
@@ -376,8 +376,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogListingsResult> getAppCatalogListings(GetAppCatalogListingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getAppCatalogListings:getAppCatalogListings", TypeShape.of(GetAppCatalogListingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppCatalogListingsResult> getAppCatalogListings(GetAppCatalogListingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getAppCatalogListings:getAppCatalogListings", TypeShape.of(GetAppCatalogListingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of App Catalog Subscriptions in Oracle Cloud Infrastructure Core service.
@@ -387,7 +387,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogSubscriptionsResult> getAppCatalogSubscriptions(GetAppCatalogSubscriptionsArgs args) {
+    public static Output<GetAppCatalogSubscriptionsResult> getAppCatalogSubscriptions(GetAppCatalogSubscriptionsArgs args) {
         return getAppCatalogSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -398,8 +398,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppCatalogSubscriptionsResult> getAppCatalogSubscriptions(GetAppCatalogSubscriptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getAppCatalogSubscriptions:getAppCatalogSubscriptions", TypeShape.of(GetAppCatalogSubscriptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppCatalogSubscriptionsResult> getAppCatalogSubscriptions(GetAppCatalogSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getAppCatalogSubscriptions:getAppCatalogSubscriptions", TypeShape.of(GetAppCatalogSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Block Volume Replica resource in Oracle Cloud Infrastructure Core service.
@@ -409,7 +409,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockVolumeReplicaResult> getBlockVolumeReplica(GetBlockVolumeReplicaArgs args) {
+    public static Output<GetBlockVolumeReplicaResult> getBlockVolumeReplica(GetBlockVolumeReplicaArgs args) {
         return getBlockVolumeReplica(args, InvokeOptions.Empty);
     }
     /**
@@ -420,8 +420,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockVolumeReplicaResult> getBlockVolumeReplica(GetBlockVolumeReplicaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBlockVolumeReplica:getBlockVolumeReplica", TypeShape.of(GetBlockVolumeReplicaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlockVolumeReplicaResult> getBlockVolumeReplica(GetBlockVolumeReplicaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBlockVolumeReplica:getBlockVolumeReplica", TypeShape.of(GetBlockVolumeReplicaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Block Volume Replicas in Oracle Cloud Infrastructure Core service.
@@ -431,7 +431,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockVolumeReplicasResult> getBlockVolumeReplicas(GetBlockVolumeReplicasArgs args) {
+    public static Output<GetBlockVolumeReplicasResult> getBlockVolumeReplicas(GetBlockVolumeReplicasArgs args) {
         return getBlockVolumeReplicas(args, InvokeOptions.Empty);
     }
     /**
@@ -442,8 +442,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockVolumeReplicasResult> getBlockVolumeReplicas(GetBlockVolumeReplicasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBlockVolumeReplicas:getBlockVolumeReplicas", TypeShape.of(GetBlockVolumeReplicasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlockVolumeReplicasResult> getBlockVolumeReplicas(GetBlockVolumeReplicasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBlockVolumeReplicas:getBlockVolumeReplicas", TypeShape.of(GetBlockVolumeReplicasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Boot Volume resource in Oracle Cloud Infrastructure Core service.
@@ -453,7 +453,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeResult> getBootVolume(GetBootVolumeArgs args) {
+    public static Output<GetBootVolumeResult> getBootVolume(GetBootVolumeArgs args) {
         return getBootVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -464,14 +464,14 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeResult> getBootVolume(GetBootVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolume:getBootVolume", TypeShape.of(GetBootVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeResult> getBootVolume(GetBootVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolume:getBootVolume", TypeShape.of(GetBootVolumeResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetBootVolumeAttachmentsResult> getBootVolumeAttachments(GetBootVolumeAttachmentsArgs args) {
+    public static Output<GetBootVolumeAttachmentsResult> getBootVolumeAttachments(GetBootVolumeAttachmentsArgs args) {
         return getBootVolumeAttachments(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBootVolumeAttachmentsResult> getBootVolumeAttachments(GetBootVolumeAttachmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumeAttachments:getBootVolumeAttachments", TypeShape.of(GetBootVolumeAttachmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeAttachmentsResult> getBootVolumeAttachments(GetBootVolumeAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumeAttachments:getBootVolumeAttachments", TypeShape.of(GetBootVolumeAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Boot Volume Backup resource in Oracle Cloud Infrastructure Core service.
@@ -481,7 +481,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeBackupResult> getBootVolumeBackup(GetBootVolumeBackupArgs args) {
+    public static Output<GetBootVolumeBackupResult> getBootVolumeBackup(GetBootVolumeBackupArgs args) {
         return getBootVolumeBackup(args, InvokeOptions.Empty);
     }
     /**
@@ -492,8 +492,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeBackupResult> getBootVolumeBackup(GetBootVolumeBackupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumeBackup:getBootVolumeBackup", TypeShape.of(GetBootVolumeBackupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeBackupResult> getBootVolumeBackup(GetBootVolumeBackupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumeBackup:getBootVolumeBackup", TypeShape.of(GetBootVolumeBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Boot Volume Backups in Oracle Cloud Infrastructure Core service.
@@ -503,7 +503,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeBackupsResult> getBootVolumeBackups(GetBootVolumeBackupsArgs args) {
+    public static Output<GetBootVolumeBackupsResult> getBootVolumeBackups(GetBootVolumeBackupsArgs args) {
         return getBootVolumeBackups(args, InvokeOptions.Empty);
     }
     /**
@@ -514,8 +514,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeBackupsResult> getBootVolumeBackups(GetBootVolumeBackupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumeBackups:getBootVolumeBackups", TypeShape.of(GetBootVolumeBackupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeBackupsResult> getBootVolumeBackups(GetBootVolumeBackupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumeBackups:getBootVolumeBackups", TypeShape.of(GetBootVolumeBackupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Boot Volume Replica resource in Oracle Cloud Infrastructure Core service.
@@ -525,7 +525,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeReplicaResult> getBootVolumeReplica(GetBootVolumeReplicaArgs args) {
+    public static Output<GetBootVolumeReplicaResult> getBootVolumeReplica(GetBootVolumeReplicaArgs args) {
         return getBootVolumeReplica(args, InvokeOptions.Empty);
     }
     /**
@@ -536,8 +536,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeReplicaResult> getBootVolumeReplica(GetBootVolumeReplicaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumeReplica:getBootVolumeReplica", TypeShape.of(GetBootVolumeReplicaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeReplicaResult> getBootVolumeReplica(GetBootVolumeReplicaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumeReplica:getBootVolumeReplica", TypeShape.of(GetBootVolumeReplicaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Boot Volume Replicas in Oracle Cloud Infrastructure Core service.
@@ -547,7 +547,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeReplicasResult> getBootVolumeReplicas(GetBootVolumeReplicasArgs args) {
+    public static Output<GetBootVolumeReplicasResult> getBootVolumeReplicas(GetBootVolumeReplicasArgs args) {
         return getBootVolumeReplicas(args, InvokeOptions.Empty);
     }
     /**
@@ -558,8 +558,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumeReplicasResult> getBootVolumeReplicas(GetBootVolumeReplicasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumeReplicas:getBootVolumeReplicas", TypeShape.of(GetBootVolumeReplicasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumeReplicasResult> getBootVolumeReplicas(GetBootVolumeReplicasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumeReplicas:getBootVolumeReplicas", TypeShape.of(GetBootVolumeReplicasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Boot Volumes in Oracle Cloud Infrastructure Core service.
@@ -569,7 +569,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumesResult> getBootVolumes(GetBootVolumesArgs args) {
+    public static Output<GetBootVolumesResult> getBootVolumes(GetBootVolumesArgs args) {
         return getBootVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -580,8 +580,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBootVolumesResult> getBootVolumes(GetBootVolumesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getBootVolumes:getBootVolumes", TypeShape.of(GetBootVolumesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBootVolumesResult> getBootVolumes(GetBootVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getBootVolumes:getBootVolumes", TypeShape.of(GetBootVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Byoip Allocated Ranges in Oracle Cloud Infrastructure Core service.
@@ -592,7 +592,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipAllocatedRangesResult> getByoipAllocatedRanges(GetByoipAllocatedRangesArgs args) {
+    public static Output<GetByoipAllocatedRangesResult> getByoipAllocatedRanges(GetByoipAllocatedRangesArgs args) {
         return getByoipAllocatedRanges(args, InvokeOptions.Empty);
     }
     /**
@@ -604,8 +604,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipAllocatedRangesResult> getByoipAllocatedRanges(GetByoipAllocatedRangesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getByoipAllocatedRanges:getByoipAllocatedRanges", TypeShape.of(GetByoipAllocatedRangesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetByoipAllocatedRangesResult> getByoipAllocatedRanges(GetByoipAllocatedRangesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getByoipAllocatedRanges:getByoipAllocatedRanges", TypeShape.of(GetByoipAllocatedRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Byoip Range resource in Oracle Cloud Infrastructure Core service.
@@ -615,7 +615,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipRangeResult> getByoipRange(GetByoipRangeArgs args) {
+    public static Output<GetByoipRangeResult> getByoipRange(GetByoipRangeArgs args) {
         return getByoipRange(args, InvokeOptions.Empty);
     }
     /**
@@ -626,8 +626,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipRangeResult> getByoipRange(GetByoipRangeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getByoipRange:getByoipRange", TypeShape.of(GetByoipRangeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetByoipRangeResult> getByoipRange(GetByoipRangeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getByoipRange:getByoipRange", TypeShape.of(GetByoipRangeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Byoip Ranges in Oracle Cloud Infrastructure Core service.
@@ -638,7 +638,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipRangesResult> getByoipRanges(GetByoipRangesArgs args) {
+    public static Output<GetByoipRangesResult> getByoipRanges(GetByoipRangesArgs args) {
         return getByoipRanges(args, InvokeOptions.Empty);
     }
     /**
@@ -650,8 +650,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetByoipRangesResult> getByoipRanges(GetByoipRangesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getByoipRanges:getByoipRanges", TypeShape.of(GetByoipRangesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetByoipRangesResult> getByoipRanges(GetByoipRangesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getByoipRanges:getByoipRanges", TypeShape.of(GetByoipRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cluster Network resource in Oracle Cloud Infrastructure Core service.
@@ -661,7 +661,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworkResult> getClusterNetwork(GetClusterNetworkArgs args) {
+    public static Output<GetClusterNetworkResult> getClusterNetwork(GetClusterNetworkArgs args) {
         return getClusterNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -672,8 +672,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworkResult> getClusterNetwork(GetClusterNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getClusterNetwork:getClusterNetwork", TypeShape.of(GetClusterNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterNetworkResult> getClusterNetwork(GetClusterNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getClusterNetwork:getClusterNetwork", TypeShape.of(GetClusterNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cluster Network Instances in Oracle Cloud Infrastructure Core service.
@@ -683,7 +683,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworkInstancesResult> getClusterNetworkInstances(GetClusterNetworkInstancesArgs args) {
+    public static Output<GetClusterNetworkInstancesResult> getClusterNetworkInstances(GetClusterNetworkInstancesArgs args) {
         return getClusterNetworkInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -694,8 +694,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworkInstancesResult> getClusterNetworkInstances(GetClusterNetworkInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getClusterNetworkInstances:getClusterNetworkInstances", TypeShape.of(GetClusterNetworkInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterNetworkInstancesResult> getClusterNetworkInstances(GetClusterNetworkInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getClusterNetworkInstances:getClusterNetworkInstances", TypeShape.of(GetClusterNetworkInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cluster Networks in Oracle Cloud Infrastructure Core service.
@@ -705,7 +705,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworksResult> getClusterNetworks(GetClusterNetworksArgs args) {
+    public static Output<GetClusterNetworksResult> getClusterNetworks(GetClusterNetworksArgs args) {
         return getClusterNetworks(args, InvokeOptions.Empty);
     }
     /**
@@ -716,8 +716,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterNetworksResult> getClusterNetworks(GetClusterNetworksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getClusterNetworks:getClusterNetworks", TypeShape.of(GetClusterNetworksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterNetworksResult> getClusterNetworks(GetClusterNetworksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getClusterNetworks:getClusterNetworks", TypeShape.of(GetClusterNetworksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vcn Dns Resolver Association resource in Oracle Cloud Infrastructure Core service.
@@ -727,7 +727,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCnvDnsResolverAssociationResult> getCnvDnsResolverAssociation(GetCnvDnsResolverAssociationArgs args) {
+    public static Output<GetCnvDnsResolverAssociationResult> getCnvDnsResolverAssociation(GetCnvDnsResolverAssociationArgs args) {
         return getCnvDnsResolverAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -738,8 +738,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCnvDnsResolverAssociationResult> getCnvDnsResolverAssociation(GetCnvDnsResolverAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCnvDnsResolverAssociation:getCnvDnsResolverAssociation", TypeShape.of(GetCnvDnsResolverAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCnvDnsResolverAssociationResult> getCnvDnsResolverAssociation(GetCnvDnsResolverAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCnvDnsResolverAssociation:getCnvDnsResolverAssociation", TypeShape.of(GetCnvDnsResolverAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compute Capacity Reservation resource in Oracle Cloud Infrastructure Core service.
@@ -749,7 +749,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationResult> getComputeCapacityReservation(GetComputeCapacityReservationArgs args) {
+    public static Output<GetComputeCapacityReservationResult> getComputeCapacityReservation(GetComputeCapacityReservationArgs args) {
         return getComputeCapacityReservation(args, InvokeOptions.Empty);
     }
     /**
@@ -760,8 +760,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationResult> getComputeCapacityReservation(GetComputeCapacityReservationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeCapacityReservation:getComputeCapacityReservation", TypeShape.of(GetComputeCapacityReservationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeCapacityReservationResult> getComputeCapacityReservation(GetComputeCapacityReservationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeCapacityReservation:getComputeCapacityReservation", TypeShape.of(GetComputeCapacityReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Capacity Reservation Instance Shapes in Oracle Cloud Infrastructure Core service.
@@ -771,7 +771,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationInstanceShapesResult> getComputeCapacityReservationInstanceShapes(GetComputeCapacityReservationInstanceShapesArgs args) {
+    public static Output<GetComputeCapacityReservationInstanceShapesResult> getComputeCapacityReservationInstanceShapes(GetComputeCapacityReservationInstanceShapesArgs args) {
         return getComputeCapacityReservationInstanceShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -782,8 +782,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationInstanceShapesResult> getComputeCapacityReservationInstanceShapes(GetComputeCapacityReservationInstanceShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeCapacityReservationInstanceShapes:getComputeCapacityReservationInstanceShapes", TypeShape.of(GetComputeCapacityReservationInstanceShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeCapacityReservationInstanceShapesResult> getComputeCapacityReservationInstanceShapes(GetComputeCapacityReservationInstanceShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeCapacityReservationInstanceShapes:getComputeCapacityReservationInstanceShapes", TypeShape.of(GetComputeCapacityReservationInstanceShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Capacity Reservation Instances in Oracle Cloud Infrastructure Core service.
@@ -793,7 +793,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationInstancesResult> getComputeCapacityReservationInstances(GetComputeCapacityReservationInstancesArgs args) {
+    public static Output<GetComputeCapacityReservationInstancesResult> getComputeCapacityReservationInstances(GetComputeCapacityReservationInstancesArgs args) {
         return getComputeCapacityReservationInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -804,8 +804,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationInstancesResult> getComputeCapacityReservationInstances(GetComputeCapacityReservationInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeCapacityReservationInstances:getComputeCapacityReservationInstances", TypeShape.of(GetComputeCapacityReservationInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeCapacityReservationInstancesResult> getComputeCapacityReservationInstances(GetComputeCapacityReservationInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeCapacityReservationInstances:getComputeCapacityReservationInstances", TypeShape.of(GetComputeCapacityReservationInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Capacity Reservations in Oracle Cloud Infrastructure Core service.
@@ -818,7 +818,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationsResult> getComputeCapacityReservations(GetComputeCapacityReservationsArgs args) {
+    public static Output<GetComputeCapacityReservationsResult> getComputeCapacityReservations(GetComputeCapacityReservationsArgs args) {
         return getComputeCapacityReservations(args, InvokeOptions.Empty);
     }
     /**
@@ -832,8 +832,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeCapacityReservationsResult> getComputeCapacityReservations(GetComputeCapacityReservationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeCapacityReservations:getComputeCapacityReservations", TypeShape.of(GetComputeCapacityReservationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeCapacityReservationsResult> getComputeCapacityReservations(GetComputeCapacityReservationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeCapacityReservations:getComputeCapacityReservations", TypeShape.of(GetComputeCapacityReservationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compute Global Image Capability Schema resource in Oracle Cloud Infrastructure Core service.
@@ -843,7 +843,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemaResult> getComputeGlobalImageCapabilitySchema(GetComputeGlobalImageCapabilitySchemaArgs args) {
+    public static Output<GetComputeGlobalImageCapabilitySchemaResult> getComputeGlobalImageCapabilitySchema(GetComputeGlobalImageCapabilitySchemaArgs args) {
         return getComputeGlobalImageCapabilitySchema(args, InvokeOptions.Empty);
     }
     /**
@@ -854,8 +854,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemaResult> getComputeGlobalImageCapabilitySchema(GetComputeGlobalImageCapabilitySchemaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeGlobalImageCapabilitySchema:getComputeGlobalImageCapabilitySchema", TypeShape.of(GetComputeGlobalImageCapabilitySchemaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeGlobalImageCapabilitySchemaResult> getComputeGlobalImageCapabilitySchema(GetComputeGlobalImageCapabilitySchemaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeGlobalImageCapabilitySchema:getComputeGlobalImageCapabilitySchema", TypeShape.of(GetComputeGlobalImageCapabilitySchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Global Image Capability Schemas in Oracle Cloud Infrastructure Core service.
@@ -865,7 +865,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas() {
+    public static Output<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas() {
         return getComputeGlobalImageCapabilitySchemas(GetComputeGlobalImageCapabilitySchemasArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -876,7 +876,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas(GetComputeGlobalImageCapabilitySchemasArgs args) {
+    public static Output<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas(GetComputeGlobalImageCapabilitySchemasArgs args) {
         return getComputeGlobalImageCapabilitySchemas(args, InvokeOptions.Empty);
     }
     /**
@@ -887,8 +887,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas(GetComputeGlobalImageCapabilitySchemasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeGlobalImageCapabilitySchemas:getComputeGlobalImageCapabilitySchemas", TypeShape.of(GetComputeGlobalImageCapabilitySchemasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeGlobalImageCapabilitySchemasResult> getComputeGlobalImageCapabilitySchemas(GetComputeGlobalImageCapabilitySchemasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeGlobalImageCapabilitySchemas:getComputeGlobalImageCapabilitySchemas", TypeShape.of(GetComputeGlobalImageCapabilitySchemasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compute Global Image Capability Schemas Version resource in Oracle Cloud Infrastructure Core service.
@@ -898,7 +898,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasVersionResult> getComputeGlobalImageCapabilitySchemasVersion(GetComputeGlobalImageCapabilitySchemasVersionArgs args) {
+    public static Output<GetComputeGlobalImageCapabilitySchemasVersionResult> getComputeGlobalImageCapabilitySchemasVersion(GetComputeGlobalImageCapabilitySchemasVersionArgs args) {
         return getComputeGlobalImageCapabilitySchemasVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -909,8 +909,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasVersionResult> getComputeGlobalImageCapabilitySchemasVersion(GetComputeGlobalImageCapabilitySchemasVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeGlobalImageCapabilitySchemasVersion:getComputeGlobalImageCapabilitySchemasVersion", TypeShape.of(GetComputeGlobalImageCapabilitySchemasVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeGlobalImageCapabilitySchemasVersionResult> getComputeGlobalImageCapabilitySchemasVersion(GetComputeGlobalImageCapabilitySchemasVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeGlobalImageCapabilitySchemasVersion:getComputeGlobalImageCapabilitySchemasVersion", TypeShape.of(GetComputeGlobalImageCapabilitySchemasVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Global Image Capability Schemas Versions in Oracle Cloud Infrastructure Core service.
@@ -920,7 +920,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasVersionsResult> getComputeGlobalImageCapabilitySchemasVersions(GetComputeGlobalImageCapabilitySchemasVersionsArgs args) {
+    public static Output<GetComputeGlobalImageCapabilitySchemasVersionsResult> getComputeGlobalImageCapabilitySchemasVersions(GetComputeGlobalImageCapabilitySchemasVersionsArgs args) {
         return getComputeGlobalImageCapabilitySchemasVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -931,8 +931,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeGlobalImageCapabilitySchemasVersionsResult> getComputeGlobalImageCapabilitySchemasVersions(GetComputeGlobalImageCapabilitySchemasVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeGlobalImageCapabilitySchemasVersions:getComputeGlobalImageCapabilitySchemasVersions", TypeShape.of(GetComputeGlobalImageCapabilitySchemasVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeGlobalImageCapabilitySchemasVersionsResult> getComputeGlobalImageCapabilitySchemasVersions(GetComputeGlobalImageCapabilitySchemasVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeGlobalImageCapabilitySchemasVersions:getComputeGlobalImageCapabilitySchemasVersions", TypeShape.of(GetComputeGlobalImageCapabilitySchemasVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Compute Image Capability Schema resource in Oracle Cloud Infrastructure Core service.
@@ -942,7 +942,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeImageCapabilitySchemaResult> getComputeImageCapabilitySchema(GetComputeImageCapabilitySchemaArgs args) {
+    public static Output<GetComputeImageCapabilitySchemaResult> getComputeImageCapabilitySchema(GetComputeImageCapabilitySchemaArgs args) {
         return getComputeImageCapabilitySchema(args, InvokeOptions.Empty);
     }
     /**
@@ -953,8 +953,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeImageCapabilitySchemaResult> getComputeImageCapabilitySchema(GetComputeImageCapabilitySchemaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeImageCapabilitySchema:getComputeImageCapabilitySchema", TypeShape.of(GetComputeImageCapabilitySchemaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeImageCapabilitySchemaResult> getComputeImageCapabilitySchema(GetComputeImageCapabilitySchemaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeImageCapabilitySchema:getComputeImageCapabilitySchema", TypeShape.of(GetComputeImageCapabilitySchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Compute Image Capability Schemas in Oracle Cloud Infrastructure Core service.
@@ -964,7 +964,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas() {
+    public static Output<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas() {
         return getComputeImageCapabilitySchemas(GetComputeImageCapabilitySchemasArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -975,7 +975,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas(GetComputeImageCapabilitySchemasArgs args) {
+    public static Output<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas(GetComputeImageCapabilitySchemasArgs args) {
         return getComputeImageCapabilitySchemas(args, InvokeOptions.Empty);
     }
     /**
@@ -986,8 +986,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas(GetComputeImageCapabilitySchemasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getComputeImageCapabilitySchemas:getComputeImageCapabilitySchemas", TypeShape.of(GetComputeImageCapabilitySchemasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputeImageCapabilitySchemasResult> getComputeImageCapabilitySchemas(GetComputeImageCapabilitySchemasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getComputeImageCapabilitySchemas:getComputeImageCapabilitySchemas", TypeShape.of(GetComputeImageCapabilitySchemasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Console Histories in Oracle Cloud Infrastructure Core service.
@@ -997,7 +997,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConsoleHistoriesResult> getConsoleHistories(GetConsoleHistoriesArgs args) {
+    public static Output<GetConsoleHistoriesResult> getConsoleHistories(GetConsoleHistoriesArgs args) {
         return getConsoleHistories(args, InvokeOptions.Empty);
     }
     /**
@@ -1008,8 +1008,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConsoleHistoriesResult> getConsoleHistories(GetConsoleHistoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getConsoleHistories:getConsoleHistories", TypeShape.of(GetConsoleHistoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConsoleHistoriesResult> getConsoleHistories(GetConsoleHistoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getConsoleHistories:getConsoleHistories", TypeShape.of(GetConsoleHistoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Console History Content resource in Oracle Cloud Infrastructure Core service.
@@ -1021,7 +1021,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConsoleHistoryDataResult> getConsoleHistoryData(GetConsoleHistoryDataArgs args) {
+    public static Output<GetConsoleHistoryDataResult> getConsoleHistoryData(GetConsoleHistoryDataArgs args) {
         return getConsoleHistoryData(args, InvokeOptions.Empty);
     }
     /**
@@ -1034,8 +1034,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConsoleHistoryDataResult> getConsoleHistoryData(GetConsoleHistoryDataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getConsoleHistoryData:getConsoleHistoryData", TypeShape.of(GetConsoleHistoryDataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConsoleHistoryDataResult> getConsoleHistoryData(GetConsoleHistoryDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getConsoleHistoryData:getConsoleHistoryData", TypeShape.of(GetConsoleHistoryDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cpe Device Shape resource in Oracle Cloud Infrastructure Core service.
@@ -1053,7 +1053,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpeDeviceShapeResult> getCpeDeviceShape(GetCpeDeviceShapeArgs args) {
+    public static Output<GetCpeDeviceShapeResult> getCpeDeviceShape(GetCpeDeviceShapeArgs args) {
         return getCpeDeviceShape(args, InvokeOptions.Empty);
     }
     /**
@@ -1072,8 +1072,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpeDeviceShapeResult> getCpeDeviceShape(GetCpeDeviceShapeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCpeDeviceShape:getCpeDeviceShape", TypeShape.of(GetCpeDeviceShapeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCpeDeviceShapeResult> getCpeDeviceShape(GetCpeDeviceShapeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCpeDeviceShape:getCpeDeviceShape", TypeShape.of(GetCpeDeviceShapeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cpe Device Shapes in Oracle Cloud Infrastructure Core service.
@@ -1095,7 +1095,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpeDeviceShapesResult> getCpeDeviceShapes() {
+    public static Output<GetCpeDeviceShapesResult> getCpeDeviceShapes() {
         return getCpeDeviceShapes(GetCpeDeviceShapesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1118,7 +1118,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpeDeviceShapesResult> getCpeDeviceShapes(GetCpeDeviceShapesArgs args) {
+    public static Output<GetCpeDeviceShapesResult> getCpeDeviceShapes(GetCpeDeviceShapesArgs args) {
         return getCpeDeviceShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -1141,8 +1141,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpeDeviceShapesResult> getCpeDeviceShapes(GetCpeDeviceShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCpeDeviceShapes:getCpeDeviceShapes", TypeShape.of(GetCpeDeviceShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCpeDeviceShapesResult> getCpeDeviceShapes(GetCpeDeviceShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCpeDeviceShapes:getCpeDeviceShapes", TypeShape.of(GetCpeDeviceShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cpes in Oracle Cloud Infrastructure Core service.
@@ -1152,7 +1152,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpesResult> getCpes(GetCpesArgs args) {
+    public static Output<GetCpesResult> getCpes(GetCpesArgs args) {
         return getCpes(args, InvokeOptions.Empty);
     }
     /**
@@ -1163,8 +1163,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCpesResult> getCpes(GetCpesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCpes:getCpes", TypeShape.of(GetCpesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCpesResult> getCpes(GetCpesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCpes:getCpes", TypeShape.of(GetCpesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cross Connect resource in Oracle Cloud Infrastructure Core service.
@@ -1174,7 +1174,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectResult> getCrossConnect(GetCrossConnectArgs args) {
+    public static Output<GetCrossConnectResult> getCrossConnect(GetCrossConnectArgs args) {
         return getCrossConnect(args, InvokeOptions.Empty);
     }
     /**
@@ -1185,8 +1185,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectResult> getCrossConnect(GetCrossConnectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnect:getCrossConnect", TypeShape.of(GetCrossConnectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectResult> getCrossConnect(GetCrossConnectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnect:getCrossConnect", TypeShape.of(GetCrossConnectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cross Connect Group resource in Oracle Cloud Infrastructure Core service.
@@ -1196,7 +1196,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectGroupResult> getCrossConnectGroup(GetCrossConnectGroupArgs args) {
+    public static Output<GetCrossConnectGroupResult> getCrossConnectGroup(GetCrossConnectGroupArgs args) {
         return getCrossConnectGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -1207,8 +1207,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectGroupResult> getCrossConnectGroup(GetCrossConnectGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnectGroup:getCrossConnectGroup", TypeShape.of(GetCrossConnectGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectGroupResult> getCrossConnectGroup(GetCrossConnectGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnectGroup:getCrossConnectGroup", TypeShape.of(GetCrossConnectGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cross Connect Groups in Oracle Cloud Infrastructure Core service.
@@ -1218,7 +1218,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectGroupsResult> getCrossConnectGroups(GetCrossConnectGroupsArgs args) {
+    public static Output<GetCrossConnectGroupsResult> getCrossConnectGroups(GetCrossConnectGroupsArgs args) {
         return getCrossConnectGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -1229,8 +1229,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectGroupsResult> getCrossConnectGroups(GetCrossConnectGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnectGroups:getCrossConnectGroups", TypeShape.of(GetCrossConnectGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectGroupsResult> getCrossConnectGroups(GetCrossConnectGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnectGroups:getCrossConnectGroups", TypeShape.of(GetCrossConnectGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cross Connect Locations in Oracle Cloud Infrastructure Core service.
@@ -1241,7 +1241,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectLocationsResult> getCrossConnectLocations(GetCrossConnectLocationsArgs args) {
+    public static Output<GetCrossConnectLocationsResult> getCrossConnectLocations(GetCrossConnectLocationsArgs args) {
         return getCrossConnectLocations(args, InvokeOptions.Empty);
     }
     /**
@@ -1253,8 +1253,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectLocationsResult> getCrossConnectLocations(GetCrossConnectLocationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnectLocations:getCrossConnectLocations", TypeShape.of(GetCrossConnectLocationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectLocationsResult> getCrossConnectLocations(GetCrossConnectLocationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnectLocations:getCrossConnectLocations", TypeShape.of(GetCrossConnectLocationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cross Connect Port Speed Shapes in Oracle Cloud Infrastructure Core service.
@@ -1266,7 +1266,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectPortSpeedShapeResult> getCrossConnectPortSpeedShape(GetCrossConnectPortSpeedShapeArgs args) {
+    public static Output<GetCrossConnectPortSpeedShapeResult> getCrossConnectPortSpeedShape(GetCrossConnectPortSpeedShapeArgs args) {
         return getCrossConnectPortSpeedShape(args, InvokeOptions.Empty);
     }
     /**
@@ -1279,8 +1279,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectPortSpeedShapeResult> getCrossConnectPortSpeedShape(GetCrossConnectPortSpeedShapeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnectPortSpeedShape:getCrossConnectPortSpeedShape", TypeShape.of(GetCrossConnectPortSpeedShapeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectPortSpeedShapeResult> getCrossConnectPortSpeedShape(GetCrossConnectPortSpeedShapeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnectPortSpeedShape:getCrossConnectPortSpeedShape", TypeShape.of(GetCrossConnectPortSpeedShapeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cross Connect Status resource in Oracle Cloud Infrastructure Core service.
@@ -1290,7 +1290,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectStatusResult> getCrossConnectStatus(GetCrossConnectStatusArgs args) {
+    public static Output<GetCrossConnectStatusResult> getCrossConnectStatus(GetCrossConnectStatusArgs args) {
         return getCrossConnectStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -1301,8 +1301,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectStatusResult> getCrossConnectStatus(GetCrossConnectStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnectStatus:getCrossConnectStatus", TypeShape.of(GetCrossConnectStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectStatusResult> getCrossConnectStatus(GetCrossConnectStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnectStatus:getCrossConnectStatus", TypeShape.of(GetCrossConnectStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Cross Connects in Oracle Cloud Infrastructure Core service.
@@ -1313,7 +1313,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectsResult> getCrossConnects(GetCrossConnectsArgs args) {
+    public static Output<GetCrossConnectsResult> getCrossConnects(GetCrossConnectsArgs args) {
         return getCrossConnects(args, InvokeOptions.Empty);
     }
     /**
@@ -1325,8 +1325,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCrossConnectsResult> getCrossConnects(GetCrossConnectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getCrossConnects:getCrossConnects", TypeShape.of(GetCrossConnectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCrossConnectsResult> getCrossConnects(GetCrossConnectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getCrossConnects:getCrossConnects", TypeShape.of(GetCrossConnectsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Dedicated Vm Host resource in Oracle Cloud Infrastructure Core service.
@@ -1336,7 +1336,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostResult> getDedicatedVmHost(GetDedicatedVmHostArgs args) {
+    public static Output<GetDedicatedVmHostResult> getDedicatedVmHost(GetDedicatedVmHostArgs args) {
         return getDedicatedVmHost(args, InvokeOptions.Empty);
     }
     /**
@@ -1347,8 +1347,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostResult> getDedicatedVmHost(GetDedicatedVmHostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDedicatedVmHost:getDedicatedVmHost", TypeShape.of(GetDedicatedVmHostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedVmHostResult> getDedicatedVmHost(GetDedicatedVmHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDedicatedVmHost:getDedicatedVmHost", TypeShape.of(GetDedicatedVmHostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Dedicated Vm Host Instance Shapes in Oracle Cloud Infrastructure Core service.
@@ -1359,7 +1359,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostInstanceShapesResult> getDedicatedVmHostInstanceShapes(GetDedicatedVmHostInstanceShapesArgs args) {
+    public static Output<GetDedicatedVmHostInstanceShapesResult> getDedicatedVmHostInstanceShapes(GetDedicatedVmHostInstanceShapesArgs args) {
         return getDedicatedVmHostInstanceShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -1371,8 +1371,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostInstanceShapesResult> getDedicatedVmHostInstanceShapes(GetDedicatedVmHostInstanceShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDedicatedVmHostInstanceShapes:getDedicatedVmHostInstanceShapes", TypeShape.of(GetDedicatedVmHostInstanceShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedVmHostInstanceShapesResult> getDedicatedVmHostInstanceShapes(GetDedicatedVmHostInstanceShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDedicatedVmHostInstanceShapes:getDedicatedVmHostInstanceShapes", TypeShape.of(GetDedicatedVmHostInstanceShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Dedicated Vm Hosts Instances in Oracle Cloud Infrastructure Core service.
@@ -1382,7 +1382,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostInstancesResult> getDedicatedVmHostInstances(GetDedicatedVmHostInstancesArgs args) {
+    public static Output<GetDedicatedVmHostInstancesResult> getDedicatedVmHostInstances(GetDedicatedVmHostInstancesArgs args) {
         return getDedicatedVmHostInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -1393,8 +1393,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostInstancesResult> getDedicatedVmHostInstances(GetDedicatedVmHostInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDedicatedVmHostInstances:getDedicatedVmHostInstances", TypeShape.of(GetDedicatedVmHostInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedVmHostInstancesResult> getDedicatedVmHostInstances(GetDedicatedVmHostInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDedicatedVmHostInstances:getDedicatedVmHostInstances", TypeShape.of(GetDedicatedVmHostInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Dedicated Vm Host Shapes in Oracle Cloud Infrastructure Core service.
@@ -1404,7 +1404,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostShapesResult> getDedicatedVmHostShapes(GetDedicatedVmHostShapesArgs args) {
+    public static Output<GetDedicatedVmHostShapesResult> getDedicatedVmHostShapes(GetDedicatedVmHostShapesArgs args) {
         return getDedicatedVmHostShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -1415,8 +1415,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostShapesResult> getDedicatedVmHostShapes(GetDedicatedVmHostShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDedicatedVmHostShapes:getDedicatedVmHostShapes", TypeShape.of(GetDedicatedVmHostShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedVmHostShapesResult> getDedicatedVmHostShapes(GetDedicatedVmHostShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDedicatedVmHostShapes:getDedicatedVmHostShapes", TypeShape.of(GetDedicatedVmHostShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Dedicated Vm Hosts in Oracle Cloud Infrastructure Core service.
@@ -1429,7 +1429,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostsResult> getDedicatedVmHosts(GetDedicatedVmHostsArgs args) {
+    public static Output<GetDedicatedVmHostsResult> getDedicatedVmHosts(GetDedicatedVmHostsArgs args) {
         return getDedicatedVmHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -1443,8 +1443,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDedicatedVmHostsResult> getDedicatedVmHosts(GetDedicatedVmHostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDedicatedVmHosts:getDedicatedVmHosts", TypeShape.of(GetDedicatedVmHostsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedVmHostsResult> getDedicatedVmHosts(GetDedicatedVmHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDedicatedVmHosts:getDedicatedVmHosts", TypeShape.of(GetDedicatedVmHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Dhcp Options in Oracle Cloud Infrastructure Core service.
@@ -1457,7 +1457,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDhcpOptionsResult> getDhcpOptions(GetDhcpOptionsArgs args) {
+    public static Output<GetDhcpOptionsResult> getDhcpOptions(GetDhcpOptionsArgs args) {
         return getDhcpOptions(args, InvokeOptions.Empty);
     }
     /**
@@ -1471,8 +1471,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDhcpOptionsResult> getDhcpOptions(GetDhcpOptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDhcpOptions:getDhcpOptions", TypeShape.of(GetDhcpOptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDhcpOptionsResult> getDhcpOptions(GetDhcpOptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDhcpOptions:getDhcpOptions", TypeShape.of(GetDhcpOptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drg Attachments in Oracle Cloud Infrastructure Core service.
@@ -1487,7 +1487,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgAttachmentsResult> getDrgAttachments(GetDrgAttachmentsArgs args) {
+    public static Output<GetDrgAttachmentsResult> getDrgAttachments(GetDrgAttachmentsArgs args) {
         return getDrgAttachments(args, InvokeOptions.Empty);
     }
     /**
@@ -1503,8 +1503,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgAttachmentsResult> getDrgAttachments(GetDrgAttachmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgAttachments:getDrgAttachments", TypeShape.of(GetDrgAttachmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgAttachmentsResult> getDrgAttachments(GetDrgAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgAttachments:getDrgAttachments", TypeShape.of(GetDrgAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Drg Route Distribution resource in Oracle Cloud Infrastructure Core service.
@@ -1514,7 +1514,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionResult> getDrgRouteDistribution(GetDrgRouteDistributionArgs args) {
+    public static Output<GetDrgRouteDistributionResult> getDrgRouteDistribution(GetDrgRouteDistributionArgs args) {
         return getDrgRouteDistribution(args, InvokeOptions.Empty);
     }
     /**
@@ -1525,8 +1525,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionResult> getDrgRouteDistribution(GetDrgRouteDistributionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteDistribution:getDrgRouteDistribution", TypeShape.of(GetDrgRouteDistributionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteDistributionResult> getDrgRouteDistribution(GetDrgRouteDistributionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteDistribution:getDrgRouteDistribution", TypeShape.of(GetDrgRouteDistributionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drg Route Distribution Statements in Oracle Cloud Infrastructure Core service.
@@ -1536,7 +1536,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionStatementsResult> getDrgRouteDistributionStatements(GetDrgRouteDistributionStatementsArgs args) {
+    public static Output<GetDrgRouteDistributionStatementsResult> getDrgRouteDistributionStatements(GetDrgRouteDistributionStatementsArgs args) {
         return getDrgRouteDistributionStatements(args, InvokeOptions.Empty);
     }
     /**
@@ -1547,8 +1547,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionStatementsResult> getDrgRouteDistributionStatements(GetDrgRouteDistributionStatementsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteDistributionStatements:getDrgRouteDistributionStatements", TypeShape.of(GetDrgRouteDistributionStatementsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteDistributionStatementsResult> getDrgRouteDistributionStatements(GetDrgRouteDistributionStatementsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteDistributionStatements:getDrgRouteDistributionStatements", TypeShape.of(GetDrgRouteDistributionStatementsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drg Route Distributions in Oracle Cloud Infrastructure Core service.
@@ -1561,7 +1561,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionsResult> getDrgRouteDistributions(GetDrgRouteDistributionsArgs args) {
+    public static Output<GetDrgRouteDistributionsResult> getDrgRouteDistributions(GetDrgRouteDistributionsArgs args) {
         return getDrgRouteDistributions(args, InvokeOptions.Empty);
     }
     /**
@@ -1575,8 +1575,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteDistributionsResult> getDrgRouteDistributions(GetDrgRouteDistributionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteDistributions:getDrgRouteDistributions", TypeShape.of(GetDrgRouteDistributionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteDistributionsResult> getDrgRouteDistributions(GetDrgRouteDistributionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteDistributions:getDrgRouteDistributions", TypeShape.of(GetDrgRouteDistributionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Drg Route Table resource in Oracle Cloud Infrastructure Core service.
@@ -1586,7 +1586,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteRuleResult> getDrgRouteRule(GetDrgRouteRuleArgs args) {
+    public static Output<GetDrgRouteRuleResult> getDrgRouteRule(GetDrgRouteRuleArgs args) {
         return getDrgRouteRule(args, InvokeOptions.Empty);
     }
     /**
@@ -1597,8 +1597,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteRuleResult> getDrgRouteRule(GetDrgRouteRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteRule:getDrgRouteRule", TypeShape.of(GetDrgRouteRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteRuleResult> getDrgRouteRule(GetDrgRouteRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteRule:getDrgRouteRule", TypeShape.of(GetDrgRouteRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drg Route Table Route Rules in Oracle Cloud Infrastructure Core service.
@@ -1608,7 +1608,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteTableRouteRulesResult> getDrgRouteTableRouteRules(GetDrgRouteTableRouteRulesArgs args) {
+    public static Output<GetDrgRouteTableRouteRulesResult> getDrgRouteTableRouteRules(GetDrgRouteTableRouteRulesArgs args) {
         return getDrgRouteTableRouteRules(args, InvokeOptions.Empty);
     }
     /**
@@ -1619,8 +1619,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteTableRouteRulesResult> getDrgRouteTableRouteRules(GetDrgRouteTableRouteRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteTableRouteRules:getDrgRouteTableRouteRules", TypeShape.of(GetDrgRouteTableRouteRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteTableRouteRulesResult> getDrgRouteTableRouteRules(GetDrgRouteTableRouteRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteTableRouteRules:getDrgRouteTableRouteRules", TypeShape.of(GetDrgRouteTableRouteRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drg Route Tables in Oracle Cloud Infrastructure Core service.
@@ -1632,7 +1632,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteTablesResult> getDrgRouteTables(GetDrgRouteTablesArgs args) {
+    public static Output<GetDrgRouteTablesResult> getDrgRouteTables(GetDrgRouteTablesArgs args) {
         return getDrgRouteTables(args, InvokeOptions.Empty);
     }
     /**
@@ -1645,8 +1645,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgRouteTablesResult> getDrgRouteTables(GetDrgRouteTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgRouteTables:getDrgRouteTables", TypeShape.of(GetDrgRouteTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgRouteTablesResult> getDrgRouteTables(GetDrgRouteTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgRouteTables:getDrgRouteTables", TypeShape.of(GetDrgRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Drgs in Oracle Cloud Infrastructure Core service.
@@ -1656,7 +1656,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgsResult> getDrgs(GetDrgsArgs args) {
+    public static Output<GetDrgsResult> getDrgs(GetDrgsArgs args) {
         return getDrgs(args, InvokeOptions.Empty);
     }
     /**
@@ -1667,8 +1667,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDrgsResult> getDrgs(GetDrgsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getDrgs:getDrgs", TypeShape.of(GetDrgsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDrgsResult> getDrgs(GetDrgsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getDrgs:getDrgs", TypeShape.of(GetDrgsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Fast Connect Provider Service resource in Oracle Cloud Infrastructure Core service.
@@ -1679,7 +1679,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServiceResult> getFastConnectProviderService(GetFastConnectProviderServiceArgs args) {
+    public static Output<GetFastConnectProviderServiceResult> getFastConnectProviderService(GetFastConnectProviderServiceArgs args) {
         return getFastConnectProviderService(args, InvokeOptions.Empty);
     }
     /**
@@ -1691,8 +1691,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServiceResult> getFastConnectProviderService(GetFastConnectProviderServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getFastConnectProviderService:getFastConnectProviderService", TypeShape.of(GetFastConnectProviderServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFastConnectProviderServiceResult> getFastConnectProviderService(GetFastConnectProviderServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getFastConnectProviderService:getFastConnectProviderService", TypeShape.of(GetFastConnectProviderServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Fast Connect Provider Service Key resource in Oracle Cloud Infrastructure Core service.
@@ -1703,7 +1703,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServiceKeyResult> getFastConnectProviderServiceKey(GetFastConnectProviderServiceKeyArgs args) {
+    public static Output<GetFastConnectProviderServiceKeyResult> getFastConnectProviderServiceKey(GetFastConnectProviderServiceKeyArgs args) {
         return getFastConnectProviderServiceKey(args, InvokeOptions.Empty);
     }
     /**
@@ -1715,8 +1715,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServiceKeyResult> getFastConnectProviderServiceKey(GetFastConnectProviderServiceKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getFastConnectProviderServiceKey:getFastConnectProviderServiceKey", TypeShape.of(GetFastConnectProviderServiceKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFastConnectProviderServiceKeyResult> getFastConnectProviderServiceKey(GetFastConnectProviderServiceKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getFastConnectProviderServiceKey:getFastConnectProviderServiceKey", TypeShape.of(GetFastConnectProviderServiceKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Fast Connect Provider Services in Oracle Cloud Infrastructure Core service.
@@ -1732,7 +1732,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServicesResult> getFastConnectProviderServices(GetFastConnectProviderServicesArgs args) {
+    public static Output<GetFastConnectProviderServicesResult> getFastConnectProviderServices(GetFastConnectProviderServicesArgs args) {
         return getFastConnectProviderServices(args, InvokeOptions.Empty);
     }
     /**
@@ -1749,8 +1749,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFastConnectProviderServicesResult> getFastConnectProviderServices(GetFastConnectProviderServicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getFastConnectProviderServices:getFastConnectProviderServices", TypeShape.of(GetFastConnectProviderServicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFastConnectProviderServicesResult> getFastConnectProviderServices(GetFastConnectProviderServicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getFastConnectProviderServices:getFastConnectProviderServices", TypeShape.of(GetFastConnectProviderServicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Image resource in Oracle Cloud Infrastructure Core service.
@@ -1760,7 +1760,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -1771,8 +1771,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Image Shape resource in Oracle Cloud Infrastructure Core service.
@@ -1782,7 +1782,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageShapeResult> getImageShape(GetImageShapeArgs args) {
+    public static Output<GetImageShapeResult> getImageShape(GetImageShapeArgs args) {
         return getImageShape(args, InvokeOptions.Empty);
     }
     /**
@@ -1793,8 +1793,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageShapeResult> getImageShape(GetImageShapeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getImageShape:getImageShape", TypeShape.of(GetImageShapeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageShapeResult> getImageShape(GetImageShapeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getImageShape:getImageShape", TypeShape.of(GetImageShapeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Image Shapes in Oracle Cloud Infrastructure Core service.
@@ -1804,7 +1804,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageShapesResult> getImageShapes(GetImageShapesArgs args) {
+    public static Output<GetImageShapesResult> getImageShapes(GetImageShapesArgs args) {
         return getImageShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -1815,8 +1815,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageShapesResult> getImageShapes(GetImageShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getImageShapes:getImageShapes", TypeShape.of(GetImageShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageShapesResult> getImageShapes(GetImageShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getImageShapes:getImageShapes", TypeShape.of(GetImageShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Images in Oracle Cloud Infrastructure Core service.
@@ -1836,7 +1836,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImagesResult> getImages(GetImagesArgs args) {
+    public static Output<GetImagesResult> getImages(GetImagesArgs args) {
         return getImages(args, InvokeOptions.Empty);
     }
     /**
@@ -1857,8 +1857,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImagesResult> getImages(GetImagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getImages:getImages", TypeShape.of(GetImagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImagesResult> getImages(GetImagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getImages:getImages", TypeShape.of(GetImagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance resource in Oracle Cloud Infrastructure Core service.
@@ -1868,7 +1868,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -1879,8 +1879,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance Configuration resource in Oracle Cloud Infrastructure Core service.
@@ -1890,7 +1890,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConfigurationResult> getInstanceConfiguration(GetInstanceConfigurationArgs args) {
+    public static Output<GetInstanceConfigurationResult> getInstanceConfiguration(GetInstanceConfigurationArgs args) {
         return getInstanceConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -1901,8 +1901,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConfigurationResult> getInstanceConfiguration(GetInstanceConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceConfiguration:getInstanceConfiguration", TypeShape.of(GetInstanceConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceConfigurationResult> getInstanceConfiguration(GetInstanceConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceConfiguration:getInstanceConfiguration", TypeShape.of(GetInstanceConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instance Configurations in Oracle Cloud Infrastructure Core service.
@@ -1912,7 +1912,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConfigurationsResult> getInstanceConfigurations(GetInstanceConfigurationsArgs args) {
+    public static Output<GetInstanceConfigurationsResult> getInstanceConfigurations(GetInstanceConfigurationsArgs args) {
         return getInstanceConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -1923,8 +1923,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConfigurationsResult> getInstanceConfigurations(GetInstanceConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceConfigurations:getInstanceConfigurations", TypeShape.of(GetInstanceConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceConfigurationsResult> getInstanceConfigurations(GetInstanceConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceConfigurations:getInstanceConfigurations", TypeShape.of(GetInstanceConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instance Console Connections in Oracle Cloud Infrastructure Core service.
@@ -1936,7 +1936,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConsoleConnectionsResult> getInstanceConsoleConnections(GetInstanceConsoleConnectionsArgs args) {
+    public static Output<GetInstanceConsoleConnectionsResult> getInstanceConsoleConnections(GetInstanceConsoleConnectionsArgs args) {
         return getInstanceConsoleConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -1949,8 +1949,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceConsoleConnectionsResult> getInstanceConsoleConnections(GetInstanceConsoleConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceConsoleConnections:getInstanceConsoleConnections", TypeShape.of(GetInstanceConsoleConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceConsoleConnectionsResult> getInstanceConsoleConnections(GetInstanceConsoleConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceConsoleConnections:getInstanceConsoleConnections", TypeShape.of(GetInstanceConsoleConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance Credential resource in Oracle Cloud Infrastructure Core service.
@@ -1961,7 +1961,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceCredentialsResult> getInstanceCredentials(GetInstanceCredentialsArgs args) {
+    public static Output<GetInstanceCredentialsResult> getInstanceCredentials(GetInstanceCredentialsArgs args) {
         return getInstanceCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -1973,8 +1973,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceCredentialsResult> getInstanceCredentials(GetInstanceCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceCredentials:getInstanceCredentials", TypeShape.of(GetInstanceCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceCredentialsResult> getInstanceCredentials(GetInstanceCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceCredentials:getInstanceCredentials", TypeShape.of(GetInstanceCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instance Devices in Oracle Cloud Infrastructure Core service.
@@ -1984,7 +1984,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceDevicesResult> getInstanceDevices(GetInstanceDevicesArgs args) {
+    public static Output<GetInstanceDevicesResult> getInstanceDevices(GetInstanceDevicesArgs args) {
         return getInstanceDevices(args, InvokeOptions.Empty);
     }
     /**
@@ -1995,8 +1995,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceDevicesResult> getInstanceDevices(GetInstanceDevicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceDevices:getInstanceDevices", TypeShape.of(GetInstanceDevicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceDevicesResult> getInstanceDevices(GetInstanceDevicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceDevices:getInstanceDevices", TypeShape.of(GetInstanceDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance Measured Boot Report resource in Oracle Cloud Infrastructure Core service.
@@ -2006,7 +2006,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceMeasuredBootReportResult> getInstanceMeasuredBootReport(GetInstanceMeasuredBootReportArgs args) {
+    public static Output<GetInstanceMeasuredBootReportResult> getInstanceMeasuredBootReport(GetInstanceMeasuredBootReportArgs args) {
         return getInstanceMeasuredBootReport(args, InvokeOptions.Empty);
     }
     /**
@@ -2017,8 +2017,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceMeasuredBootReportResult> getInstanceMeasuredBootReport(GetInstanceMeasuredBootReportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstanceMeasuredBootReport:getInstanceMeasuredBootReport", TypeShape.of(GetInstanceMeasuredBootReportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceMeasuredBootReportResult> getInstanceMeasuredBootReport(GetInstanceMeasuredBootReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstanceMeasuredBootReport:getInstanceMeasuredBootReport", TypeShape.of(GetInstanceMeasuredBootReportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance Pool resource in Oracle Cloud Infrastructure Core service.
@@ -2028,7 +2028,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args) {
+    public static Output<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args) {
         return getInstancePool(args, InvokeOptions.Empty);
     }
     /**
@@ -2039,8 +2039,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstancePool:getInstancePool", TypeShape.of(GetInstancePoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstancePool:getInstancePool", TypeShape.of(GetInstancePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instance Pool Instances in Oracle Cloud Infrastructure Core service.
@@ -2050,7 +2050,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolInstancesResult> getInstancePoolInstances(GetInstancePoolInstancesArgs args) {
+    public static Output<GetInstancePoolInstancesResult> getInstancePoolInstances(GetInstancePoolInstancesArgs args) {
         return getInstancePoolInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -2061,8 +2061,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolInstancesResult> getInstancePoolInstances(GetInstancePoolInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstancePoolInstances:getInstancePoolInstances", TypeShape.of(GetInstancePoolInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancePoolInstancesResult> getInstancePoolInstances(GetInstancePoolInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstancePoolInstances:getInstancePoolInstances", TypeShape.of(GetInstancePoolInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Instance Pool Load Balancer Attachment resource in Oracle Cloud Infrastructure Core service.
@@ -2072,7 +2072,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolLoadBalancerAttachmentResult> getInstancePoolLoadBalancerAttachment(GetInstancePoolLoadBalancerAttachmentArgs args) {
+    public static Output<GetInstancePoolLoadBalancerAttachmentResult> getInstancePoolLoadBalancerAttachment(GetInstancePoolLoadBalancerAttachmentArgs args) {
         return getInstancePoolLoadBalancerAttachment(args, InvokeOptions.Empty);
     }
     /**
@@ -2083,8 +2083,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolLoadBalancerAttachmentResult> getInstancePoolLoadBalancerAttachment(GetInstancePoolLoadBalancerAttachmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstancePoolLoadBalancerAttachment:getInstancePoolLoadBalancerAttachment", TypeShape.of(GetInstancePoolLoadBalancerAttachmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancePoolLoadBalancerAttachmentResult> getInstancePoolLoadBalancerAttachment(GetInstancePoolLoadBalancerAttachmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstancePoolLoadBalancerAttachment:getInstancePoolLoadBalancerAttachment", TypeShape.of(GetInstancePoolLoadBalancerAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instance Pools in Oracle Cloud Infrastructure Core service.
@@ -2094,7 +2094,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolsResult> getInstancePools(GetInstancePoolsArgs args) {
+    public static Output<GetInstancePoolsResult> getInstancePools(GetInstancePoolsArgs args) {
         return getInstancePools(args, InvokeOptions.Empty);
     }
     /**
@@ -2105,8 +2105,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancePoolsResult> getInstancePools(GetInstancePoolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstancePools:getInstancePools", TypeShape.of(GetInstancePoolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancePoolsResult> getInstancePools(GetInstancePoolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstancePools:getInstancePools", TypeShape.of(GetInstancePoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Instances in Oracle Cloud Infrastructure Core service.
@@ -2118,7 +2118,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args) {
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args) {
         return getInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -2131,8 +2131,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Internet Gateways in Oracle Cloud Infrastructure Core service.
@@ -2143,7 +2143,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInternetGatewaysResult> getInternetGateways(GetInternetGatewaysArgs args) {
+    public static Output<GetInternetGatewaysResult> getInternetGateways(GetInternetGatewaysArgs args) {
         return getInternetGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -2155,8 +2155,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInternetGatewaysResult> getInternetGateways(GetInternetGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getInternetGateways:getInternetGateways", TypeShape.of(GetInternetGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInternetGatewaysResult> getInternetGateways(GetInternetGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getInternetGateways:getInternetGateways", TypeShape.of(GetInternetGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ipsec Algorithm resource in Oracle Cloud Infrastructure Core service.
@@ -2166,7 +2166,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecAlgorithmResult> getIpsecAlgorithm() {
+    public static Output<GetIpsecAlgorithmResult> getIpsecAlgorithm() {
         return getIpsecAlgorithm(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2177,7 +2177,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecAlgorithmResult> getIpsecAlgorithm(InvokeArgs args) {
+    public static Output<GetIpsecAlgorithmResult> getIpsecAlgorithm(InvokeArgs args) {
         return getIpsecAlgorithm(args, InvokeOptions.Empty);
     }
     /**
@@ -2188,8 +2188,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecAlgorithmResult> getIpsecAlgorithm(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecAlgorithm:getIpsecAlgorithm", TypeShape.of(GetIpsecAlgorithmResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecAlgorithmResult> getIpsecAlgorithm(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecAlgorithm:getIpsecAlgorithm", TypeShape.of(GetIpsecAlgorithmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ip Sec Connection Device Config resource in Oracle Cloud Infrastructure Core service.
@@ -2202,7 +2202,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConfigResult> getIpsecConfig(GetIpsecConfigArgs args) {
+    public static Output<GetIpsecConfigResult> getIpsecConfig(GetIpsecConfigArgs args) {
         return getIpsecConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -2216,8 +2216,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConfigResult> getIpsecConfig(GetIpsecConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConfig:getIpsecConfig", TypeShape.of(GetIpsecConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConfigResult> getIpsecConfig(GetIpsecConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConfig:getIpsecConfig", TypeShape.of(GetIpsecConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ip Sec Connection Tunnel resource in Oracle Cloud Infrastructure Core service.
@@ -2227,7 +2227,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelResult> getIpsecConnectionTunnel(GetIpsecConnectionTunnelArgs args) {
+    public static Output<GetIpsecConnectionTunnelResult> getIpsecConnectionTunnel(GetIpsecConnectionTunnelArgs args) {
         return getIpsecConnectionTunnel(args, InvokeOptions.Empty);
     }
     /**
@@ -2238,8 +2238,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelResult> getIpsecConnectionTunnel(GetIpsecConnectionTunnelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConnectionTunnel:getIpsecConnectionTunnel", TypeShape.of(GetIpsecConnectionTunnelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConnectionTunnelResult> getIpsecConnectionTunnel(GetIpsecConnectionTunnelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConnectionTunnel:getIpsecConnectionTunnel", TypeShape.of(GetIpsecConnectionTunnelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ipsec Connection Tunnel Error resource in Oracle Cloud Infrastructure Core service.
@@ -2249,7 +2249,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelErrorResult> getIpsecConnectionTunnelError(GetIpsecConnectionTunnelErrorArgs args) {
+    public static Output<GetIpsecConnectionTunnelErrorResult> getIpsecConnectionTunnelError(GetIpsecConnectionTunnelErrorArgs args) {
         return getIpsecConnectionTunnelError(args, InvokeOptions.Empty);
     }
     /**
@@ -2260,8 +2260,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelErrorResult> getIpsecConnectionTunnelError(GetIpsecConnectionTunnelErrorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConnectionTunnelError:getIpsecConnectionTunnelError", TypeShape.of(GetIpsecConnectionTunnelErrorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConnectionTunnelErrorResult> getIpsecConnectionTunnelError(GetIpsecConnectionTunnelErrorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConnectionTunnelError:getIpsecConnectionTunnelError", TypeShape.of(GetIpsecConnectionTunnelErrorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ipsec Connection Tunnel Routes in Oracle Cloud Infrastructure Core service.
@@ -2271,7 +2271,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelRoutesResult> getIpsecConnectionTunnelRoutes(GetIpsecConnectionTunnelRoutesArgs args) {
+    public static Output<GetIpsecConnectionTunnelRoutesResult> getIpsecConnectionTunnelRoutes(GetIpsecConnectionTunnelRoutesArgs args) {
         return getIpsecConnectionTunnelRoutes(args, InvokeOptions.Empty);
     }
     /**
@@ -2282,8 +2282,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelRoutesResult> getIpsecConnectionTunnelRoutes(GetIpsecConnectionTunnelRoutesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConnectionTunnelRoutes:getIpsecConnectionTunnelRoutes", TypeShape.of(GetIpsecConnectionTunnelRoutesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConnectionTunnelRoutesResult> getIpsecConnectionTunnelRoutes(GetIpsecConnectionTunnelRoutesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConnectionTunnelRoutes:getIpsecConnectionTunnelRoutes", TypeShape.of(GetIpsecConnectionTunnelRoutesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ip Sec Connection Tunnels in Oracle Cloud Infrastructure Core service.
@@ -2293,7 +2293,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelsResult> getIpsecConnectionTunnels(GetIpsecConnectionTunnelsArgs args) {
+    public static Output<GetIpsecConnectionTunnelsResult> getIpsecConnectionTunnels(GetIpsecConnectionTunnelsArgs args) {
         return getIpsecConnectionTunnels(args, InvokeOptions.Empty);
     }
     /**
@@ -2304,8 +2304,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionTunnelsResult> getIpsecConnectionTunnels(GetIpsecConnectionTunnelsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConnectionTunnels:getIpsecConnectionTunnels", TypeShape.of(GetIpsecConnectionTunnelsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConnectionTunnelsResult> getIpsecConnectionTunnels(GetIpsecConnectionTunnelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConnectionTunnels:getIpsecConnectionTunnels", TypeShape.of(GetIpsecConnectionTunnelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ip Sec Connections in Oracle Cloud Infrastructure Core service.
@@ -2316,7 +2316,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionsResult> getIpsecConnections(GetIpsecConnectionsArgs args) {
+    public static Output<GetIpsecConnectionsResult> getIpsecConnections(GetIpsecConnectionsArgs args) {
         return getIpsecConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -2328,8 +2328,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecConnectionsResult> getIpsecConnections(GetIpsecConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecConnections:getIpsecConnections", TypeShape.of(GetIpsecConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecConnectionsResult> getIpsecConnections(GetIpsecConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecConnections:getIpsecConnections", TypeShape.of(GetIpsecConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ip Sec Connection Device Status resource in Oracle Cloud Infrastructure Core service.
@@ -2340,7 +2340,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecStatusResult> getIpsecStatus(GetIpsecStatusArgs args) {
+    public static Output<GetIpsecStatusResult> getIpsecStatus(GetIpsecStatusArgs args) {
         return getIpsecStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -2352,8 +2352,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsecStatusResult> getIpsecStatus(GetIpsecStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpsecStatus:getIpsecStatus", TypeShape.of(GetIpsecStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpsecStatusResult> getIpsecStatus(GetIpsecStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpsecStatus:getIpsecStatus", TypeShape.of(GetIpsecStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ipv6 resource in Oracle Cloud Infrastructure Core service.
@@ -2366,7 +2366,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpv6Result> getIpv6(GetIpv6Args args) {
+    public static Output<GetIpv6Result> getIpv6(GetIpv6Args args) {
         return getIpv6(args, InvokeOptions.Empty);
     }
     /**
@@ -2380,8 +2380,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpv6Result> getIpv6(GetIpv6Args args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpv6:getIpv6", TypeShape.of(GetIpv6Result.class), args, Utilities.withVersion(options));
+    public static Output<GetIpv6Result> getIpv6(GetIpv6Args args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpv6:getIpv6", TypeShape.of(GetIpv6Result.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ipv6s in Oracle Cloud Infrastructure Core service.
@@ -2398,7 +2398,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpv6sResult> getIpv6s() {
+    public static Output<GetIpv6sResult> getIpv6s() {
         return getIpv6s(GetIpv6sArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2416,7 +2416,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpv6sResult> getIpv6s(GetIpv6sArgs args) {
+    public static Output<GetIpv6sResult> getIpv6s(GetIpv6sArgs args) {
         return getIpv6s(args, InvokeOptions.Empty);
     }
     /**
@@ -2434,8 +2434,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpv6sResult> getIpv6s(GetIpv6sArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getIpv6s:getIpv6s", TypeShape.of(GetIpv6sResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpv6sResult> getIpv6s(GetIpv6sArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getIpv6s:getIpv6s", TypeShape.of(GetIpv6sResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Letter Of Authority resource in Oracle Cloud Infrastructure Core service.
@@ -2445,7 +2445,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLetterOfAuthorityResult> getLetterOfAuthority(GetLetterOfAuthorityArgs args) {
+    public static Output<GetLetterOfAuthorityResult> getLetterOfAuthority(GetLetterOfAuthorityArgs args) {
         return getLetterOfAuthority(args, InvokeOptions.Empty);
     }
     /**
@@ -2456,20 +2456,20 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLetterOfAuthorityResult> getLetterOfAuthority(GetLetterOfAuthorityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getLetterOfAuthority:getLetterOfAuthority", TypeShape.of(GetLetterOfAuthorityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLetterOfAuthorityResult> getLetterOfAuthority(GetLetterOfAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getLetterOfAuthority:getLetterOfAuthority", TypeShape.of(GetLetterOfAuthorityResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetListingResourceVersionResult> getListingResourceVersion(GetListingResourceVersionArgs args) {
+    public static Output<GetListingResourceVersionResult> getListingResourceVersion(GetListingResourceVersionArgs args) {
         return getListingResourceVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListingResourceVersionResult> getListingResourceVersion(GetListingResourceVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getListingResourceVersion:getListingResourceVersion", TypeShape.of(GetListingResourceVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingResourceVersionResult> getListingResourceVersion(GetListingResourceVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getListingResourceVersion:getListingResourceVersion", TypeShape.of(GetListingResourceVersionResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetListingResourceVersionsResult> getListingResourceVersions(GetListingResourceVersionsArgs args) {
+    public static Output<GetListingResourceVersionsResult> getListingResourceVersions(GetListingResourceVersionsArgs args) {
         return getListingResourceVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListingResourceVersionsResult> getListingResourceVersions(GetListingResourceVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getListingResourceVersions:getListingResourceVersions", TypeShape.of(GetListingResourceVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingResourceVersionsResult> getListingResourceVersions(GetListingResourceVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getListingResourceVersions:getListingResourceVersions", TypeShape.of(GetListingResourceVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Local Peering Gateways in Oracle Cloud Infrastructure Core service.
@@ -2480,7 +2480,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalPeeringGatewaysResult> getLocalPeeringGateways(GetLocalPeeringGatewaysArgs args) {
+    public static Output<GetLocalPeeringGatewaysResult> getLocalPeeringGateways(GetLocalPeeringGatewaysArgs args) {
         return getLocalPeeringGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -2492,8 +2492,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalPeeringGatewaysResult> getLocalPeeringGateways(GetLocalPeeringGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getLocalPeeringGateways:getLocalPeeringGateways", TypeShape.of(GetLocalPeeringGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalPeeringGatewaysResult> getLocalPeeringGateways(GetLocalPeeringGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getLocalPeeringGateways:getLocalPeeringGateways", TypeShape.of(GetLocalPeeringGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Nat Gateway resource in Oracle Cloud Infrastructure Core service.
@@ -2503,7 +2503,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
         return getNatGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -2514,8 +2514,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Nat Gateways in Oracle Cloud Infrastructure Core service.
@@ -2526,7 +2526,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args) {
+    public static Output<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args) {
         return getNatGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -2538,8 +2538,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNatGateways:getNatGateways", TypeShape.of(GetNatGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNatGateways:getNatGateways", TypeShape.of(GetNatGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Network Security Group resource in Oracle Cloud Infrastructure Core service.
@@ -2555,7 +2555,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
         return getNetworkSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -2572,8 +2572,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Security Group Security Rules in Oracle Cloud Infrastructure Core service.
@@ -2583,7 +2583,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupSecurityRulesResult> getNetworkSecurityGroupSecurityRules(GetNetworkSecurityGroupSecurityRulesArgs args) {
+    public static Output<GetNetworkSecurityGroupSecurityRulesResult> getNetworkSecurityGroupSecurityRules(GetNetworkSecurityGroupSecurityRulesArgs args) {
         return getNetworkSecurityGroupSecurityRules(args, InvokeOptions.Empty);
     }
     /**
@@ -2594,8 +2594,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupSecurityRulesResult> getNetworkSecurityGroupSecurityRules(GetNetworkSecurityGroupSecurityRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNetworkSecurityGroupSecurityRules:getNetworkSecurityGroupSecurityRules", TypeShape.of(GetNetworkSecurityGroupSecurityRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkSecurityGroupSecurityRulesResult> getNetworkSecurityGroupSecurityRules(GetNetworkSecurityGroupSecurityRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNetworkSecurityGroupSecurityRules:getNetworkSecurityGroupSecurityRules", TypeShape.of(GetNetworkSecurityGroupSecurityRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Security Group Vnics in Oracle Cloud Infrastructure Core service.
@@ -2605,7 +2605,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupVnicsResult> getNetworkSecurityGroupVnics(GetNetworkSecurityGroupVnicsArgs args) {
+    public static Output<GetNetworkSecurityGroupVnicsResult> getNetworkSecurityGroupVnics(GetNetworkSecurityGroupVnicsArgs args) {
         return getNetworkSecurityGroupVnics(args, InvokeOptions.Empty);
     }
     /**
@@ -2616,8 +2616,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupVnicsResult> getNetworkSecurityGroupVnics(GetNetworkSecurityGroupVnicsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNetworkSecurityGroupVnics:getNetworkSecurityGroupVnics", TypeShape.of(GetNetworkSecurityGroupVnicsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkSecurityGroupVnicsResult> getNetworkSecurityGroupVnics(GetNetworkSecurityGroupVnicsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNetworkSecurityGroupVnics:getNetworkSecurityGroupVnics", TypeShape.of(GetNetworkSecurityGroupVnicsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Network Security Groups in Oracle Cloud Infrastructure Core service.
@@ -2628,7 +2628,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups() {
+    public static Output<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups() {
         return getNetworkSecurityGroups(GetNetworkSecurityGroupsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2640,7 +2640,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups(GetNetworkSecurityGroupsArgs args) {
+    public static Output<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups(GetNetworkSecurityGroupsArgs args) {
         return getNetworkSecurityGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -2652,8 +2652,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups(GetNetworkSecurityGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getNetworkSecurityGroups:getNetworkSecurityGroups", TypeShape.of(GetNetworkSecurityGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkSecurityGroupsResult> getNetworkSecurityGroups(GetNetworkSecurityGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getNetworkSecurityGroups:getNetworkSecurityGroups", TypeShape.of(GetNetworkSecurityGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Peer Region For Remote Peerings in Oracle Cloud Infrastructure Core service.
@@ -2664,7 +2664,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings() {
+    public static Output<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings() {
         return getPeerRegionForRemotePeerings(GetPeerRegionForRemotePeeringsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2676,7 +2676,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings(GetPeerRegionForRemotePeeringsArgs args) {
+    public static Output<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings(GetPeerRegionForRemotePeeringsArgs args) {
         return getPeerRegionForRemotePeerings(args, InvokeOptions.Empty);
     }
     /**
@@ -2688,8 +2688,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings(GetPeerRegionForRemotePeeringsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPeerRegionForRemotePeerings:getPeerRegionForRemotePeerings", TypeShape.of(GetPeerRegionForRemotePeeringsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeerRegionForRemotePeeringsResult> getPeerRegionForRemotePeerings(GetPeerRegionForRemotePeeringsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPeerRegionForRemotePeerings:getPeerRegionForRemotePeerings", TypeShape.of(GetPeerRegionForRemotePeeringsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Private Ip resource in Oracle Cloud Infrastructure Core service.
@@ -2702,7 +2702,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateIpResult> getPrivateIp(GetPrivateIpArgs args) {
+    public static Output<GetPrivateIpResult> getPrivateIp(GetPrivateIpArgs args) {
         return getPrivateIp(args, InvokeOptions.Empty);
     }
     /**
@@ -2716,8 +2716,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateIpResult> getPrivateIp(GetPrivateIpArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPrivateIp:getPrivateIp", TypeShape.of(GetPrivateIpResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateIpResult> getPrivateIp(GetPrivateIpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPrivateIp:getPrivateIp", TypeShape.of(GetPrivateIpResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Private Ips in Oracle Cloud Infrastructure Core service.
@@ -2742,7 +2742,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateIpsResult> getPrivateIps() {
+    public static Output<GetPrivateIpsResult> getPrivateIps() {
         return getPrivateIps(GetPrivateIpsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2768,7 +2768,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateIpsResult> getPrivateIps(GetPrivateIpsArgs args) {
+    public static Output<GetPrivateIpsResult> getPrivateIps(GetPrivateIpsArgs args) {
         return getPrivateIps(args, InvokeOptions.Empty);
     }
     /**
@@ -2794,8 +2794,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateIpsResult> getPrivateIps(GetPrivateIpsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPrivateIps:getPrivateIps", TypeShape.of(GetPrivateIpsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateIpsResult> getPrivateIps(GetPrivateIpsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPrivateIps:getPrivateIps", TypeShape.of(GetPrivateIpsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Public Ip resource in Oracle Cloud Infrastructure Core service.
@@ -2815,7 +2815,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpResult> getPublicIp() {
+    public static Output<GetPublicIpResult> getPublicIp() {
         return getPublicIp(GetPublicIpArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2836,7 +2836,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpResult> getPublicIp(GetPublicIpArgs args) {
+    public static Output<GetPublicIpResult> getPublicIp(GetPublicIpArgs args) {
         return getPublicIp(args, InvokeOptions.Empty);
     }
     /**
@@ -2857,8 +2857,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpResult> getPublicIp(GetPublicIpArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPublicIp:getPublicIp", TypeShape.of(GetPublicIpResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIpResult> getPublicIp(GetPublicIpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPublicIp:getPublicIp", TypeShape.of(GetPublicIpResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Public Ip Pool resource in Oracle Cloud Infrastructure Core service.
@@ -2868,7 +2868,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpPoolResult> getPublicIpPool(GetPublicIpPoolArgs args) {
+    public static Output<GetPublicIpPoolResult> getPublicIpPool(GetPublicIpPoolArgs args) {
         return getPublicIpPool(args, InvokeOptions.Empty);
     }
     /**
@@ -2879,8 +2879,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpPoolResult> getPublicIpPool(GetPublicIpPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPublicIpPool:getPublicIpPool", TypeShape.of(GetPublicIpPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIpPoolResult> getPublicIpPool(GetPublicIpPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPublicIpPool:getPublicIpPool", TypeShape.of(GetPublicIpPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Public Ip Pools in Oracle Cloud Infrastructure Core service.
@@ -2891,7 +2891,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpPoolsResult> getPublicIpPools(GetPublicIpPoolsArgs args) {
+    public static Output<GetPublicIpPoolsResult> getPublicIpPools(GetPublicIpPoolsArgs args) {
         return getPublicIpPools(args, InvokeOptions.Empty);
     }
     /**
@@ -2903,8 +2903,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpPoolsResult> getPublicIpPools(GetPublicIpPoolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPublicIpPools:getPublicIpPools", TypeShape.of(GetPublicIpPoolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIpPoolsResult> getPublicIpPools(GetPublicIpPoolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPublicIpPools:getPublicIpPools", TypeShape.of(GetPublicIpPoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Public Ips in Oracle Cloud Infrastructure Core service.
@@ -2933,7 +2933,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpsResult> getPublicIps(GetPublicIpsArgs args) {
+    public static Output<GetPublicIpsResult> getPublicIps(GetPublicIpsArgs args) {
         return getPublicIps(args, InvokeOptions.Empty);
     }
     /**
@@ -2963,8 +2963,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicIpsResult> getPublicIps(GetPublicIpsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getPublicIps:getPublicIps", TypeShape.of(GetPublicIpsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIpsResult> getPublicIps(GetPublicIpsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getPublicIps:getPublicIps", TypeShape.of(GetPublicIpsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Remote Peering Connections in Oracle Cloud Infrastructure Core service.
@@ -2975,7 +2975,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRemotePeeringConnectionsResult> getRemotePeeringConnections(GetRemotePeeringConnectionsArgs args) {
+    public static Output<GetRemotePeeringConnectionsResult> getRemotePeeringConnections(GetRemotePeeringConnectionsArgs args) {
         return getRemotePeeringConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -2987,8 +2987,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRemotePeeringConnectionsResult> getRemotePeeringConnections(GetRemotePeeringConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getRemotePeeringConnections:getRemotePeeringConnections", TypeShape.of(GetRemotePeeringConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRemotePeeringConnectionsResult> getRemotePeeringConnections(GetRemotePeeringConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getRemotePeeringConnections:getRemotePeeringConnections", TypeShape.of(GetRemotePeeringConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Route Tables in Oracle Cloud Infrastructure Core service.
@@ -3001,7 +3001,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args) {
+    public static Output<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args) {
         return getRouteTables(args, InvokeOptions.Empty);
     }
     /**
@@ -3015,8 +3015,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Security Lists in Oracle Cloud Infrastructure Core service.
@@ -3027,7 +3027,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityListsResult> getSecurityLists(GetSecurityListsArgs args) {
+    public static Output<GetSecurityListsResult> getSecurityLists(GetSecurityListsArgs args) {
         return getSecurityLists(args, InvokeOptions.Empty);
     }
     /**
@@ -3039,8 +3039,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecurityListsResult> getSecurityLists(GetSecurityListsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getSecurityLists:getSecurityLists", TypeShape.of(GetSecurityListsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecurityListsResult> getSecurityLists(GetSecurityListsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getSecurityLists:getSecurityLists", TypeShape.of(GetSecurityListsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Service Gateways in Oracle Cloud Infrastructure Core service.
@@ -3051,7 +3051,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceGatewaysResult> getServiceGateways(GetServiceGatewaysArgs args) {
+    public static Output<GetServiceGatewaysResult> getServiceGateways(GetServiceGatewaysArgs args) {
         return getServiceGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -3063,8 +3063,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceGatewaysResult> getServiceGateways(GetServiceGatewaysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getServiceGateways:getServiceGateways", TypeShape.of(GetServiceGatewaysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceGatewaysResult> getServiceGateways(GetServiceGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getServiceGateways:getServiceGateways", TypeShape.of(GetServiceGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Services in Oracle Cloud Infrastructure Core service.
@@ -3075,7 +3075,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServicesResult> getServices() {
+    public static Output<GetServicesResult> getServices() {
         return getServices(GetServicesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3087,7 +3087,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServicesResult> getServices(GetServicesArgs args) {
+    public static Output<GetServicesResult> getServices(GetServicesArgs args) {
         return getServices(args, InvokeOptions.Empty);
     }
     /**
@@ -3099,14 +3099,14 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServicesResult> getServices(GetServicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getServices:getServices", TypeShape.of(GetServicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicesResult> getServices(GetServicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getServices:getServices", TypeShape.of(GetServicesResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetShapeResult> getShape(GetShapeArgs args) {
+    public static Output<GetShapeResult> getShape(GetShapeArgs args) {
         return getShape(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetShapeResult> getShape(GetShapeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getShape:getShape", TypeShape.of(GetShapeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShapeResult> getShape(GetShapeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getShape:getShape", TypeShape.of(GetShapeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Shapes in Oracle Cloud Infrastructure Core service.
@@ -3117,7 +3117,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args) {
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args) {
         return getShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -3129,8 +3129,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Subnet resource in Oracle Cloud Infrastructure Core service.
@@ -3140,7 +3140,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args) {
         return getSubnet(args, InvokeOptions.Empty);
     }
     /**
@@ -3151,8 +3151,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Subnets in Oracle Cloud Infrastructure Core service.
@@ -3163,7 +3163,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args) {
+    public static Output<GetSubnetsResult> getSubnets(GetSubnetsArgs args) {
         return getSubnets(args, InvokeOptions.Empty);
     }
     /**
@@ -3175,8 +3175,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getSubnets:getSubnets", TypeShape.of(GetSubnetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetsResult> getSubnets(GetSubnetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getSubnets:getSubnets", TypeShape.of(GetSubnetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Tunnel Security Associations in Oracle Cloud Infrastructure Core service.
@@ -3186,7 +3186,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTunnelSecurityAssociationsResult> getTunnelSecurityAssociations(GetTunnelSecurityAssociationsArgs args) {
+    public static Output<GetTunnelSecurityAssociationsResult> getTunnelSecurityAssociations(GetTunnelSecurityAssociationsArgs args) {
         return getTunnelSecurityAssociations(args, InvokeOptions.Empty);
     }
     /**
@@ -3197,8 +3197,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTunnelSecurityAssociationsResult> getTunnelSecurityAssociations(GetTunnelSecurityAssociationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getTunnelSecurityAssociations:getTunnelSecurityAssociations", TypeShape.of(GetTunnelSecurityAssociationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTunnelSecurityAssociationsResult> getTunnelSecurityAssociations(GetTunnelSecurityAssociationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getTunnelSecurityAssociations:getTunnelSecurityAssociations", TypeShape.of(GetTunnelSecurityAssociationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vcn resource in Oracle Cloud Infrastructure Core service.
@@ -3208,7 +3208,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVcnResult> getVcn(GetVcnArgs args) {
+    public static Output<GetVcnResult> getVcn(GetVcnArgs args) {
         return getVcn(args, InvokeOptions.Empty);
     }
     /**
@@ -3219,8 +3219,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVcnResult> getVcn(GetVcnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVcn:getVcn", TypeShape.of(GetVcnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVcnResult> getVcn(GetVcnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVcn:getVcn", TypeShape.of(GetVcnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vcns in Oracle Cloud Infrastructure Core service.
@@ -3234,7 +3234,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVcnsResult> getVcns(GetVcnsArgs args) {
+    public static Output<GetVcnsResult> getVcns(GetVcnsArgs args) {
         return getVcns(args, InvokeOptions.Empty);
     }
     /**
@@ -3249,8 +3249,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVcnsResult> getVcns(GetVcnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVcns:getVcns", TypeShape.of(GetVcnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVcnsResult> getVcns(GetVcnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVcns:getVcns", TypeShape.of(GetVcnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Virtual Circuit resource in Oracle Cloud Infrastructure Core service.
@@ -3260,7 +3260,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitResult> getVirtualCircuit(GetVirtualCircuitArgs args) {
+    public static Output<GetVirtualCircuitResult> getVirtualCircuit(GetVirtualCircuitArgs args) {
         return getVirtualCircuit(args, InvokeOptions.Empty);
     }
     /**
@@ -3271,8 +3271,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitResult> getVirtualCircuit(GetVirtualCircuitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVirtualCircuit:getVirtualCircuit", TypeShape.of(GetVirtualCircuitResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualCircuitResult> getVirtualCircuit(GetVirtualCircuitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVirtualCircuit:getVirtualCircuit", TypeShape.of(GetVirtualCircuitResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Virtual Circuit Bandwidth Shapes in Oracle Cloud Infrastructure Core service.
@@ -3285,7 +3285,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitBandwidthShapesResult> getVirtualCircuitBandwidthShapes(GetVirtualCircuitBandwidthShapesArgs args) {
+    public static Output<GetVirtualCircuitBandwidthShapesResult> getVirtualCircuitBandwidthShapes(GetVirtualCircuitBandwidthShapesArgs args) {
         return getVirtualCircuitBandwidthShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -3299,8 +3299,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitBandwidthShapesResult> getVirtualCircuitBandwidthShapes(GetVirtualCircuitBandwidthShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVirtualCircuitBandwidthShapes:getVirtualCircuitBandwidthShapes", TypeShape.of(GetVirtualCircuitBandwidthShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualCircuitBandwidthShapesResult> getVirtualCircuitBandwidthShapes(GetVirtualCircuitBandwidthShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVirtualCircuitBandwidthShapes:getVirtualCircuitBandwidthShapes", TypeShape.of(GetVirtualCircuitBandwidthShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Virtual Circuit Public Prefixes in Oracle Cloud Infrastructure Core service.
@@ -3311,7 +3311,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitPublicPrefixesResult> getVirtualCircuitPublicPrefixes(GetVirtualCircuitPublicPrefixesArgs args) {
+    public static Output<GetVirtualCircuitPublicPrefixesResult> getVirtualCircuitPublicPrefixes(GetVirtualCircuitPublicPrefixesArgs args) {
         return getVirtualCircuitPublicPrefixes(args, InvokeOptions.Empty);
     }
     /**
@@ -3323,8 +3323,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitPublicPrefixesResult> getVirtualCircuitPublicPrefixes(GetVirtualCircuitPublicPrefixesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVirtualCircuitPublicPrefixes:getVirtualCircuitPublicPrefixes", TypeShape.of(GetVirtualCircuitPublicPrefixesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualCircuitPublicPrefixesResult> getVirtualCircuitPublicPrefixes(GetVirtualCircuitPublicPrefixesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVirtualCircuitPublicPrefixes:getVirtualCircuitPublicPrefixes", TypeShape.of(GetVirtualCircuitPublicPrefixesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Virtual Circuits in Oracle Cloud Infrastructure Core service.
@@ -3334,7 +3334,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitsResult> getVirtualCircuits(GetVirtualCircuitsArgs args) {
+    public static Output<GetVirtualCircuitsResult> getVirtualCircuits(GetVirtualCircuitsArgs args) {
         return getVirtualCircuits(args, InvokeOptions.Empty);
     }
     /**
@@ -3345,14 +3345,14 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualCircuitsResult> getVirtualCircuits(GetVirtualCircuitsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVirtualCircuits:getVirtualCircuits", TypeShape.of(GetVirtualCircuitsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualCircuitsResult> getVirtualCircuits(GetVirtualCircuitsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVirtualCircuits:getVirtualCircuits", TypeShape.of(GetVirtualCircuitsResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetVirtualNetworksResult> getVirtualNetworks(GetVirtualNetworksArgs args) {
+    public static Output<GetVirtualNetworksResult> getVirtualNetworks(GetVirtualNetworksArgs args) {
         return getVirtualNetworks(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworksResult> getVirtualNetworks(GetVirtualNetworksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVirtualNetworks:getVirtualNetworks", TypeShape.of(GetVirtualNetworksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworksResult> getVirtualNetworks(GetVirtualNetworksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVirtualNetworks:getVirtualNetworks", TypeShape.of(GetVirtualNetworksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vlan resource in Oracle Cloud Infrastructure Core service.
@@ -3362,7 +3362,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVlanResult> getVlan(GetVlanArgs args) {
+    public static Output<GetVlanResult> getVlan(GetVlanArgs args) {
         return getVlan(args, InvokeOptions.Empty);
     }
     /**
@@ -3373,8 +3373,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVlanResult> getVlan(GetVlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVlan:getVlan", TypeShape.of(GetVlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVlanResult> getVlan(GetVlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVlan:getVlan", TypeShape.of(GetVlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vlans in Oracle Cloud Infrastructure Core service.
@@ -3384,7 +3384,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVlansResult> getVlans(GetVlansArgs args) {
+    public static Output<GetVlansResult> getVlans(GetVlansArgs args) {
         return getVlans(args, InvokeOptions.Empty);
     }
     /**
@@ -3395,8 +3395,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVlansResult> getVlans(GetVlansArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVlans:getVlans", TypeShape.of(GetVlansResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVlansResult> getVlans(GetVlansArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVlans:getVlans", TypeShape.of(GetVlansResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Vnic resource in Oracle Cloud Infrastructure Core service.
@@ -3409,7 +3409,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVnicResult> getVnic(GetVnicArgs args) {
+    public static Output<GetVnicResult> getVnic(GetVnicArgs args) {
         return getVnic(args, InvokeOptions.Empty);
     }
     /**
@@ -3423,8 +3423,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVnicResult> getVnic(GetVnicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVnic:getVnic", TypeShape.of(GetVnicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVnicResult> getVnic(GetVnicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVnic:getVnic", TypeShape.of(GetVnicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vnic Attachments in Oracle Cloud Infrastructure Core service.
@@ -3436,7 +3436,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVnicAttachmentsResult> getVnicAttachments(GetVnicAttachmentsArgs args) {
+    public static Output<GetVnicAttachmentsResult> getVnicAttachments(GetVnicAttachmentsArgs args) {
         return getVnicAttachments(args, InvokeOptions.Empty);
     }
     /**
@@ -3449,8 +3449,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVnicAttachmentsResult> getVnicAttachments(GetVnicAttachmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVnicAttachments:getVnicAttachments", TypeShape.of(GetVnicAttachmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVnicAttachmentsResult> getVnicAttachments(GetVnicAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVnicAttachments:getVnicAttachments", TypeShape.of(GetVnicAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Volume resource in Oracle Cloud Infrastructure Core service.
@@ -3460,7 +3460,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -3471,8 +3471,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Attachments in Oracle Cloud Infrastructure Core service.
@@ -3486,7 +3486,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeAttachmentsResult> getVolumeAttachments(GetVolumeAttachmentsArgs args) {
+    public static Output<GetVolumeAttachmentsResult> getVolumeAttachments(GetVolumeAttachmentsArgs args) {
         return getVolumeAttachments(args, InvokeOptions.Empty);
     }
     /**
@@ -3501,8 +3501,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeAttachmentsResult> getVolumeAttachments(GetVolumeAttachmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeAttachments:getVolumeAttachments", TypeShape.of(GetVolumeAttachmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeAttachmentsResult> getVolumeAttachments(GetVolumeAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeAttachments:getVolumeAttachments", TypeShape.of(GetVolumeAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Backup Policies in Oracle Cloud Infrastructure Core service.
@@ -3515,7 +3515,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies() {
+    public static Output<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies() {
         return getVolumeBackupPolicies(GetVolumeBackupPoliciesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -3529,7 +3529,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies(GetVolumeBackupPoliciesArgs args) {
+    public static Output<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies(GetVolumeBackupPoliciesArgs args) {
         return getVolumeBackupPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -3543,8 +3543,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies(GetVolumeBackupPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeBackupPolicies:getVolumeBackupPolicies", TypeShape.of(GetVolumeBackupPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeBackupPoliciesResult> getVolumeBackupPolicies(GetVolumeBackupPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeBackupPolicies:getVolumeBackupPolicies", TypeShape.of(GetVolumeBackupPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Backup Policy Assignments in Oracle Cloud Infrastructure Core service.
@@ -3556,7 +3556,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupPolicyAssignmentsResult> getVolumeBackupPolicyAssignments(GetVolumeBackupPolicyAssignmentsArgs args) {
+    public static Output<GetVolumeBackupPolicyAssignmentsResult> getVolumeBackupPolicyAssignments(GetVolumeBackupPolicyAssignmentsArgs args) {
         return getVolumeBackupPolicyAssignments(args, InvokeOptions.Empty);
     }
     /**
@@ -3569,8 +3569,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupPolicyAssignmentsResult> getVolumeBackupPolicyAssignments(GetVolumeBackupPolicyAssignmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeBackupPolicyAssignments:getVolumeBackupPolicyAssignments", TypeShape.of(GetVolumeBackupPolicyAssignmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeBackupPolicyAssignmentsResult> getVolumeBackupPolicyAssignments(GetVolumeBackupPolicyAssignmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeBackupPolicyAssignments:getVolumeBackupPolicyAssignments", TypeShape.of(GetVolumeBackupPolicyAssignmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Backups in Oracle Cloud Infrastructure Core service.
@@ -3580,7 +3580,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupsResult> getVolumeBackups(GetVolumeBackupsArgs args) {
+    public static Output<GetVolumeBackupsResult> getVolumeBackups(GetVolumeBackupsArgs args) {
         return getVolumeBackups(args, InvokeOptions.Empty);
     }
     /**
@@ -3591,8 +3591,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeBackupsResult> getVolumeBackups(GetVolumeBackupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeBackups:getVolumeBackups", TypeShape.of(GetVolumeBackupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeBackupsResult> getVolumeBackups(GetVolumeBackupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeBackups:getVolumeBackups", TypeShape.of(GetVolumeBackupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Group Backups in Oracle Cloud Infrastructure Core service.
@@ -3603,7 +3603,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupBackupsResult> getVolumeGroupBackups(GetVolumeGroupBackupsArgs args) {
+    public static Output<GetVolumeGroupBackupsResult> getVolumeGroupBackups(GetVolumeGroupBackupsArgs args) {
         return getVolumeGroupBackups(args, InvokeOptions.Empty);
     }
     /**
@@ -3615,8 +3615,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupBackupsResult> getVolumeGroupBackups(GetVolumeGroupBackupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeGroupBackups:getVolumeGroupBackups", TypeShape.of(GetVolumeGroupBackupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeGroupBackupsResult> getVolumeGroupBackups(GetVolumeGroupBackupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeGroupBackups:getVolumeGroupBackups", TypeShape.of(GetVolumeGroupBackupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Volume Group Replica resource in Oracle Cloud Infrastructure Core service.
@@ -3626,7 +3626,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupReplicaResult> getVolumeGroupReplica(GetVolumeGroupReplicaArgs args) {
+    public static Output<GetVolumeGroupReplicaResult> getVolumeGroupReplica(GetVolumeGroupReplicaArgs args) {
         return getVolumeGroupReplica(args, InvokeOptions.Empty);
     }
     /**
@@ -3637,8 +3637,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupReplicaResult> getVolumeGroupReplica(GetVolumeGroupReplicaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeGroupReplica:getVolumeGroupReplica", TypeShape.of(GetVolumeGroupReplicaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeGroupReplicaResult> getVolumeGroupReplica(GetVolumeGroupReplicaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeGroupReplica:getVolumeGroupReplica", TypeShape.of(GetVolumeGroupReplicaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Group Replicas in Oracle Cloud Infrastructure Core service.
@@ -3649,7 +3649,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupReplicasResult> getVolumeGroupReplicas(GetVolumeGroupReplicasArgs args) {
+    public static Output<GetVolumeGroupReplicasResult> getVolumeGroupReplicas(GetVolumeGroupReplicasArgs args) {
         return getVolumeGroupReplicas(args, InvokeOptions.Empty);
     }
     /**
@@ -3661,8 +3661,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupReplicasResult> getVolumeGroupReplicas(GetVolumeGroupReplicasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeGroupReplicas:getVolumeGroupReplicas", TypeShape.of(GetVolumeGroupReplicasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeGroupReplicasResult> getVolumeGroupReplicas(GetVolumeGroupReplicasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeGroupReplicas:getVolumeGroupReplicas", TypeShape.of(GetVolumeGroupReplicasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volume Groups in Oracle Cloud Infrastructure Core service.
@@ -3673,7 +3673,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupsResult> getVolumeGroups(GetVolumeGroupsArgs args) {
+    public static Output<GetVolumeGroupsResult> getVolumeGroups(GetVolumeGroupsArgs args) {
         return getVolumeGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -3685,8 +3685,8 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumeGroupsResult> getVolumeGroups(GetVolumeGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumeGroups:getVolumeGroups", TypeShape.of(GetVolumeGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeGroupsResult> getVolumeGroups(GetVolumeGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumeGroups:getVolumeGroups", TypeShape.of(GetVolumeGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Volumes in Oracle Cloud Infrastructure Core service.
@@ -3696,7 +3696,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumesResult> getVolumes(GetVolumesArgs args) {
+    public static Output<GetVolumesResult> getVolumes(GetVolumesArgs args) {
         return getVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -3707,7 +3707,7 @@ public final class CoreFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVolumesResult> getVolumes(GetVolumesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Core/getVolumes:getVolumes", TypeShape.of(GetVolumesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumesResult> getVolumes(GetVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Core/getVolumes:getVolumes", TypeShape.of(GetVolumesResult.class), args, Utilities.withVersion(options));
     }
 }

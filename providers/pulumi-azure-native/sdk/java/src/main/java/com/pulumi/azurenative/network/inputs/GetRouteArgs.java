@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeName", required=true)
-    private String routeName;
+    private Output<String> routeName;
 
     /**
      * @return The name of the route.
      * 
      */
-    public String routeName() {
+    public Output<String> routeName() {
         return this.routeName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableName", required=true)
-    private String routeTableName;
+    private Output<String> routeTableName;
 
     /**
      * @return The name of the route table.
      * 
      */
-    public String routeTableName() {
+    public Output<String> routeTableName() {
         return this.routeTableName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeName The name of the route.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeName(Output<String> routeName) {
+            $.routeName = routeName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder routeName(String routeName) {
-            $.routeName = routeName;
+            return routeName(Output.of(routeName));
+        }
+
+        /**
+         * @param routeTableName The name of the route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeTableName(Output<String> routeTableName) {
+            $.routeTableName = routeTableName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder routeTableName(String routeTableName) {
-            $.routeTableName = routeTableName;
-            return this;
+            return routeTableName(Output.of(routeTableName));
         }
 
         public GetRouteArgs build() {

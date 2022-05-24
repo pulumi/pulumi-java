@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The ID that uniquely identifies a billing account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-    private String billingRoleAssignmentName;
+    private Output<String> billingRoleAssignmentName;
 
     /**
      * @return The ID that uniquely identifies a role assignment.
      * 
      */
-    public String billingRoleAssignmentName() {
+    public Output<String> billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 
@@ -73,8 +74,29 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingRoleAssignmentName(Output<String> billingRoleAssignmentName) {
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
          * 
          */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            $.billingRoleAssignmentName = billingRoleAssignmentName;
-            return this;
+            return billingRoleAssignmentName(Output.of(billingRoleAssignmentName));
         }
 
         public GetBillingRoleAssignmentByBillingAccountArgs build() {

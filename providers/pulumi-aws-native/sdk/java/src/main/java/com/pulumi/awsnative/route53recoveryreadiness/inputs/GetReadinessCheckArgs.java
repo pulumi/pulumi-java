@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReadinessCheckArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="readinessCheckName", required=true)
-    private String readinessCheckName;
+    private Output<String> readinessCheckName;
 
     /**
      * @return Name of the ReadinessCheck to create.
      * 
      */
-    public String readinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
 
@@ -57,9 +58,19 @@ public final class GetReadinessCheckArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder readinessCheckName(String readinessCheckName) {
+        public Builder readinessCheckName(Output<String> readinessCheckName) {
             $.readinessCheckName = readinessCheckName;
             return this;
+        }
+
+        /**
+         * @param readinessCheckName Name of the ReadinessCheck to create.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder readinessCheckName(String readinessCheckName) {
+            return readinessCheckName(Output.of(readinessCheckName));
         }
 
         public GetReadinessCheckArgs build() {

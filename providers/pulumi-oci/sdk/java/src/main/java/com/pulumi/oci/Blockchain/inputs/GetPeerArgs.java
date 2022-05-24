@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPeerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blockchainPlatformId", required=true)
-    private String blockchainPlatformId;
+    private Output<String> blockchainPlatformId;
 
     /**
      * @return Unique service identifier.
      * 
      */
-    public String blockchainPlatformId() {
+    public Output<String> blockchainPlatformId() {
         return this.blockchainPlatformId;
     }
 
@@ -32,13 +33,13 @@ public final class GetPeerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peerId", required=true)
-    private String peerId;
+    private Output<String> peerId;
 
     /**
      * @return Peer identifier.
      * 
      */
-    public String peerId() {
+    public Output<String> peerId() {
         return this.peerId;
     }
 
@@ -73,8 +74,29 @@ public final class GetPeerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder blockchainPlatformId(String blockchainPlatformId) {
+        public Builder blockchainPlatformId(Output<String> blockchainPlatformId) {
             $.blockchainPlatformId = blockchainPlatformId;
+            return this;
+        }
+
+        /**
+         * @param blockchainPlatformId Unique service identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockchainPlatformId(String blockchainPlatformId) {
+            return blockchainPlatformId(Output.of(blockchainPlatformId));
+        }
+
+        /**
+         * @param peerId Peer identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peerId(Output<String> peerId) {
+            $.peerId = peerId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPeerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder peerId(String peerId) {
-            $.peerId = peerId;
-            return this;
+            return peerId(Output.of(peerId));
         }
 
         public GetPeerArgs build() {

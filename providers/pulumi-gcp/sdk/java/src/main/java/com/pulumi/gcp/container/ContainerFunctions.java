@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.container;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.gcp.container.outputs.GetClusterResult;
 import com.pulumi.gcp.container.outputs.GetEngineVersionsResult;
 import com.pulumi.gcp.container.outputs.GetRegistryImageResult;
 import com.pulumi.gcp.container.outputs.GetRegistryRepositoryResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class ContainerFunctions {
     /**
@@ -51,7 +51,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions() {
+    public static Output<GetAwsVersionsResult> getAwsVersions() {
         return getAwsVersions(GetAwsVersionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -83,7 +83,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args) {
+    public static Output<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args) {
         return getAwsVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -115,8 +115,8 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getAwsVersions:getAwsVersions", TypeShape.of(GetAwsVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getAwsVersions:getAwsVersions", TypeShape.of(GetAwsVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to available Kubernetes versions in a location for a given project.
@@ -147,7 +147,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions() {
+    public static Output<GetAzureVersionsResult> getAzureVersions() {
         return getAzureVersions(GetAzureVersionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -179,7 +179,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args) {
+    public static Output<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args) {
         return getAzureVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -211,8 +211,8 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getAzureVersions:getAzureVersions", TypeShape.of(GetAzureVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getAzureVersions:getAzureVersions", TypeShape.of(GetAzureVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get info about a GKE cluster from its name and location.
@@ -246,7 +246,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -281,8 +281,8 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.
@@ -325,7 +325,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions() {
+    public static Output<GetEngineVersionsResult> getEngineVersions() {
         return getEngineVersions(GetEngineVersionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -369,7 +369,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args) {
+    public static Output<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args) {
         return getEngineVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -413,8 +413,8 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getEngineVersions:getEngineVersions", TypeShape.of(GetEngineVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getEngineVersions:getEngineVersions", TypeShape.of(GetEngineVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
@@ -446,7 +446,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
+    public static Output<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
         return getRegistryImage(args, InvokeOptions.Empty);
     }
     /**
@@ -479,8 +479,8 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
@@ -510,7 +510,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository() {
+    public static Output<GetRegistryRepositoryResult> getRegistryRepository() {
         return getRegistryRepository(GetRegistryRepositoryArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -541,7 +541,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args) {
+    public static Output<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args) {
         return getRegistryRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -572,7 +572,7 @@ public final class ContainerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:container/getRegistryRepository:getRegistryRepository", TypeShape.of(GetRegistryRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:container/getRegistryRepository:getRegistryRepository", TypeShape.of(GetRegistryRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

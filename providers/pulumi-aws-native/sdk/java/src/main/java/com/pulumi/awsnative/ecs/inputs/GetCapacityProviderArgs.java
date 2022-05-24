@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetCapacityProviderArgs extends com.pulumi.resources.InvokeAr
     public static final GetCapacityProviderArgs Empty = new GetCapacityProviderArgs();
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -43,9 +44,13 @@ public final class GetCapacityProviderArgs extends com.pulumi.resources.InvokeAr
             $ = new GetCapacityProviderArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetCapacityProviderArgs build() {

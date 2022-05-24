@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.cloudrun;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.gcp.cloudrun.inputs.GetLocationsArgs;
 import com.pulumi.gcp.cloudrun.inputs.GetServiceArgs;
 import com.pulumi.gcp.cloudrun.outputs.GetLocationsResult;
 import com.pulumi.gcp.cloudrun.outputs.GetServiceResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudrunFunctions {
     /**
@@ -45,7 +45,7 @@ public final class CloudrunFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations() {
+    public static Output<GetLocationsResult> getLocations() {
         return getLocations(GetLocationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class CloudrunFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args) {
+    public static Output<GetLocationsResult> getLocations(GetLocationsArgs args) {
         return getLocations(args, InvokeOptions.Empty);
     }
     /**
@@ -113,8 +113,8 @@ public final class CloudrunFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:cloudrun/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocationsResult> getLocations(GetLocationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:cloudrun/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a Google Cloud Run Service. For more information see
@@ -146,7 +146,7 @@ public final class CloudrunFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -179,7 +179,7 @@ public final class CloudrunFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:cloudrun/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:cloudrun/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

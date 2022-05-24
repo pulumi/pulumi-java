@@ -10,10 +10,10 @@ import com.pulumi.azure.privatelink.inputs.GetServiceEndpointConnectionsArgs;
 import com.pulumi.azure.privatelink.outputs.GetEndpointConnectionResult;
 import com.pulumi.azure.privatelink.outputs.GetServiceEndpointConnectionsResult;
 import com.pulumi.azure.privatelink.outputs.GetServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PrivatelinkFunctions {
     /**
@@ -45,7 +45,7 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args) {
+    public static Output<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args) {
         return getEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:privatelink/getEndpointConnection:getEndpointConnection", TypeShape.of(GetEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointConnectionResult> getEndpointConnection(GetEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:privatelink/getEndpointConnection:getEndpointConnection", TypeShape.of(GetEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Private Link Service.
@@ -109,7 +109,7 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:privatelink/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:privatelink/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access endpoint connection information about an existing Private Link Service.
@@ -173,7 +173,7 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args) {
+    public static Output<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args) {
         return getServiceEndpointConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -205,7 +205,7 @@ public final class PrivatelinkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:privatelink/getServiceEndpointConnections:getServiceEndpointConnections", TypeShape.of(GetServiceEndpointConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceEndpointConnectionsResult> getServiceEndpointConnections(GetServiceEndpointConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:privatelink/getServiceEndpointConnections:getServiceEndpointConnections", TypeShape.of(GetServiceEndpointConnectionsResult.class), args, Utilities.withVersion(options));
     }
 }

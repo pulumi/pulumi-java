@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeJobInstructions")
-    private @Nullable Boolean includeJobInstructions;
+    private Output</* @Nullable */ Boolean> includeJobInstructions;
 
     /**
      * @return Boolean value to indicate whether to include JobInstructions in response.
      * 
      */
-    public Optional<Boolean> includeJobInstructions() {
-        return Optional.ofNullable(this.includeJobInstructions);
+    public Output</* @Nullable */ Boolean> includeJobInstructions() {
+        return this.includeJobInstructions;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeLabelCategories")
-    private @Nullable Boolean includeLabelCategories;
+    private Output</* @Nullable */ Boolean> includeLabelCategories;
 
     /**
      * @return Boolean value to indicate whether to include LabelCategories in response.
      * 
      */
-    public Optional<Boolean> includeLabelCategories() {
-        return Optional.ofNullable(this.includeLabelCategories);
+    public Output</* @Nullable */ Boolean> includeLabelCategories() {
+        return this.includeLabelCategories;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labelingJobId", required=true)
-    private String labelingJobId;
+    private Output<String> labelingJobId;
 
     /**
      * @return Name and identifier for LabelingJob.
      * 
      */
-    public String labelingJobId() {
+    public Output<String> labelingJobId() {
         return this.labelingJobId;
     }
 
@@ -65,13 +65,13 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which workspace is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,13 +80,13 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -124,8 +124,29 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeJobInstructions(@Nullable Boolean includeJobInstructions) {
+        public Builder includeJobInstructions(Output</* @Nullable */ Boolean> includeJobInstructions) {
             $.includeJobInstructions = includeJobInstructions;
+            return this;
+        }
+
+        /**
+         * @param includeJobInstructions Boolean value to indicate whether to include JobInstructions in response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeJobInstructions(@Nullable Boolean includeJobInstructions) {
+            return includeJobInstructions(Output.of(includeJobInstructions));
+        }
+
+        /**
+         * @param includeLabelCategories Boolean value to indicate whether to include LabelCategories in response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeLabelCategories(Output</* @Nullable */ Boolean> includeLabelCategories) {
+            $.includeLabelCategories = includeLabelCategories;
             return this;
         }
 
@@ -136,7 +157,17 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder includeLabelCategories(@Nullable Boolean includeLabelCategories) {
-            $.includeLabelCategories = includeLabelCategories;
+            return includeLabelCategories(Output.of(includeLabelCategories));
+        }
+
+        /**
+         * @param labelingJobId Name and identifier for LabelingJob.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labelingJobId(Output<String> labelingJobId) {
+            $.labelingJobId = labelingJobId;
             return this;
         }
 
@@ -147,7 +178,17 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder labelingJobId(String labelingJobId) {
-            $.labelingJobId = labelingJobId;
+            return labelingJobId(Output.of(labelingJobId));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -158,7 +199,17 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -169,8 +220,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetLabelingJobArgs build() {

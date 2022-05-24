@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbSystemHistoryEntriesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDbSystemHistoryEntriesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="dbSystemId", required=true)
-    private String dbSystemId;
+    private Output<String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbSystemId() {
+    public Output<String> dbSystemId() {
         return this.dbSystemId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbSystemHistoryEntriesFilter> filters;
+    private Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters;
 
-    public Optional<List<GetDbSystemHistoryEntriesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDbSystemHistoryEntriesArgs() {}
@@ -69,14 +69,28 @@ public final class GetDbSystemHistoryEntriesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder dbSystemId(String dbSystemId) {
+        public Builder dbSystemId(Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbSystemHistoryEntriesFilter> filters) {
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(String dbSystemId) {
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDbSystemHistoryEntriesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbSystemHistoryEntriesFilter... filters) {

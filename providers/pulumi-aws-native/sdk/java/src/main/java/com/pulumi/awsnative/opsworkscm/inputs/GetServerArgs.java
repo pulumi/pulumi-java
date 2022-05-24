@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.opsworkscm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServerArgs Empty = new GetServerArgs();
 
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -43,9 +44,13 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder serverName(String serverName) {
+        public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
+        }
+
+        public Builder serverName(String serverName) {
+            return serverName(Output.of(serverName));
         }
 
         public GetServerArgs build() {

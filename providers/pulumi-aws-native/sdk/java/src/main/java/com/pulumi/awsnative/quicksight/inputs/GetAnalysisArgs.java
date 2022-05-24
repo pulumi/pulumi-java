@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @Import(name="analysisId", required=true)
-    private String analysisId;
+    private Output<String> analysisId;
 
-    public String analysisId() {
+    public Output<String> analysisId() {
         return this.analysisId;
     }
 
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -51,14 +52,22 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder analysisId(String analysisId) {
+        public Builder analysisId(Output<String> analysisId) {
             $.analysisId = analysisId;
             return this;
         }
 
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder analysisId(String analysisId) {
+            return analysisId(Output.of(analysisId));
+        }
+
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
+        }
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
 
         public GetAnalysisArgs build() {

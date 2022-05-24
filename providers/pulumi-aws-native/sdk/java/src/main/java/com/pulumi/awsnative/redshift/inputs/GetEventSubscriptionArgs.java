@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.redshift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subscriptionName", required=true)
-    private String subscriptionName;
+    private Output<String> subscriptionName;
 
     /**
      * @return The name of the Amazon Redshift event notification subscription
      * 
      */
-    public String subscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder subscriptionName(String subscriptionName) {
+        public Builder subscriptionName(Output<String> subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;
+        }
+
+        /**
+         * @param subscriptionName The name of the Amazon Redshift event notification subscription
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionName(String subscriptionName) {
+            return subscriptionName(Output.of(subscriptionName));
         }
 
         public GetEventSubscriptionArgs build() {

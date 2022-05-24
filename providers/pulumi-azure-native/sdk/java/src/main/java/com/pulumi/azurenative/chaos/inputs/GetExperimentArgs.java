@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.chaos.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName", required=true)
-    private String experimentName;
+    private Output<String> experimentName;
 
     /**
      * @return String that represents a Experiment resource name.
      * 
      */
-    public String experimentName() {
+    public Output<String> experimentName() {
         return this.experimentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return String that represents an Azure resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder experimentName(String experimentName) {
+        public Builder experimentName(Output<String> experimentName) {
             $.experimentName = experimentName;
+            return this;
+        }
+
+        /**
+         * @param experimentName String that represents a Experiment resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder experimentName(String experimentName) {
+            return experimentName(Output.of(experimentName));
+        }
+
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExperimentArgs build() {

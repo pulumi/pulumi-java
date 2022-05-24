@@ -7,12 +7,12 @@ import com.pulumi.azurenative.network.enums.ApplicationGatewayProtocol;
 import com.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthResponseMatch;
 import com.pulumi.azurenative.network.inputs.SubResource;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,13 +25,13 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="applicationGatewayName", required=true)
-    private String applicationGatewayName;
+    private Output<String> applicationGatewayName;
 
     /**
      * @return The name of the application gateway.
      * 
      */
-    public String applicationGatewayName() {
+    public Output<String> applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -40,14 +40,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="backendAddressPool")
-    private @Nullable SubResource backendAddressPool;
+    private Output</* @Nullable */ SubResource> backendAddressPool;
 
     /**
      * @return Reference to backend pool of application gateway to which probe request will be sent.
      * 
      */
-    public Optional<SubResource> backendAddressPool() {
-        return Optional.ofNullable(this.backendAddressPool);
+    public Output</* @Nullable */ SubResource> backendAddressPool() {
+        return this.backendAddressPool;
     }
 
     /**
@@ -55,14 +55,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="backendHttpSettings")
-    private @Nullable SubResource backendHttpSettings;
+    private Output</* @Nullable */ SubResource> backendHttpSettings;
 
     /**
      * @return Reference to backend http setting of application gateway to be used for test probe.
      * 
      */
-    public Optional<SubResource> backendHttpSettings() {
-        return Optional.ofNullable(this.backendHttpSettings);
+    public Output</* @Nullable */ SubResource> backendHttpSettings() {
+        return this.backendHttpSettings;
     }
 
     /**
@@ -70,14 +70,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Expands BackendAddressPool and BackendHttpSettings referenced in backend health.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -85,14 +85,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="host")
-    private @Nullable String host;
+    private Output</* @Nullable */ String> host;
 
     /**
      * @return Host name to send the probe to.
      * 
      */
-    public Optional<String> host() {
-        return Optional.ofNullable(this.host);
+    public Output</* @Nullable */ String> host() {
+        return this.host;
     }
 
     /**
@@ -100,14 +100,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="match")
-    private @Nullable ApplicationGatewayProbeHealthResponseMatch match;
+    private Output</* @Nullable */ ApplicationGatewayProbeHealthResponseMatch> match;
 
     /**
      * @return Criterion for classifying a healthy probe response.
      * 
      */
-    public Optional<ApplicationGatewayProbeHealthResponseMatch> match() {
-        return Optional.ofNullable(this.match);
+    public Output</* @Nullable */ ApplicationGatewayProbeHealthResponseMatch> match() {
+        return this.match;
     }
 
     /**
@@ -115,14 +115,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="path")
-    private @Nullable String path;
+    private Output</* @Nullable */ String> path;
 
     /**
      * @return Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
      * 
      */
-    public Optional<String> path() {
-        return Optional.ofNullable(this.path);
+    public Output</* @Nullable */ String> path() {
+        return this.path;
     }
 
     /**
@@ -130,14 +130,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="pickHostNameFromBackendHttpSettings")
-    private @Nullable Boolean pickHostNameFromBackendHttpSettings;
+    private Output</* @Nullable */ Boolean> pickHostNameFromBackendHttpSettings;
 
     /**
      * @return Whether the host header should be picked from the backend http settings. Default value is false.
      * 
      */
-    public Optional<Boolean> pickHostNameFromBackendHttpSettings() {
-        return Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
+    public Output</* @Nullable */ Boolean> pickHostNameFromBackendHttpSettings() {
+        return this.pickHostNameFromBackendHttpSettings;
     }
 
     /**
@@ -145,14 +145,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="protocol")
-    private @Nullable Either<String,ApplicationGatewayProtocol> protocol;
+    private Output</* @Nullable */ Either<String,ApplicationGatewayProtocol>> protocol;
 
     /**
      * @return The protocol used for the probe.
      * 
      */
-    public Optional<Either<String,ApplicationGatewayProtocol>> protocol() {
-        return Optional.ofNullable(this.protocol);
+    public Output</* @Nullable */ Either<String,ApplicationGatewayProtocol>> protocol() {
+        return this.protocol;
     }
 
     /**
@@ -160,13 +160,13 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -175,14 +175,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
      * 
      */
     @Import(name="timeout")
-    private @Nullable Integer timeout;
+    private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
      * 
      */
-    public Optional<Integer> timeout() {
-        return Optional.ofNullable(this.timeout);
+    public Output</* @Nullable */ Integer> timeout() {
+        return this.timeout;
     }
 
     private GetApplicationGatewayBackendHealthOnDemandArgs() {}
@@ -225,8 +225,29 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder applicationGatewayName(String applicationGatewayName) {
+        public Builder applicationGatewayName(Output<String> applicationGatewayName) {
             $.applicationGatewayName = applicationGatewayName;
+            return this;
+        }
+
+        /**
+         * @param applicationGatewayName The name of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationGatewayName(String applicationGatewayName) {
+            return applicationGatewayName(Output.of(applicationGatewayName));
+        }
+
+        /**
+         * @param backendAddressPool Reference to backend pool of application gateway to which probe request will be sent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendAddressPool(Output</* @Nullable */ SubResource> backendAddressPool) {
+            $.backendAddressPool = backendAddressPool;
             return this;
         }
 
@@ -237,7 +258,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder backendAddressPool(@Nullable SubResource backendAddressPool) {
-            $.backendAddressPool = backendAddressPool;
+            return backendAddressPool(Output.of(backendAddressPool));
+        }
+
+        /**
+         * @param backendHttpSettings Reference to backend http setting of application gateway to be used for test probe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendHttpSettings(Output</* @Nullable */ SubResource> backendHttpSettings) {
+            $.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
@@ -248,7 +279,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder backendHttpSettings(@Nullable SubResource backendHttpSettings) {
-            $.backendHttpSettings = backendHttpSettings;
+            return backendHttpSettings(Output.of(backendHttpSettings));
+        }
+
+        /**
+         * @param expand Expands BackendAddressPool and BackendHttpSettings referenced in backend health.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -259,7 +300,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param host Host name to send the probe to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder host(Output</* @Nullable */ String> host) {
+            $.host = host;
             return this;
         }
 
@@ -270,7 +321,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder host(@Nullable String host) {
-            $.host = host;
+            return host(Output.of(host));
+        }
+
+        /**
+         * @param match Criterion for classifying a healthy probe response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder match(Output</* @Nullable */ ApplicationGatewayProbeHealthResponseMatch> match) {
+            $.match = match;
             return this;
         }
 
@@ -281,7 +342,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatch match) {
-            $.match = match;
+            return match(Output.of(match));
+        }
+
+        /**
+         * @param path Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder path(Output</* @Nullable */ String> path) {
+            $.path = path;
             return this;
         }
 
@@ -292,7 +363,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder path(@Nullable String path) {
-            $.path = path;
+            return path(Output.of(path));
+        }
+
+        /**
+         * @param pickHostNameFromBackendHttpSettings Whether the host header should be picked from the backend http settings. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pickHostNameFromBackendHttpSettings(Output</* @Nullable */ Boolean> pickHostNameFromBackendHttpSettings) {
+            $.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
@@ -303,7 +384,17 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
-            $.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
+            return pickHostNameFromBackendHttpSettings(Output.of(pickHostNameFromBackendHttpSettings));
+        }
+
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocol(Output</* @Nullable */ Either<String,ApplicationGatewayProtocol>> protocol) {
+            $.protocol = protocol;
             return this;
         }
 
@@ -314,8 +405,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
-            $.protocol = protocol;
-            return this;
+            return protocol(Output.of(protocol));
         }
 
         /**
@@ -344,8 +434,29 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param timeout The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeout(Output</* @Nullable */ Integer> timeout) {
+            $.timeout = timeout;
             return this;
         }
 
@@ -356,8 +467,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
          * 
          */
         public Builder timeout(@Nullable Integer timeout) {
-            $.timeout = timeout;
-            return this;
+            return timeout(Output.of(timeout));
         }
 
         public GetApplicationGatewayBackendHealthOnDemandArgs build() {

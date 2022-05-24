@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dialogflow_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIntentArgs Empty = new GetIntentArgs();
 
     @Import(name="intentId", required=true)
-    private String intentId;
+    private Output<String> intentId;
 
-    public String intentId() {
+    public Output<String> intentId() {
         return this.intentId;
     }
 
     @Import(name="intentView")
-    private @Nullable String intentView;
+    private Output</* @Nullable */ String> intentView;
 
-    public Optional<String> intentView() {
-        return Optional.ofNullable(this.intentView);
+    public Output</* @Nullable */ String> intentView() {
+        return this.intentView;
     }
 
     @Import(name="languageCode")
-    private @Nullable String languageCode;
+    private Output</* @Nullable */ String> languageCode;
 
-    public Optional<String> languageCode() {
-        return Optional.ofNullable(this.languageCode);
+    public Output</* @Nullable */ String> languageCode() {
+        return this.languageCode;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetIntentArgs() {}
@@ -77,29 +77,49 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIntentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder intentId(String intentId) {
+        public Builder intentId(Output<String> intentId) {
             $.intentId = intentId;
             return this;
         }
 
-        public Builder intentView(@Nullable String intentView) {
+        public Builder intentId(String intentId) {
+            return intentId(Output.of(intentId));
+        }
+
+        public Builder intentView(Output</* @Nullable */ String> intentView) {
             $.intentView = intentView;
             return this;
         }
 
-        public Builder languageCode(@Nullable String languageCode) {
+        public Builder intentView(@Nullable String intentView) {
+            return intentView(Output.of(intentView));
+        }
+
+        public Builder languageCode(Output</* @Nullable */ String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder languageCode(@Nullable String languageCode) {
+            return languageCode(Output.of(languageCode));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetIntentArgs build() {

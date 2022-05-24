@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentPluginsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment to which a request will be scoped.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Filter to return only Management Agent Plugins having the particular display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagementAgentPluginsFilter> filters;
+    private Output</* @Nullable */ List<GetManagementAgentPluginsFilter>> filters;
 
-    public Optional<List<GetManagementAgentPluginsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagementAgentPluginsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="platformTypes")
-    private @Nullable List<String> platformTypes;
+    private Output</* @Nullable */ List<String>> platformTypes;
 
     /**
      * @return Filter to return only results having the particular platform type.
      * 
      */
-    public Optional<List<String>> platformTypes() {
-        return Optional.ofNullable(this.platformTypes);
+    public Output</* @Nullable */ List<String>> platformTypes() {
+        return this.platformTypes;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter to return only Management Agents in the particular lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetManagementAgentPluginsArgs() {}
@@ -117,8 +117,29 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment to which a request will be scoped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Filter to return only Management Agent Plugins having the particular display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetManagementAgentPluginsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetManagementAgentPluginsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagementAgentPluginsFilter... filters) {
@@ -148,9 +172,19 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder platformTypes(@Nullable List<String> platformTypes) {
+        public Builder platformTypes(Output</* @Nullable */ List<String>> platformTypes) {
             $.platformTypes = platformTypes;
             return this;
+        }
+
+        /**
+         * @param platformTypes Filter to return only results having the particular platform type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder platformTypes(@Nullable List<String> platformTypes) {
+            return platformTypes(Output.of(platformTypes));
         }
 
         /**
@@ -169,9 +203,19 @@ public final class GetManagementAgentPluginsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state Filter to return only Management Agents in the particular lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetManagementAgentPluginsArgs build() {

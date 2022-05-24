@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return The instance ID of the virtual machine.
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -49,13 +49,13 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +64,13 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
      * 
      */
     @Import(name="runCommandName", required=true)
-    private String runCommandName;
+    private Output<String> runCommandName;
 
     /**
      * @return The name of the virtual machine run command.
      * 
      */
-    public String runCommandName() {
+    public Output<String> runCommandName() {
         return this.runCommandName;
     }
 
@@ -79,13 +79,13 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-    private String vmScaleSetName;
+    private Output<String> vmScaleSetName;
 
     /**
      * @return The name of the VM scale set.
      * 
      */
-    public String vmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -123,8 +123,29 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param instanceId The instance ID of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output<String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
          * 
          */
         public Builder instanceId(String instanceId) {
-            $.instanceId = instanceId;
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param runCommandName The name of the virtual machine run command.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runCommandName(Output<String> runCommandName) {
+            $.runCommandName = runCommandName;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
          * 
          */
         public Builder runCommandName(String runCommandName) {
-            $.runCommandName = runCommandName;
+            return runCommandName(Output.of(runCommandName));
+        }
+
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
+            $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.
          * 
          */
         public Builder vmScaleSetName(String vmScaleSetName) {
-            $.vmScaleSetName = vmScaleSetName;
-            return this;
+            return vmScaleSetName(Output.of(vmScaleSetName));
         }
 
         public GetVirtualMachineScaleSetVMRunCommandArgs build() {

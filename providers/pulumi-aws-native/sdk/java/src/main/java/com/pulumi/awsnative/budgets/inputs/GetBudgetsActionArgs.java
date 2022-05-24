@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.budgets.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBudgetsActionArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetBudgetsActionArgs Empty = new GetBudgetsActionArgs();
 
     @Import(name="actionId", required=true)
-    private String actionId;
+    private Output<String> actionId;
 
-    public String actionId() {
+    public Output<String> actionId() {
         return this.actionId;
     }
 
     @Import(name="budgetName", required=true)
-    private String budgetName;
+    private Output<String> budgetName;
 
-    public String budgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
 
@@ -51,14 +52,22 @@ public final class GetBudgetsActionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetBudgetsActionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder actionId(String actionId) {
+        public Builder actionId(Output<String> actionId) {
             $.actionId = actionId;
             return this;
         }
 
-        public Builder budgetName(String budgetName) {
+        public Builder actionId(String actionId) {
+            return actionId(Output.of(actionId));
+        }
+
+        public Builder budgetName(Output<String> budgetName) {
             $.budgetName = budgetName;
             return this;
+        }
+
+        public Builder budgetName(String budgetName) {
+            return budgetName(Output.of(budgetName));
         }
 
         public GetBudgetsActionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -62,13 +63,13 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="storageClassificationMappingName", required=true)
-    private String storageClassificationMappingName;
+    private Output<String> storageClassificationMappingName;
 
     /**
      * @return Storage classification mapping name.
      * 
      */
-    public String storageClassificationMappingName() {
+    public Output<String> storageClassificationMappingName() {
         return this.storageClassificationMappingName;
     }
 
@@ -77,13 +78,13 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="storageClassificationName", required=true)
-    private String storageClassificationName;
+    private Output<String> storageClassificationName;
 
     /**
      * @return Storage classification name.
      * 
      */
-    public String storageClassificationName() {
+    public Output<String> storageClassificationName() {
         return this.storageClassificationName;
     }
 
@@ -121,8 +122,29 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param storageClassificationMappingName Storage classification mapping name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageClassificationMappingName(Output<String> storageClassificationMappingName) {
+            $.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
          * 
          */
         public Builder storageClassificationMappingName(String storageClassificationMappingName) {
-            $.storageClassificationMappingName = storageClassificationMappingName;
+            return storageClassificationMappingName(Output.of(storageClassificationMappingName));
+        }
+
+        /**
+         * @param storageClassificationName Storage classification name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageClassificationName(Output<String> storageClassificationName) {
+            $.storageClassificationName = storageClassificationName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
          * 
          */
         public Builder storageClassificationName(String storageClassificationName) {
-            $.storageClassificationName = storageClassificationName;
-            return this;
+            return storageClassificationName(Output.of(storageClassificationName));
         }
 
         public GetReplicationStorageClassificationMappingArgs build() {

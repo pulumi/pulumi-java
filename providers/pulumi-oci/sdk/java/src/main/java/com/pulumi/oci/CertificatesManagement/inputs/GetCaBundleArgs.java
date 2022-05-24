@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCaBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caBundleId", required=true)
-    private String caBundleId;
+    private Output<String> caBundleId;
 
     /**
      * @return The OCID of the CA bundle.
      * 
      */
-    public String caBundleId() {
+    public Output<String> caBundleId() {
         return this.caBundleId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCaBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder caBundleId(String caBundleId) {
+        public Builder caBundleId(Output<String> caBundleId) {
             $.caBundleId = caBundleId;
             return this;
+        }
+
+        /**
+         * @param caBundleId The OCID of the CA bundle.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caBundleId(String caBundleId) {
+            return caBundleId(Output.of(caBundleId));
         }
 
         public GetCaBundleArgs build() {

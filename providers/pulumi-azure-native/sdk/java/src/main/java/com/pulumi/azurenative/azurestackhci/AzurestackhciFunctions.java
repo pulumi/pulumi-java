@@ -10,10 +10,10 @@ import com.pulumi.azurenative.azurestackhci.inputs.GetExtensionArgs;
 import com.pulumi.azurenative.azurestackhci.outputs.GetArcSettingResult;
 import com.pulumi.azurenative.azurestackhci.outputs.GetClusterResult;
 import com.pulumi.azurenative.azurestackhci.outputs.GetExtensionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AzurestackhciFunctions {
     /**
@@ -21,7 +21,7 @@ public final class AzurestackhciFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetArcSettingResult> getArcSetting(GetArcSettingArgs args) {
+    public static Output<GetArcSettingResult> getArcSetting(GetArcSettingArgs args) {
         return getArcSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class AzurestackhciFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetArcSettingResult> getArcSetting(GetArcSettingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getArcSetting", TypeShape.of(GetArcSettingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetArcSettingResult> getArcSetting(GetArcSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestackhci:getArcSetting", TypeShape.of(GetArcSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cluster details.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class AzurestackhciFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestackhci:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Details of a particular extension in HCI Cluster.
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args) {
         return getExtension(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class AzurestackhciFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestackhci:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
 }

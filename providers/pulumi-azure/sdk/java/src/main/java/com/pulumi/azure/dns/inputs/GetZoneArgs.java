@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the DNS Zone.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private Output</* @Nullable */ String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where the DNS Zone exists.
@@ -44,8 +44,8 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * in your subscription that matches `name` will be returned.
      * 
      */
-    public Optional<String> resourceGroupName() {
-        return Optional.ofNullable(this.resourceGroupName);
+    public Output</* @Nullable */ String> resourceGroupName() {
+        return this.resourceGroupName;
     }
 
     private GetZoneArgs() {}
@@ -79,8 +79,31 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where the DNS Zone exists.
+         * If the Name of the Resource Group is not provided, the first DNS Zone from the list of DNS Zones
+         * in your subscription that matches `name` will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -93,8 +116,7 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetZoneArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetPublicDelegatedPrefixArgs extends com.pulumi.resources.Inv
     public static final GetPublicDelegatedPrefixArgs Empty = new GetPublicDelegatedPrefixArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="publicDelegatedPrefix", required=true)
-    private String publicDelegatedPrefix;
+    private Output<String> publicDelegatedPrefix;
 
-    public String publicDelegatedPrefix() {
+    public Output<String> publicDelegatedPrefix() {
         return this.publicDelegatedPrefix;
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +61,31 @@ public final class GetPublicDelegatedPrefixArgs extends com.pulumi.resources.Inv
             $ = new GetPublicDelegatedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder publicDelegatedPrefix(String publicDelegatedPrefix) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder publicDelegatedPrefix(Output<String> publicDelegatedPrefix) {
             $.publicDelegatedPrefix = publicDelegatedPrefix;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder publicDelegatedPrefix(String publicDelegatedPrefix) {
+            return publicDelegatedPrefix(Output.of(publicDelegatedPrefix));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetPublicDelegatedPrefixArgs build() {

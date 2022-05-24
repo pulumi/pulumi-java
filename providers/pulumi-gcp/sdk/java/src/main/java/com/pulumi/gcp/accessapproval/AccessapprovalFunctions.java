@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.accessapproval;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.gcp.accessapproval.inputs.GetProjectServiceAccountArgs;
 import com.pulumi.gcp.accessapproval.outputs.GetFolderServiceAccountResult;
 import com.pulumi.gcp.accessapproval.outputs.GetOrganizationServiceAccountResult;
 import com.pulumi.gcp.accessapproval.outputs.GetProjectServiceAccountResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class AccessapprovalFunctions {
     /**
@@ -55,7 +55,7 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args) {
+    public static Output<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args) {
         return getFolderServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -97,8 +97,8 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:accessapproval/getFolderServiceAccount:getFolderServiceAccount", TypeShape.of(GetFolderServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFolderServiceAccountResult> getFolderServiceAccount(GetFolderServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:accessapproval/getFolderServiceAccount:getFolderServiceAccount", TypeShape.of(GetFolderServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the email address of an organization&#39;s Access Approval service account.
@@ -139,7 +139,7 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args) {
+    public static Output<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args) {
         return getOrganizationServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -181,8 +181,8 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:accessapproval/getOrganizationServiceAccount:getOrganizationServiceAccount", TypeShape.of(GetOrganizationServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationServiceAccountResult> getOrganizationServiceAccount(GetOrganizationServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:accessapproval/getOrganizationServiceAccount:getOrganizationServiceAccount", TypeShape.of(GetOrganizationServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the email address of a project&#39;s Access Approval service account.
@@ -223,7 +223,7 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
+    public static Output<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
         return getProjectServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -265,7 +265,7 @@ public final class AccessapprovalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:accessapproval/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:accessapproval/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -45,7 +46,6 @@ import com.pulumi.oci.LoadBalancer.outputs.GetShapesResult;
 import com.pulumi.oci.LoadBalancer.outputs.GetSslCipherSuiteResult;
 import com.pulumi.oci.LoadBalancer.outputs.GetSslCipherSuitesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class LoadBalancerFunctions {
     /**
@@ -56,7 +56,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args) {
+    public static Output<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args) {
         return getBackendHealth(args, InvokeOptions.Empty);
     }
     /**
@@ -67,8 +67,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getBackendHealth:getBackendHealth", TypeShape.of(GetBackendHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendHealthResult> getBackendHealth(GetBackendHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getBackendHealth:getBackendHealth", TypeShape.of(GetBackendHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Backend Set Health resource in Oracle Cloud Infrastructure Load Balancer service.
@@ -78,7 +78,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args) {
+    public static Output<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args) {
         return getBackendSetHealth(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getBackendSetHealth:getBackendSetHealth", TypeShape.of(GetBackendSetHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendSetHealthResult> getBackendSetHealth(GetBackendSetHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getBackendSetHealth:getBackendSetHealth", TypeShape.of(GetBackendSetHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Backend Sets in Oracle Cloud Infrastructure Load Balancer service.
@@ -104,7 +104,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args) {
+    public static Output<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args) {
         return getBackendSets(args, InvokeOptions.Empty);
     }
     /**
@@ -119,8 +119,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getBackendSets:getBackendSets", TypeShape.of(GetBackendSetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendSetsResult> getBackendSets(GetBackendSetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getBackendSets:getBackendSets", TypeShape.of(GetBackendSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Backends in Oracle Cloud Infrastructure Load Balancer service.
@@ -130,7 +130,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendsResult> getBackends(GetBackendsArgs args) {
+    public static Output<GetBackendsResult> getBackends(GetBackendsArgs args) {
         return getBackends(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendsResult> getBackends(GetBackendsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getBackends:getBackends", TypeShape.of(GetBackendsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendsResult> getBackends(GetBackendsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getBackends:getBackends", TypeShape.of(GetBackendsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificates in Oracle Cloud Infrastructure Load Balancer service.
@@ -152,7 +152,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
         return getCertificates(args, InvokeOptions.Empty);
     }
     /**
@@ -163,8 +163,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Load Balancer Health resource in Oracle Cloud Infrastructure Load Balancer service.
@@ -174,7 +174,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHealthResult> getHealth(GetHealthArgs args) {
+    public static Output<GetHealthResult> getHealth(GetHealthArgs args) {
         return getHealth(args, InvokeOptions.Empty);
     }
     /**
@@ -185,8 +185,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHealthResult> getHealth(GetHealthArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getHealth:getHealth", TypeShape.of(GetHealthResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHealthResult> getHealth(GetHealthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getHealth:getHealth", TypeShape.of(GetHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Hostnames in Oracle Cloud Infrastructure Load Balancer service.
@@ -196,7 +196,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHostnamesResult> getHostnames(GetHostnamesArgs args) {
+    public static Output<GetHostnamesResult> getHostnames(GetHostnamesArgs args) {
         return getHostnames(args, InvokeOptions.Empty);
     }
     /**
@@ -207,8 +207,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHostnamesResult> getHostnames(GetHostnamesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getHostnames:getHostnames", TypeShape.of(GetHostnamesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHostnamesResult> getHostnames(GetHostnamesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getHostnames:getHostnames", TypeShape.of(GetHostnamesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listener Rules in Oracle Cloud Infrastructure Load Balancer service.
@@ -224,7 +224,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenerRulesResult> getListenerRules(GetListenerRulesArgs args) {
+    public static Output<GetListenerRulesResult> getListenerRules(GetListenerRulesArgs args) {
         return getListenerRules(args, InvokeOptions.Empty);
     }
     /**
@@ -241,8 +241,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListenerRulesResult> getListenerRules(GetListenerRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getListenerRules:getListenerRules", TypeShape.of(GetListenerRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerRulesResult> getListenerRules(GetListenerRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getListenerRules:getListenerRules", TypeShape.of(GetListenerRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Load Balancer Routing Policies in Oracle Cloud Infrastructure Load Balancer service.
@@ -252,7 +252,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancerRoutingPoliciesResult> getLoadBalancerRoutingPolicies(GetLoadBalancerRoutingPoliciesArgs args) {
+    public static Output<GetLoadBalancerRoutingPoliciesResult> getLoadBalancerRoutingPolicies(GetLoadBalancerRoutingPoliciesArgs args) {
         return getLoadBalancerRoutingPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -263,8 +263,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancerRoutingPoliciesResult> getLoadBalancerRoutingPolicies(GetLoadBalancerRoutingPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getLoadBalancerRoutingPolicies:getLoadBalancerRoutingPolicies", TypeShape.of(GetLoadBalancerRoutingPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancerRoutingPoliciesResult> getLoadBalancerRoutingPolicies(GetLoadBalancerRoutingPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getLoadBalancerRoutingPolicies:getLoadBalancerRoutingPolicies", TypeShape.of(GetLoadBalancerRoutingPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Load Balancer Routing Policy resource in Oracle Cloud Infrastructure Load Balancer service.
@@ -274,7 +274,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancerRoutingPolicyResult> getLoadBalancerRoutingPolicy(GetLoadBalancerRoutingPolicyArgs args) {
+    public static Output<GetLoadBalancerRoutingPolicyResult> getLoadBalancerRoutingPolicy(GetLoadBalancerRoutingPolicyArgs args) {
         return getLoadBalancerRoutingPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -285,8 +285,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancerRoutingPolicyResult> getLoadBalancerRoutingPolicy(GetLoadBalancerRoutingPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getLoadBalancerRoutingPolicy:getLoadBalancerRoutingPolicy", TypeShape.of(GetLoadBalancerRoutingPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancerRoutingPolicyResult> getLoadBalancerRoutingPolicy(GetLoadBalancerRoutingPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getLoadBalancerRoutingPolicy:getLoadBalancerRoutingPolicy", TypeShape.of(GetLoadBalancerRoutingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Load Balancers in Oracle Cloud Infrastructure Load Balancer service.
@@ -300,7 +300,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancersResult> getLoadBalancers(GetLoadBalancersArgs args) {
+    public static Output<GetLoadBalancersResult> getLoadBalancers(GetLoadBalancersArgs args) {
         return getLoadBalancers(args, InvokeOptions.Empty);
     }
     /**
@@ -315,8 +315,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancersResult> getLoadBalancers(GetLoadBalancersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getLoadBalancers:getLoadBalancers", TypeShape.of(GetLoadBalancersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLoadBalancersResult> getLoadBalancers(GetLoadBalancersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getLoadBalancers:getLoadBalancers", TypeShape.of(GetLoadBalancersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Path Route Sets in Oracle Cloud Infrastructure Load Balancer service.
@@ -326,7 +326,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPathRouteSetsResult> getPathRouteSets(GetPathRouteSetsArgs args) {
+    public static Output<GetPathRouteSetsResult> getPathRouteSets(GetPathRouteSetsArgs args) {
         return getPathRouteSets(args, InvokeOptions.Empty);
     }
     /**
@@ -337,8 +337,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPathRouteSetsResult> getPathRouteSets(GetPathRouteSetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getPathRouteSets:getPathRouteSets", TypeShape.of(GetPathRouteSetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPathRouteSetsResult> getPathRouteSets(GetPathRouteSetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getPathRouteSets:getPathRouteSets", TypeShape.of(GetPathRouteSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Load Balancer Policies in Oracle Cloud Infrastructure Load Balancer service.
@@ -348,7 +348,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPoliciesResult> getPolicies(GetPoliciesArgs args) {
+    public static Output<GetPoliciesResult> getPolicies(GetPoliciesArgs args) {
         return getPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -359,8 +359,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPoliciesResult> getPolicies(GetPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getPolicies:getPolicies", TypeShape.of(GetPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPoliciesResult> getPolicies(GetPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getPolicies:getPolicies", TypeShape.of(GetPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Load Balancer Protocols in Oracle Cloud Infrastructure Load Balancer service.
@@ -370,7 +370,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProtocolsResult> getProtocols(GetProtocolsArgs args) {
+    public static Output<GetProtocolsResult> getProtocols(GetProtocolsArgs args) {
         return getProtocols(args, InvokeOptions.Empty);
     }
     /**
@@ -381,8 +381,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProtocolsResult> getProtocols(GetProtocolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getProtocols:getProtocols", TypeShape.of(GetProtocolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProtocolsResult> getProtocols(GetProtocolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getProtocols:getProtocols", TypeShape.of(GetProtocolsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Rule Set resource in Oracle Cloud Infrastructure Load Balancer service.
@@ -392,7 +392,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleSetResult> getRuleSet(GetRuleSetArgs args) {
+    public static Output<GetRuleSetResult> getRuleSet(GetRuleSetArgs args) {
         return getRuleSet(args, InvokeOptions.Empty);
     }
     /**
@@ -403,8 +403,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleSetResult> getRuleSet(GetRuleSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getRuleSet:getRuleSet", TypeShape.of(GetRuleSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleSetResult> getRuleSet(GetRuleSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getRuleSet:getRuleSet", TypeShape.of(GetRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Rule Sets in Oracle Cloud Infrastructure Load Balancer service.
@@ -414,7 +414,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleSetsResult> getRuleSets(GetRuleSetsArgs args) {
+    public static Output<GetRuleSetsResult> getRuleSets(GetRuleSetsArgs args) {
         return getRuleSets(args, InvokeOptions.Empty);
     }
     /**
@@ -425,8 +425,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleSetsResult> getRuleSets(GetRuleSetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getRuleSets:getRuleSets", TypeShape.of(GetRuleSetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleSetsResult> getRuleSets(GetRuleSetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getRuleSets:getRuleSets", TypeShape.of(GetRuleSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Load Balancer Shapes in Oracle Cloud Infrastructure Load Balancer service.
@@ -436,7 +436,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args) {
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args) {
         return getShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -447,8 +447,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ssl Cipher Suite resource in Oracle Cloud Infrastructure Load Balancer service.
@@ -458,7 +458,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSslCipherSuiteResult> getSslCipherSuite(GetSslCipherSuiteArgs args) {
+    public static Output<GetSslCipherSuiteResult> getSslCipherSuite(GetSslCipherSuiteArgs args) {
         return getSslCipherSuite(args, InvokeOptions.Empty);
     }
     /**
@@ -469,8 +469,8 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSslCipherSuiteResult> getSslCipherSuite(GetSslCipherSuiteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getSslCipherSuite:getSslCipherSuite", TypeShape.of(GetSslCipherSuiteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSslCipherSuiteResult> getSslCipherSuite(GetSslCipherSuiteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getSslCipherSuite:getSslCipherSuite", TypeShape.of(GetSslCipherSuiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ssl Cipher Suites in Oracle Cloud Infrastructure Load Balancer service.
@@ -480,7 +480,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSslCipherSuitesResult> getSslCipherSuites() {
+    public static Output<GetSslCipherSuitesResult> getSslCipherSuites() {
         return getSslCipherSuites(GetSslCipherSuitesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -491,7 +491,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSslCipherSuitesResult> getSslCipherSuites(GetSslCipherSuitesArgs args) {
+    public static Output<GetSslCipherSuitesResult> getSslCipherSuites(GetSslCipherSuitesArgs args) {
         return getSslCipherSuites(args, InvokeOptions.Empty);
     }
     /**
@@ -502,7 +502,7 @@ public final class LoadBalancerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSslCipherSuitesResult> getSslCipherSuites(GetSslCipherSuitesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:LoadBalancer/getSslCipherSuites:getSslCipherSuites", TypeShape.of(GetSslCipherSuitesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSslCipherSuitesResult> getSslCipherSuites(GetSslCipherSuitesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:LoadBalancer/getSslCipherSuites:getSslCipherSuites", TypeShape.of(GetSslCipherSuitesResult.class), args, Utilities.withVersion(options));
     }
 }

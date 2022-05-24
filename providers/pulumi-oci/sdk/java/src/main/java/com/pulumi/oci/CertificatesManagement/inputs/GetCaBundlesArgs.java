@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.CertificatesManagement.inputs.GetCaBundlesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caBundleId")
-    private @Nullable String caBundleId;
+    private Output</* @Nullable */ String> caBundleId;
 
     /**
      * @return The OCID of the CA bundle.
      * 
      */
-    public Optional<String> caBundleId() {
-        return Optional.ofNullable(this.caBundleId);
+    public Output</* @Nullable */ String> caBundleId() {
+        return this.caBundleId;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return A filter that returns only resources that match the given compartment OCID.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCaBundlesFilter> filters;
+    private Output</* @Nullable */ List<GetCaBundlesFilter>> filters;
 
-    public Optional<List<GetCaBundlesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCaBundlesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter that returns only resources that match the specified name.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter that returns only resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetCaBundlesArgs() {}
@@ -117,8 +117,29 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder caBundleId(@Nullable String caBundleId) {
+        public Builder caBundleId(Output</* @Nullable */ String> caBundleId) {
             $.caBundleId = caBundleId;
+            return this;
+        }
+
+        /**
+         * @param caBundleId The OCID of the CA bundle.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caBundleId(@Nullable String caBundleId) {
+            return caBundleId(Output.of(caBundleId));
+        }
+
+        /**
+         * @param compartmentId A filter that returns only resources that match the given compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCaBundlesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetCaBundlesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCaBundlesFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter that returns only resources that match the specified name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter that returns only resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetCaBundlesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetCaBundlesArgs build() {

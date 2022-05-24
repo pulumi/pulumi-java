@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="systemTopicName", required=true)
-    private String systemTopicName;
+    private Output<String> systemTopicName;
 
     /**
      * @return Name of the system topic.
      * 
      */
-    public String systemTopicName() {
+    public Output<String> systemTopicName() {
         return this.systemTopicName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param systemTopicName Name of the system topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder systemTopicName(Output<String> systemTopicName) {
+            $.systemTopicName = systemTopicName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSystemTopicArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder systemTopicName(String systemTopicName) {
-            $.systemTopicName = systemTopicName;
-            return this;
+            return systemTopicName(Output.of(systemTopicName));
         }
 
         public GetSystemTopicArgs build() {

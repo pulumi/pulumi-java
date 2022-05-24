@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCellArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cellName", required=true)
-    private String cellName;
+    private Output<String> cellName;
 
     /**
      * @return The name of the cell to create.
      * 
      */
-    public String cellName() {
+    public Output<String> cellName() {
         return this.cellName;
     }
 
@@ -57,9 +58,19 @@ public final class GetCellArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cellName(String cellName) {
+        public Builder cellName(Output<String> cellName) {
             $.cellName = cellName;
             return this;
+        }
+
+        /**
+         * @param cellName The name of the cell to create.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cellName(String cellName) {
+            return cellName(Output.of(cellName));
         }
 
         public GetCellArgs build() {

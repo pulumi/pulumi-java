@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-    private String partnerNamespaceName;
+    private Output<String> partnerNamespaceName;
 
     /**
      * @return Name of the partner namespace.
      * 
      */
-    public String partnerNamespaceName() {
+    public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder partnerNamespaceName(String partnerNamespaceName) {
+        public Builder partnerNamespaceName(Output<String> partnerNamespaceName) {
             $.partnerNamespaceName = partnerNamespaceName;
+            return this;
+        }
+
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerNamespaceName(String partnerNamespaceName) {
+            return partnerNamespaceName(Output.of(partnerNamespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPartnerNamespaceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPartnerNamespaceArgs build() {

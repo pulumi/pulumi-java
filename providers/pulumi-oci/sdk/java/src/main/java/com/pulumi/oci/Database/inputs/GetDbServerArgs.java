@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDbServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbServerId", required=true)
-    private String dbServerId;
+    private Output<String> dbServerId;
 
     /**
      * @return The DB server [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbServerId() {
+    public Output<String> dbServerId() {
         return this.dbServerId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDbServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exadataInfrastructureId", required=true)
-    private String exadataInfrastructureId;
+    private Output<String> exadataInfrastructureId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ExadataInfrastructure.
      * 
      */
-    public String exadataInfrastructureId() {
+    public Output<String> exadataInfrastructureId() {
         return this.exadataInfrastructureId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDbServerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbServerId(String dbServerId) {
+        public Builder dbServerId(Output<String> dbServerId) {
             $.dbServerId = dbServerId;
+            return this;
+        }
+
+        /**
+         * @param dbServerId The DB server [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbServerId(String dbServerId) {
+            return dbServerId(Output.of(dbServerId));
+        }
+
+        /**
+         * @param exadataInfrastructureId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ExadataInfrastructure.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInfrastructureId(Output<String> exadataInfrastructureId) {
+            $.exadataInfrastructureId = exadataInfrastructureId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDbServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder exadataInfrastructureId(String exadataInfrastructureId) {
-            $.exadataInfrastructureId = exadataInfrastructureId;
-            return this;
+            return exadataInfrastructureId(Output.of(exadataInfrastructureId));
         }
 
         public GetDbServerArgs build() {

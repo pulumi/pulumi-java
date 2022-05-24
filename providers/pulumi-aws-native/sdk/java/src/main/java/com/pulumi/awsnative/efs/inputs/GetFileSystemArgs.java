@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.efs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFileSystemArgs Empty = new GetFileSystemArgs();
 
     @Import(name="fileSystemId", required=true)
-    private String fileSystemId;
+    private Output<String> fileSystemId;
 
-    public String fileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -43,9 +44,13 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFileSystemArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder fileSystemId(String fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
+        }
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
 
         public GetFileSystemArgs build() {

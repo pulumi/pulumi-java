@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetRegionOperationIamPolicyArgs extends com.pulumi.resources.
     public static final GetRegionOperationIamPolicyArgs Empty = new GetRegionOperationIamPolicyArgs();
 
     @Import(name="operationId", required=true)
-    private String operationId;
+    private Output<String> operationId;
 
-    public String operationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -69,24 +69,40 @@ public final class GetRegionOperationIamPolicyArgs extends com.pulumi.resources.
             $ = new GetRegionOperationIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder operationId(String operationId) {
+        public Builder operationId(Output<String> operationId) {
             $.operationId = operationId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder operationId(String operationId) {
+            return operationId(Output.of(operationId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
+        }
+
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
         }
 
         public GetRegionOperationIamPolicyArgs build() {

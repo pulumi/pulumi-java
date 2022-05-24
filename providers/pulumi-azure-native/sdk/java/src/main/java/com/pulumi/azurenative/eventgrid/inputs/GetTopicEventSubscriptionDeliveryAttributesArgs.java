@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-    private String eventSubscriptionName;
+    private Output<String> eventSubscriptionName;
 
     /**
      * @return Name of the event subscription.
      * 
      */
-    public String eventSubscriptionName() {
+    public Output<String> eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
      * 
      */
     @Import(name="topicName", required=true)
-    private String topicName;
+    private Output<String> topicName;
 
     /**
      * @return Name of the domain topic.
      * 
      */
-    public String topicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder eventSubscriptionName(String eventSubscriptionName) {
+        public Builder eventSubscriptionName(Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
+            return this;
+        }
+
+        /**
+         * @param eventSubscriptionName Name of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSubscriptionName(String eventSubscriptionName) {
+            return eventSubscriptionName(Output.of(eventSubscriptionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param topicName Name of the domain topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(Output<String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTopicEventSubscriptionDeliveryAttributesArgs extends com.p
          * 
          */
         public Builder topicName(String topicName) {
-            $.topicName = topicName;
-            return this;
+            return topicName(Output.of(topicName));
         }
 
         public GetTopicEventSubscriptionDeliveryAttributesArgs build() {

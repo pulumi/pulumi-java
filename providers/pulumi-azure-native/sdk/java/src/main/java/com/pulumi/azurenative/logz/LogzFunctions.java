@@ -26,32 +26,32 @@ import com.pulumi.azurenative.logz.outputs.ListMonitorUserRolesResult;
 import com.pulumi.azurenative.logz.outputs.ListMonitorVMHostsResult;
 import com.pulumi.azurenative.logz.outputs.ListSubAccountMonitoredResourcesResult;
 import com.pulumi.azurenative.logz.outputs.ListSubAccountVMHostsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class LogzFunctions {
     /**
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args) {
+    public static Output<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args) {
         return getMetricsSource(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSource", TypeShape.of(GetMetricsSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getMetricsSource", TypeShape.of(GetMetricsSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Capture metrics of Azure resources based on ARM tags.
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args) {
+    public static Output<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args) {
         return getMetricsSourceTagRule(args, InvokeOptions.Empty);
     }
     /**
@@ -59,43 +59,43 @@ public final class LogzFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSourceTagRule", TypeShape.of(GetMetricsSourceTagRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getMetricsSourceTagRule", TypeShape.of(GetMetricsSourceTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args) {
         return getMonitor(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountResult> getSubAccount(GetSubAccountArgs args) {
+    public static Output<GetSubAccountResult> getSubAccount(GetSubAccountArgs args) {
         return getSubAccount(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountResult> getSubAccount(GetSubAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccount", TypeShape.of(GetSubAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubAccountResult> getSubAccount(GetSubAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getSubAccount", TypeShape.of(GetSubAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Capture logs and metrics of Azure resources based on ARM tags.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args) {
+    public static Output<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args) {
         return getSubAccountTagRule(args, InvokeOptions.Empty);
     }
     /**
@@ -103,15 +103,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccountTagRule", TypeShape.of(GetSubAccountTagRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getSubAccountTagRule", TypeShape.of(GetSubAccountTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Capture logs and metrics of Azure resources based on ARM tags.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args) {
+    public static Output<GetTagRuleResult> getTagRule(GetTagRuleArgs args) {
         return getTagRule(args, InvokeOptions.Empty);
     }
     /**
@@ -119,15 +119,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:getTagRule", TypeShape.of(GetTagRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTagRuleResult> getTagRule(GetTagRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:getTagRule", TypeShape.of(GetTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
+    public static Output<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
         return listMonitorMonitoredResources(args, InvokeOptions.Empty);
     }
     /**
@@ -135,15 +135,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response for list of user&#39;s role for Logz.io account.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args) {
+    public static Output<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args) {
         return listMonitorUserRoles(args, InvokeOptions.Empty);
     }
     /**
@@ -151,15 +151,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorUserRoles", TypeShape.of(ListMonitorUserRolesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:listMonitorUserRoles", TypeShape.of(ListMonitorUserRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list VM Host Update Operation.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args) {
+    public static Output<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args) {
         return listMonitorVMHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -167,15 +167,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorVMHosts", TypeShape.of(ListMonitorVMHostsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:listMonitorVMHosts", TypeShape.of(ListMonitorVMHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args) {
+    public static Output<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args) {
         return listSubAccountMonitoredResources(args, InvokeOptions.Empty);
     }
     /**
@@ -183,15 +183,15 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountMonitoredResources", TypeShape.of(ListSubAccountMonitoredResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:listSubAccountMonitoredResources", TypeShape.of(ListSubAccountMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list VM Host Update Operation.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args) {
+    public static Output<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args) {
         return listSubAccountVMHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -199,7 +199,7 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountVMHosts", TypeShape.of(ListSubAccountVMHostsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logz:listSubAccountVMHosts", TypeShape.of(ListSubAccountVMHostsResult.class), args, Utilities.withVersion(options));
     }
 }

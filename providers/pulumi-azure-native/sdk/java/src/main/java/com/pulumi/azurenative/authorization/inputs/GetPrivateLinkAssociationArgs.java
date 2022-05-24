@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateLinkAssociationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
     /**
      * @return The management group ID.
      * 
      */
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateLinkAssociationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="plaId", required=true)
-    private String plaId;
+    private Output<String> plaId;
 
     /**
      * @return The ID of the PLA
      * 
      */
-    public String plaId() {
+    public Output<String> plaId() {
         return this.plaId;
     }
 
@@ -73,8 +74,29 @@ public final class GetPrivateLinkAssociationArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * @param groupId The management group ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param plaId The ID of the PLA
+         * 
+         * @return builder
+         * 
+         */
+        public Builder plaId(Output<String> plaId) {
+            $.plaId = plaId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPrivateLinkAssociationArgs extends com.pulumi.resources.In
          * 
          */
         public Builder plaId(String plaId) {
-            $.plaId = plaId;
-            return this;
+            return plaId(Output.of(plaId));
         }
 
         public GetPrivateLinkAssociationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Budget.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alertRuleId", required=true)
-    private String alertRuleId;
+    private Output<String> alertRuleId;
 
     /**
      * @return The unique Alert Rule OCID
      * 
      */
-    public String alertRuleId() {
+    public Output<String> alertRuleId() {
         return this.alertRuleId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="budgetId", required=true)
-    private String budgetId;
+    private Output<String> budgetId;
 
     /**
      * @return The unique Budget OCID
      * 
      */
-    public String budgetId() {
+    public Output<String> budgetId() {
         return this.budgetId;
     }
 
@@ -73,8 +74,29 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alertRuleId(String alertRuleId) {
+        public Builder alertRuleId(Output<String> alertRuleId) {
             $.alertRuleId = alertRuleId;
+            return this;
+        }
+
+        /**
+         * @param alertRuleId The unique Alert Rule OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertRuleId(String alertRuleId) {
+            return alertRuleId(Output.of(alertRuleId));
+        }
+
+        /**
+         * @param budgetId The unique Budget OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder budgetId(Output<String> budgetId) {
+            $.budgetId = budgetId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder budgetId(String budgetId) {
-            $.budgetId = budgetId;
-            return this;
+            return budgetId(Output.of(budgetId));
         }
 
         public GetAlertRuleArgs build() {

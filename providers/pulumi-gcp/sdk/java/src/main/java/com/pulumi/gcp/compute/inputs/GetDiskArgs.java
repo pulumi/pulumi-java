@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of a specific disk.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,15 +35,15 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-    private @Nullable String zone;
+    private Output</* @Nullable */ String> zone;
 
     /**
      * @return A reference to the zone where the disk resides.
      * 
      */
-    public Optional<String> zone() {
-        return Optional.ofNullable(this.zone);
+    public Output</* @Nullable */ String> zone() {
+        return this.zone;
     }
 
     private GetDiskArgs() {}
@@ -93,8 +93,30 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of a specific disk.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -106,7 +128,17 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param zone A reference to the zone where the disk resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zone(Output</* @Nullable */ String> zone) {
+            $.zone = zone;
             return this;
         }
 
@@ -117,8 +149,7 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder zone(@Nullable String zone) {
-            $.zone = zone;
-            return this;
+            return zone(Output.of(zone));
         }
 
         public GetDiskArgs build() {

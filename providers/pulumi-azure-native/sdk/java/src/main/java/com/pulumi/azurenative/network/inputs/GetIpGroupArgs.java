@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipGroupsName", required=true)
-    private String ipGroupsName;
+    private Output<String> ipGroupsName;
 
     /**
      * @return The name of the ipGroups.
      * 
      */
-    public String ipGroupsName() {
+    public Output<String> ipGroupsName() {
         return this.ipGroupsName;
     }
 
@@ -49,13 +49,13 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param ipGroupsName The name of the ipGroups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipGroupsName(Output<String> ipGroupsName) {
+            $.ipGroupsName = ipGroupsName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ipGroupsName(String ipGroupsName) {
-            $.ipGroupsName = ipGroupsName;
+            return ipGroupsName(Output.of(ipGroupsName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetIpGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIpGroupArgs build() {

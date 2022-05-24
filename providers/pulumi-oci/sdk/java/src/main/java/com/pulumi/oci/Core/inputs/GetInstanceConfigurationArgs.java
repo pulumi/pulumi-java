@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceConfigurationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instanceConfigurationId", required=true)
-    private String instanceConfigurationId;
+    private Output<String> instanceConfigurationId;
 
     /**
      * @return The OCID of the instance configuration.
      * 
      */
-    public String instanceConfigurationId() {
+    public Output<String> instanceConfigurationId() {
         return this.instanceConfigurationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetInstanceConfigurationArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder instanceConfigurationId(String instanceConfigurationId) {
+        public Builder instanceConfigurationId(Output<String> instanceConfigurationId) {
             $.instanceConfigurationId = instanceConfigurationId;
             return this;
+        }
+
+        /**
+         * @param instanceConfigurationId The OCID of the instance configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceConfigurationId(String instanceConfigurationId) {
+            return instanceConfigurationId(Output.of(instanceConfigurationId));
         }
 
         public GetInstanceConfigurationArgs build() {

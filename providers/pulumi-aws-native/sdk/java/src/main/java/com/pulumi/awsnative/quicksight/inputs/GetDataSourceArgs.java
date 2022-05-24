@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dataSourceId", required=true)
-    private String dataSourceId;
+    private Output<String> dataSourceId;
 
-    public String dataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
 
@@ -51,14 +52,22 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder dataSourceId(String dataSourceId) {
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
+        }
+
+        public Builder dataSourceId(Output<String> dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
+        }
+
+        public Builder dataSourceId(String dataSourceId) {
+            return dataSourceId(Output.of(dataSourceId));
         }
 
         public GetDataSourceArgs build() {

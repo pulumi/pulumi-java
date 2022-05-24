@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetInstanceGroupManagerArgs extends com.pulumi.resources.Invo
     public static final GetInstanceGroupManagerArgs Empty = new GetInstanceGroupManagerArgs();
 
     @Import(name="instanceGroupManager", required=true)
-    private String instanceGroupManager;
+    private Output<String> instanceGroupManager;
 
-    public String instanceGroupManager() {
+    public Output<String> instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +61,31 @@ public final class GetInstanceGroupManagerArgs extends com.pulumi.resources.Invo
             $ = new GetInstanceGroupManagerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instanceGroupManager(String instanceGroupManager) {
+        public Builder instanceGroupManager(Output<String> instanceGroupManager) {
             $.instanceGroupManager = instanceGroupManager;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceGroupManager(String instanceGroupManager) {
+            return instanceGroupManager(Output.of(instanceGroupManager));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetInstanceGroupManagerArgs build() {

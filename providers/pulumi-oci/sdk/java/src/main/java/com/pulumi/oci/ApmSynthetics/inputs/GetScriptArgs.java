@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmSynthetics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scriptId", required=true)
-    private String scriptId;
+    private Output<String> scriptId;
 
     /**
      * @return The OCID of the script.
      * 
      */
-    public String scriptId() {
+    public Output<String> scriptId() {
         return this.scriptId;
     }
 
@@ -73,8 +74,29 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param scriptId The OCID of the script.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptId(Output<String> scriptId) {
+            $.scriptId = scriptId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scriptId(String scriptId) {
-            $.scriptId = scriptId;
-            return this;
+            return scriptId(Output.of(scriptId));
         }
 
         public GetScriptArgs build() {

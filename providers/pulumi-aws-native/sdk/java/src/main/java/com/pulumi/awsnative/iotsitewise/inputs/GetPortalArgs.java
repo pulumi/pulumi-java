@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotsitewise.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="portalId", required=true)
-    private String portalId;
+    private Output<String> portalId;
 
     /**
      * @return The ID of the portal.
      * 
      */
-    public String portalId() {
+    public Output<String> portalId() {
         return this.portalId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder portalId(String portalId) {
+        public Builder portalId(Output<String> portalId) {
             $.portalId = portalId;
             return this;
+        }
+
+        /**
+         * @param portalId The ID of the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portalId(String portalId) {
+            return portalId(Output.of(portalId));
         }
 
         public GetPortalArgs build() {

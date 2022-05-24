@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,15 +20,15 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The project to get the secret version for. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secret", required=true)
-    private String secret;
+    private Output<String> secret;
 
     /**
      * @return The secret to get the secret version for.
      * 
      */
-    public String secret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -52,15 +52,15 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private Output</* @Nullable */ String> version;
 
     /**
      * @return The version of the secret to get. If it
      * is not provided, the latest version is retrieved.
      * 
      */
-    public Optional<String> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ String> version() {
+        return this.version;
     }
 
     private GetSecretVersionArgs() {}
@@ -96,8 +96,30 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project The project to get the secret version for. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param secret The secret to get the secret version for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secret(Output<String> secret) {
+            $.secret = secret;
             return this;
         }
 
@@ -108,7 +130,18 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder secret(String secret) {
-            $.secret = secret;
+            return secret(Output.of(secret));
+        }
+
+        /**
+         * @param version The version of the secret to get. If it
+         * is not provided, the latest version is retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ String> version) {
+            $.version = version;
             return this;
         }
 
@@ -120,8 +153,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetSecretVersionArgs build() {

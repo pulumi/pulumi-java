@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.OsubUsage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the root compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -35,13 +35,13 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="computedUsageId", required=true)
-    private String computedUsageId;
+    private Output<String> computedUsageId;
 
     /**
      * @return The Computed Usage Id
      * 
      */
-    public String computedUsageId() {
+    public Output<String> computedUsageId() {
         return this.computedUsageId;
     }
 
@@ -50,14 +50,14 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private Output</* @Nullable */ List<String>> fields;
 
     /**
      * @return Partial response refers to an optimization technique offered by the RESTful web APIs to return only the information  (fields) required by the client. This parameter is used to control what fields to return.
      * 
      */
-    public Optional<List<String>> fields() {
-        return Optional.ofNullable(this.fields);
+    public Output</* @Nullable */ List<String>> fields() {
+        return this.fields;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetComputedUsageArgs() {}
@@ -108,8 +108,29 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the root compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param computedUsageId The Computed Usage Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computedUsageId(Output<String> computedUsageId) {
+            $.computedUsageId = computedUsageId;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder computedUsageId(String computedUsageId) {
-            $.computedUsageId = computedUsageId;
+            return computedUsageId(Output.of(computedUsageId));
+        }
+
+        /**
+         * @param fields Partial response refers to an optimization technique offered by the RESTful web APIs to return only the information  (fields) required by the client. This parameter is used to control what fields to return.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -131,8 +162,7 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+            return fields(Output.of(fields));
         }
 
         /**
@@ -151,9 +181,19 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetComputedUsageArgs build() {

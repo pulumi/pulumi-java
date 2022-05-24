@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.gameservices_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetGameServerClusterArgs extends com.pulumi.resources.InvokeA
     public static final GetGameServerClusterArgs Empty = new GetGameServerClusterArgs();
 
     @Import(name="gameServerClusterId", required=true)
-    private String gameServerClusterId;
+    private Output<String> gameServerClusterId;
 
-    public String gameServerClusterId() {
+    public Output<String> gameServerClusterId() {
         return this.gameServerClusterId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="realmId", required=true)
-    private String realmId;
+    private Output<String> realmId;
 
-    public String realmId() {
+    public Output<String> realmId() {
         return this.realmId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetGameServerClusterArgs() {}
@@ -77,29 +77,49 @@ public final class GetGameServerClusterArgs extends com.pulumi.resources.InvokeA
             $ = new GetGameServerClusterArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder gameServerClusterId(String gameServerClusterId) {
+        public Builder gameServerClusterId(Output<String> gameServerClusterId) {
             $.gameServerClusterId = gameServerClusterId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder gameServerClusterId(String gameServerClusterId) {
+            return gameServerClusterId(Output.of(gameServerClusterId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder realmId(String realmId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder realmId(Output<String> realmId) {
             $.realmId = realmId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder realmId(String realmId) {
+            return realmId(Output.of(realmId));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetGameServerClusterArgs build() {

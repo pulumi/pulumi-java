@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.fis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetExperimentTemplateArgs extends com.pulumi.resources.Invoke
     public static final GetExperimentTemplateArgs Empty = new GetExperimentTemplateArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -43,9 +44,13 @@ public final class GetExperimentTemplateArgs extends com.pulumi.resources.Invoke
             $ = new GetExperimentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetExperimentTemplateArgs build() {

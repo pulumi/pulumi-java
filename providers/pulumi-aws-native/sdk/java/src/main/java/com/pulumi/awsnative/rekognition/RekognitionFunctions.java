@@ -8,38 +8,38 @@ import com.pulumi.awsnative.rekognition.inputs.GetCollectionArgs;
 import com.pulumi.awsnative.rekognition.inputs.GetProjectArgs;
 import com.pulumi.awsnative.rekognition.outputs.GetCollectionResult;
 import com.pulumi.awsnative.rekognition.outputs.GetProjectResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RekognitionFunctions {
     /**
      * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
      * 
      */
-    public static CompletableFuture<GetCollectionResult> getCollection(GetCollectionArgs args) {
+    public static Output<GetCollectionResult> getCollection(GetCollectionArgs args) {
         return getCollection(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
      * 
      */
-    public static CompletableFuture<GetCollectionResult> getCollection(GetCollectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:rekognition:getCollection", TypeShape.of(GetCollectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCollectionResult> getCollection(GetCollectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:rekognition:getCollection", TypeShape.of(GetCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Rekognition::Project type creates an Amazon Rekognition CustomLabels Project. A project is a grouping of the resources needed to create and manage Dataset and ProjectVersions.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Rekognition::Project type creates an Amazon Rekognition CustomLabels Project. A project is a grouping of the resources needed to create and manage Dataset and ProjectVersions.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:rekognition:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:rekognition:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the object.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private ListSiteIdentifiersAssignedToHostNameArgs() {}
@@ -59,9 +59,19 @@ public final class ListSiteIdentifiersAssignedToHostNameArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name Name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
         }
 
         public ListSiteIdentifiersAssignedToHostNameArgs build() {

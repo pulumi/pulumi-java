@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.baremetalsolution_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="snapshotId", required=true)
-    private String snapshotId;
+    private Output<String> snapshotId;
 
-    public String snapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
     @Import(name="volumeId", required=true)
-    private String volumeId;
+    private Output<String> volumeId;
 
-    public String volumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 
@@ -69,24 +69,40 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder snapshotId(String snapshotId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder snapshotId(Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder volumeId(String volumeId) {
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
+        }
+
+        public Builder volumeId(Output<String> volumeId) {
             $.volumeId = volumeId;
             return this;
+        }
+
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
 
         public GetSnapshotArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -32,13 +33,13 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scriptExecutionName", required=true)
-    private String scriptExecutionName;
+    private Output<String> scriptExecutionName;
 
     /**
      * @return Name of the user-invoked script execution resource
      * 
      */
-    public String scriptExecutionName() {
+    public Output<String> scriptExecutionName() {
         return this.scriptExecutionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder privateCloudName(String privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
+            return this;
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(String privateCloudName) {
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param scriptExecutionName Name of the user-invoked script execution resource
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scriptExecutionName(Output<String> scriptExecutionName) {
+            $.scriptExecutionName = scriptExecutionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetScriptExecutionLogsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder scriptExecutionName(String scriptExecutionName) {
-            $.scriptExecutionName = scriptExecutionName;
-            return this;
+            return scriptExecutionName(Output.of(scriptExecutionName));
         }
 
         public GetScriptExecutionLogsArgs build() {

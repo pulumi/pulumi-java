@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the Kubernetes cluster in which this Istio service
      * is defined. Corresponds to the clusterName resource label in k8s_cluster resources.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -37,14 +37,14 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The location of the Kubernetes cluster in which this Istio service
      * is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -54,15 +54,15 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -71,14 +71,14 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Istio service underlying this service.
      * Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,14 +88,14 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceNamespace", required=true)
-    private String serviceNamespace;
+    private Output<String> serviceNamespace;
 
     /**
      * @return The namespace of the Istio service underlying this service.
      * Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    public String serviceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -134,8 +134,31 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the Kubernetes cluster in which this Istio service
+         * is defined. Corresponds to the clusterName resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param location The location of the Kubernetes cluster in which this Istio service
+         * is defined. Corresponds to the location resource label in k8s_cluster resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -147,7 +170,18 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder location(String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -159,7 +193,18 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param serviceName The name of the Istio service underlying this service.
+         * Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -171,7 +216,18 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service.
+         * Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceNamespace(Output<String> serviceNamespace) {
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
 
@@ -183,8 +239,7 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder serviceNamespace(String serviceNamespace) {
-            $.serviceNamespace = serviceNamespace;
-            return this;
+            return serviceNamespace(Output.of(serviceNamespace));
         }
 
         public GetClusterIstioServiceArgs build() {

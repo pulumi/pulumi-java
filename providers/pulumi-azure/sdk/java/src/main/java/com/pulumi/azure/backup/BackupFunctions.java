@@ -8,10 +8,10 @@ import com.pulumi.azure.backup.inputs.GetPolicyFileshareArgs;
 import com.pulumi.azure.backup.inputs.GetPolicyVMArgs;
 import com.pulumi.azure.backup.outputs.GetPolicyFileshareResult;
 import com.pulumi.azure.backup.outputs.GetPolicyVMResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BackupFunctions {
     /**
@@ -43,7 +43,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args) {
+    public static Output<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args) {
         return getPolicyFileshare(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:backup/getPolicyFileshare:getPolicyFileshare", TypeShape.of(GetPolicyFileshareResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:backup/getPolicyFileshare:getPolicyFileshare", TypeShape.of(GetPolicyFileshareResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing VM Backup Policy.
@@ -107,7 +107,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args) {
+    public static Output<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args) {
         return getPolicyVM(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +139,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:backup/getPolicyVM:getPolicyVM", TypeShape.of(GetPolicyVMResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:backup/getPolicyVM:getPolicyVM", TypeShape.of(GetPolicyVMResult.class), args, Utilities.withVersion(options));
     }
 }

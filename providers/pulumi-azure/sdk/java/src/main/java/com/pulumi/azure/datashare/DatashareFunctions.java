@@ -16,10 +16,10 @@ import com.pulumi.azure.datashare.outputs.GetDatasetDataLakeGen2Result;
 import com.pulumi.azure.datashare.outputs.GetDatasetKustoClusterResult;
 import com.pulumi.azure.datashare.outputs.GetDatasetKustoDatabaseResult;
 import com.pulumi.azure.datashare.outputs.GetShareResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatashareFunctions {
     /**
@@ -51,7 +51,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Data Share Blob Storage Dataset.
@@ -115,7 +115,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetBlobStorageResult> getDatasetBlobStorage(GetDatasetBlobStorageArgs args) {
+    public static Output<GetDatasetBlobStorageResult> getDatasetBlobStorage(GetDatasetBlobStorageArgs args) {
         return getDatasetBlobStorage(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetBlobStorageResult> getDatasetBlobStorage(GetDatasetBlobStorageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getDatasetBlobStorage:getDatasetBlobStorage", TypeShape.of(GetDatasetBlobStorageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetBlobStorageResult> getDatasetBlobStorage(GetDatasetBlobStorageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getDatasetBlobStorage:getDatasetBlobStorage", TypeShape.of(GetDatasetBlobStorageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Data Share Data Lake Gen2 Dataset.
@@ -179,7 +179,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetDataLakeGen2Result> getDatasetDataLakeGen2(GetDatasetDataLakeGen2Args args) {
+    public static Output<GetDatasetDataLakeGen2Result> getDatasetDataLakeGen2(GetDatasetDataLakeGen2Args args) {
         return getDatasetDataLakeGen2(args, InvokeOptions.Empty);
     }
     /**
@@ -211,8 +211,8 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetDataLakeGen2Result> getDatasetDataLakeGen2(GetDatasetDataLakeGen2Args args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getDatasetDataLakeGen2:getDatasetDataLakeGen2", TypeShape.of(GetDatasetDataLakeGen2Result.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetDataLakeGen2Result> getDatasetDataLakeGen2(GetDatasetDataLakeGen2Args args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getDatasetDataLakeGen2:getDatasetDataLakeGen2", TypeShape.of(GetDatasetDataLakeGen2Result.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Data Share Kusto Cluster Dataset.
@@ -243,7 +243,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetKustoClusterResult> getDatasetKustoCluster(GetDatasetKustoClusterArgs args) {
+    public static Output<GetDatasetKustoClusterResult> getDatasetKustoCluster(GetDatasetKustoClusterArgs args) {
         return getDatasetKustoCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -275,8 +275,8 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetKustoClusterResult> getDatasetKustoCluster(GetDatasetKustoClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getDatasetKustoCluster:getDatasetKustoCluster", TypeShape.of(GetDatasetKustoClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetKustoClusterResult> getDatasetKustoCluster(GetDatasetKustoClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getDatasetKustoCluster:getDatasetKustoCluster", TypeShape.of(GetDatasetKustoClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Data Share Kusto Database Dataset.
@@ -307,7 +307,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetKustoDatabaseResult> getDatasetKustoDatabase(GetDatasetKustoDatabaseArgs args) {
+    public static Output<GetDatasetKustoDatabaseResult> getDatasetKustoDatabase(GetDatasetKustoDatabaseArgs args) {
         return getDatasetKustoDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -339,8 +339,8 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatasetKustoDatabaseResult> getDatasetKustoDatabase(GetDatasetKustoDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getDatasetKustoDatabase:getDatasetKustoDatabase", TypeShape.of(GetDatasetKustoDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetKustoDatabaseResult> getDatasetKustoDatabase(GetDatasetKustoDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getDatasetKustoDatabase:getDatasetKustoDatabase", TypeShape.of(GetDatasetKustoDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Data Share.
@@ -376,7 +376,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args) {
+    public static Output<GetShareResult> getShare(GetShareArgs args) {
         return getShare(args, InvokeOptions.Empty);
     }
     /**
@@ -413,7 +413,7 @@ public final class DatashareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datashare/getShare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datashare/getShare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
     }
 }

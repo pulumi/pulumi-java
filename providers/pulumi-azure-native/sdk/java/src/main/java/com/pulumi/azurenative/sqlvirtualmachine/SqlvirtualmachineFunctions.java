@@ -10,10 +10,10 @@ import com.pulumi.azurenative.sqlvirtualmachine.inputs.GetSqlVirtualMachineGroup
 import com.pulumi.azurenative.sqlvirtualmachine.outputs.GetAvailabilityGroupListenerResult;
 import com.pulumi.azurenative.sqlvirtualmachine.outputs.GetSqlVirtualMachineGroupResult;
 import com.pulumi.azurenative.sqlvirtualmachine.outputs.GetSqlVirtualMachineResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SqlvirtualmachineFunctions {
     /**
@@ -21,7 +21,7 @@ public final class SqlvirtualmachineFunctions {
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args) {
+    public static Output<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args) {
         return getAvailabilityGroupListener(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class SqlvirtualmachineFunctions {
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getAvailabilityGroupListener", TypeShape.of(GetAvailabilityGroupListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:sqlvirtualmachine:getAvailabilityGroupListener", TypeShape.of(GetAvailabilityGroupListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL virtual machine.
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args) {
+    public static Output<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args) {
         return getSqlVirtualMachine(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class SqlvirtualmachineFunctions {
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachine", TypeShape.of(GetSqlVirtualMachineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:sqlvirtualmachine:getSqlVirtualMachine", TypeShape.of(GetSqlVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL virtual machine group.
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args) {
+    public static Output<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args) {
         return getSqlVirtualMachineGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class SqlvirtualmachineFunctions {
      * API Version: 2017-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachineGroup", TypeShape.of(GetSqlVirtualMachineGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:sqlvirtualmachine:getSqlVirtualMachineGroup", TypeShape.of(GetSqlVirtualMachineGroupResult.class), args, Utilities.withVersion(options));
     }
 }

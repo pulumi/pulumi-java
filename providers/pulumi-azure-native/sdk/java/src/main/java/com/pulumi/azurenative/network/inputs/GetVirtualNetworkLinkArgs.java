@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateZoneName", required=true)
-    private String privateZoneName;
+    private Output<String> privateZoneName;
 
     /**
      * @return The name of the Private DNS zone (without a terminating dot).
      * 
      */
-    public String privateZoneName() {
+    public Output<String> privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="virtualNetworkLinkName", required=true)
-    private String virtualNetworkLinkName;
+    private Output<String> virtualNetworkLinkName;
 
     /**
      * @return The name of the virtual network link.
      * 
      */
-    public String virtualNetworkLinkName() {
+    public Output<String> virtualNetworkLinkName() {
         return this.virtualNetworkLinkName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder privateZoneName(String privateZoneName) {
+        public Builder privateZoneName(Output<String> privateZoneName) {
             $.privateZoneName = privateZoneName;
+            return this;
+        }
+
+        /**
+         * @param privateZoneName The name of the Private DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateZoneName(String privateZoneName) {
+            return privateZoneName(Output.of(privateZoneName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkLinkName The name of the virtual network link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkLinkName(Output<String> virtualNetworkLinkName) {
+            $.virtualNetworkLinkName = virtualNetworkLinkName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder virtualNetworkLinkName(String virtualNetworkLinkName) {
-            $.virtualNetworkLinkName = virtualNetworkLinkName;
-            return this;
+            return virtualNetworkLinkName(Output.of(virtualNetworkLinkName));
         }
 
         public GetVirtualNetworkLinkArgs build() {

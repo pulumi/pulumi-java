@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.servicenetworking.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,30 +14,30 @@ public final class GetPeeredDnsDomainArgs extends com.pulumi.resources.InvokeArg
     public static final GetPeeredDnsDomainArgs Empty = new GetPeeredDnsDomainArgs();
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="network", required=true)
-    private String network;
+    private Output<String> network;
 
-    public String network() {
+    public Output<String> network() {
         return this.network;
     }
 
     @Import(name="project", required=true)
-    private String project;
+    private Output<String> project;
 
-    public String project() {
+    public Output<String> project() {
         return this.project;
     }
 
     @Import(name="service", required=true)
-    private String service;
+    private Output<String> service;
 
-    public String service() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -67,24 +68,40 @@ public final class GetPeeredDnsDomainArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPeeredDnsDomainArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder network(String network) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
-        public Builder project(String project) {
+        public Builder network(String network) {
+            return network(Output.of(network));
+        }
+
+        public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder service(String service) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder service(Output<String> service) {
             $.service = service;
             return this;
+        }
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
 
         public GetPeeredDnsDomainArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.firebase_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetIosAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIosAppArgs Empty = new GetIosAppArgs();
 
     @Import(name="iosAppId", required=true)
-    private String iosAppId;
+    private Output<String> iosAppId;
 
-    public String iosAppId() {
+    public Output<String> iosAppId() {
         return this.iosAppId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetIosAppArgs() {}
@@ -53,14 +53,22 @@ public final class GetIosAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIosAppArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder iosAppId(String iosAppId) {
+        public Builder iosAppId(Output<String> iosAppId) {
             $.iosAppId = iosAppId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder iosAppId(String iosAppId) {
+            return iosAppId(Output.of(iosAppId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetIosAppArgs build() {

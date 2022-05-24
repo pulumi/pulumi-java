@@ -6,10 +6,10 @@ package com.pulumi.azure.dns;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.dns.inputs.GetZoneArgs;
 import com.pulumi.azure.dns.outputs.GetZoneResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DnsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args) {
+    public static Output<GetZoneResult> getZone(GetZoneArgs args) {
         return getZone(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:dns/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:dns/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
 }

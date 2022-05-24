@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetArchiveDeploymentArgs extends com.pulumi.resources.InvokeA
     public static final GetArchiveDeploymentArgs Empty = new GetArchiveDeploymentArgs();
 
     @Import(name="archiveDeploymentId", required=true)
-    private String archiveDeploymentId;
+    private Output<String> archiveDeploymentId;
 
-    public String archiveDeploymentId() {
+    public Output<String> archiveDeploymentId() {
         return this.archiveDeploymentId;
     }
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetArchiveDeploymentArgs extends com.pulumi.resources.InvokeA
             $ = new GetArchiveDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder archiveDeploymentId(String archiveDeploymentId) {
+        public Builder archiveDeploymentId(Output<String> archiveDeploymentId) {
             $.archiveDeploymentId = archiveDeploymentId;
             return this;
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder archiveDeploymentId(String archiveDeploymentId) {
+            return archiveDeploymentId(Output.of(archiveDeploymentId));
+        }
+
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetArchiveDeploymentArgs build() {

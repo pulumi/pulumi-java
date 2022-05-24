@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetListenerArgs Empty = new GetListenerArgs();
 
     @Import(name="listenerArn", required=true)
-    private String listenerArn;
+    private Output<String> listenerArn;
 
-    public String listenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetListenerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder listenerArn(String listenerArn) {
+        public Builder listenerArn(Output<String> listenerArn) {
             $.listenerArn = listenerArn;
             return this;
+        }
+
+        public Builder listenerArn(String listenerArn) {
+            return listenerArn(Output.of(listenerArn));
         }
 
         public GetListenerArgs build() {

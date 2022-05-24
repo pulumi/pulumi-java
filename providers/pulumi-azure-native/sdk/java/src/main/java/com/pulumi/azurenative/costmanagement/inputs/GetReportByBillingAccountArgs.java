@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
     /**
      * @return BillingAccount ID
      * 
      */
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -32,13 +33,13 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="reportName", required=true)
-    private String reportName;
+    private Output<String> reportName;
 
     /**
      * @return Report Name.
      * 
      */
-    public String reportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -73,8 +74,29 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
+            return this;
+        }
+
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportName(Output<String> reportName) {
+            $.reportName = reportName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
          * 
          */
         public Builder reportName(String reportName) {
-            $.reportName = reportName;
-            return this;
+            return reportName(Output.of(reportName));
         }
 
         public GetReportByBillingAccountArgs build() {

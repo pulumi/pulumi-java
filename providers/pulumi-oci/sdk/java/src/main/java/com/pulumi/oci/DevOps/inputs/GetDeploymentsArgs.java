@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetDeploymentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The OCID of the compartment in which to list resources.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deployPipelineId")
-    private @Nullable String deployPipelineId;
+    private Output</* @Nullable */ String> deployPipelineId;
 
     /**
      * @return The ID of the parent pipeline.
      * 
      */
-    public Optional<String> deployPipelineId() {
-        return Optional.ofNullable(this.deployPipelineId);
+    public Output</* @Nullable */ String> deployPipelineId() {
+        return this.deployPipelineId;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDeploymentsFilter> filters;
+    private Output</* @Nullable */ List<GetDeploymentsFilter>> filters;
 
-    public Optional<List<GetDeploymentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDeploymentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Unique identifier or OCID for listing a single resource by ID.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectId")
-    private @Nullable String projectId;
+    private Output</* @Nullable */ String> projectId;
 
     /**
      * @return unique project identifier
      * 
      */
-    public Optional<String> projectId() {
-        return Optional.ofNullable(this.projectId);
+    public Output</* @Nullable */ String> projectId() {
+        return this.projectId;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only Deployments that matches the given lifecycleState.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -118,14 +118,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return Search for DevOps resources that were created after a specific date. Specifying this parameter corresponding to `timeCreatedGreaterThanOrEqualTo` parameter will retrieve all security assessments created after the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
+    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
+        return this.timeCreatedGreaterThanOrEqualTo;
     }
 
     /**
@@ -133,14 +133,14 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private Output</* @Nullable */ String> timeCreatedLessThan;
 
     /**
      * @return Search for DevOps resources that were created before a specific date. Specifying this parameter corresponding to `timeCreatedLessThan` parameter will retrieve all assessments created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
-        return Optional.ofNullable(this.timeCreatedLessThan);
+    public Output</* @Nullable */ String> timeCreatedLessThan() {
+        return this.timeCreatedLessThan;
     }
 
     private GetDeploymentsArgs() {}
@@ -181,8 +181,29 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param deployPipelineId The ID of the parent pipeline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployPipelineId(Output</* @Nullable */ String> deployPipelineId) {
+            $.deployPipelineId = deployPipelineId;
             return this;
         }
 
@@ -193,7 +214,17 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder deployPipelineId(@Nullable String deployPipelineId) {
-            $.deployPipelineId = deployPipelineId;
+            return deployPipelineId(Output.of(deployPipelineId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -204,13 +235,16 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDeploymentsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDeploymentsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDeploymentsFilter... filters) {
@@ -223,8 +257,29 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Unique identifier or OCID for listing a single resource by ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param projectId unique project identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectId(Output</* @Nullable */ String> projectId) {
+            $.projectId = projectId;
             return this;
         }
 
@@ -235,7 +290,17 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder projectId(@Nullable String projectId) {
-            $.projectId = projectId;
+            return projectId(Output.of(projectId));
+        }
+
+        /**
+         * @param state A filter to return only Deployments that matches the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -246,7 +311,17 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo Search for DevOps resources that were created after a specific date. Specifying this parameter corresponding to `timeCreatedGreaterThanOrEqualTo` parameter will retrieve all security assessments created after the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -257,7 +332,17 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
-            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for DevOps resources that were created before a specific date. Specifying this parameter corresponding to `timeCreatedLessThan` parameter will retrieve all assessments created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -268,8 +353,7 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetDeploymentsArgs build() {

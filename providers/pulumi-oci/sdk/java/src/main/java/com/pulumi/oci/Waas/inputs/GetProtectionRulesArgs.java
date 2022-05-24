@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Waas.inputs.GetProtectionRulesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="actions")
-    private @Nullable List<String> actions;
+    private Output</* @Nullable */ List<String>> actions;
 
     /**
      * @return Filter rules using a list of actions.
      * 
      */
-    public Optional<List<String>> actions() {
-        return Optional.ofNullable(this.actions);
+    public Output</* @Nullable */ List<String>> actions() {
+        return this.actions;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetProtectionRulesFilter> filters;
+    private Output</* @Nullable */ List<GetProtectionRulesFilter>> filters;
 
-    public Optional<List<GetProtectionRulesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetProtectionRulesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modSecurityRuleIds")
-    private @Nullable List<String> modSecurityRuleIds;
+    private Output</* @Nullable */ List<String>> modSecurityRuleIds;
 
     /**
      * @return Filter rules using a list of ModSecurity rule IDs.
      * 
      */
-    public Optional<List<String>> modSecurityRuleIds() {
-        return Optional.ofNullable(this.modSecurityRuleIds);
+    public Output</* @Nullable */ List<String>> modSecurityRuleIds() {
+        return this.modSecurityRuleIds;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="waasPolicyId", required=true)
-    private String waasPolicyId;
+    private Output<String> waasPolicyId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WAAS policy.
      * 
      */
-    public String waasPolicyId() {
+    public Output<String> waasPolicyId() {
         return this.waasPolicyId;
     }
 
@@ -101,9 +101,19 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder actions(@Nullable List<String> actions) {
+        public Builder actions(Output</* @Nullable */ List<String>> actions) {
             $.actions = actions;
             return this;
+        }
+
+        /**
+         * @param actions Filter rules using a list of actions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder actions(@Nullable List<String> actions) {
+            return actions(Output.of(actions));
         }
 
         /**
@@ -116,9 +126,13 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
             return actions(List.of(actions));
         }
 
-        public Builder filters(@Nullable List<GetProtectionRulesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetProtectionRulesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetProtectionRulesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetProtectionRulesFilter... filters) {
@@ -131,9 +145,19 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder modSecurityRuleIds(@Nullable List<String> modSecurityRuleIds) {
+        public Builder modSecurityRuleIds(Output</* @Nullable */ List<String>> modSecurityRuleIds) {
             $.modSecurityRuleIds = modSecurityRuleIds;
             return this;
+        }
+
+        /**
+         * @param modSecurityRuleIds Filter rules using a list of ModSecurity rule IDs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder modSecurityRuleIds(@Nullable List<String> modSecurityRuleIds) {
+            return modSecurityRuleIds(Output.of(modSecurityRuleIds));
         }
 
         /**
@@ -152,9 +176,19 @@ public final class GetProtectionRulesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder waasPolicyId(String waasPolicyId) {
+        public Builder waasPolicyId(Output<String> waasPolicyId) {
             $.waasPolicyId = waasPolicyId;
             return this;
+        }
+
+        /**
+         * @param waasPolicyId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WAAS policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder waasPolicyId(String waasPolicyId) {
+            return waasPolicyId(Output.of(waasPolicyId));
         }
 
         public GetProtectionRulesArgs build() {

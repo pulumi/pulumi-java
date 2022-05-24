@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.databricks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkspacePrivateEndpointConnectionArgs extends com.pulumi.
      * 
      */
     @Import(name="privateEndpointId", required=true)
-    private String privateEndpointId;
+    private Output<String> privateEndpointId;
 
     /**
      * @return The resource ID of the Private Endpoint.
      * 
      */
-    public String privateEndpointId() {
+    public Output<String> privateEndpointId() {
         return this.privateEndpointId;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkspacePrivateEndpointConnectionArgs extends com.pulumi.
      * 
      */
     @Import(name="workspaceId", required=true)
-    private String workspaceId;
+    private Output<String> workspaceId;
 
     /**
      * @return The resource ID of the Databricks Workspace.
      * 
      */
-    public String workspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetWorkspacePrivateEndpointConnectionArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder privateEndpointId(String privateEndpointId) {
+        public Builder privateEndpointId(Output<String> privateEndpointId) {
             $.privateEndpointId = privateEndpointId;
+            return this;
+        }
+
+        /**
+         * @param privateEndpointId The resource ID of the Private Endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointId(String privateEndpointId) {
+            return privateEndpointId(Output.of(privateEndpointId));
+        }
+
+        /**
+         * @param workspaceId The resource ID of the Databricks Workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceId(Output<String> workspaceId) {
+            $.workspaceId = workspaceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetWorkspacePrivateEndpointConnectionArgs extends com.pulumi.
          * 
          */
         public Builder workspaceId(String workspaceId) {
-            $.workspaceId = workspaceId;
-            return this;
+            return workspaceId(Output.of(workspaceId));
         }
 
         public GetWorkspacePrivateEndpointConnectionArgs build() {

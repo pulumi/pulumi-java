@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Email.inputs.GetDkimsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emailDomainId", required=true)
-    private String emailDomainId;
+    private Output<String> emailDomainId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the email domain to which this DKIM belongs.
      * 
      */
-    public String emailDomainId() {
+    public Output<String> emailDomainId() {
         return this.emailDomainId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDkimsFilter> filters;
+    private Output</* @Nullable */ List<GetDkimsFilter>> filters;
 
-    public Optional<List<GetDkimsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDkimsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return A filter to only return resources that match the given id exactly.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter returned list by specified lifecycle state. This parameter is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetDkimsArgs() {}
@@ -117,14 +117,28 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder emailDomainId(String emailDomainId) {
+        public Builder emailDomainId(Output<String> emailDomainId) {
             $.emailDomainId = emailDomainId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDkimsFilter> filters) {
+        /**
+         * @param emailDomainId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the email domain to which this DKIM belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder emailDomainId(String emailDomainId) {
+            return emailDomainId(Output.of(emailDomainId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDkimsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDkimsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDkimsFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id A filter to only return resources that match the given id exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name A filter to only return resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state Filter returned list by specified lifecycle state. This parameter is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetDkimsArgs build() {

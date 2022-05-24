@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return The name for the certificate.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -57,9 +58,19 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
+        }
+
+        /**
+         * @param certificateName The name for the certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
 
         public GetCertificateArgs build() {

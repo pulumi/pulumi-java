@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMysqlBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
     /**
      * @return The OCID of the Backup
      * 
      */
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMysqlBackupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
+        }
+
+        /**
+         * @param backupId The OCID of the Backup
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
         }
 
         public GetMysqlBackupArgs build() {

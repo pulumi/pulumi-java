@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetSearchApplicationArgs extends com.pulumi.resources.InvokeA
     public static final GetSearchApplicationArgs Empty = new GetSearchApplicationArgs();
 
     @Import(name="debugOptionsEnableDebugging")
-    private @Nullable String debugOptionsEnableDebugging;
+    private Output</* @Nullable */ String> debugOptionsEnableDebugging;
 
-    public Optional<String> debugOptionsEnableDebugging() {
-        return Optional.ofNullable(this.debugOptionsEnableDebugging);
+    public Output</* @Nullable */ String> debugOptionsEnableDebugging() {
+        return this.debugOptionsEnableDebugging;
     }
 
     @Import(name="searchapplicationId", required=true)
-    private String searchapplicationId;
+    private Output<String> searchapplicationId;
 
-    public String searchapplicationId() {
+    public Output<String> searchapplicationId() {
         return this.searchapplicationId;
     }
 
@@ -53,14 +53,22 @@ public final class GetSearchApplicationArgs extends com.pulumi.resources.InvokeA
             $ = new GetSearchApplicationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
+        public Builder debugOptionsEnableDebugging(Output</* @Nullable */ String> debugOptionsEnableDebugging) {
             $.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
         }
 
-        public Builder searchapplicationId(String searchapplicationId) {
+        public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
+            return debugOptionsEnableDebugging(Output.of(debugOptionsEnableDebugging));
+        }
+
+        public Builder searchapplicationId(Output<String> searchapplicationId) {
             $.searchapplicationId = searchapplicationId;
             return this;
+        }
+
+        public Builder searchapplicationId(String searchapplicationId) {
+            return searchapplicationId(Output.of(searchapplicationId));
         }
 
         public GetSearchApplicationArgs build() {

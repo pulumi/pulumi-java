@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.networkservices_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetEndpointPolicyIamPolicyArgs extends com.pulumi.resources.I
     public static final GetEndpointPolicyIamPolicyArgs Empty = new GetEndpointPolicyIamPolicyArgs();
 
     @Import(name="endpointPolicyId", required=true)
-    private String endpointPolicyId;
+    private Output<String> endpointPolicyId;
 
-    public String endpointPolicyId() {
+    public Output<String> endpointPolicyId() {
         return this.endpointPolicyId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetEndpointPolicyIamPolicyArgs() {}
@@ -69,24 +69,40 @@ public final class GetEndpointPolicyIamPolicyArgs extends com.pulumi.resources.I
             $ = new GetEndpointPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder endpointPolicyId(String endpointPolicyId) {
+        public Builder endpointPolicyId(Output<String> endpointPolicyId) {
             $.endpointPolicyId = endpointPolicyId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder endpointPolicyId(String endpointPolicyId) {
+            return endpointPolicyId(Output.of(endpointPolicyId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetEndpointPolicyIamPolicyArgs build() {

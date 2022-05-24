@@ -5,13 +5,13 @@ package com.pulumi.azurenative.maps.inputs;
 
 import com.pulumi.azurenative.maps.enums.SigningKey;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,13 +24,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Maps Account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -39,13 +39,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expiry", required=true)
-    private String expiry;
+    private Output<String> expiry;
 
     /**
      * @return The date time offset of when the token validity expires. For example &#34;2017-05-24T10:42:03.1567373Z&#34;
      * 
      */
-    public String expiry() {
+    public Output<String> expiry() {
         return this.expiry;
     }
 
@@ -54,13 +54,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxRatePerSecond", required=true)
-    private Integer maxRatePerSecond;
+    private Output<Integer> maxRatePerSecond;
 
     /**
      * @return Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
      * 
      */
-    public Integer maxRatePerSecond() {
+    public Output<Integer> maxRatePerSecond() {
         return this.maxRatePerSecond;
     }
 
@@ -69,13 +69,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-    private String principalId;
+    private Output<String> principalId;
 
     /**
      * @return The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
      * 
      */
-    public String principalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -84,14 +84,14 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-    private @Nullable List<String> regions;
+    private Output</* @Nullable */ List<String>> regions;
 
     /**
      * @return Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: &#34;eastus&#34;, &#34;westus2&#34;. Omitting this parameter will allow all region locations to be accessible.
      * 
      */
-    public Optional<List<String>> regions() {
-        return Optional.ofNullable(this.regions);
+    public Output</* @Nullable */ List<String>> regions() {
+        return this.regions;
     }
 
     /**
@@ -99,13 +99,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,13 +114,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signingKey", required=true)
-    private Either<String,SigningKey> signingKey;
+    private Output<Either<String,SigningKey>> signingKey;
 
     /**
      * @return The Map account key to use for signing.
      * 
      */
-    public Either<String,SigningKey> signingKey() {
+    public Output<Either<String,SigningKey>> signingKey() {
         return this.signingKey;
     }
 
@@ -129,13 +129,13 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start", required=true)
-    private String start;
+    private Output<String> start;
 
     /**
      * @return The date time offset of when the token validity begins. For example &#34;2017-05-24T10:42:03.1567373Z&#34;.
      * 
      */
-    public String start() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -176,8 +176,29 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Maps Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param expiry The date time offset of when the token validity expires. For example &#34;2017-05-24T10:42:03.1567373Z&#34;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiry(Output<String> expiry) {
+            $.expiry = expiry;
             return this;
         }
 
@@ -188,7 +209,17 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder expiry(String expiry) {
-            $.expiry = expiry;
+            return expiry(Output.of(expiry));
+        }
+
+        /**
+         * @param maxRatePerSecond Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxRatePerSecond(Output<Integer> maxRatePerSecond) {
+            $.maxRatePerSecond = maxRatePerSecond;
             return this;
         }
 
@@ -199,7 +230,17 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder maxRatePerSecond(Integer maxRatePerSecond) {
-            $.maxRatePerSecond = maxRatePerSecond;
+            return maxRatePerSecond(Output.of(maxRatePerSecond));
+        }
+
+        /**
+         * @param principalId The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalId(Output<String> principalId) {
+            $.principalId = principalId;
             return this;
         }
 
@@ -210,7 +251,17 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder principalId(String principalId) {
-            $.principalId = principalId;
+            return principalId(Output.of(principalId));
+        }
+
+        /**
+         * @param regions Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: &#34;eastus&#34;, &#34;westus2&#34;. Omitting this parameter will allow all region locations to be accessible.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+            $.regions = regions;
             return this;
         }
 
@@ -221,8 +272,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder regions(@Nullable List<String> regions) {
-            $.regions = regions;
-            return this;
+            return regions(Output.of(regions));
         }
 
         /**
@@ -241,8 +291,29 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param signingKey The Map account key to use for signing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signingKey(Output<Either<String,SigningKey>> signingKey) {
+            $.signingKey = signingKey;
             return this;
         }
 
@@ -253,8 +324,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder signingKey(Either<String,SigningKey> signingKey) {
-            $.signingKey = signingKey;
-            return this;
+            return signingKey(Output.of(signingKey));
         }
 
         /**
@@ -283,15 +353,25 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder start(String start) {
+        public Builder start(Output<String> start) {
             $.start = start;
             return this;
+        }
+
+        /**
+         * @param start The date time offset of when the token validity begins. For example &#34;2017-05-24T10:42:03.1567373Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder start(String start) {
+            return start(Output.of(start));
         }
 
         public ListAccountSasArgs build() {
             $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
             $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
-            $.maxRatePerSecond = Codegen.integerProp("maxRatePerSecond").arg($.maxRatePerSecond).def(500).require();
+            $.maxRatePerSecond = Codegen.integerProp("maxRatePerSecond").output().arg($.maxRatePerSecond).def(500).require();
             $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             $.signingKey = Objects.requireNonNull($.signingKey, "expected parameter 'signingKey' to be non-null");

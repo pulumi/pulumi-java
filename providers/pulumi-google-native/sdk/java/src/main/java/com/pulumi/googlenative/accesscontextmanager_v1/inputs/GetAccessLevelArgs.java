@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetAccessLevelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccessLevelArgs Empty = new GetAccessLevelArgs();
 
     @Import(name="accessLevelFormat")
-    private @Nullable String accessLevelFormat;
+    private Output</* @Nullable */ String> accessLevelFormat;
 
-    public Optional<String> accessLevelFormat() {
-        return Optional.ofNullable(this.accessLevelFormat);
+    public Output</* @Nullable */ String> accessLevelFormat() {
+        return this.accessLevelFormat;
     }
 
     @Import(name="accessLevelId", required=true)
-    private String accessLevelId;
+    private Output<String> accessLevelId;
 
-    public String accessLevelId() {
+    public Output<String> accessLevelId() {
         return this.accessLevelId;
     }
 
     @Import(name="accessPolicyId", required=true)
-    private String accessPolicyId;
+    private Output<String> accessPolicyId;
 
-    public String accessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -61,19 +61,31 @@ public final class GetAccessLevelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessLevelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessLevelFormat(@Nullable String accessLevelFormat) {
+        public Builder accessLevelFormat(Output</* @Nullable */ String> accessLevelFormat) {
             $.accessLevelFormat = accessLevelFormat;
             return this;
         }
 
-        public Builder accessLevelId(String accessLevelId) {
+        public Builder accessLevelFormat(@Nullable String accessLevelFormat) {
+            return accessLevelFormat(Output.of(accessLevelFormat));
+        }
+
+        public Builder accessLevelId(Output<String> accessLevelId) {
             $.accessLevelId = accessLevelId;
             return this;
         }
 
-        public Builder accessPolicyId(String accessPolicyId) {
+        public Builder accessLevelId(String accessLevelId) {
+            return accessLevelId(Output.of(accessLevelId));
+        }
+
+        public Builder accessPolicyId(Output<String> accessPolicyId) {
             $.accessPolicyId = accessPolicyId;
             return this;
+        }
+
+        public Builder accessPolicyId(String accessPolicyId) {
+            return accessPolicyId(Output.of(accessPolicyId));
         }
 
         public GetAccessLevelArgs build() {

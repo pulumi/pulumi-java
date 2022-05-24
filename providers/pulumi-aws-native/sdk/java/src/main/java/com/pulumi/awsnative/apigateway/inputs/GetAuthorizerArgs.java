@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @Import(name="authorizerId", required=true)
-    private String authorizerId;
+    private Output<String> authorizerId;
 
-    public String authorizerId() {
+    public Output<String> authorizerId() {
         return this.authorizerId;
     }
 
@@ -24,13 +25,13 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The identifier of the API.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -59,8 +60,23 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder authorizerId(String authorizerId) {
+        public Builder authorizerId(Output<String> authorizerId) {
             $.authorizerId = authorizerId;
+            return this;
+        }
+
+        public Builder authorizerId(String authorizerId) {
+            return authorizerId(Output.of(authorizerId));
+        }
+
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(Output<String> restApiId) {
+            $.restApiId = restApiId;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restApiId(String restApiId) {
-            $.restApiId = restApiId;
-            return this;
+            return restApiId(Output.of(restApiId));
         }
 
         public GetAuthorizerArgs build() {

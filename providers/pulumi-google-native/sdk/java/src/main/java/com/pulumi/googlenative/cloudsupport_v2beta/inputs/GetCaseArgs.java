@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetCaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCaseArgs Empty = new GetCaseArgs();
 
     @Import(name="caseId", required=true)
-    private String caseId;
+    private Output<String> caseId;
 
-    public String caseId() {
+    public Output<String> caseId() {
         return this.caseId;
     }
 
     @Import(name="v2betaId1", required=true)
-    private String v2betaId1;
+    private Output<String> v2betaId1;
 
-    public String v2betaId1() {
+    public Output<String> v2betaId1() {
         return this.v2betaId1;
     }
 
     @Import(name="v2betumId", required=true)
-    private String v2betumId;
+    private Output<String> v2betumId;
 
-    public String v2betumId() {
+    public Output<String> v2betumId() {
         return this.v2betumId;
     }
 
@@ -59,19 +60,31 @@ public final class GetCaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCaseArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder caseId(String caseId) {
+        public Builder caseId(Output<String> caseId) {
             $.caseId = caseId;
             return this;
         }
 
-        public Builder v2betaId1(String v2betaId1) {
+        public Builder caseId(String caseId) {
+            return caseId(Output.of(caseId));
+        }
+
+        public Builder v2betaId1(Output<String> v2betaId1) {
             $.v2betaId1 = v2betaId1;
             return this;
         }
 
-        public Builder v2betumId(String v2betumId) {
+        public Builder v2betaId1(String v2betaId1) {
+            return v2betaId1(Output.of(v2betaId1));
+        }
+
+        public Builder v2betumId(Output<String> v2betumId) {
             $.v2betumId = v2betumId;
             return this;
+        }
+
+        public Builder v2betumId(String v2betumId) {
+            return v2betumId(Output.of(v2betumId));
         }
 
         public GetCaseArgs build() {

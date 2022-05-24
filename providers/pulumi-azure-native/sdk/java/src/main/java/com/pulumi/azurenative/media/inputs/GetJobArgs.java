@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The Job name.
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -47,13 +48,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transformName", required=true)
-    private String transformName;
+    private Output<String> transformName;
 
     /**
      * @return The Transform name.
      * 
      */
-    public String transformName() {
+    public Output<String> transformName() {
         return this.transformName;
     }
 
@@ -105,8 +106,29 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param jobName The Job name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(Output<String> jobName) {
+            $.jobName = jobName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobName(String jobName) {
-            $.jobName = jobName;
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param transformName The Transform name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transformName(Output<String> transformName) {
+            $.transformName = transformName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder transformName(String transformName) {
-            $.transformName = transformName;
-            return this;
+            return transformName(Output.of(transformName));
         }
 
         public GetJobArgs build() {

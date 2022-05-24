@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetRegionsFilter;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegionsArgs Empty = new GetRegionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRegionsFilter> filters;
+    private Output</* @Nullable */ List<GetRegionsFilter>> filters;
 
-    public Optional<List<GetRegionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRegionsFilter>> filters() {
+        return this.filters;
     }
 
     private GetRegionsArgs() {}
@@ -46,9 +46,13 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRegionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetRegionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRegionsFilter... filters) {

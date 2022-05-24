@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkGroupName", required=true)
-    private String networkGroupName;
+    private Output<String> networkGroupName;
 
     /**
      * @return The name of the network group to get.
      * 
      */
-    public String networkGroupName() {
+    public Output<String> networkGroupName() {
         return this.networkGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkGroupName(String networkGroupName) {
+        public Builder networkGroupName(Output<String> networkGroupName) {
             $.networkGroupName = networkGroupName;
+            return this;
+        }
+
+        /**
+         * @param networkGroupName The name of the network group to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkGroupName(String networkGroupName) {
+            return networkGroupName(Output.of(networkGroupName));
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(Output<String> networkManagerName) {
+            $.networkManagerName = networkManagerName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder networkManagerName(String networkManagerName) {
-            $.networkManagerName = networkManagerName;
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNetworkGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.StackMonitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMonitoredResourceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitoredResourceId", required=true)
-    private String monitoredResourceId;
+    private Output<String> monitoredResourceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of monitored resource.
      * 
      */
-    public String monitoredResourceId() {
+    public Output<String> monitoredResourceId() {
         return this.monitoredResourceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMonitoredResourceArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder monitoredResourceId(String monitoredResourceId) {
+        public Builder monitoredResourceId(Output<String> monitoredResourceId) {
             $.monitoredResourceId = monitoredResourceId;
             return this;
+        }
+
+        /**
+         * @param monitoredResourceId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of monitored resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitoredResourceId(String monitoredResourceId) {
+            return monitoredResourceId(Output.of(monitoredResourceId));
         }
 
         public GetMonitoredResourceArgs build() {

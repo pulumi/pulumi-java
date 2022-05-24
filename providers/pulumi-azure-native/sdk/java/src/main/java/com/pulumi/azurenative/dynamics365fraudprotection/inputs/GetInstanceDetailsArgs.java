@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceName", required=true)
-    private String instanceName;
+    private Output<String> instanceName;
 
     /**
      * @return The name of the instance. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    public String instanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceName(String instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             $.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * @param instanceName The name of the instance. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetInstanceDetailsArgs build() {

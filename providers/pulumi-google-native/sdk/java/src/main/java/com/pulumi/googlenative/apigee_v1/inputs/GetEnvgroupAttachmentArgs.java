@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetEnvgroupAttachmentArgs extends com.pulumi.resources.Invoke
     public static final GetEnvgroupAttachmentArgs Empty = new GetEnvgroupAttachmentArgs();
 
     @Import(name="attachmentId", required=true)
-    private String attachmentId;
+    private Output<String> attachmentId;
 
-    public String attachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="envgroupId", required=true)
-    private String envgroupId;
+    private Output<String> envgroupId;
 
-    public String envgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetEnvgroupAttachmentArgs extends com.pulumi.resources.Invoke
             $ = new GetEnvgroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder attachmentId(String attachmentId) {
+        public Builder attachmentId(Output<String> attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder envgroupId(String envgroupId) {
+        public Builder attachmentId(String attachmentId) {
+            return attachmentId(Output.of(attachmentId));
+        }
+
+        public Builder envgroupId(Output<String> envgroupId) {
             $.envgroupId = envgroupId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder envgroupId(String envgroupId) {
+            return envgroupId(Output.of(envgroupId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetEnvgroupAttachmentArgs build() {

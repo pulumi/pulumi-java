@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetAppCatalogListingsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAppCatalogListingsFilter> filters;
+    private Output</* @Nullable */ List<GetAppCatalogListingsFilter>> filters;
 
-    public Optional<List<GetAppCatalogListingsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAppCatalogListingsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publisherName")
-    private @Nullable String publisherName;
+    private Output</* @Nullable */ String> publisherName;
 
     /**
      * @return A filter to return only the publisher that matches the given publisher name exactly.
      * 
      */
-    public Optional<String> publisherName() {
-        return Optional.ofNullable(this.publisherName);
+    public Output</* @Nullable */ String> publisherName() {
+        return this.publisherName;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publisherType")
-    private @Nullable String publisherType;
+    private Output</* @Nullable */ String> publisherType;
 
     /**
      * @return A filter to return only publishers that match the given publisher type exactly. Valid types are OCI, ORACLE, TRUSTED, STANDARD.
      * 
      */
-    public Optional<String> publisherType() {
-        return Optional.ofNullable(this.publisherType);
+    public Output</* @Nullable */ String> publisherType() {
+        return this.publisherType;
     }
 
     private GetAppCatalogListingsArgs() {}
@@ -101,14 +101,28 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAppCatalogListingsFilter> filters) {
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAppCatalogListingsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetAppCatalogListingsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAppCatalogListingsFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder publisherName(@Nullable String publisherName) {
+        public Builder publisherName(Output</* @Nullable */ String> publisherName) {
             $.publisherName = publisherName;
+            return this;
+        }
+
+        /**
+         * @param publisherName A filter to return only the publisher that matches the given publisher name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisherName(@Nullable String publisherName) {
+            return publisherName(Output.of(publisherName));
+        }
+
+        /**
+         * @param publisherType A filter to return only publishers that match the given publisher type exactly. Valid types are OCI, ORACLE, TRUSTED, STANDARD.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisherType(Output</* @Nullable */ String> publisherType) {
+            $.publisherType = publisherType;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetAppCatalogListingsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder publisherType(@Nullable String publisherType) {
-            $.publisherType = publisherType;
-            return this;
+            return publisherType(Output.of(publisherType));
         }
 
         public GetAppCatalogListingsArgs build() {

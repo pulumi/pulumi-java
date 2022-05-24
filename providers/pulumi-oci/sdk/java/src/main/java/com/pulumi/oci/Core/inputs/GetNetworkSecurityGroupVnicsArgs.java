@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupVnicsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetNetworkSecurityGroupVnicsArgs extends com.pulumi.resources
     public static final GetNetworkSecurityGroupVnicsArgs Empty = new GetNetworkSecurityGroupVnicsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetNetworkSecurityGroupVnicsFilter> filters;
+    private Output</* @Nullable */ List<GetNetworkSecurityGroupVnicsFilter>> filters;
 
-    public Optional<List<GetNetworkSecurityGroupVnicsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNetworkSecurityGroupVnicsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetNetworkSecurityGroupVnicsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="networkSecurityGroupId", required=true)
-    private String networkSecurityGroupId;
+    private Output<String> networkSecurityGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
      * 
      */
-    public String networkSecurityGroupId() {
+    public Output<String> networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
 
@@ -63,9 +63,13 @@ public final class GetNetworkSecurityGroupVnicsArgs extends com.pulumi.resources
             $ = new GetNetworkSecurityGroupVnicsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetNetworkSecurityGroupVnicsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetNetworkSecurityGroupVnicsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetNetworkSecurityGroupVnicsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetNetworkSecurityGroupVnicsFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetNetworkSecurityGroupVnicsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+        public Builder networkSecurityGroupId(Output<String> networkSecurityGroupId) {
             $.networkSecurityGroupId = networkSecurityGroupId;
             return this;
+        }
+
+        /**
+         * @param networkSecurityGroupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+            return networkSecurityGroupId(Output.of(networkSecurityGroupId));
         }
 
         public GetNetworkSecurityGroupVnicsArgs build() {

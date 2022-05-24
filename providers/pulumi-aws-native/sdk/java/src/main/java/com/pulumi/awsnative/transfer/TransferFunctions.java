@@ -6,24 +6,24 @@ package com.pulumi.awsnative.transfer;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.transfer.inputs.GetWorkflowArgs;
 import com.pulumi.awsnative.transfer.outputs.GetWorkflowResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class TransferFunctions {
     /**
      * Resource Type definition for AWS::Transfer::Workflow
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
+    public static Output<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
         return getWorkflow(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Transfer::Workflow
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:transfer:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:transfer:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }
 }

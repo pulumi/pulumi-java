@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.metastore_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupArgs Empty = new GetBackupArgs();
 
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -69,24 +69,40 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
+        }
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
 
         public GetBackupArgs build() {

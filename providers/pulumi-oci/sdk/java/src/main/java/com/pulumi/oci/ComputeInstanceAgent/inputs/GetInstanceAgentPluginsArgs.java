@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ComputeInstanceAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAgentPluginsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,17 +17,17 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
     public static final GetInstanceAgentPluginsArgs Empty = new GetInstanceAgentPluginsArgs();
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstanceAgentPluginsFilter> filters;
+    private Output</* @Nullable */ List<GetInstanceAgentPluginsFilter>> filters;
 
-    public Optional<List<GetInstanceAgentPluginsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetInstanceAgentPluginsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceagentId", required=true)
-    private String instanceagentId;
+    private Output<String> instanceagentId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public String instanceagentId() {
+    public Output<String> instanceagentId() {
         return this.instanceagentId;
     }
 
@@ -50,14 +50,14 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The plugin name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return The plugin status
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     private GetInstanceAgentPluginsArgs() {}
@@ -103,14 +103,22 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
             $ = new GetInstanceAgentPluginsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInstanceAgentPluginsFilter> filters) {
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetInstanceAgentPluginsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetInstanceAgentPluginsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetInstanceAgentPluginsFilter... filters) {
@@ -123,8 +131,29 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder instanceagentId(String instanceagentId) {
+        public Builder instanceagentId(Output<String> instanceagentId) {
             $.instanceagentId = instanceagentId;
+            return this;
+        }
+
+        /**
+         * @param instanceagentId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceagentId(String instanceagentId) {
+            return instanceagentId(Output.of(instanceagentId));
+        }
+
+        /**
+         * @param name The plugin name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -135,7 +164,17 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param status The plugin status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -146,8 +185,7 @@ public final class GetInstanceAgentPluginsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
-            return this;
+            return status(Output.of(status));
         }
 
         public GetInstanceAgentPluginsArgs build() {

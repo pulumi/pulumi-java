@@ -6,10 +6,10 @@ package com.pulumi.azure.operationalinsights;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.operationalinsights.inputs.GetAnalyticsWorkspaceArgs;
 import com.pulumi.azure.operationalinsights.outputs.GetAnalyticsWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class OperationalinsightsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class OperationalinsightsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args) {
+    public static Output<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args) {
         return getAnalyticsWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class OperationalinsightsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:operationalinsights/getAnalyticsWorkspace:getAnalyticsWorkspace", TypeShape.of(GetAnalyticsWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalyticsWorkspaceResult> getAnalyticsWorkspace(GetAnalyticsWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:operationalinsights/getAnalyticsWorkspace:getAnalyticsWorkspace", TypeShape.of(GetAnalyticsWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

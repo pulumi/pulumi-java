@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.pubsub;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.pubsub.inputs.GetTopicArgs;
 import com.pulumi.gcp.pubsub.outputs.GetTopicResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class PubsubFunctions {
     /**
@@ -41,7 +41,7 @@ public final class PubsubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class PubsubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:pubsub/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:pubsub/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

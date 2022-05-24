@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.securitycenter_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetNotificationConfigArgs extends com.pulumi.resources.Invoke
     public static final GetNotificationConfigArgs Empty = new GetNotificationConfigArgs();
 
     @Import(name="notificationConfigId", required=true)
-    private String notificationConfigId;
+    private Output<String> notificationConfigId;
 
-    public String notificationConfigId() {
+    public Output<String> notificationConfigId() {
         return this.notificationConfigId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetNotificationConfigArgs extends com.pulumi.resources.Invoke
             $ = new GetNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder notificationConfigId(String notificationConfigId) {
+        public Builder notificationConfigId(Output<String> notificationConfigId) {
             $.notificationConfigId = notificationConfigId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder notificationConfigId(String notificationConfigId) {
+            return notificationConfigId(Output.of(notificationConfigId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetNotificationConfigArgs build() {

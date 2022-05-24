@@ -14,10 +14,10 @@ import com.pulumi.azure.monitoring.outputs.GetDiagnosticCategoriesResult;
 import com.pulumi.azure.monitoring.outputs.GetLogProfileResult;
 import com.pulumi.azure.monitoring.outputs.GetScheduledQueryRulesAlertResult;
 import com.pulumi.azure.monitoring.outputs.GetScheduledQueryRulesLogResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MonitoringFunctions {
     /**
@@ -49,7 +49,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActionGroupResult> getActionGroup(GetActionGroupArgs args) {
+    public static Output<GetActionGroupResult> getActionGroup(GetActionGroupArgs args) {
         return getActionGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetActionGroupResult> getActionGroup(GetActionGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:monitoring/getActionGroup:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActionGroupResult> getActionGroup(GetActionGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:monitoring/getActionGroup:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
@@ -116,7 +116,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiagnosticCategoriesResult> getDiagnosticCategories(GetDiagnosticCategoriesArgs args) {
+    public static Output<GetDiagnosticCategoriesResult> getDiagnosticCategories(GetDiagnosticCategoriesArgs args) {
         return getDiagnosticCategories(args, InvokeOptions.Empty);
     }
     /**
@@ -151,8 +151,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiagnosticCategoriesResult> getDiagnosticCategories(GetDiagnosticCategoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:monitoring/getDiagnosticCategories:getDiagnosticCategories", TypeShape.of(GetDiagnosticCategoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiagnosticCategoriesResult> getDiagnosticCategories(GetDiagnosticCategoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:monitoring/getDiagnosticCategories:getDiagnosticCategories", TypeShape.of(GetDiagnosticCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of a Log Profile.
@@ -182,7 +182,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogProfileResult> getLogProfile(GetLogProfileArgs args) {
+    public static Output<GetLogProfileResult> getLogProfile(GetLogProfileArgs args) {
         return getLogProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -213,8 +213,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLogProfileResult> getLogProfile(GetLogProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:monitoring/getLogProfile:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogProfileResult> getLogProfile(GetLogProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:monitoring/getLogProfile:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of an AlertingAction scheduled query rule.
@@ -245,7 +245,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs args) {
+    public static Output<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs args) {
         return getScheduledQueryRulesAlert(args, InvokeOptions.Empty);
     }
     /**
@@ -277,8 +277,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:monitoring/getScheduledQueryRulesAlert:getScheduledQueryRulesAlert", TypeShape.of(GetScheduledQueryRulesAlertResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:monitoring/getScheduledQueryRulesAlert:getScheduledQueryRulesAlert", TypeShape.of(GetScheduledQueryRulesAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of a LogToMetricAction scheduled query rule.
@@ -309,7 +309,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs args) {
+    public static Output<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs args) {
         return getScheduledQueryRulesLog(args, InvokeOptions.Empty);
     }
     /**
@@ -341,7 +341,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:monitoring/getScheduledQueryRulesLog:getScheduledQueryRulesLog", TypeShape.of(GetScheduledQueryRulesLogResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:monitoring/getScheduledQueryRulesLog:getScheduledQueryRulesLog", TypeShape.of(GetScheduledQueryRulesLogResult.class), args, Utilities.withVersion(options));
     }
 }

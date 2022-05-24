@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sqs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueUrl", required=true)
-    private String queueUrl;
+    private Output<String> queueUrl;
 
     /**
      * @return URL of the source queue.
      * 
      */
-    public String queueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -57,9 +58,19 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder queueUrl(String queueUrl) {
+        public Builder queueUrl(Output<String> queueUrl) {
             $.queueUrl = queueUrl;
             return this;
+        }
+
+        /**
+         * @param queueUrl URL of the source queue.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queueUrl(String queueUrl) {
+            return queueUrl(Output.of(queueUrl));
         }
 
         public GetQueueArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousPatchArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="autonomousPatchId", required=true)
-    private String autonomousPatchId;
+    private Output<String> autonomousPatchId;
 
     /**
      * @return The autonomous patch [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousPatchId() {
+    public Output<String> autonomousPatchId() {
         return this.autonomousPatchId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutonomousPatchArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder autonomousPatchId(String autonomousPatchId) {
+        public Builder autonomousPatchId(Output<String> autonomousPatchId) {
             $.autonomousPatchId = autonomousPatchId;
             return this;
+        }
+
+        /**
+         * @param autonomousPatchId The autonomous patch [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousPatchId(String autonomousPatchId) {
+            return autonomousPatchId(Output.of(autonomousPatchId));
         }
 
         public GetAutonomousPatchArgs build() {

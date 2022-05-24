@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Events.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleId", required=true)
-    private String ruleId;
+    private Output<String> ruleId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this rule.
      * 
      */
-    public String ruleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -57,9 +58,19 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ruleId(String ruleId) {
+        public Builder ruleId(Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
+        }
+
+        /**
+         * @param ruleId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
 
         public GetRuleArgs build() {

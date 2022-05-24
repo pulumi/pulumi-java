@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetPacketMirroringArgs extends com.pulumi.resources.InvokeArg
     public static final GetPacketMirroringArgs Empty = new GetPacketMirroringArgs();
 
     @Import(name="packetMirroring", required=true)
-    private String packetMirroring;
+    private Output<String> packetMirroring;
 
-    public String packetMirroring() {
+    public Output<String> packetMirroring() {
         return this.packetMirroring;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +61,31 @@ public final class GetPacketMirroringArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPacketMirroringArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder packetMirroring(String packetMirroring) {
+        public Builder packetMirroring(Output<String> packetMirroring) {
             $.packetMirroring = packetMirroring;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder packetMirroring(String packetMirroring) {
+            return packetMirroring(Output.of(packetMirroring));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetPacketMirroringArgs build() {

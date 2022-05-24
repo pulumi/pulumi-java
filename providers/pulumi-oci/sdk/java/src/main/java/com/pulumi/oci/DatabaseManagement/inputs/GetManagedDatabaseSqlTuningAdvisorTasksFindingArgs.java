@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="beginExecId")
-    private @Nullable String beginExecId;
+    private Output</* @Nullable */ String> beginExecId;
 
     /**
      * @return The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task.
      * 
      */
-    public Optional<String> beginExecId() {
-        return Optional.ofNullable(this.beginExecId);
+    public Output</* @Nullable */ String> beginExecId() {
+        return this.beginExecId;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="endExecId")
-    private @Nullable String endExecId;
+    private Output</* @Nullable */ String> endExecId;
 
     /**
      * @return The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task.
      * 
      */
-    public Optional<String> endExecId() {
-        return Optional.ofNullable(this.endExecId);
+    public Output</* @Nullable */ String> endExecId() {
+        return this.endExecId;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="findingFilter")
-    private @Nullable String findingFilter;
+    private Output</* @Nullable */ String> findingFilter;
 
     /**
      * @return The filter used to display specific findings in the report.
      * 
      */
-    public Optional<String> findingFilter() {
-        return Optional.ofNullable(this.findingFilter);
+    public Output</* @Nullable */ String> findingFilter() {
+        return this.findingFilter;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="indexHashFilter")
-    private @Nullable String indexHashFilter;
+    private Output</* @Nullable */ String> indexHashFilter;
 
     /**
      * @return The hash value of the index table name.
      * 
      */
-    public Optional<String> indexHashFilter() {
-        return Optional.ofNullable(this.indexHashFilter);
+    public Output</* @Nullable */ String> indexHashFilter() {
+        return this.indexHashFilter;
     }
 
     /**
@@ -79,13 +79,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -94,14 +94,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="searchPeriod")
-    private @Nullable String searchPeriod;
+    private Output</* @Nullable */ String> searchPeriod;
 
     /**
      * @return The search period during which the API will search for begin and end exec id, if not supplied. Unused if beginExecId and endExecId optional query params are both supplied.
      * 
      */
-    public Optional<String> searchPeriod() {
-        return Optional.ofNullable(this.searchPeriod);
+    public Output</* @Nullable */ String> searchPeriod() {
+        return this.searchPeriod;
     }
 
     /**
@@ -109,13 +109,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="sqlTuningAdvisorTaskId", required=true)
-    private String sqlTuningAdvisorTaskId;
+    private Output<String> sqlTuningAdvisorTaskId;
 
     /**
      * @return The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String sqlTuningAdvisorTaskId() {
+    public Output<String> sqlTuningAdvisorTaskId() {
         return this.sqlTuningAdvisorTaskId;
     }
 
@@ -124,14 +124,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
      * 
      */
     @Import(name="statsHashFilter")
-    private @Nullable String statsHashFilter;
+    private Output</* @Nullable */ String> statsHashFilter;
 
     /**
      * @return The hash value of the object for the statistic finding search.
      * 
      */
-    public Optional<String> statsHashFilter() {
-        return Optional.ofNullable(this.statsHashFilter);
+    public Output</* @Nullable */ String> statsHashFilter() {
+        return this.statsHashFilter;
     }
 
     private GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs() {}
@@ -171,8 +171,29 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * @return builder
          * 
          */
-        public Builder beginExecId(@Nullable String beginExecId) {
+        public Builder beginExecId(Output</* @Nullable */ String> beginExecId) {
             $.beginExecId = beginExecId;
+            return this;
+        }
+
+        /**
+         * @param beginExecId The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder beginExecId(@Nullable String beginExecId) {
+            return beginExecId(Output.of(beginExecId));
+        }
+
+        /**
+         * @param endExecId The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endExecId(Output</* @Nullable */ String> endExecId) {
+            $.endExecId = endExecId;
             return this;
         }
 
@@ -183,7 +204,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder endExecId(@Nullable String endExecId) {
-            $.endExecId = endExecId;
+            return endExecId(Output.of(endExecId));
+        }
+
+        /**
+         * @param findingFilter The filter used to display specific findings in the report.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder findingFilter(Output</* @Nullable */ String> findingFilter) {
+            $.findingFilter = findingFilter;
             return this;
         }
 
@@ -194,7 +225,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder findingFilter(@Nullable String findingFilter) {
-            $.findingFilter = findingFilter;
+            return findingFilter(Output.of(findingFilter));
+        }
+
+        /**
+         * @param indexHashFilter The hash value of the index table name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder indexHashFilter(Output</* @Nullable */ String> indexHashFilter) {
+            $.indexHashFilter = indexHashFilter;
             return this;
         }
 
@@ -205,7 +246,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder indexHashFilter(@Nullable String indexHashFilter) {
-            $.indexHashFilter = indexHashFilter;
+            return indexHashFilter(Output.of(indexHashFilter));
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
+            $.managedDatabaseId = managedDatabaseId;
             return this;
         }
 
@@ -216,7 +267,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder managedDatabaseId(String managedDatabaseId) {
-            $.managedDatabaseId = managedDatabaseId;
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param searchPeriod The search period during which the API will search for begin and end exec id, if not supplied. Unused if beginExecId and endExecId optional query params are both supplied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder searchPeriod(Output</* @Nullable */ String> searchPeriod) {
+            $.searchPeriod = searchPeriod;
             return this;
         }
 
@@ -227,7 +288,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder searchPeriod(@Nullable String searchPeriod) {
-            $.searchPeriod = searchPeriod;
+            return searchPeriod(Output.of(searchPeriod));
+        }
+
+        /**
+         * @param sqlTuningAdvisorTaskId The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlTuningAdvisorTaskId(Output<String> sqlTuningAdvisorTaskId) {
+            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
             return this;
         }
 
@@ -238,7 +309,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder sqlTuningAdvisorTaskId(String sqlTuningAdvisorTaskId) {
-            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
+            return sqlTuningAdvisorTaskId(Output.of(sqlTuningAdvisorTaskId));
+        }
+
+        /**
+         * @param statsHashFilter The hash value of the object for the statistic finding search.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statsHashFilter(Output</* @Nullable */ String> statsHashFilter) {
+            $.statsHashFilter = statsHashFilter;
             return this;
         }
 
@@ -249,8 +330,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs extends co
          * 
          */
         public Builder statsHashFilter(@Nullable String statsHashFilter) {
-            $.statsHashFilter = statsHashFilter;
-            return this;
+            return statsHashFilter(Output.of(statsHashFilter));
         }
 
         public GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs build() {

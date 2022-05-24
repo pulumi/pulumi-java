@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.intune.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="hostName", required=true)
-    private String hostName;
+    private Output<String> hostName;
 
     /**
      * @return Location hostName for the tenant
      * 
      */
-    public String hostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -34,13 +34,13 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="policyName", required=true)
-    private String policyName;
+    private Output<String> policyName;
 
     /**
      * @return Unique name for the policy
      * 
      */
-    public String policyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -49,14 +49,14 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="select")
-    private @Nullable String select;
+    private Output</* @Nullable */ String> select;
 
     /**
      * @return select specific fields in entity.
      * 
      */
-    public Optional<String> select() {
-        return Optional.ofNullable(this.select);
+    public Output</* @Nullable */ String> select() {
+        return this.select;
     }
 
     private GetAndroidMAMPolicyByNameArgs() {}
@@ -91,8 +91,29 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder hostName(String hostName) {
+        public Builder hostName(Output<String> hostName) {
             $.hostName = hostName;
+            return this;
+        }
+
+        /**
+         * @param hostName Location hostName for the tenant
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostName(String hostName) {
+            return hostName(Output.of(hostName));
+        }
+
+        /**
+         * @param policyName Unique name for the policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyName(Output<String> policyName) {
+            $.policyName = policyName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
          * 
          */
         public Builder policyName(String policyName) {
-            $.policyName = policyName;
+            return policyName(Output.of(policyName));
+        }
+
+        /**
+         * @param select select specific fields in entity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder select(Output</* @Nullable */ String> select) {
+            $.select = select;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetAndroidMAMPolicyByNameArgs extends com.pulumi.resources.In
          * 
          */
         public Builder select(@Nullable String select) {
-            $.select = select;
-            return this;
+            return select(Output.of(select));
         }
 
         public GetAndroidMAMPolicyByNameArgs build() {

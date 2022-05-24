@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Nosql;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.Nosql.outputs.GetIndexesResult;
 import com.pulumi.oci.Nosql.outputs.GetTableResult;
 import com.pulumi.oci.Nosql.outputs.GetTablesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class NosqlFunctions {
     /**
@@ -26,7 +26,7 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
+    public static Output<GetIndexResult> getIndex(GetIndexArgs args) {
         return getIndex(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Nosql/getIndex:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Nosql/getIndex:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Indexes in Oracle Cloud Infrastructure NoSQL Database service.
@@ -48,7 +48,7 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIndexesResult> getIndexes(GetIndexesArgs args) {
+    public static Output<GetIndexesResult> getIndexes(GetIndexesArgs args) {
         return getIndexes(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIndexesResult> getIndexes(GetIndexesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Nosql/getIndexes:getIndexes", TypeShape.of(GetIndexesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIndexesResult> getIndexes(GetIndexesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Nosql/getIndexes:getIndexes", TypeShape.of(GetIndexesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Table resource in Oracle Cloud Infrastructure NoSQL Database service.
@@ -70,7 +70,7 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Nosql/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Nosql/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Tables in Oracle Cloud Infrastructure NoSQL Database service.
@@ -92,7 +92,7 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTablesResult> getTables(GetTablesArgs args) {
+    public static Output<GetTablesResult> getTables(GetTablesArgs args) {
         return getTables(args, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public final class NosqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTablesResult> getTables(GetTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Nosql/getTables:getTables", TypeShape.of(GetTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTablesResult> getTables(GetTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Nosql/getTables:getTables", TypeShape.of(GetTablesResult.class), args, Utilities.withVersion(options));
     }
 }

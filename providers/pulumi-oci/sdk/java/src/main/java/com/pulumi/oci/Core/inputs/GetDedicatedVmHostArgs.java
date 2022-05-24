@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDedicatedVmHostArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dedicatedVmHostId", required=true)
-    private String dedicatedVmHostId;
+    private Output<String> dedicatedVmHostId;
 
     /**
      * @return The OCID of the dedicated VM host.
      * 
      */
-    public String dedicatedVmHostId() {
+    public Output<String> dedicatedVmHostId() {
         return this.dedicatedVmHostId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDedicatedVmHostArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dedicatedVmHostId(String dedicatedVmHostId) {
+        public Builder dedicatedVmHostId(Output<String> dedicatedVmHostId) {
             $.dedicatedVmHostId = dedicatedVmHostId;
             return this;
+        }
+
+        /**
+         * @param dedicatedVmHostId The OCID of the dedicated VM host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedVmHostId(String dedicatedVmHostId) {
+            return dedicatedVmHostId(Output.of(dedicatedVmHostId));
         }
 
         public GetDedicatedVmHostArgs build() {

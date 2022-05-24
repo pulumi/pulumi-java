@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateDnsZoneGroupName", required=true)
-    private String privateDnsZoneGroupName;
+    private Output<String> privateDnsZoneGroupName;
 
     /**
      * @return The name of the private dns zone group.
      * 
      */
-    public String privateDnsZoneGroupName() {
+    public Output<String> privateDnsZoneGroupName() {
         return this.privateDnsZoneGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateEndpointName", required=true)
-    private String privateEndpointName;
+    private Output<String> privateEndpointName;
 
     /**
      * @return The name of the private endpoint.
      * 
      */
-    public String privateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder privateDnsZoneGroupName(String privateDnsZoneGroupName) {
+        public Builder privateDnsZoneGroupName(Output<String> privateDnsZoneGroupName) {
             $.privateDnsZoneGroupName = privateDnsZoneGroupName;
+            return this;
+        }
+
+        /**
+         * @param privateDnsZoneGroupName The name of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateDnsZoneGroupName(String privateDnsZoneGroupName) {
+            return privateDnsZoneGroupName(Output.of(privateDnsZoneGroupName));
+        }
+
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointName(Output<String> privateEndpointName) {
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder privateEndpointName(String privateEndpointName) {
-            $.privateEndpointName = privateEndpointName;
+            return privateEndpointName(Output.of(privateEndpointName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateDnsZoneGroupArgs build() {

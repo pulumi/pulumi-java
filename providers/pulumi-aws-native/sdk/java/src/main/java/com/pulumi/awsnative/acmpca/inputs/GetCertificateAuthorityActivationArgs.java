@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.acmpca.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-    private String certificateAuthorityArn;
+    private Output<String> certificateAuthorityArn;
 
     /**
      * @return Arn of the Certificate Authority.
      * 
      */
-    public String certificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
+        }
+
+        /**
+         * @param certificateAuthorityArn Arn of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
+            return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
         public GetCertificateAuthorityActivationArgs build() {

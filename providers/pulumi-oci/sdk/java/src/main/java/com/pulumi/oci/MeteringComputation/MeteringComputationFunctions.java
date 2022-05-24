@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.MeteringComputation;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +18,6 @@ import com.pulumi.oci.MeteringComputation.outputs.GetCustomTablesResult;
 import com.pulumi.oci.MeteringComputation.outputs.GetQueriesResult;
 import com.pulumi.oci.MeteringComputation.outputs.GetQueryResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class MeteringComputationFunctions {
     /**
@@ -28,7 +28,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -39,8 +39,8 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:MeteringComputation/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Custom Table resource in Oracle Cloud Infrastructure Metering Computation service.
@@ -50,7 +50,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomTableResult> getCustomTable(GetCustomTableArgs args) {
+    public static Output<GetCustomTableResult> getCustomTable(GetCustomTableArgs args) {
         return getCustomTable(args, InvokeOptions.Empty);
     }
     /**
@@ -61,8 +61,8 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomTableResult> getCustomTable(GetCustomTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getCustomTable:getCustomTable", TypeShape.of(GetCustomTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomTableResult> getCustomTable(GetCustomTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:MeteringComputation/getCustomTable:getCustomTable", TypeShape.of(GetCustomTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Custom Tables in Oracle Cloud Infrastructure Metering Computation service.
@@ -72,7 +72,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args) {
+    public static Output<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args) {
         return getCustomTables(args, InvokeOptions.Empty);
     }
     /**
@@ -83,8 +83,8 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getCustomTables:getCustomTables", TypeShape.of(GetCustomTablesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomTablesResult> getCustomTables(GetCustomTablesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:MeteringComputation/getCustomTables:getCustomTables", TypeShape.of(GetCustomTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Queries in Oracle Cloud Infrastructure Metering Computation service.
@@ -94,7 +94,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueriesResult> getQueries(GetQueriesArgs args) {
+    public static Output<GetQueriesResult> getQueries(GetQueriesArgs args) {
         return getQueries(args, InvokeOptions.Empty);
     }
     /**
@@ -105,8 +105,8 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueriesResult> getQueries(GetQueriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getQueries:getQueries", TypeShape.of(GetQueriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueriesResult> getQueries(GetQueriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:MeteringComputation/getQueries:getQueries", TypeShape.of(GetQueriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Query resource in Oracle Cloud Infrastructure Metering Computation service.
@@ -116,7 +116,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {
+    public static Output<GetQueryResult> getQuery(GetQueryArgs args) {
         return getQuery(args, InvokeOptions.Empty);
     }
     /**
@@ -127,7 +127,7 @@ public final class MeteringComputationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:MeteringComputation/getQuery:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:MeteringComputation/getQuery:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
     }
 }

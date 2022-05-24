@@ -8,38 +8,38 @@ import com.pulumi.awsnative.aps.inputs.GetRuleGroupsNamespaceArgs;
 import com.pulumi.awsnative.aps.inputs.GetWorkspaceArgs;
 import com.pulumi.awsnative.aps.outputs.GetRuleGroupsNamespaceResult;
 import com.pulumi.awsnative.aps.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApsFunctions {
     /**
      * RuleGroupsNamespace schema for cloudformation.
      * 
      */
-    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args) {
+    public static Output<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args) {
         return getRuleGroupsNamespace(args, InvokeOptions.Empty);
     }
     /**
      * RuleGroupsNamespace schema for cloudformation.
      * 
      */
-    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::APS::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::APS::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

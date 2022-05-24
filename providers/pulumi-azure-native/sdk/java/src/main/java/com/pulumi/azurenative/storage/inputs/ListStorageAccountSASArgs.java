@@ -8,10 +8,10 @@ import com.pulumi.azurenative.storage.enums.Permissions;
 import com.pulumi.azurenative.storage.enums.Services;
 import com.pulumi.azurenative.storage.enums.SignedResourceTypes;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,13 +24,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -39,14 +39,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iPAddressOrRange")
-    private @Nullable String iPAddressOrRange;
+    private Output</* @Nullable */ String> iPAddressOrRange;
 
     /**
      * @return An IP address or a range of IP addresses from which to accept requests.
      * 
      */
-    public Optional<String> iPAddressOrRange() {
-        return Optional.ofNullable(this.iPAddressOrRange);
+    public Output</* @Nullable */ String> iPAddressOrRange() {
+        return this.iPAddressOrRange;
     }
 
     /**
@@ -54,14 +54,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyToSign")
-    private @Nullable String keyToSign;
+    private Output</* @Nullable */ String> keyToSign;
 
     /**
      * @return The key to sign the account SAS token with.
      * 
      */
-    public Optional<String> keyToSign() {
-        return Optional.ofNullable(this.keyToSign);
+    public Output</* @Nullable */ String> keyToSign() {
+        return this.keyToSign;
     }
 
     /**
@@ -69,13 +69,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions", required=true)
-    private Either<String,Permissions> permissions;
+    private Output<Either<String,Permissions>> permissions;
 
     /**
      * @return The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
      * 
      */
-    public Either<String,Permissions> permissions() {
+    public Output<Either<String,Permissions>> permissions() {
         return this.permissions;
     }
 
@@ -84,14 +84,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocols")
-    private @Nullable HttpProtocol protocols;
+    private Output</* @Nullable */ HttpProtocol> protocols;
 
     /**
      * @return The protocol permitted for a request made with the account SAS.
      * 
      */
-    public Optional<HttpProtocol> protocols() {
-        return Optional.ofNullable(this.protocols);
+    public Output</* @Nullable */ HttpProtocol> protocols() {
+        return this.protocols;
     }
 
     /**
@@ -99,13 +99,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,13 +114,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceTypes", required=true)
-    private Either<String,SignedResourceTypes> resourceTypes;
+    private Output<Either<String,SignedResourceTypes>> resourceTypes;
 
     /**
      * @return The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
      * 
      */
-    public Either<String,SignedResourceTypes> resourceTypes() {
+    public Output<Either<String,SignedResourceTypes>> resourceTypes() {
         return this.resourceTypes;
     }
 
@@ -129,13 +129,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="services", required=true)
-    private Either<String,Services> services;
+    private Output<Either<String,Services>> services;
 
     /**
      * @return The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
      * 
      */
-    public Either<String,Services> services() {
+    public Output<Either<String,Services>> services() {
         return this.services;
     }
 
@@ -144,13 +144,13 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sharedAccessExpiryTime", required=true)
-    private String sharedAccessExpiryTime;
+    private Output<String> sharedAccessExpiryTime;
 
     /**
      * @return The time at which the shared access signature becomes invalid.
      * 
      */
-    public String sharedAccessExpiryTime() {
+    public Output<String> sharedAccessExpiryTime() {
         return this.sharedAccessExpiryTime;
     }
 
@@ -159,14 +159,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sharedAccessStartTime")
-    private @Nullable String sharedAccessStartTime;
+    private Output</* @Nullable */ String> sharedAccessStartTime;
 
     /**
      * @return The time at which the SAS becomes valid.
      * 
      */
-    public Optional<String> sharedAccessStartTime() {
-        return Optional.ofNullable(this.sharedAccessStartTime);
+    public Output</* @Nullable */ String> sharedAccessStartTime() {
+        return this.sharedAccessStartTime;
     }
 
     private ListStorageAccountSASArgs() {}
@@ -208,8 +208,29 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param iPAddressOrRange An IP address or a range of IP addresses from which to accept requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iPAddressOrRange(Output</* @Nullable */ String> iPAddressOrRange) {
+            $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
 
@@ -220,7 +241,17 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
-            $.iPAddressOrRange = iPAddressOrRange;
+            return iPAddressOrRange(Output.of(iPAddressOrRange));
+        }
+
+        /**
+         * @param keyToSign The key to sign the account SAS token with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyToSign(Output</* @Nullable */ String> keyToSign) {
+            $.keyToSign = keyToSign;
             return this;
         }
 
@@ -231,7 +262,17 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder keyToSign(@Nullable String keyToSign) {
-            $.keyToSign = keyToSign;
+            return keyToSign(Output.of(keyToSign));
+        }
+
+        /**
+         * @param permissions The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(Output<Either<String,Permissions>> permissions) {
+            $.permissions = permissions;
             return this;
         }
 
@@ -242,8 +283,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder permissions(Either<String,Permissions> permissions) {
-            $.permissions = permissions;
-            return this;
+            return permissions(Output.of(permissions));
         }
 
         /**
@@ -272,8 +312,29 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder protocols(@Nullable HttpProtocol protocols) {
+        public Builder protocols(Output</* @Nullable */ HttpProtocol> protocols) {
             $.protocols = protocols;
+            return this;
+        }
+
+        /**
+         * @param protocols The protocol permitted for a request made with the account SAS.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocols(@Nullable HttpProtocol protocols) {
+            return protocols(Output.of(protocols));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -284,7 +345,17 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceTypes The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceTypes(Output<Either<String,SignedResourceTypes>> resourceTypes) {
+            $.resourceTypes = resourceTypes;
             return this;
         }
 
@@ -295,8 +366,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceTypes(Either<String,SignedResourceTypes> resourceTypes) {
-            $.resourceTypes = resourceTypes;
-            return this;
+            return resourceTypes(Output.of(resourceTypes));
         }
 
         /**
@@ -325,9 +395,19 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder services(Either<String,Services> services) {
+        public Builder services(Output<Either<String,Services>> services) {
             $.services = services;
             return this;
+        }
+
+        /**
+         * @param services The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder services(Either<String,Services> services) {
+            return services(Output.of(services));
         }
 
         /**
@@ -356,8 +436,29 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
+        public Builder sharedAccessExpiryTime(Output<String> sharedAccessExpiryTime) {
             $.sharedAccessExpiryTime = sharedAccessExpiryTime;
+            return this;
+        }
+
+        /**
+         * @param sharedAccessExpiryTime The time at which the shared access signature becomes invalid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
+            return sharedAccessExpiryTime(Output.of(sharedAccessExpiryTime));
+        }
+
+        /**
+         * @param sharedAccessStartTime The time at which the SAS becomes valid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedAccessStartTime(Output</* @Nullable */ String> sharedAccessStartTime) {
+            $.sharedAccessStartTime = sharedAccessStartTime;
             return this;
         }
 
@@ -368,8 +469,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
-            $.sharedAccessStartTime = sharedAccessStartTime;
-            return this;
+            return sharedAccessStartTime(Output.of(sharedAccessStartTime));
         }
 
         public ListStorageAccountSASArgs build() {

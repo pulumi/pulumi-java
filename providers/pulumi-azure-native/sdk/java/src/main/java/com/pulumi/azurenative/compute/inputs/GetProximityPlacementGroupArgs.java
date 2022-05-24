@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="includeColocationStatus")
-    private @Nullable String includeColocationStatus;
+    private Output</* @Nullable */ String> includeColocationStatus;
 
     /**
      * @return includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
      * 
      */
-    public Optional<String> includeColocationStatus() {
-        return Optional.ofNullable(this.includeColocationStatus);
+    public Output</* @Nullable */ String> includeColocationStatus() {
+        return this.includeColocationStatus;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="proximityPlacementGroupName", required=true)
-    private String proximityPlacementGroupName;
+    private Output<String> proximityPlacementGroupName;
 
     /**
      * @return The name of the proximity placement group.
      * 
      */
-    public String proximityPlacementGroupName() {
+    public Output<String> proximityPlacementGroupName() {
         return this.proximityPlacementGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder includeColocationStatus(@Nullable String includeColocationStatus) {
+        public Builder includeColocationStatus(Output</* @Nullable */ String> includeColocationStatus) {
             $.includeColocationStatus = includeColocationStatus;
+            return this;
+        }
+
+        /**
+         * @param includeColocationStatus includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeColocationStatus(@Nullable String includeColocationStatus) {
+            return includeColocationStatus(Output.of(includeColocationStatus));
+        }
+
+        /**
+         * @param proximityPlacementGroupName The name of the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder proximityPlacementGroupName(Output<String> proximityPlacementGroupName) {
+            $.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
          * 
          */
         public Builder proximityPlacementGroupName(String proximityPlacementGroupName) {
-            $.proximityPlacementGroupName = proximityPlacementGroupName;
+            return proximityPlacementGroupName(Output.of(proximityPlacementGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetProximityPlacementGroupArgs build() {

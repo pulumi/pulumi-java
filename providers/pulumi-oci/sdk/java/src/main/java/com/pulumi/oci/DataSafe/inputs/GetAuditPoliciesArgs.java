@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetAuditPoliciesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private Output</* @Nullable */ String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
-        return Optional.ofNullable(this.accessLevel);
+    public Output</* @Nullable */ String> accessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="auditPolicyId")
-    private @Nullable String auditPolicyId;
+    private Output</* @Nullable */ String> auditPolicyId;
 
     /**
      * @return An optional filter to return only resources that match the specified id.
      * 
      */
-    public Optional<String> auditPolicyId() {
-        return Optional.ofNullable(this.auditPolicyId);
+    public Output</* @Nullable */ String> auditPolicyId() {
+        return this.auditPolicyId;
     }
 
     /**
@@ -52,13 +52,13 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -67,14 +67,14 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -82,21 +82,21 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAuditPoliciesFilter> filters;
+    private Output</* @Nullable */ List<GetAuditPoliciesFilter>> filters;
 
-    public Optional<List<GetAuditPoliciesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAuditPoliciesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The current state of the audit policy.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetId")
-    private @Nullable String targetId;
+    private Output</* @Nullable */ String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Optional<String> targetId() {
-        return Optional.ofNullable(this.targetId);
+    public Output</* @Nullable */ String> targetId() {
+        return this.targetId;
     }
 
     private GetAuditPoliciesArgs() {}
@@ -166,8 +166,29 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(@Nullable String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param auditPolicyId An optional filter to return only resources that match the specified id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditPolicyId(Output</* @Nullable */ String> auditPolicyId) {
+            $.auditPolicyId = auditPolicyId;
             return this;
         }
 
@@ -178,7 +199,17 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder auditPolicyId(@Nullable String auditPolicyId) {
-            $.auditPolicyId = auditPolicyId;
+            return auditPolicyId(Output.of(auditPolicyId));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -189,7 +220,17 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -200,7 +241,17 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -211,13 +262,16 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAuditPoliciesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAuditPoliciesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAuditPoliciesFilter... filters) {
@@ -230,8 +284,29 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state The current state of the audit policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param targetId A filter to return only items related to a specific target OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(Output</* @Nullable */ String> targetId) {
+            $.targetId = targetId;
             return this;
         }
 
@@ -242,8 +317,7 @@ public final class GetAuditPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder targetId(@Nullable String targetId) {
-            $.targetId = targetId;
-            return this;
+            return targetId(Output.of(targetId));
         }
 
         public GetAuditPoliciesArgs build() {

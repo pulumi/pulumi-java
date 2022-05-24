@@ -10,10 +10,10 @@ import com.pulumi.azurenative.maintenance.inputs.GetMaintenanceConfigurationArgs
 import com.pulumi.azurenative.maintenance.outputs.GetConfigurationAssignmentParentResult;
 import com.pulumi.azurenative.maintenance.outputs.GetConfigurationAssignmentResult;
 import com.pulumi.azurenative.maintenance.outputs.GetMaintenanceConfigurationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MaintenanceFunctions {
     /**
@@ -21,7 +21,7 @@ public final class MaintenanceFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationAssignmentResult> getConfigurationAssignment(GetConfigurationAssignmentArgs args) {
+    public static Output<GetConfigurationAssignmentResult> getConfigurationAssignment(GetConfigurationAssignmentArgs args) {
         return getConfigurationAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class MaintenanceFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationAssignmentResult> getConfigurationAssignment(GetConfigurationAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:maintenance:getConfigurationAssignment", TypeShape.of(GetConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationAssignmentResult> getConfigurationAssignment(GetConfigurationAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:maintenance:getConfigurationAssignment", TypeShape.of(GetConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Configuration Assignment
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationAssignmentParentResult> getConfigurationAssignmentParent(GetConfigurationAssignmentParentArgs args) {
+    public static Output<GetConfigurationAssignmentParentResult> getConfigurationAssignmentParent(GetConfigurationAssignmentParentArgs args) {
         return getConfigurationAssignmentParent(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class MaintenanceFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationAssignmentParentResult> getConfigurationAssignmentParent(GetConfigurationAssignmentParentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:maintenance:getConfigurationAssignmentParent", TypeShape.of(GetConfigurationAssignmentParentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationAssignmentParentResult> getConfigurationAssignmentParent(GetConfigurationAssignmentParentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:maintenance:getConfigurationAssignmentParent", TypeShape.of(GetConfigurationAssignmentParentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Maintenance configuration record type
      * API Version: 2020-04-01.
      * 
      */
-    public static CompletableFuture<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args) {
+    public static Output<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args) {
         return getMaintenanceConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class MaintenanceFunctions {
      * API Version: 2020-04-01.
      * 
      */
-    public static CompletableFuture<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:maintenance:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMaintenanceConfigurationResult> getMaintenanceConfiguration(GetMaintenanceConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:maintenance:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

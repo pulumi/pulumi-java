@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="gatewayId", required=true)
-    private String gatewayId;
+    private Output<String> gatewayId;
 
     /**
      * @return The ID of the gateway.
      * 
      */
-    public String gatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -57,9 +58,19 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder gatewayId(String gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
+        }
+
+        /**
+         * @param gatewayId The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
 
         public GetGatewayRouteTableAssociationArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetUptimeCheckConfigArgs extends com.pulumi.resources.InvokeA
     public static final GetUptimeCheckConfigArgs Empty = new GetUptimeCheckConfigArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="uptimeCheckConfigId", required=true)
-    private String uptimeCheckConfigId;
+    private Output<String> uptimeCheckConfigId;
 
-    public String uptimeCheckConfigId() {
+    public Output<String> uptimeCheckConfigId() {
         return this.uptimeCheckConfigId;
     }
 
@@ -53,14 +53,22 @@ public final class GetUptimeCheckConfigArgs extends com.pulumi.resources.InvokeA
             $ = new GetUptimeCheckConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder uptimeCheckConfigId(String uptimeCheckConfigId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder uptimeCheckConfigId(Output<String> uptimeCheckConfigId) {
             $.uptimeCheckConfigId = uptimeCheckConfigId;
             return this;
+        }
+
+        public Builder uptimeCheckConfigId(String uptimeCheckConfigId) {
+            return uptimeCheckConfigId(Output.of(uptimeCheckConfigId));
         }
 
         public GetUptimeCheckConfigArgs build() {

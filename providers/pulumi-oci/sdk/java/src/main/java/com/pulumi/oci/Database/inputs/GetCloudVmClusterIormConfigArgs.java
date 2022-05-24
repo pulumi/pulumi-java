@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCloudVmClusterIormConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudVmClusterId", required=true)
-    private String cloudVmClusterId;
+    private Output<String> cloudVmClusterId;
 
     /**
      * @return The cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String cloudVmClusterId() {
+    public Output<String> cloudVmClusterId() {
         return this.cloudVmClusterId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCloudVmClusterIormConfigArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder cloudVmClusterId(String cloudVmClusterId) {
+        public Builder cloudVmClusterId(Output<String> cloudVmClusterId) {
             $.cloudVmClusterId = cloudVmClusterId;
             return this;
+        }
+
+        /**
+         * @param cloudVmClusterId The cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudVmClusterId(String cloudVmClusterId) {
+            return cloudVmClusterId(Output.of(cloudVmClusterId));
         }
 
         public GetCloudVmClusterIormConfigArgs build() {

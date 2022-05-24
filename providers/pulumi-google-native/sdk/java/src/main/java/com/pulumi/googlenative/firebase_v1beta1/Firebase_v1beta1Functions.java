@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firebase_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,49 +14,48 @@ import com.pulumi.googlenative.firebase_v1beta1.inputs.GetWebAppArgs;
 import com.pulumi.googlenative.firebase_v1beta1.outputs.GetAndroidAppResult;
 import com.pulumi.googlenative.firebase_v1beta1.outputs.GetIosAppResult;
 import com.pulumi.googlenative.firebase_v1beta1.outputs.GetWebAppResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Firebase_v1beta1Functions {
     /**
      * Gets the specified AndroidApp.
      * 
      */
-    public static CompletableFuture<GetAndroidAppResult> getAndroidApp(GetAndroidAppArgs args) {
+    public static Output<GetAndroidAppResult> getAndroidApp(GetAndroidAppArgs args) {
         return getAndroidApp(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified AndroidApp.
      * 
      */
-    public static CompletableFuture<GetAndroidAppResult> getAndroidApp(GetAndroidAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getAndroidApp", TypeShape.of(GetAndroidAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAndroidAppResult> getAndroidApp(GetAndroidAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:firebase/v1beta1:getAndroidApp", TypeShape.of(GetAndroidAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified IosApp.
      * 
      */
-    public static CompletableFuture<GetIosAppResult> getIosApp(GetIosAppArgs args) {
+    public static Output<GetIosAppResult> getIosApp(GetIosAppArgs args) {
         return getIosApp(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified IosApp.
      * 
      */
-    public static CompletableFuture<GetIosAppResult> getIosApp(GetIosAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getIosApp", TypeShape.of(GetIosAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIosAppResult> getIosApp(GetIosAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:firebase/v1beta1:getIosApp", TypeShape.of(GetIosAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified WebApp.
      * 
      */
-    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args) {
+    public static Output<GetWebAppResult> getWebApp(GetWebAppArgs args) {
         return getWebApp(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified WebApp.
      * 
      */
-    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:firebase/v1beta1:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
 }

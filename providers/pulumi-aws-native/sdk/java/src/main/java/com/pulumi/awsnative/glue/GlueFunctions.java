@@ -12,66 +12,66 @@ import com.pulumi.awsnative.glue.outputs.GetRegistryResult;
 import com.pulumi.awsnative.glue.outputs.GetSchemaResult;
 import com.pulumi.awsnative.glue.outputs.GetSchemaVersionMetadataResult;
 import com.pulumi.awsnative.glue.outputs.GetSchemaVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GlueFunctions {
     /**
      * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args) {
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args) {
         return getRegistry(args, InvokeOptions.Empty);
     }
     /**
      * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:glue:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:glue:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource represents a schema of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args) {
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args) {
         return getSchema(args, InvokeOptions.Empty);
     }
     /**
      * This resource represents a schema of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:glue:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:glue:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource represents an individual schema version of a schema defined in Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaVersionResult> getSchemaVersion(GetSchemaVersionArgs args) {
+    public static Output<GetSchemaVersionResult> getSchemaVersion(GetSchemaVersionArgs args) {
         return getSchemaVersion(args, InvokeOptions.Empty);
     }
     /**
      * This resource represents an individual schema version of a schema defined in Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaVersionResult> getSchemaVersion(GetSchemaVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:glue:getSchemaVersion", TypeShape.of(GetSchemaVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaVersionResult> getSchemaVersion(GetSchemaVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:glue:getSchemaVersion", TypeShape.of(GetSchemaVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaVersionMetadataResult> getSchemaVersionMetadata(GetSchemaVersionMetadataArgs args) {
+    public static Output<GetSchemaVersionMetadataResult> getSchemaVersionMetadata(GetSchemaVersionMetadataArgs args) {
         return getSchemaVersionMetadata(args, InvokeOptions.Empty);
     }
     /**
      * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
      * 
      */
-    public static CompletableFuture<GetSchemaVersionMetadataResult> getSchemaVersionMetadata(GetSchemaVersionMetadataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:glue:getSchemaVersionMetadata", TypeShape.of(GetSchemaVersionMetadataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaVersionMetadataResult> getSchemaVersionMetadata(GetSchemaVersionMetadataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:glue:getSchemaVersionMetadata", TypeShape.of(GetSchemaVersionMetadataResult.class), args, Utilities.withVersion(options));
     }
 }

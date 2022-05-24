@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.scvmm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="virtualMachineName", required=true)
-    private String virtualMachineName;
+    private Output<String> virtualMachineName;
 
     /**
      * @return Name of the VirtualMachine.
      * 
      */
-    public String virtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualMachineName Name of the VirtualMachine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualMachineName(Output<String> virtualMachineName) {
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder virtualMachineName(String virtualMachineName) {
-            $.virtualMachineName = virtualMachineName;
-            return this;
+            return virtualMachineName(Output.of(virtualMachineName));
         }
 
         public GetVirtualMachineArgs build() {

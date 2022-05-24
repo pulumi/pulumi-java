@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,77 +18,76 @@ import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GetDatasetResult;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GetEvaluationJobResult;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GetFeedbackMessageResult;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GetInstructionResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Datalabeling_v1beta1Functions {
     /**
      * Gets an annotation spec set by resource name.
      * 
      */
-    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args) {
+    public static Output<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args) {
         return getAnnotationSpecSet(args, InvokeOptions.Empty);
     }
     /**
      * Gets an annotation spec set by resource name.
      * 
      */
-    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getAnnotationSpecSet", TypeShape.of(GetAnnotationSpecSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datalabeling/v1beta1:getAnnotationSpecSet", TypeShape.of(GetAnnotationSpecSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets dataset by resource name.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
     /**
      * Gets dataset by resource name.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datalabeling/v1beta1:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an evaluation job by resource name.
      * 
      */
-    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args) {
+    public static Output<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args) {
         return getEvaluationJob(args, InvokeOptions.Empty);
     }
     /**
      * Gets an evaluation job by resource name.
      * 
      */
-    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getEvaluationJob", TypeShape.of(GetEvaluationJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datalabeling/v1beta1:getEvaluationJob", TypeShape.of(GetEvaluationJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a FeedbackMessage object.
      * 
      */
-    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args) {
+    public static Output<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args) {
         return getFeedbackMessage(args, InvokeOptions.Empty);
     }
     /**
      * Get a FeedbackMessage object.
      * 
      */
-    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getFeedbackMessage", TypeShape.of(GetFeedbackMessageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datalabeling/v1beta1:getFeedbackMessage", TypeShape.of(GetFeedbackMessageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an instruction by resource name.
      * 
      */
-    public static CompletableFuture<GetInstructionResult> getInstruction(GetInstructionArgs args) {
+    public static Output<GetInstructionResult> getInstruction(GetInstructionArgs args) {
         return getInstruction(args, InvokeOptions.Empty);
     }
     /**
      * Gets an instruction by resource name.
      * 
      */
-    public static CompletableFuture<GetInstructionResult> getInstruction(GetInstructionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getInstruction", TypeShape.of(GetInstructionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstructionResult> getInstruction(GetInstructionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datalabeling/v1beta1:getInstruction", TypeShape.of(GetInstructionResult.class), args, Utilities.withVersion(options));
     }
 }

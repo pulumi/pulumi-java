@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetSecurityAssessmentsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private Output</* @Nullable */ String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
-        return Optional.ofNullable(this.accessLevel);
+    public Output</* @Nullable */ String> accessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,14 +52,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -67,21 +67,21 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSecurityAssessmentsFilter> filters;
+    private Output</* @Nullable */ List<GetSecurityAssessmentsFilter>> filters;
 
-    public Optional<List<GetSecurityAssessmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSecurityAssessmentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isBaseline")
-    private @Nullable Boolean isBaseline;
+    private Output</* @Nullable */ Boolean> isBaseline;
 
     /**
      * @return A filter to return only security assessments that are set as baseline.
      * 
      */
-    public Optional<Boolean> isBaseline() {
-        return Optional.ofNullable(this.isBaseline);
+    public Output</* @Nullable */ Boolean> isBaseline() {
+        return this.isBaseline;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isScheduleAssessment")
-    private @Nullable Boolean isScheduleAssessment;
+    private Output</* @Nullable */ Boolean> isScheduleAssessment;
 
     /**
      * @return A filter to return only security assessments of type save schedule.
      * 
      */
-    public Optional<Boolean> isScheduleAssessment() {
-        return Optional.ofNullable(this.isScheduleAssessment);
+    public Output</* @Nullable */ Boolean> isScheduleAssessment() {
+        return this.isScheduleAssessment;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scheduleAssessmentId")
-    private @Nullable String scheduleAssessmentId;
+    private Output</* @Nullable */ String> scheduleAssessmentId;
 
     /**
      * @return The OCID of the security assessment of type SAVE_SCHEDULE.
      * 
      */
-    public Optional<String> scheduleAssessmentId() {
-        return Optional.ofNullable(this.scheduleAssessmentId);
+    public Output</* @Nullable */ String> scheduleAssessmentId() {
+        return this.scheduleAssessmentId;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetId")
-    private @Nullable String targetId;
+    private Output</* @Nullable */ String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Optional<String> targetId() {
-        return Optional.ofNullable(this.targetId);
+    public Output</* @Nullable */ String> targetId() {
+        return this.targetId;
     }
 
     /**
@@ -164,14 +164,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
+    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
+        return this.timeCreatedGreaterThanOrEqualTo;
     }
 
     /**
@@ -179,14 +179,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private Output</* @Nullable */ String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
-        return Optional.ofNullable(this.timeCreatedLessThan);
+    public Output</* @Nullable */ String> timeCreatedLessThan() {
+        return this.timeCreatedLessThan;
     }
 
     /**
@@ -194,14 +194,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="triggeredBy")
-    private @Nullable String triggeredBy;
+    private Output</* @Nullable */ String> triggeredBy;
 
     /**
      * @return A filter to return only security asessments that were created by either user or system.
      * 
      */
-    public Optional<String> triggeredBy() {
-        return Optional.ofNullable(this.triggeredBy);
+    public Output</* @Nullable */ String> triggeredBy() {
+        return this.triggeredBy;
     }
 
     /**
@@ -209,14 +209,14 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return A filter to return only items that match the specified security assessment type.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetSecurityAssessmentsArgs() {}
@@ -262,8 +262,29 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(@Nullable String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -274,7 +295,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -285,7 +316,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -296,13 +337,16 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetSecurityAssessmentsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetSecurityAssessmentsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSecurityAssessmentsFilter... filters) {
@@ -315,8 +359,29 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder isBaseline(@Nullable Boolean isBaseline) {
+        public Builder isBaseline(Output</* @Nullable */ Boolean> isBaseline) {
             $.isBaseline = isBaseline;
+            return this;
+        }
+
+        /**
+         * @param isBaseline A filter to return only security assessments that are set as baseline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isBaseline(@Nullable Boolean isBaseline) {
+            return isBaseline(Output.of(isBaseline));
+        }
+
+        /**
+         * @param isScheduleAssessment A filter to return only security assessments of type save schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isScheduleAssessment(Output</* @Nullable */ Boolean> isScheduleAssessment) {
+            $.isScheduleAssessment = isScheduleAssessment;
             return this;
         }
 
@@ -327,7 +392,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder isScheduleAssessment(@Nullable Boolean isScheduleAssessment) {
-            $.isScheduleAssessment = isScheduleAssessment;
+            return isScheduleAssessment(Output.of(isScheduleAssessment));
+        }
+
+        /**
+         * @param scheduleAssessmentId The OCID of the security assessment of type SAVE_SCHEDULE.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduleAssessmentId(Output</* @Nullable */ String> scheduleAssessmentId) {
+            $.scheduleAssessmentId = scheduleAssessmentId;
             return this;
         }
 
@@ -338,7 +413,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder scheduleAssessmentId(@Nullable String scheduleAssessmentId) {
-            $.scheduleAssessmentId = scheduleAssessmentId;
+            return scheduleAssessmentId(Output.of(scheduleAssessmentId));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the specified lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -349,7 +434,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param targetId A filter to return only items related to a specific target OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(Output</* @Nullable */ String> targetId) {
+            $.targetId = targetId;
             return this;
         }
 
@@ -360,7 +455,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder targetId(@Nullable String targetId) {
-            $.targetId = targetId;
+            return targetId(Output.of(targetId));
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -371,7 +476,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
-            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -382,7 +497,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
+        }
+
+        /**
+         * @param triggeredBy A filter to return only security asessments that were created by either user or system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder triggeredBy(Output</* @Nullable */ String> triggeredBy) {
+            $.triggeredBy = triggeredBy;
             return this;
         }
 
@@ -393,7 +518,17 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder triggeredBy(@Nullable String triggeredBy) {
-            $.triggeredBy = triggeredBy;
+            return triggeredBy(Output.of(triggeredBy));
+        }
+
+        /**
+         * @param type A filter to return only items that match the specified security assessment type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -404,8 +539,7 @@ public final class GetSecurityAssessmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetSecurityAssessmentsArgs build() {

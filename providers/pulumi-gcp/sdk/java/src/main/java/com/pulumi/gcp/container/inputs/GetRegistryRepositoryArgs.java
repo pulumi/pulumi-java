@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.container.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetRegistryRepositoryArgs extends com.pulumi.resources.Invoke
     public static final GetRegistryRepositoryArgs Empty = new GetRegistryRepositoryArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     private GetRegistryRepositoryArgs() {}
@@ -53,14 +53,22 @@ public final class GetRegistryRepositoryArgs extends com.pulumi.resources.Invoke
             $ = new GetRegistryRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output</* @Nullable */ String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(@Nullable String region) {
+            return region(Output.of(region));
         }
 
         public GetRegistryRepositoryArgs build() {

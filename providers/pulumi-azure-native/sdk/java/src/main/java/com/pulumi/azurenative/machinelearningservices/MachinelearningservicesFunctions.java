@@ -78,10 +78,10 @@ import com.pulumi.azurenative.machinelearningservices.outputs.ListOnlineEndpoint
 import com.pulumi.azurenative.machinelearningservices.outputs.ListStorageAccountKeysResult;
 import com.pulumi.azurenative.machinelearningservices.outputs.ListWorkspaceKeysResult;
 import com.pulumi.azurenative.machinelearningservices.outputs.ListWorkspaceNotebookAccessTokenResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MachinelearningservicesFunctions {
     /**
@@ -89,7 +89,7 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetACIServiceResult> getACIService(GetACIServiceArgs args) {
+    public static Output<GetACIServiceResult> getACIService(GetACIServiceArgs args) {
         return getACIService(args, InvokeOptions.Empty);
     }
     /**
@@ -97,15 +97,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetACIServiceResult> getACIService(GetACIServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getACIService", TypeShape.of(GetACIServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetACIServiceResult> getACIService(GetACIServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getACIService", TypeShape.of(GetACIServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning service object wrapped into ARM resource envelope.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAKSServiceResult> getAKSService(GetAKSServiceArgs args) {
+    public static Output<GetAKSServiceResult> getAKSService(GetAKSServiceArgs args) {
         return getAKSService(args, InvokeOptions.Empty);
     }
     /**
@@ -113,43 +113,43 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAKSServiceResult> getAKSService(GetAKSServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getAKSService", TypeShape.of(GetAKSServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAKSServiceResult> getAKSService(GetAKSServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getAKSService", TypeShape.of(GetAKSServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetBatchDeploymentResult> getBatchDeployment(GetBatchDeploymentArgs args) {
+    public static Output<GetBatchDeploymentResult> getBatchDeployment(GetBatchDeploymentArgs args) {
         return getBatchDeployment(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetBatchDeploymentResult> getBatchDeployment(GetBatchDeploymentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getBatchDeployment", TypeShape.of(GetBatchDeploymentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBatchDeploymentResult> getBatchDeployment(GetBatchDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getBatchDeployment", TypeShape.of(GetBatchDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetBatchEndpointResult> getBatchEndpoint(GetBatchEndpointArgs args) {
+    public static Output<GetBatchEndpointResult> getBatchEndpoint(GetBatchEndpointArgs args) {
         return getBatchEndpoint(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetBatchEndpointResult> getBatchEndpoint(GetBatchEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getBatchEndpoint", TypeShape.of(GetBatchEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBatchEndpointResult> getBatchEndpoint(GetBatchEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getBatchEndpoint", TypeShape.of(GetBatchEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCodeContainerResult> getCodeContainer(GetCodeContainerArgs args) {
+    public static Output<GetCodeContainerResult> getCodeContainer(GetCodeContainerArgs args) {
         return getCodeContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -157,15 +157,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCodeContainerResult> getCodeContainer(GetCodeContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getCodeContainer", TypeShape.of(GetCodeContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCodeContainerResult> getCodeContainer(GetCodeContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getCodeContainer", TypeShape.of(GetCodeContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCodeVersionResult> getCodeVersion(GetCodeVersionArgs args) {
+    public static Output<GetCodeVersionResult> getCodeVersion(GetCodeVersionArgs args) {
         return getCodeVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -173,15 +173,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCodeVersionResult> getCodeVersion(GetCodeVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getCodeVersion", TypeShape.of(GetCodeVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCodeVersionResult> getCodeVersion(GetCodeVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getCodeVersion", TypeShape.of(GetCodeVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataContainerResult> getDataContainer(GetDataContainerArgs args) {
+    public static Output<GetDataContainerResult> getDataContainer(GetDataContainerArgs args) {
         return getDataContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -189,15 +189,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataContainerResult> getDataContainer(GetDataContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getDataContainer", TypeShape.of(GetDataContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataContainerResult> getDataContainer(GetDataContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getDataContainer", TypeShape.of(GetDataContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataVersionResult> getDataVersion(GetDataVersionArgs args) {
+    public static Output<GetDataVersionResult> getDataVersion(GetDataVersionArgs args) {
         return getDataVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -205,15 +205,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataVersionResult> getDataVersion(GetDataVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getDataVersion", TypeShape.of(GetDataVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataVersionResult> getDataVersion(GetDataVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getDataVersion", TypeShape.of(GetDataVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning service object wrapped into ARM resource envelope.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEndpointVariantResult> getEndpointVariant(GetEndpointVariantArgs args) {
+    public static Output<GetEndpointVariantResult> getEndpointVariant(GetEndpointVariantArgs args) {
         return getEndpointVariant(args, InvokeOptions.Empty);
     }
     /**
@@ -221,15 +221,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEndpointVariantResult> getEndpointVariant(GetEndpointVariantArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getEndpointVariant", TypeShape.of(GetEndpointVariantResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointVariantResult> getEndpointVariant(GetEndpointVariantArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getEndpointVariant", TypeShape.of(GetEndpointVariantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnvironmentContainerResult> getEnvironmentContainer(GetEnvironmentContainerArgs args) {
+    public static Output<GetEnvironmentContainerResult> getEnvironmentContainer(GetEnvironmentContainerArgs args) {
         return getEnvironmentContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -237,15 +237,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnvironmentContainerResult> getEnvironmentContainer(GetEnvironmentContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getEnvironmentContainer", TypeShape.of(GetEnvironmentContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnvironmentContainerResult> getEnvironmentContainer(GetEnvironmentContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getEnvironmentContainer", TypeShape.of(GetEnvironmentContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnvironmentSpecificationVersionResult> getEnvironmentSpecificationVersion(GetEnvironmentSpecificationVersionArgs args) {
+    public static Output<GetEnvironmentSpecificationVersionResult> getEnvironmentSpecificationVersion(GetEnvironmentSpecificationVersionArgs args) {
         return getEnvironmentSpecificationVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -253,15 +253,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnvironmentSpecificationVersionResult> getEnvironmentSpecificationVersion(GetEnvironmentSpecificationVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getEnvironmentSpecificationVersion", TypeShape.of(GetEnvironmentSpecificationVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnvironmentSpecificationVersionResult> getEnvironmentSpecificationVersion(GetEnvironmentSpecificationVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getEnvironmentSpecificationVersion", TypeShape.of(GetEnvironmentSpecificationVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
@@ -269,15 +269,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning labeling job object wrapped into ARM resource envelope.
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetLabelingJobResult> getLabelingJob(GetLabelingJobArgs args) {
+    public static Output<GetLabelingJobResult> getLabelingJob(GetLabelingJobArgs args) {
         return getLabelingJob(args, InvokeOptions.Empty);
     }
     /**
@@ -285,15 +285,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetLabelingJobResult> getLabelingJob(GetLabelingJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLabelingJob", TypeShape.of(GetLabelingJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLabelingJobResult> getLabelingJob(GetLabelingJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getLabelingJob", TypeShape.of(GetLabelingJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Linked service.
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
+    public static Output<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
         return getLinkedService(args, InvokeOptions.Empty);
     }
     /**
@@ -301,15 +301,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Linked workspace.
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetLinkedWorkspaceResult> getLinkedWorkspace(GetLinkedWorkspaceArgs args) {
+    public static Output<GetLinkedWorkspaceResult> getLinkedWorkspace(GetLinkedWorkspaceArgs args) {
         return getLinkedWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -317,15 +317,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetLinkedWorkspaceResult> getLinkedWorkspace(GetLinkedWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLinkedWorkspace", TypeShape.of(GetLinkedWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkedWorkspaceResult> getLinkedWorkspace(GetLinkedWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getLinkedWorkspace", TypeShape.of(GetLinkedWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning compute object wrapped into ARM resource envelope.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetMachineLearningComputeResult> getMachineLearningCompute(GetMachineLearningComputeArgs args) {
+    public static Output<GetMachineLearningComputeResult> getMachineLearningCompute(GetMachineLearningComputeArgs args) {
         return getMachineLearningCompute(args, InvokeOptions.Empty);
     }
     /**
@@ -333,15 +333,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetMachineLearningComputeResult> getMachineLearningCompute(GetMachineLearningComputeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningCompute", TypeShape.of(GetMachineLearningComputeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineLearningComputeResult> getMachineLearningCompute(GetMachineLearningComputeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getMachineLearningCompute", TypeShape.of(GetMachineLearningComputeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning dataset object wrapped into ARM resource envelope.
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineLearningDatasetResult> getMachineLearningDataset(GetMachineLearningDatasetArgs args) {
+    public static Output<GetMachineLearningDatasetResult> getMachineLearningDataset(GetMachineLearningDatasetArgs args) {
         return getMachineLearningDataset(args, InvokeOptions.Empty);
     }
     /**
@@ -349,15 +349,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineLearningDatasetResult> getMachineLearningDataset(GetMachineLearningDatasetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningDataset", TypeShape.of(GetMachineLearningDatasetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineLearningDatasetResult> getMachineLearningDataset(GetMachineLearningDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getMachineLearningDataset", TypeShape.of(GetMachineLearningDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning datastore object wrapped into ARM resource envelope.
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineLearningDatastoreResult> getMachineLearningDatastore(GetMachineLearningDatastoreArgs args) {
+    public static Output<GetMachineLearningDatastoreResult> getMachineLearningDatastore(GetMachineLearningDatastoreArgs args) {
         return getMachineLearningDatastore(args, InvokeOptions.Empty);
     }
     /**
@@ -365,8 +365,8 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineLearningDatastoreResult> getMachineLearningDatastore(GetMachineLearningDatastoreArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningDatastore", TypeShape.of(GetMachineLearningDatastoreResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineLearningDatastoreResult> getMachineLearningDatastore(GetMachineLearningDatastoreArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getMachineLearningDatastore", TypeShape.of(GetMachineLearningDatastoreResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Machine Learning service object wrapped into ARM resource envelope.
@@ -377,7 +377,7 @@ public final class MachinelearningservicesFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ACIService, AKSService, EndpointVariant. */
-    public static CompletableFuture<GetMachineLearningServiceResult> getMachineLearningService(GetMachineLearningServiceArgs args) {
+    public static Output<GetMachineLearningServiceResult> getMachineLearningService(GetMachineLearningServiceArgs args) {
         return getMachineLearningService(args, InvokeOptions.Empty);
     }
     /**
@@ -389,15 +389,15 @@ public final class MachinelearningservicesFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ACIService, AKSService, EndpointVariant. */
-    public static CompletableFuture<GetMachineLearningServiceResult> getMachineLearningService(GetMachineLearningServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningService", TypeShape.of(GetMachineLearningServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineLearningServiceResult> getMachineLearningService(GetMachineLearningServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getMachineLearningService", TypeShape.of(GetMachineLearningServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetModelContainerResult> getModelContainer(GetModelContainerArgs args) {
+    public static Output<GetModelContainerResult> getModelContainer(GetModelContainerArgs args) {
         return getModelContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -405,15 +405,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetModelContainerResult> getModelContainer(GetModelContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getModelContainer", TypeShape.of(GetModelContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelContainerResult> getModelContainer(GetModelContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getModelContainer", TypeShape.of(GetModelContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Azure Resource Manager resource envelope.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetModelVersionResult> getModelVersion(GetModelVersionArgs args) {
+    public static Output<GetModelVersionResult> getModelVersion(GetModelVersionArgs args) {
         return getModelVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -421,57 +421,57 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetModelVersionResult> getModelVersion(GetModelVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getModelVersion", TypeShape.of(GetModelVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelVersionResult> getModelVersion(GetModelVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getModelVersion", TypeShape.of(GetModelVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineDeploymentResult> getOnlineDeployment(GetOnlineDeploymentArgs args) {
+    public static Output<GetOnlineDeploymentResult> getOnlineDeployment(GetOnlineDeploymentArgs args) {
         return getOnlineDeployment(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineDeploymentResult> getOnlineDeployment(GetOnlineDeploymentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeployment", TypeShape.of(GetOnlineDeploymentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnlineDeploymentResult> getOnlineDeployment(GetOnlineDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getOnlineDeployment", TypeShape.of(GetOnlineDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineDeploymentLogsResult> getOnlineDeploymentLogs(GetOnlineDeploymentLogsArgs args) {
+    public static Output<GetOnlineDeploymentLogsResult> getOnlineDeploymentLogs(GetOnlineDeploymentLogsArgs args) {
         return getOnlineDeploymentLogs(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineDeploymentLogsResult> getOnlineDeploymentLogs(GetOnlineDeploymentLogsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeploymentLogs", TypeShape.of(GetOnlineDeploymentLogsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnlineDeploymentLogsResult> getOnlineDeploymentLogs(GetOnlineDeploymentLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getOnlineDeploymentLogs", TypeShape.of(GetOnlineDeploymentLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineEndpointResult> getOnlineEndpoint(GetOnlineEndpointArgs args) {
+    public static Output<GetOnlineEndpointResult> getOnlineEndpoint(GetOnlineEndpointArgs args) {
         return getOnlineEndpoint(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineEndpointResult> getOnlineEndpoint(GetOnlineEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineEndpoint", TypeShape.of(GetOnlineEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnlineEndpointResult> getOnlineEndpoint(GetOnlineEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getOnlineEndpoint", TypeShape.of(GetOnlineEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Service Token
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineEndpointTokenResult> getOnlineEndpointToken(GetOnlineEndpointTokenArgs args) {
+    public static Output<GetOnlineEndpointTokenResult> getOnlineEndpointToken(GetOnlineEndpointTokenArgs args) {
         return getOnlineEndpointToken(args, InvokeOptions.Empty);
     }
     /**
@@ -479,15 +479,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetOnlineEndpointTokenResult> getOnlineEndpointToken(GetOnlineEndpointTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineEndpointToken", TypeShape.of(GetOnlineEndpointTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOnlineEndpointTokenResult> getOnlineEndpointToken(GetOnlineEndpointTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getOnlineEndpointToken", TypeShape.of(GetOnlineEndpointTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -495,15 +495,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a machine learning workspace.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -511,15 +511,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace connection.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceConnectionResult> getWorkspaceConnection(GetWorkspaceConnectionArgs args) {
+    public static Output<GetWorkspaceConnectionResult> getWorkspaceConnection(GetWorkspaceConnectionArgs args) {
         return getWorkspaceConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -527,15 +527,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceConnectionResult> getWorkspaceConnection(GetWorkspaceConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getWorkspaceConnection", TypeShape.of(GetWorkspaceConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceConnectionResult> getWorkspaceConnection(GetWorkspaceConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:getWorkspaceConnection", TypeShape.of(GetWorkspaceConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Keys for endpoint authentication.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListBatchEndpointKeysResult> listBatchEndpointKeys(ListBatchEndpointKeysArgs args) {
+    public static Output<ListBatchEndpointKeysResult> listBatchEndpointKeys(ListBatchEndpointKeysArgs args) {
         return listBatchEndpointKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -543,15 +543,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListBatchEndpointKeysResult> listBatchEndpointKeys(ListBatchEndpointKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listBatchEndpointKeys", TypeShape.of(ListBatchEndpointKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBatchEndpointKeysResult> listBatchEndpointKeys(ListBatchEndpointKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listBatchEndpointKeys", TypeShape.of(ListBatchEndpointKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Base definition for datastore secrets.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListDatastoreSecretsResult> listDatastoreSecrets(ListDatastoreSecretsArgs args) {
+    public static Output<ListDatastoreSecretsResult> listDatastoreSecrets(ListDatastoreSecretsArgs args) {
         return listDatastoreSecrets(args, InvokeOptions.Empty);
     }
     /**
@@ -559,15 +559,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListDatastoreSecretsResult> listDatastoreSecrets(ListDatastoreSecretsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listDatastoreSecrets", TypeShape.of(ListDatastoreSecretsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListDatastoreSecretsResult> listDatastoreSecrets(ListDatastoreSecretsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listDatastoreSecrets", TypeShape.of(ListDatastoreSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Secrets related to a Machine Learning compute. Might differ for every type of compute.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListMachineLearningComputeKeysResult> listMachineLearningComputeKeys(ListMachineLearningComputeKeysArgs args) {
+    public static Output<ListMachineLearningComputeKeysResult> listMachineLearningComputeKeys(ListMachineLearningComputeKeysArgs args) {
         return listMachineLearningComputeKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -575,15 +575,15 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListMachineLearningComputeKeysResult> listMachineLearningComputeKeys(ListMachineLearningComputeKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listMachineLearningComputeKeys", TypeShape.of(ListMachineLearningComputeKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMachineLearningComputeKeysResult> listMachineLearningComputeKeys(ListMachineLearningComputeKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listMachineLearningComputeKeys", TypeShape.of(ListMachineLearningComputeKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Compute node information related to a AmlCompute.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListMachineLearningComputeNodesResult> listMachineLearningComputeNodes(ListMachineLearningComputeNodesArgs args) {
+    public static Output<ListMachineLearningComputeNodesResult> listMachineLearningComputeNodes(ListMachineLearningComputeNodesArgs args) {
         return listMachineLearningComputeNodes(args, InvokeOptions.Empty);
     }
     /**
@@ -591,29 +591,29 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListMachineLearningComputeNodesResult> listMachineLearningComputeNodes(ListMachineLearningComputeNodesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listMachineLearningComputeNodes", TypeShape.of(ListMachineLearningComputeNodesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMachineLearningComputeNodesResult> listMachineLearningComputeNodes(ListMachineLearningComputeNodesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listMachineLearningComputeNodes", TypeShape.of(ListMachineLearningComputeNodesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListNotebookKeysResult> listNotebookKeys(ListNotebookKeysArgs args) {
+    public static Output<ListNotebookKeysResult> listNotebookKeys(ListNotebookKeysArgs args) {
         return listNotebookKeys(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListNotebookKeysResult> listNotebookKeys(ListNotebookKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listNotebookKeys", TypeShape.of(ListNotebookKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListNotebookKeysResult> listNotebookKeys(ListNotebookKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listNotebookKeys", TypeShape.of(ListNotebookKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Keys for endpoint authentication.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListOnlineEndpointKeysResult> listOnlineEndpointKeys(ListOnlineEndpointKeysArgs args) {
+    public static Output<ListOnlineEndpointKeysResult> listOnlineEndpointKeys(ListOnlineEndpointKeysArgs args) {
         return listOnlineEndpointKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -621,49 +621,49 @@ public final class MachinelearningservicesFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListOnlineEndpointKeysResult> listOnlineEndpointKeys(ListOnlineEndpointKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listOnlineEndpointKeys", TypeShape.of(ListOnlineEndpointKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListOnlineEndpointKeysResult> listOnlineEndpointKeys(ListOnlineEndpointKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listOnlineEndpointKeys", TypeShape.of(ListOnlineEndpointKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args) {
+    public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args) {
         return listStorageAccountKeys(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args) {
+    public static Output<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args) {
         return listWorkspaceKeys(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceNotebookAccessTokenResult> listWorkspaceNotebookAccessToken(ListWorkspaceNotebookAccessTokenArgs args) {
+    public static Output<ListWorkspaceNotebookAccessTokenResult> listWorkspaceNotebookAccessToken(ListWorkspaceNotebookAccessTokenArgs args) {
         return listWorkspaceNotebookAccessToken(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceNotebookAccessTokenResult> listWorkspaceNotebookAccessToken(ListWorkspaceNotebookAccessTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listWorkspaceNotebookAccessToken", TypeShape.of(ListWorkspaceNotebookAccessTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<ListWorkspaceNotebookAccessTokenResult> listWorkspaceNotebookAccessToken(ListWorkspaceNotebookAccessTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningservices:listWorkspaceNotebookAccessToken", TypeShape.of(ListWorkspaceNotebookAccessTokenResult.class), args, Utilities.withVersion(options));
     }
 }

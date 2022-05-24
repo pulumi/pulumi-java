@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.athena.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namedQueryId", required=true)
-    private String namedQueryId;
+    private Output<String> namedQueryId;
 
     /**
      * @return The unique ID of the query.
      * 
      */
-    public String namedQueryId() {
+    public Output<String> namedQueryId() {
         return this.namedQueryId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namedQueryId(String namedQueryId) {
+        public Builder namedQueryId(Output<String> namedQueryId) {
             $.namedQueryId = namedQueryId;
             return this;
+        }
+
+        /**
+         * @param namedQueryId The unique ID of the query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namedQueryId(String namedQueryId) {
+            return namedQueryId(Output.of(namedQueryId));
         }
 
         public GetNamedQueryArgs build() {

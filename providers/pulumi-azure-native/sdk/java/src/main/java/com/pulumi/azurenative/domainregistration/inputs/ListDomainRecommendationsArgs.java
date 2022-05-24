@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.domainregistration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="keywords")
-    private @Nullable String keywords;
+    private Output</* @Nullable */ String> keywords;
 
     /**
      * @return Keywords to be used for generating domain recommendations.
      * 
      */
-    public Optional<String> keywords() {
-        return Optional.ofNullable(this.keywords);
+    public Output</* @Nullable */ String> keywords() {
+        return this.keywords;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxDomainRecommendations")
-    private @Nullable Integer maxDomainRecommendations;
+    private Output</* @Nullable */ Integer> maxDomainRecommendations;
 
     /**
      * @return Maximum number of recommendations.
      * 
      */
-    public Optional<Integer> maxDomainRecommendations() {
-        return Optional.ofNullable(this.maxDomainRecommendations);
+    public Output</* @Nullable */ Integer> maxDomainRecommendations() {
+        return this.maxDomainRecommendations;
     }
 
     private ListDomainRecommendationsArgs() {}
@@ -76,8 +76,29 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder keywords(@Nullable String keywords) {
+        public Builder keywords(Output</* @Nullable */ String> keywords) {
             $.keywords = keywords;
+            return this;
+        }
+
+        /**
+         * @param keywords Keywords to be used for generating domain recommendations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keywords(@Nullable String keywords) {
+            return keywords(Output.of(keywords));
+        }
+
+        /**
+         * @param maxDomainRecommendations Maximum number of recommendations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxDomainRecommendations(Output</* @Nullable */ Integer> maxDomainRecommendations) {
+            $.maxDomainRecommendations = maxDomainRecommendations;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder maxDomainRecommendations(@Nullable Integer maxDomainRecommendations) {
-            $.maxDomainRecommendations = maxDomainRecommendations;
-            return this;
+            return maxDomainRecommendations(Output.of(maxDomainRecommendations));
         }
 
         public ListDomainRecommendationsArgs build() {

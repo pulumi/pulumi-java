@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Bastion.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Bastion.inputs.GetBastionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bastionId")
-    private @Nullable String bastionId;
+    private Output</* @Nullable */ String> bastionId;
 
     /**
      * @return The unique identifier (OCID) of the bastion in which to list resources.
      * 
      */
-    public Optional<String> bastionId() {
-        return Optional.ofNullable(this.bastionId);
+    public Output</* @Nullable */ String> bastionId() {
+        return this.bastionId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bastionLifecycleState")
-    private @Nullable String bastionLifecycleState;
+    private Output</* @Nullable */ String> bastionLifecycleState;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Optional<String> bastionLifecycleState() {
-        return Optional.ofNullable(this.bastionLifecycleState);
+    public Output</* @Nullable */ String> bastionLifecycleState() {
+        return this.bastionLifecycleState;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The unique identifier (OCID) of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBastionsFilter> filters;
+    private Output</* @Nullable */ List<GetBastionsFilter>> filters;
 
-    public Optional<List<GetBastionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBastionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the entire name given.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetBastionsArgs() {}
@@ -117,8 +117,29 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bastionId(@Nullable String bastionId) {
+        public Builder bastionId(Output</* @Nullable */ String> bastionId) {
             $.bastionId = bastionId;
+            return this;
+        }
+
+        /**
+         * @param bastionId The unique identifier (OCID) of the bastion in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionId(@Nullable String bastionId) {
+            return bastionId(Output.of(bastionId));
+        }
+
+        /**
+         * @param bastionLifecycleState A filter to return only resources their lifecycleState matches the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionLifecycleState(Output</* @Nullable */ String> bastionLifecycleState) {
+            $.bastionLifecycleState = bastionLifecycleState;
             return this;
         }
 
@@ -129,7 +150,17 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder bastionLifecycleState(@Nullable String bastionLifecycleState) {
-            $.bastionLifecycleState = bastionLifecycleState;
+            return bastionLifecycleState(Output.of(bastionLifecycleState));
+        }
+
+        /**
+         * @param compartmentId The unique identifier (OCID) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -140,13 +171,16 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBastionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetBastionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBastionsFilter... filters) {
@@ -159,9 +193,19 @@ public final class GetBastionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
         }
 
         public GetBastionsArgs build() {

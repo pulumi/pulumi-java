@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetEvaluationJobArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetEvaluationJobArgs Empty = new GetEvaluationJobArgs();
 
     @Import(name="evaluationJobId", required=true)
-    private String evaluationJobId;
+    private Output<String> evaluationJobId;
 
-    public String evaluationJobId() {
+    public Output<String> evaluationJobId() {
         return this.evaluationJobId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetEvaluationJobArgs() {}
@@ -53,14 +53,22 @@ public final class GetEvaluationJobArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetEvaluationJobArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder evaluationJobId(String evaluationJobId) {
+        public Builder evaluationJobId(Output<String> evaluationJobId) {
             $.evaluationJobId = evaluationJobId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder evaluationJobId(String evaluationJobId) {
+            return evaluationJobId(Output.of(evaluationJobId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetEvaluationJobArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.HealthChecks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.HealthChecks.inputs.GetHttpProbeResultsFilter;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
     public static final GetHttpProbeResultsArgs Empty = new GetHttpProbeResultsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetHttpProbeResultsFilter> filters;
+    private Output</* @Nullable */ List<GetHttpProbeResultsFilter>> filters;
 
-    public Optional<List<GetHttpProbeResultsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetHttpProbeResultsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -29,13 +29,13 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="probeConfigurationId", required=true)
-    private String probeConfigurationId;
+    private Output<String> probeConfigurationId;
 
     /**
      * @return The OCID of a monitor or on-demand probe.
      * 
      */
-    public String probeConfigurationId() {
+    public Output<String> probeConfigurationId() {
         return this.probeConfigurationId;
     }
 
@@ -44,14 +44,14 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTimeGreaterThanOrEqualTo")
-    private @Nullable Double startTimeGreaterThanOrEqualTo;
+    private Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo;
 
     /**
      * @return Returns results with a `startTime` equal to or greater than the specified value.
      * 
      */
-    public Optional<Double> startTimeGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.startTimeGreaterThanOrEqualTo);
+    public Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo() {
+        return this.startTimeGreaterThanOrEqualTo;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTimeLessThanOrEqualTo")
-    private @Nullable Double startTimeLessThanOrEqualTo;
+    private Output</* @Nullable */ Double> startTimeLessThanOrEqualTo;
 
     /**
      * @return Returns results with a `startTime` equal to or less than the specified value.
      * 
      */
-    public Optional<Double> startTimeLessThanOrEqualTo() {
-        return Optional.ofNullable(this.startTimeLessThanOrEqualTo);
+    public Output</* @Nullable */ Double> startTimeLessThanOrEqualTo() {
+        return this.startTimeLessThanOrEqualTo;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="target")
-    private @Nullable String target;
+    private Output</* @Nullable */ String> target;
 
     /**
      * @return Filters results that match the `target`.
      * 
      */
-    public Optional<String> target() {
-        return Optional.ofNullable(this.target);
+    public Output</* @Nullable */ String> target() {
+        return this.target;
     }
 
     private GetHttpProbeResultsArgs() {}
@@ -112,9 +112,13 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHttpProbeResultsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetHttpProbeResultsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetHttpProbeResultsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetHttpProbeResultsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetHttpProbeResultsFilter... filters) {
@@ -127,8 +131,29 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder probeConfigurationId(String probeConfigurationId) {
+        public Builder probeConfigurationId(Output<String> probeConfigurationId) {
             $.probeConfigurationId = probeConfigurationId;
+            return this;
+        }
+
+        /**
+         * @param probeConfigurationId The OCID of a monitor or on-demand probe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder probeConfigurationId(String probeConfigurationId) {
+            return probeConfigurationId(Output.of(probeConfigurationId));
+        }
+
+        /**
+         * @param startTimeGreaterThanOrEqualTo Returns results with a `startTime` equal to or greater than the specified value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTimeGreaterThanOrEqualTo(Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo) {
+            $.startTimeGreaterThanOrEqualTo = startTimeGreaterThanOrEqualTo;
             return this;
         }
 
@@ -139,7 +164,17 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder startTimeGreaterThanOrEqualTo(@Nullable Double startTimeGreaterThanOrEqualTo) {
-            $.startTimeGreaterThanOrEqualTo = startTimeGreaterThanOrEqualTo;
+            return startTimeGreaterThanOrEqualTo(Output.of(startTimeGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param startTimeLessThanOrEqualTo Returns results with a `startTime` equal to or less than the specified value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTimeLessThanOrEqualTo(Output</* @Nullable */ Double> startTimeLessThanOrEqualTo) {
+            $.startTimeLessThanOrEqualTo = startTimeLessThanOrEqualTo;
             return this;
         }
 
@@ -150,7 +185,17 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder startTimeLessThanOrEqualTo(@Nullable Double startTimeLessThanOrEqualTo) {
-            $.startTimeLessThanOrEqualTo = startTimeLessThanOrEqualTo;
+            return startTimeLessThanOrEqualTo(Output.of(startTimeLessThanOrEqualTo));
+        }
+
+        /**
+         * @param target Filters results that match the `target`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder target(Output</* @Nullable */ String> target) {
+            $.target = target;
             return this;
         }
 
@@ -161,8 +206,7 @@ public final class GetHttpProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder target(@Nullable String target) {
-            $.target = target;
-            return this;
+            return target(Output.of(target));
         }
 
         public GetHttpProbeResultsArgs build() {

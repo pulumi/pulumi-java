@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIPAMScopeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipamScopeId", required=true)
-    private String ipamScopeId;
+    private Output<String> ipamScopeId;
 
     /**
      * @return Id of the IPAM scope.
      * 
      */
-    public String ipamScopeId() {
+    public Output<String> ipamScopeId() {
         return this.ipamScopeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetIPAMScopeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipamScopeId(String ipamScopeId) {
+        public Builder ipamScopeId(Output<String> ipamScopeId) {
             $.ipamScopeId = ipamScopeId;
             return this;
+        }
+
+        /**
+         * @param ipamScopeId Id of the IPAM scope.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipamScopeId(String ipamScopeId) {
+            return ipamScopeId(Output.of(ipamScopeId));
         }
 
         public GetIPAMScopeArgs build() {

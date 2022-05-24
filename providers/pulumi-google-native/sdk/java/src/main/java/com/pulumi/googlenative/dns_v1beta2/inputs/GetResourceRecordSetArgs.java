@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dns_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,37 +15,37 @@ public final class GetResourceRecordSetArgs extends com.pulumi.resources.InvokeA
     public static final GetResourceRecordSetArgs Empty = new GetResourceRecordSetArgs();
 
     @Import(name="clientOperationId")
-    private @Nullable String clientOperationId;
+    private Output</* @Nullable */ String> clientOperationId;
 
-    public Optional<String> clientOperationId() {
-        return Optional.ofNullable(this.clientOperationId);
+    public Output</* @Nullable */ String> clientOperationId() {
+        return this.clientOperationId;
     }
 
     @Import(name="managedZone", required=true)
-    private String managedZone;
+    private Output<String> managedZone;
 
-    public String managedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="type", required=true)
-    private String type;
+    private Output<String> type;
 
-    public String type() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -77,29 +77,49 @@ public final class GetResourceRecordSetArgs extends com.pulumi.resources.InvokeA
             $ = new GetResourceRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(Output</* @Nullable */ String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder managedZone(String managedZone) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
+        }
+
+        public Builder managedZone(Output<String> managedZone) {
             $.managedZone = managedZone;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder managedZone(String managedZone) {
+            return managedZone(Output.of(managedZone));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder type(String type) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder type(Output<String> type) {
             $.type = type;
             return this;
+        }
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetResourceRecordSetArgs build() {

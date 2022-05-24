@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ssm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetResourceDataSyncArgs extends com.pulumi.resources.InvokeAr
     public static final GetResourceDataSyncArgs Empty = new GetResourceDataSyncArgs();
 
     @Import(name="syncName", required=true)
-    private String syncName;
+    private Output<String> syncName;
 
-    public String syncName() {
+    public Output<String> syncName() {
         return this.syncName;
     }
 
@@ -43,9 +44,13 @@ public final class GetResourceDataSyncArgs extends com.pulumi.resources.InvokeAr
             $ = new GetResourceDataSyncArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder syncName(String syncName) {
+        public Builder syncName(Output<String> syncName) {
             $.syncName = syncName;
             return this;
+        }
+
+        public Builder syncName(String syncName) {
+            return syncName(Output.of(syncName));
         }
 
         public GetResourceDataSyncArgs build() {

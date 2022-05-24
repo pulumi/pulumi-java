@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dashboardName", required=true)
-    private String dashboardName;
+    private Output<String> dashboardName;
 
     /**
      * @return The name of the dashboard.
      * 
      */
-    public String dashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dashboardName(String dashboardName) {
+        public Builder dashboardName(Output<String> dashboardName) {
             $.dashboardName = dashboardName;
+            return this;
+        }
+
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardName(String dashboardName) {
+            return dashboardName(Output.of(dashboardName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDashboardArgs build() {

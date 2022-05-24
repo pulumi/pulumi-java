@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.resources.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentAtTenantScopeArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="deploymentName", required=true)
-    private String deploymentName;
+    private Output<String> deploymentName;
 
     /**
      * @return The name of the deployment.
      * 
      */
-    public String deploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeploymentAtTenantScopeArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder deploymentName(String deploymentName) {
+        public Builder deploymentName(Output<String> deploymentName) {
             $.deploymentName = deploymentName;
             return this;
+        }
+
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
         }
 
         public GetDeploymentAtTenantScopeArgs build() {

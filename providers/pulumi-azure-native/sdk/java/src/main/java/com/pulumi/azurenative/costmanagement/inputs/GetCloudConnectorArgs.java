@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectorName", required=true)
-    private String connectorName;
+    private Output<String> connectorName;
 
     /**
      * @return Connector Name.
      * 
      */
-    public String connectorName() {
+    public Output<String> connectorName() {
         return this.connectorName;
     }
 
@@ -34,14 +34,14 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return May be used to expand the collectionInfo property. By default, collectionInfo is not included.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     private GetCloudConnectorArgs() {}
@@ -75,8 +75,29 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder connectorName(String connectorName) {
+        public Builder connectorName(Output<String> connectorName) {
             $.connectorName = connectorName;
+            return this;
+        }
+
+        /**
+         * @param connectorName Connector Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
+        }
+
+        /**
+         * @param expand May be used to expand the collectionInfo property. By default, collectionInfo is not included.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
-            return this;
+            return expand(Output.of(expand));
         }
 
         public GetCloudConnectorArgs build() {

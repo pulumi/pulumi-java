@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.appengine_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAppArgs Empty = new GetAppArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
+        }
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
 
         public GetAppArgs build() {

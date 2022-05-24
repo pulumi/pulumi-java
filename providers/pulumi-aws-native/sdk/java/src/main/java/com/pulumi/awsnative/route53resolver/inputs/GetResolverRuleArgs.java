@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53resolver.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverRuleId", required=true)
-    private String resolverRuleId;
+    private Output<String> resolverRuleId;
 
     /**
      * @return The ID of the endpoint that the rule is associated with.
      * 
      */
-    public String resolverRuleId() {
+    public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
 
@@ -57,9 +58,19 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverRuleId(String resolverRuleId) {
+        public Builder resolverRuleId(Output<String> resolverRuleId) {
             $.resolverRuleId = resolverRuleId;
             return this;
+        }
+
+        /**
+         * @param resolverRuleId The ID of the endpoint that the rule is associated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverRuleId(String resolverRuleId) {
+            return resolverRuleId(Output.of(resolverRuleId));
         }
 
         public GetResolverRuleArgs build() {

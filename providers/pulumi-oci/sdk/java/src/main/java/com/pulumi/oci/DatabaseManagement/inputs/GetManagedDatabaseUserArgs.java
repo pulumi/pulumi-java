@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedDatabaseUserArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedDatabaseUserArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user whose details are to be viewed.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagedDatabaseUserArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(String managedDatabaseId) {
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param userName The name of the user whose details are to be viewed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagedDatabaseUserArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetManagedDatabaseUserArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.app.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedEnvironmentName", required=true)
-    private String managedEnvironmentName;
+    private Output<String> managedEnvironmentName;
 
     /**
      * @return Name of the Managed Environment.
      * 
      */
-    public String managedEnvironmentName() {
+    public Output<String> managedEnvironmentName() {
         return this.managedEnvironmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the Certificate.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder managedEnvironmentName(String managedEnvironmentName) {
+        public Builder managedEnvironmentName(Output<String> managedEnvironmentName) {
             $.managedEnvironmentName = managedEnvironmentName;
+            return this;
+        }
+
+        /**
+         * @param managedEnvironmentName Name of the Managed Environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedEnvironmentName(String managedEnvironmentName) {
+            return managedEnvironmentName(Output.of(managedEnvironmentName));
+        }
+
+        /**
+         * @param name Name of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCertificateArgs build() {

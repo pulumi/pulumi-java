@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="featureName")
-    private @Nullable String featureName;
+    private Output</* @Nullable */ String> featureName;
 
     /**
      * @return The feature name.
      * 
      */
-    public Optional<String> featureName() {
-        return Optional.ofNullable(this.featureName);
+    public Output</* @Nullable */ String> featureName() {
+        return this.featureName;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="featureType")
-    private @Nullable String featureType;
+    private Output</* @Nullable */ String> featureType;
 
     /**
      * @return The feature type.
      * 
      */
-    public Optional<String> featureType() {
-        return Optional.ofNullable(this.featureType);
+    public Output</* @Nullable */ String> featureType() {
+        return this.featureType;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="locationId", required=true)
-    private String locationId;
+    private Output<String> locationId;
 
     /**
      * @return The location identifier.
      * 
      */
-    public String locationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
 
@@ -91,8 +91,29 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder featureName(@Nullable String featureName) {
+        public Builder featureName(Output</* @Nullable */ String> featureName) {
             $.featureName = featureName;
+            return this;
+        }
+
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureName(@Nullable String featureName) {
+            return featureName(Output.of(featureName));
+        }
+
+        /**
+         * @param featureType The feature type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureType(Output</* @Nullable */ String> featureType) {
+            $.featureType = featureType;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
          * 
          */
         public Builder featureType(@Nullable String featureType) {
-            $.featureType = featureType;
+            return featureType(Output.of(featureType));
+        }
+
+        /**
+         * @param locationId The location identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationId(Output<String> locationId) {
+            $.locationId = locationId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
          * 
          */
         public Builder locationId(String locationId) {
-            $.locationId = locationId;
-            return this;
+            return locationId(Output.of(locationId));
         }
 
         public GetExposureControlFeatureValueArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessRuleName", required=true)
-    private String accessRuleName;
+    private Output<String> accessRuleName;
 
     /**
      * @return The name of the NSP access rule.
      * 
      */
-    public String accessRuleName() {
+    public Output<String> accessRuleName() {
         return this.accessRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkSecurityPerimeterName", required=true)
-    private String networkSecurityPerimeterName;
+    private Output<String> networkSecurityPerimeterName;
 
     /**
      * @return The name of the network security perimeter.
      * 
      */
-    public String networkSecurityPerimeterName() {
+    public Output<String> networkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return The name of the NSP profile.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -62,13 +63,13 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessRuleName(String accessRuleName) {
+        public Builder accessRuleName(Output<String> accessRuleName) {
             $.accessRuleName = accessRuleName;
+            return this;
+        }
+
+        /**
+         * @param accessRuleName The name of the NSP access rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessRuleName(String accessRuleName) {
+            return accessRuleName(Output.of(accessRuleName));
+        }
+
+        /**
+         * @param networkSecurityPerimeterName The name of the network security perimeter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityPerimeterName(Output<String> networkSecurityPerimeterName) {
+            $.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder networkSecurityPerimeterName(String networkSecurityPerimeterName) {
-            $.networkSecurityPerimeterName = networkSecurityPerimeterName;
+            return networkSecurityPerimeterName(Output.of(networkSecurityPerimeterName));
+        }
+
+        /**
+         * @param profileName The name of the NSP profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetNspAccessRuleArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNspAccessRuleArgs build() {

@@ -10,10 +10,10 @@ import com.pulumi.azure.logicapps.inputs.GetWorkflowArgs;
 import com.pulumi.azure.logicapps.outputs.GetIntegrationAccountResult;
 import com.pulumi.azure.logicapps.outputs.GetStandardResult;
 import com.pulumi.azure.logicapps.outputs.GetWorkflowResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class LogicappsFunctions {
     /**
@@ -45,7 +45,7 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args) {
+    public static Output<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args) {
         return getIntegrationAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:logicapps/getIntegrationAccount:getIntegrationAccount", TypeShape.of(GetIntegrationAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:logicapps/getIntegrationAccount:getIntegrationAccount", TypeShape.of(GetIntegrationAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Logic App Standard instance.
@@ -109,7 +109,7 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStandardResult> getStandard(GetStandardArgs args) {
+    public static Output<GetStandardResult> getStandard(GetStandardArgs args) {
         return getStandard(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStandardResult> getStandard(GetStandardArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:logicapps/getStandard:getStandard", TypeShape.of(GetStandardResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStandardResult> getStandard(GetStandardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:logicapps/getStandard:getStandard", TypeShape.of(GetStandardResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Logic App Workflow.
@@ -173,7 +173,7 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
+    public static Output<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
         return getWorkflow(args, InvokeOptions.Empty);
     }
     /**
@@ -205,7 +205,7 @@ public final class LogicappsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:logicapps/getWorkflow:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:logicapps/getWorkflow:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }
 }

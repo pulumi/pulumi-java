@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResolverArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverId", required=true)
-    private String resolverId;
+    private Output<String> resolverId;
 
     /**
      * @return The OCID of the target resolver.
      * 
      */
-    public String resolverId() {
+    public Output<String> resolverId() {
         return this.resolverId;
     }
 
@@ -32,13 +33,13 @@ public final class GetResolverArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Value must be `PRIVATE` when listing private name resolvers.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetResolverArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverId(String resolverId) {
+        public Builder resolverId(Output<String> resolverId) {
             $.resolverId = resolverId;
+            return this;
+        }
+
+        /**
+         * @param resolverId The OCID of the target resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverId(String resolverId) {
+            return resolverId(Output.of(resolverId));
+        }
+
+        /**
+         * @param scope Value must be `PRIVATE` when listing private name resolvers.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResolverArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetResolverArgs build() {

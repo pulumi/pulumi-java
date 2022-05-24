@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPipelineArgs Empty = new GetPipelineArgs();
 
     @Import(name="pipelineName", required=true)
-    private String pipelineName;
+    private Output<String> pipelineName;
 
-    public String pipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName;
     }
 
@@ -43,9 +44,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder pipelineName(String pipelineName) {
+        public Builder pipelineName(Output<String> pipelineName) {
             $.pipelineName = pipelineName;
             return this;
+        }
+
+        public Builder pipelineName(String pipelineName) {
+            return pipelineName(Output.of(pipelineName));
         }
 
         public GetPipelineArgs build() {

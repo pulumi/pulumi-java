@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAddressListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressListId", required=true)
-    private String addressListId;
+    private Output<String> addressListId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the address list. This number is generated when the address list is added to the compartment.
      * 
      */
-    public String addressListId() {
+    public Output<String> addressListId() {
         return this.addressListId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAddressListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder addressListId(String addressListId) {
+        public Builder addressListId(Output<String> addressListId) {
             $.addressListId = addressListId;
             return this;
+        }
+
+        /**
+         * @param addressListId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the address list. This number is generated when the address list is added to the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addressListId(String addressListId) {
+            return addressListId(Output.of(addressListId));
         }
 
         public GetAddressListArgs build() {

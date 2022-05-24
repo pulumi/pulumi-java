@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteId", required=true)
-    private String siteId;
+    private Output<String> siteId;
 
     /**
      * @return The ID of the site.
      * 
      */
-    public String siteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -73,8 +74,29 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder globalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
+            return this;
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(String globalNetworkId) {
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param siteId The ID of the site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteId(Output<String> siteId) {
+            $.siteId = siteId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder siteId(String siteId) {
-            $.siteId = siteId;
-            return this;
+            return siteId(Output.of(siteId));
         }
 
         public GetSiteArgs build() {

@@ -3,11 +3,11 @@
 
 package com.pulumi.azure.core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the Resource.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requiredTags")
-    private @Nullable Map<String,String> requiredTags;
+    private Output</* @Nullable */ Map<String,String>> requiredTags;
 
     /**
      * @return A mapping of tags which the resource has to have in order to be included in the result.
      * 
      */
-    public Optional<Map<String,String>> requiredTags() {
-        return Optional.ofNullable(this.requiredTags);
+    public Output</* @Nullable */ Map<String,String>> requiredTags() {
+        return this.requiredTags;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private Output</* @Nullable */ String> resourceGroupName;
 
     /**
      * @return The name of the Resource group where the Resources are located.
      * 
      */
-    public Optional<String> resourceGroupName() {
-        return Optional.ofNullable(this.resourceGroupName);
+    public Output</* @Nullable */ String> resourceGroupName() {
+        return this.resourceGroupName;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return The Resource Type of the Resources you want to list (e.g. `Microsoft.Network/virtualNetworks`). A full list of available Resource Types can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/azure-services-resource-providers).
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetResourcesArgs() {}
@@ -108,8 +108,29 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param requiredTags A mapping of tags which the resource has to have in order to be included in the result.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requiredTags(Output</* @Nullable */ Map<String,String>> requiredTags) {
+            $.requiredTags = requiredTags;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder requiredTags(@Nullable Map<String,String> requiredTags) {
-            $.requiredTags = requiredTags;
+            return requiredTags(Output.of(requiredTags));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource group where the Resources are located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param type The Resource Type of the Resources you want to list (e.g. `Microsoft.Network/virtualNetworks`). A full list of available Resource Types can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/azure-services-resource-providers).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetResourcesArgs build() {

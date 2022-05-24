@@ -14,10 +14,10 @@ import com.pulumi.azurenative.cognitiveservices.outputs.GetCommitmentPlanResult;
 import com.pulumi.azurenative.cognitiveservices.outputs.GetDeploymentResult;
 import com.pulumi.azurenative.cognitiveservices.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.cognitiveservices.outputs.ListAccountKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CognitiveservicesFunctions {
     /**
@@ -25,7 +25,7 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -33,15 +33,15 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:cognitiveservices:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cognitive Services account commitment plan.
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
+    public static Output<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
         return getCommitmentPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -49,15 +49,15 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cognitive Services account deployment.
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
     /**
@@ -65,15 +65,15 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -81,15 +81,15 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:cognitiveservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The access keys for the cognitive services account.
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
+    public static Output<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
         return listAccountKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +97,7 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:cognitiveservices:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

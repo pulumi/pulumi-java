@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -71,7 +72,6 @@ import com.pulumi.gcp.compute.outputs.GetVPNGatewayResult;
 import com.pulumi.gcp.compute.outputs.GetZonesResult;
 import com.pulumi.gcp.compute.outputs.RouterStatusResult;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class ComputeFunctions {
     /**
@@ -114,7 +114,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args) {
+    public static Output<GetAddressResult> getAddress(GetAddressArgs args) {
         return getAddress(args, InvokeOptions.Empty);
     }
     /**
@@ -157,8 +157,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getAddress:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getAddress:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a BackendBucket.
@@ -187,7 +187,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args) {
+    public static Output<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args) {
         return getBackendBucket(args, InvokeOptions.Empty);
     }
     /**
@@ -217,8 +217,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provide access to a Backend Service&#39;s attribute. For more information
@@ -226,7 +226,7 @@ public final class ComputeFunctions {
      * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
      * 
      */
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args) {
+    public static Output<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args) {
         return getBackendService(args, InvokeOptions.Empty);
     }
     /**
@@ -235,8 +235,8 @@ public final class ComputeFunctions {
      * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
      * 
      */
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get info about a Google Compute SSL Certificate from its name.
@@ -268,7 +268,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -301,8 +301,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve default service account for this project
@@ -330,7 +330,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
         return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -359,7 +359,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
         return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -388,8 +388,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a Google Compute Persistent disks.
@@ -428,7 +428,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
+    public static Output<GetDiskResult> getDisk(GetDiskArgs args) {
         return getDisk(args, InvokeOptions.Empty);
     }
     /**
@@ -468,8 +468,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getDisk:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getDisk:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a forwarding rule within GCE from its name.
@@ -498,7 +498,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args) {
+    public static Output<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args) {
         return getForwardingRule(args, InvokeOptions.Empty);
     }
     /**
@@ -528,8 +528,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getForwardingRule:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getForwardingRule:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
@@ -571,7 +571,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args) {
+    public static Output<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args) {
         return getGlobalAddress(args, InvokeOptions.Empty);
     }
     /**
@@ -614,8 +614,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a global forwarding rule within GCE from its name.
@@ -644,7 +644,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args) {
+    public static Output<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args) {
         return getGlobalForwardingRule(args, InvokeOptions.Empty);
     }
     /**
@@ -674,8 +674,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a HA VPN Gateway within GCE from its name.
@@ -704,7 +704,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args) {
+    public static Output<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args) {
         return getHcVpnGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -734,8 +734,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getHcVpnGateway:getHcVpnGateway", TypeShape.of(GetHcVpnGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getHcVpnGateway:getHcVpnGateway", TypeShape.of(GetHcVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a HealthCheck.
@@ -764,7 +764,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
+    public static Output<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
         return getHealthCheck(args, InvokeOptions.Empty);
     }
     /**
@@ -794,8 +794,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getHealthCheck:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getHealthCheck:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a Google Compute Image. Check that your service account has the `compute.imageUser` role if you want to share [custom images](https://cloud.google.com/compute/docs/images/sharing-images-across-projects) from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
@@ -834,7 +834,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage() {
+    public static Output<GetImageResult> getImage() {
         return getImage(GetImageArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -874,7 +874,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -914,8 +914,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a VM instance resource within GCE. For more information see
@@ -948,7 +948,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance() {
+    public static Output<GetInstanceResult> getInstance() {
         return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -982,7 +982,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -1016,8 +1016,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Compute Instance Group within GCE.
@@ -1047,7 +1047,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup() {
+    public static Output<GetInstanceGroupResult> getInstanceGroup() {
         return getInstanceGroup(GetInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1078,7 +1078,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args) {
+    public static Output<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args) {
         return getInstanceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -1109,8 +1109,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceGroup:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getInstanceGroup:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the serial port output from a Compute Instance. For more information see
@@ -1201,7 +1201,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args) {
+    public static Output<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args) {
         return getInstanceSerialPort(args, InvokeOptions.Empty);
     }
     /**
@@ -1293,8 +1293,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a VM instance template resource within GCE. For more information see
@@ -1331,7 +1331,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate() {
+    public static Output<GetInstanceTemplateResult> getInstanceTemplate() {
         return getInstanceTemplate(GetInstanceTemplateArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1369,7 +1369,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
+    public static Output<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
         return getInstanceTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -1407,8 +1407,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceTemplate:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getInstanceTemplate:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access IP ranges in your firewall rules.
@@ -1447,7 +1447,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges() {
+    public static Output<GetLBIPRangesResult> getLBIPRanges() {
         return getLBIPRanges(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1487,7 +1487,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args) {
+    public static Output<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args) {
         return getLBIPRanges(args, InvokeOptions.Empty);
     }
     /**
@@ -1527,8 +1527,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getLBIPRanges:getLBIPRanges", TypeShape.of(GetLBIPRangesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getLBIPRanges:getLBIPRanges", TypeShape.of(GetLBIPRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
@@ -1592,7 +1592,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges() {
+    public static Output<GetNetblockIPRangesResult> getNetblockIPRanges() {
         return getNetblockIPRanges(GetNetblockIPRangesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1657,7 +1657,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args) {
+    public static Output<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args) {
         return getNetblockIPRanges(args, InvokeOptions.Empty);
     }
     /**
@@ -1722,8 +1722,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a network within GCE from its name.
@@ -1752,7 +1752,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+    public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args) {
         return getNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -1782,8 +1782,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access a Network Endpoint Group&#39;s attributes.
@@ -1819,7 +1819,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup() {
+    public static Output<GetNetworkEndpointGroupResult> getNetworkEndpointGroup() {
         return getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1856,7 +1856,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args) {
+    public static Output<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args) {
         return getNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -1893,8 +1893,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getNetworkEndpointGroup:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getNetworkEndpointGroup:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides available node types for Compute Engine sole-tenant nodes in a zone
@@ -1929,7 +1929,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNodeTypesResult> getNodeTypes() {
+    public static Output<GetNodeTypesResult> getNodeTypes() {
         return getNodeTypes(GetNodeTypesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1965,7 +1965,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args) {
+    public static Output<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args) {
         return getNodeTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -2001,8 +2001,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getNodeTypes:getNodeTypes", TypeShape.of(GetNodeTypesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getNodeTypes:getNodeTypes", TypeShape.of(GetNodeTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Compute Region Instance Group within GCE.
@@ -2032,7 +2032,7 @@ public final class ComputeFunctions {
      * The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
      * 
      */
-    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup() {
+    public static Output<GetRegionInstanceGroupResult> getRegionInstanceGroup() {
         return getRegionInstanceGroup(GetRegionInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2063,7 +2063,7 @@ public final class ComputeFunctions {
      * The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
      * 
      */
-    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args) {
+    public static Output<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args) {
         return getRegionInstanceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -2094,8 +2094,8 @@ public final class ComputeFunctions {
      * The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
      * 
      */
-    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getRegionInstanceGroup:getRegionInstanceGroup", TypeShape.of(GetRegionInstanceGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getRegionInstanceGroup:getRegionInstanceGroup", TypeShape.of(GetRegionInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get info about a Region Google Compute SSL Certificate from its name.
@@ -2127,7 +2127,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args) {
+    public static Output<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args) {
         return getRegionSslCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -2160,15 +2160,15 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getRegionSslCertificate:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getRegionSslCertificate:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to available Google Compute regions for a given project.
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions() {
+    public static Output<GetRegionsResult> getRegions() {
         return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2176,7 +2176,7 @@ public final class ComputeFunctions {
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args) {
         return getRegions(args, InvokeOptions.Empty);
     }
     /**
@@ -2184,8 +2184,8 @@ public final class ComputeFunctions {
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provide access to a Resource Policy&#39;s attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
@@ -2213,7 +2213,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
+    public static Output<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
         return getResourcePolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -2242,8 +2242,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getResourcePolicy:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getResourcePolicy:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a router within GCE from its name and VPC.
@@ -2273,7 +2273,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args) {
+    public static Output<GetRouterResult> getRouter(GetRouterArgs args) {
         return getRouter(args, InvokeOptions.Empty);
     }
     /**
@@ -2304,8 +2304,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getRouter:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getRouter:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Cloud Router&#39;s status within GCE from its name and region. This data source exposes the
@@ -2339,7 +2339,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args) {
+    public static Output<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args) {
         return getRouterStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -2374,8 +2374,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getRouterStatus:getRouterStatus", TypeShape.of(GetRouterStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouterStatusResult> getRouterStatus(GetRouterStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getRouterStatus:getRouterStatus", TypeShape.of(GetRouterStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
@@ -2405,7 +2405,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args) {
+    public static Output<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args) {
         return getSSLPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -2436,8 +2436,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getSSLPolicy:getSSLPolicy", TypeShape.of(GetSSLPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getSSLPolicy:getSSLPolicy", TypeShape.of(GetSSLPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a subnetwork within GCE from its name and region.
@@ -2467,7 +2467,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork() {
+    public static Output<GetSubnetworkResult> getSubnetwork() {
         return getSubnetwork(GetSubnetworkArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2498,7 +2498,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args) {
+    public static Output<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args) {
         return getSubnetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -2529,8 +2529,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a VPN gateway within GCE from its name.
@@ -2559,7 +2559,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args) {
+    public static Output<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args) {
         return getVPNGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -2589,15 +2589,15 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getVPNGateway:getVPNGateway", TypeShape.of(GetVPNGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getVPNGateway:getVPNGateway", TypeShape.of(GetVPNGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to available Google Compute zones in a region for a given project.
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones() {
+    public static Output<GetZonesResult> getZones() {
         return getZones(GetZonesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2605,7 +2605,7 @@ public final class ComputeFunctions {
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args) {
+    public static Output<GetZonesResult> getZones(GetZonesArgs args) {
         return getZones(args, InvokeOptions.Empty);
     }
     /**
@@ -2613,8 +2613,8 @@ public final class ComputeFunctions {
      * See more about [regions and zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) in the upstream docs.
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Cloud Router&#39;s status within GCE from its name and region. This data source exposes the
@@ -2652,7 +2652,7 @@ public final class ComputeFunctions {
      * 
      */
     @Deprecated /* gcp.compute.RouterStatus has been deprecated in favor of gcp.compute.getRouterStatus */
-    public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args) {
+    public static Output<RouterStatusResult> routerStatus(RouterStatusArgs args) {
         return routerStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -2691,7 +2691,7 @@ public final class ComputeFunctions {
      * 
      */
     @Deprecated /* gcp.compute.RouterStatus has been deprecated in favor of gcp.compute.getRouterStatus */
-    public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<RouterStatusResult> routerStatus(RouterStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args, Utilities.withVersion(options));
     }
 }

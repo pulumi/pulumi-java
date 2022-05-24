@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Storage Encryption Scope.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageAccountId", required=true)
-    private String storageAccountId;
+    private Output<String> storageAccountId;
 
     /**
      * @return The ID of the Storage Account where this Storage Encryption Scope exists.
      * 
      */
-    public String storageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
@@ -73,8 +74,29 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this Storage Encryption Scope.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param storageAccountId The ID of the Storage Account where this Storage Encryption Scope exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountId(Output<String> storageAccountId) {
+            $.storageAccountId = storageAccountId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder storageAccountId(String storageAccountId) {
-            $.storageAccountId = storageAccountId;
-            return this;
+            return storageAccountId(Output.of(storageAccountId));
         }
 
         public GetEncryptionScopeArgs build() {

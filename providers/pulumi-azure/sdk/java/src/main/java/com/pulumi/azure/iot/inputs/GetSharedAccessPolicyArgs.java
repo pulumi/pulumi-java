@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iothubName", required=true)
-    private String iothubName;
+    private Output<String> iothubName;
 
     /**
      * @return The name of the IoTHub to which this Shared Access Policy belongs.
      * 
      */
-    public String iothubName() {
+    public Output<String> iothubName() {
         return this.iothubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the IotHub Shared Access Policy resource.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group under which the IotHub Shared Access Policy resource has to be created.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder iothubName(String iothubName) {
+        public Builder iothubName(Output<String> iothubName) {
             $.iothubName = iothubName;
+            return this;
+        }
+
+        /**
+         * @param iothubName The name of the IoTHub to which this Shared Access Policy belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iothubName(String iothubName) {
+            return iothubName(Output.of(iothubName));
+        }
+
+        /**
+         * @param name Specifies the name of the IotHub Shared Access Policy resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group under which the IotHub Shared Access Policy resource has to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSharedAccessPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetSharedAccessPolicyArgs build() {

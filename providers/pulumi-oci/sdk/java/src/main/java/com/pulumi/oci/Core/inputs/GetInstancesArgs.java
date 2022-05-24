@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetInstancesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacityReservationId")
-    private @Nullable String capacityReservationId;
+    private Output</* @Nullable */ String> capacityReservationId;
 
     /**
      * @return The OCID of the compute capacity reservation.
      * 
      */
-    public Optional<String> capacityReservationId() {
-        return Optional.ofNullable(this.capacityReservationId);
+    public Output</* @Nullable */ String> capacityReservationId() {
+        return this.capacityReservationId;
     }
 
     /**
@@ -51,13 +51,13 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -66,21 +66,21 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstancesFilter> filters;
+    private Output</* @Nullable */ List<GetInstancesFilter>> filters;
 
-    public Optional<List<GetInstancesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetInstancesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetInstancesArgs() {}
@@ -133,8 +133,29 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param capacityReservationId The OCID of the compute capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationId(Output</* @Nullable */ String> capacityReservationId) {
+            $.capacityReservationId = capacityReservationId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
-            $.capacityReservationId = capacityReservationId;
+            return capacityReservationId(Output.of(capacityReservationId));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -156,7 +187,17 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -167,13 +208,16 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetInstancesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetInstancesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetInstancesFilter... filters) {
@@ -186,9 +230,19 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetInstancesArgs build() {

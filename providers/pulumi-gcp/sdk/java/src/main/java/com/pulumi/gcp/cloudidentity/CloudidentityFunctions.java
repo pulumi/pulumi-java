@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.cloudidentity;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GetGroupsArgs;
 import com.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsResult;
 import com.pulumi.gcp.cloudidentity.outputs.GetGroupsResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudidentityFunctions {
     /**
@@ -43,7 +43,7 @@ public final class CloudidentityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args) {
+    public static Output<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args) {
         return getGroupMemberships(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class CloudidentityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroupMemberships:getGroupMemberships", TypeShape.of(GetGroupMembershipsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:cloudidentity/getGroupMemberships:getGroupMemberships", TypeShape.of(GetGroupMembershipsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get list of the Cloud Identity Groups under a customer or namespace.
@@ -107,7 +107,7 @@ public final class CloudidentityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args) {
         return getGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +139,7 @@ public final class CloudidentityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:cloudidentity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

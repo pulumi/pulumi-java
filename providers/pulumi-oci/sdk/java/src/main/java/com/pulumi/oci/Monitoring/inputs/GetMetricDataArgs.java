@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Monitoring.inputs.GetMetricDataFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the resources monitored by the metric that you are searching for. Use tenancyId to search in the root compartment.  Example: `ocid1.compartment.oc1..exampleuniqueID`
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,14 +37,14 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return When true, returns resources from all compartments and subcompartments. The parameter can only be set to true when compartmentId is the tenancy OCID (the tenancy is the root compartment). A true value requires the user to have tenancy-level permissions. If this requirement is not met, then the call is rejected. When false, returns resources from only the compartment specified in compartmentId. Default is false.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -52,21 +52,21 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime")
-    private @Nullable String endTime;
+    private Output</* @Nullable */ String> endTime;
 
     /**
      * @return The end of the time range to use when searching for metric data points. Format is defined by RFC3339. The response excludes metric data points for the endTime. Default value: the timestamp representing when the call was sent.  Example: `2019-02-01T02:02:29.600Z`
      * 
      */
-    public Optional<String> endTime() {
-        return Optional.ofNullable(this.endTime);
+    public Output</* @Nullable */ String> endTime() {
+        return this.endTime;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMetricDataFilter> filters;
+    private Output</* @Nullable */ List<GetMetricDataFilter>> filters;
 
-    public Optional<List<GetMetricDataFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetMetricDataFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,13 +74,13 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The source service or application to use when searching for metric data points to aggregate.  Example: `oci_computeagent`
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -89,13 +89,13 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="query", required=true)
-    private String query;
+    private Output<String> query;
 
     /**
      * @return The Monitoring Query Language (MQL) expression to use when searching for metric data points to aggregate. The query must specify a metric, statistic, and interval. Supported values for interval depend on the specified time range. More interval values are supported for smaller time ranges. You can optionally specify dimensions and grouping functions. Supported grouping functions: `grouping()`, `groupBy()`.
      * 
      */
-    public String query() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -104,14 +104,14 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolution")
-    private @Nullable String resolution;
+    private Output</* @Nullable */ String> resolution;
 
     /**
      * @return The time between calculated aggregation windows. Use with the query interval to vary the frequency at which aggregated data points are returned. For example, use a query interval of 5 minutes with a resolution of 1 minute to retrieve five-minute aggregations at a one-minute frequency. The resolution must be equal or less than the interval in the query. The default resolution is 1m (one minute). Supported values: `1m`-`60m`, `1h`-`24h`, `1d`.  Example: `5m`
      * 
      */
-    public Optional<String> resolution() {
-        return Optional.ofNullable(this.resolution);
+    public Output</* @Nullable */ String> resolution() {
+        return this.resolution;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroup")
-    private @Nullable String resourceGroup;
+    private Output</* @Nullable */ String> resourceGroup;
 
     /**
      * @return Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric. A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).  Example: `frontend-fleet`
      * 
      */
-    public Optional<String> resourceGroup() {
-        return Optional.ofNullable(this.resourceGroup);
+    public Output</* @Nullable */ String> resourceGroup() {
+        return this.resourceGroup;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-    private @Nullable String startTime;
+    private Output</* @Nullable */ String> startTime;
 
     /**
      * @return The beginning of the time range to use when searching for metric data points. Format is defined by RFC3339. The response includes metric data points for the startTime. Default value: the timestamp 3 hours before the call was sent.  Example: `2019-02-01T01:02:29.600Z`
      * 
      */
-    public Optional<String> startTime() {
-        return Optional.ofNullable(this.startTime);
+    public Output</* @Nullable */ String> startTime() {
+        return this.startTime;
     }
 
     private GetMetricDataArgs() {}
@@ -182,8 +182,29 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the resources monitored by the metric that you are searching for. Use tenancyId to search in the root compartment.  Example: `ocid1.compartment.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When true, returns resources from all compartments and subcompartments. The parameter can only be set to true when compartmentId is the tenancy OCID (the tenancy is the root compartment). A true value requires the user to have tenancy-level permissions. If this requirement is not met, then the call is rejected. When false, returns resources from only the compartment specified in compartmentId. Default is false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -194,7 +215,17 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param endTime The end of the time range to use when searching for metric data points. Format is defined by RFC3339. The response excludes metric data points for the endTime. Default value: the timestamp representing when the call was sent.  Example: `2019-02-01T02:02:29.600Z`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output</* @Nullable */ String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -205,13 +236,16 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder endTime(@Nullable String endTime) {
-            $.endTime = endTime;
+            return endTime(Output.of(endTime));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetMetricDataFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetMetricDataFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetMetricDataFilter... filters) {
@@ -224,8 +258,29 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The source service or application to use when searching for metric data points to aggregate.  Example: `oci_computeagent`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param query The Monitoring Query Language (MQL) expression to use when searching for metric data points to aggregate. The query must specify a metric, statistic, and interval. Supported values for interval depend on the specified time range. More interval values are supported for smaller time ranges. You can optionally specify dimensions and grouping functions. Supported grouping functions: `grouping()`, `groupBy()`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder query(Output<String> query) {
+            $.query = query;
             return this;
         }
 
@@ -236,7 +291,17 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder query(String query) {
-            $.query = query;
+            return query(Output.of(query));
+        }
+
+        /**
+         * @param resolution The time between calculated aggregation windows. Use with the query interval to vary the frequency at which aggregated data points are returned. For example, use a query interval of 5 minutes with a resolution of 1 minute to retrieve five-minute aggregations at a one-minute frequency. The resolution must be equal or less than the interval in the query. The default resolution is 1m (one minute). Supported values: `1m`-`60m`, `1h`-`24h`, `1d`.  Example: `5m`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolution(Output</* @Nullable */ String> resolution) {
+            $.resolution = resolution;
             return this;
         }
 
@@ -247,7 +312,17 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resolution(@Nullable String resolution) {
-            $.resolution = resolution;
+            return resolution(Output.of(resolution));
+        }
+
+        /**
+         * @param resourceGroup Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric. A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).  Example: `frontend-fleet`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output</* @Nullable */ String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -258,7 +333,17 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            $.resourceGroup = resourceGroup;
+            return resourceGroup(Output.of(resourceGroup));
+        }
+
+        /**
+         * @param startTime The beginning of the time range to use when searching for metric data points. Format is defined by RFC3339. The response includes metric data points for the startTime. Default value: the timestamp 3 hours before the call was sent.  Example: `2019-02-01T01:02:29.600Z`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output</* @Nullable */ String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -269,8 +354,7 @@ public final class GetMetricDataArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder startTime(@Nullable String startTime) {
-            $.startTime = startTime;
-            return this;
+            return startTime(Output.of(startTime));
         }
 
         public GetMetricDataArgs build() {

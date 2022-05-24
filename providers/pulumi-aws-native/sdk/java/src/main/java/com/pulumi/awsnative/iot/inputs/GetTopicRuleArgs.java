@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetTopicRuleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTopicRuleArgs Empty = new GetTopicRuleArgs();
 
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -43,9 +44,13 @@ public final class GetTopicRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTopicRuleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ruleName(String ruleName) {
+        public Builder ruleName(Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
+        }
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
 
         public GetTopicRuleArgs build() {

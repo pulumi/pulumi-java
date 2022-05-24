@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="objectReplicationPolicyId", required=true)
-    private String objectReplicationPolicyId;
+    private Output<String> objectReplicationPolicyId;
 
     /**
      * @return The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
      * 
      */
-    public String objectReplicationPolicyId() {
+    public Output<String> objectReplicationPolicyId() {
         return this.objectReplicationPolicyId;
     }
 
@@ -47,13 +48,13 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param objectReplicationPolicyId The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectReplicationPolicyId(Output<String> objectReplicationPolicyId) {
+            $.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
          * 
          */
         public Builder objectReplicationPolicyId(String objectReplicationPolicyId) {
-            $.objectReplicationPolicyId = objectReplicationPolicyId;
+            return objectReplicationPolicyId(Output.of(objectReplicationPolicyId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetObjectReplicationPolicyArgs build() {

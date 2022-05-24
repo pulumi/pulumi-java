@@ -4,12 +4,12 @@
 package com.pulumi.azure.storage.inputs;
 
 import com.pulumi.azure.storage.inputs.GetShareAcl;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acls")
-    private @Nullable List<GetShareAcl> acls;
+    private Output</* @Nullable */ List<GetShareAcl>> acls;
 
     /**
      * @return One or more acl blocks as defined below.
      * 
      */
-    public Optional<List<GetShareAcl>> acls() {
-        return Optional.ofNullable(this.acls);
+    public Output</* @Nullable */ List<GetShareAcl>> acls() {
+        return this.acls;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata")
-    private @Nullable Map<String,String> metadata;
+    private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
      * @return A map of custom file share metadata.
      * 
      */
-    public Optional<Map<String,String>> metadata() {
-        return Optional.ofNullable(this.metadata);
+    public Output</* @Nullable */ Map<String,String>> metadata() {
+        return this.metadata;
     }
 
     /**
@@ -52,13 +52,13 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the share.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -67,13 +67,13 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountName", required=true)
-    private String storageAccountName;
+    private Output<String> storageAccountName;
 
     /**
      * @return The name of the storage account.
      * 
      */
-    public String storageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -110,9 +110,19 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acls(@Nullable List<GetShareAcl> acls) {
+        public Builder acls(Output</* @Nullable */ List<GetShareAcl>> acls) {
             $.acls = acls;
             return this;
+        }
+
+        /**
+         * @param acls One or more acl blocks as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acls(@Nullable List<GetShareAcl> acls) {
+            return acls(Output.of(acls));
         }
 
         /**
@@ -131,8 +141,29 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(Output</* @Nullable */ Map<String,String>> metadata) {
             $.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * @param metadata A map of custom file share metadata.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadata(@Nullable Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        /**
+         * @param name The name of the share.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -143,7 +174,17 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param storageAccountName The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountName(Output<String> storageAccountName) {
+            $.storageAccountName = storageAccountName;
             return this;
         }
 
@@ -154,8 +195,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageAccountName(String storageAccountName) {
-            $.storageAccountName = storageAccountName;
-            return this;
+            return storageAccountName(Output.of(storageAccountName));
         }
 
         public GetShareArgs build() {

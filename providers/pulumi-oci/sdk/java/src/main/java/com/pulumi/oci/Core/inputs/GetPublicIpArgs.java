@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The OCID of the public IP.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-    private @Nullable String ipAddress;
+    private Output</* @Nullable */ String> ipAddress;
 
     /**
      * @return Gets the public IP based on the public IP address (for example, 129.146.2.1).
      * 
      */
-    public Optional<String> ipAddress() {
-        return Optional.ofNullable(this.ipAddress);
+    public Output</* @Nullable */ String> ipAddress() {
+        return this.ipAddress;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateIpId")
-    private @Nullable String privateIpId;
+    private Output</* @Nullable */ String> privateIpId;
 
     /**
      * @return Gets the public IP assigned to the specified private IP. You must specify the OCID of the private IP. If no public IP is assigned, a 404 is returned.
      * 
      */
-    public Optional<String> privateIpId() {
-        return Optional.ofNullable(this.privateIpId);
+    public Output</* @Nullable */ String> privateIpId() {
+        return this.privateIpId;
     }
 
     private GetPublicIpArgs() {}
@@ -91,8 +91,29 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The OCID of the public IP.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param ipAddress Gets the public IP based on the public IP address (for example, 129.146.2.1).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(Output</* @Nullable */ String> ipAddress) {
+            $.ipAddress = ipAddress;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ipAddress(@Nullable String ipAddress) {
-            $.ipAddress = ipAddress;
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        /**
+         * @param privateIpId Gets the public IP assigned to the specified private IP. You must specify the OCID of the private IP. If no public IP is assigned, a 404 is returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateIpId(Output</* @Nullable */ String> privateIpId) {
+            $.privateIpId = privateIpId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder privateIpId(@Nullable String privateIpId) {
-            $.privateIpId = privateIpId;
-            return this;
+            return privateIpId(Output.of(privateIpId));
         }
 
         public GetPublicIpArgs build() {

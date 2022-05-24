@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetTransferJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTransferJobArgs Empty = new GetTransferJobArgs();
 
     @Import(name="projectId", required=true)
-    private String projectId;
+    private Output<String> projectId;
 
-    public String projectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
     @Import(name="transferJobId", required=true)
-    private String transferJobId;
+    private Output<String> transferJobId;
 
-    public String transferJobId() {
+    public Output<String> transferJobId() {
         return this.transferJobId;
     }
 
@@ -51,14 +52,22 @@ public final class GetTransferJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTransferJobArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder projectId(String projectId) {
+        public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder transferJobId(String transferJobId) {
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public Builder transferJobId(Output<String> transferJobId) {
             $.transferJobId = transferJobId;
             return this;
+        }
+
+        public Builder transferJobId(String transferJobId) {
+            return transferJobId(Output.of(transferJobId));
         }
 
         public GetTransferJobArgs build() {

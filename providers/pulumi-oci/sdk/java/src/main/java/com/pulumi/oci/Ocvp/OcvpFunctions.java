@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ocvp;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +22,6 @@ import com.pulumi.oci.Ocvp.outputs.GetSupportedHostShapesResult;
 import com.pulumi.oci.Ocvp.outputs.GetSupportedSkusResult;
 import com.pulumi.oci.Ocvp.outputs.GetSupportedVmwareSoftwareVersionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OcvpFunctions {
     /**
@@ -32,7 +32,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostResult> getExsiHost(GetExsiHostArgs args) {
+    public static Output<GetExsiHostResult> getExsiHost(GetExsiHostArgs args) {
         return getExsiHost(args, InvokeOptions.Empty);
     }
     /**
@@ -43,8 +43,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostResult> getExsiHost(GetExsiHostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getExsiHost:getExsiHost", TypeShape.of(GetExsiHostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExsiHostResult> getExsiHost(GetExsiHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getExsiHost:getExsiHost", TypeShape.of(GetExsiHostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Esxi Hosts in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -62,7 +62,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts() {
+    public static Output<GetExsiHostsResult> getExsiHosts() {
         return getExsiHosts(GetExsiHostsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args) {
+    public static Output<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args) {
         return getExsiHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -100,8 +100,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getExsiHosts:getExsiHosts", TypeShape.of(GetExsiHostsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getExsiHosts:getExsiHosts", TypeShape.of(GetExsiHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Sddc resource in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -111,7 +111,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcResult> getSddc(GetSddcArgs args) {
+    public static Output<GetSddcResult> getSddc(GetSddcArgs args) {
         return getSddc(args, InvokeOptions.Empty);
     }
     /**
@@ -122,8 +122,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcResult> getSddc(GetSddcArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getSddc:getSddc", TypeShape.of(GetSddcResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSddcResult> getSddc(GetSddcArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSddc:getSddc", TypeShape.of(GetSddcResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sddcs in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -134,7 +134,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcsResult> getSddcs(GetSddcsArgs args) {
+    public static Output<GetSddcsResult> getSddcs(GetSddcsArgs args) {
         return getSddcs(args, InvokeOptions.Empty);
     }
     /**
@@ -146,8 +146,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcsResult> getSddcs(GetSddcsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getSddcs:getSddcs", TypeShape.of(GetSddcsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSddcsResult> getSddcs(GetSddcsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSddcs:getSddcs", TypeShape.of(GetSddcsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Supported Host Shapes in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -157,7 +157,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args) {
+    public static Output<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args) {
         return getSupportedHostShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -168,8 +168,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedHostShapes:getSupportedHostShapes", TypeShape.of(GetSupportedHostShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedHostShapes:getSupportedHostShapes", TypeShape.of(GetSupportedHostShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Supported Skus in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -179,7 +179,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args) {
+    public static Output<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args) {
         return getSupportedSkus(args, InvokeOptions.Empty);
     }
     /**
@@ -190,8 +190,8 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedSkus:getSupportedSkus", TypeShape.of(GetSupportedSkusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedSkus:getSupportedSkus", TypeShape.of(GetSupportedSkusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Supported Vmware Software Versions in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
@@ -202,7 +202,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args) {
+    public static Output<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args) {
         return getSupportedVmwareSoftwareVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -214,7 +214,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedVmwareSoftwareVersions:getSupportedVmwareSoftwareVersions", TypeShape.of(GetSupportedVmwareSoftwareVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedVmwareSoftwareVersions:getSupportedVmwareSoftwareVersions", TypeShape.of(GetSupportedVmwareSoftwareVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-    private String transitGatewayAttachmentId;
+    private Output<String> transitGatewayAttachmentId;
 
     /**
      * @return The ID of the transit gateway peering attachment.
      * 
      */
-    public String transitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
+        }
+
+        /**
+         * @param transitGatewayAttachmentId The ID of the transit gateway peering attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
 
         public GetTransitGatewayPeeringAttachmentArgs build() {

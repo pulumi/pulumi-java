@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
      * 
      */
     @Import(name="auditProfileId", required=true)
-    private String auditProfileId;
+    private Output<String> auditProfileId;
 
     /**
      * @return The OCID of the audit.
      * 
      */
-    public String auditProfileId() {
+    public Output<String> auditProfileId() {
         return this.auditProfileId;
     }
 
@@ -34,14 +34,14 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
      * 
      */
     @Import(name="monthInConsiderationGreaterThan")
-    private @Nullable String monthInConsiderationGreaterThan;
+    private Output</* @Nullable */ String> monthInConsiderationGreaterThan;
 
     /**
      * @return Specifying `monthInConsiderationGreaterThan` parameter will retrieve all items for which the event month is greater than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> monthInConsiderationGreaterThan() {
-        return Optional.ofNullable(this.monthInConsiderationGreaterThan);
+    public Output</* @Nullable */ String> monthInConsiderationGreaterThan() {
+        return this.monthInConsiderationGreaterThan;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
      * 
      */
     @Import(name="monthInConsiderationLessThan")
-    private @Nullable String monthInConsiderationLessThan;
+    private Output</* @Nullable */ String> monthInConsiderationLessThan;
 
     /**
      * @return Specifying `monthInConsiderationLessThan` parameter will retrieve all items for which the event month is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> monthInConsiderationLessThan() {
-        return Optional.ofNullable(this.monthInConsiderationLessThan);
+    public Output</* @Nullable */ String> monthInConsiderationLessThan() {
+        return this.monthInConsiderationLessThan;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
      * 
      */
     @Import(name="trailLocation")
-    private @Nullable String trailLocation;
+    private Output</* @Nullable */ String> trailLocation;
 
     /**
      * @return The audit trail location.
      * 
      */
-    public Optional<String> trailLocation() {
-        return Optional.ofNullable(this.trailLocation);
+    public Output</* @Nullable */ String> trailLocation() {
+        return this.trailLocation;
     }
 
     /**
@@ -79,13 +79,13 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
      * 
      */
     @Import(name="workRequestId", required=true)
-    private String workRequestId;
+    private Output<String> workRequestId;
 
     /**
      * @return The OCID of the work request.
      * 
      */
-    public String workRequestId() {
+    public Output<String> workRequestId() {
         return this.workRequestId;
     }
 
@@ -123,8 +123,29 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder auditProfileId(String auditProfileId) {
+        public Builder auditProfileId(Output<String> auditProfileId) {
             $.auditProfileId = auditProfileId;
+            return this;
+        }
+
+        /**
+         * @param auditProfileId The OCID of the audit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditProfileId(String auditProfileId) {
+            return auditProfileId(Output.of(auditProfileId));
+        }
+
+        /**
+         * @param monthInConsiderationGreaterThan Specifying `monthInConsiderationGreaterThan` parameter will retrieve all items for which the event month is greater than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monthInConsiderationGreaterThan(Output</* @Nullable */ String> monthInConsiderationGreaterThan) {
+            $.monthInConsiderationGreaterThan = monthInConsiderationGreaterThan;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
          * 
          */
         public Builder monthInConsiderationGreaterThan(@Nullable String monthInConsiderationGreaterThan) {
-            $.monthInConsiderationGreaterThan = monthInConsiderationGreaterThan;
+            return monthInConsiderationGreaterThan(Output.of(monthInConsiderationGreaterThan));
+        }
+
+        /**
+         * @param monthInConsiderationLessThan Specifying `monthInConsiderationLessThan` parameter will retrieve all items for which the event month is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monthInConsiderationLessThan(Output</* @Nullable */ String> monthInConsiderationLessThan) {
+            $.monthInConsiderationLessThan = monthInConsiderationLessThan;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
          * 
          */
         public Builder monthInConsiderationLessThan(@Nullable String monthInConsiderationLessThan) {
-            $.monthInConsiderationLessThan = monthInConsiderationLessThan;
+            return monthInConsiderationLessThan(Output.of(monthInConsiderationLessThan));
+        }
+
+        /**
+         * @param trailLocation The audit trail location.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trailLocation(Output</* @Nullable */ String> trailLocation) {
+            $.trailLocation = trailLocation;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
          * 
          */
         public Builder trailLocation(@Nullable String trailLocation) {
-            $.trailLocation = trailLocation;
+            return trailLocation(Output.of(trailLocation));
+        }
+
+        /**
+         * @param workRequestId The OCID of the work request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workRequestId(Output<String> workRequestId) {
+            $.workRequestId = workRequestId;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetAuditProfileAvailableAuditVolumeArgs extends com.pulumi.re
          * 
          */
         public Builder workRequestId(String workRequestId) {
-            $.workRequestId = workRequestId;
-            return this;
+            return workRequestId(Output.of(workRequestId));
         }
 
         public GetAuditProfileAvailableAuditVolumeArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataproc_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends com.pulumi.res
     public static final GetRegionWorkflowTemplateIamPolicyArgs Empty = new GetRegionWorkflowTemplateIamPolicyArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
     @Import(name="workflowTemplateId", required=true)
-    private String workflowTemplateId;
+    private Output<String> workflowTemplateId;
 
-    public String workflowTemplateId() {
+    public Output<String> workflowTemplateId() {
         return this.workflowTemplateId;
     }
 
@@ -61,19 +61,31 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends com.pulumi.res
             $ = new GetRegionWorkflowTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
         }
 
-        public Builder workflowTemplateId(String workflowTemplateId) {
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
+        }
+
+        public Builder workflowTemplateId(Output<String> workflowTemplateId) {
             $.workflowTemplateId = workflowTemplateId;
             return this;
+        }
+
+        public Builder workflowTemplateId(String workflowTemplateId) {
+            return workflowTemplateId(Output.of(workflowTemplateId));
         }
 
         public GetRegionWorkflowTemplateIamPolicyArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OsubUsage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OsubUsage.inputs.GetCommitmentAggregatedsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the root compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCommitmentAggregatedsFilter> filters;
+    private Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters;
 
-    public Optional<List<GetCommitmentAggregatedsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="grouping")
-    private @Nullable String grouping;
+    private Output</* @Nullable */ String> grouping;
 
     /**
      * @return Grouping criteria to use for aggregate the computed Usage, either hourly (`HOURLY`), daily (`DAILY`), monthly(`MONTHLY`) or none (`NONE`) to not follow a grouping criteria by date.
      * 
      */
-    public Optional<String> grouping() {
-        return Optional.ofNullable(this.grouping);
+    public Output</* @Nullable */ String> grouping() {
+        return this.grouping;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parentProduct")
-    private @Nullable String parentProduct;
+    private Output</* @Nullable */ String> parentProduct;
 
     /**
      * @return Product part number for subscribed service line, called parent product.
      * 
      */
-    public Optional<String> parentProduct() {
-        return Optional.ofNullable(this.parentProduct);
+    public Output</* @Nullable */ String> parentProduct() {
+        return this.parentProduct;
     }
 
     /**
@@ -73,13 +73,13 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -88,13 +88,13 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeFrom", required=true)
-    private String timeFrom;
+    private Output<String> timeFrom;
 
     /**
      * @return Initial date to filter Computed Usage data in SPM. In the case of non aggregated data the time period between of fromDate and toDate , expressed in RFC 3339 timestamp format.
      * 
      */
-    public String timeFrom() {
+    public Output<String> timeFrom() {
         return this.timeFrom;
     }
 
@@ -103,13 +103,13 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeTo", required=true)
-    private String timeTo;
+    private Output<String> timeTo;
 
     /**
      * @return Final date to filter Computed Usage data in SPM, expressed in RFC 3339 timestamp format.
      * 
      */
-    public String timeTo() {
+    public Output<String> timeTo() {
         return this.timeTo;
     }
 
@@ -118,14 +118,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetCommitmentAggregatedsArgs() {}
@@ -165,14 +165,28 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCommitmentAggregatedsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the root compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCommitmentAggregatedsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCommitmentAggregatedsFilter... filters) {
@@ -185,8 +199,29 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder grouping(@Nullable String grouping) {
+        public Builder grouping(Output</* @Nullable */ String> grouping) {
             $.grouping = grouping;
+            return this;
+        }
+
+        /**
+         * @param grouping Grouping criteria to use for aggregate the computed Usage, either hourly (`HOURLY`), daily (`DAILY`), monthly(`MONTHLY`) or none (`NONE`) to not follow a grouping criteria by date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grouping(@Nullable String grouping) {
+            return grouping(Output.of(grouping));
+        }
+
+        /**
+         * @param parentProduct Product part number for subscribed service line, called parent product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentProduct(Output</* @Nullable */ String> parentProduct) {
+            $.parentProduct = parentProduct;
             return this;
         }
 
@@ -197,7 +232,17 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder parentProduct(@Nullable String parentProduct) {
-            $.parentProduct = parentProduct;
+            return parentProduct(Output.of(parentProduct));
+        }
+
+        /**
+         * @param subscriptionId Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -208,7 +253,17 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param timeFrom Initial date to filter Computed Usage data in SPM. In the case of non aggregated data the time period between of fromDate and toDate , expressed in RFC 3339 timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeFrom(Output<String> timeFrom) {
+            $.timeFrom = timeFrom;
             return this;
         }
 
@@ -219,7 +274,17 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder timeFrom(String timeFrom) {
-            $.timeFrom = timeFrom;
+            return timeFrom(Output.of(timeFrom));
+        }
+
+        /**
+         * @param timeTo Final date to filter Computed Usage data in SPM, expressed in RFC 3339 timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeTo(Output<String> timeTo) {
+            $.timeTo = timeTo;
             return this;
         }
 
@@ -230,7 +295,17 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder timeTo(String timeTo) {
-            $.timeTo = timeTo;
+            return timeTo(Output.of(timeTo));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -241,8 +316,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetCommitmentAggregatedsArgs build() {

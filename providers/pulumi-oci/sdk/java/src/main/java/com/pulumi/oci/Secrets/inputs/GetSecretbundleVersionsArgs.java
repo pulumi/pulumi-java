@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Secrets.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Secrets.inputs.GetSecretbundleVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
     public static final GetSecretbundleVersionsArgs Empty = new GetSecretbundleVersionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSecretbundleVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters;
 
-    public Optional<List<GetSecretbundleVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
     /**
      * @return The OCID of the secret.
      * 
      */
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -63,9 +63,13 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
             $ = new GetSecretbundleVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSecretbundleVersionsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetSecretbundleVersionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSecretbundleVersionsFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder secretId(String secretId) {
+        public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
             return this;
+        }
+
+        /**
+         * @param secretId The OCID of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
         }
 
         public GetSecretbundleVersionsArgs build() {

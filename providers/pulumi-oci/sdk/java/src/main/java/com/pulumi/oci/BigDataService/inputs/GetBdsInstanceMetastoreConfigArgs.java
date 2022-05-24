@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.BigDataService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBdsInstanceMetastoreConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bdsInstanceId", required=true)
-    private String bdsInstanceId;
+    private Output<String> bdsInstanceId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public String bdsInstanceId() {
+    public Output<String> bdsInstanceId() {
         return this.bdsInstanceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetBdsInstanceMetastoreConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="metastoreConfigId", required=true)
-    private String metastoreConfigId;
+    private Output<String> metastoreConfigId;
 
     /**
      * @return The metastore configuration ID
      * 
      */
-    public String metastoreConfigId() {
+    public Output<String> metastoreConfigId() {
         return this.metastoreConfigId;
     }
 
@@ -73,8 +74,29 @@ public final class GetBdsInstanceMetastoreConfigArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder bdsInstanceId(String bdsInstanceId) {
+        public Builder bdsInstanceId(Output<String> bdsInstanceId) {
             $.bdsInstanceId = bdsInstanceId;
+            return this;
+        }
+
+        /**
+         * @param bdsInstanceId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bdsInstanceId(String bdsInstanceId) {
+            return bdsInstanceId(Output.of(bdsInstanceId));
+        }
+
+        /**
+         * @param metastoreConfigId The metastore configuration ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metastoreConfigId(Output<String> metastoreConfigId) {
+            $.metastoreConfigId = metastoreConfigId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBdsInstanceMetastoreConfigArgs extends com.pulumi.resource
          * 
          */
         public Builder metastoreConfigId(String metastoreConfigId) {
-            $.metastoreConfigId = metastoreConfigId;
-            return this;
+            return metastoreConfigId(Output.of(metastoreConfigId));
         }
 
         public GetBdsInstanceMetastoreConfigArgs build() {

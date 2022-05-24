@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.securitycenter_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetFolderBigQueryExportArgs extends com.pulumi.resources.Invo
     public static final GetFolderBigQueryExportArgs Empty = new GetFolderBigQueryExportArgs();
 
     @Import(name="bigQueryExportId", required=true)
-    private String bigQueryExportId;
+    private Output<String> bigQueryExportId;
 
-    public String bigQueryExportId() {
+    public Output<String> bigQueryExportId() {
         return this.bigQueryExportId;
     }
 
     @Import(name="folderId", required=true)
-    private String folderId;
+    private Output<String> folderId;
 
-    public String folderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
@@ -51,14 +52,22 @@ public final class GetFolderBigQueryExportArgs extends com.pulumi.resources.Invo
             $ = new GetFolderBigQueryExportArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bigQueryExportId(String bigQueryExportId) {
+        public Builder bigQueryExportId(Output<String> bigQueryExportId) {
             $.bigQueryExportId = bigQueryExportId;
             return this;
         }
 
-        public Builder folderId(String folderId) {
+        public Builder bigQueryExportId(String bigQueryExportId) {
+            return bigQueryExportId(Output.of(bigQueryExportId));
+        }
+
+        public Builder folderId(Output<String> folderId) {
             $.folderId = folderId;
             return this;
+        }
+
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
 
         public GetFolderBigQueryExportArgs build() {

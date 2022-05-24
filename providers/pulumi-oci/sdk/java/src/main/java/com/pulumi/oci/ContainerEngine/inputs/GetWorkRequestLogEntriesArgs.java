@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestLogEntriesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetWorkRequestLogEntriesFilter> filters;
+    private Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters;
 
-    public Optional<List<GetWorkRequestLogEntriesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="workRequestId", required=true)
-    private String workRequestId;
+    private Output<String> workRequestId;
 
     /**
      * @return The OCID of the work request.
      * 
      */
-    public String workRequestId() {
+    public Output<String> workRequestId() {
         return this.workRequestId;
     }
 
@@ -85,14 +85,28 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetWorkRequestLogEntriesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetWorkRequestLogEntriesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetWorkRequestLogEntriesFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder workRequestId(String workRequestId) {
+        public Builder workRequestId(Output<String> workRequestId) {
             $.workRequestId = workRequestId;
             return this;
+        }
+
+        /**
+         * @param workRequestId The OCID of the work request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workRequestId(String workRequestId) {
+            return workRequestId(Output.of(workRequestId));
         }
 
         public GetWorkRequestLogEntriesArgs build() {

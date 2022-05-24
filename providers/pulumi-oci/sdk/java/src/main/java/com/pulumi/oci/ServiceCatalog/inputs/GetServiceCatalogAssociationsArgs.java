@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ServiceCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogAssociationsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="entityId")
-    private @Nullable String entityId;
+    private Output</* @Nullable */ String> entityId;
 
     /**
      * @return The unique identifier of the entity associated with service catalog.
      * 
      */
-    public Optional<String> entityId() {
-        return Optional.ofNullable(this.entityId);
+    public Output</* @Nullable */ String> entityId() {
+        return this.entityId;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="entityType")
-    private @Nullable String entityType;
+    private Output</* @Nullable */ String> entityType;
 
     /**
      * @return The type of the application in the service catalog.
      * 
      */
-    public Optional<String> entityType() {
-        return Optional.ofNullable(this.entityType);
+    public Output</* @Nullable */ String> entityType() {
+        return this.entityType;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetServiceCatalogAssociationsFilter> filters;
+    private Output</* @Nullable */ List<GetServiceCatalogAssociationsFilter>> filters;
 
-    public Optional<List<GetServiceCatalogAssociationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetServiceCatalogAssociationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serviceCatalogAssociationId")
-    private @Nullable String serviceCatalogAssociationId;
+    private Output</* @Nullable */ String> serviceCatalogAssociationId;
 
     /**
      * @return The unique identifier for the service catalog association.
      * 
      */
-    public Optional<String> serviceCatalogAssociationId() {
-        return Optional.ofNullable(this.serviceCatalogAssociationId);
+    public Output</* @Nullable */ String> serviceCatalogAssociationId() {
+        return this.serviceCatalogAssociationId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serviceCatalogId")
-    private @Nullable String serviceCatalogId;
+    private Output</* @Nullable */ String> serviceCatalogId;
 
     /**
      * @return The unique identifier for the service catalog.
      * 
      */
-    public Optional<String> serviceCatalogId() {
-        return Optional.ofNullable(this.serviceCatalogId);
+    public Output</* @Nullable */ String> serviceCatalogId() {
+        return this.serviceCatalogId;
     }
 
     private GetServiceCatalogAssociationsArgs() {}
@@ -117,8 +117,29 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder entityId(@Nullable String entityId) {
+        public Builder entityId(Output</* @Nullable */ String> entityId) {
             $.entityId = entityId;
+            return this;
+        }
+
+        /**
+         * @param entityId The unique identifier of the entity associated with service catalog.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityId(@Nullable String entityId) {
+            return entityId(Output.of(entityId));
+        }
+
+        /**
+         * @param entityType The type of the application in the service catalog.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityType(Output</* @Nullable */ String> entityType) {
+            $.entityType = entityType;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
          * 
          */
         public Builder entityType(@Nullable String entityType) {
-            $.entityType = entityType;
+            return entityType(Output.of(entityType));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetServiceCatalogAssociationsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetServiceCatalogAssociationsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetServiceCatalogAssociationsFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder serviceCatalogAssociationId(@Nullable String serviceCatalogAssociationId) {
+        public Builder serviceCatalogAssociationId(Output</* @Nullable */ String> serviceCatalogAssociationId) {
             $.serviceCatalogAssociationId = serviceCatalogAssociationId;
+            return this;
+        }
+
+        /**
+         * @param serviceCatalogAssociationId The unique identifier for the service catalog association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCatalogAssociationId(@Nullable String serviceCatalogAssociationId) {
+            return serviceCatalogAssociationId(Output.of(serviceCatalogAssociationId));
+        }
+
+        /**
+         * @param serviceCatalogId The unique identifier for the service catalog.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCatalogId(Output</* @Nullable */ String> serviceCatalogId) {
+            $.serviceCatalogId = serviceCatalogId;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetServiceCatalogAssociationsArgs extends com.pulumi.resource
          * 
          */
         public Builder serviceCatalogId(@Nullable String serviceCatalogId) {
-            $.serviceCatalogId = serviceCatalogId;
-            return this;
+            return serviceCatalogId(Output.of(serviceCatalogId));
         }
 
         public GetServiceCatalogAssociationsArgs build() {

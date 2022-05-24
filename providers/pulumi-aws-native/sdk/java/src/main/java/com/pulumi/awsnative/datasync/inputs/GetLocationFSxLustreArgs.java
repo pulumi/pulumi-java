@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.datasync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLocationFSxLustreArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="locationArn", required=true)
-    private String locationArn;
+    private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon FSx for Lustre file system location that is created.
      * 
      */
-    public String locationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetLocationFSxLustreArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder locationArn(String locationArn) {
+        public Builder locationArn(Output<String> locationArn) {
             $.locationArn = locationArn;
             return this;
+        }
+
+        /**
+         * @param locationArn The Amazon Resource Name (ARN) of the Amazon FSx for Lustre file system location that is created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationArn(String locationArn) {
+            return locationArn(Output.of(locationArn));
         }
 
         public GetLocationFSxLustreArgs build() {

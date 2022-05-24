@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="configurationPolicyGroupName", required=true)
-    private String configurationPolicyGroupName;
+    private Output<String> configurationPolicyGroupName;
 
     /**
      * @return The name of the ConfigurationPolicyGroup being retrieved.
      * 
      */
-    public String configurationPolicyGroupName() {
+    public Output<String> configurationPolicyGroupName() {
         return this.configurationPolicyGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VpnServerConfiguration.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vpnServerConfigurationName", required=true)
-    private String vpnServerConfigurationName;
+    private Output<String> vpnServerConfigurationName;
 
     /**
      * @return The name of the VpnServerConfiguration.
      * 
      */
-    public String vpnServerConfigurationName() {
+    public Output<String> vpnServerConfigurationName() {
         return this.vpnServerConfigurationName;
     }
 
@@ -89,8 +90,29 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder configurationPolicyGroupName(String configurationPolicyGroupName) {
+        public Builder configurationPolicyGroupName(Output<String> configurationPolicyGroupName) {
             $.configurationPolicyGroupName = configurationPolicyGroupName;
+            return this;
+        }
+
+        /**
+         * @param configurationPolicyGroupName The name of the ConfigurationPolicyGroup being retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationPolicyGroupName(String configurationPolicyGroupName) {
+            return configurationPolicyGroupName(Output.of(configurationPolicyGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vpnServerConfigurationName The name of the VpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnServerConfigurationName(Output<String> vpnServerConfigurationName) {
+            $.vpnServerConfigurationName = vpnServerConfigurationName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetConfigurationPolicyGroupArgs extends com.pulumi.resources.
          * 
          */
         public Builder vpnServerConfigurationName(String vpnServerConfigurationName) {
-            $.vpnServerConfigurationName = vpnServerConfigurationName;
-            return this;
+            return vpnServerConfigurationName(Output.of(vpnServerConfigurationName));
         }
 
         public GetConfigurationPolicyGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkSourceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkSourceId", required=true)
-    private String networkSourceId;
+    private Output<String> networkSourceId;
 
     /**
      * @return The OCID of the network source.
      * 
      */
-    public String networkSourceId() {
+    public Output<String> networkSourceId() {
         return this.networkSourceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNetworkSourceArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder networkSourceId(String networkSourceId) {
+        public Builder networkSourceId(Output<String> networkSourceId) {
             $.networkSourceId = networkSourceId;
             return this;
+        }
+
+        /**
+         * @param networkSourceId The OCID of the network source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSourceId(String networkSourceId) {
+            return networkSourceId(Output.of(networkSourceId));
         }
 
         public GetNetworkSourceArgs build() {

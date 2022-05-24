@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Oce;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Oce.inputs.GetOceInstancesArgs;
 import com.pulumi.oci.Oce.outputs.GetOceInstanceResult;
 import com.pulumi.oci.Oce.outputs.GetOceInstancesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OceFunctions {
     /**
@@ -22,7 +22,7 @@ public final class OceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args) {
+    public static Output<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args) {
         return getOceInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class OceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Oce/getOceInstance:getOceInstance", TypeShape.of(GetOceInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOceInstanceResult> getOceInstance(GetOceInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Oce/getOceInstance:getOceInstance", TypeShape.of(GetOceInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Oce Instances in Oracle Cloud Infrastructure Content and Experience service.
@@ -44,7 +44,7 @@ public final class OceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args) {
+    public static Output<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args) {
         return getOceInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +55,7 @@ public final class OceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Oce/getOceInstances:getOceInstances", TypeShape.of(GetOceInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOceInstancesResult> getOceInstances(GetOceInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Oce/getOceInstances:getOceInstances", TypeShape.of(GetOceInstancesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.redshift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="account", required=true)
-    private String account;
+    private Output<String> account;
 
     /**
      * @return The target AWS account ID to grant or revoke access for.
      * 
      */
-    public String account() {
+    public Output<String> account() {
         return this.account;
     }
 
@@ -32,13 +33,13 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-    private String clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     /**
      * @return The cluster identifier.
      * 
      */
-    public String clusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -73,8 +74,29 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder account(String account) {
+        public Builder account(Output<String> account) {
             $.account = account;
+            return this;
+        }
+
+        /**
+         * @param account The target AWS account ID to grant or revoke access for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder account(String account) {
+            return account(Output.of(account));
+        }
+
+        /**
+         * @param clusterIdentifier The cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder clusterIdentifier(String clusterIdentifier) {
-            $.clusterIdentifier = clusterIdentifier;
-            return this;
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
         public GetEndpointAuthorizationArgs build() {

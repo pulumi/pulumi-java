@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSensitiveDataModelArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sensitiveDataModelId", required=true)
-    private String sensitiveDataModelId;
+    private Output<String> sensitiveDataModelId;
 
     /**
      * @return The OCID of the sensitive data model.
      * 
      */
-    public String sensitiveDataModelId() {
+    public Output<String> sensitiveDataModelId() {
         return this.sensitiveDataModelId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSensitiveDataModelArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sensitiveDataModelId(String sensitiveDataModelId) {
+        public Builder sensitiveDataModelId(Output<String> sensitiveDataModelId) {
             $.sensitiveDataModelId = sensitiveDataModelId;
             return this;
+        }
+
+        /**
+         * @param sensitiveDataModelId The OCID of the sensitive data model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveDataModelId(String sensitiveDataModelId) {
+            return sensitiveDataModelId(Output.of(sensitiveDataModelId));
         }
 
         public GetSensitiveDataModelArgs build() {

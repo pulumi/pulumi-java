@@ -18,10 +18,10 @@ import com.pulumi.azure.containerservice.outputs.GetKubernetesServiceVersionsRes
 import com.pulumi.azure.containerservice.outputs.GetRegistryResult;
 import com.pulumi.azure.containerservice.outputs.GetRegistryScopeMapResult;
 import com.pulumi.azure.containerservice.outputs.GetRegistryTokenResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ContainerserviceFunctions {
     /**
@@ -54,7 +54,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterNodePoolResult> getClusterNodePool(GetClusterNodePoolArgs args) {
+    public static Output<GetClusterNodePoolResult> getClusterNodePool(GetClusterNodePoolArgs args) {
         return getClusterNodePool(args, InvokeOptions.Empty);
     }
     /**
@@ -87,8 +87,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterNodePoolResult> getClusterNodePool(GetClusterNodePoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getClusterNodePool:getClusterNodePool", TypeShape.of(GetClusterNodePoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterNodePoolResult> getClusterNodePool(GetClusterNodePoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getClusterNodePool:getClusterNodePool", TypeShape.of(GetClusterNodePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Container Group instance.
@@ -121,7 +121,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -155,8 +155,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
@@ -186,7 +186,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKubernetesClusterResult> getKubernetesCluster(GetKubernetesClusterArgs args) {
+    public static Output<GetKubernetesClusterResult> getKubernetesCluster(GetKubernetesClusterArgs args) {
         return getKubernetesCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -217,8 +217,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKubernetesClusterResult> getKubernetesCluster(GetKubernetesClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getKubernetesCluster:getKubernetesCluster", TypeShape.of(GetKubernetesClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKubernetesClusterResult> getKubernetesCluster(GetKubernetesClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getKubernetesCluster:getKubernetesCluster", TypeShape.of(GetKubernetesClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.
@@ -249,7 +249,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKubernetesServiceVersionsResult> getKubernetesServiceVersions(GetKubernetesServiceVersionsArgs args) {
+    public static Output<GetKubernetesServiceVersionsResult> getKubernetesServiceVersions(GetKubernetesServiceVersionsArgs args) {
         return getKubernetesServiceVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -281,8 +281,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKubernetesServiceVersionsResult> getKubernetesServiceVersions(GetKubernetesServiceVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getKubernetesServiceVersions:getKubernetesServiceVersions", TypeShape.of(GetKubernetesServiceVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKubernetesServiceVersionsResult> getKubernetesServiceVersions(GetKubernetesServiceVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getKubernetesServiceVersions:getKubernetesServiceVersions", TypeShape.of(GetKubernetesServiceVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Container Registry.
@@ -313,7 +313,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args) {
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args) {
         return getRegistry(args, InvokeOptions.Empty);
     }
     /**
@@ -345,8 +345,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getRegistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getRegistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Container Registry scope map.
@@ -378,7 +378,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryScopeMapResult> getRegistryScopeMap(GetRegistryScopeMapArgs args) {
+    public static Output<GetRegistryScopeMapResult> getRegistryScopeMap(GetRegistryScopeMapArgs args) {
         return getRegistryScopeMap(args, InvokeOptions.Empty);
     }
     /**
@@ -411,8 +411,8 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryScopeMapResult> getRegistryScopeMap(GetRegistryScopeMapArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getRegistryScopeMap:getRegistryScopeMap", TypeShape.of(GetRegistryScopeMapResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryScopeMapResult> getRegistryScopeMap(GetRegistryScopeMapArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getRegistryScopeMap:getRegistryScopeMap", TypeShape.of(GetRegistryScopeMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Container Registry token.
@@ -444,7 +444,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryTokenResult> getRegistryToken(GetRegistryTokenArgs args) {
+    public static Output<GetRegistryTokenResult> getRegistryToken(GetRegistryTokenArgs args) {
         return getRegistryToken(args, InvokeOptions.Empty);
     }
     /**
@@ -477,7 +477,7 @@ public final class ContainerserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRegistryTokenResult> getRegistryToken(GetRegistryTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:containerservice/getRegistryToken:getRegistryToken", TypeShape.of(GetRegistryTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryTokenResult> getRegistryToken(GetRegistryTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:containerservice/getRegistryToken:getRegistryToken", TypeShape.of(GetRegistryTokenResult.class), args, Utilities.withVersion(options));
     }
 }

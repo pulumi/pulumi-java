@@ -12,66 +12,66 @@ import com.pulumi.awsnative.ses.outputs.GetConfigurationSetEventDestinationResul
 import com.pulumi.awsnative.ses.outputs.GetConfigurationSetResult;
 import com.pulumi.awsnative.ses.outputs.GetContactListResult;
 import com.pulumi.awsnative.ses.outputs.GetTemplateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SesFunctions {
     /**
      * Resource schema for AWS::SES::ConfigurationSet.
      * 
      */
-    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args) {
+    public static Output<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args) {
         return getConfigurationSet(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::SES::ConfigurationSet.
      * 
      */
-    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SES::ConfigurationSetEventDestination
      * 
      */
-    public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args) {
+    public static Output<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args) {
         return getConfigurationSetEventDestination(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::SES::ConfigurationSetEventDestination
      * 
      */
-    public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSetEventDestination", TypeShape.of(GetConfigurationSetEventDestinationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ses:getConfigurationSetEventDestination", TypeShape.of(GetConfigurationSetEventDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SES::ContactList.
      * 
      */
-    public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args) {
+    public static Output<GetContactListResult> getContactList(GetContactListArgs args) {
         return getContactList(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::SES::ContactList.
      * 
      */
-    public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ses:getContactList", TypeShape.of(GetContactListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactListResult> getContactList(GetContactListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ses:getContactList", TypeShape.of(GetContactListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SES::Template
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
+    public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args) {
         return getTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::SES::Template
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ses:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ses:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

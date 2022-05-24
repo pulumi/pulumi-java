@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.certificatemanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
+        }
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
 
         public GetAccountArgs build() {

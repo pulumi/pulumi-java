@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstanceShapesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,21 +51,21 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="dedicatedVmHostShape")
-    private @Nullable String dedicatedVmHostShape;
+    private Output</* @Nullable */ String> dedicatedVmHostShape;
 
     /**
      * @return Dedicated VM host shape name
      * 
      */
-    public Optional<String> dedicatedVmHostShape() {
-        return Optional.ofNullable(this.dedicatedVmHostShape);
+    public Output</* @Nullable */ String> dedicatedVmHostShape() {
+        return this.dedicatedVmHostShape;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDedicatedVmHostInstanceShapesFilter> filters;
+    private Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters;
 
-    public Optional<List<GetDedicatedVmHostInstanceShapesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDedicatedVmHostInstanceShapesArgs() {}
@@ -101,8 +101,29 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -113,7 +134,17 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dedicatedVmHostShape Dedicated VM host shape name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedVmHostShape(Output</* @Nullable */ String> dedicatedVmHostShape) {
+            $.dedicatedVmHostShape = dedicatedVmHostShape;
             return this;
         }
 
@@ -124,13 +155,16 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * 
          */
         public Builder dedicatedVmHostShape(@Nullable String dedicatedVmHostShape) {
-            $.dedicatedVmHostShape = dedicatedVmHostShape;
+            return dedicatedVmHostShape(Output.of(dedicatedVmHostShape));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDedicatedVmHostInstanceShapesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDedicatedVmHostInstanceShapesFilter... filters) {

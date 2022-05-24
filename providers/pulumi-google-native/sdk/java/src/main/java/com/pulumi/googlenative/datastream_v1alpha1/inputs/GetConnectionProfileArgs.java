@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetConnectionProfileArgs extends com.pulumi.resources.InvokeA
     public static final GetConnectionProfileArgs Empty = new GetConnectionProfileArgs();
 
     @Import(name="connectionProfileId", required=true)
-    private String connectionProfileId;
+    private Output<String> connectionProfileId;
 
-    public String connectionProfileId() {
+    public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetConnectionProfileArgs() {}
@@ -61,19 +61,31 @@ public final class GetConnectionProfileArgs extends com.pulumi.resources.InvokeA
             $ = new GetConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder connectionProfileId(String connectionProfileId) {
+        public Builder connectionProfileId(Output<String> connectionProfileId) {
             $.connectionProfileId = connectionProfileId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder connectionProfileId(String connectionProfileId) {
+            return connectionProfileId(Output.of(connectionProfileId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetConnectionProfileArgs build() {

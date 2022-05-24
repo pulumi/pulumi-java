@@ -8,38 +8,38 @@ import com.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelArgs;
 import com.pulumi.awsnative.kinesisvideo.inputs.GetStreamArgs;
 import com.pulumi.awsnative.kinesisvideo.outputs.GetSignalingChannelResult;
 import com.pulumi.awsnative.kinesisvideo.outputs.GetStreamResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KinesisvideoFunctions {
     /**
      * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
      * 
      */
-    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args) {
+    public static Output<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args) {
         return getSignalingChannel(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
      * 
      */
-    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::KinesisVideo::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+    public static Output<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::KinesisVideo::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

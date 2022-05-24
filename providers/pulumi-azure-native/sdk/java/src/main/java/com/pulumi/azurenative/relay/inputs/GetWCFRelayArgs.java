@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.relay.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relayName", required=true)
-    private String relayName;
+    private Output<String> relayName;
 
     /**
      * @return The relay name.
      * 
      */
-    public String relayName() {
+    public Output<String> relayName() {
         return this.relayName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespaceName(String namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param relayName The relay name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relayName(Output<String> relayName) {
+            $.relayName = relayName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder relayName(String relayName) {
-            $.relayName = relayName;
+            return relayName(Output.of(relayName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWCFRelayArgs build() {

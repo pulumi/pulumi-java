@@ -10,10 +10,10 @@ import com.pulumi.azure.siterecovery.inputs.GetReplicationPolicyArgs;
 import com.pulumi.azure.siterecovery.outputs.GetFabricResult;
 import com.pulumi.azure.siterecovery.outputs.GetProtectionContainerResult;
 import com.pulumi.azure.siterecovery.outputs.GetReplicationPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SiterecoveryFunctions {
     /**
@@ -45,7 +45,7 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFabricResult> getFabric(GetFabricArgs args) {
+    public static Output<GetFabricResult> getFabric(GetFabricArgs args) {
         return getFabric(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFabricResult> getFabric(GetFabricArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:siterecovery/getFabric:getFabric", TypeShape.of(GetFabricResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFabricResult> getFabric(GetFabricArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:siterecovery/getFabric:getFabric", TypeShape.of(GetFabricResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing site recovery services protection container.
@@ -110,7 +110,7 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args) {
+    public static Output<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args) {
         return getProtectionContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:siterecovery/getProtectionContainer:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:siterecovery/getProtectionContainer:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Azure Site Recovery replication policy.
@@ -175,7 +175,7 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
+    public static Output<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
         return getReplicationPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class SiterecoveryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:siterecovery/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:siterecovery/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

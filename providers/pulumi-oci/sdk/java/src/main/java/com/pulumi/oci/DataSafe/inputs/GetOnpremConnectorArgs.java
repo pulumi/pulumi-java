@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOnpremConnectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="onPremConnectorId", required=true)
-    private String onPremConnectorId;
+    private Output<String> onPremConnectorId;
 
     /**
      * @return The OCID of the on-premises connector.
      * 
      */
-    public String onPremConnectorId() {
+    public Output<String> onPremConnectorId() {
         return this.onPremConnectorId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOnpremConnectorArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder onPremConnectorId(String onPremConnectorId) {
+        public Builder onPremConnectorId(Output<String> onPremConnectorId) {
             $.onPremConnectorId = onPremConnectorId;
             return this;
+        }
+
+        /**
+         * @param onPremConnectorId The OCID of the on-premises connector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onPremConnectorId(String onPremConnectorId) {
+            return onPremConnectorId(Output.of(onPremConnectorId));
         }
 
         public GetOnpremConnectorArgs build() {

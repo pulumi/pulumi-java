@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMetastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metastoreId", required=true)
-    private String metastoreId;
+    private Output<String> metastoreId;
 
     /**
      * @return The metastore&#39;s OCID.
      * 
      */
-    public String metastoreId() {
+    public Output<String> metastoreId() {
         return this.metastoreId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMetastoreArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metastoreId(String metastoreId) {
+        public Builder metastoreId(Output<String> metastoreId) {
             $.metastoreId = metastoreId;
             return this;
+        }
+
+        /**
+         * @param metastoreId The metastore&#39;s OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metastoreId(String metastoreId) {
+            return metastoreId(Output.of(metastoreId));
         }
 
         public GetMetastoreArgs build() {

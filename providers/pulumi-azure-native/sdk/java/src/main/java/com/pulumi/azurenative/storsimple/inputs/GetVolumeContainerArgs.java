@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceName", required=true)
-    private String deviceName;
+    private Output<String> deviceName;
 
     /**
      * @return The device name
      * 
      */
-    public String deviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managerName", required=true)
-    private String managerName;
+    private Output<String> managerName;
 
     /**
      * @return The manager name
      * 
      */
-    public String managerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="volumeContainerName", required=true)
-    private String volumeContainerName;
+    private Output<String> volumeContainerName;
 
     /**
      * @return The name of the volume container.
      * 
      */
-    public String volumeContainerName() {
+    public Output<String> volumeContainerName() {
         return this.volumeContainerName;
     }
 
@@ -105,8 +106,29 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder deviceName(String deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
+        }
+
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managerName(Output<String> managerName) {
+            $.managerName = managerName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder managerName(String managerName) {
-            $.managerName = managerName;
+            return managerName(Output.of(managerName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param volumeContainerName The name of the volume container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeContainerName(Output<String> volumeContainerName) {
+            $.volumeContainerName = volumeContainerName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder volumeContainerName(String volumeContainerName) {
-            $.volumeContainerName = volumeContainerName;
-            return this;
+            return volumeContainerName(Output.of(volumeContainerName));
         }
 
         public GetVolumeContainerArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.sqladmin_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
     @Import(name="database", required=true)
-    private String database;
+    private Output<String> database;
 
-    public String database() {
+    public Output<String> database() {
         return this.database;
     }
 
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetDatabaseArgs() {}
@@ -61,19 +61,31 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder database(String database) {
+        public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
-        public Builder instance(String instance) {
+        public Builder database(String database) {
+            return database(Output.of(database));
+        }
+
+        public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetDatabaseArgs build() {

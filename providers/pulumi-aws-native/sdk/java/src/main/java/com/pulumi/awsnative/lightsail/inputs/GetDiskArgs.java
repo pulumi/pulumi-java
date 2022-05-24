@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskName", required=true)
-    private String diskName;
+    private Output<String> diskName;
 
     /**
      * @return The names to use for your new Lightsail disk.
      * 
      */
-    public String diskName() {
+    public Output<String> diskName() {
         return this.diskName;
     }
 
@@ -57,9 +58,19 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskName(String diskName) {
+        public Builder diskName(Output<String> diskName) {
             $.diskName = diskName;
             return this;
+        }
+
+        /**
+         * @param diskName The names to use for your new Lightsail disk.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
 
         public GetDiskArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataproc_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetRegionJobIamPolicyArgs extends com.pulumi.resources.Invoke
     public static final GetRegionJobIamPolicyArgs Empty = new GetRegionJobIamPolicyArgs();
 
     @Import(name="jobId", required=true)
-    private String jobId;
+    private Output<String> jobId;
 
-    public String jobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -61,19 +61,31 @@ public final class GetRegionJobIamPolicyArgs extends com.pulumi.resources.Invoke
             $ = new GetRegionJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder jobId(String jobId) {
+        public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
+        }
+
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
         }
 
         public GetRegionJobIamPolicyArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="format")
-    private @Nullable String format;
+    private Output</* @Nullable */ String> format;
 
     /**
      * @return Policy Export Format.
      * 
      */
-    public Optional<String> format() {
-        return Optional.ofNullable(this.format);
+    public Output</* @Nullable */ String> format() {
+        return this.format;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyId", required=true)
-    private String policyId;
+    private Output<String> policyId;
 
     /**
      * @return The identifier of the Policy.
      * 
      */
-    public String policyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -49,13 +49,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +64,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -107,8 +107,29 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
+        public Builder format(Output</* @Nullable */ String> format) {
             $.format = format;
+            return this;
+        }
+
+        /**
+         * @param format Policy Export Format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder format(@Nullable String format) {
+            return format(Output.of(format));
+        }
+
+        /**
+         * @param policyId The identifier of the Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyId(Output<String> policyId) {
+            $.policyId = policyId;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder policyId(String policyId) {
-            $.policyId = policyId;
+            return policyId(Output.of(policyId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetPolicyArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetAccountArg
 import com.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetDataPoolArgs;
 import com.pulumi.azurenative.autonomousdevelopmentplatform.outputs.GetAccountResult;
 import com.pulumi.azurenative.autonomousdevelopmentplatform.outputs.GetDataPoolResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AutonomousdevelopmentplatformFunctions {
     /**
@@ -19,7 +19,7 @@ public final class AutonomousdevelopmentplatformFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class AutonomousdevelopmentplatformFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:autonomousdevelopmentplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ADP Data Pool
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args) {
+    public static Output<GetDataPoolResult> getDataPool(GetDataPoolArgs args) {
         return getDataPool(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class AutonomousdevelopmentplatformFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataPoolResult> getDataPool(GetDataPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args, Utilities.withVersion(options));
     }
 }

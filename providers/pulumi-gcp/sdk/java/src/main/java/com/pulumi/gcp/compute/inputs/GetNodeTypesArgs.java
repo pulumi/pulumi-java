@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return ID of the project to list available node types for.
@@ -29,8 +29,8 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * Defaults to the project that the provider is authenticated with.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -39,15 +39,15 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-    private @Nullable String zone;
+    private Output</* @Nullable */ String> zone;
 
     /**
      * @return The zone to list node types for. Should be in zone of intended node groups and region of referencing node template. If `zone` is not specified, the provider-level zone must be set and is used
      * instead.
      * 
      */
-    public Optional<String> zone() {
-        return Optional.ofNullable(this.zone);
+    public Output</* @Nullable */ String> zone() {
+        return this.zone;
     }
 
     private GetNodeTypesArgs() {}
@@ -83,8 +83,32 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project ID of the project to list available node types for.
+         * Should match the project the nodes of this type will be deployed to.
+         * Defaults to the project that the provider is authenticated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param zone The zone to list node types for. Should be in zone of intended node groups and region of referencing node template. If `zone` is not specified, the provider-level zone must be set and is used
+         * instead.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zone(Output</* @Nullable */ String> zone) {
+            $.zone = zone;
             return this;
         }
 
@@ -96,8 +120,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder zone(@Nullable String zone) {
-            $.zone = zone;
-            return this;
+            return zone(Output.of(zone));
         }
 
         public GetNodeTypesArgs build() {

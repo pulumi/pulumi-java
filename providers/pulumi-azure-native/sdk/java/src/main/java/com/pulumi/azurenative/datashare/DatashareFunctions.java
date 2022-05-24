@@ -82,10 +82,10 @@ import com.pulumi.azurenative.datashare.outputs.ListShareSubscriptionSynchroniza
 import com.pulumi.azurenative.datashare.outputs.ListShareSubscriptionSynchronizationsResult;
 import com.pulumi.azurenative.datashare.outputs.ListShareSynchronizationDetailsResult;
 import com.pulumi.azurenative.datashare.outputs.ListShareSynchronizationsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatashareFunctions {
     /**
@@ -93,7 +93,7 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen1FileDataSetResult> getADLSGen1FileDataSet(GetADLSGen1FileDataSetArgs args) {
+    public static Output<GetADLSGen1FileDataSetResult> getADLSGen1FileDataSet(GetADLSGen1FileDataSetArgs args) {
         return getADLSGen1FileDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -101,15 +101,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen1FileDataSetResult> getADLSGen1FileDataSet(GetADLSGen1FileDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen1FileDataSet", TypeShape.of(GetADLSGen1FileDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen1FileDataSetResult> getADLSGen1FileDataSet(GetADLSGen1FileDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen1FileDataSet", TypeShape.of(GetADLSGen1FileDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen 1 folder data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen1FolderDataSetResult> getADLSGen1FolderDataSet(GetADLSGen1FolderDataSetArgs args) {
+    public static Output<GetADLSGen1FolderDataSetResult> getADLSGen1FolderDataSet(GetADLSGen1FolderDataSetArgs args) {
         return getADLSGen1FolderDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -117,15 +117,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen1FolderDataSetResult> getADLSGen1FolderDataSet(GetADLSGen1FolderDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen1FolderDataSet", TypeShape.of(GetADLSGen1FolderDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen1FolderDataSetResult> getADLSGen1FolderDataSet(GetADLSGen1FolderDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen1FolderDataSet", TypeShape.of(GetADLSGen1FolderDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen 2 file data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileDataSetResult> getADLSGen2FileDataSet(GetADLSGen2FileDataSetArgs args) {
+    public static Output<GetADLSGen2FileDataSetResult> getADLSGen2FileDataSet(GetADLSGen2FileDataSetArgs args) {
         return getADLSGen2FileDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -133,15 +133,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileDataSetResult> getADLSGen2FileDataSet(GetADLSGen2FileDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileDataSet", TypeShape.of(GetADLSGen2FileDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FileDataSetResult> getADLSGen2FileDataSet(GetADLSGen2FileDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FileDataSet", TypeShape.of(GetADLSGen2FileDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen2 file data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileDataSetMappingResult> getADLSGen2FileDataSetMapping(GetADLSGen2FileDataSetMappingArgs args) {
+    public static Output<GetADLSGen2FileDataSetMappingResult> getADLSGen2FileDataSetMapping(GetADLSGen2FileDataSetMappingArgs args) {
         return getADLSGen2FileDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -149,15 +149,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileDataSetMappingResult> getADLSGen2FileDataSetMapping(GetADLSGen2FileDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileDataSetMapping", TypeShape.of(GetADLSGen2FileDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FileDataSetMappingResult> getADLSGen2FileDataSetMapping(GetADLSGen2FileDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FileDataSetMapping", TypeShape.of(GetADLSGen2FileDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen 2 file system data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileSystemDataSetResult> getADLSGen2FileSystemDataSet(GetADLSGen2FileSystemDataSetArgs args) {
+    public static Output<GetADLSGen2FileSystemDataSetResult> getADLSGen2FileSystemDataSet(GetADLSGen2FileSystemDataSetArgs args) {
         return getADLSGen2FileSystemDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -165,15 +165,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileSystemDataSetResult> getADLSGen2FileSystemDataSet(GetADLSGen2FileSystemDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileSystemDataSet", TypeShape.of(GetADLSGen2FileSystemDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FileSystemDataSetResult> getADLSGen2FileSystemDataSet(GetADLSGen2FileSystemDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FileSystemDataSet", TypeShape.of(GetADLSGen2FileSystemDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen2 file system data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileSystemDataSetMappingResult> getADLSGen2FileSystemDataSetMapping(GetADLSGen2FileSystemDataSetMappingArgs args) {
+    public static Output<GetADLSGen2FileSystemDataSetMappingResult> getADLSGen2FileSystemDataSetMapping(GetADLSGen2FileSystemDataSetMappingArgs args) {
         return getADLSGen2FileSystemDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -181,15 +181,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FileSystemDataSetMappingResult> getADLSGen2FileSystemDataSetMapping(GetADLSGen2FileSystemDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileSystemDataSetMapping", TypeShape.of(GetADLSGen2FileSystemDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FileSystemDataSetMappingResult> getADLSGen2FileSystemDataSetMapping(GetADLSGen2FileSystemDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FileSystemDataSetMapping", TypeShape.of(GetADLSGen2FileSystemDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen 2 folder data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FolderDataSetResult> getADLSGen2FolderDataSet(GetADLSGen2FolderDataSetArgs args) {
+    public static Output<GetADLSGen2FolderDataSetResult> getADLSGen2FolderDataSet(GetADLSGen2FolderDataSetArgs args) {
         return getADLSGen2FolderDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -197,15 +197,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FolderDataSetResult> getADLSGen2FolderDataSet(GetADLSGen2FolderDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FolderDataSet", TypeShape.of(GetADLSGen2FolderDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FolderDataSetResult> getADLSGen2FolderDataSet(GetADLSGen2FolderDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FolderDataSet", TypeShape.of(GetADLSGen2FolderDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ADLS Gen2 folder data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FolderDataSetMappingResult> getADLSGen2FolderDataSetMapping(GetADLSGen2FolderDataSetMappingArgs args) {
+    public static Output<GetADLSGen2FolderDataSetMappingResult> getADLSGen2FolderDataSetMapping(GetADLSGen2FolderDataSetMappingArgs args) {
         return getADLSGen2FolderDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -213,15 +213,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetADLSGen2FolderDataSetMappingResult> getADLSGen2FolderDataSetMapping(GetADLSGen2FolderDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FolderDataSetMapping", TypeShape.of(GetADLSGen2FolderDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetADLSGen2FolderDataSetMappingResult> getADLSGen2FolderDataSetMapping(GetADLSGen2FolderDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getADLSGen2FolderDataSetMapping", TypeShape.of(GetADLSGen2FolderDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An account data transfer object.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -229,15 +229,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure storage blob container data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerDataSetResult> getBlobContainerDataSet(GetBlobContainerDataSetArgs args) {
+    public static Output<GetBlobContainerDataSetResult> getBlobContainerDataSet(GetBlobContainerDataSetArgs args) {
         return getBlobContainerDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -245,15 +245,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerDataSetResult> getBlobContainerDataSet(GetBlobContainerDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSet", TypeShape.of(GetBlobContainerDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobContainerDataSetResult> getBlobContainerDataSet(GetBlobContainerDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobContainerDataSet", TypeShape.of(GetBlobContainerDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Blob container data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerDataSetMappingResult> getBlobContainerDataSetMapping(GetBlobContainerDataSetMappingArgs args) {
+    public static Output<GetBlobContainerDataSetMappingResult> getBlobContainerDataSetMapping(GetBlobContainerDataSetMappingArgs args) {
         return getBlobContainerDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -261,15 +261,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerDataSetMappingResult> getBlobContainerDataSetMapping(GetBlobContainerDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSetMapping", TypeShape.of(GetBlobContainerDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobContainerDataSetMappingResult> getBlobContainerDataSetMapping(GetBlobContainerDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobContainerDataSetMapping", TypeShape.of(GetBlobContainerDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure storage blob data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobDataSetResult> getBlobDataSet(GetBlobDataSetArgs args) {
+    public static Output<GetBlobDataSetResult> getBlobDataSet(GetBlobDataSetArgs args) {
         return getBlobDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -277,15 +277,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobDataSetResult> getBlobDataSet(GetBlobDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobDataSet", TypeShape.of(GetBlobDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobDataSetResult> getBlobDataSet(GetBlobDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobDataSet", TypeShape.of(GetBlobDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Blob data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobDataSetMappingResult> getBlobDataSetMapping(GetBlobDataSetMappingArgs args) {
+    public static Output<GetBlobDataSetMappingResult> getBlobDataSetMapping(GetBlobDataSetMappingArgs args) {
         return getBlobDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -293,15 +293,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobDataSetMappingResult> getBlobDataSetMapping(GetBlobDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobDataSetMapping", TypeShape.of(GetBlobDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobDataSetMappingResult> getBlobDataSetMapping(GetBlobDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobDataSetMapping", TypeShape.of(GetBlobDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Azure storage blob folder data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobFolderDataSetResult> getBlobFolderDataSet(GetBlobFolderDataSetArgs args) {
+    public static Output<GetBlobFolderDataSetResult> getBlobFolderDataSet(GetBlobFolderDataSetArgs args) {
         return getBlobFolderDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -309,15 +309,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobFolderDataSetResult> getBlobFolderDataSet(GetBlobFolderDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobFolderDataSet", TypeShape.of(GetBlobFolderDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobFolderDataSetResult> getBlobFolderDataSet(GetBlobFolderDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobFolderDataSet", TypeShape.of(GetBlobFolderDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Blob folder data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobFolderDataSetMappingResult> getBlobFolderDataSetMapping(GetBlobFolderDataSetMappingArgs args) {
+    public static Output<GetBlobFolderDataSetMappingResult> getBlobFolderDataSetMapping(GetBlobFolderDataSetMappingArgs args) {
         return getBlobFolderDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -325,8 +325,8 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetBlobFolderDataSetMappingResult> getBlobFolderDataSetMapping(GetBlobFolderDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobFolderDataSetMapping", TypeShape.of(GetBlobFolderDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobFolderDataSetMappingResult> getBlobFolderDataSetMapping(GetBlobFolderDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getBlobFolderDataSetMapping", TypeShape.of(GetBlobFolderDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A DataSet data transfer object.
@@ -337,7 +337,7 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ADLSGen1FileDataSet, ADLSGen1FolderDataSet, ADLSGen2FileDataSet, ADLSGen2FileSystemDataSet, ADLSGen2FolderDataSet, BlobContainerDataSet, BlobDataSet, BlobFolderDataSet, KustoClusterDataSet, KustoDatabaseDataSet, SqlDBTableDataSet, SqlDWTableDataSet, SynapseWorkspaceSqlPoolTableDataSet. */
-    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args) {
+    public static Output<GetDataSetResult> getDataSet(GetDataSetArgs args) {
         return getDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -349,8 +349,8 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ADLSGen1FileDataSet, ADLSGen1FolderDataSet, ADLSGen2FileDataSet, ADLSGen2FileSystemDataSet, ADLSGen2FolderDataSet, BlobContainerDataSet, BlobDataSet, BlobFolderDataSet, KustoClusterDataSet, KustoDatabaseDataSet, SqlDBTableDataSet, SqlDWTableDataSet, SynapseWorkspaceSqlPoolTableDataSet. */
-    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A data set mapping data transfer object.
@@ -361,7 +361,7 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping. */
-    public static CompletableFuture<GetDataSetMappingResult> getDataSetMapping(GetDataSetMappingArgs args) {
+    public static Output<GetDataSetMappingResult> getDataSetMapping(GetDataSetMappingArgs args) {
         return getDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -373,15 +373,15 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping. */
-    public static CompletableFuture<GetDataSetMappingResult> getDataSetMapping(GetDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getDataSetMapping", TypeShape.of(GetDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSetMappingResult> getDataSetMapping(GetDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getDataSetMapping", TypeShape.of(GetDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Invitation data transfer object.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetInvitationResult> getInvitation(GetInvitationArgs args) {
+    public static Output<GetInvitationResult> getInvitation(GetInvitationArgs args) {
         return getInvitation(args, InvokeOptions.Empty);
     }
     /**
@@ -389,15 +389,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetInvitationResult> getInvitation(GetInvitationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getInvitation", TypeShape.of(GetInvitationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvitationResult> getInvitation(GetInvitationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getInvitation", TypeShape.of(GetInvitationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A kusto cluster data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoClusterDataSetResult> getKustoClusterDataSet(GetKustoClusterDataSetArgs args) {
+    public static Output<GetKustoClusterDataSetResult> getKustoClusterDataSet(GetKustoClusterDataSetArgs args) {
         return getKustoClusterDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -405,15 +405,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoClusterDataSetResult> getKustoClusterDataSet(GetKustoClusterDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoClusterDataSet", TypeShape.of(GetKustoClusterDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoClusterDataSetResult> getKustoClusterDataSet(GetKustoClusterDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getKustoClusterDataSet", TypeShape.of(GetKustoClusterDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Kusto cluster data set mapping
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoClusterDataSetMappingResult> getKustoClusterDataSetMapping(GetKustoClusterDataSetMappingArgs args) {
+    public static Output<GetKustoClusterDataSetMappingResult> getKustoClusterDataSetMapping(GetKustoClusterDataSetMappingArgs args) {
         return getKustoClusterDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -421,15 +421,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoClusterDataSetMappingResult> getKustoClusterDataSetMapping(GetKustoClusterDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoClusterDataSetMapping", TypeShape.of(GetKustoClusterDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoClusterDataSetMappingResult> getKustoClusterDataSetMapping(GetKustoClusterDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getKustoClusterDataSetMapping", TypeShape.of(GetKustoClusterDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A kusto database data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoDatabaseDataSetResult> getKustoDatabaseDataSet(GetKustoDatabaseDataSetArgs args) {
+    public static Output<GetKustoDatabaseDataSetResult> getKustoDatabaseDataSet(GetKustoDatabaseDataSetArgs args) {
         return getKustoDatabaseDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -437,15 +437,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoDatabaseDataSetResult> getKustoDatabaseDataSet(GetKustoDatabaseDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoDatabaseDataSet", TypeShape.of(GetKustoDatabaseDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoDatabaseDataSetResult> getKustoDatabaseDataSet(GetKustoDatabaseDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getKustoDatabaseDataSet", TypeShape.of(GetKustoDatabaseDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Kusto database data set mapping
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> getKustoDatabaseDataSetMapping(GetKustoDatabaseDataSetMappingArgs args) {
+    public static Output<GetKustoDatabaseDataSetMappingResult> getKustoDatabaseDataSetMapping(GetKustoDatabaseDataSetMappingArgs args) {
         return getKustoDatabaseDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -453,15 +453,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> getKustoDatabaseDataSetMapping(GetKustoDatabaseDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoDatabaseDataSetMapping", TypeShape.of(GetKustoDatabaseDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoDatabaseDataSetMappingResult> getKustoDatabaseDataSetMapping(GetKustoDatabaseDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getKustoDatabaseDataSetMapping", TypeShape.of(GetKustoDatabaseDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A type of synchronization setting based on schedule
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetScheduledSynchronizationSettingResult> getScheduledSynchronizationSetting(GetScheduledSynchronizationSettingArgs args) {
+    public static Output<GetScheduledSynchronizationSettingResult> getScheduledSynchronizationSetting(GetScheduledSynchronizationSettingArgs args) {
         return getScheduledSynchronizationSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -469,15 +469,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetScheduledSynchronizationSettingResult> getScheduledSynchronizationSetting(GetScheduledSynchronizationSettingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getScheduledSynchronizationSetting", TypeShape.of(GetScheduledSynchronizationSettingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledSynchronizationSettingResult> getScheduledSynchronizationSetting(GetScheduledSynchronizationSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getScheduledSynchronizationSetting", TypeShape.of(GetScheduledSynchronizationSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A type of trigger based on schedule
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetScheduledTriggerResult> getScheduledTrigger(GetScheduledTriggerArgs args) {
+    public static Output<GetScheduledTriggerResult> getScheduledTrigger(GetScheduledTriggerArgs args) {
         return getScheduledTrigger(args, InvokeOptions.Empty);
     }
     /**
@@ -485,15 +485,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetScheduledTriggerResult> getScheduledTrigger(GetScheduledTriggerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getScheduledTrigger", TypeShape.of(GetScheduledTriggerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledTriggerResult> getScheduledTrigger(GetScheduledTriggerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getScheduledTrigger", TypeShape.of(GetScheduledTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A share data transfer object.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args) {
+    public static Output<GetShareResult> getShare(GetShareArgs args) {
         return getShare(args, InvokeOptions.Empty);
     }
     /**
@@ -501,15 +501,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A share subscription data transfer object.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetShareSubscriptionResult> getShareSubscription(GetShareSubscriptionArgs args) {
+    public static Output<GetShareSubscriptionResult> getShareSubscription(GetShareSubscriptionArgs args) {
         return getShareSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -517,15 +517,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetShareSubscriptionResult> getShareSubscription(GetShareSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getShareSubscription", TypeShape.of(GetShareSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShareSubscriptionResult> getShareSubscription(GetShareSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getShareSubscription", TypeShape.of(GetShareSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL DB table data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDBTableDataSetResult> getSqlDBTableDataSet(GetSqlDBTableDataSetArgs args) {
+    public static Output<GetSqlDBTableDataSetResult> getSqlDBTableDataSet(GetSqlDBTableDataSetArgs args) {
         return getSqlDBTableDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -533,15 +533,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDBTableDataSetResult> getSqlDBTableDataSet(GetSqlDBTableDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDBTableDataSet", TypeShape.of(GetSqlDBTableDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlDBTableDataSetResult> getSqlDBTableDataSet(GetSqlDBTableDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSqlDBTableDataSet", TypeShape.of(GetSqlDBTableDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL DB Table data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDBTableDataSetMappingResult> getSqlDBTableDataSetMapping(GetSqlDBTableDataSetMappingArgs args) {
+    public static Output<GetSqlDBTableDataSetMappingResult> getSqlDBTableDataSetMapping(GetSqlDBTableDataSetMappingArgs args) {
         return getSqlDBTableDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -549,15 +549,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDBTableDataSetMappingResult> getSqlDBTableDataSetMapping(GetSqlDBTableDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDBTableDataSetMapping", TypeShape.of(GetSqlDBTableDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlDBTableDataSetMappingResult> getSqlDBTableDataSetMapping(GetSqlDBTableDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSqlDBTableDataSetMapping", TypeShape.of(GetSqlDBTableDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL DW table data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDWTableDataSetResult> getSqlDWTableDataSet(GetSqlDWTableDataSetArgs args) {
+    public static Output<GetSqlDWTableDataSetResult> getSqlDWTableDataSet(GetSqlDWTableDataSetArgs args) {
         return getSqlDWTableDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -565,15 +565,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDWTableDataSetResult> getSqlDWTableDataSet(GetSqlDWTableDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDWTableDataSet", TypeShape.of(GetSqlDWTableDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlDWTableDataSetResult> getSqlDWTableDataSet(GetSqlDWTableDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSqlDWTableDataSet", TypeShape.of(GetSqlDWTableDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL DW Table data set mapping.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDWTableDataSetMappingResult> getSqlDWTableDataSetMapping(GetSqlDWTableDataSetMappingArgs args) {
+    public static Output<GetSqlDWTableDataSetMappingResult> getSqlDWTableDataSetMapping(GetSqlDWTableDataSetMappingArgs args) {
         return getSqlDWTableDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -581,15 +581,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSqlDWTableDataSetMappingResult> getSqlDWTableDataSetMapping(GetSqlDWTableDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDWTableDataSetMapping", TypeShape.of(GetSqlDWTableDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlDWTableDataSetMappingResult> getSqlDWTableDataSetMapping(GetSqlDWTableDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSqlDWTableDataSetMapping", TypeShape.of(GetSqlDWTableDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Synapse Workspace Sql Pool Table data set.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetResult> getSynapseWorkspaceSqlPoolTableDataSet(GetSynapseWorkspaceSqlPoolTableDataSetArgs args) {
+    public static Output<GetSynapseWorkspaceSqlPoolTableDataSetResult> getSynapseWorkspaceSqlPoolTableDataSet(GetSynapseWorkspaceSqlPoolTableDataSetArgs args) {
         return getSynapseWorkspaceSqlPoolTableDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -597,15 +597,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetResult> getSynapseWorkspaceSqlPoolTableDataSet(GetSynapseWorkspaceSqlPoolTableDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSet", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSynapseWorkspaceSqlPoolTableDataSetResult> getSynapseWorkspaceSqlPoolTableDataSet(GetSynapseWorkspaceSqlPoolTableDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSet", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Synapse Workspace Sql Pool Table data set mapping
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> getSynapseWorkspaceSqlPoolTableDataSetMapping(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs args) {
+    public static Output<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> getSynapseWorkspaceSqlPoolTableDataSetMapping(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs args) {
         return getSynapseWorkspaceSqlPoolTableDataSetMapping(args, InvokeOptions.Empty);
     }
     /**
@@ -613,8 +613,8 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> getSynapseWorkspaceSqlPoolTableDataSetMapping(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSetMapping", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetMappingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSynapseWorkspaceSqlPoolTableDataSetMappingResult> getSynapseWorkspaceSqlPoolTableDataSetMapping(GetSynapseWorkspaceSqlPoolTableDataSetMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSetMapping", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Synchronization Setting data transfer object.
@@ -625,7 +625,7 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
-    public static CompletableFuture<GetSynchronizationSettingResult> getSynchronizationSetting(GetSynchronizationSettingArgs args) {
+    public static Output<GetSynchronizationSettingResult> getSynchronizationSetting(GetSynchronizationSettingArgs args) {
         return getSynchronizationSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -637,8 +637,8 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
-    public static CompletableFuture<GetSynchronizationSettingResult> getSynchronizationSetting(GetSynchronizationSettingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynchronizationSetting", TypeShape.of(GetSynchronizationSettingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSynchronizationSettingResult> getSynchronizationSetting(GetSynchronizationSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getSynchronizationSetting", TypeShape.of(GetSynchronizationSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Trigger data transfer object.
@@ -649,7 +649,7 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ScheduledTrigger. */
-    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+    public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args) {
         return getTrigger(args, InvokeOptions.Empty);
     }
     /**
@@ -661,15 +661,15 @@ public final class DatashareFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ScheduledTrigger. */
-    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List response for get source share Synchronization settings
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> listShareSubscriptionSourceShareSynchronizationSettings(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args) {
+    public static Output<ListShareSubscriptionSourceShareSynchronizationSettingsResult> listShareSubscriptionSourceShareSynchronizationSettings(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args) {
         return listShareSubscriptionSourceShareSynchronizationSettings(args, InvokeOptions.Empty);
     }
     /**
@@ -677,15 +677,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> listShareSubscriptionSourceShareSynchronizationSettings(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSourceShareSynchronizationSettings", TypeShape.of(ListShareSubscriptionSourceShareSynchronizationSettingsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListShareSubscriptionSourceShareSynchronizationSettingsResult> listShareSubscriptionSourceShareSynchronizationSettings(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:listShareSubscriptionSourceShareSynchronizationSettings", TypeShape.of(ListShareSubscriptionSourceShareSynchronizationSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * details of synchronization
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSynchronizationDetailsResult> listShareSubscriptionSynchronizationDetails(ListShareSubscriptionSynchronizationDetailsArgs args) {
+    public static Output<ListShareSubscriptionSynchronizationDetailsResult> listShareSubscriptionSynchronizationDetails(ListShareSubscriptionSynchronizationDetailsArgs args) {
         return listShareSubscriptionSynchronizationDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -693,15 +693,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSynchronizationDetailsResult> listShareSubscriptionSynchronizationDetails(ListShareSubscriptionSynchronizationDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSynchronizationDetails", TypeShape.of(ListShareSubscriptionSynchronizationDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListShareSubscriptionSynchronizationDetailsResult> listShareSubscriptionSynchronizationDetails(ListShareSubscriptionSynchronizationDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:listShareSubscriptionSynchronizationDetails", TypeShape.of(ListShareSubscriptionSynchronizationDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A consumer side list of share subscription synchronizations
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> listShareSubscriptionSynchronizations(ListShareSubscriptionSynchronizationsArgs args) {
+    public static Output<ListShareSubscriptionSynchronizationsResult> listShareSubscriptionSynchronizations(ListShareSubscriptionSynchronizationsArgs args) {
         return listShareSubscriptionSynchronizations(args, InvokeOptions.Empty);
     }
     /**
@@ -709,15 +709,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> listShareSubscriptionSynchronizations(ListShareSubscriptionSynchronizationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSynchronizations", TypeShape.of(ListShareSubscriptionSynchronizationsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListShareSubscriptionSynchronizationsResult> listShareSubscriptionSynchronizations(ListShareSubscriptionSynchronizationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:listShareSubscriptionSynchronizations", TypeShape.of(ListShareSubscriptionSynchronizationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * details of synchronization
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSynchronizationDetailsResult> listShareSynchronizationDetails(ListShareSynchronizationDetailsArgs args) {
+    public static Output<ListShareSynchronizationDetailsResult> listShareSynchronizationDetails(ListShareSynchronizationDetailsArgs args) {
         return listShareSynchronizationDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -725,15 +725,15 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSynchronizationDetailsResult> listShareSynchronizationDetails(ListShareSynchronizationDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSynchronizationDetails", TypeShape.of(ListShareSynchronizationDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListShareSynchronizationDetailsResult> listShareSynchronizationDetails(ListShareSynchronizationDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:listShareSynchronizationDetails", TypeShape.of(ListShareSynchronizationDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List response for get ShareSynchronization.
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSynchronizationsResult> listShareSynchronizations(ListShareSynchronizationsArgs args) {
+    public static Output<ListShareSynchronizationsResult> listShareSynchronizations(ListShareSynchronizationsArgs args) {
         return listShareSynchronizations(args, InvokeOptions.Empty);
     }
     /**
@@ -741,7 +741,7 @@ public final class DatashareFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<ListShareSynchronizationsResult> listShareSynchronizations(ListShareSynchronizationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSynchronizations", TypeShape.of(ListShareSynchronizationsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListShareSynchronizationsResult> listShareSynchronizations(ListShareSynchronizationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datashare:listShareSynchronizations", TypeShape.of(ListShareSynchronizationsResult.class), args, Utilities.withVersion(options));
     }
 }

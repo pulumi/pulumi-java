@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabric.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationName", required=true)
-    private String applicationName;
+    private Output<String> applicationName;
 
     /**
      * @return The name of the application resource.
      * 
      */
-    public String applicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the cluster resource.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationName(String applicationName) {
+        public Builder applicationName(Output<String> applicationName) {
             $.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * @param applicationName The name of the application resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
+        }
+
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetApplicationArgs build() {

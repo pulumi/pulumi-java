@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobRunId", required=true)
-    private String jobRunId;
+    private Output<String> jobRunId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job run.
      * 
      */
-    public String jobRunId() {
+    public Output<String> jobRunId() {
         return this.jobRunId;
     }
 
@@ -57,9 +58,19 @@ public final class GetJobRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder jobRunId(String jobRunId) {
+        public Builder jobRunId(Output<String> jobRunId) {
             $.jobRunId = jobRunId;
             return this;
+        }
+
+        /**
+         * @param jobRunId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the job run.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobRunId(String jobRunId) {
+            return jobRunId(Output.of(jobRunId));
         }
 
         public GetJobRunArgs build() {

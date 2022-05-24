@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupSecurityRulesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="direction")
-    private @Nullable String direction;
+    private Output</* @Nullable */ String> direction;
 
     /**
      * @return Direction of the security rule. Set to `EGRESS` for rules that allow outbound IP packets, or `INGRESS` for rules that allow inbound IP packets.
      * 
      */
-    public Optional<String> direction() {
-        return Optional.ofNullable(this.direction);
+    public Output</* @Nullable */ String> direction() {
+        return this.direction;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetNetworkSecurityGroupSecurityRulesFilter> filters;
+    private Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters;
 
-    public Optional<List<GetNetworkSecurityGroupSecurityRulesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="networkSecurityGroupId", required=true)
-    private String networkSecurityGroupId;
+    private Output<String> networkSecurityGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
      * 
      */
-    public String networkSecurityGroupId() {
+    public Output<String> networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
 
@@ -85,14 +85,28 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder direction(@Nullable String direction) {
+        public Builder direction(Output</* @Nullable */ String> direction) {
             $.direction = direction;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNetworkSecurityGroupSecurityRulesFilter> filters) {
+        /**
+         * @param direction Direction of the security rule. Set to `EGRESS` for rules that allow outbound IP packets, or `INGRESS` for rules that allow inbound IP packets.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder direction(@Nullable String direction) {
+            return direction(Output.of(direction));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetNetworkSecurityGroupSecurityRulesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetNetworkSecurityGroupSecurityRulesFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+        public Builder networkSecurityGroupId(Output<String> networkSecurityGroupId) {
             $.networkSecurityGroupId = networkSecurityGroupId;
             return this;
+        }
+
+        /**
+         * @param networkSecurityGroupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+            return networkSecurityGroupId(Output.of(networkSecurityGroupId));
         }
 
         public GetNetworkSecurityGroupSecurityRulesArgs build() {

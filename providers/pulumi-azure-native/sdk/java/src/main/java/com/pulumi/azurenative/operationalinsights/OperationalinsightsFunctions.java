@@ -30,10 +30,10 @@ import com.pulumi.azurenative.operationalinsights.outputs.GetSharedKeysResult;
 import com.pulumi.azurenative.operationalinsights.outputs.GetStorageInsightConfigResult;
 import com.pulumi.azurenative.operationalinsights.outputs.GetTableResult;
 import com.pulumi.azurenative.operationalinsights.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class OperationalinsightsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -49,15 +49,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The top level data export resource container.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataExportResult> getDataExport(GetDataExportArgs args) {
+    public static Output<GetDataExportResult> getDataExport(GetDataExportArgs args) {
         return getDataExport(args, InvokeOptions.Empty);
     }
     /**
@@ -65,15 +65,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataExportResult> getDataExport(GetDataExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getDataExport", TypeShape.of(GetDataExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataExportResult> getDataExport(GetDataExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getDataExport", TypeShape.of(GetDataExportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Datasources under OMS Workspace.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
     /**
@@ -81,15 +81,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The top level Linked service resource container.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
+    public static Output<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
         return getLinkedService(args, InvokeOptions.Empty);
     }
     /**
@@ -97,15 +97,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Linked storage accounts top level resource container.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args) {
+    public static Output<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args) {
         return getLinkedStorageAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -113,15 +113,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedStorageAccount", TypeShape.of(GetLinkedStorageAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getLinkedStorageAccount", TypeShape.of(GetLinkedStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A user-defined logical grouping of machines.
      * API Version: 2015-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args) {
+    public static Output<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args) {
         return getMachineGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -129,15 +129,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2015-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getMachineGroup", TypeShape.of(GetMachineGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getMachineGroup", TypeShape.of(GetMachineGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Log Analytics QueryPack-Query definition.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {
+    public static Output<GetQueryResult> getQuery(GetQueryArgs args) {
         return getQuery(args, InvokeOptions.Empty);
     }
     /**
@@ -145,15 +145,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Log Analytics QueryPack definition.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetQueryPackResult> getQueryPack(GetQueryPackArgs args) {
+    public static Output<GetQueryPackResult> getQueryPack(GetQueryPackArgs args) {
         return getQueryPack(args, InvokeOptions.Empty);
     }
     /**
@@ -161,15 +161,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetQueryPackResult> getQueryPack(GetQueryPackArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQueryPack", TypeShape.of(GetQueryPackResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueryPackResult> getQueryPack(GetQueryPackArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getQueryPack", TypeShape.of(GetQueryPackResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Value object for saved search results.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args) {
+    public static Output<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args) {
         return getSavedSearch(args, InvokeOptions.Empty);
     }
     /**
@@ -177,15 +177,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSavedSearch", TypeShape.of(GetSavedSearchResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getSavedSearch", TypeShape.of(GetSavedSearchResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The shared keys for a workspace.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args) {
+    public static Output<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args) {
         return getSharedKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -193,15 +193,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSharedKeys", TypeShape.of(GetSharedKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getSharedKeys", TypeShape.of(GetSharedKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The top level storage insight resource container.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args) {
+    public static Output<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args) {
         return getStorageInsightConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -209,15 +209,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getStorageInsightConfig", TypeShape.of(GetStorageInsightConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getStorageInsightConfig", TypeShape.of(GetStorageInsightConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace data table definition.
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
@@ -225,15 +225,15 @@ public final class OperationalinsightsFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The top level Workspace resource container.
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -241,7 +241,7 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:operationalinsights:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

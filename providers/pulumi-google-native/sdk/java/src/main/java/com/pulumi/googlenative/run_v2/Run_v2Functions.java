@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.run_v2;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,35 +12,34 @@ import com.pulumi.googlenative.run_v2.inputs.GetServiceArgs;
 import com.pulumi.googlenative.run_v2.inputs.GetServiceIamPolicyArgs;
 import com.pulumi.googlenative.run_v2.outputs.GetServiceIamPolicyResult;
 import com.pulumi.googlenative.run_v2.outputs.GetServiceResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Run_v2Functions {
     /**
      * Gets information about a Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:run/v2:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v2:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
+    public static Output<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
         return getServiceIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:run/v2:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v2:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

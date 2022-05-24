@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.streamanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than &#39;inputs&#39;, &#39;transformation&#39;, &#39;outputs&#39;, and &#39;functions&#39;.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The name of the streaming job.
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -49,13 +49,13 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than &#39;inputs&#39;, &#39;transformation&#39;, &#39;outputs&#39;, and &#39;functions&#39;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(Output<String> jobName) {
+            $.jobName = jobName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobName(String jobName) {
-            $.jobName = jobName;
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetStreamingJobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetStreamingJobArgs build() {

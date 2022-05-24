@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scopeName", required=true)
-    private String scopeName;
+    private Output<String> scopeName;
 
     /**
      * @return The name of the Azure Monitor PrivateLinkScope resource.
      * 
      */
-    public String scopeName() {
+    public Output<String> scopeName() {
         return this.scopeName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param scopeName The name of the Azure Monitor PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeName(Output<String> scopeName) {
+            $.scopeName = scopeName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder scopeName(String scopeName) {
-            $.scopeName = scopeName;
-            return this;
+            return scopeName(Output.of(scopeName));
         }
 
         public GetPrivateLinkScopeArgs build() {

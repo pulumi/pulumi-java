@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetRegionNetworkFirewallPolicyArgs extends com.pulumi.resourc
     public static final GetRegionNetworkFirewallPolicyArgs Empty = new GetRegionNetworkFirewallPolicyArgs();
 
     @Import(name="firewallPolicy", required=true)
-    private String firewallPolicy;
+    private Output<String> firewallPolicy;
 
-    public String firewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +61,31 @@ public final class GetRegionNetworkFirewallPolicyArgs extends com.pulumi.resourc
             $ = new GetRegionNetworkFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder firewallPolicy(String firewallPolicy) {
+        public Builder firewallPolicy(Output<String> firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder firewallPolicy(String firewallPolicy) {
+            return firewallPolicy(Output.of(firewallPolicy));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetRegionNetworkFirewallPolicyArgs build() {

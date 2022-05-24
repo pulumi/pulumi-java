@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorePointCollectionName", required=true)
-    private String restorePointCollectionName;
+    private Output<String> restorePointCollectionName;
 
     /**
      * @return The name of the restore point collection.
      * 
      */
-    public String restorePointCollectionName() {
+    public Output<String> restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorePointName", required=true)
-    private String restorePointName;
+    private Output<String> restorePointName;
 
     /**
      * @return The name of the restore point.
      * 
      */
-    public String restorePointName() {
+    public Output<String> restorePointName() {
         return this.restorePointName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param restorePointCollectionName The name of the restore point collection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restorePointCollectionName(Output<String> restorePointCollectionName) {
+            $.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restorePointCollectionName(String restorePointCollectionName) {
-            $.restorePointCollectionName = restorePointCollectionName;
+            return restorePointCollectionName(Output.of(restorePointCollectionName));
+        }
+
+        /**
+         * @param restorePointName The name of the restore point.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restorePointName(Output<String> restorePointName) {
+            $.restorePointName = restorePointName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restorePointName(String restorePointName) {
-            $.restorePointName = restorePointName;
-            return this;
+            return restorePointName(Output.of(restorePointName));
         }
 
         public GetRestorePointArgs build() {

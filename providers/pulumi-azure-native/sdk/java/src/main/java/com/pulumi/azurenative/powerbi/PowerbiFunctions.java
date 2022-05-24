@@ -10,52 +10,52 @@ import com.pulumi.azurenative.powerbi.inputs.ListWorkspaceCollectionAccessKeysAr
 import com.pulumi.azurenative.powerbi.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.powerbi.outputs.GetWorkspaceCollectionResult;
 import com.pulumi.azurenative.powerbi.outputs.ListWorkspaceCollectionAccessKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PowerbiFunctions {
     /**
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:powerbi:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerbi:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args) {
+    public static Output<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args) {
         return getWorkspaceCollection(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:powerbi:getWorkspaceCollection", TypeShape.of(GetWorkspaceCollectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerbi:getWorkspaceCollection", TypeShape.of(GetWorkspaceCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args) {
+    public static Output<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args) {
         return listWorkspaceCollectionAccessKeys(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args, Utilities.withVersion(options));
     }
 }

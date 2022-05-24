@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="routeFilterName", required=true)
-    private String routeFilterName;
+    private Output<String> routeFilterName;
 
     /**
      * @return The name of the route filter.
      * 
      */
-    public String routeFilterName() {
+    public Output<String> routeFilterName() {
         return this.routeFilterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
     /**
      * @return The name of the rule.
      * 
      */
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeFilterName The name of the route filter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeFilterName(Output<String> routeFilterName) {
+            $.routeFilterName = routeFilterName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder routeFilterName(String routeFilterName) {
-            $.routeFilterName = routeFilterName;
+            return routeFilterName(Output.of(routeFilterName));
+        }
+
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(Output<String> ruleName) {
+            $.ruleName = ruleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder ruleName(String ruleName) {
-            $.ruleName = ruleName;
-            return this;
+            return ruleName(Output.of(ruleName));
         }
 
         public GetRouteFilterRuleArgs build() {

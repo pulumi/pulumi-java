@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Opsi.inputs.GetAwrHubsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAwrHubsFilter> filters;
+    private Output</* @Nullable */ List<GetAwrHubsFilter>> filters;
 
-    public Optional<List<GetAwrHubsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAwrHubsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Unique Awr Hub identifier
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -73,13 +73,13 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationsInsightsWarehouseId", required=true)
-    private String operationsInsightsWarehouseId;
+    private Output<String> operationsInsightsWarehouseId;
 
     /**
      * @return Unique Operations Insights Warehouse identifier
      * 
      */
-    public String operationsInsightsWarehouseId() {
+    public Output<String> operationsInsightsWarehouseId() {
         return this.operationsInsightsWarehouseId;
     }
 
@@ -88,14 +88,14 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private Output</* @Nullable */ List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Optional<List<String>> states() {
-        return Optional.ofNullable(this.states);
+    public Output</* @Nullable */ List<String>> states() {
+        return this.states;
     }
 
     private GetAwrHubsArgs() {}
@@ -133,8 +133,29 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -145,13 +166,16 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAwrHubsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAwrHubsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAwrHubsFilter... filters) {
@@ -164,8 +188,29 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Unique Awr Hub identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param operationsInsightsWarehouseId Unique Operations Insights Warehouse identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationsInsightsWarehouseId(Output<String> operationsInsightsWarehouseId) {
+            $.operationsInsightsWarehouseId = operationsInsightsWarehouseId;
             return this;
         }
 
@@ -176,7 +221,17 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder operationsInsightsWarehouseId(String operationsInsightsWarehouseId) {
-            $.operationsInsightsWarehouseId = operationsInsightsWarehouseId;
+            return operationsInsightsWarehouseId(Output.of(operationsInsightsWarehouseId));
+        }
+
+        /**
+         * @param states Lifecycle states
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(Output</* @Nullable */ List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetAwrHubsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+            return states(Output.of(states));
         }
 
         /**

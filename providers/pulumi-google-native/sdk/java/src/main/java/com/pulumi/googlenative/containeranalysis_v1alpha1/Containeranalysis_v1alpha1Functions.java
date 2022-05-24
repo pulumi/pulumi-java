@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.containeranalysis_v1alpha1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,77 +18,76 @@ import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GetNoteResult;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GetOccurrenceIamPolicyResult;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GetOccurrenceResult;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GetProviderNoteIamPolicyResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Containeranalysis_v1alpha1Functions {
     /**
      * Returns the requested `Note`.
      * 
      */
-    public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args) {
+    public static Output<GetNoteResult> getNote(GetNoteArgs args) {
         return getNote(args, InvokeOptions.Empty);
     }
     /**
      * Returns the requested `Note`.
      * 
      */
-    public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1alpha1:getNote", TypeShape.of(GetNoteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNoteResult> getNote(GetNoteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:containeranalysis/v1alpha1:getNote", TypeShape.of(GetNoteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args) {
+    public static Output<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args) {
         return getNoteIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1alpha1:getNoteIamPolicy", TypeShape.of(GetNoteIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:containeranalysis/v1alpha1:getNoteIamPolicy", TypeShape.of(GetNoteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the requested `Occurrence`.
      * 
      */
-    public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args) {
+    public static Output<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args) {
         return getOccurrence(args, InvokeOptions.Empty);
     }
     /**
      * Returns the requested `Occurrence`.
      * 
      */
-    public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1alpha1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:containeranalysis/v1alpha1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args) {
+    public static Output<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args) {
         return getOccurrenceIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1alpha1:getOccurrenceIamPolicy", TypeShape.of(GetOccurrenceIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:containeranalysis/v1alpha1:getOccurrenceIamPolicy", TypeShape.of(GetOccurrenceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetProviderNoteIamPolicyResult> getProviderNoteIamPolicy(GetProviderNoteIamPolicyArgs args) {
+    public static Output<GetProviderNoteIamPolicyResult> getProviderNoteIamPolicy(GetProviderNoteIamPolicyArgs args) {
         return getProviderNoteIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a note or an `Occurrence` resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. Attempting to call this method on a resource without the required permission will result in a `PERMISSION_DENIED` error. Attempting to call this method on a non-existent resource will result in a `NOT_FOUND` error if the user has list permission on the project, or a `PERMISSION_DENIED` error otherwise. The resource takes the following formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and projects/{PROJECT_ID}/notes/{NOTE_ID} for notes
      * 
      */
-    public static CompletableFuture<GetProviderNoteIamPolicyResult> getProviderNoteIamPolicy(GetProviderNoteIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1alpha1:getProviderNoteIamPolicy", TypeShape.of(GetProviderNoteIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProviderNoteIamPolicyResult> getProviderNoteIamPolicy(GetProviderNoteIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:containeranalysis/v1alpha1:getProviderNoteIamPolicy", TypeShape.of(GetProviderNoteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

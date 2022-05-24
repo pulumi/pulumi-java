@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRepositoryCommitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="commitId", required=true)
-    private String commitId;
+    private Output<String> commitId;
 
     /**
      * @return A filter to return only resources that match the given commit ID.
      * 
      */
-    public String commitId() {
+    public Output<String> commitId() {
         return this.commitId;
     }
 
@@ -32,13 +33,13 @@ public final class GetRepositoryCommitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRepositoryCommitArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder commitId(String commitId) {
+        public Builder commitId(Output<String> commitId) {
             $.commitId = commitId;
+            return this;
+        }
+
+        /**
+         * @param commitId A filter to return only resources that match the given commit ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder commitId(String commitId) {
+            return commitId(Output.of(commitId));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRepositoryCommitArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryCommitArgs build() {

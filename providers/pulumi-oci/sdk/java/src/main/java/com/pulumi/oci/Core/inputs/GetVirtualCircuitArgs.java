@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualCircuitArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="virtualCircuitId", required=true)
-    private String virtualCircuitId;
+    private Output<String> virtualCircuitId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the virtual circuit.
      * 
      */
-    public String virtualCircuitId() {
+    public Output<String> virtualCircuitId() {
         return this.virtualCircuitId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVirtualCircuitArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder virtualCircuitId(String virtualCircuitId) {
+        public Builder virtualCircuitId(Output<String> virtualCircuitId) {
             $.virtualCircuitId = virtualCircuitId;
             return this;
+        }
+
+        /**
+         * @param virtualCircuitId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the virtual circuit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualCircuitId(String virtualCircuitId) {
+            return virtualCircuitId(Output.of(virtualCircuitId));
         }
 
         public GetVirtualCircuitArgs build() {

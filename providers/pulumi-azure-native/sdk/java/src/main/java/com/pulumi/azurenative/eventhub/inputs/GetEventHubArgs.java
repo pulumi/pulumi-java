@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventHubName", required=true)
-    private String eventHubName;
+    private Output<String> eventHubName;
 
     /**
      * @return The Event Hub name
      * 
      */
-    public String eventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The Namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubName(String eventHubName) {
+        public Builder eventHubName(Output<String> eventHubName) {
             $.eventHubName = eventHubName;
+            return this;
+        }
+
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventHubName(String eventHubName) {
+            return eventHubName(Output.of(eventHubName));
+        }
+
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEventHubArgs build() {

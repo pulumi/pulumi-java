@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dialogflow_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,44 +15,44 @@ public final class GetContextArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetContextArgs Empty = new GetContextArgs();
 
     @Import(name="contextId", required=true)
-    private String contextId;
+    private Output<String> contextId;
 
-    public String contextId() {
+    public Output<String> contextId() {
         return this.contextId;
     }
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="sessionId", required=true)
-    private String sessionId;
+    private Output<String> sessionId;
 
-    public String sessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -85,34 +85,58 @@ public final class GetContextArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContextArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder contextId(String contextId) {
+        public Builder contextId(Output<String> contextId) {
             $.contextId = contextId;
             return this;
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder contextId(String contextId) {
+            return contextId(Output.of(contextId));
+        }
+
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sessionId(String sessionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sessionId(Output<String> sessionId) {
             $.sessionId = sessionId;
             return this;
         }
 
-        public Builder userId(String userId) {
+        public Builder sessionId(String sessionId) {
+            return sessionId(Output.of(sessionId));
+        }
+
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetContextArgs build() {

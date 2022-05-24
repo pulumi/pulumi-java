@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="authorizationName", required=true)
-    private String authorizationName;
+    private Output<String> authorizationName;
 
     /**
      * @return The name of the authorization.
      * 
      */
-    public String authorizationName() {
+    public Output<String> authorizationName() {
         return this.authorizationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="circuitName", required=true)
-    private String circuitName;
+    private Output<String> circuitName;
 
     /**
      * @return The name of the express route circuit.
      * 
      */
-    public String circuitName() {
+    public Output<String> circuitName() {
         return this.circuitName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder authorizationName(String authorizationName) {
+        public Builder authorizationName(Output<String> authorizationName) {
             $.authorizationName = authorizationName;
+            return this;
+        }
+
+        /**
+         * @param authorizationName The name of the authorization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizationName(String authorizationName) {
+            return authorizationName(Output.of(authorizationName));
+        }
+
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder circuitName(Output<String> circuitName) {
+            $.circuitName = circuitName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
          * 
          */
         public Builder circuitName(String circuitName) {
-            $.circuitName = circuitName;
+            return circuitName(Output.of(circuitName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteCircuitAuthorizationArgs build() {

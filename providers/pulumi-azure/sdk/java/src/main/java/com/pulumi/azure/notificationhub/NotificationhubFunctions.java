@@ -8,10 +8,10 @@ import com.pulumi.azure.notificationhub.inputs.GetHubArgs;
 import com.pulumi.azure.notificationhub.inputs.GetNamespaceArgs;
 import com.pulumi.azure.notificationhub.outputs.GetHubResult;
 import com.pulumi.azure.notificationhub.outputs.GetNamespaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NotificationhubFunctions {
     /**
@@ -44,7 +44,7 @@ public final class NotificationhubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args) {
+    public static Output<GetHubResult> getHub(GetHubArgs args) {
         return getHub(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class NotificationhubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:notificationhub/getHub:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:notificationhub/getHub:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Notification Hub Namespace.
@@ -109,7 +109,7 @@ public final class NotificationhubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public final class NotificationhubFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:notificationhub/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:notificationhub/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
 }

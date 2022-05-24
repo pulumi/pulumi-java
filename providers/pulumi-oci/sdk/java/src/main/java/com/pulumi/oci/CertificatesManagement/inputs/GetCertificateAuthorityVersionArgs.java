@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,20 +18,20 @@ public final class GetCertificateAuthorityVersionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateAuthorityId", required=true)
-    private String certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
     /**
      * @return The OCID of the certificate authority (CA).
      * 
      */
-    public String certificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="certificateAuthorityVersionNumber", required=true)
-    private String certificateAuthorityVersionNumber;
+    private Output<String> certificateAuthorityVersionNumber;
 
-    public String certificateAuthorityVersionNumber() {
+    public Output<String> certificateAuthorityVersionNumber() {
         return this.certificateAuthorityVersionNumber;
     }
 
@@ -65,14 +66,28 @@ public final class GetCertificateAuthorityVersionArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder certificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
-        public Builder certificateAuthorityVersionNumber(String certificateAuthorityVersionNumber) {
+        /**
+         * @param certificateAuthorityId The OCID of the certificate authority (CA).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
+        }
+
+        public Builder certificateAuthorityVersionNumber(Output<String> certificateAuthorityVersionNumber) {
             $.certificateAuthorityVersionNumber = certificateAuthorityVersionNumber;
             return this;
+        }
+
+        public Builder certificateAuthorityVersionNumber(String certificateAuthorityVersionNumber) {
+            return certificateAuthorityVersionNumber(Output.of(certificateAuthorityVersionNumber));
         }
 
         public GetCertificateAuthorityVersionArgs build() {

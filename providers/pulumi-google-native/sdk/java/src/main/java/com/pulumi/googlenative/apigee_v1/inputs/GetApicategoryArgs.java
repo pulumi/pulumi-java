@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetApicategoryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApicategoryArgs Empty = new GetApicategoryArgs();
 
     @Import(name="apicategoryId", required=true)
-    private String apicategoryId;
+    private Output<String> apicategoryId;
 
-    public String apicategoryId() {
+    public Output<String> apicategoryId() {
         return this.apicategoryId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="siteId", required=true)
-    private String siteId;
+    private Output<String> siteId;
 
-    public String siteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -59,19 +60,31 @@ public final class GetApicategoryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApicategoryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apicategoryId(String apicategoryId) {
+        public Builder apicategoryId(Output<String> apicategoryId) {
             $.apicategoryId = apicategoryId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder apicategoryId(String apicategoryId) {
+            return apicategoryId(Output.of(apicategoryId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder siteId(String siteId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder siteId(Output<String> siteId) {
             $.siteId = siteId;
             return this;
+        }
+
+        public Builder siteId(String siteId) {
+            return siteId(Output.of(siteId));
         }
 
         public GetApicategoryArgs build() {

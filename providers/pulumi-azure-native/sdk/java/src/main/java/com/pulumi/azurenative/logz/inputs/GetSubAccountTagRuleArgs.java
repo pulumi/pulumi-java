@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logz.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitorName", required=true)
-    private String monitorName;
+    private Output<String> monitorName;
 
     /**
      * @return Monitor resource name
      * 
      */
-    public String monitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -32,20 +33,20 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
-    private String ruleSetName;
+    private Output<String> ruleSetName;
 
-    public String ruleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
@@ -54,13 +55,13 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subAccountName", required=true)
-    private String subAccountName;
+    private Output<String> subAccountName;
 
     /**
      * @return Sub Account resource name
      * 
      */
-    public String subAccountName() {
+    public Output<String> subAccountName() {
         return this.subAccountName;
     }
 
@@ -97,8 +98,29 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder monitorName(String monitorName) {
+        public Builder monitorName(Output<String> monitorName) {
             $.monitorName = monitorName;
+            return this;
+        }
+
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorName(String monitorName) {
+            return monitorName(Output.of(monitorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -109,12 +131,26 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder ruleSetName(Output<String> ruleSetName) {
+            $.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(String ruleSetName) {
-            $.ruleSetName = ruleSetName;
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        /**
+         * @param subAccountName Sub Account resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subAccountName(Output<String> subAccountName) {
+            $.subAccountName = subAccountName;
             return this;
         }
 
@@ -125,8 +161,7 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder subAccountName(String subAccountName) {
-            $.subAccountName = subAccountName;
-            return this;
+            return subAccountName(Output.of(subAccountName));
         }
 
         public GetSubAccountTagRuleArgs build() {

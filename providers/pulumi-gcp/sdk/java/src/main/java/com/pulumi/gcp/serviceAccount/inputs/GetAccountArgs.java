@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.serviceAccount.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
     /**
      * @return The Google service account ID. This be one of:
      * 
      */
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -35,15 +35,15 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project that the service account is present in.
      * Defaults to the provider project configuration.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetAccountArgs() {}
@@ -77,8 +77,30 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * @param accountId The Google service account ID. This be one of:
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        /**
+         * @param project The ID of the project that the service account is present in.
+         * Defaults to the provider project configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -90,8 +112,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetAccountArgs build() {

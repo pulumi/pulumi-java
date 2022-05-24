@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dns_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetResponsePolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetResponsePolicyArgs Empty = new GetResponsePolicyArgs();
 
     @Import(name="clientOperationId")
-    private @Nullable String clientOperationId;
+    private Output</* @Nullable */ String> clientOperationId;
 
-    public Optional<String> clientOperationId() {
-        return Optional.ofNullable(this.clientOperationId);
+    public Output</* @Nullable */ String> clientOperationId() {
+        return this.clientOperationId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="responsePolicy", required=true)
-    private String responsePolicy;
+    private Output<String> responsePolicy;
 
-    public String responsePolicy() {
+    public Output<String> responsePolicy() {
         return this.responsePolicy;
     }
 
@@ -61,19 +61,31 @@ public final class GetResponsePolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetResponsePolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(Output</* @Nullable */ String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder responsePolicy(String responsePolicy) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder responsePolicy(Output<String> responsePolicy) {
             $.responsePolicy = responsePolicy;
             return this;
+        }
+
+        public Builder responsePolicy(String responsePolicy) {
+            return responsePolicy(Output.of(responsePolicy));
         }
 
         public GetResponsePolicyArgs build() {

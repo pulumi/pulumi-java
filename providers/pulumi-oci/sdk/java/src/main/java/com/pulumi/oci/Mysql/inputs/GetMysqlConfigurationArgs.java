@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMysqlConfigurationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="configurationId", required=true)
-    private String configurationId;
+    private Output<String> configurationId;
 
     /**
      * @return The OCID of the Configuration.
      * 
      */
-    public String configurationId() {
+    public Output<String> configurationId() {
         return this.configurationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMysqlConfigurationArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder configurationId(String configurationId) {
+        public Builder configurationId(Output<String> configurationId) {
             $.configurationId = configurationId;
             return this;
+        }
+
+        /**
+         * @param configurationId The OCID of the Configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationId(String configurationId) {
+            return configurationId(Output.of(configurationId));
         }
 
         public GetMysqlConfigurationArgs build() {

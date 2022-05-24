@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.speech_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetPhraseSetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPhraseSetArgs Empty = new GetPhraseSetArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="phraseSetId", required=true)
-    private String phraseSetId;
+    private Output<String> phraseSetId;
 
-    public String phraseSetId() {
+    public Output<String> phraseSetId() {
         return this.phraseSetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetPhraseSetArgs() {}
@@ -61,19 +61,31 @@ public final class GetPhraseSetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPhraseSetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder phraseSetId(String phraseSetId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder phraseSetId(Output<String> phraseSetId) {
             $.phraseSetId = phraseSetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder phraseSetId(String phraseSetId) {
+            return phraseSetId(Output.of(phraseSetId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetPhraseSetArgs build() {

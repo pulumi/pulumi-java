@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The child resources to include in the response.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sqlVirtualMachineName", required=true)
-    private String sqlVirtualMachineName;
+    private Output<String> sqlVirtualMachineName;
 
     /**
      * @return Name of the SQL virtual machine.
      * 
      */
-    public String sqlVirtualMachineName() {
+    public Output<String> sqlVirtualMachineName() {
         return this.sqlVirtualMachineName;
     }
 
@@ -91,8 +91,29 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlVirtualMachineName Name of the SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlVirtualMachineName(Output<String> sqlVirtualMachineName) {
+            $.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder sqlVirtualMachineName(String sqlVirtualMachineName) {
-            $.sqlVirtualMachineName = sqlVirtualMachineName;
-            return this;
+            return sqlVirtualMachineName(Output.of(sqlVirtualMachineName));
         }
 
         public GetSqlVirtualMachineArgs build() {

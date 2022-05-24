@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentImagesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment to which a request will be scoped.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagementAgentImagesFilter> filters;
+    private Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters;
 
-    public Optional<List<GetManagementAgentImagesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="installType")
-    private @Nullable String installType;
+    private Output</* @Nullable */ String> installType;
 
     /**
      * @return A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
      * 
      */
-    public Optional<String> installType() {
-        return Optional.ofNullable(this.installType);
+    public Output</* @Nullable */ String> installType() {
+        return this.installType;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the entire platform name given.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter to return only Management Agents in the particular lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetManagementAgentImagesArgs() {}
@@ -117,14 +117,28 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagementAgentImagesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment to which a request will be scoped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetManagementAgentImagesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagementAgentImagesFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder installType(@Nullable String installType) {
+        public Builder installType(Output</* @Nullable */ String> installType) {
             $.installType = installType;
+            return this;
+        }
+
+        /**
+         * @param installType A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder installType(@Nullable String installType) {
+            return installType(Output.of(installType));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire platform name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state Filter to return only Management Agents in the particular lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetManagementAgentImagesArgs build() {

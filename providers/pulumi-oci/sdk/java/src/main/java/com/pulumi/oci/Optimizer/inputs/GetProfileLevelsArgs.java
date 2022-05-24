@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Optimizer.inputs.GetProfileLevelsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,21 +37,21 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentIdInSubtree", required=true)
-    private Boolean compartmentIdInSubtree;
+    private Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of `accessLevel`.
      * 
      */
-    public Boolean compartmentIdInSubtree() {
+    public Output<Boolean> compartmentIdInSubtree() {
         return this.compartmentIdInSubtree;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetProfileLevelsFilter> filters;
+    private Output</* @Nullable */ List<GetProfileLevelsFilter>> filters;
 
-    public Optional<List<GetProfileLevelsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetProfileLevelsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recommendationName")
-    private @Nullable String recommendationName;
+    private Output</* @Nullable */ String> recommendationName;
 
     /**
      * @return Optional. A filter that returns results that match the recommendation name specified.
      * 
      */
-    public Optional<String> recommendationName() {
-        return Optional.ofNullable(this.recommendationName);
+    public Output</* @Nullable */ String> recommendationName() {
+        return this.recommendationName;
     }
 
     private GetProfileLevelsArgs() {}
@@ -118,8 +118,29 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of `accessLevel`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -130,13 +151,16 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetProfileLevelsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetProfileLevelsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetProfileLevelsFilter... filters) {
@@ -149,8 +173,29 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Optional. A filter that returns results that match the name specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param recommendationName Optional. A filter that returns results that match the recommendation name specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recommendationName(Output</* @Nullable */ String> recommendationName) {
+            $.recommendationName = recommendationName;
             return this;
         }
 
@@ -161,8 +206,7 @@ public final class GetProfileLevelsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder recommendationName(@Nullable String recommendationName) {
-            $.recommendationName = recommendationName;
-            return this;
+            return recommendationName(Output.of(recommendationName));
         }
 
         public GetProfileLevelsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
     @Import(name="customerId", required=true)
-    private String customerId;
+    private Output<String> customerId;
 
-    public String customerId() {
+    public Output<String> customerId() {
         return this.customerId;
     }
 
     @Import(name="entitlementId", required=true)
-    private String entitlementId;
+    private Output<String> entitlementId;
 
-    public String entitlementId() {
+    public Output<String> entitlementId() {
         return this.entitlementId;
     }
 
@@ -59,19 +60,31 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
-        public Builder customerId(String customerId) {
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        public Builder customerId(Output<String> customerId) {
             $.customerId = customerId;
             return this;
         }
 
-        public Builder entitlementId(String entitlementId) {
+        public Builder customerId(String customerId) {
+            return customerId(Output.of(customerId));
+        }
+
+        public Builder entitlementId(Output<String> entitlementId) {
             $.entitlementId = entitlementId;
             return this;
+        }
+
+        public Builder entitlementId(String entitlementId) {
+            return entitlementId(Output.of(entitlementId));
         }
 
         public GetEntitlementArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetIpsecConfigFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIpsecConfigArgs Empty = new GetIpsecConfigArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIpsecConfigFilter> filters;
+    private Output</* @Nullable */ List<GetIpsecConfigFilter>> filters;
 
-    public Optional<List<GetIpsecConfigFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIpsecConfigFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipsecId", required=true)
-    private String ipsecId;
+    private Output<String> ipsecId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
      * 
      */
-    public String ipsecId() {
+    public Output<String> ipsecId() {
         return this.ipsecId;
     }
 
@@ -63,9 +63,13 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIpsecConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIpsecConfigFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetIpsecConfigFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIpsecConfigFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIpsecConfigFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipsecId(String ipsecId) {
+        public Builder ipsecId(Output<String> ipsecId) {
             $.ipsecId = ipsecId;
             return this;
+        }
+
+        /**
+         * @param ipsecId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecId(String ipsecId) {
+            return ipsecId(Output.of(ipsecId));
         }
 
         public GetIpsecConfigArgs build() {

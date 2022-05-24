@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
     /**
      * @return BillingAccount ID
      * 
      */
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -32,13 +33,13 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
     /**
      * @return Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
      * 
      */
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
+            return this;
+        }
+
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        /**
+         * @param ruleName Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than &#39;_&#39; and &#39;-&#39;. The max length is 260 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(Output<String> ruleName) {
+            $.ruleName = ruleName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder ruleName(String ruleName) {
-            $.ruleName = ruleName;
-            return this;
+            return ruleName(Output.of(ruleName));
         }
 
         public GetCostAllocationRuleArgs build() {

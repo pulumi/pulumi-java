@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ResourceManager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackId", required=true)
-    private String stackId;
+    private Output<String> stackId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stack.
      * 
      */
-    public String stackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 
@@ -57,9 +58,19 @@ public final class GetStackArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stackId(String stackId) {
+        public Builder stackId(Output<String> stackId) {
             $.stackId = stackId;
             return this;
+        }
+
+        /**
+         * @param stackId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stack.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stackId(String stackId) {
+            return stackId(Output.of(stackId));
         }
 
         public GetStackArgs build() {

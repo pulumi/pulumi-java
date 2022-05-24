@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseInsightArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseInsightId", required=true)
-    private String databaseInsightId;
+    private Output<String> databaseInsightId;
 
     /**
      * @return Unique database insight identifier
      * 
      */
-    public String databaseInsightId() {
+    public Output<String> databaseInsightId() {
         return this.databaseInsightId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseInsightArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder databaseInsightId(String databaseInsightId) {
+        public Builder databaseInsightId(Output<String> databaseInsightId) {
             $.databaseInsightId = databaseInsightId;
             return this;
+        }
+
+        /**
+         * @param databaseInsightId Unique database insight identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseInsightId(String databaseInsightId) {
+            return databaseInsightId(Output.of(databaseInsightId));
         }
 
         public GetDatabaseInsightArgs build() {

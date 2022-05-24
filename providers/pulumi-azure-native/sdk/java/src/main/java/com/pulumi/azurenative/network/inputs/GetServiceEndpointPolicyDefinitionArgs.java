@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceEndpointPolicyDefinitionName", required=true)
-    private String serviceEndpointPolicyDefinitionName;
+    private Output<String> serviceEndpointPolicyDefinitionName;
 
     /**
      * @return The name of the service endpoint policy definition name.
      * 
      */
-    public String serviceEndpointPolicyDefinitionName() {
+    public Output<String> serviceEndpointPolicyDefinitionName() {
         return this.serviceEndpointPolicyDefinitionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
-    private String serviceEndpointPolicyName;
+    private Output<String> serviceEndpointPolicyName;
 
     /**
      * @return The name of the service endpoint policy name.
      * 
      */
-    public String serviceEndpointPolicyName() {
+    public Output<String> serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceEndpointPolicyDefinitionName The name of the service endpoint policy definition name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEndpointPolicyDefinitionName(Output<String> serviceEndpointPolicyDefinitionName) {
+            $.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
          * 
          */
         public Builder serviceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
-            $.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
+            return serviceEndpointPolicyDefinitionName(Output.of(serviceEndpointPolicyDefinitionName));
+        }
+
+        /**
+         * @param serviceEndpointPolicyName The name of the service endpoint policy name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEndpointPolicyName(Output<String> serviceEndpointPolicyName) {
+            $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
          * 
          */
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
-            $.serviceEndpointPolicyName = serviceEndpointPolicyName;
-            return this;
+            return serviceEndpointPolicyName(Output.of(serviceEndpointPolicyName));
         }
 
         public GetServiceEndpointPolicyDefinitionArgs build() {

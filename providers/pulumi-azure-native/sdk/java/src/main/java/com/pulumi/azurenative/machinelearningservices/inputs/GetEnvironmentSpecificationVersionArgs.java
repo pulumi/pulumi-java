@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Container name.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
      * 
      */
     @Import(name="version", required=true)
-    private String version;
+    private Output<String> version;
 
     /**
      * @return Version identifier.
      * 
      */
-    public String version() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -62,13 +63,13 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Container name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param version Version identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
          * 
          */
         public Builder version(String version) {
-            $.version = version;
+            return version(Output.of(version));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetEnvironmentSpecificationVersionArgs extends com.pulumi.res
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetEnvironmentSpecificationVersionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of web app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="slot", required=true)
-    private String slot;
+    private Output<String> slot;
 
     /**
      * @return Name of web app slot. If not specified then will default to production slot.
      * 
      */
-    public String slot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -89,8 +90,29 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of web app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param slot Name of web app slot. If not specified then will default to production slot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder slot(Output<String> slot) {
+            $.slot = slot;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListWebAppSitePushSettingsSlotArgs extends com.pulumi.resourc
          * 
          */
         public Builder slot(String slot) {
-            $.slot = slot;
-            return this;
+            return slot(Output.of(slot));
         }
 
         public ListWebAppSitePushSettingsSlotArgs build() {

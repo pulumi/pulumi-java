@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.certificateregistration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="certificateOrderName", required=true)
-    private String certificateOrderName;
+    private Output<String> certificateOrderName;
 
     /**
      * @return Name of the certificate order.
      * 
      */
-    public String certificateOrderName() {
+    public Output<String> certificateOrderName() {
         return this.certificateOrderName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the certificate.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder certificateOrderName(String certificateOrderName) {
+        public Builder certificateOrderName(Output<String> certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
+            return this;
+        }
+
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateOrderName(String certificateOrderName) {
+            return certificateOrderName(Output.of(certificateOrderName));
+        }
+
+        /**
+         * @param name Name of the certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAppServiceCertificateOrderCertificateArgs build() {

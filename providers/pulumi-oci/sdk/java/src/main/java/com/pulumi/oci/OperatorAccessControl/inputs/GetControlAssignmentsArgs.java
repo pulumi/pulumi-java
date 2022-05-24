@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OperatorAccessControl.inputs.GetControlAssignmentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetControlAssignmentsFilter> filters;
+    private Output</* @Nullable */ List<GetControlAssignmentsFilter>> filters;
 
-    public Optional<List<GetControlAssignmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetControlAssignmentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="operatorControlName")
-    private @Nullable String operatorControlName;
+    private Output</* @Nullable */ String> operatorControlName;
 
     /**
      * @return A filter to return OperatorControl that match the given operatorControlName.
      * 
      */
-    public Optional<String> operatorControlName() {
-        return Optional.ofNullable(this.operatorControlName);
+    public Output</* @Nullable */ String> operatorControlName() {
+        return this.operatorControlName;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceName")
-    private @Nullable String resourceName;
+    private Output</* @Nullable */ String> resourceName;
 
     /**
      * @return A filter to return only resources that match the given ResourceName.
      * 
      */
-    public Optional<String> resourceName() {
-        return Optional.ofNullable(this.resourceName);
+    public Output</* @Nullable */ String> resourceName() {
+        return this.resourceName;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceType")
-    private @Nullable String resourceType;
+    private Output</* @Nullable */ String> resourceType;
 
     /**
      * @return A filter to return only lists of resources that match the entire given service type.
      * 
      */
-    public Optional<String> resourceType() {
-        return Optional.ofNullable(this.resourceType);
+    public Output</* @Nullable */ String> resourceType() {
+        return this.resourceType;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources whose lifecycleState matches the given OperatorControlAssignment lifecycleState.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetControlAssignmentsArgs() {}
@@ -133,14 +133,28 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetControlAssignmentsFilter> filters) {
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetControlAssignmentsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetControlAssignmentsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetControlAssignmentsFilter... filters) {
@@ -153,8 +167,29 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder operatorControlName(@Nullable String operatorControlName) {
+        public Builder operatorControlName(Output</* @Nullable */ String> operatorControlName) {
             $.operatorControlName = operatorControlName;
+            return this;
+        }
+
+        /**
+         * @param operatorControlName A filter to return OperatorControl that match the given operatorControlName.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatorControlName(@Nullable String operatorControlName) {
+            return operatorControlName(Output.of(operatorControlName));
+        }
+
+        /**
+         * @param resourceName A filter to return only resources that match the given ResourceName.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output</* @Nullable */ String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -165,7 +200,17 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceName(@Nullable String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceType A filter to return only lists of resources that match the entire given service type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output</* @Nullable */ String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -176,7 +221,17 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceType(@Nullable String resourceType) {
-            $.resourceType = resourceType;
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param state A filter to return only resources whose lifecycleState matches the given OperatorControlAssignment lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetControlAssignmentsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetControlAssignmentsArgs build() {

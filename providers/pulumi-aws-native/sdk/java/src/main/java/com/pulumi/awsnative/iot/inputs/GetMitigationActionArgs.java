@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionName", required=true)
-    private String actionName;
+    private Output<String> actionName;
 
     /**
      * @return A unique identifier for the mitigation action.
      * 
      */
-    public String actionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder actionName(String actionName) {
+        public Builder actionName(Output<String> actionName) {
             $.actionName = actionName;
             return this;
+        }
+
+        /**
+         * @param actionName A unique identifier for the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder actionName(String actionName) {
+            return actionName(Output.of(actionName));
         }
 
         public GetMitigationActionArgs build() {

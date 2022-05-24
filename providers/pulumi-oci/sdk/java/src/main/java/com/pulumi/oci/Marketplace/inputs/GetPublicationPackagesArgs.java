@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Marketplace.inputs.GetPublicationPackagesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
     public static final GetPublicationPackagesArgs Empty = new GetPublicationPackagesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetPublicationPackagesFilter> filters;
+    private Output</* @Nullable */ List<GetPublicationPackagesFilter>> filters;
 
-    public Optional<List<GetPublicationPackagesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetPublicationPackagesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="packageType")
-    private @Nullable String packageType;
+    private Output</* @Nullable */ String> packageType;
 
     /**
      * @return A filter to return only packages that match the given package type exactly.
      * 
      */
-    public Optional<String> packageType() {
-        return Optional.ofNullable(this.packageType);
+    public Output</* @Nullable */ String> packageType() {
+        return this.packageType;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="packageVersion")
-    private @Nullable String packageVersion;
+    private Output</* @Nullable */ String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public Optional<String> packageVersion() {
-        return Optional.ofNullable(this.packageVersion);
+    public Output</* @Nullable */ String> packageVersion() {
+        return this.packageVersion;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicationId", required=true)
-    private String publicationId;
+    private Output<String> publicationId;
 
     /**
      * @return The unique identifier for the publication.
      * 
      */
-    public String publicationId() {
+    public Output<String> publicationId() {
         return this.publicationId;
     }
 
@@ -95,9 +95,13 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
             $ = new GetPublicationPackagesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetPublicationPackagesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetPublicationPackagesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetPublicationPackagesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetPublicationPackagesFilter... filters) {
@@ -110,8 +114,29 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder packageType(@Nullable String packageType) {
+        public Builder packageType(Output</* @Nullable */ String> packageType) {
             $.packageType = packageType;
+            return this;
+        }
+
+        /**
+         * @param packageType A filter to return only packages that match the given package type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageType(@Nullable String packageType) {
+            return packageType(Output.of(packageType));
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(Output</* @Nullable */ String> packageVersion) {
+            $.packageVersion = packageVersion;
             return this;
         }
 
@@ -122,7 +147,17 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder packageVersion(@Nullable String packageVersion) {
-            $.packageVersion = packageVersion;
+            return packageVersion(Output.of(packageVersion));
+        }
+
+        /**
+         * @param publicationId The unique identifier for the publication.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicationId(Output<String> publicationId) {
+            $.publicationId = publicationId;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetPublicationPackagesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder publicationId(String publicationId) {
-            $.publicationId = publicationId;
-            return this;
+            return publicationId(Output.of(publicationId));
         }
 
         public GetPublicationPackagesArgs build() {

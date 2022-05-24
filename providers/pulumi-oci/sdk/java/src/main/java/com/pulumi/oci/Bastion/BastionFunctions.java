@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Bastion;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.Bastion.outputs.GetBastionsResult;
 import com.pulumi.oci.Bastion.outputs.GetSessionResult;
 import com.pulumi.oci.Bastion.outputs.GetSessionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class BastionFunctions {
     /**
@@ -26,7 +26,7 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBastionResult> getBastion(GetBastionArgs args) {
+    public static Output<GetBastionResult> getBastion(GetBastionArgs args) {
         return getBastion(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBastionResult> getBastion(GetBastionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Bastion/getBastion:getBastion", TypeShape.of(GetBastionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBastionResult> getBastion(GetBastionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Bastion/getBastion:getBastion", TypeShape.of(GetBastionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Bastions in Oracle Cloud Infrastructure Bastion service.
@@ -48,7 +48,7 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBastionsResult> getBastions(GetBastionsArgs args) {
+    public static Output<GetBastionsResult> getBastions(GetBastionsArgs args) {
         return getBastions(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBastionsResult> getBastions(GetBastionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Bastion/getBastions:getBastions", TypeShape.of(GetBastionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBastionsResult> getBastions(GetBastionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Bastion/getBastions:getBastions", TypeShape.of(GetBastionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Session resource in Oracle Cloud Infrastructure Bastion service.
@@ -70,7 +70,7 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args) {
+    public static Output<GetSessionResult> getSession(GetSessionArgs args) {
         return getSession(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Bastion/getSession:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Bastion/getSession:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sessions in Oracle Cloud Infrastructure Bastion service.
@@ -92,7 +92,7 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSessionsResult> getSessions(GetSessionsArgs args) {
+    public static Output<GetSessionsResult> getSessions(GetSessionsArgs args) {
         return getSessions(args, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSessionsResult> getSessions(GetSessionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Bastion/getSessions:getSessions", TypeShape.of(GetSessionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSessionsResult> getSessions(GetSessionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Bastion/getSessions:getSessions", TypeShape.of(GetSessionsResult.class), args, Utilities.withVersion(options));
     }
 }

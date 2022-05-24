@@ -6,10 +6,10 @@ package com.pulumi.azurenative.windowsiot;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.windowsiot.inputs.GetServiceArgs;
 import com.pulumi.azurenative.windowsiot.outputs.GetServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class WindowsiotFunctions {
     /**
@@ -17,7 +17,7 @@ public final class WindowsiotFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class WindowsiotFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:windowsiot:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:windowsiot:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

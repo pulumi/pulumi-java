@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.sourcerepo_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,35 +12,34 @@ import com.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoArgs;
 import com.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoIamPolicyArgs;
 import com.pulumi.googlenative.sourcerepo_v1.outputs.GetRepoIamPolicyResult;
 import com.pulumi.googlenative.sourcerepo_v1.outputs.GetRepoResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Sourcerepo_v1Functions {
     /**
      * Returns information about a repo.
      * 
      */
-    public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args) {
+    public static Output<GetRepoResult> getRepo(GetRepoArgs args) {
         return getRepo(args, InvokeOptions.Empty);
     }
     /**
      * Returns information about a repo.
      * 
      */
-    public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepoResult> getRepo(GetRepoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args) {
+    public static Output<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args) {
         return getRepoIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepoIamPolicy", TypeShape.of(GetRepoIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sourcerepo/v1:getRepoIamPolicy", TypeShape.of(GetRepoIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

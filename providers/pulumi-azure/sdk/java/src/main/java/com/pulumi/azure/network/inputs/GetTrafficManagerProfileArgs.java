@@ -3,12 +3,12 @@
 
 package com.pulumi.azure.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Traffic Manager Profile.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,13 +36,13 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the Traffic Manager Profile is located in.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -51,14 +51,14 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="trafficViewEnabled")
-    private @Nullable Boolean trafficViewEnabled;
+    private Output</* @Nullable */ Boolean> trafficViewEnabled;
 
     /**
      * @return Indicates whether Traffic View is enabled for the Traffic Manager profile.
      * 
      */
-    public Optional<Boolean> trafficViewEnabled() {
-        return Optional.ofNullable(this.trafficViewEnabled);
+    public Output</* @Nullable */ Boolean> trafficViewEnabled() {
+        return this.trafficViewEnabled;
     }
 
     private GetTrafficManagerProfileArgs() {}
@@ -109,8 +109,29 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Traffic Manager Profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group the Traffic Manager Profile is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -121,7 +142,17 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tags A mapping of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -132,7 +163,17 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param trafficViewEnabled Indicates whether Traffic View is enabled for the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trafficViewEnabled(Output</* @Nullable */ Boolean> trafficViewEnabled) {
+            $.trafficViewEnabled = trafficViewEnabled;
             return this;
         }
 
@@ -143,8 +184,7 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder trafficViewEnabled(@Nullable Boolean trafficViewEnabled) {
-            $.trafficViewEnabled = trafficViewEnabled;
-            return this;
+            return trafficViewEnabled(Output.of(trafficViewEnabled));
         }
 
         public GetTrafficManagerProfileArgs build() {

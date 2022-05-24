@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedInstanceGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="managedInstanceGroupId", required=true)
-    private String managedInstanceGroupId;
+    private Output<String> managedInstanceGroupId;
 
     /**
      * @return OCID for the managed instance group
      * 
      */
-    public String managedInstanceGroupId() {
+    public Output<String> managedInstanceGroupId() {
         return this.managedInstanceGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagedInstanceGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder managedInstanceGroupId(String managedInstanceGroupId) {
+        public Builder managedInstanceGroupId(Output<String> managedInstanceGroupId) {
             $.managedInstanceGroupId = managedInstanceGroupId;
             return this;
+        }
+
+        /**
+         * @param managedInstanceGroupId OCID for the managed instance group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceGroupId(String managedInstanceGroupId) {
+            return managedInstanceGroupId(Output.of(managedInstanceGroupId));
         }
 
         public GetManagedInstanceGroupArgs build() {

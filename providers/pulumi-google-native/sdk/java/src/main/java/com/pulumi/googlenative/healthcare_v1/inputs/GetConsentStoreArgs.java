@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.healthcare_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetConsentStoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConsentStoreArgs Empty = new GetConsentStoreArgs();
 
     @Import(name="consentStoreId", required=true)
-    private String consentStoreId;
+    private Output<String> consentStoreId;
 
-    public String consentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetConsentStoreArgs() {}
@@ -69,24 +69,40 @@ public final class GetConsentStoreArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConsentStoreArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder consentStoreId(String consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder consentStoreId(String consentStoreId) {
+            return consentStoreId(Output.of(consentStoreId));
+        }
+
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetConsentStoreArgs build() {

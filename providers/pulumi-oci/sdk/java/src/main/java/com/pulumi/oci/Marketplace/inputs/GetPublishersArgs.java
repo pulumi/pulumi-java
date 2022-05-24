@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Marketplace.inputs.GetPublishersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetPublishersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPublishersFilter> filters;
+    private Output</* @Nullable */ List<GetPublishersFilter>> filters;
 
-    public Optional<List<GetPublishersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetPublishersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetPublishersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherId")
-    private @Nullable String publisherId;
+    private Output</* @Nullable */ String> publisherId;
 
     /**
      * @return Limit results to just this publisher.
      * 
      */
-    public Optional<String> publisherId() {
-        return Optional.ofNullable(this.publisherId);
+    public Output</* @Nullable */ String> publisherId() {
+        return this.publisherId;
     }
 
     private GetPublishersArgs() {}
@@ -85,14 +85,28 @@ public final class GetPublishersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPublishersFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetPublishersFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetPublishersFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetPublishersFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetPublishersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publisherId(@Nullable String publisherId) {
+        public Builder publisherId(Output</* @Nullable */ String> publisherId) {
             $.publisherId = publisherId;
             return this;
+        }
+
+        /**
+         * @param publisherId Limit results to just this publisher.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisherId(@Nullable String publisherId) {
+            return publisherId(Output.of(publisherId));
         }
 
         public GetPublishersArgs build() {

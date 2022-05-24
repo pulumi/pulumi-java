@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The stage site identifier.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -32,13 +33,13 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the static site.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder environmentName(String environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * @param environmentName The stage site identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListStaticSiteBuildAppSettingsArgs build() {

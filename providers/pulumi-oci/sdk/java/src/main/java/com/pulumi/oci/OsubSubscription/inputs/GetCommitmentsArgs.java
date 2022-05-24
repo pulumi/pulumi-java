@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OsubSubscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OsubSubscription.inputs.GetCommitmentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCommitmentsFilter> filters;
+    private Output</* @Nullable */ List<GetCommitmentsFilter>> filters;
 
-    public Optional<List<GetCommitmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCommitmentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscribedServiceId", required=true)
-    private String subscribedServiceId;
+    private Output<String> subscribedServiceId;
 
     /**
      * @return This param is used to get the commitments for a particular subscribed service
      * 
      */
-    public String subscribedServiceId() {
+    public Output<String> subscribedServiceId() {
         return this.subscribedServiceId;
     }
 
@@ -58,14 +58,14 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneGatewaySubscriptionId")
-    private @Nullable String xOneGatewaySubscriptionId;
+    private Output</* @Nullable */ String> xOneGatewaySubscriptionId;
 
     /**
      * @return This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
      * 
      */
-    public Optional<String> xOneGatewaySubscriptionId() {
-        return Optional.ofNullable(this.xOneGatewaySubscriptionId);
+    public Output</* @Nullable */ String> xOneGatewaySubscriptionId() {
+        return this.xOneGatewaySubscriptionId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetCommitmentsArgs() {}
@@ -117,14 +117,28 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCommitmentsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCommitmentsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCommitmentsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCommitmentsFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscribedServiceId(String subscribedServiceId) {
+        public Builder subscribedServiceId(Output<String> subscribedServiceId) {
             $.subscribedServiceId = subscribedServiceId;
+            return this;
+        }
+
+        /**
+         * @param subscribedServiceId This param is used to get the commitments for a particular subscribed service
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscribedServiceId(String subscribedServiceId) {
+            return subscribedServiceId(Output.of(subscribedServiceId));
+        }
+
+        /**
+         * @param xOneGatewaySubscriptionId This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneGatewaySubscriptionId(Output</* @Nullable */ String> xOneGatewaySubscriptionId) {
+            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder xOneGatewaySubscriptionId(@Nullable String xOneGatewaySubscriptionId) {
-            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
+            return xOneGatewaySubscriptionId(Output.of(xOneGatewaySubscriptionId));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetCommitmentsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetCommitmentsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gkehub_v1beta;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,49 +14,48 @@ import com.pulumi.googlenative.gkehub_v1beta.inputs.GetMembershipIamPolicyArgs;
 import com.pulumi.googlenative.gkehub_v1beta.outputs.GetFeatureIamPolicyResult;
 import com.pulumi.googlenative.gkehub_v1beta.outputs.GetFeatureResult;
 import com.pulumi.googlenative.gkehub_v1beta.outputs.GetMembershipIamPolicyResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Gkehub_v1betaFunctions {
     /**
      * Gets details of a single Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
+    public static Output<GetFeatureResult> getFeature(GetFeatureArgs args) {
         return getFeature(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:gkehub/v1beta:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args) {
+    public static Output<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args) {
         return getFeatureIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:gkehub/v1beta:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
+    public static Output<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
         return getMembershipIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:gkehub/v1beta:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

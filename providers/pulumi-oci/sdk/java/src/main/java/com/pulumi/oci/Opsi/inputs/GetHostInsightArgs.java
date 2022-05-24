@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHostInsightArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostInsightId", required=true)
-    private String hostInsightId;
+    private Output<String> hostInsightId;
 
     /**
      * @return Unique host insight identifier
      * 
      */
-    public String hostInsightId() {
+    public Output<String> hostInsightId() {
         return this.hostInsightId;
     }
 
@@ -57,9 +58,19 @@ public final class GetHostInsightArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostInsightId(String hostInsightId) {
+        public Builder hostInsightId(Output<String> hostInsightId) {
             $.hostInsightId = hostInsightId;
             return this;
+        }
+
+        /**
+         * @param hostInsightId Unique host insight identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostInsightId(String hostInsightId) {
+            return hostInsightId(Output.of(hostInsightId));
         }
 
         public GetHostInsightArgs build() {

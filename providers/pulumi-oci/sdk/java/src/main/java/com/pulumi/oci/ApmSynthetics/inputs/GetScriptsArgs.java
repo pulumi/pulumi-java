@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ApmSynthetics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ApmSynthetics.inputs.GetScriptsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -36,14 +36,14 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentType")
-    private @Nullable String contentType;
+    private Output</* @Nullable */ String> contentType;
 
     /**
      * @return A filter to return only resources that match the content type given.
      * 
      */
-    public Optional<String> contentType() {
-        return Optional.ofNullable(this.contentType);
+    public Output</* @Nullable */ String> contentType() {
+        return this.contentType;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetScriptsFilter> filters;
+    private Output</* @Nullable */ List<GetScriptsFilter>> filters;
 
-    public Optional<List<GetScriptsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetScriptsFilter>> filters() {
+        return this.filters;
     }
 
     private GetScriptsArgs() {}
@@ -101,8 +101,29 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param contentType A filter to return only resources that match the content type given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentType(Output</* @Nullable */ String> contentType) {
+            $.contentType = contentType;
             return this;
         }
 
@@ -113,7 +134,17 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder contentType(@Nullable String contentType) {
-            $.contentType = contentType;
+            return contentType(Output.of(contentType));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -124,13 +155,16 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetScriptsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetScriptsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetScriptsFilter... filters) {

@@ -8,32 +8,32 @@ import com.pulumi.azure.authorization.inputs.GetRoleDefinitionArgs;
 import com.pulumi.azure.authorization.inputs.GetUserAssignedIdentityArgs;
 import com.pulumi.azure.authorization.outputs.GetRoleDefinitionResult;
 import com.pulumi.azure.authorization.outputs.GetUserAssignedIdentityResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AuthorizationFunctions {
     /**
      * Use this data source to access information about an existing Role Definition.
      * 
      */
-    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition() {
+    public static Output<GetRoleDefinitionResult> getRoleDefinition() {
         return getRoleDefinition(GetRoleDefinitionArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing Role Definition.
      * 
      */
-    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
+    public static Output<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
         return getRoleDefinition(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing Role Definition.
      * 
      */
-    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:authorization/getRoleDefinition:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:authorization/getRoleDefinition:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing User Assigned Identity.
@@ -67,7 +67,7 @@ public final class AuthorizationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
+    public static Output<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
         return getUserAssignedIdentity(args, InvokeOptions.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public final class AuthorizationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:authorization/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:authorization/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

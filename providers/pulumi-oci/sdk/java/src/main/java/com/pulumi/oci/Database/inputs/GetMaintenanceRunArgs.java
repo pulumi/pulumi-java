@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMaintenanceRunArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maintenanceRunId", required=true)
-    private String maintenanceRunId;
+    private Output<String> maintenanceRunId;
 
     /**
      * @return The maintenance run OCID.
      * 
      */
-    public String maintenanceRunId() {
+    public Output<String> maintenanceRunId() {
         return this.maintenanceRunId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMaintenanceRunArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder maintenanceRunId(String maintenanceRunId) {
+        public Builder maintenanceRunId(Output<String> maintenanceRunId) {
             $.maintenanceRunId = maintenanceRunId;
             return this;
+        }
+
+        /**
+         * @param maintenanceRunId The maintenance run OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceRunId(String maintenanceRunId) {
+            return maintenanceRunId(Output.of(maintenanceRunId));
         }
 
         public GetMaintenanceRunArgs build() {

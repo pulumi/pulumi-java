@@ -12,10 +12,10 @@ import com.pulumi.azurenative.machinelearning.outputs.GetCommitmentPlanResult;
 import com.pulumi.azurenative.machinelearning.outputs.GetWebServiceResult;
 import com.pulumi.azurenative.machinelearning.outputs.GetWorkspaceResult;
 import com.pulumi.azurenative.machinelearning.outputs.ListWorkspaceKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MachinelearningFunctions {
     /**
@@ -23,7 +23,7 @@ public final class MachinelearningFunctions {
      * API Version: 2016-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
+    public static Output<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
         return getCommitmentPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -31,15 +31,15 @@ public final class MachinelearningFunctions {
      * API Version: 2016-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearning:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Instance of an Azure ML web service resource.
      * API Version: 2017-01-01.
      * 
      */
-    public static CompletableFuture<GetWebServiceResult> getWebService(GetWebServiceArgs args) {
+    public static Output<GetWebServiceResult> getWebService(GetWebServiceArgs args) {
         return getWebService(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class MachinelearningFunctions {
      * API Version: 2017-01-01.
      * 
      */
-    public static CompletableFuture<GetWebServiceResult> getWebService(GetWebServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getWebService", TypeShape.of(GetWebServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWebServiceResult> getWebService(GetWebServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearning:getWebService", TypeShape.of(GetWebServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object that represents a machine learning workspace.
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class MachinelearningFunctions {
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearning:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace authorization keys for a workspace.
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args) {
+    public static Output<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args) {
         return listWorkspaceKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class MachinelearningFunctions {
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:machinelearning:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearning:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args, Utilities.withVersion(options));
     }
 }

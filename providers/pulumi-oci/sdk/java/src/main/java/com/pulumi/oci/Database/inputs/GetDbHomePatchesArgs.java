@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbHomePatchesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDbHomePatchesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dbHomeId", required=true)
-    private String dbHomeId;
+    private Output<String> dbHomeId;
 
     /**
      * @return The Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbHomeId() {
+    public Output<String> dbHomeId() {
         return this.dbHomeId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbHomePatchesFilter> filters;
+    private Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters;
 
-    public Optional<List<GetDbHomePatchesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDbHomePatchesArgs() {}
@@ -69,14 +69,28 @@ public final class GetDbHomePatchesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder dbHomeId(String dbHomeId) {
+        public Builder dbHomeId(Output<String> dbHomeId) {
             $.dbHomeId = dbHomeId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbHomePatchesFilter> filters) {
+        /**
+         * @param dbHomeId The Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbHomeId(String dbHomeId) {
+            return dbHomeId(Output.of(dbHomeId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDbHomePatchesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbHomePatchesFilter... filters) {

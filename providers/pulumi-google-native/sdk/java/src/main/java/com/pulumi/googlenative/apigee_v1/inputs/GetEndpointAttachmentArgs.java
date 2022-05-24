@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetEndpointAttachmentArgs extends com.pulumi.resources.Invoke
     public static final GetEndpointAttachmentArgs Empty = new GetEndpointAttachmentArgs();
 
     @Import(name="endpointAttachmentId", required=true)
-    private String endpointAttachmentId;
+    private Output<String> endpointAttachmentId;
 
-    public String endpointAttachmentId() {
+    public Output<String> endpointAttachmentId() {
         return this.endpointAttachmentId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetEndpointAttachmentArgs extends com.pulumi.resources.Invoke
             $ = new GetEndpointAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder endpointAttachmentId(String endpointAttachmentId) {
+        public Builder endpointAttachmentId(Output<String> endpointAttachmentId) {
             $.endpointAttachmentId = endpointAttachmentId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder endpointAttachmentId(String endpointAttachmentId) {
+            return endpointAttachmentId(Output.of(endpointAttachmentId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetEndpointAttachmentArgs build() {

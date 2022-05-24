@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Artifacts;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -29,7 +30,6 @@ import com.pulumi.oci.Artifacts.outputs.GetGenericArtifactsResult;
 import com.pulumi.oci.Artifacts.outputs.GetRepositoriesResult;
 import com.pulumi.oci.Artifacts.outputs.GetRepositoryResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ArtifactsFunctions {
     /**
@@ -40,7 +40,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerConfigurationResult> getContainerConfiguration(GetContainerConfigurationArgs args) {
+    public static Output<GetContainerConfigurationResult> getContainerConfiguration(GetContainerConfigurationArgs args) {
         return getContainerConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -51,8 +51,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerConfigurationResult> getContainerConfiguration(GetContainerConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerConfiguration:getContainerConfiguration", TypeShape.of(GetContainerConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerConfigurationResult> getContainerConfiguration(GetContainerConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerConfiguration:getContainerConfiguration", TypeShape.of(GetContainerConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Container Image resource in Oracle Cloud Infrastructure Artifacts service.
@@ -62,7 +62,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImageResult> getContainerImage(GetContainerImageArgs args) {
+    public static Output<GetContainerImageResult> getContainerImage(GetContainerImageArgs args) {
         return getContainerImage(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImageResult> getContainerImage(GetContainerImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerImage:getContainerImage", TypeShape.of(GetContainerImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerImageResult> getContainerImage(GetContainerImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerImage:getContainerImage", TypeShape.of(GetContainerImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Container Image Signature resource in Oracle Cloud Infrastructure Artifacts service.
@@ -84,7 +84,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImageSignatureResult> getContainerImageSignature(GetContainerImageSignatureArgs args) {
+    public static Output<GetContainerImageSignatureResult> getContainerImageSignature(GetContainerImageSignatureArgs args) {
         return getContainerImageSignature(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImageSignatureResult> getContainerImageSignature(GetContainerImageSignatureArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerImageSignature:getContainerImageSignature", TypeShape.of(GetContainerImageSignatureResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerImageSignatureResult> getContainerImageSignature(GetContainerImageSignatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerImageSignature:getContainerImageSignature", TypeShape.of(GetContainerImageSignatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Container Images in Oracle Cloud Infrastructure Artifacts service.
@@ -106,7 +106,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImagesResult> getContainerImages(GetContainerImagesArgs args) {
+    public static Output<GetContainerImagesResult> getContainerImages(GetContainerImagesArgs args) {
         return getContainerImages(args, InvokeOptions.Empty);
     }
     /**
@@ -117,8 +117,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerImagesResult> getContainerImages(GetContainerImagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerImages:getContainerImages", TypeShape.of(GetContainerImagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerImagesResult> getContainerImages(GetContainerImagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerImages:getContainerImages", TypeShape.of(GetContainerImagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Container Repositories in Oracle Cloud Infrastructure Artifacts service.
@@ -128,7 +128,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerRepositoriesResult> getContainerRepositories(GetContainerRepositoriesArgs args) {
+    public static Output<GetContainerRepositoriesResult> getContainerRepositories(GetContainerRepositoriesArgs args) {
         return getContainerRepositories(args, InvokeOptions.Empty);
     }
     /**
@@ -139,8 +139,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerRepositoriesResult> getContainerRepositories(GetContainerRepositoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerRepositories:getContainerRepositories", TypeShape.of(GetContainerRepositoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerRepositoriesResult> getContainerRepositories(GetContainerRepositoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerRepositories:getContainerRepositories", TypeShape.of(GetContainerRepositoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Container Repository resource in Oracle Cloud Infrastructure Artifacts service.
@@ -150,7 +150,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerRepositoryResult> getContainerRepository(GetContainerRepositoryArgs args) {
+    public static Output<GetContainerRepositoryResult> getContainerRepository(GetContainerRepositoryArgs args) {
         return getContainerRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -161,8 +161,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerRepositoryResult> getContainerRepository(GetContainerRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerRepository:getContainerRepository", TypeShape.of(GetContainerRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerRepositoryResult> getContainerRepository(GetContainerRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerRepository:getContainerRepository", TypeShape.of(GetContainerRepositoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Container Image Signatures in Oracle Cloud Infrastructure Artifacts service.
@@ -172,7 +172,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerSignaturesResult> getContainerSignatures(GetContainerSignaturesArgs args) {
+    public static Output<GetContainerSignaturesResult> getContainerSignatures(GetContainerSignaturesArgs args) {
         return getContainerSignatures(args, InvokeOptions.Empty);
     }
     /**
@@ -183,8 +183,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerSignaturesResult> getContainerSignatures(GetContainerSignaturesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getContainerSignatures:getContainerSignatures", TypeShape.of(GetContainerSignaturesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerSignaturesResult> getContainerSignatures(GetContainerSignaturesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getContainerSignatures:getContainerSignatures", TypeShape.of(GetContainerSignaturesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Generic Artifact resource in Oracle Cloud Infrastructure Artifacts service.
@@ -194,7 +194,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactResult> getGenericArtifact(GetGenericArtifactArgs args) {
+    public static Output<GetGenericArtifactResult> getGenericArtifact(GetGenericArtifactArgs args) {
         return getGenericArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -205,8 +205,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactResult> getGenericArtifact(GetGenericArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getGenericArtifact:getGenericArtifact", TypeShape.of(GetGenericArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGenericArtifactResult> getGenericArtifact(GetGenericArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getGenericArtifact:getGenericArtifact", TypeShape.of(GetGenericArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Generic Artifacts in Oracle Cloud Infrastructure Artifacts service.
@@ -216,7 +216,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactsResult> getGenericArtifacts(GetGenericArtifactsArgs args) {
+    public static Output<GetGenericArtifactsResult> getGenericArtifacts(GetGenericArtifactsArgs args) {
         return getGenericArtifacts(args, InvokeOptions.Empty);
     }
     /**
@@ -227,8 +227,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGenericArtifactsResult> getGenericArtifacts(GetGenericArtifactsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getGenericArtifacts:getGenericArtifacts", TypeShape.of(GetGenericArtifactsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGenericArtifactsResult> getGenericArtifacts(GetGenericArtifactsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getGenericArtifacts:getGenericArtifacts", TypeShape.of(GetGenericArtifactsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repositories in Oracle Cloud Infrastructure Artifacts service.
@@ -238,7 +238,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args) {
+    public static Output<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args) {
         return getRepositories(args, InvokeOptions.Empty);
     }
     /**
@@ -249,8 +249,8 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getRepositories:getRepositories", TypeShape.of(GetRepositoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getRepositories:getRepositories", TypeShape.of(GetRepositoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository resource in Oracle Cloud Infrastructure Artifacts service.
@@ -260,7 +260,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -271,7 +271,7 @@ public final class ArtifactsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Artifacts/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Artifacts/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

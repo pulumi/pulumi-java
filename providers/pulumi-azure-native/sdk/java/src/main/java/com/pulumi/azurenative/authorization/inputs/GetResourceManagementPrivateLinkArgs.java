@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
      * 
      */
     @Import(name="rmplName", required=true)
-    private String rmplName;
+    private Output<String> rmplName;
 
     /**
      * @return The name of the resource management private link.
      * 
      */
-    public String rmplName() {
+    public Output<String> rmplName() {
         return this.rmplName;
     }
 
@@ -73,8 +74,29 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param rmplName The name of the resource management private link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rmplName(Output<String> rmplName) {
+            $.rmplName = rmplName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
          * 
          */
         public Builder rmplName(String rmplName) {
-            $.rmplName = rmplName;
-            return this;
+            return rmplName(Output.of(rmplName));
         }
 
         public GetResourceManagementPrivateLinkArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetKeyArgs() {}
@@ -53,14 +53,22 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetKeyArgs build() {

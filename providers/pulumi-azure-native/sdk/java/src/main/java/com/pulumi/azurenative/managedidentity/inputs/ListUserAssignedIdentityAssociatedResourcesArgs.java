@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.managedidentity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private Output</* @Nullable */ String> filter;
 
     /**
      * @return OData filter expression to apply to the query.
      * 
      */
-    public Optional<String> filter() {
-        return Optional.ofNullable(this.filter);
+    public Output</* @Nullable */ String> filter() {
+        return this.filter;
     }
 
     /**
@@ -35,14 +35,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="orderby")
-    private @Nullable String orderby;
+    private Output</* @Nullable */ String> orderby;
 
     /**
      * @return OData orderBy expression to apply to the query.
      * 
      */
-    public Optional<String> orderby() {
-        return Optional.ofNullable(this.orderby);
+    public Output</* @Nullable */ String> orderby() {
+        return this.orderby;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group to which the identity belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,13 +65,13 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the identity resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -80,14 +80,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="skip")
-    private @Nullable Integer skip;
+    private Output</* @Nullable */ Integer> skip;
 
     /**
      * @return Number of records to skip.
      * 
      */
-    public Optional<Integer> skip() {
-        return Optional.ofNullable(this.skip);
+    public Output</* @Nullable */ Integer> skip() {
+        return this.skip;
     }
 
     /**
@@ -95,14 +95,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="skiptoken")
-    private @Nullable String skiptoken;
+    private Output</* @Nullable */ String> skiptoken;
 
     /**
      * @return A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
      * 
      */
-    public Optional<String> skiptoken() {
-        return Optional.ofNullable(this.skiptoken);
+    public Output</* @Nullable */ String> skiptoken() {
+        return this.skiptoken;
     }
 
     /**
@@ -110,14 +110,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private Output</* @Nullable */ Integer> top;
 
     /**
      * @return Number of records to return.
      * 
      */
-    public Optional<Integer> top() {
-        return Optional.ofNullable(this.top);
+    public Output</* @Nullable */ Integer> top() {
+        return this.top;
     }
 
     private ListUserAssignedIdentityAssociatedResourcesArgs() {}
@@ -156,8 +156,29 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(Output</* @Nullable */ String> filter) {
             $.filter = filter;
+            return this;
+        }
+
+        /**
+         * @param filter OData filter expression to apply to the query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(@Nullable String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param orderby OData orderBy expression to apply to the query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder orderby(Output</* @Nullable */ String> orderby) {
+            $.orderby = orderby;
             return this;
         }
 
@@ -168,7 +189,17 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder orderby(@Nullable String orderby) {
-            $.orderby = orderby;
+            return orderby(Output.of(orderby));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the identity belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -179,7 +210,17 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the identity resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -190,7 +231,17 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param skip Number of records to skip.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skip(Output</* @Nullable */ Integer> skip) {
+            $.skip = skip;
             return this;
         }
 
@@ -201,7 +252,17 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder skip(@Nullable Integer skip) {
-            $.skip = skip;
+            return skip(Output.of(skip));
+        }
+
+        /**
+         * @param skiptoken A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skiptoken(Output</* @Nullable */ String> skiptoken) {
+            $.skiptoken = skiptoken;
             return this;
         }
 
@@ -212,7 +273,17 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder skiptoken(@Nullable String skiptoken) {
-            $.skiptoken = skiptoken;
+            return skiptoken(Output.of(skiptoken));
+        }
+
+        /**
+         * @param top Number of records to return.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(Output</* @Nullable */ Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -223,8 +294,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * 
          */
         public Builder top(@Nullable Integer top) {
-            $.top = top;
-            return this;
+            return top(Output.of(top));
         }
 
         public ListUserAssignedIdentityAssociatedResourcesArgs build() {

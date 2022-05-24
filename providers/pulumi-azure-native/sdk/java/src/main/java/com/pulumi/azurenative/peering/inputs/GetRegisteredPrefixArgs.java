@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.peering.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="peeringName", required=true)
-    private String peeringName;
+    private Output<String> peeringName;
 
     /**
      * @return The name of the peering.
      * 
      */
-    public String peeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="registeredPrefixName", required=true)
-    private String registeredPrefixName;
+    private Output<String> registeredPrefixName;
 
     /**
      * @return The name of the registered prefix.
      * 
      */
-    public String registeredPrefixName() {
+    public Output<String> registeredPrefixName() {
         return this.registeredPrefixName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder peeringName(String peeringName) {
+        public Builder peeringName(Output<String> peeringName) {
             $.peeringName = peeringName;
+            return this;
+        }
+
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringName(String peeringName) {
+            return peeringName(Output.of(peeringName));
+        }
+
+        /**
+         * @param registeredPrefixName The name of the registered prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registeredPrefixName(Output<String> registeredPrefixName) {
+            $.registeredPrefixName = registeredPrefixName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder registeredPrefixName(String registeredPrefixName) {
-            $.registeredPrefixName = registeredPrefixName;
+            return registeredPrefixName(Output.of(registeredPrefixName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetRegisteredPrefixArgs build() {

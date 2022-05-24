@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.bigquery;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigquery.inputs.GetDefaultServiceAccountArgs;
 import com.pulumi.gcp.bigquery.outputs.GetDefaultServiceAccountResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class BigqueryFunctions {
     /**
@@ -51,7 +51,7 @@ public final class BigqueryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
         return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +93,7 @@ public final class BigqueryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
         return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -135,7 +135,7 @@ public final class BigqueryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:bigquery/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:bigquery/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -14,10 +14,10 @@ import com.pulumi.azure.netapp.outputs.GetPoolResult;
 import com.pulumi.azure.netapp.outputs.GetSnapshotPolicyResult;
 import com.pulumi.azure.netapp.outputs.GetSnapshotResult;
 import com.pulumi.azure.netapp.outputs.GetVolumeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NetappFunctions {
     /**
@@ -49,7 +49,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:netapp/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:netapp/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an existing NetApp Pool.
@@ -114,7 +114,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
+    public static Output<GetPoolResult> getPool(GetPoolArgs args) {
         return getPool(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:netapp/getPool:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:netapp/getPool:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an existing NetApp Snapshot.
@@ -182,7 +182,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -217,8 +217,8 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:netapp/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:netapp/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an existing NetApp Snapshot Policy.
@@ -256,7 +256,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args) {
+    public static Output<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args) {
         return getSnapshotPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -295,8 +295,8 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:netapp/getSnapshotPolicy:getSnapshotPolicy", TypeShape.of(GetSnapshotPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:netapp/getSnapshotPolicy:getSnapshotPolicy", TypeShape.of(GetSnapshotPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an existing NetApp Volume.
@@ -329,7 +329,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -363,7 +363,7 @@ public final class NetappFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:netapp/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:netapp/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
 }

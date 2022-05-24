@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabaseArgs extends 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabaseArgs extends 
      * 
      */
     @Import(name="dbManagementPrivateEndpointId", required=true)
-    private String dbManagementPrivateEndpointId;
+    private Output<String> dbManagementPrivateEndpointId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
      * 
      */
-    public String dbManagementPrivateEndpointId() {
+    public Output<String> dbManagementPrivateEndpointId() {
         return this.dbManagementPrivateEndpointId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabaseArgs extends 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbManagementPrivateEndpointId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbManagementPrivateEndpointId(Output<String> dbManagementPrivateEndpointId) {
+            $.dbManagementPrivateEndpointId = dbManagementPrivateEndpointId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabaseArgs extends 
          * 
          */
         public Builder dbManagementPrivateEndpointId(String dbManagementPrivateEndpointId) {
-            $.dbManagementPrivateEndpointId = dbManagementPrivateEndpointId;
-            return this;
+            return dbManagementPrivateEndpointId(Output.of(dbManagementPrivateEndpointId));
         }
 
         public GetDbManagementPrivateEndpointAssociatedDatabaseArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ServiceManagerProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceEnvironmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceEnvironmentId", required=true)
-    private String serviceEnvironmentId;
+    private Output<String> serviceEnvironmentId;
 
     /**
      * @return The unique identifier associated with the service environment.
      * 
      */
-    public String serviceEnvironmentId() {
+    public Output<String> serviceEnvironmentId() {
         return this.serviceEnvironmentId;
     }
 
@@ -73,8 +74,29 @@ public final class GetServiceEnvironmentArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param serviceEnvironmentId The unique identifier associated with the service environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEnvironmentId(Output<String> serviceEnvironmentId) {
+            $.serviceEnvironmentId = serviceEnvironmentId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetServiceEnvironmentArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder serviceEnvironmentId(String serviceEnvironmentId) {
-            $.serviceEnvironmentId = serviceEnvironmentId;
-            return this;
+            return serviceEnvironmentId(Output.of(serviceEnvironmentId));
         }
 
         public GetServiceEnvironmentArgs build() {

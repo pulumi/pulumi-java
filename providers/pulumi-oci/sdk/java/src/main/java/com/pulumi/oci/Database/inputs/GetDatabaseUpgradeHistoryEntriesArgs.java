@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDatabaseUpgradeHistoryEntriesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseUpgradeHistoryEntriesFilter> filters;
+    private Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters;
 
-    public Optional<List<GetDatabaseUpgradeHistoryEntriesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only upgradeHistoryEntries that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="upgradeAction")
-    private @Nullable String upgradeAction;
+    private Output</* @Nullable */ String> upgradeAction;
 
     /**
      * @return A filter to return only upgradeHistoryEntries that match the specified Upgrade Action.
      * 
      */
-    public Optional<String> upgradeAction() {
-        return Optional.ofNullable(this.upgradeAction);
+    public Output</* @Nullable */ String> upgradeAction() {
+        return this.upgradeAction;
     }
 
     private GetDatabaseUpgradeHistoryEntriesArgs() {}
@@ -101,14 +101,28 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseUpgradeHistoryEntriesFilter> filters) {
+        /**
+         * @param databaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDatabaseUpgradeHistoryEntriesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDatabaseUpgradeHistoryEntriesFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only upgradeHistoryEntries that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param upgradeAction A filter to return only upgradeHistoryEntries that match the specified Upgrade Action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder upgradeAction(Output</* @Nullable */ String> upgradeAction) {
+            $.upgradeAction = upgradeAction;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * 
          */
         public Builder upgradeAction(@Nullable String upgradeAction) {
-            $.upgradeAction = upgradeAction;
-            return this;
+            return upgradeAction(Output.of(upgradeAction));
         }
 
         public GetDatabaseUpgradeHistoryEntriesArgs build() {

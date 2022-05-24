@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.orgpolicy_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
     public static final GetOrganizationPolicyArgs Empty = new GetOrganizationPolicyArgs();
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="policyId", required=true)
-    private String policyId;
+    private Output<String> policyId;
 
-    public String policyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -51,14 +52,22 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
             $ = new GetOrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder policyId(String policyId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder policyId(Output<String> policyId) {
             $.policyId = policyId;
             return this;
+        }
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
 
         public GetOrganizationPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTsigKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tsigKeyId", required=true)
-    private String tsigKeyId;
+    private Output<String> tsigKeyId;
 
     /**
      * @return The OCID of the target TSIG key.
      * 
      */
-    public String tsigKeyId() {
+    public Output<String> tsigKeyId() {
         return this.tsigKeyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTsigKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tsigKeyId(String tsigKeyId) {
+        public Builder tsigKeyId(Output<String> tsigKeyId) {
             $.tsigKeyId = tsigKeyId;
             return this;
+        }
+
+        /**
+         * @param tsigKeyId The OCID of the target TSIG key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tsigKeyId(String tsigKeyId) {
+            return tsigKeyId(Output.of(tsigKeyId));
         }
 
         public GetTsigKeyArgs build() {

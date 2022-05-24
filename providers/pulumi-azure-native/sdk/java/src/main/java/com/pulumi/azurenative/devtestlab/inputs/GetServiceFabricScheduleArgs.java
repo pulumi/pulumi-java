@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.devtestlab.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Specify the $expand query. Example: &#39;properties($select=status)&#39;
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labName", required=true)
-    private String labName;
+    private Output<String> labName;
 
     /**
      * @return The name of the lab.
      * 
      */
-    public String labName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -49,13 +49,13 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the schedule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -64,13 +64,13 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,13 +79,13 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceFabricName", required=true)
-    private String serviceFabricName;
+    private Output<String> serviceFabricName;
 
     /**
      * @return The name of the service fabric.
      * 
      */
-    public String serviceFabricName() {
+    public Output<String> serviceFabricName() {
         return this.serviceFabricName;
     }
 
@@ -94,13 +94,13 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user profile.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -139,8 +139,29 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=status)&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labName(Output<String> labName) {
+            $.labName = labName;
             return this;
         }
 
@@ -151,7 +172,17 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder labName(String labName) {
-            $.labName = labName;
+            return labName(Output.of(labName));
+        }
+
+        /**
+         * @param name The name of the schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -162,7 +193,17 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -173,7 +214,17 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceFabricName The name of the service fabric.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceFabricName(Output<String> serviceFabricName) {
+            $.serviceFabricName = serviceFabricName;
             return this;
         }
 
@@ -184,7 +235,17 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder serviceFabricName(String serviceFabricName) {
-            $.serviceFabricName = serviceFabricName;
+            return serviceFabricName(Output.of(serviceFabricName));
+        }
+
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -195,8 +256,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetServiceFabricScheduleArgs build() {

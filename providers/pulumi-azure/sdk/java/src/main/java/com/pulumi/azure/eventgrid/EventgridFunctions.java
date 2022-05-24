@@ -12,10 +12,10 @@ import com.pulumi.azure.eventgrid.outputs.GetDomainResult;
 import com.pulumi.azure.eventgrid.outputs.GetDomainTopicResult;
 import com.pulumi.azure.eventgrid.outputs.GetSystemTopicResult;
 import com.pulumi.azure.eventgrid.outputs.GetTopicResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EventgridFunctions {
     /**
@@ -47,7 +47,7 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -79,8 +79,8 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:eventgrid/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:eventgrid/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing EventGrid Domain Topic
@@ -110,7 +110,7 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args) {
+    public static Output<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args) {
         return getDomainTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:eventgrid/getDomainTopic:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:eventgrid/getDomainTopic:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing EventGrid System Topic
@@ -172,7 +172,7 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args) {
+    public static Output<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args) {
         return getSystemTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -203,8 +203,8 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:eventgrid/getSystemTopic:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:eventgrid/getSystemTopic:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing EventGrid Topic
@@ -234,7 +234,7 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -265,7 +265,7 @@ public final class EventgridFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:eventgrid/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:eventgrid/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

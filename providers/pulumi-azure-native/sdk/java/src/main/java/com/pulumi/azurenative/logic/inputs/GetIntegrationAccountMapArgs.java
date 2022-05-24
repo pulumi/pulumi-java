@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="mapName", required=true)
-    private String mapName;
+    private Output<String> mapName;
 
     /**
      * @return The integration account map name.
      * 
      */
-    public String mapName() {
+    public Output<String> mapName() {
         return this.mapName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder integrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
+            return this;
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param mapName The integration account map name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mapName(Output<String> mapName) {
+            $.mapName = mapName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder mapName(String mapName) {
-            $.mapName = mapName;
+            return mapName(Output.of(mapName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationAccountMapArgs build() {

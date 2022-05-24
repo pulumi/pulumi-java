@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.binaryauthorization_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,56 +14,55 @@ import com.pulumi.googlenative.binaryauthorization_v1beta1.inputs.GetPolicyIamPo
 import com.pulumi.googlenative.binaryauthorization_v1beta1.outputs.GetAttestorIamPolicyResult;
 import com.pulumi.googlenative.binaryauthorization_v1beta1.outputs.GetAttestorResult;
 import com.pulumi.googlenative.binaryauthorization_v1beta1.outputs.GetPolicyIamPolicyResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Binaryauthorization_v1beta1Functions {
     /**
      * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
      * 
      */
-    public static CompletableFuture<GetAttestorResult> getAttestor(GetAttestorArgs args) {
+    public static Output<GetAttestorResult> getAttestor(GetAttestorArgs args) {
         return getAttestor(args, InvokeOptions.Empty);
     }
     /**
      * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
      * 
      */
-    public static CompletableFuture<GetAttestorResult> getAttestor(GetAttestorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1beta1:getAttestor", TypeShape.of(GetAttestorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAttestorResult> getAttestor(GetAttestorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:binaryauthorization/v1beta1:getAttestor", TypeShape.of(GetAttestorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args) {
+    public static Output<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args) {
         return getAttestorIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1beta1:getAttestorIamPolicy", TypeShape.of(GetAttestorIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAttestorIamPolicyResult> getAttestorIamPolicy(GetAttestorIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:binaryauthorization/v1beta1:getAttestorIamPolicy", TypeShape.of(GetAttestorIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy() {
+    public static Output<GetPolicyIamPolicyResult> getPolicyIamPolicy() {
         return getPolicyIamPolicy(GetPolicyIamPolicyArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args) {
+    public static Output<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args) {
         return getPolicyIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1beta1:getPolicyIamPolicy", TypeShape.of(GetPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyIamPolicyResult> getPolicyIamPolicy(GetPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:binaryauthorization/v1beta1:getPolicyIamPolicy", TypeShape.of(GetPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetAutonomousDbVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dbWorkload")
-    private @Nullable String dbWorkload;
+    private Output</* @Nullable */ String> dbWorkload;
 
     /**
      * @return A filter to return only autonomous database resources that match the specified workload type.
      * 
      */
-    public Optional<String> dbWorkload() {
-        return Optional.ofNullable(this.dbWorkload);
+    public Output</* @Nullable */ String> dbWorkload() {
+        return this.dbWorkload;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousDbVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters;
 
-    public Optional<List<GetAutonomousDbVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters() {
+        return this.filters;
     }
 
     private GetAutonomousDbVersionsArgs() {}
@@ -85,8 +85,29 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbWorkload A filter to return only autonomous database resources that match the specified workload type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbWorkload(Output</* @Nullable */ String> dbWorkload) {
+            $.dbWorkload = dbWorkload;
             return this;
         }
 
@@ -97,13 +118,16 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder dbWorkload(@Nullable String dbWorkload) {
-            $.dbWorkload = dbWorkload;
+            return dbWorkload(Output.of(dbWorkload));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAutonomousDbVersionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAutonomousDbVersionsFilter... filters) {

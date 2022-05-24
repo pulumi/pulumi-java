@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accessResourcePath")
-    private @Nullable String accessResourcePath;
+    private Output</* @Nullable */ String> accessResourcePath;
 
     /**
      * @return The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
      * 
      */
-    public Optional<String> accessResourcePath() {
-        return Optional.ofNullable(this.accessResourcePath);
+    public Output</* @Nullable */ String> accessResourcePath() {
+        return this.accessResourcePath;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expireTime")
-    private @Nullable String expireTime;
+    private Output</* @Nullable */ String> expireTime;
 
     /**
      * @return Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
      * 
      */
-    public Optional<String> expireTime() {
-        return Optional.ofNullable(this.expireTime);
+    public Output</* @Nullable */ String> expireTime() {
+        return this.expireTime;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -64,14 +64,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="permissions")
-    private @Nullable String permissions;
+    private Output</* @Nullable */ String> permissions;
 
     /**
      * @return The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
      */
-    public Optional<String> permissions() {
-        return Optional.ofNullable(this.permissions);
+    public Output</* @Nullable */ String> permissions() {
+        return this.permissions;
     }
 
     /**
@@ -79,14 +79,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="profileName")
-    private @Nullable String profileName;
+    private Output</* @Nullable */ String> profileName;
 
     /**
      * @return The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
      * 
      */
-    public Optional<String> profileName() {
-        return Optional.ofNullable(this.profileName);
+    public Output</* @Nullable */ String> profileName() {
+        return this.profileName;
     }
 
     /**
@@ -94,13 +94,13 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -109,14 +109,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime")
-    private @Nullable String startTime;
+    private Output</* @Nullable */ String> startTime;
 
     /**
      * @return Start time for the token. If not specified the current time will be used.
      * 
      */
-    public Optional<String> startTime() {
-        return Optional.ofNullable(this.startTime);
+    public Output</* @Nullable */ String> startTime() {
+        return this.startTime;
     }
 
     private GetFactoryDataPlaneAccessArgs() {}
@@ -155,8 +155,29 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder accessResourcePath(@Nullable String accessResourcePath) {
+        public Builder accessResourcePath(Output</* @Nullable */ String> accessResourcePath) {
             $.accessResourcePath = accessResourcePath;
+            return this;
+        }
+
+        /**
+         * @param accessResourcePath The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessResourcePath(@Nullable String accessResourcePath) {
+            return accessResourcePath(Output.of(accessResourcePath));
+        }
+
+        /**
+         * @param expireTime Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expireTime(Output</* @Nullable */ String> expireTime) {
+            $.expireTime = expireTime;
             return this;
         }
 
@@ -167,7 +188,17 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder expireTime(@Nullable String expireTime) {
-            $.expireTime = expireTime;
+            return expireTime(Output.of(expireTime));
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(Output<String> factoryName) {
+            $.factoryName = factoryName;
             return this;
         }
 
@@ -178,7 +209,17 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder factoryName(String factoryName) {
-            $.factoryName = factoryName;
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param permissions The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(Output</* @Nullable */ String> permissions) {
+            $.permissions = permissions;
             return this;
         }
 
@@ -189,7 +230,17 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder permissions(@Nullable String permissions) {
-            $.permissions = permissions;
+            return permissions(Output.of(permissions));
+        }
+
+        /**
+         * @param profileName The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output</* @Nullable */ String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -200,7 +251,17 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder profileName(@Nullable String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -211,7 +272,17 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param startTime Start time for the token. If not specified the current time will be used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output</* @Nullable */ String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -222,8 +293,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * 
          */
         public Builder startTime(@Nullable String startTime) {
-            $.startTime = startTime;
-            return this;
+            return startTime(Output.of(startTime));
         }
 
         public GetFactoryDataPlaneAccessArgs build() {

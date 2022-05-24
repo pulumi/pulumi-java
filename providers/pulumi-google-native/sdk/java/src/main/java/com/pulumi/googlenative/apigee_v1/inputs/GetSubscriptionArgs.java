@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @Import(name="developerId", required=true)
-    private String developerId;
+    private Output<String> developerId;
 
-    public String developerId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -59,19 +60,31 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder developerId(String developerId) {
+        public Builder developerId(Output<String> developerId) {
             $.developerId = developerId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder developerId(String developerId) {
+            return developerId(Output.of(developerId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder subscriptionId(String subscriptionId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
+        }
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetSubscriptionArgs build() {

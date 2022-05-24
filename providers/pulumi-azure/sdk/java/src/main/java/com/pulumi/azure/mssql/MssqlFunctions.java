@@ -12,10 +12,10 @@ import com.pulumi.azure.mssql.outputs.GetDatabaseResult;
 import com.pulumi.azure.mssql.outputs.GetElasticPoolResult;
 import com.pulumi.azure.mssql.outputs.GetManagedInstanceResult;
 import com.pulumi.azure.mssql.outputs.GetServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MssqlFunctions {
     /**
@@ -47,7 +47,7 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -79,8 +79,8 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mssql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mssql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing SQL elastic pool.
@@ -112,7 +112,7 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args) {
+    public static Output<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args) {
         return getElasticPool(args, InvokeOptions.Empty);
     }
     /**
@@ -145,8 +145,8 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mssql/getElasticPool:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mssql/getElasticPool:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Microsoft SQL Azure Managed Instance.
@@ -176,7 +176,7 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
+    public static Output<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
         return getManagedInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -207,8 +207,8 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mssql/getManagedInstance:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mssql/getManagedInstance:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Microsoft SQL Server.
@@ -239,7 +239,7 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+    public static Output<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
     /**
@@ -271,7 +271,7 @@ public final class MssqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mssql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mssql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
 }

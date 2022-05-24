@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The Billing Account Name of the MCA account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="billingProfileName", required=true)
-    private String billingProfileName;
+    private Output<String> billingProfileName;
 
     /**
      * @return The Billing Profile Name in the above Billing Account.
      * 
      */
-    public String billingProfileName() {
+    public Output<String> billingProfileName() {
         return this.billingProfileName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="invoiceSectionName", required=true)
-    private String invoiceSectionName;
+    private Output<String> invoiceSectionName;
 
     /**
      * @return The Invoice Section Name in the above Billing Profile.
      * 
      */
-    public String invoiceSectionName() {
+    public Output<String> invoiceSectionName() {
         return this.invoiceSectionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The Billing Account Name of the MCA account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingProfileName The Billing Profile Name in the above Billing Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingProfileName(Output<String> billingProfileName) {
+            $.billingProfileName = billingProfileName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder billingProfileName(String billingProfileName) {
-            $.billingProfileName = billingProfileName;
+            return billingProfileName(Output.of(billingProfileName));
+        }
+
+        /**
+         * @param invoiceSectionName The Invoice Section Name in the above Billing Profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invoiceSectionName(Output<String> invoiceSectionName) {
+            $.invoiceSectionName = invoiceSectionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMcaAccountScopeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder invoiceSectionName(String invoiceSectionName) {
-            $.invoiceSectionName = invoiceSectionName;
-            return this;
+            return invoiceSectionName(Output.of(invoiceSectionName));
         }
 
         public GetMcaAccountScopeArgs build() {

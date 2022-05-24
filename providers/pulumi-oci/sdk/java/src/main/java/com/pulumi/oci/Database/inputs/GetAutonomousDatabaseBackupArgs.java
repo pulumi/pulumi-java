@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousDatabaseBackupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="autonomousDatabaseBackupId", required=true)
-    private String autonomousDatabaseBackupId;
+    private Output<String> autonomousDatabaseBackupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
      * 
      */
-    public String autonomousDatabaseBackupId() {
+    public Output<String> autonomousDatabaseBackupId() {
         return this.autonomousDatabaseBackupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutonomousDatabaseBackupArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseBackupId(String autonomousDatabaseBackupId) {
+        public Builder autonomousDatabaseBackupId(Output<String> autonomousDatabaseBackupId) {
             $.autonomousDatabaseBackupId = autonomousDatabaseBackupId;
             return this;
+        }
+
+        /**
+         * @param autonomousDatabaseBackupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Autonomous Database backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousDatabaseBackupId(String autonomousDatabaseBackupId) {
+            return autonomousDatabaseBackupId(Output.of(autonomousDatabaseBackupId));
         }
 
         public GetAutonomousDatabaseBackupArgs build() {

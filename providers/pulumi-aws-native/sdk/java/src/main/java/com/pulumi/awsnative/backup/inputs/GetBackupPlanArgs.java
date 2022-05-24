@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.backup.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetBackupPlanArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupPlanArgs Empty = new GetBackupPlanArgs();
 
     @Import(name="backupPlanId", required=true)
-    private String backupPlanId;
+    private Output<String> backupPlanId;
 
-    public String backupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
 
@@ -43,9 +44,13 @@ public final class GetBackupPlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupPlanArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupPlanId(String backupPlanId) {
+        public Builder backupPlanId(Output<String> backupPlanId) {
             $.backupPlanId = backupPlanId;
             return this;
+        }
+
+        public Builder backupPlanId(String backupPlanId) {
+            return backupPlanId(Output.of(backupPlanId));
         }
 
         public GetBackupPlanArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.migrate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moveCollectionName", required=true)
-    private String moveCollectionName;
+    private Output<String> moveCollectionName;
 
     /**
      * @return The Move Collection Name.
      * 
      */
-    public String moveCollectionName() {
+    public Output<String> moveCollectionName() {
         return this.moveCollectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moveResourceName", required=true)
-    private String moveResourceName;
+    private Output<String> moveResourceName;
 
     /**
      * @return The Move Resource Name.
      * 
      */
-    public String moveResourceName() {
+    public Output<String> moveResourceName() {
         return this.moveResourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder moveCollectionName(String moveCollectionName) {
+        public Builder moveCollectionName(Output<String> moveCollectionName) {
             $.moveCollectionName = moveCollectionName;
+            return this;
+        }
+
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder moveCollectionName(String moveCollectionName) {
+            return moveCollectionName(Output.of(moveCollectionName));
+        }
+
+        /**
+         * @param moveResourceName The Move Resource Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder moveResourceName(Output<String> moveResourceName) {
+            $.moveResourceName = moveResourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder moveResourceName(String moveResourceName) {
-            $.moveResourceName = moveResourceName;
+            return moveResourceName(Output.of(moveResourceName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMoveResourceArgs build() {

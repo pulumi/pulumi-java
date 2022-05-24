@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAwrHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awrHubId", required=true)
-    private String awrHubId;
+    private Output<String> awrHubId;
 
     /**
      * @return Unique Awr Hub identifier
      * 
      */
-    public String awrHubId() {
+    public Output<String> awrHubId() {
         return this.awrHubId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAwrHubArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder awrHubId(String awrHubId) {
+        public Builder awrHubId(Output<String> awrHubId) {
             $.awrHubId = awrHubId;
             return this;
+        }
+
+        /**
+         * @param awrHubId Unique Awr Hub identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder awrHubId(String awrHubId) {
+            return awrHubId(Output.of(awrHubId));
         }
 
         public GetAwrHubArgs build() {

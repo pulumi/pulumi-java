@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.OsubSubscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OsubSubscription.inputs.GetSubscriptionsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="buyerEmail")
-    private @Nullable String buyerEmail;
+    private Output</* @Nullable */ String> buyerEmail;
 
     /**
      * @return Buyer Email Id
      * 
      */
-    public Optional<String> buyerEmail() {
-        return Optional.ofNullable(this.buyerEmail);
+    public Output</* @Nullable */ String> buyerEmail() {
+        return this.buyerEmail;
     }
 
     /**
@@ -37,21 +37,21 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSubscriptionsFilter> filters;
+    private Output</* @Nullable */ List<GetSubscriptionsFilter>> filters;
 
-    public Optional<List<GetSubscriptionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSubscriptionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isCommitInfoRequired")
-    private @Nullable Boolean isCommitInfoRequired;
+    private Output</* @Nullable */ Boolean> isCommitInfoRequired;
 
     /**
      * @return Boolean value to decide whether commitment services will be shown
      * 
      */
-    public Optional<Boolean> isCommitInfoRequired() {
-        return Optional.ofNullable(this.isCommitInfoRequired);
+    public Output</* @Nullable */ Boolean> isCommitInfoRequired() {
+        return this.isCommitInfoRequired;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="planNumber")
-    private @Nullable String planNumber;
+    private Output</* @Nullable */ String> planNumber;
 
     /**
      * @return The Plan Number
      * 
      */
-    public Optional<String> planNumber() {
-        return Optional.ofNullable(this.planNumber);
+    public Output</* @Nullable */ String> planNumber() {
+        return this.planNumber;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return Line level Subscription Id
      * 
      */
-    public Optional<String> subscriptionId() {
-        return Optional.ofNullable(this.subscriptionId);
+    public Output</* @Nullable */ String> subscriptionId() {
+        return this.subscriptionId;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="xOneGatewaySubscriptionId")
-    private @Nullable String xOneGatewaySubscriptionId;
+    private Output</* @Nullable */ String> xOneGatewaySubscriptionId;
 
     /**
      * @return This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
      * 
      */
-    public Optional<String> xOneGatewaySubscriptionId() {
-        return Optional.ofNullable(this.xOneGatewaySubscriptionId);
+    public Output</* @Nullable */ String> xOneGatewaySubscriptionId() {
+        return this.xOneGatewaySubscriptionId;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetSubscriptionsArgs() {}
@@ -166,8 +166,29 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder buyerEmail(@Nullable String buyerEmail) {
+        public Builder buyerEmail(Output</* @Nullable */ String> buyerEmail) {
             $.buyerEmail = buyerEmail;
+            return this;
+        }
+
+        /**
+         * @param buyerEmail Buyer Email Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buyerEmail(@Nullable String buyerEmail) {
+            return buyerEmail(Output.of(buyerEmail));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -178,13 +199,16 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetSubscriptionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetSubscriptionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSubscriptionsFilter... filters) {
@@ -197,8 +221,29 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isCommitInfoRequired(@Nullable Boolean isCommitInfoRequired) {
+        public Builder isCommitInfoRequired(Output</* @Nullable */ Boolean> isCommitInfoRequired) {
             $.isCommitInfoRequired = isCommitInfoRequired;
+            return this;
+        }
+
+        /**
+         * @param isCommitInfoRequired Boolean value to decide whether commitment services will be shown
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isCommitInfoRequired(@Nullable Boolean isCommitInfoRequired) {
+            return isCommitInfoRequired(Output.of(isCommitInfoRequired));
+        }
+
+        /**
+         * @param planNumber The Plan Number
+         * 
+         * @return builder
+         * 
+         */
+        public Builder planNumber(Output</* @Nullable */ String> planNumber) {
+            $.planNumber = planNumber;
             return this;
         }
 
@@ -209,7 +254,17 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder planNumber(@Nullable String planNumber) {
-            $.planNumber = planNumber;
+            return planNumber(Output.of(planNumber));
+        }
+
+        /**
+         * @param subscriptionId Line level Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output</* @Nullable */ String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -220,7 +275,17 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param xOneGatewaySubscriptionId This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneGatewaySubscriptionId(Output</* @Nullable */ String> xOneGatewaySubscriptionId) {
+            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
             return this;
         }
 
@@ -231,7 +296,17 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder xOneGatewaySubscriptionId(@Nullable String xOneGatewaySubscriptionId) {
-            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
+            return xOneGatewaySubscriptionId(Output.of(xOneGatewaySubscriptionId));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -242,8 +317,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetSubscriptionsArgs build() {

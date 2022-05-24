@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetVmClusterPatchesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
     public static final GetVmClusterPatchesArgs Empty = new GetVmClusterPatchesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetVmClusterPatchesFilter> filters;
+    private Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters;
 
-    public Optional<List<GetVmClusterPatchesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vmClusterId", required=true)
-    private String vmClusterId;
+    private Output<String> vmClusterId;
 
     /**
      * @return The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String vmClusterId() {
+    public Output<String> vmClusterId() {
         return this.vmClusterId;
     }
 
@@ -63,9 +63,13 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
             $ = new GetVmClusterPatchesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetVmClusterPatchesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetVmClusterPatchesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetVmClusterPatchesFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder vmClusterId(String vmClusterId) {
+        public Builder vmClusterId(Output<String> vmClusterId) {
             $.vmClusterId = vmClusterId;
             return this;
+        }
+
+        /**
+         * @param vmClusterId The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(String vmClusterId) {
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetVmClusterPatchesArgs build() {

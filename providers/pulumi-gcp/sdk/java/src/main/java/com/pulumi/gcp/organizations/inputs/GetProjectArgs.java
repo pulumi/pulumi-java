@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectId")
-    private @Nullable String projectId;
+    private Output</* @Nullable */ String> projectId;
 
     /**
      * @return The project ID. If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> projectId() {
-        return Optional.ofNullable(this.projectId);
+    public Output</* @Nullable */ String> projectId() {
+        return this.projectId;
     }
 
     private GetProjectArgs() {}
@@ -59,9 +59,19 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder projectId(@Nullable String projectId) {
+        public Builder projectId(Output</* @Nullable */ String> projectId) {
             $.projectId = projectId;
             return this;
+        }
+
+        /**
+         * @param projectId The project ID. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectId(@Nullable String projectId) {
+            return projectId(Output.of(projectId));
         }
 
         public GetProjectArgs build() {

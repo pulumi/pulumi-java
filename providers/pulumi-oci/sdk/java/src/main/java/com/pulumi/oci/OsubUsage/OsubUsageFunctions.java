@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsubUsage;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.oci.OsubUsage.outputs.GetCommitmentAggregatedsResult;
 import com.pulumi.oci.OsubUsage.outputs.GetComputedUsageResult;
 import com.pulumi.oci.OsubUsage.outputs.GetComputedUsagesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OsubUsageFunctions {
     /**
@@ -22,7 +22,7 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of aggregated computed usage details (there can be multiple Parent Products under a given SubID each of which is represented under Subscription Service Line # in SPM).
      * 
      */
-    public static CompletableFuture<GetCommitmentAggregatedsResult> getCommitmentAggregateds(GetCommitmentAggregatedsArgs args) {
+    public static Output<GetCommitmentAggregatedsResult> getCommitmentAggregateds(GetCommitmentAggregatedsArgs args) {
         return getCommitmentAggregateds(args, InvokeOptions.Empty);
     }
     /**
@@ -31,8 +31,8 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of aggregated computed usage details (there can be multiple Parent Products under a given SubID each of which is represented under Subscription Service Line # in SPM).
      * 
      */
-    public static CompletableFuture<GetCommitmentAggregatedsResult> getCommitmentAggregateds(GetCommitmentAggregatedsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getCommitmentAggregateds:getCommitmentAggregateds", TypeShape.of(GetCommitmentAggregatedsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCommitmentAggregatedsResult> getCommitmentAggregateds(GetCommitmentAggregatedsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubUsage/getCommitmentAggregateds:getCommitmentAggregateds", TypeShape.of(GetCommitmentAggregatedsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Computed Usage resource in Oracle Cloud Infrastructure Osub Usage service.
@@ -42,7 +42,7 @@ public final class OsubUsageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputedUsageResult> getComputedUsage(GetComputedUsageArgs args) {
+    public static Output<GetComputedUsageResult> getComputedUsage(GetComputedUsageArgs args) {
         return getComputedUsage(args, InvokeOptions.Empty);
     }
     /**
@@ -53,8 +53,8 @@ public final class OsubUsageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputedUsageResult> getComputedUsage(GetComputedUsageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getComputedUsage:getComputedUsage", TypeShape.of(GetComputedUsageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputedUsageResult> getComputedUsage(GetComputedUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubUsage/getComputedUsage:getComputedUsage", TypeShape.of(GetComputedUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Computed Usages in Oracle Cloud Infrastructure Osub Usage service.
@@ -62,7 +62,7 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of Computed Usages for given filters.
      * 
      */
-    public static CompletableFuture<GetComputedUsagesResult> getComputedUsages(GetComputedUsagesArgs args) {
+    public static Output<GetComputedUsagesResult> getComputedUsages(GetComputedUsagesArgs args) {
         return getComputedUsages(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of Computed Usages for given filters.
      * 
      */
-    public static CompletableFuture<GetComputedUsagesResult> getComputedUsages(GetComputedUsagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getComputedUsages:getComputedUsages", TypeShape.of(GetComputedUsagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComputedUsagesResult> getComputedUsages(GetComputedUsagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsubUsage/getComputedUsages:getComputedUsages", TypeShape.of(GetComputedUsagesResult.class), args, Utilities.withVersion(options));
     }
 }

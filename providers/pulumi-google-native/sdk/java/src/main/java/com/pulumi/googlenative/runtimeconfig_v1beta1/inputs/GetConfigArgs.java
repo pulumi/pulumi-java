@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="configId", required=true)
-    private String configId;
+    private Output<String> configId;
 
-    public String configId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetConfigArgs() {}
@@ -53,14 +53,22 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder configId(String configId) {
+        public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetConfigArgs build() {

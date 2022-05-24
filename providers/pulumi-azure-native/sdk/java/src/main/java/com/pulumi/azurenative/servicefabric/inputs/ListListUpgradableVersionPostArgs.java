@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabric.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the cluster resource.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetVersion", required=true)
-    private String targetVersion;
+    private Output<String> targetVersion;
 
     /**
      * @return The target code version.
      * 
      */
-    public String targetVersion() {
+    public Output<String> targetVersion() {
         return this.targetVersion;
     }
 
@@ -89,8 +90,29 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param targetVersion The target code version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetVersion(Output<String> targetVersion) {
+            $.targetVersion = targetVersion;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
          * 
          */
         public Builder targetVersion(String targetVersion) {
-            $.targetVersion = targetVersion;
-            return this;
+            return targetVersion(Output.of(targetVersion));
         }
 
         public ListListUpgradableVersionPostArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobScheduleId", required=true)
-    private String jobScheduleId;
+    private Output<String> jobScheduleId;
 
     /**
      * @return The job schedule name.
      * 
      */
-    public String jobScheduleId() {
+    public Output<String> jobScheduleId() {
         return this.jobScheduleId;
     }
 
@@ -47,13 +48,13 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param jobScheduleId The job schedule name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobScheduleId(Output<String> jobScheduleId) {
+            $.jobScheduleId = jobScheduleId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobScheduleId(String jobScheduleId) {
-            $.jobScheduleId = jobScheduleId;
+            return jobScheduleId(Output.of(jobScheduleId));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetJobScheduleArgs build() {

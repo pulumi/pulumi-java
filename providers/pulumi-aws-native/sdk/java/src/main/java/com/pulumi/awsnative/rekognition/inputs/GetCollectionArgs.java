@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.rekognition.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetCollectionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCollectionArgs Empty = new GetCollectionArgs();
 
     @Import(name="collectionId", required=true)
-    private String collectionId;
+    private Output<String> collectionId;
 
-    public String collectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
 
@@ -43,9 +44,13 @@ public final class GetCollectionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCollectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder collectionId(String collectionId) {
+        public Builder collectionId(Output<String> collectionId) {
             $.collectionId = collectionId;
             return this;
+        }
+
+        public Builder collectionId(String collectionId) {
+            return collectionId(Output.of(collectionId));
         }
 
         public GetCollectionArgs build() {

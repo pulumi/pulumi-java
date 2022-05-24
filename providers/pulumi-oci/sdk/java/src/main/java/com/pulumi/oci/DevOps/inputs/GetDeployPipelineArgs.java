@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeployPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deployPipelineId", required=true)
-    private String deployPipelineId;
+    private Output<String> deployPipelineId;
 
     /**
      * @return Unique pipeline identifier.
      * 
      */
-    public String deployPipelineId() {
+    public Output<String> deployPipelineId() {
         return this.deployPipelineId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeployPipelineArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder deployPipelineId(String deployPipelineId) {
+        public Builder deployPipelineId(Output<String> deployPipelineId) {
             $.deployPipelineId = deployPipelineId;
             return this;
+        }
+
+        /**
+         * @param deployPipelineId Unique pipeline identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployPipelineId(String deployPipelineId) {
+            return deployPipelineId(Output.of(deployPipelineId));
         }
 
         public GetDeployPipelineArgs build() {

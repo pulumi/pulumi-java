@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetAllowedDomainLicenseTypesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetAllowedDomainLicenseTypesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="currentLicenseTypeName")
-    private @Nullable String currentLicenseTypeName;
+    private Output</* @Nullable */ String> currentLicenseTypeName;
 
     /**
      * @return The domain license type
      * 
      */
-    public Optional<String> currentLicenseTypeName() {
-        return Optional.ofNullable(this.currentLicenseTypeName);
+    public Output</* @Nullable */ String> currentLicenseTypeName() {
+        return this.currentLicenseTypeName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAllowedDomainLicenseTypesFilter> filters;
+    private Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters;
 
-    public Optional<List<GetAllowedDomainLicenseTypesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters() {
+        return this.filters;
     }
 
     private GetAllowedDomainLicenseTypesArgs() {}
@@ -69,14 +69,28 @@ public final class GetAllowedDomainLicenseTypesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder currentLicenseTypeName(@Nullable String currentLicenseTypeName) {
+        public Builder currentLicenseTypeName(Output</* @Nullable */ String> currentLicenseTypeName) {
             $.currentLicenseTypeName = currentLicenseTypeName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAllowedDomainLicenseTypesFilter> filters) {
+        /**
+         * @param currentLicenseTypeName The domain license type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder currentLicenseTypeName(@Nullable String currentLicenseTypeName) {
+            return currentLicenseTypeName(Output.of(currentLicenseTypeName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetAllowedDomainLicenseTypesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAllowedDomainLicenseTypesFilter... filters) {

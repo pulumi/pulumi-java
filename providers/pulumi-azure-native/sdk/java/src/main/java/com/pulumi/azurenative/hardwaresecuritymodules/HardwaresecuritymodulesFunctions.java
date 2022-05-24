@@ -6,10 +6,10 @@ package com.pulumi.azurenative.hardwaresecuritymodules;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hardwaresecuritymodules.inputs.GetDedicatedHsmArgs;
 import com.pulumi.azurenative.hardwaresecuritymodules.outputs.GetDedicatedHsmResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class HardwaresecuritymodulesFunctions {
     /**
@@ -17,7 +17,7 @@ public final class HardwaresecuritymodulesFunctions {
      * API Version: 2018-10-31-preview.
      * 
      */
-    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args) {
+    public static Output<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args) {
         return getDedicatedHsm(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class HardwaresecuritymodulesFunctions {
      * API Version: 2018-10-31-preview.
      * 
      */
-    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:hardwaresecuritymodules:getDedicatedHsm", TypeShape.of(GetDedicatedHsmResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:hardwaresecuritymodules:getDedicatedHsm", TypeShape.of(GetDedicatedHsmResult.class), args, Utilities.withVersion(options));
     }
 }

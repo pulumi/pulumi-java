@@ -6,24 +6,24 @@ package com.pulumi.awsnative.resourcegroups;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.resourcegroups.inputs.GetGroupArgs;
 import com.pulumi.awsnative.resourcegroups.outputs.GetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ResourcegroupsFunctions {
     /**
      * Schema for ResourceGroups::Group
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
      * Schema for ResourceGroups::Group
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:resourcegroups:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:resourcegroups:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPhoneNumberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="phoneNumberArn", required=true)
-    private String phoneNumberArn;
+    private Output<String> phoneNumberArn;
 
     /**
      * @return The phone number ARN
      * 
      */
-    public String phoneNumberArn() {
+    public Output<String> phoneNumberArn() {
         return this.phoneNumberArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetPhoneNumberArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder phoneNumberArn(String phoneNumberArn) {
+        public Builder phoneNumberArn(Output<String> phoneNumberArn) {
             $.phoneNumberArn = phoneNumberArn;
             return this;
+        }
+
+        /**
+         * @param phoneNumberArn The phone number ARN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder phoneNumberArn(String phoneNumberArn) {
+            return phoneNumberArn(Output.of(phoneNumberArn));
         }
 
         public GetPhoneNumberArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -89,7 +90,6 @@ import com.pulumi.oci.DevOps.outputs.GetRepositoryResult;
 import com.pulumi.oci.DevOps.outputs.GetTriggerResult;
 import com.pulumi.oci.DevOps.outputs.GetTriggersResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DevOpsFunctions {
     /**
@@ -100,7 +100,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineResult> getBuildPipeline(GetBuildPipelineArgs args) {
+    public static Output<GetBuildPipelineResult> getBuildPipeline(GetBuildPipelineArgs args) {
         return getBuildPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -111,8 +111,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineResult> getBuildPipeline(GetBuildPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildPipeline:getBuildPipeline", TypeShape.of(GetBuildPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildPipelineResult> getBuildPipeline(GetBuildPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildPipeline:getBuildPipeline", TypeShape.of(GetBuildPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Build Pipeline Stage resource in Oracle Cloud Infrastructure Devops service.
@@ -122,7 +122,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineStageResult> getBuildPipelineStage(GetBuildPipelineStageArgs args) {
+    public static Output<GetBuildPipelineStageResult> getBuildPipelineStage(GetBuildPipelineStageArgs args) {
         return getBuildPipelineStage(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineStageResult> getBuildPipelineStage(GetBuildPipelineStageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildPipelineStage:getBuildPipelineStage", TypeShape.of(GetBuildPipelineStageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildPipelineStageResult> getBuildPipelineStage(GetBuildPipelineStageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildPipelineStage:getBuildPipelineStage", TypeShape.of(GetBuildPipelineStageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Build Pipeline Stages in Oracle Cloud Infrastructure Devops service.
@@ -144,7 +144,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineStagesResult> getBuildPipelineStages() {
+    public static Output<GetBuildPipelineStagesResult> getBuildPipelineStages() {
         return getBuildPipelineStages(GetBuildPipelineStagesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -155,7 +155,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineStagesResult> getBuildPipelineStages(GetBuildPipelineStagesArgs args) {
+    public static Output<GetBuildPipelineStagesResult> getBuildPipelineStages(GetBuildPipelineStagesArgs args) {
         return getBuildPipelineStages(args, InvokeOptions.Empty);
     }
     /**
@@ -166,8 +166,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelineStagesResult> getBuildPipelineStages(GetBuildPipelineStagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildPipelineStages:getBuildPipelineStages", TypeShape.of(GetBuildPipelineStagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildPipelineStagesResult> getBuildPipelineStages(GetBuildPipelineStagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildPipelineStages:getBuildPipelineStages", TypeShape.of(GetBuildPipelineStagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Build Pipelines in Oracle Cloud Infrastructure Devops service.
@@ -177,7 +177,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelinesResult> getBuildPipelines() {
+    public static Output<GetBuildPipelinesResult> getBuildPipelines() {
         return getBuildPipelines(GetBuildPipelinesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -188,7 +188,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelinesResult> getBuildPipelines(GetBuildPipelinesArgs args) {
+    public static Output<GetBuildPipelinesResult> getBuildPipelines(GetBuildPipelinesArgs args) {
         return getBuildPipelines(args, InvokeOptions.Empty);
     }
     /**
@@ -199,8 +199,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildPipelinesResult> getBuildPipelines(GetBuildPipelinesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildPipelines:getBuildPipelines", TypeShape.of(GetBuildPipelinesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildPipelinesResult> getBuildPipelines(GetBuildPipelinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildPipelines:getBuildPipelines", TypeShape.of(GetBuildPipelinesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Build Run resource in Oracle Cloud Infrastructure Devops service.
@@ -210,7 +210,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildRunResult> getBuildRun(GetBuildRunArgs args) {
+    public static Output<GetBuildRunResult> getBuildRun(GetBuildRunArgs args) {
         return getBuildRun(args, InvokeOptions.Empty);
     }
     /**
@@ -221,8 +221,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildRunResult> getBuildRun(GetBuildRunArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildRun:getBuildRun", TypeShape.of(GetBuildRunResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildRunResult> getBuildRun(GetBuildRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildRun:getBuildRun", TypeShape.of(GetBuildRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Build Runs in Oracle Cloud Infrastructure Devops service.
@@ -232,7 +232,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildRunsResult> getBuildRuns() {
+    public static Output<GetBuildRunsResult> getBuildRuns() {
         return getBuildRuns(GetBuildRunsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -243,7 +243,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildRunsResult> getBuildRuns(GetBuildRunsArgs args) {
+    public static Output<GetBuildRunsResult> getBuildRuns(GetBuildRunsArgs args) {
         return getBuildRuns(args, InvokeOptions.Empty);
     }
     /**
@@ -254,8 +254,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBuildRunsResult> getBuildRuns(GetBuildRunsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getBuildRuns:getBuildRuns", TypeShape.of(GetBuildRunsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBuildRunsResult> getBuildRuns(GetBuildRunsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getBuildRuns:getBuildRuns", TypeShape.of(GetBuildRunsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Connection resource in Oracle Cloud Infrastructure Devops service.
@@ -265,7 +265,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -276,8 +276,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Connections in Oracle Cloud Infrastructure Devops service.
@@ -287,7 +287,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionsResult> getConnections() {
+    public static Output<GetConnectionsResult> getConnections() {
         return getConnections(GetConnectionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -298,7 +298,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
+    public static Output<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
         return getConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -309,8 +309,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Deploy Artifact resource in Oracle Cloud Infrastructure Devops service.
@@ -320,7 +320,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployArtifactResult> getDeployArtifact(GetDeployArtifactArgs args) {
+    public static Output<GetDeployArtifactResult> getDeployArtifact(GetDeployArtifactArgs args) {
         return getDeployArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -331,8 +331,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployArtifactResult> getDeployArtifact(GetDeployArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployArtifact:getDeployArtifact", TypeShape.of(GetDeployArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployArtifactResult> getDeployArtifact(GetDeployArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployArtifact:getDeployArtifact", TypeShape.of(GetDeployArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Deploy Artifacts in Oracle Cloud Infrastructure Devops service.
@@ -342,7 +342,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployArtifactsResult> getDeployArtifacts() {
+    public static Output<GetDeployArtifactsResult> getDeployArtifacts() {
         return getDeployArtifacts(GetDeployArtifactsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -353,7 +353,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployArtifactsResult> getDeployArtifacts(GetDeployArtifactsArgs args) {
+    public static Output<GetDeployArtifactsResult> getDeployArtifacts(GetDeployArtifactsArgs args) {
         return getDeployArtifacts(args, InvokeOptions.Empty);
     }
     /**
@@ -364,8 +364,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployArtifactsResult> getDeployArtifacts(GetDeployArtifactsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployArtifacts:getDeployArtifacts", TypeShape.of(GetDeployArtifactsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployArtifactsResult> getDeployArtifacts(GetDeployArtifactsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployArtifacts:getDeployArtifacts", TypeShape.of(GetDeployArtifactsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Deploy Environment resource in Oracle Cloud Infrastructure Devops service.
@@ -375,7 +375,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployEnvironmentResult> getDeployEnvironment(GetDeployEnvironmentArgs args) {
+    public static Output<GetDeployEnvironmentResult> getDeployEnvironment(GetDeployEnvironmentArgs args) {
         return getDeployEnvironment(args, InvokeOptions.Empty);
     }
     /**
@@ -386,8 +386,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployEnvironmentResult> getDeployEnvironment(GetDeployEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployEnvironment:getDeployEnvironment", TypeShape.of(GetDeployEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployEnvironmentResult> getDeployEnvironment(GetDeployEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployEnvironment:getDeployEnvironment", TypeShape.of(GetDeployEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Deploy Environments in Oracle Cloud Infrastructure Devops service.
@@ -397,7 +397,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployEnvironmentsResult> getDeployEnvironments() {
+    public static Output<GetDeployEnvironmentsResult> getDeployEnvironments() {
         return getDeployEnvironments(GetDeployEnvironmentsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -408,7 +408,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployEnvironmentsResult> getDeployEnvironments(GetDeployEnvironmentsArgs args) {
+    public static Output<GetDeployEnvironmentsResult> getDeployEnvironments(GetDeployEnvironmentsArgs args) {
         return getDeployEnvironments(args, InvokeOptions.Empty);
     }
     /**
@@ -419,8 +419,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployEnvironmentsResult> getDeployEnvironments(GetDeployEnvironmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployEnvironments:getDeployEnvironments", TypeShape.of(GetDeployEnvironmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployEnvironmentsResult> getDeployEnvironments(GetDeployEnvironmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployEnvironments:getDeployEnvironments", TypeShape.of(GetDeployEnvironmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Deploy Pipeline resource in Oracle Cloud Infrastructure Devops service.
@@ -430,7 +430,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployPipelineResult> getDeployPipeline(GetDeployPipelineArgs args) {
+    public static Output<GetDeployPipelineResult> getDeployPipeline(GetDeployPipelineArgs args) {
         return getDeployPipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -441,8 +441,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployPipelineResult> getDeployPipeline(GetDeployPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployPipeline:getDeployPipeline", TypeShape.of(GetDeployPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployPipelineResult> getDeployPipeline(GetDeployPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployPipeline:getDeployPipeline", TypeShape.of(GetDeployPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Deploy Pipelines in Oracle Cloud Infrastructure Devops service.
@@ -452,7 +452,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployPipelinesResult> getDeployPipelines() {
+    public static Output<GetDeployPipelinesResult> getDeployPipelines() {
         return getDeployPipelines(GetDeployPipelinesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -463,7 +463,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployPipelinesResult> getDeployPipelines(GetDeployPipelinesArgs args) {
+    public static Output<GetDeployPipelinesResult> getDeployPipelines(GetDeployPipelinesArgs args) {
         return getDeployPipelines(args, InvokeOptions.Empty);
     }
     /**
@@ -474,8 +474,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployPipelinesResult> getDeployPipelines(GetDeployPipelinesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployPipelines:getDeployPipelines", TypeShape.of(GetDeployPipelinesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployPipelinesResult> getDeployPipelines(GetDeployPipelinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployPipelines:getDeployPipelines", TypeShape.of(GetDeployPipelinesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Deploy Stage resource in Oracle Cloud Infrastructure Devops service.
@@ -485,7 +485,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployStageResult> getDeployStage(GetDeployStageArgs args) {
+    public static Output<GetDeployStageResult> getDeployStage(GetDeployStageArgs args) {
         return getDeployStage(args, InvokeOptions.Empty);
     }
     /**
@@ -496,8 +496,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployStageResult> getDeployStage(GetDeployStageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployStage:getDeployStage", TypeShape.of(GetDeployStageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployStageResult> getDeployStage(GetDeployStageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployStage:getDeployStage", TypeShape.of(GetDeployStageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Deploy Stages in Oracle Cloud Infrastructure Devops service.
@@ -507,7 +507,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployStagesResult> getDeployStages() {
+    public static Output<GetDeployStagesResult> getDeployStages() {
         return getDeployStages(GetDeployStagesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -518,7 +518,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployStagesResult> getDeployStages(GetDeployStagesArgs args) {
+    public static Output<GetDeployStagesResult> getDeployStages(GetDeployStagesArgs args) {
         return getDeployStages(args, InvokeOptions.Empty);
     }
     /**
@@ -529,8 +529,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeployStagesResult> getDeployStages(GetDeployStagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployStages:getDeployStages", TypeShape.of(GetDeployStagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeployStagesResult> getDeployStages(GetDeployStagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployStages:getDeployStages", TypeShape.of(GetDeployStagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Deployment resource in Oracle Cloud Infrastructure Devops service.
@@ -540,7 +540,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
     /**
@@ -551,8 +551,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployment:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployment:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Deployments in Oracle Cloud Infrastructure Devops service.
@@ -562,7 +562,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentsResult> getDeployments() {
+    public static Output<GetDeploymentsResult> getDeployments() {
         return getDeployments(GetDeploymentsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -573,7 +573,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args) {
+    public static Output<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args) {
         return getDeployments(args, InvokeOptions.Empty);
     }
     /**
@@ -584,8 +584,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getDeployments:getDeployments", TypeShape.of(GetDeploymentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getDeployments:getDeployments", TypeShape.of(GetDeploymentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Devops service.
@@ -595,7 +595,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
@@ -606,8 +606,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Projects in Oracle Cloud Infrastructure Devops service.
@@ -617,7 +617,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args) {
+    public static Output<GetProjectsResult> getProjects(GetProjectsArgs args) {
         return getProjects(args, InvokeOptions.Empty);
     }
     /**
@@ -628,8 +628,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getProjects:getProjects", TypeShape.of(GetProjectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectsResult> getProjects(GetProjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getProjects:getProjects", TypeShape.of(GetProjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repositories in Oracle Cloud Infrastructure Devops service.
@@ -639,7 +639,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoriesResult> getRepositories() {
+    public static Output<GetRepositoriesResult> getRepositories() {
         return getRepositories(GetRepositoriesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -650,7 +650,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args) {
+    public static Output<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args) {
         return getRepositories(args, InvokeOptions.Empty);
     }
     /**
@@ -661,8 +661,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositories:getRepositories", TypeShape.of(GetRepositoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoriesResult> getRepositories(GetRepositoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositories:getRepositories", TypeShape.of(GetRepositoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository resource in Oracle Cloud Infrastructure Devops service.
@@ -672,7 +672,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -683,8 +683,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Archive Content resource in Oracle Cloud Infrastructure Devops service.
@@ -694,7 +694,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryArchiveContentResult> getRepositoryArchiveContent(GetRepositoryArchiveContentArgs args) {
+    public static Output<GetRepositoryArchiveContentResult> getRepositoryArchiveContent(GetRepositoryArchiveContentArgs args) {
         return getRepositoryArchiveContent(args, InvokeOptions.Empty);
     }
     /**
@@ -705,8 +705,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryArchiveContentResult> getRepositoryArchiveContent(GetRepositoryArchiveContentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryArchiveContent:getRepositoryArchiveContent", TypeShape.of(GetRepositoryArchiveContentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryArchiveContentResult> getRepositoryArchiveContent(GetRepositoryArchiveContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryArchiveContent:getRepositoryArchiveContent", TypeShape.of(GetRepositoryArchiveContentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Author resource in Oracle Cloud Infrastructure Devops service.
@@ -716,7 +716,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryAuthorResult> getRepositoryAuthor(GetRepositoryAuthorArgs args) {
+    public static Output<GetRepositoryAuthorResult> getRepositoryAuthor(GetRepositoryAuthorArgs args) {
         return getRepositoryAuthor(args, InvokeOptions.Empty);
     }
     /**
@@ -727,8 +727,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryAuthorResult> getRepositoryAuthor(GetRepositoryAuthorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryAuthor:getRepositoryAuthor", TypeShape.of(GetRepositoryAuthorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryAuthorResult> getRepositoryAuthor(GetRepositoryAuthorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryAuthor:getRepositoryAuthor", TypeShape.of(GetRepositoryAuthorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Authors in Oracle Cloud Infrastructure Devops service.
@@ -738,7 +738,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryAuthorsResult> getRepositoryAuthors(GetRepositoryAuthorsArgs args) {
+    public static Output<GetRepositoryAuthorsResult> getRepositoryAuthors(GetRepositoryAuthorsArgs args) {
         return getRepositoryAuthors(args, InvokeOptions.Empty);
     }
     /**
@@ -749,8 +749,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryAuthorsResult> getRepositoryAuthors(GetRepositoryAuthorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryAuthors:getRepositoryAuthors", TypeShape.of(GetRepositoryAuthorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryAuthorsResult> getRepositoryAuthors(GetRepositoryAuthorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryAuthors:getRepositoryAuthors", TypeShape.of(GetRepositoryAuthorsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Commit resource in Oracle Cloud Infrastructure Devops service.
@@ -760,7 +760,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryCommitResult> getRepositoryCommit(GetRepositoryCommitArgs args) {
+    public static Output<GetRepositoryCommitResult> getRepositoryCommit(GetRepositoryCommitArgs args) {
         return getRepositoryCommit(args, InvokeOptions.Empty);
     }
     /**
@@ -771,8 +771,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryCommitResult> getRepositoryCommit(GetRepositoryCommitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryCommit:getRepositoryCommit", TypeShape.of(GetRepositoryCommitResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryCommitResult> getRepositoryCommit(GetRepositoryCommitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryCommit:getRepositoryCommit", TypeShape.of(GetRepositoryCommitResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Commits in Oracle Cloud Infrastructure Devops service.
@@ -782,7 +782,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryCommitsResult> getRepositoryCommits(GetRepositoryCommitsArgs args) {
+    public static Output<GetRepositoryCommitsResult> getRepositoryCommits(GetRepositoryCommitsArgs args) {
         return getRepositoryCommits(args, InvokeOptions.Empty);
     }
     /**
@@ -793,8 +793,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryCommitsResult> getRepositoryCommits(GetRepositoryCommitsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryCommits:getRepositoryCommits", TypeShape.of(GetRepositoryCommitsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryCommitsResult> getRepositoryCommits(GetRepositoryCommitsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryCommits:getRepositoryCommits", TypeShape.of(GetRepositoryCommitsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Diff resource in Oracle Cloud Infrastructure Devops service.
@@ -804,7 +804,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryDiffResult> getRepositoryDiff(GetRepositoryDiffArgs args) {
+    public static Output<GetRepositoryDiffResult> getRepositoryDiff(GetRepositoryDiffArgs args) {
         return getRepositoryDiff(args, InvokeOptions.Empty);
     }
     /**
@@ -815,8 +815,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryDiffResult> getRepositoryDiff(GetRepositoryDiffArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryDiff:getRepositoryDiff", TypeShape.of(GetRepositoryDiffResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryDiffResult> getRepositoryDiff(GetRepositoryDiffArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryDiff:getRepositoryDiff", TypeShape.of(GetRepositoryDiffResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Diffs in Oracle Cloud Infrastructure Devops service.
@@ -826,7 +826,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryDiffsResult> getRepositoryDiffs(GetRepositoryDiffsArgs args) {
+    public static Output<GetRepositoryDiffsResult> getRepositoryDiffs(GetRepositoryDiffsArgs args) {
         return getRepositoryDiffs(args, InvokeOptions.Empty);
     }
     /**
@@ -837,8 +837,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryDiffsResult> getRepositoryDiffs(GetRepositoryDiffsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryDiffs:getRepositoryDiffs", TypeShape.of(GetRepositoryDiffsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryDiffsResult> getRepositoryDiffs(GetRepositoryDiffsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryDiffs:getRepositoryDiffs", TypeShape.of(GetRepositoryDiffsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository File Diff resource in Oracle Cloud Infrastructure Devops service.
@@ -848,7 +848,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryFileDiffResult> getRepositoryFileDiff(GetRepositoryFileDiffArgs args) {
+    public static Output<GetRepositoryFileDiffResult> getRepositoryFileDiff(GetRepositoryFileDiffArgs args) {
         return getRepositoryFileDiff(args, InvokeOptions.Empty);
     }
     /**
@@ -859,8 +859,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryFileDiffResult> getRepositoryFileDiff(GetRepositoryFileDiffArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryFileDiff:getRepositoryFileDiff", TypeShape.of(GetRepositoryFileDiffResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryFileDiffResult> getRepositoryFileDiff(GetRepositoryFileDiffArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryFileDiff:getRepositoryFileDiff", TypeShape.of(GetRepositoryFileDiffResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository File Line resource in Oracle Cloud Infrastructure Devops service.
@@ -870,7 +870,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryFileLineResult> getRepositoryFileLine(GetRepositoryFileLineArgs args) {
+    public static Output<GetRepositoryFileLineResult> getRepositoryFileLine(GetRepositoryFileLineArgs args) {
         return getRepositoryFileLine(args, InvokeOptions.Empty);
     }
     /**
@@ -881,8 +881,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryFileLineResult> getRepositoryFileLine(GetRepositoryFileLineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryFileLine:getRepositoryFileLine", TypeShape.of(GetRepositoryFileLineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryFileLineResult> getRepositoryFileLine(GetRepositoryFileLineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryFileLine:getRepositoryFileLine", TypeShape.of(GetRepositoryFileLineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Mirror Record resource in Oracle Cloud Infrastructure Devops service.
@@ -892,7 +892,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryMirrorRecordResult> getRepositoryMirrorRecord(GetRepositoryMirrorRecordArgs args) {
+    public static Output<GetRepositoryMirrorRecordResult> getRepositoryMirrorRecord(GetRepositoryMirrorRecordArgs args) {
         return getRepositoryMirrorRecord(args, InvokeOptions.Empty);
     }
     /**
@@ -903,8 +903,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryMirrorRecordResult> getRepositoryMirrorRecord(GetRepositoryMirrorRecordArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryMirrorRecord:getRepositoryMirrorRecord", TypeShape.of(GetRepositoryMirrorRecordResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryMirrorRecordResult> getRepositoryMirrorRecord(GetRepositoryMirrorRecordArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryMirrorRecord:getRepositoryMirrorRecord", TypeShape.of(GetRepositoryMirrorRecordResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Mirror Records in Oracle Cloud Infrastructure Devops service.
@@ -914,7 +914,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryMirrorRecordsResult> getRepositoryMirrorRecords(GetRepositoryMirrorRecordsArgs args) {
+    public static Output<GetRepositoryMirrorRecordsResult> getRepositoryMirrorRecords(GetRepositoryMirrorRecordsArgs args) {
         return getRepositoryMirrorRecords(args, InvokeOptions.Empty);
     }
     /**
@@ -925,8 +925,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryMirrorRecordsResult> getRepositoryMirrorRecords(GetRepositoryMirrorRecordsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryMirrorRecords:getRepositoryMirrorRecords", TypeShape.of(GetRepositoryMirrorRecordsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryMirrorRecordsResult> getRepositoryMirrorRecords(GetRepositoryMirrorRecordsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryMirrorRecords:getRepositoryMirrorRecords", TypeShape.of(GetRepositoryMirrorRecordsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Object resource in Oracle Cloud Infrastructure Devops service.
@@ -936,7 +936,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryObjectResult> getRepositoryObject(GetRepositoryObjectArgs args) {
+    public static Output<GetRepositoryObjectResult> getRepositoryObject(GetRepositoryObjectArgs args) {
         return getRepositoryObject(args, InvokeOptions.Empty);
     }
     /**
@@ -947,8 +947,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryObjectResult> getRepositoryObject(GetRepositoryObjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryObject:getRepositoryObject", TypeShape.of(GetRepositoryObjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryObjectResult> getRepositoryObject(GetRepositoryObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryObject:getRepositoryObject", TypeShape.of(GetRepositoryObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Object Content resource in Oracle Cloud Infrastructure Devops service.
@@ -958,7 +958,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryObjectContentResult> getRepositoryObjectContent(GetRepositoryObjectContentArgs args) {
+    public static Output<GetRepositoryObjectContentResult> getRepositoryObjectContent(GetRepositoryObjectContentArgs args) {
         return getRepositoryObjectContent(args, InvokeOptions.Empty);
     }
     /**
@@ -969,8 +969,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryObjectContentResult> getRepositoryObjectContent(GetRepositoryObjectContentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryObjectContent:getRepositoryObjectContent", TypeShape.of(GetRepositoryObjectContentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryObjectContentResult> getRepositoryObjectContent(GetRepositoryObjectContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryObjectContent:getRepositoryObjectContent", TypeShape.of(GetRepositoryObjectContentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Path resource in Oracle Cloud Infrastructure Devops service.
@@ -980,7 +980,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryPathResult> getRepositoryPath(GetRepositoryPathArgs args) {
+    public static Output<GetRepositoryPathResult> getRepositoryPath(GetRepositoryPathArgs args) {
         return getRepositoryPath(args, InvokeOptions.Empty);
     }
     /**
@@ -991,8 +991,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryPathResult> getRepositoryPath(GetRepositoryPathArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryPath:getRepositoryPath", TypeShape.of(GetRepositoryPathResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryPathResult> getRepositoryPath(GetRepositoryPathArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryPath:getRepositoryPath", TypeShape.of(GetRepositoryPathResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Paths in Oracle Cloud Infrastructure Devops service.
@@ -1002,7 +1002,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryPathsResult> getRepositoryPaths(GetRepositoryPathsArgs args) {
+    public static Output<GetRepositoryPathsResult> getRepositoryPaths(GetRepositoryPathsArgs args) {
         return getRepositoryPaths(args, InvokeOptions.Empty);
     }
     /**
@@ -1013,8 +1013,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryPathsResult> getRepositoryPaths(GetRepositoryPathsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryPaths:getRepositoryPaths", TypeShape.of(GetRepositoryPathsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryPathsResult> getRepositoryPaths(GetRepositoryPathsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryPaths:getRepositoryPaths", TypeShape.of(GetRepositoryPathsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Repository Ref resource in Oracle Cloud Infrastructure Devops service.
@@ -1024,7 +1024,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryRefResult> getRepositoryRef(GetRepositoryRefArgs args) {
+    public static Output<GetRepositoryRefResult> getRepositoryRef(GetRepositoryRefArgs args) {
         return getRepositoryRef(args, InvokeOptions.Empty);
     }
     /**
@@ -1035,8 +1035,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryRefResult> getRepositoryRef(GetRepositoryRefArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryRef:getRepositoryRef", TypeShape.of(GetRepositoryRefResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryRefResult> getRepositoryRef(GetRepositoryRefArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryRef:getRepositoryRef", TypeShape.of(GetRepositoryRefResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Repository Refs in Oracle Cloud Infrastructure Devops service.
@@ -1046,7 +1046,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryRefsResult> getRepositoryRefs(GetRepositoryRefsArgs args) {
+    public static Output<GetRepositoryRefsResult> getRepositoryRefs(GetRepositoryRefsArgs args) {
         return getRepositoryRefs(args, InvokeOptions.Empty);
     }
     /**
@@ -1057,8 +1057,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryRefsResult> getRepositoryRefs(GetRepositoryRefsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getRepositoryRefs:getRepositoryRefs", TypeShape.of(GetRepositoryRefsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryRefsResult> getRepositoryRefs(GetRepositoryRefsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getRepositoryRefs:getRepositoryRefs", TypeShape.of(GetRepositoryRefsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Trigger resource in Oracle Cloud Infrastructure Devops service.
@@ -1068,7 +1068,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+    public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args) {
         return getTrigger(args, InvokeOptions.Empty);
     }
     /**
@@ -1079,8 +1079,8 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getTrigger:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getTrigger:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Triggers in Oracle Cloud Infrastructure Devops service.
@@ -1090,7 +1090,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTriggersResult> getTriggers() {
+    public static Output<GetTriggersResult> getTriggers() {
         return getTriggers(GetTriggersArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1101,7 +1101,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTriggersResult> getTriggers(GetTriggersArgs args) {
+    public static Output<GetTriggersResult> getTriggers(GetTriggersArgs args) {
         return getTriggers(args, InvokeOptions.Empty);
     }
     /**
@@ -1112,7 +1112,7 @@ public final class DevOpsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTriggersResult> getTriggers(GetTriggersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DevOps/getTriggers:getTriggers", TypeShape.of(GetTriggersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTriggersResult> getTriggers(GetTriggersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DevOps/getTriggers:getTriggers", TypeShape.of(GetTriggersResult.class), args, Utilities.withVersion(options));
     }
 }

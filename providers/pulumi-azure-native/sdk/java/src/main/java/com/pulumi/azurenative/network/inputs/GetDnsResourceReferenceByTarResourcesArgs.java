@@ -4,10 +4,10 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.inputs.SubResource;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
      * 
      */
     @Import(name="targetResources")
-    private @Nullable List<SubResource> targetResources;
+    private Output</* @Nullable */ List<SubResource>> targetResources;
 
     /**
      * @return A list of references to azure resources for which referencing dns records need to be queried.
      * 
      */
-    public Optional<List<SubResource>> targetResources() {
-        return Optional.ofNullable(this.targetResources);
+    public Output</* @Nullable */ List<SubResource>> targetResources() {
+        return this.targetResources;
     }
 
     private GetDnsResourceReferenceByTarResourcesArgs() {}
@@ -60,9 +60,19 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder targetResources(@Nullable List<SubResource> targetResources) {
+        public Builder targetResources(Output</* @Nullable */ List<SubResource>> targetResources) {
             $.targetResources = targetResources;
             return this;
+        }
+
+        /**
+         * @param targetResources A list of references to azure resources for which referencing dns records need to be queried.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetResources(@Nullable List<SubResource> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
 
         /**

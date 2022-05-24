@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="applicationGatewayName", required=true)
-    private String applicationGatewayName;
+    private Output<String> applicationGatewayName;
 
     /**
      * @return The name of the application gateway.
      * 
      */
-    public String applicationGatewayName() {
+    public Output<String> applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return The name of the application gateway private endpoint connection.
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
          * @return builder
          * 
          */
-        public Builder applicationGatewayName(String applicationGatewayName) {
+        public Builder applicationGatewayName(Output<String> applicationGatewayName) {
             $.applicationGatewayName = applicationGatewayName;
+            return this;
+        }
+
+        /**
+         * @param applicationGatewayName The name of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationGatewayName(String applicationGatewayName) {
+            return applicationGatewayName(Output.of(applicationGatewayName));
+        }
+
+        /**
+         * @param connectionName The name of the application gateway private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(Output<String> connectionName) {
+            $.connectionName = connectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
          * 
          */
         public Builder connectionName(String connectionName) {
-            $.connectionName = connectionName;
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetApplicationGatewayPrivateEndpointConnectionArgs build() {

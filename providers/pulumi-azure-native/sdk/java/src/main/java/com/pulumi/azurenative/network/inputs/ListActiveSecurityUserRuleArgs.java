@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -35,14 +35,14 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="regions")
-    private @Nullable List<String> regions;
+    private Output</* @Nullable */ List<String>> regions;
 
     /**
      * @return List of regions.
      * 
      */
-    public Optional<List<String>> regions() {
-        return Optional.ofNullable(this.regions);
+    public Output</* @Nullable */ List<String>> regions() {
+        return this.regions;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,14 +65,14 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private Output</* @Nullable */ String> skipToken;
 
     /**
      * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    public Optional<String> skipToken() {
-        return Optional.ofNullable(this.skipToken);
+    public Output</* @Nullable */ String> skipToken() {
+        return this.skipToken;
     }
 
     private ListActiveSecurityUserRuleArgs() {}
@@ -108,8 +108,29 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder networkManagerName(String networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
+            return this;
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(String networkManagerName) {
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param regions List of regions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+            $.regions = regions;
             return this;
         }
 
@@ -120,8 +141,7 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
          * 
          */
         public Builder regions(@Nullable List<String> regions) {
-            $.regions = regions;
-            return this;
+            return regions(Output.of(regions));
         }
 
         /**
@@ -140,8 +160,29 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -152,8 +193,7 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+            return skipToken(Output.of(skipToken));
         }
 
         public ListActiveSecurityUserRuleArgs build() {

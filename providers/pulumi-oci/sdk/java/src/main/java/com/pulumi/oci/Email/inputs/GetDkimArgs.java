@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDkimArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dkimId", required=true)
-    private String dkimId;
+    private Output<String> dkimId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this DKIM.
      * 
      */
-    public String dkimId() {
+    public Output<String> dkimId() {
         return this.dkimId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDkimArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dkimId(String dkimId) {
+        public Builder dkimId(Output<String> dkimId) {
             $.dkimId = dkimId;
             return this;
+        }
+
+        /**
+         * @param dkimId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this DKIM.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dkimId(String dkimId) {
+            return dkimId(Output.of(dkimId));
         }
 
         public GetDkimArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return The integration account certificate name.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
+            return this;
+        }
+
+        /**
+         * @param certificateName The integration account certificate name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
          * 
          */
         public Builder integrationAccountName(String integrationAccountName) {
-            $.integrationAccountName = integrationAccountName;
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationAccountCertificateArgs build() {

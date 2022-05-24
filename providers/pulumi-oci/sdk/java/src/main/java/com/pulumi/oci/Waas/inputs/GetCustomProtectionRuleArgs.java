@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomProtectionRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="customProtectionRuleId", required=true)
-    private String customProtectionRuleId;
+    private Output<String> customProtectionRuleId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the custom protection rule. This number is generated when the custom protection rule is added to the compartment.
      * 
      */
-    public String customProtectionRuleId() {
+    public Output<String> customProtectionRuleId() {
         return this.customProtectionRuleId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCustomProtectionRuleArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder customProtectionRuleId(String customProtectionRuleId) {
+        public Builder customProtectionRuleId(Output<String> customProtectionRuleId) {
             $.customProtectionRuleId = customProtectionRuleId;
             return this;
+        }
+
+        /**
+         * @param customProtectionRuleId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the custom protection rule. This number is generated when the custom protection rule is added to the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customProtectionRuleId(String customProtectionRuleId) {
+            return customProtectionRuleId(Output.of(customProtectionRuleId));
         }
 
         public GetCustomProtectionRuleArgs build() {

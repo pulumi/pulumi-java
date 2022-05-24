@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.dataprotection.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the backup vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGuardsName", required=true)
-    private String resourceGuardsName;
+    private Output<String> resourceGuardsName;
 
     /**
      * @return The name of ResourceGuard
      * 
      */
-    public String resourceGuardsName() {
+    public Output<String> resourceGuardsName() {
         return this.resourceGuardsName;
     }
 
@@ -73,8 +74,29 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the backup vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceGuardsName The name of ResourceGuard
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGuardsName(Output<String> resourceGuardsName) {
+            $.resourceGuardsName = resourceGuardsName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGuardsName(String resourceGuardsName) {
-            $.resourceGuardsName = resourceGuardsName;
-            return this;
+            return resourceGuardsName(Output.of(resourceGuardsName));
         }
 
         public GetResourceGuardArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkWatcherName", required=true)
-    private String networkWatcherName;
+    private Output<String> networkWatcherName;
 
     /**
      * @return The name of the network watcher.
      * 
      */
-    public String networkWatcherName() {
+    public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder networkWatcherName(String networkWatcherName) {
+        public Builder networkWatcherName(Output<String> networkWatcherName) {
             $.networkWatcherName = networkWatcherName;
+            return this;
+        }
+
+        /**
+         * @param networkWatcherName The name of the network watcher.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkWatcherName(String networkWatcherName) {
+            return networkWatcherName(Output.of(networkWatcherName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNetworkWatcherArgs build() {

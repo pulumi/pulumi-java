@@ -10,10 +10,10 @@ import com.pulumi.azure.cosmosdb.inputs.GetRestorableDatabaseAccountsArgs;
 import com.pulumi.azure.cosmosdb.outputs.GetAccountResult;
 import com.pulumi.azure.cosmosdb.outputs.GetMongoDatabaseResult;
 import com.pulumi.azure.cosmosdb.outputs.GetRestorableDatabaseAccountsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CosmosdbFunctions {
     /**
@@ -45,7 +45,7 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:cosmosdb/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cosmosdb/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Cosmos DB Mongo Database.
@@ -110,7 +110,7 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args) {
+    public static Output<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args) {
         return getMongoDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:cosmosdb/getMongoDatabase:getMongoDatabase", TypeShape.of(GetMongoDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMongoDatabaseResult> getMongoDatabase(GetMongoDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cosmosdb/getMongoDatabase:getMongoDatabase", TypeShape.of(GetMongoDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about Cosmos DB Restorable Database Accounts.
@@ -175,7 +175,7 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args) {
+    public static Output<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args) {
         return getRestorableDatabaseAccounts(args, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class CosmosdbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:cosmosdb/getRestorableDatabaseAccounts:getRestorableDatabaseAccounts", TypeShape.of(GetRestorableDatabaseAccountsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRestorableDatabaseAccountsResult> getRestorableDatabaseAccounts(GetRestorableDatabaseAccountsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cosmosdb/getRestorableDatabaseAccounts:getRestorableDatabaseAccounts", TypeShape.of(GetRestorableDatabaseAccountsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datacatalog_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -25,133 +26,132 @@ import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GetTagTemplateResult;
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GetTaxonomyIamPolicyResult;
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GetTaxonomyPolicyTagIamPolicyResult;
 import com.pulumi.googlenative.datacatalog_v1beta1.outputs.GetTaxonomyResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Datacatalog_v1beta1Functions {
     /**
      * Gets an entry.
      * 
      */
-    public static CompletableFuture<GetEntryResult> getEntry(GetEntryArgs args) {
+    public static Output<GetEntryResult> getEntry(GetEntryArgs args) {
         return getEntry(args, InvokeOptions.Empty);
     }
     /**
      * Gets an entry.
      * 
      */
-    public static CompletableFuture<GetEntryResult> getEntry(GetEntryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getEntry", TypeShape.of(GetEntryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntryResult> getEntry(GetEntryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getEntry", TypeShape.of(GetEntryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an EntryGroup.
      * 
      */
-    public static CompletableFuture<GetEntryGroupResult> getEntryGroup(GetEntryGroupArgs args) {
+    public static Output<GetEntryGroupResult> getEntryGroup(GetEntryGroupArgs args) {
         return getEntryGroup(args, InvokeOptions.Empty);
     }
     /**
      * Gets an EntryGroup.
      * 
      */
-    public static CompletableFuture<GetEntryGroupResult> getEntryGroup(GetEntryGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getEntryGroup", TypeShape.of(GetEntryGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntryGroupResult> getEntryGroup(GetEntryGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getEntryGroup", TypeShape.of(GetEntryGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. A `NOT_FOUND` error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Supported resources are: - Tag templates. - Entries. - Entry groups. Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data Catalog. Callers must have following Google IAM permission - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entries.getIamPolicy` to get policies on entries. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
-    public static CompletableFuture<GetEntryGroupIamPolicyResult> getEntryGroupIamPolicy(GetEntryGroupIamPolicyArgs args) {
+    public static Output<GetEntryGroupIamPolicyResult> getEntryGroupIamPolicy(GetEntryGroupIamPolicyArgs args) {
         return getEntryGroupIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. A `NOT_FOUND` error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Supported resources are: - Tag templates. - Entries. - Entry groups. Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data Catalog. Callers must have following Google IAM permission - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entries.getIamPolicy` to get policies on entries. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
-    public static CompletableFuture<GetEntryGroupIamPolicyResult> getEntryGroupIamPolicy(GetEntryGroupIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getEntryGroupIamPolicy", TypeShape.of(GetEntryGroupIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntryGroupIamPolicyResult> getEntryGroupIamPolicy(GetEntryGroupIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getEntryGroupIamPolicy", TypeShape.of(GetEntryGroupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a policy tag.
      * 
      */
-    public static CompletableFuture<GetPolicyTagResult> getPolicyTag(GetPolicyTagArgs args) {
+    public static Output<GetPolicyTagResult> getPolicyTag(GetPolicyTagArgs args) {
         return getPolicyTag(args, InvokeOptions.Empty);
     }
     /**
      * Gets a policy tag.
      * 
      */
-    public static CompletableFuture<GetPolicyTagResult> getPolicyTag(GetPolicyTagArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getPolicyTag", TypeShape.of(GetPolicyTagResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyTagResult> getPolicyTag(GetPolicyTagArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getPolicyTag", TypeShape.of(GetPolicyTagResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a tag template.
      * 
      */
-    public static CompletableFuture<GetTagTemplateResult> getTagTemplate(GetTagTemplateArgs args) {
+    public static Output<GetTagTemplateResult> getTagTemplate(GetTagTemplateArgs args) {
         return getTagTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Gets a tag template.
      * 
      */
-    public static CompletableFuture<GetTagTemplateResult> getTagTemplate(GetTagTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTagTemplate", TypeShape.of(GetTagTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTagTemplateResult> getTagTemplate(GetTagTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getTagTemplate", TypeShape.of(GetTagTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. A `NOT_FOUND` error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Supported resources are: - Tag templates. - Entries. - Entry groups. Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data Catalog. Callers must have following Google IAM permission - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entries.getIamPolicy` to get policies on entries. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
-    public static CompletableFuture<GetTagTemplateIamPolicyResult> getTagTemplateIamPolicy(GetTagTemplateIamPolicyArgs args) {
+    public static Output<GetTagTemplateIamPolicyResult> getTagTemplateIamPolicy(GetTagTemplateIamPolicyArgs args) {
         return getTagTemplateIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. A `NOT_FOUND` error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Supported resources are: - Tag templates. - Entries. - Entry groups. Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data Catalog. Callers must have following Google IAM permission - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entries.getIamPolicy` to get policies on entries. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
-    public static CompletableFuture<GetTagTemplateIamPolicyResult> getTagTemplateIamPolicy(GetTagTemplateIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTagTemplateIamPolicy", TypeShape.of(GetTagTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTagTemplateIamPolicyResult> getTagTemplateIamPolicy(GetTagTemplateIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getTagTemplateIamPolicy", TypeShape.of(GetTagTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a taxonomy.
      * 
      */
-    public static CompletableFuture<GetTaxonomyResult> getTaxonomy(GetTaxonomyArgs args) {
+    public static Output<GetTaxonomyResult> getTaxonomy(GetTaxonomyArgs args) {
         return getTaxonomy(args, InvokeOptions.Empty);
     }
     /**
      * Gets a taxonomy.
      * 
      */
-    public static CompletableFuture<GetTaxonomyResult> getTaxonomy(GetTaxonomyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTaxonomy", TypeShape.of(GetTaxonomyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaxonomyResult> getTaxonomy(GetTaxonomyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getTaxonomy", TypeShape.of(GetTaxonomyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM policy for a taxonomy or a policy tag.
      * 
      */
-    public static CompletableFuture<GetTaxonomyIamPolicyResult> getTaxonomyIamPolicy(GetTaxonomyIamPolicyArgs args) {
+    public static Output<GetTaxonomyIamPolicyResult> getTaxonomyIamPolicy(GetTaxonomyIamPolicyArgs args) {
         return getTaxonomyIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the IAM policy for a taxonomy or a policy tag.
      * 
      */
-    public static CompletableFuture<GetTaxonomyIamPolicyResult> getTaxonomyIamPolicy(GetTaxonomyIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTaxonomyIamPolicy", TypeShape.of(GetTaxonomyIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaxonomyIamPolicyResult> getTaxonomyIamPolicy(GetTaxonomyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getTaxonomyIamPolicy", TypeShape.of(GetTaxonomyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM policy for a taxonomy or a policy tag.
      * 
      */
-    public static CompletableFuture<GetTaxonomyPolicyTagIamPolicyResult> getTaxonomyPolicyTagIamPolicy(GetTaxonomyPolicyTagIamPolicyArgs args) {
+    public static Output<GetTaxonomyPolicyTagIamPolicyResult> getTaxonomyPolicyTagIamPolicy(GetTaxonomyPolicyTagIamPolicyArgs args) {
         return getTaxonomyPolicyTagIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the IAM policy for a taxonomy or a policy tag.
      * 
      */
-    public static CompletableFuture<GetTaxonomyPolicyTagIamPolicyResult> getTaxonomyPolicyTagIamPolicy(GetTaxonomyPolicyTagIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getTaxonomyPolicyTagIamPolicy", TypeShape.of(GetTaxonomyPolicyTagIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTaxonomyPolicyTagIamPolicyResult> getTaxonomyPolicyTagIamPolicy(GetTaxonomyPolicyTagIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datacatalog/v1beta1:getTaxonomyPolicyTagIamPolicy", TypeShape.of(GetTaxonomyPolicyTagIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

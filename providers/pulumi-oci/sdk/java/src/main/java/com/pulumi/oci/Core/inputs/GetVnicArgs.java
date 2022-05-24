@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVnicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vnicId", required=true)
-    private String vnicId;
+    private Output<String> vnicId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC.
      * 
      */
-    public String vnicId() {
+    public Output<String> vnicId() {
         return this.vnicId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVnicArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vnicId(String vnicId) {
+        public Builder vnicId(Output<String> vnicId) {
             $.vnicId = vnicId;
             return this;
+        }
+
+        /**
+         * @param vnicId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VNIC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnicId(String vnicId) {
+            return vnicId(Output.of(vnicId));
         }
 
         public GetVnicArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.pubsub_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="schemaId", required=true)
-    private String schemaId;
+    private Output<String> schemaId;
 
-    public String schemaId() {
+    public Output<String> schemaId() {
         return this.schemaId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetSchemaArgs() {}
@@ -61,19 +61,31 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSchemaArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder schemaId(String schemaId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder schemaId(Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder schemaId(String schemaId) {
+            return schemaId(Output.of(schemaId));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetSchemaArgs build() {

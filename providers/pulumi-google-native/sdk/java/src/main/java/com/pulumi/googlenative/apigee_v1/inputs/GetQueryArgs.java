@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetQueryArgs Empty = new GetQueryArgs();
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="queryId", required=true)
-    private String queryId;
+    private Output<String> queryId;
 
-    public String queryId() {
+    public Output<String> queryId() {
         return this.queryId;
     }
 
@@ -59,19 +60,31 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQueryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder queryId(String queryId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder queryId(Output<String> queryId) {
             $.queryId = queryId;
             return this;
+        }
+
+        public Builder queryId(String queryId) {
+            return queryId(Output.of(queryId));
         }
 
         public GetQueryArgs build() {

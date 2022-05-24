@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlertsSuppressionRuleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="alertsSuppressionRuleName", required=true)
-    private String alertsSuppressionRuleName;
+    private Output<String> alertsSuppressionRuleName;
 
     /**
      * @return The unique name of the suppression alert rule
      * 
      */
-    public String alertsSuppressionRuleName() {
+    public Output<String> alertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAlertsSuppressionRuleArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
+        public Builder alertsSuppressionRuleName(Output<String> alertsSuppressionRuleName) {
             $.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
+        }
+
+        /**
+         * @param alertsSuppressionRuleName The unique name of the suppression alert rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
+            return alertsSuppressionRuleName(Output.of(alertsSuppressionRuleName));
         }
 
         public GetAlertsSuppressionRuleArgs build() {

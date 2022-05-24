@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybridcompute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extensionName", required=true)
-    private String extensionName;
+    private Output<String> extensionName;
 
     /**
      * @return The name of the machine extension.
      * 
      */
-    public String extensionName() {
+    public Output<String> extensionName() {
         return this.extensionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the machine containing the extension.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder extensionName(String extensionName) {
+        public Builder extensionName(Output<String> extensionName) {
             $.extensionName = extensionName;
+            return this;
+        }
+
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder extensionName(String extensionName) {
+            return extensionName(Output.of(extensionName));
+        }
+
+        /**
+         * @param name The name of the machine containing the extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMachineExtensionArgs build() {

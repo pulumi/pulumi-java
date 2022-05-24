@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return The SSL/TLS certificate name.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="loadBalancerName", required=true)
-    private String loadBalancerName;
+    private Output<String> loadBalancerName;
 
     /**
      * @return The name of your load balancer.
      * 
      */
-    public String loadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
+            return this;
+        }
+
+        /**
+         * @param certificateName The SSL/TLS certificate name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
          * 
          */
         public Builder loadBalancerName(String loadBalancerName) {
-            $.loadBalancerName = loadBalancerName;
-            return this;
+            return loadBalancerName(Output.of(loadBalancerName));
         }
 
         public GetLoadBalancerTlsCertificateArgs build() {

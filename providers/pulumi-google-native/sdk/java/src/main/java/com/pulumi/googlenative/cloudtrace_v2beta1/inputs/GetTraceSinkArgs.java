@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetTraceSinkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTraceSinkArgs Empty = new GetTraceSinkArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="traceSinkId", required=true)
-    private String traceSinkId;
+    private Output<String> traceSinkId;
 
-    public String traceSinkId() {
+    public Output<String> traceSinkId() {
         return this.traceSinkId;
     }
 
@@ -53,14 +53,22 @@ public final class GetTraceSinkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTraceSinkArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder traceSinkId(String traceSinkId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder traceSinkId(Output<String> traceSinkId) {
             $.traceSinkId = traceSinkId;
             return this;
+        }
+
+        public Builder traceSinkId(String traceSinkId) {
+            return traceSinkId(Output.of(traceSinkId));
         }
 
         public GetTraceSinkArgs build() {

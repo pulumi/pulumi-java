@@ -6,10 +6,10 @@ package com.pulumi.azure.appinsights;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.appinsights.inputs.GetInsightsArgs;
 import com.pulumi.azure.appinsights.outputs.GetInsightsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppinsightsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class AppinsightsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInsightsResult> getInsights(GetInsightsArgs args) {
+    public static Output<GetInsightsResult> getInsights(GetInsightsArgs args) {
         return getInsights(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class AppinsightsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInsightsResult> getInsights(GetInsightsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appinsights/getInsights:getInsights", TypeShape.of(GetInsightsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInsightsResult> getInsights(GetInsightsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appinsights/getInsights:getInsights", TypeShape.of(GetInsightsResult.class), args, Utilities.withVersion(options));
     }
 }

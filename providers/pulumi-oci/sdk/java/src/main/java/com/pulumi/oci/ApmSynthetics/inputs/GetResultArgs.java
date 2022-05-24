@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmSynthetics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executionTime", required=true)
-    private String executionTime;
+    private Output<String> executionTime;
 
     /**
      * @return The time the object was posted.
      * 
      */
-    public String executionTime() {
+    public Output<String> executionTime() {
         return this.executionTime;
     }
 
@@ -47,13 +48,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorId", required=true)
-    private String monitorId;
+    private Output<String> monitorId;
 
     /**
      * @return The OCID of the monitor.
      * 
      */
-    public String monitorId() {
+    public Output<String> monitorId() {
         return this.monitorId;
     }
 
@@ -62,13 +63,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resultContentType", required=true)
-    private String resultContentType;
+    private Output<String> resultContentType;
 
     /**
      * @return The result content type zip or raw.
      * 
      */
-    public String resultContentType() {
+    public Output<String> resultContentType() {
         return this.resultContentType;
     }
 
@@ -77,13 +78,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resultType", required=true)
-    private String resultType;
+    private Output<String> resultType;
 
     /**
      * @return The result type har, screenshot, log or network.
      * 
      */
-    public String resultType() {
+    public Output<String> resultType() {
         return this.resultType;
     }
 
@@ -92,13 +93,13 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vantagePoint", required=true)
-    private String vantagePoint;
+    private Output<String> vantagePoint;
 
     /**
      * @return The vantagePoint name.
      * 
      */
-    public String vantagePoint() {
+    public Output<String> vantagePoint() {
         return this.vantagePoint;
     }
 
@@ -137,8 +138,29 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param executionTime The time the object was posted.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executionTime(Output<String> executionTime) {
+            $.executionTime = executionTime;
             return this;
         }
 
@@ -149,7 +171,17 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder executionTime(String executionTime) {
-            $.executionTime = executionTime;
+            return executionTime(Output.of(executionTime));
+        }
+
+        /**
+         * @param monitorId The OCID of the monitor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorId(Output<String> monitorId) {
+            $.monitorId = monitorId;
             return this;
         }
 
@@ -160,7 +192,17 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder monitorId(String monitorId) {
-            $.monitorId = monitorId;
+            return monitorId(Output.of(monitorId));
+        }
+
+        /**
+         * @param resultContentType The result content type zip or raw.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resultContentType(Output<String> resultContentType) {
+            $.resultContentType = resultContentType;
             return this;
         }
 
@@ -171,7 +213,17 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resultContentType(String resultContentType) {
-            $.resultContentType = resultContentType;
+            return resultContentType(Output.of(resultContentType));
+        }
+
+        /**
+         * @param resultType The result type har, screenshot, log or network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resultType(Output<String> resultType) {
+            $.resultType = resultType;
             return this;
         }
 
@@ -182,7 +234,17 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resultType(String resultType) {
-            $.resultType = resultType;
+            return resultType(Output.of(resultType));
+        }
+
+        /**
+         * @param vantagePoint The vantagePoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vantagePoint(Output<String> vantagePoint) {
+            $.vantagePoint = vantagePoint;
             return this;
         }
 
@@ -193,8 +255,7 @@ public final class GetResultArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vantagePoint(String vantagePoint) {
-            $.vantagePoint = vantagePoint;
-            return this;
+            return vantagePoint(Output.of(vantagePoint));
         }
 
         public GetResultArgs build() {

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.enums.ConfigurationType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="deploymentTypes")
-    private @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
+    private Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes;
 
     /**
      * @return List of deployment types.
      * 
      */
-    public Optional<List<Either<String,ConfigurationType>>> deploymentTypes() {
-        return Optional.ofNullable(this.deploymentTypes);
+    public Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes() {
+        return this.deploymentTypes;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -52,14 +52,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="regions")
-    private @Nullable List<String> regions;
+    private Output</* @Nullable */ List<String>> regions;
 
     /**
      * @return List of locations.
      * 
      */
-    public Optional<List<String>> regions() {
-        return Optional.ofNullable(this.regions);
+    public Output</* @Nullable */ List<String>> regions() {
+        return this.regions;
     }
 
     /**
@@ -67,13 +67,13 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,14 +82,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private Output</* @Nullable */ String> skipToken;
 
     /**
      * @return Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    public Optional<String> skipToken() {
-        return Optional.ofNullable(this.skipToken);
+    public Output</* @Nullable */ String> skipToken() {
+        return this.skipToken;
     }
 
     private ListNetworkManagerDeploymentStatusArgs() {}
@@ -126,9 +126,19 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder deploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
+        public Builder deploymentTypes(Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes) {
             $.deploymentTypes = deploymentTypes;
             return this;
+        }
+
+        /**
+         * @param deploymentTypes List of deployment types.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
+            return deploymentTypes(Output.of(deploymentTypes));
         }
 
         /**
@@ -147,8 +157,29 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder networkManagerName(String networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
+            return this;
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(String networkManagerName) {
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param regions List of locations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+            $.regions = regions;
             return this;
         }
 
@@ -159,8 +190,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * 
          */
         public Builder regions(@Nullable List<String> regions) {
-            $.regions = regions;
-            return this;
+            return regions(Output.of(regions));
         }
 
         /**
@@ -179,8 +209,29 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -191,8 +242,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+            return skipToken(Output.of(skipToken));
         }
 
         public ListNetworkManagerDeploymentStatusArgs build() {

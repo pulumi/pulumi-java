@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.orbital.inputs;
 
 import com.pulumi.azurenative.orbital.inputs.ResourceReference;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="contactProfile", required=true)
-    private ResourceReference contactProfile;
+    private Output<ResourceReference> contactProfile;
 
     /**
      * @return The reference to the contact profile resource.
      * 
      */
-    public ResourceReference contactProfile() {
+    public Output<ResourceReference> contactProfile() {
         return this.contactProfile;
     }
 
@@ -33,13 +34,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="endTime", required=true)
-    private String endTime;
+    private Output<String> endTime;
 
     /**
      * @return End time of a contact.
      * 
      */
-    public String endTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -48,13 +49,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="groundStationName", required=true)
-    private String groundStationName;
+    private Output<String> groundStationName;
 
     /**
      * @return Name of Azure Ground Station.
      * 
      */
-    public String groundStationName() {
+    public Output<String> groundStationName() {
         return this.groundStationName;
     }
 
@@ -63,13 +64,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,13 +79,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="spacecraftName", required=true)
-    private String spacecraftName;
+    private Output<String> spacecraftName;
 
     /**
      * @return Spacecraft ID
      * 
      */
-    public String spacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
 
@@ -93,13 +94,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="startTime", required=true)
-    private String startTime;
+    private Output<String> startTime;
 
     /**
      * @return Start time of a contact.
      * 
      */
-    public String startTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -138,8 +139,29 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder contactProfile(ResourceReference contactProfile) {
+        public Builder contactProfile(Output<ResourceReference> contactProfile) {
             $.contactProfile = contactProfile;
+            return this;
+        }
+
+        /**
+         * @param contactProfile The reference to the contact profile resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactProfile(ResourceReference contactProfile) {
+            return contactProfile(Output.of(contactProfile));
+        }
+
+        /**
+         * @param endTime End time of a contact.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output<String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -150,7 +172,17 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * 
          */
         public Builder endTime(String endTime) {
-            $.endTime = endTime;
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param groundStationName Name of Azure Ground Station.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groundStationName(Output<String> groundStationName) {
+            $.groundStationName = groundStationName;
             return this;
         }
 
@@ -161,7 +193,17 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * 
          */
         public Builder groundStationName(String groundStationName) {
-            $.groundStationName = groundStationName;
+            return groundStationName(Output.of(groundStationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -172,7 +214,17 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spacecraftName(Output<String> spacecraftName) {
+            $.spacecraftName = spacecraftName;
             return this;
         }
 
@@ -183,7 +235,17 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * 
          */
         public Builder spacecraftName(String spacecraftName) {
-            $.spacecraftName = spacecraftName;
+            return spacecraftName(Output.of(spacecraftName));
+        }
+
+        /**
+         * @param startTime Start time of a contact.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output<String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -194,8 +256,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * 
          */
         public Builder startTime(String startTime) {
-            $.startTime = startTime;
-            return this;
+            return startTime(Output.of(startTime));
         }
 
         public ListSpacecraftAvailableContactsArgs build() {

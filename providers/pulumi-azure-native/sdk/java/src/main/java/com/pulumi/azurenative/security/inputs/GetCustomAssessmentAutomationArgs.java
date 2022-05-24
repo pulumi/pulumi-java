@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customAssessmentAutomationName", required=true)
-    private String customAssessmentAutomationName;
+    private Output<String> customAssessmentAutomationName;
 
     /**
      * @return Name of the Custom Assessment Automation.
      * 
      */
-    public String customAssessmentAutomationName() {
+    public Output<String> customAssessmentAutomationName() {
         return this.customAssessmentAutomationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder customAssessmentAutomationName(String customAssessmentAutomationName) {
+        public Builder customAssessmentAutomationName(Output<String> customAssessmentAutomationName) {
             $.customAssessmentAutomationName = customAssessmentAutomationName;
+            return this;
+        }
+
+        /**
+         * @param customAssessmentAutomationName Name of the Custom Assessment Automation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customAssessmentAutomationName(String customAssessmentAutomationName) {
+            return customAssessmentAutomationName(Output.of(customAssessmentAutomationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCustomAssessmentAutomationArgs build() {

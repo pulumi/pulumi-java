@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlertArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alertId", required=true)
-    private String alertId;
+    private Output<String> alertId;
 
     /**
      * @return The OCID of alert.
      * 
      */
-    public String alertId() {
+    public Output<String> alertId() {
         return this.alertId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAlertArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alertId(String alertId) {
+        public Builder alertId(Output<String> alertId) {
             $.alertId = alertId;
             return this;
+        }
+
+        /**
+         * @param alertId The OCID of alert.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertId(String alertId) {
+            return alertId(Output.of(alertId));
         }
 
         public GetAlertArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceTopologyName", required=true)
-    private String serviceTopologyName;
+    private Output<String> serviceTopologyName;
 
     /**
      * @return The name of the service topology .
      * 
      */
-    public String serviceTopologyName() {
+    public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -62,13 +63,13 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceUnitName", required=true)
-    private String serviceUnitName;
+    private Output<String> serviceUnitName;
 
     /**
      * @return The name of the service unit resource.
      * 
      */
-    public String serviceUnitName() {
+    public Output<String> serviceUnitName() {
         return this.serviceUnitName;
     }
 
@@ -105,8 +106,29 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceTopologyName(Output<String> serviceTopologyName) {
+            $.serviceTopologyName = serviceTopologyName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceTopologyName(String serviceTopologyName) {
-            $.serviceTopologyName = serviceTopologyName;
+            return serviceTopologyName(Output.of(serviceTopologyName));
+        }
+
+        /**
+         * @param serviceUnitName The name of the service unit resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceUnitName(Output<String> serviceUnitName) {
+            $.serviceUnitName = serviceUnitName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceUnitName(String serviceUnitName) {
-            $.serviceUnitName = serviceUnitName;
-            return this;
+            return serviceUnitName(Output.of(serviceUnitName));
         }
 
         public GetServiceUnitArgs build() {

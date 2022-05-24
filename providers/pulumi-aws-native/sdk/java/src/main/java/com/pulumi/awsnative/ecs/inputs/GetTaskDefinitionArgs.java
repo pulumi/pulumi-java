@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="taskDefinitionArn", required=true)
-    private String taskDefinitionArn;
+    private Output<String> taskDefinitionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
      */
-    public String taskDefinitionArn() {
+    public Output<String> taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder taskDefinitionArn(String taskDefinitionArn) {
+        public Builder taskDefinitionArn(Output<String> taskDefinitionArn) {
             $.taskDefinitionArn = taskDefinitionArn;
             return this;
+        }
+
+        /**
+         * @param taskDefinitionArn The Amazon Resource Name (ARN) of the Amazon ECS task definition
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskDefinitionArn(String taskDefinitionArn) {
+            return taskDefinitionArn(Output.of(taskDefinitionArn));
         }
 
         public GetTaskDefinitionArgs build() {

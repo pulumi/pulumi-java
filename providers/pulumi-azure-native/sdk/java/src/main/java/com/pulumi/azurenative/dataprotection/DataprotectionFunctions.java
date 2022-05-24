@@ -12,10 +12,10 @@ import com.pulumi.azurenative.dataprotection.outputs.GetBackupInstanceResult;
 import com.pulumi.azurenative.dataprotection.outputs.GetBackupPolicyResult;
 import com.pulumi.azurenative.dataprotection.outputs.GetBackupVaultResult;
 import com.pulumi.azurenative.dataprotection.outputs.GetResourceGuardResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataprotectionFunctions {
     /**
@@ -23,7 +23,7 @@ public final class DataprotectionFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupInstanceResult> getBackupInstance(GetBackupInstanceArgs args) {
+    public static Output<GetBackupInstanceResult> getBackupInstance(GetBackupInstanceArgs args) {
         return getBackupInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -31,15 +31,15 @@ public final class DataprotectionFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupInstanceResult> getBackupInstance(GetBackupInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupInstance", TypeShape.of(GetBackupInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackupInstanceResult> getBackupInstance(GetBackupInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:dataprotection:getBackupInstance", TypeShape.of(GetBackupInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * BaseBackupPolicy resource
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args) {
+    public static Output<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args) {
         return getBackupPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class DataprotectionFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:dataprotection:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Backup Vault Resource
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
+    public static Output<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
         return getBackupVault(args, InvokeOptions.Empty);
     }
     /**
@@ -63,21 +63,21 @@ public final class DataprotectionFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:dataprotection:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourceGuardResult> getResourceGuard(GetResourceGuardArgs args) {
+    public static Output<GetResourceGuardResult> getResourceGuard(GetResourceGuardArgs args) {
         return getResourceGuard(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourceGuardResult> getResourceGuard(GetResourceGuardArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getResourceGuard", TypeShape.of(GetResourceGuardResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceGuardResult> getResourceGuard(GetResourceGuardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:dataprotection:getResourceGuard", TypeShape.of(GetResourceGuardResult.class), args, Utilities.withVersion(options));
     }
 }

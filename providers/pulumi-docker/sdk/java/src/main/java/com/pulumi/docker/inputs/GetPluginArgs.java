@@ -3,10 +3,10 @@
 
 package com.pulumi.docker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alias")
-    private @Nullable String alias;
+    private Output</* @Nullable */ String> alias;
 
     /**
      * @return The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
      * 
      */
-    public Optional<String> alias() {
-        return Optional.ofNullable(this.alias);
+    public Output</* @Nullable */ String> alias() {
+        return this.alias;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The ID of the plugin, which has precedence over the `alias` of both are given
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     private GetPluginArgs() {}
@@ -75,8 +75,29 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alias(@Nullable String alias) {
+        public Builder alias(Output</* @Nullable */ String> alias) {
             $.alias = alias;
+            return this;
+        }
+
+        /**
+         * @param alias The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alias(@Nullable String alias) {
+            return alias(Output.of(alias));
+        }
+
+        /**
+         * @param id The ID of the plugin, which has precedence over the `alias` of both are given
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output</* @Nullable */ String> id) {
+            $.id = id;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder id(@Nullable String id) {
-            $.id = id;
-            return this;
+            return id(Output.of(id));
         }
 
         public GetPluginArgs build() {

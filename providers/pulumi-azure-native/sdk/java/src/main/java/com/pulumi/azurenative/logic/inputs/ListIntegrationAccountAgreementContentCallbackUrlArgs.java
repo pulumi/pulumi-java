@@ -5,10 +5,10 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.enums.KeyType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="agreementName", required=true)
-    private String agreementName;
+    private Output<String> agreementName;
 
     /**
      * @return The integration account agreement name.
      * 
      */
-    public String agreementName() {
+    public Output<String> agreementName() {
         return this.agreementName;
     }
 
@@ -36,13 +36,13 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -51,14 +51,14 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="keyType")
-    private @Nullable Either<String,KeyType> keyType;
+    private Output</* @Nullable */ Either<String,KeyType>> keyType;
 
     /**
      * @return The key type.
      * 
      */
-    public Optional<Either<String,KeyType>> keyType() {
-        return Optional.ofNullable(this.keyType);
+    public Output</* @Nullable */ Either<String,KeyType>> keyType() {
+        return this.keyType;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="notAfter")
-    private @Nullable String notAfter;
+    private Output</* @Nullable */ String> notAfter;
 
     /**
      * @return The expiry time.
      * 
      */
-    public Optional<String> notAfter() {
-        return Optional.ofNullable(this.notAfter);
+    public Output</* @Nullable */ String> notAfter() {
+        return this.notAfter;
     }
 
     /**
@@ -81,13 +81,13 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +125,29 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
          * @return builder
          * 
          */
-        public Builder agreementName(String agreementName) {
+        public Builder agreementName(Output<String> agreementName) {
             $.agreementName = agreementName;
+            return this;
+        }
+
+        /**
+         * @param agreementName The integration account agreement name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agreementName(String agreementName) {
+            return agreementName(Output.of(agreementName));
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
 
@@ -137,7 +158,17 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
          * 
          */
         public Builder integrationAccountName(String integrationAccountName) {
-            $.integrationAccountName = integrationAccountName;
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyType(Output</* @Nullable */ Either<String,KeyType>> keyType) {
+            $.keyType = keyType;
             return this;
         }
 
@@ -148,8 +179,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
          * 
          */
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            $.keyType = keyType;
-            return this;
+            return keyType(Output.of(keyType));
         }
 
         /**
@@ -178,8 +208,29 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
          * @return builder
          * 
          */
-        public Builder notAfter(@Nullable String notAfter) {
+        public Builder notAfter(Output</* @Nullable */ String> notAfter) {
             $.notAfter = notAfter;
+            return this;
+        }
+
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notAfter(@Nullable String notAfter) {
+            return notAfter(Output.of(notAfter));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -190,8 +241,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {

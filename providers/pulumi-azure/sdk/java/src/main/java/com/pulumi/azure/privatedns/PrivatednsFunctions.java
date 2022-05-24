@@ -6,10 +6,10 @@ package com.pulumi.azure.privatedns;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.privatedns.inputs.GetDnsZoneArgs;
 import com.pulumi.azure.privatedns.outputs.GetDnsZoneResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PrivatednsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class PrivatednsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args) {
+    public static Output<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args) {
         return getDnsZone(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class PrivatednsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:privatedns/getDnsZone:getDnsZone", TypeShape.of(GetDnsZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:privatedns/getDnsZone:getDnsZone", TypeShape.of(GetDnsZoneResult.class), args, Utilities.withVersion(options));
     }
 }

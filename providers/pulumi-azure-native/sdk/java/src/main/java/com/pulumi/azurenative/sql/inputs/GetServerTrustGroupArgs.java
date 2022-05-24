@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="locationName", required=true)
-    private String locationName;
+    private Output<String> locationName;
 
     /**
      * @return The name of the region where the resource is located.
      * 
      */
-    public String locationName() {
+    public Output<String> locationName() {
         return this.locationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverTrustGroupName", required=true)
-    private String serverTrustGroupName;
+    private Output<String> serverTrustGroupName;
 
     /**
      * @return The name of the server trust group.
      * 
      */
-    public String serverTrustGroupName() {
+    public Output<String> serverTrustGroupName() {
         return this.serverTrustGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder locationName(String locationName) {
+        public Builder locationName(Output<String> locationName) {
             $.locationName = locationName;
+            return this;
+        }
+
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationName(String locationName) {
+            return locationName(Output.of(locationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverTrustGroupName The name of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverTrustGroupName(Output<String> serverTrustGroupName) {
+            $.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serverTrustGroupName(String serverTrustGroupName) {
-            $.serverTrustGroupName = serverTrustGroupName;
-            return this;
+            return serverTrustGroupName(Output.of(serverTrustGroupName));
         }
 
         public GetServerTrustGroupArgs build() {

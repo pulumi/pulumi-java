@@ -14,10 +14,10 @@ import com.pulumi.azurenative.search.outputs.GetServiceResult;
 import com.pulumi.azurenative.search.outputs.GetSharedPrivateLinkResourceResult;
 import com.pulumi.azurenative.search.outputs.ListAdminKeyResult;
 import com.pulumi.azurenative.search.outputs.ListQueryKeyBySearchServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SearchFunctions {
     /**
@@ -25,7 +25,7 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -33,15 +33,15 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:search:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:search:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes an Azure Cognitive Search service and its current state.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -49,15 +49,15 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:search:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:search:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args) {
+    public static Output<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args) {
         return getSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
     /**
@@ -65,15 +65,15 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:search:getSharedPrivateLinkResource", TypeShape.of(GetSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:search:getSharedPrivateLinkResource", TypeShape.of(GetSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args) {
+    public static Output<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args) {
         return listAdminKey(args, InvokeOptions.Empty);
     }
     /**
@@ -81,15 +81,15 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:search:listAdminKey", TypeShape.of(ListAdminKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:search:listAdminKey", TypeShape.of(ListAdminKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response containing the query API keys for a given Azure Cognitive Search service.
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args) {
+    public static Output<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args) {
         return listQueryKeyBySearchService(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +97,7 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:search:listQueryKeyBySearchService", TypeShape.of(ListQueryKeyBySearchServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:search:listQueryKeyBySearchService", TypeShape.of(ListQueryKeyBySearchServiceResult.class), args, Utilities.withVersion(options));
     }
 }

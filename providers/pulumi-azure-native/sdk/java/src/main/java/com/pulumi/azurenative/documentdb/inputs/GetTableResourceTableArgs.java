@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.documentdb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return Cosmos DB database account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return Cosmos DB table name.
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tableName Cosmos DB table name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTableResourceTableArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
-            return this;
+            return tableName(Output.of(tableName));
         }
 
         public GetTableResourceTableArgs build() {

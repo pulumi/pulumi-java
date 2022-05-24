@@ -10,52 +10,52 @@ import com.pulumi.awsnative.sso.inputs.GetPermissionSetArgs;
 import com.pulumi.awsnative.sso.outputs.GetAssignmentResult;
 import com.pulumi.awsnative.sso.outputs.GetInstanceAccessControlAttributeConfigurationResult;
 import com.pulumi.awsnative.sso.outputs.GetPermissionSetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SsoFunctions {
     /**
      * Resource Type definition for SSO assignmet
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
+    public static Output<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
         return getAssignment(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for SSO assignmet
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:sso:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:sso:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
      * 
      */
-    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args) {
+    public static Output<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args) {
         return getInstanceAccessControlAttributeConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
      * 
      */
-    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:sso:getInstanceAccessControlAttributeConfiguration", TypeShape.of(GetInstanceAccessControlAttributeConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:sso:getInstanceAccessControlAttributeConfiguration", TypeShape.of(GetInstanceAccessControlAttributeConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for SSO PermissionSet
      * 
      */
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args) {
+    public static Output<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args) {
         return getPermissionSet(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for SSO PermissionSet
      * 
      */
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:sso:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:sso:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args, Utilities.withVersion(options));
     }
 }

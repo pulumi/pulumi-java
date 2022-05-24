@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assetName", required=true)
-    private String assetName;
+    private Output<String> assetName;
 
     /**
      * @return The Asset name.
      * 
      */
-    public String assetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trackName", required=true)
-    private String trackName;
+    private Output<String> trackName;
 
     /**
      * @return The Asset Track name.
      * 
      */
-    public String trackName() {
+    public Output<String> trackName() {
         return this.trackName;
     }
 
@@ -105,8 +106,29 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assetName(Output<String> assetName) {
+            $.assetName = assetName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder assetName(String assetName) {
-            $.assetName = assetName;
+            return assetName(Output.of(assetName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param trackName The Asset Track name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackName(Output<String> trackName) {
+            $.trackName = trackName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetTrackArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder trackName(String trackName) {
-            $.trackName = trackName;
-            return this;
+            return trackName(Output.of(trackName));
         }
 
         public GetTrackArgs build() {

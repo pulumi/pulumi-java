@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.hybridconnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return The endpoint name.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -35,14 +35,14 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expiresin")
-    private @Nullable Integer expiresin;
+    private Output</* @Nullable */ Integer> expiresin;
 
     /**
      * @return The is how long the endpoint access token is valid (in seconds).
      * 
      */
-    public Optional<Integer> expiresin() {
-        return Optional.ofNullable(this.expiresin);
+    public Output</* @Nullable */ Integer> expiresin() {
+        return this.expiresin;
     }
 
     /**
@@ -50,13 +50,13 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -92,8 +92,29 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param expiresin The is how long the endpoint access token is valid (in seconds).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiresin(Output</* @Nullable */ Integer> expiresin) {
+            $.expiresin = expiresin;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder expiresin(@Nullable Integer expiresin) {
-            $.expiresin = expiresin;
+            return expiresin(Output.of(expiresin));
+        }
+
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public ListEndpointCredentialsArgs build() {

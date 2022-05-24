@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbHomesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-    private @Nullable String backupId;
+    private Output</* @Nullable */ String> backupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the backup. Specify a backupId to list only the DB systems or DB homes that support creating a database using this backup in this compartment.
      * 
      */
-    public Optional<String> backupId() {
-        return Optional.ofNullable(this.backupId);
+    public Output</* @Nullable */ String> backupId() {
+        return this.backupId;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,14 +51,14 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private @Nullable String dbSystemId;
+    private Output</* @Nullable */ String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
      * 
      */
-    public Optional<String> dbSystemId() {
-        return Optional.ofNullable(this.dbSystemId);
+    public Output</* @Nullable */ String> dbSystemId() {
+        return this.dbSystemId;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbVersion")
-    private @Nullable String dbVersion;
+    private Output</* @Nullable */ String> dbVersion;
 
     /**
      * @return A filter to return only DB Homes that match the specified dbVersion.
      * 
      */
-    public Optional<String> dbVersion() {
-        return Optional.ofNullable(this.dbVersion);
+    public Output</* @Nullable */ String> dbVersion() {
+        return this.dbVersion;
     }
 
     /**
@@ -81,21 +81,21 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbHomesFilter> filters;
+    private Output</* @Nullable */ List<GetDbHomesFilter>> filters;
 
-    public Optional<List<GetDbHomesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbHomesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -118,14 +118,14 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmClusterId")
-    private @Nullable String vmClusterId;
+    private Output</* @Nullable */ String> vmClusterId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
      * 
      */
-    public Optional<String> vmClusterId() {
-        return Optional.ofNullable(this.vmClusterId);
+    public Output</* @Nullable */ String> vmClusterId() {
+        return this.vmClusterId;
     }
 
     private GetDbHomesArgs() {}
@@ -165,8 +165,29 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(@Nullable String backupId) {
+        public Builder backupId(Output</* @Nullable */ String> backupId) {
             $.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * @param backupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the backup. Specify a backupId to list only the DB systems or DB homes that support creating a database using this backup in this compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupId(@Nullable String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -177,7 +198,17 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+            $.dbSystemId = dbSystemId;
             return this;
         }
 
@@ -188,7 +219,17 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemId(@Nullable String dbSystemId) {
-            $.dbSystemId = dbSystemId;
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        /**
+         * @param dbVersion A filter to return only DB Homes that match the specified dbVersion.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbVersion(Output</* @Nullable */ String> dbVersion) {
+            $.dbVersion = dbVersion;
             return this;
         }
 
@@ -199,7 +240,17 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbVersion(@Nullable String dbVersion) {
-            $.dbVersion = dbVersion;
+            return dbVersion(Output.of(dbVersion));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -210,13 +261,16 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbHomesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDbHomesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbHomesFilter... filters) {
@@ -229,8 +283,29 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vmClusterId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(Output</* @Nullable */ String> vmClusterId) {
+            $.vmClusterId = vmClusterId;
             return this;
         }
 
@@ -241,8 +316,7 @@ public final class GetDbHomesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vmClusterId(@Nullable String vmClusterId) {
-            $.vmClusterId = vmClusterId;
-            return this;
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetDbHomesArgs build() {

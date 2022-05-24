@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.baremetalsolution_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetSnapshotSchedulePolicyArgs extends com.pulumi.resources.In
     public static final GetSnapshotSchedulePolicyArgs Empty = new GetSnapshotSchedulePolicyArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="snapshotSchedulePolicyId", required=true)
-    private String snapshotSchedulePolicyId;
+    private Output<String> snapshotSchedulePolicyId;
 
-    public String snapshotSchedulePolicyId() {
+    public Output<String> snapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
     }
 
@@ -61,19 +61,31 @@ public final class GetSnapshotSchedulePolicyArgs extends com.pulumi.resources.In
             $ = new GetSnapshotSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder snapshotSchedulePolicyId(Output<String> snapshotSchedulePolicyId) {
             $.snapshotSchedulePolicyId = snapshotSchedulePolicyId;
             return this;
+        }
+
+        public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
+            return snapshotSchedulePolicyId(Output.of(snapshotSchedulePolicyId));
         }
 
         public GetSnapshotSchedulePolicyArgs build() {

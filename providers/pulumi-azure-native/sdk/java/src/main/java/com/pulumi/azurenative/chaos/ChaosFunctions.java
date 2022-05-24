@@ -10,10 +10,10 @@ import com.pulumi.azurenative.chaos.inputs.GetTargetArgs;
 import com.pulumi.azurenative.chaos.outputs.GetCapabilityResult;
 import com.pulumi.azurenative.chaos.outputs.GetExperimentResult;
 import com.pulumi.azurenative.chaos.outputs.GetTargetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ChaosFunctions {
     /**
@@ -21,7 +21,7 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args) {
+    public static Output<GetCapabilityResult> getCapability(GetCapabilityArgs args) {
         return getCapability(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCapabilityResult> getCapability(GetCapabilityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Model that represents a Experiment resource.
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
+    public static Output<GetExperimentResult> getExperiment(GetExperimentArgs args) {
         return getExperiment(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:chaos:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:chaos:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Model that represents a Target resource.
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args) {
+    public static Output<GetTargetResult> getTarget(GetTargetArgs args) {
         return getTarget(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:chaos:getTarget", TypeShape.of(GetTargetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTargetResult> getTarget(GetTargetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:chaos:getTarget", TypeShape.of(GetTargetResult.class), args, Utilities.withVersion(options));
     }
 }

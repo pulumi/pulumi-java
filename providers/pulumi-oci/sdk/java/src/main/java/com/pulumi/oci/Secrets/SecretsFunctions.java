@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Secrets;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Secrets.inputs.GetSecretbundleVersionsArgs;
 import com.pulumi.oci.Secrets.outputs.GetSecretbundleResult;
 import com.pulumi.oci.Secrets.outputs.GetSecretbundleVersionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class SecretsFunctions {
     /**
@@ -23,7 +23,7 @@ public final class SecretsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args) {
+    public static Output<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args) {
         return getSecretbundle(args, InvokeOptions.Empty);
     }
     /**
@@ -35,8 +35,8 @@ public final class SecretsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Secrets/getSecretbundle:getSecretbundle", TypeShape.of(GetSecretbundleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretbundleResult> getSecretbundle(GetSecretbundleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Secrets/getSecretbundle:getSecretbundle", TypeShape.of(GetSecretbundleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Secretbundle Versions in Oracle Cloud Infrastructure Secrets service.
@@ -46,7 +46,7 @@ public final class SecretsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args) {
+    public static Output<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args) {
         return getSecretbundleVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -57,7 +57,7 @@ public final class SecretsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Secrets/getSecretbundleVersions:getSecretbundleVersions", TypeShape.of(GetSecretbundleVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretbundleVersionsResult> getSecretbundleVersions(GetSecretbundleVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Secrets/getSecretbundleVersions:getSecretbundleVersions", TypeShape.of(GetSecretbundleVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

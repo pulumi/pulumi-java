@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStaticIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="staticIpName", required=true)
-    private String staticIpName;
+    private Output<String> staticIpName;
 
     /**
      * @return The name of the static IP address.
      * 
      */
-    public String staticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName;
     }
 
@@ -57,9 +58,19 @@ public final class GetStaticIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder staticIpName(String staticIpName) {
+        public Builder staticIpName(Output<String> staticIpName) {
             $.staticIpName = staticIpName;
             return this;
+        }
+
+        /**
+         * @param staticIpName The name of the static IP address.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticIpName(String staticIpName) {
+            return staticIpName(Output.of(staticIpName));
         }
 
         public GetStaticIpArgs build() {

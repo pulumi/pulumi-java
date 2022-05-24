@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,15 +20,15 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The Network Endpoint Group name.
      * Provide either this or a `self_link`.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -37,15 +37,15 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project to list versions in.
      * If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -53,14 +53,14 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="selfLink")
-    private @Nullable String selfLink;
+    private Output</* @Nullable */ String> selfLink;
 
     /**
      * @return The Network Endpoint Group self\_link.
      * 
      */
-    public Optional<String> selfLink() {
-        return Optional.ofNullable(this.selfLink);
+    public Output</* @Nullable */ String> selfLink() {
+        return this.selfLink;
     }
 
     /**
@@ -68,14 +68,14 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="zone")
-    private @Nullable String zone;
+    private Output</* @Nullable */ String> zone;
 
     /**
      * @return The Network Endpoint Group availability zone.
      * 
      */
-    public Optional<String> zone() {
-        return Optional.ofNullable(this.zone);
+    public Output</* @Nullable */ String> zone() {
+        return this.zone;
     }
 
     private GetNetworkEndpointGroupArgs() {}
@@ -112,8 +112,31 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The Network Endpoint Group name.
+         * Provide either this or a `self_link`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project to list versions in.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -125,7 +148,17 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param selfLink The Network Endpoint Group self\_link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selfLink(Output</* @Nullable */ String> selfLink) {
+            $.selfLink = selfLink;
             return this;
         }
 
@@ -136,7 +169,17 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder selfLink(@Nullable String selfLink) {
-            $.selfLink = selfLink;
+            return selfLink(Output.of(selfLink));
+        }
+
+        /**
+         * @param zone The Network Endpoint Group availability zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zone(Output</* @Nullable */ String> zone) {
+            $.zone = zone;
             return this;
         }
 
@@ -147,8 +190,7 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder zone(@Nullable String zone) {
-            $.zone = zone;
-            return this;
+            return zone(Output.of(zone));
         }
 
         public GetNetworkEndpointGroupArgs build() {

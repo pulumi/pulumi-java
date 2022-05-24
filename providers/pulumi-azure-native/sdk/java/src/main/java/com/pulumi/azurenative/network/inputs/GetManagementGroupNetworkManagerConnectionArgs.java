@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
      * 
      */
     @Import(name="managementGroupId", required=true)
-    private String managementGroupId;
+    private Output<String> managementGroupId;
 
     /**
      * @return The management group Id which uniquely identify the Microsoft Azure management group.
      * 
      */
-    public String managementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
      * 
      */
     @Import(name="networkManagerConnectionName", required=true)
-    private String networkManagerConnectionName;
+    private Output<String> networkManagerConnectionName;
 
     /**
      * @return Name for the network manager connection.
      * 
      */
-    public String networkManagerConnectionName() {
+    public Output<String> networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder managementGroupId(String managementGroupId) {
+        public Builder managementGroupId(Output<String> managementGroupId) {
             $.managementGroupId = managementGroupId;
+            return this;
+        }
+
+        /**
+         * @param managementGroupId The management group Id which uniquely identify the Microsoft Azure management group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupId(String managementGroupId) {
+            return managementGroupId(Output.of(managementGroupId));
+        }
+
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerConnectionName(Output<String> networkManagerConnectionName) {
+            $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
          * 
          */
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
-            $.networkManagerConnectionName = networkManagerConnectionName;
-            return this;
+            return networkManagerConnectionName(Output.of(networkManagerConnectionName));
         }
 
         public GetManagementGroupNetworkManagerConnectionArgs build() {

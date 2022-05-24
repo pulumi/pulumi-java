@@ -5,12 +5,12 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.azurenative.web.inputs.BackupSchedule;
 import com.pulumi.azurenative.web.inputs.DatabaseBackupSetting;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,13 +23,13 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
     /**
      * @return ID of backup.
      * 
      */
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
@@ -38,14 +38,14 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="backupName")
-    private @Nullable String backupName;
+    private Output</* @Nullable */ String> backupName;
 
     /**
      * @return Name of the backup.
      * 
      */
-    public Optional<String> backupName() {
-        return Optional.ofNullable(this.backupName);
+    public Output</* @Nullable */ String> backupName() {
+        return this.backupName;
     }
 
     /**
@@ -53,14 +53,14 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="backupSchedule")
-    private @Nullable BackupSchedule backupSchedule;
+    private Output</* @Nullable */ BackupSchedule> backupSchedule;
 
     /**
      * @return Schedule for the backup if it is executed periodically.
      * 
      */
-    public Optional<BackupSchedule> backupSchedule() {
-        return Optional.ofNullable(this.backupSchedule);
+    public Output</* @Nullable */ BackupSchedule> backupSchedule() {
+        return this.backupSchedule;
     }
 
     /**
@@ -68,14 +68,14 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="databases")
-    private @Nullable List<DatabaseBackupSetting> databases;
+    private Output</* @Nullable */ List<DatabaseBackupSetting>> databases;
 
     /**
      * @return Databases included in the backup.
      * 
      */
-    public Optional<List<DatabaseBackupSetting>> databases() {
-        return Optional.ofNullable(this.databases);
+    public Output</* @Nullable */ List<DatabaseBackupSetting>> databases() {
+        return this.databases;
     }
 
     /**
@@ -83,14 +83,14 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enabled")
-    private @Nullable Boolean enabled;
+    private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    public Optional<Boolean> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Output</* @Nullable */ Boolean> enabled() {
+        return this.enabled;
     }
 
     /**
@@ -98,14 +98,14 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kind")
-    private @Nullable String kind;
+    private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
      * 
      */
-    public Optional<String> kind() {
-        return Optional.ofNullable(this.kind);
+    public Output</* @Nullable */ String> kind() {
+        return this.kind;
     }
 
     /**
@@ -113,13 +113,13 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of web app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -128,13 +128,13 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -143,13 +143,13 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="storageAccountUrl", required=true)
-    private String storageAccountUrl;
+    private Output<String> storageAccountUrl;
 
     /**
      * @return SAS URL to the container.
      * 
      */
-    public String storageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl;
     }
 
@@ -191,8 +191,29 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * @param backupId ID of backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        /**
+         * @param backupName Name of the backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupName(Output</* @Nullable */ String> backupName) {
+            $.backupName = backupName;
             return this;
         }
 
@@ -203,7 +224,17 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder backupName(@Nullable String backupName) {
-            $.backupName = backupName;
+            return backupName(Output.of(backupName));
+        }
+
+        /**
+         * @param backupSchedule Schedule for the backup if it is executed periodically.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupSchedule(Output</* @Nullable */ BackupSchedule> backupSchedule) {
+            $.backupSchedule = backupSchedule;
             return this;
         }
 
@@ -214,7 +245,17 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
-            $.backupSchedule = backupSchedule;
+            return backupSchedule(Output.of(backupSchedule));
+        }
+
+        /**
+         * @param databases Databases included in the backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databases(Output</* @Nullable */ List<DatabaseBackupSetting>> databases) {
+            $.databases = databases;
             return this;
         }
 
@@ -225,8 +266,7 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
-            $.databases = databases;
-            return this;
+            return databases(Output.of(databases));
         }
 
         /**
@@ -245,8 +285,29 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder enabled(@Nullable Boolean enabled) {
+        public Builder enabled(Output</* @Nullable */ Boolean> enabled) {
             $.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * @param enabled True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enabled(@Nullable Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kind(Output</* @Nullable */ String> kind) {
+            $.kind = kind;
             return this;
         }
 
@@ -257,7 +318,17 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder kind(@Nullable String kind) {
-            $.kind = kind;
+            return kind(Output.of(kind));
+        }
+
+        /**
+         * @param name Name of web app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -268,7 +339,17 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -279,7 +360,17 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param storageAccountUrl SAS URL to the container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountUrl(Output<String> storageAccountUrl) {
+            $.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
@@ -290,8 +381,7 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
          * 
          */
         public Builder storageAccountUrl(String storageAccountUrl) {
-            $.storageAccountUrl = storageAccountUrl;
-            return this;
+            return storageAccountUrl(Output.of(storageAccountUrl));
         }
 
         public ListWebAppBackupStatusSecretsArgs build() {

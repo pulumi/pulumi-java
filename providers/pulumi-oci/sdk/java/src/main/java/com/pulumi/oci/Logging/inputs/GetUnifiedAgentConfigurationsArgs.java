@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Logging.inputs.GetUnifiedAgentConfigurationsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,21 +37,21 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Resource name
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetUnifiedAgentConfigurationsFilter> filters;
+    private Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters;
 
-    public Optional<List<GetUnifiedAgentConfigurationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupId")
-    private @Nullable String groupId;
+    private Output</* @Nullable */ String> groupId;
 
     /**
      * @return The OCID of a group or a dynamic group.
      * 
      */
-    public Optional<String> groupId() {
-        return Optional.ofNullable(this.groupId);
+    public Output</* @Nullable */ String> groupId() {
+        return this.groupId;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="isCompartmentIdInSubtree")
-    private @Nullable Boolean isCompartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> isCompartmentIdInSubtree;
 
     /**
      * @return Specifies whether or not nested compartments should be traversed. Defaults to false.
      * 
      */
-    public Optional<Boolean> isCompartmentIdInSubtree() {
-        return Optional.ofNullable(this.isCompartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> isCompartmentIdInSubtree() {
+        return this.isCompartmentIdInSubtree;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="logId")
-    private @Nullable String logId;
+    private Output</* @Nullable */ String> logId;
 
     /**
      * @return Custom log OCID to list resources with the log as destination.
      * 
      */
-    public Optional<String> logId() {
-        return Optional.ofNullable(this.logId);
+    public Output</* @Nullable */ String> logId() {
+        return this.logId;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Lifecycle state of the log object
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetUnifiedAgentConfigurationsArgs() {}
@@ -150,8 +150,29 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -162,13 +183,16 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetUnifiedAgentConfigurationsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetUnifiedAgentConfigurationsFilter... filters) {
@@ -181,8 +205,29 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(Output</* @Nullable */ String> groupId) {
             $.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * @param groupId The OCID of a group or a dynamic group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(@Nullable String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param isCompartmentIdInSubtree Specifies whether or not nested compartments should be traversed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isCompartmentIdInSubtree(Output</* @Nullable */ Boolean> isCompartmentIdInSubtree) {
+            $.isCompartmentIdInSubtree = isCompartmentIdInSubtree;
             return this;
         }
 
@@ -193,7 +238,17 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * 
          */
         public Builder isCompartmentIdInSubtree(@Nullable Boolean isCompartmentIdInSubtree) {
-            $.isCompartmentIdInSubtree = isCompartmentIdInSubtree;
+            return isCompartmentIdInSubtree(Output.of(isCompartmentIdInSubtree));
+        }
+
+        /**
+         * @param logId Custom log OCID to list resources with the log as destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logId(Output</* @Nullable */ String> logId) {
+            $.logId = logId;
             return this;
         }
 
@@ -204,7 +259,17 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * 
          */
         public Builder logId(@Nullable String logId) {
-            $.logId = logId;
+            return logId(Output.of(logId));
+        }
+
+        /**
+         * @param state Lifecycle state of the log object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -215,8 +280,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetUnifiedAgentConfigurationsArgs build() {

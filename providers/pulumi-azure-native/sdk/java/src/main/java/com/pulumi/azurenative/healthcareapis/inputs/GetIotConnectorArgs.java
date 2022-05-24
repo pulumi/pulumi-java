@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotConnectorName", required=true)
-    private String iotConnectorName;
+    private Output<String> iotConnectorName;
 
     /**
      * @return The name of IoT Connector resource.
      * 
      */
-    public String iotConnectorName() {
+    public Output<String> iotConnectorName() {
         return this.iotConnectorName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the service instance.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of workspace resource.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder iotConnectorName(String iotConnectorName) {
+        public Builder iotConnectorName(Output<String> iotConnectorName) {
             $.iotConnectorName = iotConnectorName;
+            return this;
+        }
+
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iotConnectorName(String iotConnectorName) {
+            return iotConnectorName(Output.of(iotConnectorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetIotConnectorArgs build() {

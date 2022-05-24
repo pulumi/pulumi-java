@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetCpeDeviceShapesFilter;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class GetCpeDeviceShapesArgs extends com.pulumi.resources.InvokeArg
     public static final GetCpeDeviceShapesArgs Empty = new GetCpeDeviceShapesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetCpeDeviceShapesFilter> filters;
+    private Output</* @Nullable */ List<GetCpeDeviceShapesFilter>> filters;
 
-    public Optional<List<GetCpeDeviceShapesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCpeDeviceShapesFilter>> filters() {
+        return this.filters;
     }
 
     private GetCpeDeviceShapesArgs() {}
@@ -46,9 +46,13 @@ public final class GetCpeDeviceShapesArgs extends com.pulumi.resources.InvokeArg
             $ = new GetCpeDeviceShapesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetCpeDeviceShapesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetCpeDeviceShapesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetCpeDeviceShapesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCpeDeviceShapesFilter... filters) {

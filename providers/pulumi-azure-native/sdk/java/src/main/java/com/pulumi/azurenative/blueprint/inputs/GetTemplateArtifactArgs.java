@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.blueprint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="artifactName", required=true)
-    private String artifactName;
+    private Output<String> artifactName;
 
     /**
      * @return Name of the blueprint artifact.
      * 
      */
-    public String artifactName() {
+    public Output<String> artifactName() {
         return this.artifactName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="blueprintName", required=true)
-    private String blueprintName;
+    private Output<String> blueprintName;
 
     /**
      * @return Name of the blueprint definition.
      * 
      */
-    public String blueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceScope", required=true)
-    private String resourceScope;
+    private Output<String> resourceScope;
 
     /**
      * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
-    public String resourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -89,8 +90,29 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder artifactName(String artifactName) {
+        public Builder artifactName(Output<String> artifactName) {
             $.artifactName = artifactName;
+            return this;
+        }
+
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactName(String artifactName) {
+            return artifactName(Output.of(artifactName));
+        }
+
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blueprintName(Output<String> blueprintName) {
+            $.blueprintName = blueprintName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder blueprintName(String blueprintName) {
-            $.blueprintName = blueprintName;
+            return blueprintName(Output.of(blueprintName));
+        }
+
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceScope(Output<String> resourceScope) {
+            $.resourceScope = resourceScope;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceScope(String resourceScope) {
-            $.resourceScope = resourceScope;
-            return this;
+            return resourceScope(Output.of(resourceScope));
         }
 
         public GetTemplateArtifactArgs build() {

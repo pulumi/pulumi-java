@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.essentialcontacts_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetContactArgs Empty = new GetContactArgs();
 
     @Import(name="contactId", required=true)
-    private String contactId;
+    private Output<String> contactId;
 
-    public String contactId() {
+    public Output<String> contactId() {
         return this.contactId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetContactArgs() {}
@@ -53,14 +53,22 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContactArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder contactId(String contactId) {
+        public Builder contactId(Output<String> contactId) {
             $.contactId = contactId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder contactId(String contactId) {
+            return contactId(Output.of(contactId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetContactArgs build() {

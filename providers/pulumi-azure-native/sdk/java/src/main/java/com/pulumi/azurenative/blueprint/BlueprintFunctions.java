@@ -18,10 +18,10 @@ import com.pulumi.azurenative.blueprint.outputs.GetPolicyAssignmentArtifactResul
 import com.pulumi.azurenative.blueprint.outputs.GetPublishedBlueprintResult;
 import com.pulumi.azurenative.blueprint.outputs.GetRoleAssignmentArtifactResult;
 import com.pulumi.azurenative.blueprint.outputs.GetTemplateArtifactResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BlueprintFunctions {
     /**
@@ -33,7 +33,7 @@ public final class BlueprintFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: PolicyAssignmentArtifact, RoleAssignmentArtifact, TemplateArtifact. */
-    public static CompletableFuture<GetArtifactResult> getArtifact(GetArtifactArgs args) {
+    public static Output<GetArtifactResult> getArtifact(GetArtifactArgs args) {
         return getArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class BlueprintFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: PolicyAssignmentArtifact, RoleAssignmentArtifact, TemplateArtifact. */
-    public static CompletableFuture<GetArtifactResult> getArtifact(GetArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getArtifact", TypeShape.of(GetArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetArtifactResult> getArtifact(GetArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getArtifact", TypeShape.of(GetArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a blueprint assignment.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
+    public static Output<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
         return getAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -61,15 +61,15 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a Blueprint definition.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetBlueprintResult> getBlueprint(GetBlueprintArgs args) {
+    public static Output<GetBlueprintResult> getBlueprint(GetBlueprintArgs args) {
         return getBlueprint(args, InvokeOptions.Empty);
     }
     /**
@@ -77,15 +77,15 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetBlueprintResult> getBlueprint(GetBlueprintArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getBlueprint", TypeShape.of(GetBlueprintResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlueprintResult> getBlueprint(GetBlueprintArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getBlueprint", TypeShape.of(GetBlueprintResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Blueprint artifact that applies a Policy assignment.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args) {
+    public static Output<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args) {
         return getPolicyAssignmentArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -93,15 +93,15 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPolicyAssignmentArtifact", TypeShape.of(GetPolicyAssignmentArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getPolicyAssignmentArtifact", TypeShape.of(GetPolicyAssignmentArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a published blueprint.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args) {
+    public static Output<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args) {
         return getPublishedBlueprint(args, InvokeOptions.Empty);
     }
     /**
@@ -109,15 +109,15 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPublishedBlueprint", TypeShape.of(GetPublishedBlueprintResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getPublishedBlueprint", TypeShape.of(GetPublishedBlueprintResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Blueprint artifact that applies a Role assignment.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args) {
+    public static Output<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args) {
         return getRoleAssignmentArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -125,15 +125,15 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getRoleAssignmentArtifact", TypeShape.of(GetRoleAssignmentArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getRoleAssignmentArtifact", TypeShape.of(GetRoleAssignmentArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Blueprint artifact that deploys a Resource Manager template.
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args) {
+    public static Output<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args) {
         return getTemplateArtifact(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:blueprint:getTemplateArtifact", TypeShape.of(GetTemplateArtifactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:blueprint:getTemplateArtifact", TypeShape.of(GetTemplateArtifactResult.class), args, Utilities.withVersion(options));
     }
 }

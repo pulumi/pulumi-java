@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.iam_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetServiceAccountArgs extends com.pulumi.resources.InvokeArgs
     public static final GetServiceAccountArgs Empty = new GetServiceAccountArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="serviceAccountId", required=true)
-    private String serviceAccountId;
+    private Output<String> serviceAccountId;
 
-    public String serviceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
@@ -53,14 +53,22 @@ public final class GetServiceAccountArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serviceAccountId(String serviceAccountId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serviceAccountId(Output<String> serviceAccountId) {
             $.serviceAccountId = serviceAccountId;
             return this;
+        }
+
+        public Builder serviceAccountId(String serviceAccountId) {
+            return serviceAccountId(Output.of(serviceAccountId));
         }
 
         public GetServiceAccountArgs build() {

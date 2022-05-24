@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetRepositoryPathsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,21 +22,21 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoryPathsFilter> filters;
+    private Output</* @Nullable */ List<GetRepositoryPathsFilter>> filters;
 
-    public Optional<List<GetRepositoryPathsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRepositoryPathsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -44,14 +44,14 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="folderPath")
-    private @Nullable String folderPath;
+    private Output</* @Nullable */ String> folderPath;
 
     /**
      * @return The fully qualified path to the folder whose contents are returned, including the folder name. For example, /examples is a fully-qualified path to a folder named examples that was created off of the root directory (/) of a repository.
      * 
      */
-    public Optional<String> folderPath() {
-        return Optional.ofNullable(this.folderPath);
+    public Output</* @Nullable */ String> folderPath() {
+        return this.folderPath;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="pathsInSubtree")
-    private @Nullable Boolean pathsInSubtree;
+    private Output</* @Nullable */ Boolean> pathsInSubtree;
 
     /**
      * @return Flag to determine if files must be retrived recursively. Flag is False by default.
      * 
      */
-    public Optional<Boolean> pathsInSubtree() {
-        return Optional.ofNullable(this.pathsInSubtree);
+    public Output</* @Nullable */ Boolean> pathsInSubtree() {
+        return this.pathsInSubtree;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ref")
-    private @Nullable String ref;
+    private Output</* @Nullable */ String> ref;
 
     /**
      * @return The name of branch/tag or commit hash it points to. If names conflict, order of preference is commit &gt; branch &gt; tag. You can disambiguate with &#34;heads/foobar&#34; and &#34;tags/foobar&#34;. If left blank repository&#39;s default branch will be used.
      * 
      */
-    public Optional<String> ref() {
-        return Optional.ofNullable(this.ref);
+    public Output</* @Nullable */ String> ref() {
+        return this.ref;
     }
 
     /**
@@ -89,13 +89,13 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -134,14 +134,28 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryPathsFilter> filters) {
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetRepositoryPathsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRepositoryPathsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRepositoryPathsFilter... filters) {
@@ -154,8 +168,29 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder folderPath(@Nullable String folderPath) {
+        public Builder folderPath(Output</* @Nullable */ String> folderPath) {
             $.folderPath = folderPath;
+            return this;
+        }
+
+        /**
+         * @param folderPath The fully qualified path to the folder whose contents are returned, including the folder name. For example, /examples is a fully-qualified path to a folder named examples that was created off of the root directory (/) of a repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folderPath(@Nullable String folderPath) {
+            return folderPath(Output.of(folderPath));
+        }
+
+        /**
+         * @param pathsInSubtree Flag to determine if files must be retrived recursively. Flag is False by default.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pathsInSubtree(Output</* @Nullable */ Boolean> pathsInSubtree) {
+            $.pathsInSubtree = pathsInSubtree;
             return this;
         }
 
@@ -166,7 +201,17 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder pathsInSubtree(@Nullable Boolean pathsInSubtree) {
-            $.pathsInSubtree = pathsInSubtree;
+            return pathsInSubtree(Output.of(pathsInSubtree));
+        }
+
+        /**
+         * @param ref The name of branch/tag or commit hash it points to. If names conflict, order of preference is commit &gt; branch &gt; tag. You can disambiguate with &#34;heads/foobar&#34; and &#34;tags/foobar&#34;. If left blank repository&#39;s default branch will be used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ref(Output</* @Nullable */ String> ref) {
+            $.ref = ref;
             return this;
         }
 
@@ -177,7 +222,17 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder ref(@Nullable String ref) {
-            $.ref = ref;
+            return ref(Output.of(ref));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -188,8 +243,7 @@ public final class GetRepositoryPathsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryPathsArgs build() {

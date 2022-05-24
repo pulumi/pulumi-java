@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBuildPipelineStageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="buildPipelineStageId", required=true)
-    private String buildPipelineStageId;
+    private Output<String> buildPipelineStageId;
 
     /**
      * @return Unique stage identifier.
      * 
      */
-    public String buildPipelineStageId() {
+    public Output<String> buildPipelineStageId() {
         return this.buildPipelineStageId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBuildPipelineStageArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder buildPipelineStageId(String buildPipelineStageId) {
+        public Builder buildPipelineStageId(Output<String> buildPipelineStageId) {
             $.buildPipelineStageId = buildPipelineStageId;
             return this;
+        }
+
+        /**
+         * @param buildPipelineStageId Unique stage identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildPipelineStageId(String buildPipelineStageId) {
+            return buildPipelineStageId(Output.of(buildPipelineStageId));
         }
 
         public GetBuildPipelineStageArgs build() {

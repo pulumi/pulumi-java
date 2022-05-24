@@ -18,10 +18,10 @@ import com.pulumi.azure.apimanagement.outputs.GetGroupResult;
 import com.pulumi.azure.apimanagement.outputs.GetProductResult;
 import com.pulumi.azure.apimanagement.outputs.GetServiceResult;
 import com.pulumi.azure.apimanagement.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApimanagementFunctions {
     /**
@@ -55,7 +55,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args) {
+    public static Output<GetApiResult> getApi(GetApiArgs args) {
         return getApi(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an API Version Set within an API Management Service.
@@ -122,7 +122,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args) {
+    public static Output<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args) {
         return getApiVersionSet(args, InvokeOptions.Empty);
     }
     /**
@@ -155,8 +155,8 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getApiVersionSet:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getApiVersionSet:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing API Management Gateway.
@@ -191,7 +191,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -227,8 +227,8 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing API Management Group.
@@ -260,7 +260,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -293,8 +293,8 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing API Management Product.
@@ -326,7 +326,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+    public static Output<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
     /**
@@ -359,8 +359,8 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing API Management Service.
@@ -391,7 +391,7 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -423,21 +423,21 @@ public final class ApimanagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing API Management User.
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing API Management User.
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:apimanagement/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:apimanagement/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

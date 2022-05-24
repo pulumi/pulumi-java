@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetRouteCalculatorArgs extends com.pulumi.resources.InvokeArg
     public static final GetRouteCalculatorArgs Empty = new GetRouteCalculatorArgs();
 
     @Import(name="calculatorName", required=true)
-    private String calculatorName;
+    private Output<String> calculatorName;
 
-    public String calculatorName() {
+    public Output<String> calculatorName() {
         return this.calculatorName;
     }
 
@@ -43,9 +44,13 @@ public final class GetRouteCalculatorArgs extends com.pulumi.resources.InvokeArg
             $ = new GetRouteCalculatorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder calculatorName(String calculatorName) {
+        public Builder calculatorName(Output<String> calculatorName) {
             $.calculatorName = calculatorName;
             return this;
+        }
+
+        public Builder calculatorName(String calculatorName) {
+            return calculatorName(Output.of(calculatorName));
         }
 
         public GetRouteCalculatorArgs build() {

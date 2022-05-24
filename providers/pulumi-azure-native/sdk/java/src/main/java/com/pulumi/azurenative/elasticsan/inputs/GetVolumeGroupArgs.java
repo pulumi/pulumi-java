@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.elasticsan.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticSanName", required=true)
-    private String elasticSanName;
+    private Output<String> elasticSanName;
 
     /**
      * @return The name of the ElasticSan.
      * 
      */
-    public String elasticSanName() {
+    public Output<String> elasticSanName() {
         return this.elasticSanName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeGroupName", required=true)
-    private String volumeGroupName;
+    private Output<String> volumeGroupName;
 
     /**
      * @return The name of the VolumeGroup.
      * 
      */
-    public String volumeGroupName() {
+    public Output<String> volumeGroupName() {
         return this.volumeGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder elasticSanName(String elasticSanName) {
+        public Builder elasticSanName(Output<String> elasticSanName) {
             $.elasticSanName = elasticSanName;
+            return this;
+        }
+
+        /**
+         * @param elasticSanName The name of the ElasticSan.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder elasticSanName(String elasticSanName) {
+            return elasticSanName(Output.of(elasticSanName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param volumeGroupName The name of the VolumeGroup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeGroupName(Output<String> volumeGroupName) {
+            $.volumeGroupName = volumeGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder volumeGroupName(String volumeGroupName) {
-            $.volumeGroupName = volumeGroupName;
-            return this;
+            return volumeGroupName(Output.of(volumeGroupName));
         }
 
         public GetVolumeGroupArgs build() {

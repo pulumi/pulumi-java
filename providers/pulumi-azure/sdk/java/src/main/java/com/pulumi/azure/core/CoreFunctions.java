@@ -19,11 +19,11 @@ import com.pulumi.azure.core.outputs.GetSubscriptionResult;
 import com.pulumi.azure.core.outputs.GetSubscriptionsResult;
 import com.pulumi.azure.core.outputs.GetTemplateSpecVersionResult;
 import com.pulumi.azure.core.outputs.GetUserAssignedIdentityResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class CoreFunctions {
     /**
@@ -52,7 +52,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig() {
+    public static Output<GetClientConfigResult> getClientConfig() {
         return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
+    public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -110,8 +110,8 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source return the available Extended Locations for a specific Azure Region.
@@ -140,7 +140,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExtendedLocationsResult> getExtendedLocations(GetExtendedLocationsArgs args) {
+    public static Output<GetExtendedLocationsResult> getExtendedLocations(GetExtendedLocationsArgs args) {
         return getExtendedLocations(args, InvokeOptions.Empty);
     }
     /**
@@ -170,8 +170,8 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExtendedLocationsResult> getExtendedLocations(GetExtendedLocationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getExtendedLocations:getExtendedLocations", TypeShape.of(GetExtendedLocationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExtendedLocationsResult> getExtendedLocations(GetExtendedLocationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getExtendedLocations:getExtendedLocations", TypeShape.of(GetExtendedLocationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Resource Group.
@@ -201,7 +201,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args) {
+    public static Output<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args) {
         return getResourceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -232,29 +232,29 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getResourceGroup:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getResourceGroup:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about existing resources.
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources() {
+    public static Output<GetResourcesResult> getResources() {
         return getResources(GetResourcesArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about existing resources.
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args) {
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args) {
         return getResources(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about existing resources.
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Subscription.
@@ -282,7 +282,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription() {
+    public static Output<GetSubscriptionResult> getSubscription() {
         return getSubscription(GetSubscriptionArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -311,7 +311,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -340,8 +340,8 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about all the Subscriptions currently available.
@@ -370,7 +370,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions() {
+    public static Output<GetSubscriptionsResult> getSubscriptions() {
         return getSubscriptions(GetSubscriptionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -400,7 +400,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -430,8 +430,8 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Template Spec Version.
@@ -463,7 +463,7 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args) {
+    public static Output<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args) {
         return getTemplateSpecVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -496,8 +496,8 @@ public final class CoreFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getTemplateSpecVersion:getTemplateSpecVersion", TypeShape.of(GetTemplateSpecVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getTemplateSpecVersion:getTemplateSpecVersion", TypeShape.of(GetTemplateSpecVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing User Assigned Identity.
@@ -535,7 +535,7 @@ public final class CoreFunctions {
      * 
      */
     @Deprecated /* azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity */
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
+    public static Output<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
         return getUserAssignedIdentity(args, InvokeOptions.Empty);
     }
     /**
@@ -574,7 +574,7 @@ public final class CoreFunctions {
      * 
      */
     @Deprecated /* azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity */
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:core/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:core/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

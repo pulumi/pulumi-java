@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,21 +19,21 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the ServiceBus Namespace Authorization Rule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="namespaceId")
-    private @Nullable String namespaceId;
+    private Output</* @Nullable */ String> namespaceId;
 
-    public Optional<String> namespaceId() {
-        return Optional.ofNullable(this.namespaceId);
+    public Output</* @Nullable */ String> namespaceId() {
+        return this.namespaceId;
     }
 
     /**
@@ -41,14 +41,14 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private Output</* @Nullable */ String> namespaceName;
 
     /**
      * @return Specifies the name of the ServiceBus Namespace.
      * 
      */
-    public Optional<String> namespaceName() {
-        return Optional.ofNullable(this.namespaceName);
+    public Output</* @Nullable */ String> namespaceName() {
+        return this.namespaceName;
     }
 
     /**
@@ -56,14 +56,14 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private Output</* @Nullable */ String> resourceGroupName;
 
     /**
      * @return Specifies the name of the Resource Group where the ServiceBus Namespace exists.
      * 
      */
-    public Optional<String> resourceGroupName() {
-        return Optional.ofNullable(this.resourceGroupName);
+    public Output</* @Nullable */ String> resourceGroupName() {
+        return this.resourceGroupName;
     }
 
     private GetNamespaceAuthorizationRuleArgs() {}
@@ -99,13 +99,38 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder namespaceId(@Nullable String namespaceId) {
+        /**
+         * @param name Specifies the name of the ServiceBus Namespace Authorization Rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder namespaceId(Output</* @Nullable */ String> namespaceId) {
             $.namespaceId = namespaceId;
+            return this;
+        }
+
+        public Builder namespaceId(@Nullable String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
+        }
+
+        /**
+         * @param namespaceName Specifies the name of the ServiceBus Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output</* @Nullable */ String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -116,7 +141,17 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
          * 
          */
         public Builder namespaceName(@Nullable String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the Resource Group where the ServiceBus Namespace exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -127,8 +162,7 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNamespaceAuthorizationRuleArgs build() {

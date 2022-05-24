@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedZone", required=true)
-    private String managedZone;
+    private Output<String> managedZone;
 
     /**
      * @return The Name of the zone.
      * 
      */
-    public String managedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
 
@@ -34,13 +34,13 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The DNS name for the resource.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,20 +49,20 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project for the Google Cloud.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="type", required=true)
-    private String type;
+    private Output<String> type;
 
-    public String type() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -99,8 +99,29 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder managedZone(String managedZone) {
+        public Builder managedZone(Output<String> managedZone) {
             $.managedZone = managedZone;
+            return this;
+        }
+
+        /**
+         * @param managedZone The Name of the zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedZone(String managedZone) {
+            return managedZone(Output.of(managedZone));
+        }
+
+        /**
+         * @param name The DNS name for the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -111,7 +132,17 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project for the Google Cloud.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -122,13 +153,16 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        public Builder type(Output<String> type) {
+            $.type = type;
             return this;
         }
 
         public Builder type(String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetRecordSetArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.datamigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Expand the response
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return Name of the resource group
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-    private String projectName;
+    private Output<String> projectName;
 
     /**
      * @return Name of the project
      * 
      */
-    public String projectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -64,13 +64,13 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return Name of the service
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,13 +79,13 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskName", required=true)
-    private String taskName;
+    private Output<String> taskName;
 
     /**
      * @return Name of the Task
      * 
      */
-    public String taskName() {
+    public Output<String> taskName() {
         return this.taskName;
     }
 
@@ -123,8 +123,29 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expand the response
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(Output<String> groupName) {
+            $.groupName = groupName;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder groupName(String groupName) {
-            $.groupName = groupName;
+            return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectName(Output<String> projectName) {
+            $.projectName = projectName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder projectName(String projectName) {
-            $.projectName = projectName;
+            return projectName(Output.of(projectName));
+        }
+
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param taskName Name of the Task
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskName(Output<String> taskName) {
+            $.taskName = taskName;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder taskName(String taskName) {
-            $.taskName = taskName;
-            return this;
+            return taskName(Output.of(taskName));
         }
 
         public GetTaskArgs build() {

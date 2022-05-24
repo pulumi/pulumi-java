@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.iotsecurity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -32,13 +33,13 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sensorName", required=true)
-    private String sensorName;
+    private Output<String> sensorName;
 
     /**
      * @return Name of the IoT sensor
      * 
      */
-    public String sensorName() {
+    public Output<String> sensorName() {
         return this.sensorName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(String scope) {
+        public Builder scope(Output<String> scope) {
             $.scope = scope;
+            return this;
+        }
+
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param sensorName Name of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensorName(Output<String> sensorName) {
+            $.sensorName = sensorName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sensorName(String sensorName) {
-            $.sensorName = sensorName;
-            return this;
+            return sensorName(Output.of(sensorName));
         }
 
         public GetSensorArgs build() {

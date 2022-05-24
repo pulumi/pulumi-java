@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="certificateAuthorityId", required=true)
-    private String certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
     /**
      * @return The OCID of the certificate authority (CA).
      * 
      */
-    public String certificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder certificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
+        }
+
+        /**
+         * @param certificateAuthorityId The OCID of the certificate authority (CA).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
 
         public GetCertificateAuthorityArgs build() {

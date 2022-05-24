@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDNSSECArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostedZoneId", required=true)
-    private String hostedZoneId;
+    private Output<String> hostedZoneId;
 
     /**
      * @return The unique string (ID) used to identify a hosted zone.
      * 
      */
-    public String hostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDNSSECArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
+        }
+
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
         }
 
         public GetDNSSECArgs build() {

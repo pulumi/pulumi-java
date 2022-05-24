@@ -8,10 +8,10 @@ import com.pulumi.azure.redis.inputs.GetCacheArgs;
 import com.pulumi.azure.redis.inputs.GetEnterpriseDatabaseArgs;
 import com.pulumi.azure.redis.outputs.GetCacheResult;
 import com.pulumi.azure.redis.outputs.GetEnterpriseDatabaseResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class RedisFunctions {
     /**
@@ -44,7 +44,7 @@ public final class RedisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
+    public static Output<GetCacheResult> getCache(GetCacheArgs args) {
         return getCache(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class RedisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:redis/getCache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:redis/getCache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Redis Enterprise Database
@@ -111,7 +111,7 @@ public final class RedisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args) {
+    public static Output<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args) {
         return getEnterpriseDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -145,7 +145,7 @@ public final class RedisFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:redis/getEnterpriseDatabase:getEnterpriseDatabase", TypeShape.of(GetEnterpriseDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnterpriseDatabaseResult> getEnterpriseDatabase(GetEnterpriseDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:redis/getEnterpriseDatabase:getEnterpriseDatabase", TypeShape.of(GetEnterpriseDatabaseResult.class), args, Utilities.withVersion(options));
     }
 }

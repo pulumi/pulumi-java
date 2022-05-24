@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.ManagementDashboard;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.ManagementDashboard.inputs.GetManagementDashboardsExportArgs;
 import com.pulumi.oci.ManagementDashboard.outputs.GetManagementDashboardsExportResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagementDashboardFunctions {
     /**
@@ -22,7 +22,7 @@ public final class ManagementDashboardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementDashboardsExportResult> getManagementDashboardsExport(GetManagementDashboardsExportArgs args) {
+    public static Output<GetManagementDashboardsExportResult> getManagementDashboardsExport(GetManagementDashboardsExportArgs args) {
         return getManagementDashboardsExport(args, InvokeOptions.Empty);
     }
     /**
@@ -35,7 +35,7 @@ public final class ManagementDashboardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementDashboardsExportResult> getManagementDashboardsExport(GetManagementDashboardsExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementDashboard/getManagementDashboardsExport:getManagementDashboardsExport", TypeShape.of(GetManagementDashboardsExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementDashboardsExportResult> getManagementDashboardsExport(GetManagementDashboardsExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementDashboard/getManagementDashboardsExport:getManagementDashboardsExport", TypeShape.of(GetManagementDashboardsExportResult.class), args, Utilities.withVersion(options));
     }
 }

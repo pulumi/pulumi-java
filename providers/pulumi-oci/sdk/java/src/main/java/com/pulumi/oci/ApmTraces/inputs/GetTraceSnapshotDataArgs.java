@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.ApmTraces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM Domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -35,14 +35,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isSummarized")
-    private @Nullable Boolean isSummarized;
+    private Output</* @Nullable */ Boolean> isSummarized;
 
     /**
      * @return If enabled, then only span level details will be sent.
      * 
      */
-    public Optional<Boolean> isSummarized() {
-        return Optional.ofNullable(this.isSummarized);
+    public Output</* @Nullable */ Boolean> isSummarized() {
+        return this.isSummarized;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="snapshotTime")
-    private @Nullable String snapshotTime;
+    private Output</* @Nullable */ String> snapshotTime;
 
     /**
      * @return Epoch time of snapshot.
      * 
      */
-    public Optional<String> snapshotTime() {
-        return Optional.ofNullable(this.snapshotTime);
+    public Output</* @Nullable */ String> snapshotTime() {
+        return this.snapshotTime;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="threadId")
-    private @Nullable String threadId;
+    private Output</* @Nullable */ String> threadId;
 
     /**
      * @return Thread id for which snapshots needs to be retrieved. This is an identifier of a thread, and is a positive long number generated when when a thread is created.
      * 
      */
-    public Optional<String> threadId() {
-        return Optional.ofNullable(this.threadId);
+    public Output</* @Nullable */ String> threadId() {
+        return this.threadId;
     }
 
     /**
@@ -80,13 +80,13 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="traceKey", required=true)
-    private String traceKey;
+    private Output<String> traceKey;
 
     /**
      * @return Unique Application Performance Monitoring trace identifier (traceId).
      * 
      */
-    public String traceKey() {
+    public Output<String> traceKey() {
         return this.traceKey;
     }
 
@@ -124,8 +124,29 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM Domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param isSummarized If enabled, then only span level details will be sent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isSummarized(Output</* @Nullable */ Boolean> isSummarized) {
+            $.isSummarized = isSummarized;
             return this;
         }
 
@@ -136,7 +157,17 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder isSummarized(@Nullable Boolean isSummarized) {
-            $.isSummarized = isSummarized;
+            return isSummarized(Output.of(isSummarized));
+        }
+
+        /**
+         * @param snapshotTime Epoch time of snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snapshotTime(Output</* @Nullable */ String> snapshotTime) {
+            $.snapshotTime = snapshotTime;
             return this;
         }
 
@@ -147,7 +178,17 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder snapshotTime(@Nullable String snapshotTime) {
-            $.snapshotTime = snapshotTime;
+            return snapshotTime(Output.of(snapshotTime));
+        }
+
+        /**
+         * @param threadId Thread id for which snapshots needs to be retrieved. This is an identifier of a thread, and is a positive long number generated when when a thread is created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder threadId(Output</* @Nullable */ String> threadId) {
+            $.threadId = threadId;
             return this;
         }
 
@@ -158,7 +199,17 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder threadId(@Nullable String threadId) {
-            $.threadId = threadId;
+            return threadId(Output.of(threadId));
+        }
+
+        /**
+         * @param traceKey Unique Application Performance Monitoring trace identifier (traceId).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder traceKey(Output<String> traceKey) {
+            $.traceKey = traceKey;
             return this;
         }
 
@@ -169,8 +220,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder traceKey(String traceKey) {
-            $.traceKey = traceKey;
-            return this;
+            return traceKey(Output.of(traceKey));
         }
 
         public GetTraceSnapshotDataArgs build() {

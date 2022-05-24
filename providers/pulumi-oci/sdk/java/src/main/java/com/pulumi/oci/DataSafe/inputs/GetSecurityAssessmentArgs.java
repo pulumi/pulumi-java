@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityAssessmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="securityAssessmentId", required=true)
-    private String securityAssessmentId;
+    private Output<String> securityAssessmentId;
 
     /**
      * @return The OCID of the security assessment.
      * 
      */
-    public String securityAssessmentId() {
+    public Output<String> securityAssessmentId() {
         return this.securityAssessmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSecurityAssessmentArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder securityAssessmentId(String securityAssessmentId) {
+        public Builder securityAssessmentId(Output<String> securityAssessmentId) {
             $.securityAssessmentId = securityAssessmentId;
             return this;
+        }
+
+        /**
+         * @param securityAssessmentId The OCID of the security assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityAssessmentId(String securityAssessmentId) {
+            return securityAssessmentId(Output.of(securityAssessmentId));
         }
 
         public GetSecurityAssessmentArgs build() {

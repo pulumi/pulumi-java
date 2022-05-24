@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementAgent;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -27,7 +28,6 @@ import com.pulumi.oci.ManagementAgent.outputs.GetManagementAgentPluginsResult;
 import com.pulumi.oci.ManagementAgent.outputs.GetManagementAgentResult;
 import com.pulumi.oci.ManagementAgent.outputs.GetManagementAgentsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagementAgentFunctions {
     /**
@@ -38,7 +38,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args) {
+    public static Output<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args) {
         return getManagementAgent(args, InvokeOptions.Empty);
     }
     /**
@@ -49,8 +49,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgent:getManagementAgent", TypeShape.of(GetManagementAgentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgent:getManagementAgent", TypeShape.of(GetManagementAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Management Agent Available Histories in Oracle Cloud Infrastructure Management Agent service.
@@ -60,7 +60,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args) {
+    public static Output<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args) {
         return getManagementAgentAvailableHistories(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentAvailableHistories:getManagementAgentAvailableHistories", TypeShape.of(GetManagementAgentAvailableHistoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentAvailableHistories:getManagementAgentAvailableHistories", TypeShape.of(GetManagementAgentAvailableHistoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Management Agent Count resource in Oracle Cloud Infrastructure Management Agent service.
@@ -83,7 +83,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args) {
+    public static Output<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args) {
         return getManagementAgentCount(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentCount:getManagementAgentCount", TypeShape.of(GetManagementAgentCountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentCount:getManagementAgentCount", TypeShape.of(GetManagementAgentCountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Management Agent Get Auto Upgradable Config resource in Oracle Cloud Infrastructure Management Agent service.
@@ -107,7 +107,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args) {
+    public static Output<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args) {
         return getManagementAgentGetAutoUpgradableConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -119,8 +119,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentGetAutoUpgradableConfig:getManagementAgentGetAutoUpgradableConfig", TypeShape.of(GetManagementAgentGetAutoUpgradableConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentGetAutoUpgradableConfig:getManagementAgentGetAutoUpgradableConfig", TypeShape.of(GetManagementAgentGetAutoUpgradableConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Management Agent Images in Oracle Cloud Infrastructure Management Agent service.
@@ -130,7 +130,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args) {
+    public static Output<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args) {
         return getManagementAgentImages(args, InvokeOptions.Empty);
     }
     /**
@@ -141,8 +141,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentImages:getManagementAgentImages", TypeShape.of(GetManagementAgentImagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentImages:getManagementAgentImages", TypeShape.of(GetManagementAgentImagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Management Agent Install Key resource in Oracle Cloud Infrastructure Management Agent service.
@@ -152,7 +152,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args) {
+    public static Output<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args) {
         return getManagementAgentInstallKey(args, InvokeOptions.Empty);
     }
     /**
@@ -163,8 +163,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentInstallKey:getManagementAgentInstallKey", TypeShape.of(GetManagementAgentInstallKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentInstallKey:getManagementAgentInstallKey", TypeShape.of(GetManagementAgentInstallKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Management Agent Install Keys in Oracle Cloud Infrastructure Management Agent service.
@@ -174,7 +174,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args) {
+    public static Output<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args) {
         return getManagementAgentInstallKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -185,8 +185,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentInstallKeys:getManagementAgentInstallKeys", TypeShape.of(GetManagementAgentInstallKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentInstallKeys:getManagementAgentInstallKeys", TypeShape.of(GetManagementAgentInstallKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Management Agent Plugin Count resource in Oracle Cloud Infrastructure Management Agent service.
@@ -197,7 +197,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args) {
+    public static Output<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args) {
         return getManagementAgentPluginCount(args, InvokeOptions.Empty);
     }
     /**
@@ -209,8 +209,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentPluginCount:getManagementAgentPluginCount", TypeShape.of(GetManagementAgentPluginCountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentPluginCount:getManagementAgentPluginCount", TypeShape.of(GetManagementAgentPluginCountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Management Agent Plugins in Oracle Cloud Infrastructure Management Agent service.
@@ -220,7 +220,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args) {
+    public static Output<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args) {
         return getManagementAgentPlugins(args, InvokeOptions.Empty);
     }
     /**
@@ -231,8 +231,8 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentPlugins:getManagementAgentPlugins", TypeShape.of(GetManagementAgentPluginsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgentPlugins:getManagementAgentPlugins", TypeShape.of(GetManagementAgentPluginsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Management Agents in Oracle Cloud Infrastructure Management Agent service.
@@ -243,7 +243,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args) {
+    public static Output<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args) {
         return getManagementAgents(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +255,7 @@ public final class ManagementAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgents:getManagementAgents", TypeShape.of(GetManagementAgentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ManagementAgent/getManagementAgents:getManagementAgents", TypeShape.of(GetManagementAgentsResult.class), args, Utilities.withVersion(options));
     }
 }

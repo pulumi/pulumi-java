@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The ID that uniquely identifies a billing account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-    private String billingRoleAssignmentName;
+    private Output<String> billingRoleAssignmentName;
 
     /**
      * @return The ID that uniquely identifies a role assignment.
      * 
      */
-    public String billingRoleAssignmentName() {
+    public Output<String> billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="enrollmentAccountName", required=true)
-    private String enrollmentAccountName;
+    private Output<String> enrollmentAccountName;
 
     /**
      * @return The ID that uniquely identifies an enrollment account.
      * 
      */
-    public String enrollmentAccountName() {
+    public Output<String> enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
 
@@ -89,8 +90,29 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingRoleAssignmentName(Output<String> billingRoleAssignmentName) {
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
          * 
          */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            $.billingRoleAssignmentName = billingRoleAssignmentName;
+            return billingRoleAssignmentName(Output.of(billingRoleAssignmentName));
+        }
+
+        /**
+         * @param enrollmentAccountName The ID that uniquely identifies an enrollment account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enrollmentAccountName(Output<String> enrollmentAccountName) {
+            $.enrollmentAccountName = enrollmentAccountName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
          * 
          */
         public Builder enrollmentAccountName(String enrollmentAccountName) {
-            $.enrollmentAccountName = enrollmentAccountName;
-            return this;
+            return enrollmentAccountName(Output.of(enrollmentAccountName));
         }
 
         public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {

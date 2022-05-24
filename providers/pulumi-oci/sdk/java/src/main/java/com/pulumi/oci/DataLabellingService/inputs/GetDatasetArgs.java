@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataLabellingService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
     /**
      * @return Unique Dataset OCID
      * 
      */
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
+        }
+
+        /**
+         * @param datasetId Unique Dataset OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
 
         public GetDatasetArgs build() {

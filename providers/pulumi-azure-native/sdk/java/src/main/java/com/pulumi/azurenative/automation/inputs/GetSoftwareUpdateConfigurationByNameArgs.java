@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="softwareUpdateConfigurationName", required=true)
-    private String softwareUpdateConfigurationName;
+    private Output<String> softwareUpdateConfigurationName;
 
     /**
      * @return The name of the software update configuration to be created.
      * 
      */
-    public String softwareUpdateConfigurationName() {
+    public Output<String> softwareUpdateConfigurationName() {
         return this.softwareUpdateConfigurationName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param softwareUpdateConfigurationName The name of the software update configuration to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder softwareUpdateConfigurationName(Output<String> softwareUpdateConfigurationName) {
+            $.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
          * 
          */
         public Builder softwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
-            $.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
-            return this;
+            return softwareUpdateConfigurationName(Output.of(softwareUpdateConfigurationName));
         }
 
         public GetSoftwareUpdateConfigurationByNameArgs build() {

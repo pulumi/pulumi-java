@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTableArgs Empty = new GetTableArgs();
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="tableId", required=true)
-    private String tableId;
+    private Output<String> tableId;
 
-    public String tableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetTableArgs() {}
@@ -69,24 +69,40 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder tableId(String tableId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetTableArgs build() {

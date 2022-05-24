@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateIpId", required=true)
-    private String privateIpId;
+    private Output<String> privateIpId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private IP or IPv6.
      * 
      */
-    public String privateIpId() {
+    public Output<String> privateIpId() {
         return this.privateIpId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPrivateIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder privateIpId(String privateIpId) {
+        public Builder privateIpId(Output<String> privateIpId) {
             $.privateIpId = privateIpId;
             return this;
+        }
+
+        /**
+         * @param privateIpId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the private IP or IPv6.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateIpId(String privateIpId) {
+            return privateIpId(Output.of(privateIpId));
         }
 
         public GetPrivateIpArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appArn", required=true)
-    private String appArn;
+    private Output<String> appArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the App.
      * 
      */
-    public String appArn() {
+    public Output<String> appArn() {
         return this.appArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder appArn(String appArn) {
+        public Builder appArn(Output<String> appArn) {
             $.appArn = appArn;
             return this;
+        }
+
+        /**
+         * @param appArn Amazon Resource Name (ARN) of the App.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appArn(String appArn) {
+            return appArn(Output.of(appArn));
         }
 
         public GetAppArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.azure.databricks.inputs.GetWorkspaceArgs;
 import com.pulumi.azure.databricks.inputs.GetWorkspacePrivateEndpointConnectionArgs;
 import com.pulumi.azure.databricks.outputs.GetWorkspacePrivateEndpointConnectionResult;
 import com.pulumi.azure.databricks.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatabricksFunctions {
     /**
@@ -43,7 +43,7 @@ public final class DatabricksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class DatabricksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:databricks/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:databricks/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information on an existing Databricks Workspace private endpoint connection state.
@@ -107,7 +107,7 @@ public final class DatabricksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args) {
+    public static Output<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args) {
         return getWorkspacePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +139,7 @@ public final class DatabricksFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:databricks/getWorkspacePrivateEndpointConnection:getWorkspacePrivateEndpointConnection", TypeShape.of(GetWorkspacePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspacePrivateEndpointConnectionResult> getWorkspacePrivateEndpointConnection(GetWorkspacePrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:databricks/getWorkspacePrivateEndpointConnection:getWorkspacePrivateEndpointConnection", TypeShape.of(GetWorkspacePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

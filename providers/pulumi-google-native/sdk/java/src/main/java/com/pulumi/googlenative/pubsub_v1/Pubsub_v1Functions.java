@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.pubsub_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,119 +24,118 @@ import com.pulumi.googlenative.pubsub_v1.outputs.GetSubscriptionIamPolicyResult;
 import com.pulumi.googlenative.pubsub_v1.outputs.GetSubscriptionResult;
 import com.pulumi.googlenative.pubsub_v1.outputs.GetTopicIamPolicyResult;
 import com.pulumi.googlenative.pubsub_v1.outputs.GetTopicResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Pubsub_v1Functions {
     /**
      * Gets a schema.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args) {
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args) {
         return getSchema(args, InvokeOptions.Empty);
     }
     /**
      * Gets a schema.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSchemaIamPolicyResult> getSchemaIamPolicy(GetSchemaIamPolicyArgs args) {
+    public static Output<GetSchemaIamPolicyResult> getSchemaIamPolicy(GetSchemaIamPolicyArgs args) {
         return getSchemaIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSchemaIamPolicyResult> getSchemaIamPolicy(GetSchemaIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSchemaIamPolicy", TypeShape.of(GetSchemaIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaIamPolicyResult> getSchemaIamPolicy(GetSchemaIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSchemaIamPolicy", TypeShape.of(GetSchemaIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the configuration details of a snapshot. Snapshots are used in Seek operations, which allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an existing subscription to the state captured by a snapshot.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
      * Gets the configuration details of a snapshot. Snapshots are used in Seek operations, which allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an existing subscription to the state captured by a snapshot.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args) {
+    public static Output<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args) {
         return getSnapshotIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the configuration details of a subscription.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
      * Gets the configuration details of a subscription.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args) {
+    public static Output<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args) {
         return getSubscriptionIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getSubscriptionIamPolicy", TypeShape.of(GetSubscriptionIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getSubscriptionIamPolicy", TypeShape.of(GetSubscriptionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the configuration of a topic.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
      * Gets the configuration of a topic.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args) {
+    public static Output<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args) {
         return getTopicIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsub/v1:getTopicIamPolicy", TypeShape.of(GetTopicIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsub/v1:getTopicIamPolicy", TypeShape.of(GetTopicIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userArn", required=true)
-    private String userArn;
+    private Output<String> userArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the user.
      * 
      */
-    public String userArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userArn(String userArn) {
+        public Builder userArn(Output<String> userArn) {
             $.userArn = userArn;
             return this;
+        }
+
+        /**
+         * @param userArn The Amazon Resource Name (ARN) for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userArn(String userArn) {
+            return userArn(Output.of(userArn));
         }
 
         public GetUserArgs build() {

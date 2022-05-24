@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetVolumeBackupPolicyAssignmentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetVolumeBackupPolicyAssignmentsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="assetId", required=true)
-    private String assetId;
+    private Output<String> assetId;
 
     /**
      * @return The OCID of an asset (e.g. a volume).
      * 
      */
-    public String assetId() {
+    public Output<String> assetId() {
         return this.assetId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVolumeBackupPolicyAssignmentsFilter> filters;
+    private Output</* @Nullable */ List<GetVolumeBackupPolicyAssignmentsFilter>> filters;
 
-    public Optional<List<GetVolumeBackupPolicyAssignmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVolumeBackupPolicyAssignmentsFilter>> filters() {
+        return this.filters;
     }
 
     private GetVolumeBackupPolicyAssignmentsArgs() {}
@@ -69,14 +69,28 @@ public final class GetVolumeBackupPolicyAssignmentsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder assetId(String assetId) {
+        public Builder assetId(Output<String> assetId) {
             $.assetId = assetId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVolumeBackupPolicyAssignmentsFilter> filters) {
+        /**
+         * @param assetId The OCID of an asset (e.g. a volume).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assetId(String assetId) {
+            return assetId(Output.of(assetId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetVolumeBackupPolicyAssignmentsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetVolumeBackupPolicyAssignmentsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetVolumeBackupPolicyAssignmentsFilter... filters) {

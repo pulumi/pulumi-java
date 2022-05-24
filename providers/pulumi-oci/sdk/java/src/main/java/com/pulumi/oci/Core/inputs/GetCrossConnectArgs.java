@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCrossConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crossConnectId", required=true)
-    private String crossConnectId;
+    private Output<String> crossConnectId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect.
      * 
      */
-    public String crossConnectId() {
+    public Output<String> crossConnectId() {
         return this.crossConnectId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCrossConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder crossConnectId(String crossConnectId) {
+        public Builder crossConnectId(Output<String> crossConnectId) {
             $.crossConnectId = crossConnectId;
             return this;
+        }
+
+        /**
+         * @param crossConnectId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder crossConnectId(String crossConnectId) {
+            return crossConnectId(Output.of(crossConnectId));
         }
 
         public GetCrossConnectArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
     /**
      * @return API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,13 +33,13 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationId", required=true)
-    private String operationId;
+    private Output<String> operationId;
 
     /**
      * @return Operation identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    public String operationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
@@ -47,13 +48,13 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
+            return this;
+        }
+
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        /**
+         * @param operationId Operation identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationId(Output<String> operationId) {
+            $.operationId = operationId;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder operationId(String operationId) {
-            $.operationId = operationId;
+            return operationId(Output.of(operationId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetApiOperationArgs build() {

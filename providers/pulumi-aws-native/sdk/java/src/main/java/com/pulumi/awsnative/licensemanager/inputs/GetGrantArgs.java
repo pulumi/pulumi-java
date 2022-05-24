@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.licensemanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantArn", required=true)
-    private String grantArn;
+    private Output<String> grantArn;
 
     /**
      * @return Arn of the grant.
      * 
      */
-    public String grantArn() {
+    public Output<String> grantArn() {
         return this.grantArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder grantArn(String grantArn) {
+        public Builder grantArn(Output<String> grantArn) {
             $.grantArn = grantArn;
             return this;
+        }
+
+        /**
+         * @param grantArn Arn of the grant.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantArn(String grantArn) {
+            return grantArn(Output.of(grantArn));
         }
 
         public GetGrantArgs build() {

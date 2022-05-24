@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.enums.WebACLScope;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -14,23 +15,23 @@ public final class GetWebACLArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWebACLArgs Empty = new GetWebACLArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="scope", required=true)
-    private WebACLScope scope;
+    private Output<WebACLScope> scope;
 
-    public WebACLScope scope() {
+    public Output<WebACLScope> scope() {
         return this.scope;
     }
 
@@ -60,19 +61,31 @@ public final class GetWebACLArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebACLArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder scope(WebACLScope scope) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder scope(Output<WebACLScope> scope) {
             $.scope = scope;
             return this;
+        }
+
+        public Builder scope(WebACLScope scope) {
+            return scope(Output.of(scope));
         }
 
         public GetWebACLArgs build() {

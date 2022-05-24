@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Batch account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolName", required=true)
-    private String poolName;
+    private Output<String> poolName;
 
     /**
      * @return The pool name. This must be unique within the account.
      * 
      */
-    public String poolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the Batch account.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param poolName The pool name. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder poolName(Output<String> poolName) {
+            $.poolName = poolName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder poolName(String poolName) {
-            $.poolName = poolName;
+            return poolName(Output.of(poolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPoolArgs build() {

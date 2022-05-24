@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Oda;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Oda.inputs.GetOdaInstancesArgs;
 import com.pulumi.oci.Oda.outputs.GetOdaInstanceResult;
 import com.pulumi.oci.Oda.outputs.GetOdaInstancesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OdaFunctions {
     /**
@@ -22,7 +22,7 @@ public final class OdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOdaInstanceResult> getOdaInstance(GetOdaInstanceArgs args) {
+    public static Output<GetOdaInstanceResult> getOdaInstance(GetOdaInstanceArgs args) {
         return getOdaInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class OdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOdaInstanceResult> getOdaInstance(GetOdaInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Oda/getOdaInstance:getOdaInstance", TypeShape.of(GetOdaInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOdaInstanceResult> getOdaInstance(GetOdaInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Oda/getOdaInstance:getOdaInstance", TypeShape.of(GetOdaInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Oda Instances in Oracle Cloud Infrastructure Digital Assistant service.
@@ -49,7 +49,7 @@ public final class OdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOdaInstancesResult> getOdaInstances(GetOdaInstancesArgs args) {
+    public static Output<GetOdaInstancesResult> getOdaInstances(GetOdaInstancesArgs args) {
         return getOdaInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +65,7 @@ public final class OdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOdaInstancesResult> getOdaInstances(GetOdaInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Oda/getOdaInstances:getOdaInstances", TypeShape.of(GetOdaInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOdaInstancesResult> getOdaInstances(GetOdaInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Oda/getOdaInstances:getOdaInstances", TypeShape.of(GetOdaInstancesResult.class), args, Utilities.withVersion(options));
     }
 }

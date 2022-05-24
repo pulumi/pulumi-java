@@ -6,10 +6,10 @@ package com.pulumi.azure.dashboard;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.dashboard.inputs.Azurerm_portal_dashboardArgs;
 import com.pulumi.azure.dashboard.outputs.Azurerm_portal_dashboardResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DashboardFunctions {
     /**
@@ -45,7 +45,7 @@ public final class DashboardFunctions {
      * 
      */
     @Deprecated /* azure.dashboard.azurerm_portal_dashboard has been deprecated in favor of azure.portal.getDashboard */
-    public static CompletableFuture<Azurerm_portal_dashboardResult> azurerm_portal_dashboard(Azurerm_portal_dashboardArgs args) {
+    public static Output<Azurerm_portal_dashboardResult> azurerm_portal_dashboard(Azurerm_portal_dashboardArgs args) {
         return azurerm_portal_dashboard(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class DashboardFunctions {
      * 
      */
     @Deprecated /* azure.dashboard.azurerm_portal_dashboard has been deprecated in favor of azure.portal.getDashboard */
-    public static CompletableFuture<Azurerm_portal_dashboardResult> azurerm_portal_dashboard(Azurerm_portal_dashboardArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:dashboard/azurerm_portal_dashboard:azurerm_portal_dashboard", TypeShape.of(Azurerm_portal_dashboardResult.class), args, Utilities.withVersion(options));
+    public static Output<Azurerm_portal_dashboardResult> azurerm_portal_dashboard(Azurerm_portal_dashboardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:dashboard/azurerm_portal_dashboard:azurerm_portal_dashboard", TypeShape.of(Azurerm_portal_dashboardResult.class), args, Utilities.withVersion(options));
     }
 }

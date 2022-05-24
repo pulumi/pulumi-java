@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.AiVision;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.AiVision.outputs.GetModelsResult;
 import com.pulumi.oci.AiVision.outputs.GetProjectResult;
 import com.pulumi.oci.AiVision.outputs.GetProjectsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class AiVisionFunctions {
     /**
@@ -26,7 +26,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
+    public static Output<GetModelResult> getModel(GetModelArgs args) {
         return getModel(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:AiVision/getModel:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:AiVision/getModel:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Models in Oracle Cloud Infrastructure Ai Vision service.
@@ -48,7 +48,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetModelsResult> getModels() {
+    public static Output<GetModelsResult> getModels() {
         return getModels(GetModelsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -59,7 +59,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetModelsResult> getModels(GetModelsArgs args) {
+    public static Output<GetModelsResult> getModels(GetModelsArgs args) {
         return getModels(args, InvokeOptions.Empty);
     }
     /**
@@ -70,8 +70,8 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetModelsResult> getModels(GetModelsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:AiVision/getModels:getModels", TypeShape.of(GetModelsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelsResult> getModels(GetModelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:AiVision/getModels:getModels", TypeShape.of(GetModelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Ai Vision service.
@@ -81,7 +81,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
@@ -92,8 +92,8 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:AiVision/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:AiVision/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Projects in Oracle Cloud Infrastructure Ai Vision service.
@@ -103,7 +103,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectsResult> getProjects() {
+    public static Output<GetProjectsResult> getProjects() {
         return getProjects(GetProjectsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -114,7 +114,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args) {
+    public static Output<GetProjectsResult> getProjects(GetProjectsArgs args) {
         return getProjects(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +125,7 @@ public final class AiVisionFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectsResult> getProjects(GetProjectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:AiVision/getProjects:getProjects", TypeShape.of(GetProjectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectsResult> getProjects(GetProjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:AiVision/getProjects:getProjects", TypeShape.of(GetProjectsResult.class), args, Utilities.withVersion(options));
     }
 }

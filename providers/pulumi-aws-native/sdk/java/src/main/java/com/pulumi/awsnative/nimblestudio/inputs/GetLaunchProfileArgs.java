@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetLaunchProfileArgs Empty = new GetLaunchProfileArgs();
 
     @Import(name="launchProfileId", required=true)
-    private String launchProfileId;
+    private Output<String> launchProfileId;
 
-    public String launchProfileId() {
+    public Output<String> launchProfileId() {
         return this.launchProfileId;
     }
 
@@ -24,13 +25,13 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="studioId", required=true)
-    private String studioId;
+    private Output<String> studioId;
 
     /**
      * @return &lt;p&gt;The studio ID. &lt;/p&gt;
      * 
      */
-    public String studioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -59,8 +60,23 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetLaunchProfileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder launchProfileId(String launchProfileId) {
+        public Builder launchProfileId(Output<String> launchProfileId) {
             $.launchProfileId = launchProfileId;
+            return this;
+        }
+
+        public Builder launchProfileId(String launchProfileId) {
+            return launchProfileId(Output.of(launchProfileId));
+        }
+
+        /**
+         * @param studioId &lt;p&gt;The studio ID. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studioId(Output<String> studioId) {
+            $.studioId = studioId;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetLaunchProfileArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder studioId(String studioId) {
-            $.studioId = studioId;
-            return this;
+            return studioId(Output.of(studioId));
         }
 
         public GetLaunchProfileArgs build() {

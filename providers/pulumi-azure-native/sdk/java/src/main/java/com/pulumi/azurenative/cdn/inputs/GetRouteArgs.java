@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return Name of the endpoint under the profile which is unique globally.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeName", required=true)
-    private String routeName;
+    private Output<String> routeName;
 
     /**
      * @return Name of the routing rule.
      * 
      */
-    public String routeName() {
+    public Output<String> routeName() {
         return this.routeName;
     }
 
@@ -105,8 +106,29 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeName Name of the routing rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeName(Output<String> routeName) {
+            $.routeName = routeName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder routeName(String routeName) {
-            $.routeName = routeName;
-            return this;
+            return routeName(Output.of(routeName));
         }
 
         public GetRouteArgs build() {

@@ -3,11 +3,11 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Image in which the Shared Image exists.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -35,13 +35,13 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="imageName", required=true)
-    private String imageName;
+    private Output<String> imageName;
 
     /**
      * @return The name of the Shared Image in which this Version exists.
      * 
      */
-    public String imageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -50,13 +50,13 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group in which the Shared Image Gallery exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,14 +65,14 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tagsFilter")
-    private @Nullable Map<String,String> tagsFilter;
+    private Output</* @Nullable */ Map<String,String>> tagsFilter;
 
     /**
      * @return A mapping of tags to filter the list of images against.
      * 
      */
-    public Optional<Map<String,String>> tagsFilter() {
-        return Optional.ofNullable(this.tagsFilter);
+    public Output</* @Nullable */ Map<String,String>> tagsFilter() {
+        return this.tagsFilter;
     }
 
     private GetSharedImageVersionsArgs() {}
@@ -108,8 +108,29 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder galleryName(String galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
+            return this;
+        }
+
+        /**
+         * @param galleryName The name of the Shared Image in which the Shared Image exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(String galleryName) {
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param imageName The name of the Shared Image in which this Version exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageName(Output<String> imageName) {
+            $.imageName = imageName;
             return this;
         }
 
@@ -120,7 +141,17 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder imageName(String imageName) {
-            $.imageName = imageName;
+            return imageName(Output.of(imageName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group in which the Shared Image Gallery exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -131,7 +162,17 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tagsFilter A mapping of tags to filter the list of images against.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagsFilter(Output</* @Nullable */ Map<String,String>> tagsFilter) {
+            $.tagsFilter = tagsFilter;
             return this;
         }
 
@@ -142,8 +183,7 @@ public final class GetSharedImageVersionsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder tagsFilter(@Nullable Map<String,String> tagsFilter) {
-            $.tagsFilter = tagsFilter;
-            return this;
+            return tagsFilter(Output.of(tagsFilter));
         }
 
         public GetSharedImageVersionsArgs build() {

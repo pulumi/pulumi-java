@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatasetDataLakeGen2Args extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Data Share Data Lake Gen2 Dataset.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatasetDataLakeGen2Args extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="shareId", required=true)
-    private String shareId;
+    private Output<String> shareId;
 
     /**
      * @return The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created.
      * 
      */
-    public String shareId() {
+    public Output<String> shareId() {
         return this.shareId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDatasetDataLakeGen2Args extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this Data Share Data Lake Gen2 Dataset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param shareId The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareId(Output<String> shareId) {
+            $.shareId = shareId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDatasetDataLakeGen2Args extends com.pulumi.resources.Invok
          * 
          */
         public Builder shareId(String shareId) {
-            $.shareId = shareId;
-            return this;
+            return shareId(Output.of(shareId));
         }
 
         public GetDatasetDataLakeGen2Args build() {

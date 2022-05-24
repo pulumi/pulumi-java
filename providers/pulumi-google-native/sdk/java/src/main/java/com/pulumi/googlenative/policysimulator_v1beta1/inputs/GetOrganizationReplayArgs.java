@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.policysimulator_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetOrganizationReplayArgs extends com.pulumi.resources.Invoke
     public static final GetOrganizationReplayArgs Empty = new GetOrganizationReplayArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="replayId", required=true)
-    private String replayId;
+    private Output<String> replayId;
 
-    public String replayId() {
+    public Output<String> replayId() {
         return this.replayId;
     }
 
@@ -59,19 +60,31 @@ public final class GetOrganizationReplayArgs extends com.pulumi.resources.Invoke
             $ = new GetOrganizationReplayArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder replayId(String replayId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder replayId(Output<String> replayId) {
             $.replayId = replayId;
             return this;
+        }
+
+        public Builder replayId(String replayId) {
+            return replayId(Output.of(replayId));
         }
 
         public GetOrganizationReplayArgs build() {

@@ -26,10 +26,10 @@ import com.pulumi.azurenative.videoanalyzer.outputs.GetVideoResult;
 import com.pulumi.azurenative.videoanalyzer.outputs.ListEdgeModuleProvisioningTokenResult;
 import com.pulumi.azurenative.videoanalyzer.outputs.ListVideoContentTokenResult;
 import com.pulumi.azurenative.videoanalyzer.outputs.ListVideoStreamingTokenResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class VideoanalyzerFunctions {
     /**
@@ -37,7 +37,7 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The representation of an edge module.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args) {
+    public static Output<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args) {
         return getEdgeModule(args, InvokeOptions.Empty);
     }
     /**
@@ -61,15 +61,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getEdgeModule", TypeShape.of(GetEdgeModuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getEdgeModule", TypeShape.of(GetEdgeModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Live pipeline represents a unique instance of a live topology, used for real-time ingestion, archiving and publishing of content for a unique RTSP camera.
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args) {
+    public static Output<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args) {
         return getLivePipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -77,15 +77,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getLivePipeline", TypeShape.of(GetLivePipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getLivePipeline", TypeShape.of(GetLivePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args) {
+    public static Output<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args) {
         return getPipelineJob(args, InvokeOptions.Empty);
     }
     /**
@@ -93,8 +93,8 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineJob", TypeShape.of(GetPipelineJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getPipelineJob", TypeShape.of(GetPipelineJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras&#39; RTSP endpoints and credentials. Overall a topology is composed of the following:
@@ -106,7 +106,7 @@ public final class VideoanalyzerFunctions {
      *     API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args) {
+    public static Output<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args) {
         return getPipelineTopology(args, InvokeOptions.Empty);
     }
     /**
@@ -119,15 +119,15 @@ public final class VideoanalyzerFunctions {
      *     API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineTopology", TypeShape.of(GetPipelineTopologyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getPipelineTopology", TypeShape.of(GetPipelineTopologyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -135,15 +135,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The representation of a single video in a Video Analyzer account.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoResult> getVideo(GetVideoArgs args) {
+    public static Output<GetVideoResult> getVideo(GetVideoArgs args) {
         return getVideo(args, InvokeOptions.Empty);
     }
     /**
@@ -151,15 +151,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoResult> getVideo(GetVideoArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideo", TypeShape.of(GetVideoResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVideoResult> getVideo(GetVideoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getVideo", TypeShape.of(GetVideoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Video Analyzer account.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args) {
+    public static Output<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args) {
         return getVideoAnalyzer(args, InvokeOptions.Empty);
     }
     /**
@@ -167,15 +167,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideoAnalyzer", TypeShape.of(GetVideoAnalyzerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:getVideoAnalyzer", TypeShape.of(GetVideoAnalyzerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provisioning token properties. A provisioning token allows for a single instance of Azure Video analyzer IoT edge module to be initialized and authorized to the cloud account. The provisioning token itself is short lived and it is only used for the initial handshake between IoT edge module and the cloud. After the initial handshake, the IoT edge module will agree on a set of authentication keys which will be auto-rotated as long as the module is able to periodically connect to the cloud. A new provisioning token can be generated for the same IoT edge module in case the module state lost or reset.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args) {
+    public static Output<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args) {
         return listEdgeModuleProvisioningToken(args, InvokeOptions.Empty);
     }
     /**
@@ -183,15 +183,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listEdgeModuleProvisioningToken", TypeShape.of(ListEdgeModuleProvisioningTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:listEdgeModuleProvisioningToken", TypeShape.of(ListEdgeModuleProvisioningTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * &#34;Video content token grants access to the video content URLs.&#34;
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args) {
+    public static Output<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args) {
         return listVideoContentToken(args, InvokeOptions.Empty);
     }
     /**
@@ -199,15 +199,15 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoContentToken", TypeShape.of(ListVideoContentTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:listVideoContentToken", TypeShape.of(ListVideoContentTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args) {
+    public static Output<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args) {
         return listVideoStreamingToken(args, InvokeOptions.Empty);
     }
     /**
@@ -215,7 +215,7 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoStreamingToken", TypeShape.of(ListVideoStreamingTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:videoanalyzer:listVideoStreamingToken", TypeShape.of(ListVideoStreamingTokenResult.class), args, Utilities.withVersion(options));
     }
 }

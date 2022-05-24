@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accessKeyName", required=true)
-    private String accessKeyName;
+    private Output<String> accessKeyName;
 
     /**
      * @return The workflow access key name.
      * 
      */
-    public String accessKeyName() {
+    public Output<String> accessKeyName() {
         return this.accessKeyName;
     }
 
@@ -32,13 +33,13 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workflowName", required=true)
-    private String workflowName;
+    private Output<String> workflowName;
 
     /**
      * @return The workflow name.
      * 
      */
-    public String workflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -89,8 +90,29 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder accessKeyName(String accessKeyName) {
+        public Builder accessKeyName(Output<String> accessKeyName) {
             $.accessKeyName = accessKeyName;
+            return this;
+        }
+
+        /**
+         * @param accessKeyName The workflow access key name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessKeyName(String accessKeyName) {
+            return accessKeyName(Output.of(accessKeyName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowName(Output<String> workflowName) {
+            $.workflowName = workflowName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends com.pulumi.resour
          * 
          */
         public Builder workflowName(String workflowName) {
-            $.workflowName = workflowName;
-            return this;
+            return workflowName(Output.of(workflowName));
         }
 
         public ListWorkflowAccessKeySecretKeysArgs build() {

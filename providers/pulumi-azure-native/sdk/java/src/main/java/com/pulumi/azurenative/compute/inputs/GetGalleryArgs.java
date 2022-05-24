@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Image Gallery.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -34,13 +34,13 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,14 +49,14 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="select")
-    private @Nullable String select;
+    private Output</* @Nullable */ String> select;
 
     /**
      * @return The select expression to apply on the operation.
      * 
      */
-    public Optional<String> select() {
-        return Optional.ofNullable(this.select);
+    public Output</* @Nullable */ String> select() {
+        return this.select;
     }
 
     private GetGalleryArgs() {}
@@ -91,8 +91,29 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder galleryName(String galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
+            return this;
+        }
+
+        /**
+         * @param galleryName The name of the Shared Image Gallery.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(String galleryName) {
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param select The select expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder select(Output</* @Nullable */ String> select) {
+            $.select = select;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder select(@Nullable String select) {
-            $.select = select;
-            return this;
+            return select(Output.of(select));
         }
 
         public GetGalleryArgs build() {

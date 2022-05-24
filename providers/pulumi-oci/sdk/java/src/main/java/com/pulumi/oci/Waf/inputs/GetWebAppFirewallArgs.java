@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Waf.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppFirewallArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="webAppFirewallId", required=true)
-    private String webAppFirewallId;
+    private Output<String> webAppFirewallId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WebAppFirewall.
      * 
      */
-    public String webAppFirewallId() {
+    public Output<String> webAppFirewallId() {
         return this.webAppFirewallId;
     }
 
@@ -57,9 +58,19 @@ public final class GetWebAppFirewallArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder webAppFirewallId(String webAppFirewallId) {
+        public Builder webAppFirewallId(Output<String> webAppFirewallId) {
             $.webAppFirewallId = webAppFirewallId;
             return this;
+        }
+
+        /**
+         * @param webAppFirewallId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WebAppFirewall.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder webAppFirewallId(String webAppFirewallId) {
+            return webAppFirewallId(Output.of(webAppFirewallId));
         }
 
         public GetWebAppFirewallArgs build() {

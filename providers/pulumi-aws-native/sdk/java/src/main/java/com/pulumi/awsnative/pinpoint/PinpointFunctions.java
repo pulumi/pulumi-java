@@ -6,24 +6,24 @@ package com.pulumi.awsnative.pinpoint;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.pinpoint.inputs.GetInAppTemplateArgs;
 import com.pulumi.awsnative.pinpoint.outputs.GetInAppTemplateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PinpointFunctions {
     /**
      * Resource Type definition for AWS::Pinpoint::InAppTemplate
      * 
      */
-    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args) {
+    public static Output<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args) {
         return getInAppTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Pinpoint::InAppTemplate
      * 
      */
-    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

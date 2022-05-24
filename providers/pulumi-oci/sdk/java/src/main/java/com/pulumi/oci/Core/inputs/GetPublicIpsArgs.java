@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetPublicIpsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPublicIpsFilter> filters;
+    private Output</* @Nullable */ List<GetPublicIpsFilter>> filters;
 
-    public Optional<List<GetPublicIpsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetPublicIpsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lifetime")
-    private @Nullable String lifetime;
+    private Output</* @Nullable */ String> lifetime;
 
     /**
      * @return A filter to return only public IPs that match given lifetime.
      * 
      */
-    public Optional<String> lifetime() {
-        return Optional.ofNullable(this.lifetime);
+    public Output</* @Nullable */ String> lifetime() {
+        return this.lifetime;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpPoolId")
-    private @Nullable String publicIpPoolId;
+    private Output</* @Nullable */ String> publicIpPoolId;
 
     /**
      * @return A filter to return only resources that belong to the given public IP pool.
      * 
      */
-    public Optional<String> publicIpPoolId() {
-        return Optional.ofNullable(this.publicIpPoolId);
+    public Output</* @Nullable */ String> publicIpPoolId() {
+        return this.publicIpPoolId;
     }
 
     /**
@@ -90,7 +90,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Whether the public IP is regional or specific to a particular availability domain.
@@ -98,7 +98,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the entity it&#39;s assigned to, which is specified by the `availabilityDomain` property of the public IP object. Ephemeral public IPs that are assigned to private IPs have `scope` = `AVAILABILITY_DOMAIN`.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -137,8 +137,29 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -149,13 +170,16 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetPublicIpsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetPublicIpsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetPublicIpsFilter... filters) {
@@ -168,8 +192,29 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lifetime(@Nullable String lifetime) {
+        public Builder lifetime(Output</* @Nullable */ String> lifetime) {
             $.lifetime = lifetime;
+            return this;
+        }
+
+        /**
+         * @param lifetime A filter to return only public IPs that match given lifetime.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lifetime(@Nullable String lifetime) {
+            return lifetime(Output.of(lifetime));
+        }
+
+        /**
+         * @param publicIpPoolId A filter to return only resources that belong to the given public IP pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicIpPoolId(Output</* @Nullable */ String> publicIpPoolId) {
+            $.publicIpPoolId = publicIpPoolId;
             return this;
         }
 
@@ -180,7 +225,19 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder publicIpPoolId(@Nullable String publicIpPoolId) {
-            $.publicIpPoolId = publicIpPoolId;
+            return publicIpPoolId(Output.of(publicIpPoolId));
+        }
+
+        /**
+         * @param scope Whether the public IP is regional or specific to a particular availability domain.
+         * * `REGION`: The public IP exists within a region and is assigned to a regional entity (such as a [NatGateway](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/latest/NatGateway/)), or can be assigned to a private IP in any availability domain in the region. Reserved public IPs have `scope` = `REGION`, as do ephemeral public IPs assigned to a regional entity.
+         * * `AVAILABILITY_DOMAIN`: The public IP exists within the availability domain of the entity it&#39;s assigned to, which is specified by the `availabilityDomain` property of the public IP object. Ephemeral public IPs that are assigned to private IPs have `scope` = `AVAILABILITY_DOMAIN`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -193,8 +250,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetPublicIpsArgs build() {

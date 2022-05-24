@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="galleryApplicationName", required=true)
-    private String galleryApplicationName;
+    private Output<String> galleryApplicationName;
 
     /**
      * @return The name of the gallery Application Definition to be retrieved.
      * 
      */
-    public String galleryApplicationName() {
+    public Output<String> galleryApplicationName() {
         return this.galleryApplicationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Application Gallery from which the Application Definitions are to be retrieved.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder galleryApplicationName(String galleryApplicationName) {
+        public Builder galleryApplicationName(Output<String> galleryApplicationName) {
             $.galleryApplicationName = galleryApplicationName;
+            return this;
+        }
+
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryApplicationName(String galleryApplicationName) {
+            return galleryApplicationName(Output.of(galleryApplicationName));
+        }
+
+        /**
+         * @param galleryName The name of the Shared Application Gallery from which the Application Definitions are to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(Output<String> galleryName) {
+            $.galleryName = galleryName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder galleryName(String galleryName) {
-            $.galleryName = galleryName;
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetGalleryApplicationArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGalleryApplicationArgs build() {

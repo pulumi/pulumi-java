@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousContainerDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="autonomousContainerDatabaseId", required=true)
-    private String autonomousContainerDatabaseId;
+    private Output<String> autonomousContainerDatabaseId;
 
     /**
      * @return The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousContainerDatabaseId() {
+    public Output<String> autonomousContainerDatabaseId() {
         return this.autonomousContainerDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutonomousContainerDatabaseArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder autonomousContainerDatabaseId(String autonomousContainerDatabaseId) {
+        public Builder autonomousContainerDatabaseId(Output<String> autonomousContainerDatabaseId) {
             $.autonomousContainerDatabaseId = autonomousContainerDatabaseId;
             return this;
+        }
+
+        /**
+         * @param autonomousContainerDatabaseId The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousContainerDatabaseId(String autonomousContainerDatabaseId) {
+            return autonomousContainerDatabaseId(Output.of(autonomousContainerDatabaseId));
         }
 
         public GetAutonomousContainerDatabaseArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOperationsInsightsPrivateEndpointArgs extends com.pulumi.r
      * 
      */
     @Import(name="operationsInsightsPrivateEndpointId", required=true)
-    private String operationsInsightsPrivateEndpointId;
+    private Output<String> operationsInsightsPrivateEndpointId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Operation Insights private endpoint.
      * 
      */
-    public String operationsInsightsPrivateEndpointId() {
+    public Output<String> operationsInsightsPrivateEndpointId() {
         return this.operationsInsightsPrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOperationsInsightsPrivateEndpointArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder operationsInsightsPrivateEndpointId(String operationsInsightsPrivateEndpointId) {
+        public Builder operationsInsightsPrivateEndpointId(Output<String> operationsInsightsPrivateEndpointId) {
             $.operationsInsightsPrivateEndpointId = operationsInsightsPrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param operationsInsightsPrivateEndpointId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Operation Insights private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationsInsightsPrivateEndpointId(String operationsInsightsPrivateEndpointId) {
+            return operationsInsightsPrivateEndpointId(Output.of(operationsInsightsPrivateEndpointId));
         }
 
         public GetOperationsInsightsPrivateEndpointArgs build() {

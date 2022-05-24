@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelRoutesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="advertiser")
-    private @Nullable String advertiser;
+    private Output</* @Nullable */ String> advertiser;
 
     /**
      * @return Specifies the advertiser of the routes. If set to `ORACLE`, this returns only the routes advertised by Oracle. When set to `CUSTOMER`, this returns only the routes advertised by the CPE.
      * 
      */
-    public Optional<String> advertiser() {
-        return Optional.ofNullable(this.advertiser);
+    public Output</* @Nullable */ String> advertiser() {
+        return this.advertiser;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetIpsecConnectionTunnelRoutesFilter> filters;
+    private Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters;
 
-    public Optional<List<GetIpsecConnectionTunnelRoutesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipsecId", required=true)
-    private String ipsecId;
+    private Output<String> ipsecId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
      * 
      */
-    public String ipsecId() {
+    public Output<String> ipsecId() {
         return this.ipsecId;
     }
 
@@ -58,13 +58,13 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tunnelId", required=true)
-    private String tunnelId;
+    private Output<String> tunnelId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tunnel.
      * 
      */
-    public String tunnelId() {
+    public Output<String> tunnelId() {
         return this.tunnelId;
     }
 
@@ -101,14 +101,28 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder advertiser(@Nullable String advertiser) {
+        public Builder advertiser(Output</* @Nullable */ String> advertiser) {
             $.advertiser = advertiser;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIpsecConnectionTunnelRoutesFilter> filters) {
+        /**
+         * @param advertiser Specifies the advertiser of the routes. If set to `ORACLE`, this returns only the routes advertised by Oracle. When set to `CUSTOMER`, this returns only the routes advertised by the CPE.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder advertiser(@Nullable String advertiser) {
+            return advertiser(Output.of(advertiser));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIpsecConnectionTunnelRoutesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIpsecConnectionTunnelRoutesFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder ipsecId(String ipsecId) {
+        public Builder ipsecId(Output<String> ipsecId) {
             $.ipsecId = ipsecId;
+            return this;
+        }
+
+        /**
+         * @param ipsecId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecId(String ipsecId) {
+            return ipsecId(Output.of(ipsecId));
+        }
+
+        /**
+         * @param tunnelId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tunnel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelId(Output<String> tunnelId) {
+            $.tunnelId = tunnelId;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
          * 
          */
         public Builder tunnelId(String tunnelId) {
-            $.tunnelId = tunnelId;
-            return this;
+            return tunnelId(Output.of(tunnelId));
         }
 
         public GetIpsecConnectionTunnelRoutesArgs build() {

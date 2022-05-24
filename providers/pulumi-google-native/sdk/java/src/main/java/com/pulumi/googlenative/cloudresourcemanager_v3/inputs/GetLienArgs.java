@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudresourcemanager_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetLienArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLienArgs Empty = new GetLienArgs();
 
     @Import(name="lienId", required=true)
-    private String lienId;
+    private Output<String> lienId;
 
-    public String lienId() {
+    public Output<String> lienId() {
         return this.lienId;
     }
 
@@ -43,9 +44,13 @@ public final class GetLienArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLienArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder lienId(String lienId) {
+        public Builder lienId(Output<String> lienId) {
             $.lienId = lienId;
             return this;
+        }
+
+        public Builder lienId(String lienId) {
+            return lienId(Output.of(lienId));
         }
 
         public GetLienArgs build() {

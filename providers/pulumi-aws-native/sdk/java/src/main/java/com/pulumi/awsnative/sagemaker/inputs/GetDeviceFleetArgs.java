@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeviceFleetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceFleetName", required=true)
-    private String deviceFleetName;
+    private Output<String> deviceFleetName;
 
     /**
      * @return The name of the edge device fleet
      * 
      */
-    public String deviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeviceFleetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deviceFleetName(String deviceFleetName) {
+        public Builder deviceFleetName(Output<String> deviceFleetName) {
             $.deviceFleetName = deviceFleetName;
             return this;
+        }
+
+        /**
+         * @param deviceFleetName The name of the edge device fleet
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceFleetName(String deviceFleetName) {
+            return deviceFleetName(Output.of(deviceFleetName));
         }
 
         public GetDeviceFleetArgs build() {

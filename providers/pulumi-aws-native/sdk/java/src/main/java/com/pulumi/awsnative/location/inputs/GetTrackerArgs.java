@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetTrackerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTrackerArgs Empty = new GetTrackerArgs();
 
     @Import(name="trackerName", required=true)
-    private String trackerName;
+    private Output<String> trackerName;
 
-    public String trackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
 
@@ -43,9 +44,13 @@ public final class GetTrackerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTrackerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder trackerName(String trackerName) {
+        public Builder trackerName(Output<String> trackerName) {
             $.trackerName = trackerName;
             return this;
+        }
+
+        public Builder trackerName(String trackerName) {
+            return trackerName(Output.of(trackerName));
         }
 
         public GetTrackerArgs build() {

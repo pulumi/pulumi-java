@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataFlow;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,7 +24,6 @@ import com.pulumi.oci.DataFlow.outputs.GetPrivateEndpointsResult;
 import com.pulumi.oci.DataFlow.outputs.GetRunLogResult;
 import com.pulumi.oci.DataFlow.outputs.GetRunLogsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataFlowFunctions {
     /**
@@ -34,7 +34,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -45,8 +45,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Applications in Oracle Cloud Infrastructure Data Flow service.
@@ -56,7 +56,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApplicationsResult> getApplications(GetApplicationsArgs args) {
+    public static Output<GetApplicationsResult> getApplications(GetApplicationsArgs args) {
         return getApplications(args, InvokeOptions.Empty);
     }
     /**
@@ -67,8 +67,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApplicationsResult> getApplications(GetApplicationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getApplications:getApplications", TypeShape.of(GetApplicationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationsResult> getApplications(GetApplicationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getApplications:getApplications", TypeShape.of(GetApplicationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Invoke Run resource in Oracle Cloud Infrastructure Data Flow service.
@@ -78,7 +78,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvokeRunResult> getInvokeRun(GetInvokeRunArgs args) {
+    public static Output<GetInvokeRunResult> getInvokeRun(GetInvokeRunArgs args) {
         return getInvokeRun(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvokeRunResult> getInvokeRun(GetInvokeRunArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getInvokeRun:getInvokeRun", TypeShape.of(GetInvokeRunResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvokeRunResult> getInvokeRun(GetInvokeRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getInvokeRun:getInvokeRun", TypeShape.of(GetInvokeRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Invoke Runs in Oracle Cloud Infrastructure Data Flow service.
@@ -100,7 +100,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvokeRunsResult> getInvokeRuns(GetInvokeRunsArgs args) {
+    public static Output<GetInvokeRunsResult> getInvokeRuns(GetInvokeRunsArgs args) {
         return getInvokeRuns(args, InvokeOptions.Empty);
     }
     /**
@@ -111,8 +111,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvokeRunsResult> getInvokeRuns(GetInvokeRunsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getInvokeRuns:getInvokeRuns", TypeShape.of(GetInvokeRunsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvokeRunsResult> getInvokeRuns(GetInvokeRunsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getInvokeRuns:getInvokeRuns", TypeShape.of(GetInvokeRunsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Private Endpoint resource in Oracle Cloud Infrastructure Data Flow service.
@@ -122,7 +122,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args) {
+    public static Output<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args) {
         return getPrivateEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getPrivateEndpoint:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getPrivateEndpoint:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Private Endpoints in Oracle Cloud Infrastructure Data Flow service.
@@ -144,7 +144,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointsResult> getPrivateEndpoints(GetPrivateEndpointsArgs args) {
+    public static Output<GetPrivateEndpointsResult> getPrivateEndpoints(GetPrivateEndpointsArgs args) {
         return getPrivateEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -155,8 +155,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointsResult> getPrivateEndpoints(GetPrivateEndpointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getPrivateEndpoints:getPrivateEndpoints", TypeShape.of(GetPrivateEndpointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointsResult> getPrivateEndpoints(GetPrivateEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getPrivateEndpoints:getPrivateEndpoints", TypeShape.of(GetPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Run Log resource in Oracle Cloud Infrastructure Data Flow service.
@@ -166,7 +166,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRunLogResult> getRunLog(GetRunLogArgs args) {
+    public static Output<GetRunLogResult> getRunLog(GetRunLogArgs args) {
         return getRunLog(args, InvokeOptions.Empty);
     }
     /**
@@ -177,8 +177,8 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRunLogResult> getRunLog(GetRunLogArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getRunLog:getRunLog", TypeShape.of(GetRunLogResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRunLogResult> getRunLog(GetRunLogArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getRunLog:getRunLog", TypeShape.of(GetRunLogResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Run Logs in Oracle Cloud Infrastructure Data Flow service.
@@ -188,7 +188,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRunLogsResult> getRunLogs(GetRunLogsArgs args) {
+    public static Output<GetRunLogsResult> getRunLogs(GetRunLogsArgs args) {
         return getRunLogs(args, InvokeOptions.Empty);
     }
     /**
@@ -199,7 +199,7 @@ public final class DataFlowFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRunLogsResult> getRunLogs(GetRunLogsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataFlow/getRunLogs:getRunLogs", TypeShape.of(GetRunLogsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRunLogsResult> getRunLogs(GetRunLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataFlow/getRunLogs:getRunLogs", TypeShape.of(GetRunLogsResult.class), args, Utilities.withVersion(options));
     }
 }

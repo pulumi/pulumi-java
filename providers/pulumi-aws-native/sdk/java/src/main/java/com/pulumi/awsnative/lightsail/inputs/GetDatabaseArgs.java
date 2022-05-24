@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relationalDatabaseName", required=true)
-    private String relationalDatabaseName;
+    private Output<String> relationalDatabaseName;
 
     /**
      * @return The name to use for your new Lightsail database resource.
      * 
      */
-    public String relationalDatabaseName() {
+    public Output<String> relationalDatabaseName() {
         return this.relationalDatabaseName;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder relationalDatabaseName(String relationalDatabaseName) {
+        public Builder relationalDatabaseName(Output<String> relationalDatabaseName) {
             $.relationalDatabaseName = relationalDatabaseName;
             return this;
+        }
+
+        /**
+         * @param relationalDatabaseName The name to use for your new Lightsail database resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relationalDatabaseName(String relationalDatabaseName) {
+            return relationalDatabaseName(Output.of(relationalDatabaseName));
         }
 
         public GetDatabaseArgs build() {

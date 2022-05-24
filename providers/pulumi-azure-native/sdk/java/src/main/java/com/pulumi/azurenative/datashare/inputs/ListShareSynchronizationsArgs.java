@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,14 +34,14 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private Output</* @Nullable */ String> filter;
 
     /**
      * @return Filters the results using OData syntax.
      * 
      */
-    public Optional<String> filter() {
-        return Optional.ofNullable(this.filter);
+    public Output</* @Nullable */ String> filter() {
+        return this.filter;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="orderby")
-    private @Nullable String orderby;
+    private Output</* @Nullable */ String> orderby;
 
     /**
      * @return Sorts the results using OData syntax.
      * 
      */
-    public Optional<String> orderby() {
-        return Optional.ofNullable(this.orderby);
+    public Output</* @Nullable */ String> orderby() {
+        return this.orderby;
     }
 
     /**
@@ -64,13 +64,13 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,13 +79,13 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="shareName", required=true)
-    private String shareName;
+    private Output<String> shareName;
 
     /**
      * @return The name of the share.
      * 
      */
-    public String shareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -94,14 +94,14 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private Output</* @Nullable */ String> skipToken;
 
     /**
      * @return Continuation token
      * 
      */
-    public Optional<String> skipToken() {
-        return Optional.ofNullable(this.skipToken);
+    public Output</* @Nullable */ String> skipToken() {
+        return this.skipToken;
     }
 
     private ListShareSynchronizationsArgs() {}
@@ -139,8 +139,29 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param filter Filters the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(Output</* @Nullable */ String> filter) {
+            $.filter = filter;
             return this;
         }
 
@@ -151,7 +172,17 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder filter(@Nullable String filter) {
-            $.filter = filter;
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param orderby Sorts the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder orderby(Output</* @Nullable */ String> orderby) {
+            $.orderby = orderby;
             return this;
         }
 
@@ -162,7 +193,17 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder orderby(@Nullable String orderby) {
-            $.orderby = orderby;
+            return orderby(Output.of(orderby));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -173,7 +214,17 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareName(Output<String> shareName) {
+            $.shareName = shareName;
             return this;
         }
 
@@ -184,7 +235,17 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder shareName(String shareName) {
-            $.shareName = shareName;
+            return shareName(Output.of(shareName));
+        }
+
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -195,8 +256,7 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+            return skipToken(Output.of(skipToken));
         }
 
         public ListShareSynchronizationsArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetTargetPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTargetPoolArgs Empty = new GetTargetPoolArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="targetPool", required=true)
-    private String targetPool;
+    private Output<String> targetPool;
 
-    public String targetPool() {
+    public Output<String> targetPool() {
         return this.targetPool;
     }
 
@@ -61,19 +61,31 @@ public final class GetTargetPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTargetPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder targetPool(String targetPool) {
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder targetPool(Output<String> targetPool) {
             $.targetPool = targetPool;
             return this;
+        }
+
+        public Builder targetPool(String targetPool) {
+            return targetPool(Output.of(targetPool));
         }
 
         public GetTargetPoolArgs build() {

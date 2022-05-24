@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
     /**
      * @return The name or self link of the instance.
      * 
      */
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -34,14 +34,14 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetCaCertsArgs() {}
@@ -75,8 +75,29 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instance(String instance) {
+        public Builder instance(Output<String> instance) {
             $.instance = instance;
+            return this;
+        }
+
+        /**
+         * @param instance The name or self link of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetCaCertsArgs build() {

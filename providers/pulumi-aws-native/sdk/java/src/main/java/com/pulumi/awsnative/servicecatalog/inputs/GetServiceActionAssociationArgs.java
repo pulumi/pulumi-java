@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetServiceActionAssociationArgs extends com.pulumi.resources.
     public static final GetServiceActionAssociationArgs Empty = new GetServiceActionAssociationArgs();
 
     @Import(name="productId", required=true)
-    private String productId;
+    private Output<String> productId;
 
-    public String productId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId", required=true)
-    private String provisioningArtifactId;
+    private Output<String> provisioningArtifactId;
 
-    public String provisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @Import(name="serviceActionId", required=true)
-    private String serviceActionId;
+    private Output<String> serviceActionId;
 
-    public String serviceActionId() {
+    public Output<String> serviceActionId() {
         return this.serviceActionId;
     }
 
@@ -59,19 +60,31 @@ public final class GetServiceActionAssociationArgs extends com.pulumi.resources.
             $ = new GetServiceActionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder productId(String productId) {
+        public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
-        public Builder provisioningArtifactId(String provisioningArtifactId) {
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
+        }
+
+        public Builder provisioningArtifactId(Output<String> provisioningArtifactId) {
             $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder serviceActionId(String serviceActionId) {
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
+            return provisioningArtifactId(Output.of(provisioningArtifactId));
+        }
+
+        public Builder serviceActionId(Output<String> serviceActionId) {
             $.serviceActionId = serviceActionId;
             return this;
+        }
+
+        public Builder serviceActionId(String serviceActionId) {
+            return serviceActionId(Output.of(serviceActionId));
         }
 
         public GetServiceActionAssociationArgs build() {

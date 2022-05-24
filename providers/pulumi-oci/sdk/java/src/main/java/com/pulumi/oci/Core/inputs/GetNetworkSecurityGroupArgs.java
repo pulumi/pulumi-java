@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkSecurityGroupId", required=true)
-    private String networkSecurityGroupId;
+    private Output<String> networkSecurityGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
      * 
      */
-    public String networkSecurityGroupId() {
+    public Output<String> networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+        public Builder networkSecurityGroupId(Output<String> networkSecurityGroupId) {
             $.networkSecurityGroupId = networkSecurityGroupId;
             return this;
+        }
+
+        /**
+         * @param networkSecurityGroupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
+            return networkSecurityGroupId(Output.of(networkSecurityGroupId));
         }
 
         public GetNetworkSecurityGroupArgs build() {

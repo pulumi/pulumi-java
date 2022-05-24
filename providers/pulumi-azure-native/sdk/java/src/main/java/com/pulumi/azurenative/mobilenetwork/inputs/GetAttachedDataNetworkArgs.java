@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.mobilenetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="attachedDataNetworkName", required=true)
-    private String attachedDataNetworkName;
+    private Output<String> attachedDataNetworkName;
 
     /**
      * @return The name of the attached data network.
      * 
      */
-    public String attachedDataNetworkName() {
+    public Output<String> attachedDataNetworkName() {
         return this.attachedDataNetworkName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="packetCoreControlPlaneName", required=true)
-    private String packetCoreControlPlaneName;
+    private Output<String> packetCoreControlPlaneName;
 
     /**
      * @return The name of the packet core control plane.
      * 
      */
-    public String packetCoreControlPlaneName() {
+    public Output<String> packetCoreControlPlaneName() {
         return this.packetCoreControlPlaneName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="packetCoreDataPlaneName", required=true)
-    private String packetCoreDataPlaneName;
+    private Output<String> packetCoreDataPlaneName;
 
     /**
      * @return The name of the packet core data plane.
      * 
      */
-    public String packetCoreDataPlaneName() {
+    public Output<String> packetCoreDataPlaneName() {
         return this.packetCoreDataPlaneName;
     }
 
@@ -62,13 +63,13 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder attachedDataNetworkName(String attachedDataNetworkName) {
+        public Builder attachedDataNetworkName(Output<String> attachedDataNetworkName) {
             $.attachedDataNetworkName = attachedDataNetworkName;
+            return this;
+        }
+
+        /**
+         * @param attachedDataNetworkName The name of the attached data network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachedDataNetworkName(String attachedDataNetworkName) {
+            return attachedDataNetworkName(Output.of(attachedDataNetworkName));
+        }
+
+        /**
+         * @param packetCoreControlPlaneName The name of the packet core control plane.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packetCoreControlPlaneName(Output<String> packetCoreControlPlaneName) {
+            $.packetCoreControlPlaneName = packetCoreControlPlaneName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder packetCoreControlPlaneName(String packetCoreControlPlaneName) {
-            $.packetCoreControlPlaneName = packetCoreControlPlaneName;
+            return packetCoreControlPlaneName(Output.of(packetCoreControlPlaneName));
+        }
+
+        /**
+         * @param packetCoreDataPlaneName The name of the packet core data plane.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packetCoreDataPlaneName(Output<String> packetCoreDataPlaneName) {
+            $.packetCoreDataPlaneName = packetCoreDataPlaneName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder packetCoreDataPlaneName(String packetCoreDataPlaneName) {
-            $.packetCoreDataPlaneName = packetCoreDataPlaneName;
+            return packetCoreDataPlaneName(Output.of(packetCoreDataPlaneName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetAttachedDataNetworkArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAttachedDataNetworkArgs build() {

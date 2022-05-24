@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerregistry.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="buildTaskName", required=true)
-    private String buildTaskName;
+    private Output<String> buildTaskName;
 
     /**
      * @return The name of the container registry build task.
      * 
      */
-    public String buildTaskName() {
+    public Output<String> buildTaskName() {
         return this.buildTaskName;
     }
 
@@ -32,13 +33,13 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="registryName", required=true)
-    private String registryName;
+    private Output<String> registryName;
 
     /**
      * @return The name of the container registry.
      * 
      */
-    public String registryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -47,13 +48,13 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder buildTaskName(String buildTaskName) {
+        public Builder buildTaskName(Output<String> buildTaskName) {
             $.buildTaskName = buildTaskName;
+            return this;
+        }
+
+        /**
+         * @param buildTaskName The name of the container registry build task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildTaskName(String buildTaskName) {
+            return buildTaskName(Output.of(buildTaskName));
+        }
+
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryName(Output<String> registryName) {
+            $.registryName = registryName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
          * 
          */
         public Builder registryName(String registryName) {
-            $.registryName = registryName;
+            return registryName(Output.of(registryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListBuildTaskSourceRepositoryPropertiesArgs build() {

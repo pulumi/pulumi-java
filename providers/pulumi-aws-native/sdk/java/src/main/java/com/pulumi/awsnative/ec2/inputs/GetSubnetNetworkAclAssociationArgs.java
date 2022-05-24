@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetSubnetNetworkAclAssociationArgs extends com.pulumi.resourc
     public static final GetSubnetNetworkAclAssociationArgs Empty = new GetSubnetNetworkAclAssociationArgs();
 
     @Import(name="associationId", required=true)
-    private String associationId;
+    private Output<String> associationId;
 
-    public String associationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
 
@@ -43,9 +44,13 @@ public final class GetSubnetNetworkAclAssociationArgs extends com.pulumi.resourc
             $ = new GetSubnetNetworkAclAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder associationId(String associationId) {
+        public Builder associationId(Output<String> associationId) {
             $.associationId = associationId;
             return this;
+        }
+
+        public Builder associationId(String associationId) {
+            return associationId(Output.of(associationId));
         }
 
         public GetSubnetNetworkAclAssociationArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Dns.inputs.GetResolverEndpointsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
     public static final GetResolverEndpointsArgs Empty = new GetResolverEndpointsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetResolverEndpointsFilter> filters;
+    private Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters;
 
-    public Optional<List<GetResolverEndpointsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of a resource.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resolverId", required=true)
-    private String resolverId;
+    private Output<String> resolverId;
 
     /**
      * @return The OCID of the target resolver.
      * 
      */
-    public String resolverId() {
+    public Output<String> resolverId() {
         return this.resolverId;
     }
 
@@ -58,13 +58,13 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Value must be `PRIVATE` when listing private name resolver endpoints.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,14 +73,14 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The state of a resource.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetResolverEndpointsArgs() {}
@@ -111,9 +111,13 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
             $ = new GetResolverEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetResolverEndpointsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetResolverEndpointsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetResolverEndpointsFilter... filters) {
@@ -126,8 +130,29 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resolverId The OCID of the target resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverId(Output<String> resolverId) {
+            $.resolverId = resolverId;
             return this;
         }
 
@@ -138,7 +163,17 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resolverId(String resolverId) {
-            $.resolverId = resolverId;
+            return resolverId(Output.of(resolverId));
+        }
+
+        /**
+         * @param scope Value must be `PRIVATE` when listing private name resolver endpoints.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param state The state of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetResolverEndpointsArgs build() {

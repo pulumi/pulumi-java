@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datamigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlMigrationServiceName", required=true)
-    private String sqlMigrationServiceName;
+    private Output<String> sqlMigrationServiceName;
 
     /**
      * @return Name of the SQL Migration Service.
      * 
      */
-    public String sqlMigrationServiceName() {
+    public Output<String> sqlMigrationServiceName() {
         return this.sqlMigrationServiceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlMigrationServiceName Name of the SQL Migration Service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlMigrationServiceName(Output<String> sqlMigrationServiceName) {
+            $.sqlMigrationServiceName = sqlMigrationServiceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
-            $.sqlMigrationServiceName = sqlMigrationServiceName;
-            return this;
+            return sqlMigrationServiceName(Output.of(sqlMigrationServiceName));
         }
 
         public GetSqlMigrationServiceArgs build() {

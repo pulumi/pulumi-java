@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Blockchain;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +22,6 @@ import com.pulumi.oci.Blockchain.outputs.GetOsnsResult;
 import com.pulumi.oci.Blockchain.outputs.GetPeerResult;
 import com.pulumi.oci.Blockchain.outputs.GetPeersResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class BlockchainFunctions {
     /**
@@ -32,7 +32,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformResult> getBlockchainPlatform(GetBlockchainPlatformArgs args) {
+    public static Output<GetBlockchainPlatformResult> getBlockchainPlatform(GetBlockchainPlatformArgs args) {
         return getBlockchainPlatform(args, InvokeOptions.Empty);
     }
     /**
@@ -43,8 +43,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformResult> getBlockchainPlatform(GetBlockchainPlatformArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getBlockchainPlatform:getBlockchainPlatform", TypeShape.of(GetBlockchainPlatformResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlockchainPlatformResult> getBlockchainPlatform(GetBlockchainPlatformArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getBlockchainPlatform:getBlockchainPlatform", TypeShape.of(GetBlockchainPlatformResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Blockchain Platform Patches in Oracle Cloud Infrastructure Blockchain service.
@@ -54,7 +54,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformPatchesResult> getBlockchainPlatformPatches(GetBlockchainPlatformPatchesArgs args) {
+    public static Output<GetBlockchainPlatformPatchesResult> getBlockchainPlatformPatches(GetBlockchainPlatformPatchesArgs args) {
         return getBlockchainPlatformPatches(args, InvokeOptions.Empty);
     }
     /**
@@ -65,8 +65,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformPatchesResult> getBlockchainPlatformPatches(GetBlockchainPlatformPatchesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getBlockchainPlatformPatches:getBlockchainPlatformPatches", TypeShape.of(GetBlockchainPlatformPatchesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlockchainPlatformPatchesResult> getBlockchainPlatformPatches(GetBlockchainPlatformPatchesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getBlockchainPlatformPatches:getBlockchainPlatformPatches", TypeShape.of(GetBlockchainPlatformPatchesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Blockchain Platforms in Oracle Cloud Infrastructure Blockchain service.
@@ -76,7 +76,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformsResult> getBlockchainPlatforms(GetBlockchainPlatformsArgs args) {
+    public static Output<GetBlockchainPlatformsResult> getBlockchainPlatforms(GetBlockchainPlatformsArgs args) {
         return getBlockchainPlatforms(args, InvokeOptions.Empty);
     }
     /**
@@ -87,8 +87,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBlockchainPlatformsResult> getBlockchainPlatforms(GetBlockchainPlatformsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getBlockchainPlatforms:getBlockchainPlatforms", TypeShape.of(GetBlockchainPlatformsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlockchainPlatformsResult> getBlockchainPlatforms(GetBlockchainPlatformsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getBlockchainPlatforms:getBlockchainPlatforms", TypeShape.of(GetBlockchainPlatformsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Osn resource in Oracle Cloud Infrastructure Blockchain service.
@@ -98,7 +98,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOsnResult> getOsn(GetOsnArgs args) {
+    public static Output<GetOsnResult> getOsn(GetOsnArgs args) {
         return getOsn(args, InvokeOptions.Empty);
     }
     /**
@@ -109,8 +109,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOsnResult> getOsn(GetOsnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getOsn:getOsn", TypeShape.of(GetOsnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOsnResult> getOsn(GetOsnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getOsn:getOsn", TypeShape.of(GetOsnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Osns in Oracle Cloud Infrastructure Blockchain service.
@@ -120,7 +120,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOsnsResult> getOsns(GetOsnsArgs args) {
+    public static Output<GetOsnsResult> getOsns(GetOsnsArgs args) {
         return getOsns(args, InvokeOptions.Empty);
     }
     /**
@@ -131,8 +131,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOsnsResult> getOsns(GetOsnsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getOsns:getOsns", TypeShape.of(GetOsnsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOsnsResult> getOsns(GetOsnsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getOsns:getOsns", TypeShape.of(GetOsnsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Peer resource in Oracle Cloud Infrastructure Blockchain service.
@@ -142,7 +142,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeerResult> getPeer(GetPeerArgs args) {
+    public static Output<GetPeerResult> getPeer(GetPeerArgs args) {
         return getPeer(args, InvokeOptions.Empty);
     }
     /**
@@ -153,8 +153,8 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeerResult> getPeer(GetPeerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getPeer:getPeer", TypeShape.of(GetPeerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeerResult> getPeer(GetPeerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getPeer:getPeer", TypeShape.of(GetPeerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Peers in Oracle Cloud Infrastructure Blockchain service.
@@ -164,7 +164,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeersResult> getPeers(GetPeersArgs args) {
+    public static Output<GetPeersResult> getPeers(GetPeersArgs args) {
         return getPeers(args, InvokeOptions.Empty);
     }
     /**
@@ -175,7 +175,7 @@ public final class BlockchainFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPeersResult> getPeers(GetPeersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Blockchain/getPeers:getPeers", TypeShape.of(GetPeersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeersResult> getPeers(GetPeersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Blockchain/getPeers:getPeers", TypeShape.of(GetPeersResult.class), args, Utilities.withVersion(options));
     }
 }

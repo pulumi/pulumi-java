@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetIamWorkRequestsFilter> filters;
+    private Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters;
 
-    public Optional<List<GetIamWorkRequestsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceIdentifier")
-    private @Nullable String resourceIdentifier;
+    private Output</* @Nullable */ String> resourceIdentifier;
 
     /**
      * @return The identifier of the resource the work request affects.
      * 
      */
-    public Optional<String> resourceIdentifier() {
-        return Optional.ofNullable(this.resourceIdentifier);
+    public Output</* @Nullable */ String> resourceIdentifier() {
+        return this.resourceIdentifier;
     }
 
     private GetIamWorkRequestsArgs() {}
@@ -85,14 +85,28 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIamWorkRequestsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIamWorkRequestsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIamWorkRequestsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
+        public Builder resourceIdentifier(Output</* @Nullable */ String> resourceIdentifier) {
             $.resourceIdentifier = resourceIdentifier;
             return this;
+        }
+
+        /**
+         * @param resourceIdentifier The identifier of the resource the work request affects.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
+            return resourceIdentifier(Output.of(resourceIdentifier));
         }
 
         public GetIamWorkRequestsArgs build() {

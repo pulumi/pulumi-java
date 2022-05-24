@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.windowsesu.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="multipleActivationKeyName", required=true)
-    private String multipleActivationKeyName;
+    private Output<String> multipleActivationKeyName;
 
     /**
      * @return The name of the MAK key.
      * 
      */
-    public String multipleActivationKeyName() {
+    public Output<String> multipleActivationKeyName() {
         return this.multipleActivationKeyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder multipleActivationKeyName(String multipleActivationKeyName) {
+        public Builder multipleActivationKeyName(Output<String> multipleActivationKeyName) {
             $.multipleActivationKeyName = multipleActivationKeyName;
+            return this;
+        }
+
+        /**
+         * @param multipleActivationKeyName The name of the MAK key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multipleActivationKeyName(String multipleActivationKeyName) {
+            return multipleActivationKeyName(Output.of(multipleActivationKeyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMultipleActivationKeyArgs build() {

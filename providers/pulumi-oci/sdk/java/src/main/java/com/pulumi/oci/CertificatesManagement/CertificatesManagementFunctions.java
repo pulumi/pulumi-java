@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CertificatesManagement;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -31,7 +32,6 @@ import com.pulumi.oci.CertificatesManagement.outputs.GetCertificateVersionResult
 import com.pulumi.oci.CertificatesManagement.outputs.GetCertificateVersionsResult;
 import com.pulumi.oci.CertificatesManagement.outputs.GetCertificatesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class CertificatesManagementFunctions {
     /**
@@ -42,7 +42,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args) {
+    public static Output<GetAssociationResult> getAssociation(GetAssociationArgs args) {
         return getAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -53,8 +53,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getAssociation:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getAssociation:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Associations in Oracle Cloud Infrastructure Certificates Management service.
@@ -65,7 +65,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAssociationsResult> getAssociations() {
+    public static Output<GetAssociationsResult> getAssociations() {
         return getAssociations(GetAssociationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAssociationsResult> getAssociations(GetAssociationsArgs args) {
+    public static Output<GetAssociationsResult> getAssociations(GetAssociationsArgs args) {
         return getAssociations(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAssociationsResult> getAssociations(GetAssociationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getAssociations:getAssociations", TypeShape.of(GetAssociationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAssociationsResult> getAssociations(GetAssociationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getAssociations:getAssociations", TypeShape.of(GetAssociationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Ca Bundle resource in Oracle Cloud Infrastructure Certificates Management service.
@@ -100,7 +100,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCaBundleResult> getCaBundle(GetCaBundleArgs args) {
+    public static Output<GetCaBundleResult> getCaBundle(GetCaBundleArgs args) {
         return getCaBundle(args, InvokeOptions.Empty);
     }
     /**
@@ -111,8 +111,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCaBundleResult> getCaBundle(GetCaBundleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCaBundle:getCaBundle", TypeShape.of(GetCaBundleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCaBundleResult> getCaBundle(GetCaBundleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCaBundle:getCaBundle", TypeShape.of(GetCaBundleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ca Bundles in Oracle Cloud Infrastructure Certificates Management service.
@@ -123,7 +123,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCaBundlesResult> getCaBundles() {
+    public static Output<GetCaBundlesResult> getCaBundles() {
         return getCaBundles(GetCaBundlesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -135,7 +135,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCaBundlesResult> getCaBundles(GetCaBundlesArgs args) {
+    public static Output<GetCaBundlesResult> getCaBundles(GetCaBundlesArgs args) {
         return getCaBundles(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCaBundlesResult> getCaBundles(GetCaBundlesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCaBundles:getCaBundles", TypeShape.of(GetCaBundlesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCaBundlesResult> getCaBundles(GetCaBundlesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCaBundles:getCaBundles", TypeShape.of(GetCaBundlesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure Certificates Management service.
@@ -158,7 +158,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -169,8 +169,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificate Authorities in Oracle Cloud Infrastructure Certificates Management service.
@@ -181,7 +181,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthoritiesResult> getCertificateAuthorities() {
+    public static Output<GetCertificateAuthoritiesResult> getCertificateAuthorities() {
         return getCertificateAuthorities(GetCertificateAuthoritiesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -193,7 +193,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthoritiesResult> getCertificateAuthorities(GetCertificateAuthoritiesArgs args) {
+    public static Output<GetCertificateAuthoritiesResult> getCertificateAuthorities(GetCertificateAuthoritiesArgs args) {
         return getCertificateAuthorities(args, InvokeOptions.Empty);
     }
     /**
@@ -205,8 +205,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthoritiesResult> getCertificateAuthorities(GetCertificateAuthoritiesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateAuthorities:getCertificateAuthorities", TypeShape.of(GetCertificateAuthoritiesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthoritiesResult> getCertificateAuthorities(GetCertificateAuthoritiesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateAuthorities:getCertificateAuthorities", TypeShape.of(GetCertificateAuthoritiesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Certificate Authority resource in Oracle Cloud Infrastructure Certificates Management service.
@@ -216,7 +216,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
         return getCertificateAuthority(args, InvokeOptions.Empty);
     }
     /**
@@ -227,8 +227,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateAuthority:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateAuthority:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Certificate Authority Version resource in Oracle Cloud Infrastructure Certificates Management service.
@@ -239,7 +239,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityVersionResult> getCertificateAuthorityVersion(GetCertificateAuthorityVersionArgs args) {
+    public static Output<GetCertificateAuthorityVersionResult> getCertificateAuthorityVersion(GetCertificateAuthorityVersionArgs args) {
         return getCertificateAuthorityVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -251,8 +251,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityVersionResult> getCertificateAuthorityVersion(GetCertificateAuthorityVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateAuthorityVersion:getCertificateAuthorityVersion", TypeShape.of(GetCertificateAuthorityVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityVersionResult> getCertificateAuthorityVersion(GetCertificateAuthorityVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateAuthorityVersion:getCertificateAuthorityVersion", TypeShape.of(GetCertificateAuthorityVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificate Authority Versions in Oracle Cloud Infrastructure Certificates Management service.
@@ -263,7 +263,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityVersionsResult> getCertificateAuthorityVersions(GetCertificateAuthorityVersionsArgs args) {
+    public static Output<GetCertificateAuthorityVersionsResult> getCertificateAuthorityVersions(GetCertificateAuthorityVersionsArgs args) {
         return getCertificateAuthorityVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -275,8 +275,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityVersionsResult> getCertificateAuthorityVersions(GetCertificateAuthorityVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateAuthorityVersions:getCertificateAuthorityVersions", TypeShape.of(GetCertificateAuthorityVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateAuthorityVersionsResult> getCertificateAuthorityVersions(GetCertificateAuthorityVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateAuthorityVersions:getCertificateAuthorityVersions", TypeShape.of(GetCertificateAuthorityVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Certificate Version resource in Oracle Cloud Infrastructure Certificates Management service.
@@ -286,7 +286,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateVersionResult> getCertificateVersion(GetCertificateVersionArgs args) {
+    public static Output<GetCertificateVersionResult> getCertificateVersion(GetCertificateVersionArgs args) {
         return getCertificateVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -297,8 +297,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateVersionResult> getCertificateVersion(GetCertificateVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateVersion:getCertificateVersion", TypeShape.of(GetCertificateVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateVersionResult> getCertificateVersion(GetCertificateVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateVersion:getCertificateVersion", TypeShape.of(GetCertificateVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificate Versions in Oracle Cloud Infrastructure Certificates Management service.
@@ -309,7 +309,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateVersionsResult> getCertificateVersions(GetCertificateVersionsArgs args) {
+    public static Output<GetCertificateVersionsResult> getCertificateVersions(GetCertificateVersionsArgs args) {
         return getCertificateVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -321,8 +321,8 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateVersionsResult> getCertificateVersions(GetCertificateVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificateVersions:getCertificateVersions", TypeShape.of(GetCertificateVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateVersionsResult> getCertificateVersions(GetCertificateVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificateVersions:getCertificateVersions", TypeShape.of(GetCertificateVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificates in Oracle Cloud Infrastructure Certificates Management service.
@@ -333,7 +333,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates() {
+    public static Output<GetCertificatesResult> getCertificates() {
         return getCertificates(GetCertificatesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -345,7 +345,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
         return getCertificates(args, InvokeOptions.Empty);
     }
     /**
@@ -357,7 +357,7 @@ public final class CertificatesManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CertificatesManagement/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CertificatesManagement/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
     }
 }

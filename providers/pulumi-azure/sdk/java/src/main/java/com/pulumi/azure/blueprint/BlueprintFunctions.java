@@ -8,10 +8,10 @@ import com.pulumi.azure.blueprint.inputs.GetDefinitionArgs;
 import com.pulumi.azure.blueprint.inputs.GetPublishedVersionArgs;
 import com.pulumi.azure.blueprint.outputs.GetDefinitionResult;
 import com.pulumi.azure.blueprint.outputs.GetPublishedVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BlueprintFunctions {
     /**
@@ -50,7 +50,7 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args) {
+    public static Output<GetDefinitionResult> getDefinition(GetDefinitionArgs args) {
         return getDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:blueprint/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:blueprint/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Blueprint Published Version
@@ -125,7 +125,7 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublishedVersionResult> getPublishedVersion(GetPublishedVersionArgs args) {
+    public static Output<GetPublishedVersionResult> getPublishedVersion(GetPublishedVersionArgs args) {
         return getPublishedVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +161,7 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublishedVersionResult> getPublishedVersion(GetPublishedVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:blueprint/getPublishedVersion:getPublishedVersion", TypeShape.of(GetPublishedVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublishedVersionResult> getPublishedVersion(GetPublishedVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:blueprint/getPublishedVersion:getPublishedVersion", TypeShape.of(GetPublishedVersionResult.class), args, Utilities.withVersion(options));
     }
 }

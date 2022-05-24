@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.assuredworkloads_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetWorkloadArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWorkloadArgs Empty = new GetWorkloadArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="workloadId", required=true)
-    private String workloadId;
+    private Output<String> workloadId;
 
-    public String workloadId() {
+    public Output<String> workloadId() {
         return this.workloadId;
     }
 
@@ -59,19 +60,31 @@ public final class GetWorkloadArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkloadArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder workloadId(String workloadId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder workloadId(Output<String> workloadId) {
             $.workloadId = workloadId;
             return this;
+        }
+
+        public Builder workloadId(String workloadId) {
+            return workloadId(Output.of(workloadId));
         }
 
         public GetWorkloadArgs build() {

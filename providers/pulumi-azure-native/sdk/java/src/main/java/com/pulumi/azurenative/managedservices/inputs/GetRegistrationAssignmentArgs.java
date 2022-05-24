@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.managedservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandRegistrationDefinition")
-    private @Nullable Boolean expandRegistrationDefinition;
+    private Output</* @Nullable */ Boolean> expandRegistrationDefinition;
 
     /**
      * @return Tells whether to return registration definition details also along with registration assignment details.
      * 
      */
-    public Optional<Boolean> expandRegistrationDefinition() {
-        return Optional.ofNullable(this.expandRegistrationDefinition);
+    public Output</* @Nullable */ Boolean> expandRegistrationDefinition() {
+        return this.expandRegistrationDefinition;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="registrationAssignmentId", required=true)
-    private String registrationAssignmentId;
+    private Output<String> registrationAssignmentId;
 
     /**
      * @return Guid of the registration assignment.
      * 
      */
-    public String registrationAssignmentId() {
+    public Output<String> registrationAssignmentId() {
         return this.registrationAssignmentId;
     }
 
@@ -50,13 +50,13 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Scope of the resource.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -92,8 +92,29 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
+        public Builder expandRegistrationDefinition(Output</* @Nullable */ Boolean> expandRegistrationDefinition) {
             $.expandRegistrationDefinition = expandRegistrationDefinition;
+            return this;
+        }
+
+        /**
+         * @param expandRegistrationDefinition Tells whether to return registration definition details also along with registration assignment details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
+            return expandRegistrationDefinition(Output.of(expandRegistrationDefinition));
+        }
+
+        /**
+         * @param registrationAssignmentId Guid of the registration assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registrationAssignmentId(Output<String> registrationAssignmentId) {
+            $.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
          * 
          */
         public Builder registrationAssignmentId(String registrationAssignmentId) {
-            $.registrationAssignmentId = registrationAssignmentId;
+            return registrationAssignmentId(Output.of(registrationAssignmentId));
+        }
+
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetRegistrationAssignmentArgs build() {

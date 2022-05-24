@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dhcpOptionsId", required=true)
-    private String dhcpOptionsId;
+    private Output<String> dhcpOptionsId;
 
     /**
      * @return The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
      * 
      */
-    public String dhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 
@@ -32,13 +33,13 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcId", required=true)
-    private String vpcId;
+    private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC.
      * 
      */
-    public String vpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -73,8 +74,29 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder dhcpOptionsId(String dhcpOptionsId) {
+        public Builder dhcpOptionsId(Output<String> dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
+            return this;
+        }
+
+        /**
+         * @param dhcpOptionsId The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
+            return dhcpOptionsId(Output.of(dhcpOptionsId));
+        }
+
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(Output<String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
          * 
          */
         public Builder vpcId(String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+            return vpcId(Output.of(vpcId));
         }
 
         public GetVPCDHCPOptionsAssociationArgs build() {

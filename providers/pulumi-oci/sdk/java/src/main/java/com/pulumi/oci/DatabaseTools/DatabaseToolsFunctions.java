@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseTools;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.oci.DatabaseTools.outputs.GetDatabaseToolsEndpointServicesResu
 import com.pulumi.oci.DatabaseTools.outputs.GetDatabaseToolsPrivateEndpointResult;
 import com.pulumi.oci.DatabaseTools.outputs.GetDatabaseToolsPrivateEndpointsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatabaseToolsFunctions {
     /**
@@ -30,7 +30,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsConnectionResult> getDatabaseToolsConnection(GetDatabaseToolsConnectionArgs args) {
+    public static Output<GetDatabaseToolsConnectionResult> getDatabaseToolsConnection(GetDatabaseToolsConnectionArgs args) {
         return getDatabaseToolsConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -41,8 +41,8 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsConnectionResult> getDatabaseToolsConnection(GetDatabaseToolsConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsConnection:getDatabaseToolsConnection", TypeShape.of(GetDatabaseToolsConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsConnectionResult> getDatabaseToolsConnection(GetDatabaseToolsConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsConnection:getDatabaseToolsConnection", TypeShape.of(GetDatabaseToolsConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Database Tools Connections in Oracle Cloud Infrastructure Database Tools service.
@@ -52,7 +52,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsConnectionsResult> getDatabaseToolsConnections(GetDatabaseToolsConnectionsArgs args) {
+    public static Output<GetDatabaseToolsConnectionsResult> getDatabaseToolsConnections(GetDatabaseToolsConnectionsArgs args) {
         return getDatabaseToolsConnections(args, InvokeOptions.Empty);
     }
     /**
@@ -63,8 +63,8 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsConnectionsResult> getDatabaseToolsConnections(GetDatabaseToolsConnectionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsConnections:getDatabaseToolsConnections", TypeShape.of(GetDatabaseToolsConnectionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsConnectionsResult> getDatabaseToolsConnections(GetDatabaseToolsConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsConnections:getDatabaseToolsConnections", TypeShape.of(GetDatabaseToolsConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Database Tools Endpoint Service resource in Oracle Cloud Infrastructure Database Tools service.
@@ -74,7 +74,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsEndpointServiceResult> getDatabaseToolsEndpointService(GetDatabaseToolsEndpointServiceArgs args) {
+    public static Output<GetDatabaseToolsEndpointServiceResult> getDatabaseToolsEndpointService(GetDatabaseToolsEndpointServiceArgs args) {
         return getDatabaseToolsEndpointService(args, InvokeOptions.Empty);
     }
     /**
@@ -85,8 +85,8 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsEndpointServiceResult> getDatabaseToolsEndpointService(GetDatabaseToolsEndpointServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsEndpointService:getDatabaseToolsEndpointService", TypeShape.of(GetDatabaseToolsEndpointServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsEndpointServiceResult> getDatabaseToolsEndpointService(GetDatabaseToolsEndpointServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsEndpointService:getDatabaseToolsEndpointService", TypeShape.of(GetDatabaseToolsEndpointServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Database Tools Endpoint Services in Oracle Cloud Infrastructure Database Tools service.
@@ -96,7 +96,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsEndpointServicesResult> getDatabaseToolsEndpointServices(GetDatabaseToolsEndpointServicesArgs args) {
+    public static Output<GetDatabaseToolsEndpointServicesResult> getDatabaseToolsEndpointServices(GetDatabaseToolsEndpointServicesArgs args) {
         return getDatabaseToolsEndpointServices(args, InvokeOptions.Empty);
     }
     /**
@@ -107,8 +107,8 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsEndpointServicesResult> getDatabaseToolsEndpointServices(GetDatabaseToolsEndpointServicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsEndpointServices:getDatabaseToolsEndpointServices", TypeShape.of(GetDatabaseToolsEndpointServicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsEndpointServicesResult> getDatabaseToolsEndpointServices(GetDatabaseToolsEndpointServicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsEndpointServices:getDatabaseToolsEndpointServices", TypeShape.of(GetDatabaseToolsEndpointServicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Database Tools Private Endpoint resource in Oracle Cloud Infrastructure Database Tools service.
@@ -118,7 +118,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsPrivateEndpointResult> getDatabaseToolsPrivateEndpoint(GetDatabaseToolsPrivateEndpointArgs args) {
+    public static Output<GetDatabaseToolsPrivateEndpointResult> getDatabaseToolsPrivateEndpoint(GetDatabaseToolsPrivateEndpointArgs args) {
         return getDatabaseToolsPrivateEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -129,8 +129,8 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsPrivateEndpointResult> getDatabaseToolsPrivateEndpoint(GetDatabaseToolsPrivateEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsPrivateEndpoint:getDatabaseToolsPrivateEndpoint", TypeShape.of(GetDatabaseToolsPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsPrivateEndpointResult> getDatabaseToolsPrivateEndpoint(GetDatabaseToolsPrivateEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsPrivateEndpoint:getDatabaseToolsPrivateEndpoint", TypeShape.of(GetDatabaseToolsPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Database Tools Private Endpoints in Oracle Cloud Infrastructure Database Tools service.
@@ -140,7 +140,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsPrivateEndpointsResult> getDatabaseToolsPrivateEndpoints(GetDatabaseToolsPrivateEndpointsArgs args) {
+    public static Output<GetDatabaseToolsPrivateEndpointsResult> getDatabaseToolsPrivateEndpoints(GetDatabaseToolsPrivateEndpointsArgs args) {
         return getDatabaseToolsPrivateEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -151,7 +151,7 @@ public final class DatabaseToolsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseToolsPrivateEndpointsResult> getDatabaseToolsPrivateEndpoints(GetDatabaseToolsPrivateEndpointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseTools/getDatabaseToolsPrivateEndpoints:getDatabaseToolsPrivateEndpoints", TypeShape.of(GetDatabaseToolsPrivateEndpointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseToolsPrivateEndpointsResult> getDatabaseToolsPrivateEndpoints(GetDatabaseToolsPrivateEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseTools/getDatabaseToolsPrivateEndpoints:getDatabaseToolsPrivateEndpoints", TypeShape.of(GetDatabaseToolsPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
 }

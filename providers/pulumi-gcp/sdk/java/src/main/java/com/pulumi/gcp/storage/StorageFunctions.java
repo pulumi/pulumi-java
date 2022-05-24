@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.storage;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.gcp.storage.outputs.GetBucketResult;
 import com.pulumi.gcp.storage.outputs.GetObjectSignedUrlResult;
 import com.pulumi.gcp.storage.outputs.GetProjectServiceAccountResult;
 import com.pulumi.gcp.storage.outputs.GetTransferProjectServieAccountResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class StorageFunctions {
     /**
@@ -52,7 +52,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
     /**
@@ -85,8 +85,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an existing object inside an existing bucket in Google Cloud Storage service (GCS).
@@ -121,7 +121,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject() {
+    public static Output<GetBucketObjectResult> getBucketObject() {
         return getBucketObject(GetBucketObjectArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
+    public static Output<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
         return getBucketObject(args, InvokeOptions.Empty);
     }
     /**
@@ -193,8 +193,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an existing object content inside an existing bucket in Google Cloud Storage service (GCS).
@@ -232,7 +232,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args) {
+    public static Output<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args) {
         return getBucketObjectContent(args, InvokeOptions.Empty);
     }
     /**
@@ -271,8 +271,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getBucketObjectContent:getBucketObjectContent", TypeShape.of(GetBucketObjectContentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getBucketObjectContent:getBucketObjectContent", TypeShape.of(GetBucketObjectContentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.
@@ -334,7 +334,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args) {
+    public static Output<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args) {
         return getObjectSignedUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -397,8 +397,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getObjectSignedUrl:getObjectSignedUrl", TypeShape.of(GetObjectSignedUrlResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getObjectSignedUrl:getObjectSignedUrl", TypeShape.of(GetObjectSignedUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the email address of a project&#39;s unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
@@ -496,7 +496,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount() {
+    public static Output<GetProjectServiceAccountResult> getProjectServiceAccount() {
         return getProjectServiceAccount(GetProjectServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -595,7 +595,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
+    public static Output<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
         return getProjectServiceAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -694,8 +694,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve Storage Transfer service account for this project
@@ -723,7 +723,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount() {
+    public static Output<GetTransferProjectServieAccountResult> getTransferProjectServieAccount() {
         return getTransferProjectServieAccount(GetTransferProjectServieAccountArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -752,7 +752,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args) {
+    public static Output<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args) {
         return getTransferProjectServieAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -781,7 +781,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:storage/getTransferProjectServieAccount:getTransferProjectServieAccount", TypeShape.of(GetTransferProjectServieAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:storage/getTransferProjectServieAccount:getTransferProjectServieAccount", TypeShape.of(GetTransferProjectServieAccountResult.class), args, Utilities.withVersion(options));
     }
 }

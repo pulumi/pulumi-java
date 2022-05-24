@@ -8,10 +8,10 @@ import com.pulumi.azure.appconfiguration.inputs.GetConfigurationKeyArgs;
 import com.pulumi.azure.appconfiguration.inputs.GetConfigurationStoreArgs;
 import com.pulumi.azure.appconfiguration.outputs.GetConfigurationKeyResult;
 import com.pulumi.azure.appconfiguration.outputs.GetConfigurationStoreResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppconfigurationFunctions {
     /**
@@ -46,7 +46,7 @@ public final class AppconfigurationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args) {
+    public static Output<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args) {
         return getConfigurationKey(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class AppconfigurationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appconfiguration/getConfigurationKey:getConfigurationKey", TypeShape.of(GetConfigurationKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationKeyResult> getConfigurationKey(GetConfigurationKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appconfiguration/getConfigurationKey:getConfigurationKey", TypeShape.of(GetConfigurationKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing App Configuration.
@@ -113,7 +113,7 @@ public final class AppconfigurationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args) {
+    public static Output<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args) {
         return getConfigurationStore(args, InvokeOptions.Empty);
     }
     /**
@@ -145,7 +145,7 @@ public final class AppconfigurationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appconfiguration/getConfigurationStore:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appconfiguration/getConfigurationStore:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args, Utilities.withVersion(options));
     }
 }

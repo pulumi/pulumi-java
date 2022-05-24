@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return Specifies the Location to pull information about this Platform Image from.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -34,13 +34,13 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="offer", required=true)
-    private String offer;
+    private Output<String> offer;
 
     /**
      * @return Specifies the Offer associated with the Platform Image.
      * 
      */
-    public String offer() {
+    public Output<String> offer() {
         return this.offer;
     }
 
@@ -49,13 +49,13 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="publisher", required=true)
-    private String publisher;
+    private Output<String> publisher;
 
     /**
      * @return Specifies the Publisher associated with the Platform Image.
      * 
      */
-    public String publisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
@@ -64,13 +64,13 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sku", required=true)
-    private String sku;
+    private Output<String> sku;
 
     /**
      * @return Specifies the SKU of the Platform Image.
      * 
      */
-    public String sku() {
+    public Output<String> sku() {
         return this.sku;
     }
 
@@ -79,14 +79,14 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private Output</* @Nullable */ String> version;
 
     /**
      * @return The version of the Platform Image.
      * 
      */
-    public Optional<String> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ String> version() {
+        return this.version;
     }
 
     private GetPlatformImageArgs() {}
@@ -123,8 +123,29 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location Specifies the Location to pull information about this Platform Image from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param offer Specifies the Offer associated with the Platform Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder offer(Output<String> offer) {
+            $.offer = offer;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder offer(String offer) {
-            $.offer = offer;
+            return offer(Output.of(offer));
+        }
+
+        /**
+         * @param publisher Specifies the Publisher associated with the Platform Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisher(Output<String> publisher) {
+            $.publisher = publisher;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder publisher(String publisher) {
-            $.publisher = publisher;
+            return publisher(Output.of(publisher));
+        }
+
+        /**
+         * @param sku Specifies the SKU of the Platform Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sku(Output<String> sku) {
+            $.sku = sku;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder sku(String sku) {
-            $.sku = sku;
+            return sku(Output.of(sku));
+        }
+
+        /**
+         * @param version The version of the Platform Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ String> version) {
+            $.version = version;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetPlatformImageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetPlatformImageArgs build() {

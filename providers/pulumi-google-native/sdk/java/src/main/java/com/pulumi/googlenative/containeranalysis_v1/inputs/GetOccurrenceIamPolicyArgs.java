@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetOccurrenceIamPolicyArgs extends com.pulumi.resources.Invok
     public static final GetOccurrenceIamPolicyArgs Empty = new GetOccurrenceIamPolicyArgs();
 
     @Import(name="occurrenceId", required=true)
-    private String occurrenceId;
+    private Output<String> occurrenceId;
 
-    public String occurrenceId() {
+    public Output<String> occurrenceId() {
         return this.occurrenceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetOccurrenceIamPolicyArgs() {}
@@ -53,14 +53,22 @@ public final class GetOccurrenceIamPolicyArgs extends com.pulumi.resources.Invok
             $ = new GetOccurrenceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder occurrenceId(String occurrenceId) {
+        public Builder occurrenceId(Output<String> occurrenceId) {
             $.occurrenceId = occurrenceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder occurrenceId(String occurrenceId) {
+            return occurrenceId(Output.of(occurrenceId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetOccurrenceIamPolicyArgs build() {

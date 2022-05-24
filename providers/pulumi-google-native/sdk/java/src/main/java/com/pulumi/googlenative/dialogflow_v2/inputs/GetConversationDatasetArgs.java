@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dialogflow_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetConversationDatasetArgs extends com.pulumi.resources.Invok
     public static final GetConversationDatasetArgs Empty = new GetConversationDatasetArgs();
 
     @Import(name="conversationDatasetId", required=true)
-    private String conversationDatasetId;
+    private Output<String> conversationDatasetId;
 
-    public String conversationDatasetId() {
+    public Output<String> conversationDatasetId() {
         return this.conversationDatasetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetConversationDatasetArgs() {}
@@ -61,19 +61,31 @@ public final class GetConversationDatasetArgs extends com.pulumi.resources.Invok
             $ = new GetConversationDatasetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder conversationDatasetId(String conversationDatasetId) {
+        public Builder conversationDatasetId(Output<String> conversationDatasetId) {
             $.conversationDatasetId = conversationDatasetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder conversationDatasetId(String conversationDatasetId) {
+            return conversationDatasetId(Output.of(conversationDatasetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetConversationDatasetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.providerhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
      * 
      */
     @Import(name="nestedResourceTypeFirst", required=true)
-    private String nestedResourceTypeFirst;
+    private Output<String> nestedResourceTypeFirst;
 
     /**
      * @return The first child resource type.
      * 
      */
-    public String nestedResourceTypeFirst() {
+    public Output<String> nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
 
@@ -32,13 +33,13 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
      * 
      */
     @Import(name="nestedResourceTypeSecond", required=true)
-    private String nestedResourceTypeSecond;
+    private Output<String> nestedResourceTypeSecond;
 
     /**
      * @return The second child resource type.
      * 
      */
-    public String nestedResourceTypeSecond() {
+    public Output<String> nestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
 
@@ -47,13 +48,13 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
      * 
      */
     @Import(name="providerNamespace", required=true)
-    private String providerNamespace;
+    private Output<String> providerNamespace;
 
     /**
      * @return The name of the resource provider hosted within ProviderHub.
      * 
      */
-    public String providerNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -62,13 +63,13 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return The resource type.
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -77,13 +78,13 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sku", required=true)
-    private String sku;
+    private Output<String> sku;
 
     /**
      * @return The SKU.
      * 
      */
-    public String sku() {
+    public Output<String> sku() {
         return this.sku;
     }
 
@@ -121,8 +122,29 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
+        public Builder nestedResourceTypeFirst(Output<String> nestedResourceTypeFirst) {
             $.nestedResourceTypeFirst = nestedResourceTypeFirst;
+            return this;
+        }
+
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
+            return nestedResourceTypeFirst(Output.of(nestedResourceTypeFirst));
+        }
+
+        /**
+         * @param nestedResourceTypeSecond The second child resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nestedResourceTypeSecond(Output<String> nestedResourceTypeSecond) {
+            $.nestedResourceTypeSecond = nestedResourceTypeSecond;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
          * 
          */
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
-            $.nestedResourceTypeSecond = nestedResourceTypeSecond;
+            return nestedResourceTypeSecond(Output.of(nestedResourceTypeSecond));
+        }
+
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerNamespace(Output<String> providerNamespace) {
+            $.providerNamespace = providerNamespace;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
          * 
          */
         public Builder providerNamespace(String providerNamespace) {
-            $.providerNamespace = providerNamespace;
+            return providerNamespace(Output.of(providerNamespace));
+        }
+
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sku(Output<String> sku) {
+            $.sku = sku;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetSkusNestedResourceTypeSecondArgs extends com.pulumi.resour
          * 
          */
         public Builder sku(String sku) {
-            $.sku = sku;
-            return this;
+            return sku(Output.of(sku));
         }
 
         public GetSkusNestedResourceTypeSecondArgs build() {

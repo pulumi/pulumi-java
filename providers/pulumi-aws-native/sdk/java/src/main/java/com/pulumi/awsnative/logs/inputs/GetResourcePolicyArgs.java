@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.logs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyName", required=true)
-    private String policyName;
+    private Output<String> policyName;
 
     /**
      * @return A name for resource policy
      * 
      */
-    public String policyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -57,9 +58,19 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder policyName(String policyName) {
+        public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
             return this;
+        }
+
+        /**
+         * @param policyName A name for resource policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
 
         public GetResourcePolicyArgs build() {

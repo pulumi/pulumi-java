@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigqueryreservation_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,35 +12,34 @@ import com.pulumi.googlenative.bigqueryreservation_v1.inputs.GetCapacityCommitme
 import com.pulumi.googlenative.bigqueryreservation_v1.inputs.GetReservationArgs;
 import com.pulumi.googlenative.bigqueryreservation_v1.outputs.GetCapacityCommitmentResult;
 import com.pulumi.googlenative.bigqueryreservation_v1.outputs.GetReservationResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Bigqueryreservation_v1Functions {
     /**
      * Returns information about the capacity commitment.
      * 
      */
-    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args) {
+    public static Output<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args) {
         return getCapacityCommitment(args, InvokeOptions.Empty);
     }
     /**
      * Returns information about the capacity commitment.
      * 
      */
-    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1:getCapacityCommitment", TypeShape.of(GetCapacityCommitmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigqueryreservation/v1:getCapacityCommitment", TypeShape.of(GetCapacityCommitmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about the reservation.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
+    public static Output<GetReservationResult> getReservation(GetReservationArgs args) {
         return getReservation(args, InvokeOptions.Empty);
     }
     /**
      * Returns information about the reservation.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigqueryreservation/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
 }

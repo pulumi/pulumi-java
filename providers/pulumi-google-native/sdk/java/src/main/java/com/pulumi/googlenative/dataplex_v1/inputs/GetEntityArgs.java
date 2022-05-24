@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataplex_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,44 +15,44 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntityArgs Empty = new GetEntityArgs();
 
     @Import(name="entityId", required=true)
-    private String entityId;
+    private Output<String> entityId;
 
-    public String entityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
     @Import(name="lakeId", required=true)
-    private String lakeId;
+    private Output<String> lakeId;
 
-    public String lakeId() {
+    public Output<String> lakeId() {
         return this.lakeId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -85,34 +85,58 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEntityArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder entityId(String entityId) {
+        public Builder entityId(Output<String> entityId) {
             $.entityId = entityId;
             return this;
         }
 
-        public Builder lakeId(String lakeId) {
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
+        }
+
+        public Builder lakeId(Output<String> lakeId) {
             $.lakeId = lakeId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder lakeId(String lakeId) {
+            return lakeId(Output.of(lakeId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetEntityArgs build() {

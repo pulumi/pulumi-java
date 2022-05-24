@@ -26,11 +26,11 @@ import com.pulumi.azuread.outputs.GetServicePrincipalResult;
 import com.pulumi.azuread.outputs.GetServicePrincipalsResult;
 import com.pulumi.azuread.outputs.GetUserResult;
 import com.pulumi.azuread.outputs.GetUsersResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class AzureadFunctions {
     /**
@@ -94,7 +94,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit() {
+    public static Output<GetAdministrativeUnitResult> getAdministrativeUnit() {
         return getAdministrativeUnit(GetAdministrativeUnitArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -158,7 +158,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args) {
+    public static Output<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args) {
         return getAdministrativeUnit(args, InvokeOptions.Empty);
     }
     /**
@@ -222,8 +222,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getAdministrativeUnit:getAdministrativeUnit", TypeShape.of(GetAdministrativeUnitResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAdministrativeUnitResult> getAdministrativeUnit(GetAdministrativeUnitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getAdministrativeUnit:getAdministrativeUnit", TypeShape.of(GetAdministrativeUnitResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Application within Azure Active Directory.
@@ -261,7 +261,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication() {
+    public static Output<GetApplicationResult> getApplication() {
         return getApplication(GetApplicationArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -300,7 +300,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -339,8 +339,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to discover application IDs for APIs published by Microsoft.
@@ -416,7 +416,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds() {
+    public static Output<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds() {
         return getApplicationPublishedAppIds(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -493,7 +493,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args) {
+    public static Output<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args) {
         return getApplicationPublishedAppIds(args, InvokeOptions.Empty);
     }
     /**
@@ -570,8 +570,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getApplicationPublishedAppIds:getApplicationPublishedAppIds", TypeShape.of(GetApplicationPublishedAppIdsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getApplicationPublishedAppIds:getApplicationPublishedAppIds", TypeShape.of(GetApplicationPublishedAppIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an Application Template from the [Azure AD App Gallery](https://azuremarketplace.microsoft.com/en-US/marketplace/apps/category/azure-active-directory-apps).
@@ -605,7 +605,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate() {
+    public static Output<GetApplicationTemplateResult> getApplicationTemplate() {
         return getApplicationTemplate(GetApplicationTemplateArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -640,7 +640,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args) {
+    public static Output<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args) {
         return getApplicationTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -675,8 +675,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getApplicationTemplate:getApplicationTemplate", TypeShape.of(GetApplicationTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationTemplateResult> getApplicationTemplate(GetApplicationTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getApplicationTemplate:getApplicationTemplate", TypeShape.of(GetApplicationTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the configuration of the AzureAD provider.
@@ -708,7 +708,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig() {
+    public static Output<GetClientConfigResult> getClientConfig() {
         return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -741,7 +741,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
+    public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -774,8 +774,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about existing Domains within Azure Active Directory.
@@ -811,7 +811,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainsResult> getDomains() {
+    public static Output<GetDomainsResult> getDomains() {
         return getDomains(GetDomainsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -848,7 +848,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args) {
+    public static Output<GetDomainsResult> getDomains(GetDomainsArgs args) {
         return getDomains(args, InvokeOptions.Empty);
     }
     /**
@@ -885,8 +885,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getDomains:getDomains", TypeShape.of(GetDomainsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainsResult> getDomains(GetDomainsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getDomains:getDomains", TypeShape.of(GetDomainsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about an Azure Active Directory group.
@@ -925,7 +925,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup() {
+    public static Output<GetGroupResult> getGroup() {
         return getGroup(GetGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -965,7 +965,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -1005,8 +1005,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets Object IDs or Display Names for multiple Azure Active Directory groups.
@@ -1142,7 +1142,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups() {
+    public static Output<GetGroupsResult> getGroups() {
         return getGroups(GetGroupsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1279,7 +1279,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args) {
         return getGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -1416,8 +1416,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about an existing service principal associated with an application within Azure Active Directory.
@@ -1502,7 +1502,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal() {
+    public static Output<GetServicePrincipalResult> getServicePrincipal() {
         return getServicePrincipal(GetServicePrincipalArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1588,7 +1588,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args) {
+    public static Output<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args) {
         return getServicePrincipal(args, InvokeOptions.Empty);
     }
     /**
@@ -1674,8 +1674,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getServicePrincipal:getServicePrincipal", TypeShape.of(GetServicePrincipalResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicePrincipalResult> getServicePrincipal(GetServicePrincipalArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getServicePrincipal:getServicePrincipal", TypeShape.of(GetServicePrincipalResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets basic information for multiple Azure Active Directory service principals.
@@ -1768,7 +1768,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals() {
+    public static Output<GetServicePrincipalsResult> getServicePrincipals() {
         return getServicePrincipals(GetServicePrincipalsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1862,7 +1862,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args) {
+    public static Output<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args) {
         return getServicePrincipals(args, InvokeOptions.Empty);
     }
     /**
@@ -1956,8 +1956,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getServicePrincipals:getServicePrincipals", TypeShape.of(GetServicePrincipalsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicePrincipalsResult> getServicePrincipals(GetServicePrincipalsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getServicePrincipals:getServicePrincipals", TypeShape.of(GetServicePrincipalsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about an Azure Active Directory user.
@@ -1994,7 +1994,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser() {
+    public static Output<GetUserResult> getUser() {
         return getUser(GetUserArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2032,7 +2032,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -2070,8 +2070,8 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets basic information for multiple Azure Active Directory users.
@@ -2110,7 +2110,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers() {
+    public static Output<GetUsersResult> getUsers() {
         return getUsers(GetUsersArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -2150,7 +2150,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args) {
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args) {
         return getUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -2190,7 +2190,7 @@ public final class AzureadFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azuread:index/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azuread:index/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.runtimeconfig;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.gcp.runtimeconfig.inputs.GetConfigArgs;
 import com.pulumi.gcp.runtimeconfig.inputs.GetVariableArgs;
 import com.pulumi.gcp.runtimeconfig.outputs.GetConfigResult;
 import com.pulumi.gcp.runtimeconfig.outputs.GetVariableResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class RuntimeconfigFunctions {
     /**
@@ -39,7 +39,7 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -67,8 +67,8 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -96,7 +96,7 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
+    public static Output<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +125,7 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
 }

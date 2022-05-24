@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Blockchain.inputs.GetOsnsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetOsnsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blockchainPlatformId", required=true)
-    private String blockchainPlatformId;
+    private Output<String> blockchainPlatformId;
 
     /**
      * @return Unique service identifier.
      * 
      */
-    public String blockchainPlatformId() {
+    public Output<String> blockchainPlatformId() {
         return this.blockchainPlatformId;
     }
 
@@ -36,21 +36,21 @@ public final class GetOsnsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable. Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetOsnsFilter> filters;
+    private Output</* @Nullable */ List<GetOsnsFilter>> filters;
 
-    public Optional<List<GetOsnsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetOsnsFilter>> filters() {
+        return this.filters;
     }
 
     private GetOsnsArgs() {}
@@ -85,8 +85,29 @@ public final class GetOsnsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder blockchainPlatformId(String blockchainPlatformId) {
+        public Builder blockchainPlatformId(Output<String> blockchainPlatformId) {
             $.blockchainPlatformId = blockchainPlatformId;
+            return this;
+        }
+
+        /**
+         * @param blockchainPlatformId Unique service identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockchainPlatformId(String blockchainPlatformId) {
+            return blockchainPlatformId(Output.of(blockchainPlatformId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable. Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -97,13 +118,16 @@ public final class GetOsnsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetOsnsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetOsnsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetOsnsFilter... filters) {

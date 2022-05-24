@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetNatAddressArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNatAddressArgs Empty = new GetNatAddressArgs();
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="natAddressId", required=true)
-    private String natAddressId;
+    private Output<String> natAddressId;
 
-    public String natAddressId() {
+    public Output<String> natAddressId() {
         return this.natAddressId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetNatAddressArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNatAddressArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder natAddressId(String natAddressId) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder natAddressId(Output<String> natAddressId) {
             $.natAddressId = natAddressId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder natAddressId(String natAddressId) {
+            return natAddressId(Output.of(natAddressId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetNatAddressArgs build() {

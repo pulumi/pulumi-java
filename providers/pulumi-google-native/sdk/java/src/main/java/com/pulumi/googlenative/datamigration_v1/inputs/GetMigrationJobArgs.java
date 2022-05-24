@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.datamigration_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetMigrationJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMigrationJobArgs Empty = new GetMigrationJobArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="migrationJobId", required=true)
-    private String migrationJobId;
+    private Output<String> migrationJobId;
 
-    public String migrationJobId() {
+    public Output<String> migrationJobId() {
         return this.migrationJobId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetMigrationJobArgs() {}
@@ -61,19 +61,31 @@ public final class GetMigrationJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMigrationJobArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder migrationJobId(String migrationJobId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder migrationJobId(Output<String> migrationJobId) {
             $.migrationJobId = migrationJobId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder migrationJobId(String migrationJobId) {
+            return migrationJobId(Output.of(migrationJobId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetMigrationJobArgs build() {

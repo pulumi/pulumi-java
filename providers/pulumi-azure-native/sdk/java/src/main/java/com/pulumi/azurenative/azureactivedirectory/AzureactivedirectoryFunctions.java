@@ -8,32 +8,32 @@ import com.pulumi.azurenative.azureactivedirectory.inputs.GetB2CTenantArgs;
 import com.pulumi.azurenative.azureactivedirectory.inputs.GetGuestUsageArgs;
 import com.pulumi.azurenative.azureactivedirectory.outputs.GetB2CTenantResult;
 import com.pulumi.azurenative.azureactivedirectory.outputs.GetGuestUsageResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AzureactivedirectoryFunctions {
     /**
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args) {
+    public static Output<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args) {
         return getB2CTenant(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args, Utilities.withVersion(options));
+    public static Output<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Guest Usages Resource
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args) {
+    public static Output<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args) {
         return getGuestUsage(args, InvokeOptions.Empty);
     }
     /**
@@ -41,7 +41,7 @@ public final class AzureactivedirectoryFunctions {
      * API Version: 2020-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args, Utilities.withVersion(options));
     }
 }

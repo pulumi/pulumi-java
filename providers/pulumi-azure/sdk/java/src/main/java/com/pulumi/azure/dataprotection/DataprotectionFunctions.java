@@ -6,10 +6,10 @@ package com.pulumi.azure.dataprotection;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.dataprotection.inputs.GetBackupVaultArgs;
 import com.pulumi.azure.dataprotection.outputs.GetBackupVaultResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataprotectionFunctions {
     /**
@@ -42,7 +42,7 @@ public final class DataprotectionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
+    public static Output<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
         return getBackupVault(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class DataprotectionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:dataprotection/getBackupVault:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:dataprotection/getBackupVault:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
     }
 }

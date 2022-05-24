@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.fluidrelay.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The resource name.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return The resource group containing the resource.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -73,8 +74,29 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroup The resource group containing the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFluidRelayServerArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetFluidRelayServerArgs build() {

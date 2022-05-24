@@ -20,10 +20,10 @@ import com.pulumi.azure.servicebus.outputs.GetQueueResult;
 import com.pulumi.azure.servicebus.outputs.GetSubscriptionResult;
 import com.pulumi.azure.servicebus.outputs.GetTopicAuthorizationRuleResult;
 import com.pulumi.azure.servicebus.outputs.GetTopicResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServicebusFunctions {
     /**
@@ -55,7 +55,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -87,8 +87,8 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing ServiceBus Namespace Authorization Rule.
@@ -120,7 +120,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
         return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -153,14 +153,14 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getNamespaceAuthorizationRule:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getNamespaceAuthorizationRule:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetNamespaceDisasterRecoveryConfigResult> getNamespaceDisasterRecoveryConfig(GetNamespaceDisasterRecoveryConfigArgs args) {
+    public static Output<GetNamespaceDisasterRecoveryConfigResult> getNamespaceDisasterRecoveryConfig(GetNamespaceDisasterRecoveryConfigArgs args) {
         return getNamespaceDisasterRecoveryConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceDisasterRecoveryConfigResult> getNamespaceDisasterRecoveryConfig(GetNamespaceDisasterRecoveryConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getNamespaceDisasterRecoveryConfig:getNamespaceDisasterRecoveryConfig", TypeShape.of(GetNamespaceDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceDisasterRecoveryConfigResult> getNamespaceDisasterRecoveryConfig(GetNamespaceDisasterRecoveryConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getNamespaceDisasterRecoveryConfig:getNamespaceDisasterRecoveryConfig", TypeShape.of(GetNamespaceDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Service Bus Queue.
@@ -192,7 +192,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -225,8 +225,8 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing ServiceBus Queue Authorisation Rule within a ServiceBus Queue.
@@ -259,7 +259,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args) {
+    public static Output<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args) {
         return getQueueAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -293,8 +293,8 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getQueueAuthorizationRule:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getQueueAuthorizationRule:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing ServiceBus Subscription.
@@ -327,7 +327,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -361,8 +361,8 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Service Bus Topic.
@@ -394,7 +394,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -427,8 +427,8 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about a ServiceBus Topic Authorization Rule within a ServiceBus Topic.
@@ -461,7 +461,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args) {
+    public static Output<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args) {
         return getTopicAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -495,7 +495,7 @@ public final class ServicebusFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:servicebus/getTopicAuthorizationRule:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:servicebus/getTopicAuthorizationRule:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
 }

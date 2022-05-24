@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Waf.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Waf.inputs.GetProtectionCapabilityGroupTagsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetProtectionCapabilityGroupTagsFilter> filters;
+    private Output</* @Nullable */ List<GetProtectionCapabilityGroupTagsFilter>> filters;
 
-    public Optional<List<GetProtectionCapabilityGroupTagsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetProtectionCapabilityGroupTagsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the entire name given.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return A filter to return only resources that matches given type.
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetProtectionCapabilityGroupTagsArgs() {}
@@ -101,14 +101,28 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetProtectionCapabilityGroupTagsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetProtectionCapabilityGroupTagsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetProtectionCapabilityGroupTagsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetProtectionCapabilityGroupTagsFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param type A filter to return only resources that matches given type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetProtectionCapabilityGroupTagsArgs extends com.pulumi.resou
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetProtectionCapabilityGroupTagsArgs build() {

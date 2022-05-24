@@ -16,10 +16,10 @@ import com.pulumi.azurenative.keyvault.outputs.GetManagedHsmResult;
 import com.pulumi.azurenative.keyvault.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.keyvault.outputs.GetSecretResult;
 import com.pulumi.azurenative.keyvault.outputs.GetVaultResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KeyvaultFunctions {
     /**
@@ -27,7 +27,7 @@ public final class KeyvaultFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -35,15 +35,15 @@ public final class KeyvaultFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Private endpoint connection resource.
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetMHSMPrivateEndpointConnectionResult> getMHSMPrivateEndpointConnection(GetMHSMPrivateEndpointConnectionArgs args) {
+    public static Output<GetMHSMPrivateEndpointConnectionResult> getMHSMPrivateEndpointConnection(GetMHSMPrivateEndpointConnectionArgs args) {
         return getMHSMPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -51,15 +51,15 @@ public final class KeyvaultFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetMHSMPrivateEndpointConnectionResult> getMHSMPrivateEndpointConnection(GetMHSMPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getMHSMPrivateEndpointConnection", TypeShape.of(GetMHSMPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMHSMPrivateEndpointConnectionResult> getMHSMPrivateEndpointConnection(GetMHSMPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getMHSMPrivateEndpointConnection", TypeShape.of(GetMHSMPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource information with extended details.
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedHsmResult> getManagedHsm(GetManagedHsmArgs args) {
+    public static Output<GetManagedHsmResult> getManagedHsm(GetManagedHsmArgs args) {
         return getManagedHsm(args, InvokeOptions.Empty);
     }
     /**
@@ -67,15 +67,15 @@ public final class KeyvaultFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedHsmResult> getManagedHsm(GetManagedHsmArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getManagedHsm", TypeShape.of(GetManagedHsmResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedHsmResult> getManagedHsm(GetManagedHsmArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getManagedHsm", TypeShape.of(GetManagedHsmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Private endpoint connection resource.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -83,15 +83,15 @@ public final class KeyvaultFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource information with extended details.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
     /**
@@ -99,15 +99,15 @@ public final class KeyvaultFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource information with extended details.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+    public static Output<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
     /**
@@ -115,7 +115,7 @@ public final class KeyvaultFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:keyvault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:keyvault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
 }

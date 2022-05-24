@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotsitewise.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assetId", required=true)
-    private String assetId;
+    private Output<String> assetId;
 
     /**
      * @return The ID of the asset
      * 
      */
-    public String assetId() {
+    public Output<String> assetId() {
         return this.assetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder assetId(String assetId) {
+        public Builder assetId(Output<String> assetId) {
             $.assetId = assetId;
             return this;
+        }
+
+        /**
+         * @param assetId The ID of the asset
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assetId(String assetId) {
+            return assetId(Output.of(assetId));
         }
 
         public GetAssetArgs build() {

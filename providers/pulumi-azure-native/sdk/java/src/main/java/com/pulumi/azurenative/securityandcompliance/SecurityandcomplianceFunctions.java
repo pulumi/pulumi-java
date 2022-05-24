@@ -28,10 +28,10 @@ import com.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServic
 import com.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForMIPPolicySyncResult;
 import com.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForO365ManagementActivityAPIResult;
 import com.pulumi.azurenative.securityandcompliance.outputs.GetprivateLinkServicesForSCCPowershellResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SecurityandcomplianceFunctions {
     /**
@@ -39,7 +39,7 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsAdtAPIResult> getPrivateEndpointConnectionsAdtAPI(GetPrivateEndpointConnectionsAdtAPIArgs args) {
+    public static Output<GetPrivateEndpointConnectionsAdtAPIResult> getPrivateEndpointConnectionsAdtAPI(GetPrivateEndpointConnectionsAdtAPIArgs args) {
         return getPrivateEndpointConnectionsAdtAPI(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsAdtAPIResult> getPrivateEndpointConnectionsAdtAPI(GetPrivateEndpointConnectionsAdtAPIArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsAdtAPI", TypeShape.of(GetPrivateEndpointConnectionsAdtAPIResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsAdtAPIResult> getPrivateEndpointConnectionsAdtAPI(GetPrivateEndpointConnectionsAdtAPIArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsAdtAPI", TypeShape.of(GetPrivateEndpointConnectionsAdtAPIResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsCompResult> getPrivateEndpointConnectionsComp(GetPrivateEndpointConnectionsCompArgs args) {
+    public static Output<GetPrivateEndpointConnectionsCompResult> getPrivateEndpointConnectionsComp(GetPrivateEndpointConnectionsCompArgs args) {
         return getPrivateEndpointConnectionsComp(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsCompResult> getPrivateEndpointConnectionsComp(GetPrivateEndpointConnectionsCompArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsComp", TypeShape.of(GetPrivateEndpointConnectionsCompResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsCompResult> getPrivateEndpointConnectionsComp(GetPrivateEndpointConnectionsCompArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsComp", TypeShape.of(GetPrivateEndpointConnectionsCompResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForEDMResult> getPrivateEndpointConnectionsForEDM(GetPrivateEndpointConnectionsForEDMArgs args) {
+    public static Output<GetPrivateEndpointConnectionsForEDMResult> getPrivateEndpointConnectionsForEDM(GetPrivateEndpointConnectionsForEDMArgs args) {
         return getPrivateEndpointConnectionsForEDM(args, InvokeOptions.Empty);
     }
     /**
@@ -79,15 +79,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForEDMResult> getPrivateEndpointConnectionsForEDM(GetPrivateEndpointConnectionsForEDMArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsForEDM", TypeShape.of(GetPrivateEndpointConnectionsForEDMResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsForEDMResult> getPrivateEndpointConnectionsForEDM(GetPrivateEndpointConnectionsForEDMArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsForEDM", TypeShape.of(GetPrivateEndpointConnectionsForEDMResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForMIPPolicySyncResult> getPrivateEndpointConnectionsForMIPPolicySync(GetPrivateEndpointConnectionsForMIPPolicySyncArgs args) {
+    public static Output<GetPrivateEndpointConnectionsForMIPPolicySyncResult> getPrivateEndpointConnectionsForMIPPolicySync(GetPrivateEndpointConnectionsForMIPPolicySyncArgs args) {
         return getPrivateEndpointConnectionsForMIPPolicySync(args, InvokeOptions.Empty);
     }
     /**
@@ -95,15 +95,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForMIPPolicySyncResult> getPrivateEndpointConnectionsForMIPPolicySync(GetPrivateEndpointConnectionsForMIPPolicySyncArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsForMIPPolicySync", TypeShape.of(GetPrivateEndpointConnectionsForMIPPolicySyncResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsForMIPPolicySyncResult> getPrivateEndpointConnectionsForMIPPolicySync(GetPrivateEndpointConnectionsForMIPPolicySyncArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsForMIPPolicySync", TypeShape.of(GetPrivateEndpointConnectionsForMIPPolicySyncResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> getPrivateEndpointConnectionsForSCCPowershell(GetPrivateEndpointConnectionsForSCCPowershellArgs args) {
+    public static Output<GetPrivateEndpointConnectionsForSCCPowershellResult> getPrivateEndpointConnectionsForSCCPowershell(GetPrivateEndpointConnectionsForSCCPowershellArgs args) {
         return getPrivateEndpointConnectionsForSCCPowershell(args, InvokeOptions.Empty);
     }
     /**
@@ -111,15 +111,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> getPrivateEndpointConnectionsForSCCPowershell(GetPrivateEndpointConnectionsForSCCPowershellArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsForSCCPowershell", TypeShape.of(GetPrivateEndpointConnectionsForSCCPowershellResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsForSCCPowershellResult> getPrivateEndpointConnectionsForSCCPowershell(GetPrivateEndpointConnectionsForSCCPowershellArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsForSCCPowershell", TypeShape.of(GetPrivateEndpointConnectionsForSCCPowershellResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> getPrivateEndpointConnectionsSec(GetPrivateEndpointConnectionsSecArgs args) {
+    public static Output<GetPrivateEndpointConnectionsSecResult> getPrivateEndpointConnectionsSec(GetPrivateEndpointConnectionsSecArgs args) {
         return getPrivateEndpointConnectionsSec(args, InvokeOptions.Empty);
     }
     /**
@@ -127,15 +127,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> getPrivateEndpointConnectionsSec(GetPrivateEndpointConnectionsSecArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsSec", TypeShape.of(GetPrivateEndpointConnectionsSecResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionsSecResult> getPrivateEndpointConnectionsSec(GetPrivateEndpointConnectionsSecArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getPrivateEndpointConnectionsSec", TypeShape.of(GetPrivateEndpointConnectionsSecResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForEDMUploadResult> getprivateLinkServicesForEDMUpload(GetprivateLinkServicesForEDMUploadArgs args) {
+    public static Output<GetprivateLinkServicesForEDMUploadResult> getprivateLinkServicesForEDMUpload(GetprivateLinkServicesForEDMUploadArgs args) {
         return getprivateLinkServicesForEDMUpload(args, InvokeOptions.Empty);
     }
     /**
@@ -143,15 +143,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForEDMUploadResult> getprivateLinkServicesForEDMUpload(GetprivateLinkServicesForEDMUploadArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForEDMUpload", TypeShape.of(GetprivateLinkServicesForEDMUploadResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForEDMUploadResult> getprivateLinkServicesForEDMUpload(GetprivateLinkServicesForEDMUploadArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForEDMUpload", TypeShape.of(GetprivateLinkServicesForEDMUploadResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForM365ComplianceCenterResult> getprivateLinkServicesForM365ComplianceCenter(GetprivateLinkServicesForM365ComplianceCenterArgs args) {
+    public static Output<GetprivateLinkServicesForM365ComplianceCenterResult> getprivateLinkServicesForM365ComplianceCenter(GetprivateLinkServicesForM365ComplianceCenterArgs args) {
         return getprivateLinkServicesForM365ComplianceCenter(args, InvokeOptions.Empty);
     }
     /**
@@ -159,15 +159,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForM365ComplianceCenterResult> getprivateLinkServicesForM365ComplianceCenter(GetprivateLinkServicesForM365ComplianceCenterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForM365ComplianceCenter", TypeShape.of(GetprivateLinkServicesForM365ComplianceCenterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForM365ComplianceCenterResult> getprivateLinkServicesForM365ComplianceCenter(GetprivateLinkServicesForM365ComplianceCenterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForM365ComplianceCenter", TypeShape.of(GetprivateLinkServicesForM365ComplianceCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForM365SecurityCenterResult> getprivateLinkServicesForM365SecurityCenter(GetprivateLinkServicesForM365SecurityCenterArgs args) {
+    public static Output<GetprivateLinkServicesForM365SecurityCenterResult> getprivateLinkServicesForM365SecurityCenter(GetprivateLinkServicesForM365SecurityCenterArgs args) {
         return getprivateLinkServicesForM365SecurityCenter(args, InvokeOptions.Empty);
     }
     /**
@@ -175,15 +175,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForM365SecurityCenterResult> getprivateLinkServicesForM365SecurityCenter(GetprivateLinkServicesForM365SecurityCenterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForM365SecurityCenter", TypeShape.of(GetprivateLinkServicesForM365SecurityCenterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForM365SecurityCenterResult> getprivateLinkServicesForM365SecurityCenter(GetprivateLinkServicesForM365SecurityCenterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForM365SecurityCenter", TypeShape.of(GetprivateLinkServicesForM365SecurityCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForMIPPolicySyncResult> getprivateLinkServicesForMIPPolicySync(GetprivateLinkServicesForMIPPolicySyncArgs args) {
+    public static Output<GetprivateLinkServicesForMIPPolicySyncResult> getprivateLinkServicesForMIPPolicySync(GetprivateLinkServicesForMIPPolicySyncArgs args) {
         return getprivateLinkServicesForMIPPolicySync(args, InvokeOptions.Empty);
     }
     /**
@@ -191,15 +191,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForMIPPolicySyncResult> getprivateLinkServicesForMIPPolicySync(GetprivateLinkServicesForMIPPolicySyncArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForMIPPolicySync", TypeShape.of(GetprivateLinkServicesForMIPPolicySyncResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForMIPPolicySyncResult> getprivateLinkServicesForMIPPolicySync(GetprivateLinkServicesForMIPPolicySyncArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForMIPPolicySync", TypeShape.of(GetprivateLinkServicesForMIPPolicySyncResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> getprivateLinkServicesForO365ManagementActivityAPI(GetprivateLinkServicesForO365ManagementActivityAPIArgs args) {
+    public static Output<GetprivateLinkServicesForO365ManagementActivityAPIResult> getprivateLinkServicesForO365ManagementActivityAPI(GetprivateLinkServicesForO365ManagementActivityAPIArgs args) {
         return getprivateLinkServicesForO365ManagementActivityAPI(args, InvokeOptions.Empty);
     }
     /**
@@ -207,15 +207,15 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForO365ManagementActivityAPIResult> getprivateLinkServicesForO365ManagementActivityAPI(GetprivateLinkServicesForO365ManagementActivityAPIArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForO365ManagementActivityAPI", TypeShape.of(GetprivateLinkServicesForO365ManagementActivityAPIResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForO365ManagementActivityAPIResult> getprivateLinkServicesForO365ManagementActivityAPI(GetprivateLinkServicesForO365ManagementActivityAPIArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForO365ManagementActivityAPI", TypeShape.of(GetprivateLinkServicesForO365ManagementActivityAPIResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the service.
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForSCCPowershellResult> getprivateLinkServicesForSCCPowershell(GetprivateLinkServicesForSCCPowershellArgs args) {
+    public static Output<GetprivateLinkServicesForSCCPowershellResult> getprivateLinkServicesForSCCPowershell(GetprivateLinkServicesForSCCPowershellArgs args) {
         return getprivateLinkServicesForSCCPowershell(args, InvokeOptions.Empty);
     }
     /**
@@ -223,7 +223,7 @@ public final class SecurityandcomplianceFunctions {
      * API Version: 2021-03-08.
      * 
      */
-    public static CompletableFuture<GetprivateLinkServicesForSCCPowershellResult> getprivateLinkServicesForSCCPowershell(GetprivateLinkServicesForSCCPowershellArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForSCCPowershell", TypeShape.of(GetprivateLinkServicesForSCCPowershellResult.class), args, Utilities.withVersion(options));
+    public static Output<GetprivateLinkServicesForSCCPowershellResult> getprivateLinkServicesForSCCPowershell(GetprivateLinkServicesForSCCPowershellArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityandcompliance:getprivateLinkServicesForSCCPowershell", TypeShape.of(GetprivateLinkServicesForSCCPowershellResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.ml_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,105 +22,104 @@ import com.pulumi.googlenative.ml_v1.outputs.GetModelResult;
 import com.pulumi.googlenative.ml_v1.outputs.GetStudyResult;
 import com.pulumi.googlenative.ml_v1.outputs.GetTrialResult;
 import com.pulumi.googlenative.ml_v1.outputs.GetVersionResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Ml_v1Functions {
     /**
      * Describes a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
      * Describes a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args) {
+    public static Output<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args) {
         return getJobIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
+    public static Output<GetModelResult> getModel(GetModelArgs args) {
         return getModel(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetModelIamPolicyResult> getModelIamPolicy(GetModelIamPolicyArgs args) {
+    public static Output<GetModelIamPolicyResult> getModelIamPolicy(GetModelIamPolicyArgs args) {
         return getModelIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetModelIamPolicyResult> getModelIamPolicy(GetModelIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getModelIamPolicy", TypeShape.of(GetModelIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetModelIamPolicyResult> getModelIamPolicy(GetModelIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getModelIamPolicy", TypeShape.of(GetModelIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a study.
      * 
      */
-    public static CompletableFuture<GetStudyResult> getStudy(GetStudyArgs args) {
+    public static Output<GetStudyResult> getStudy(GetStudyArgs args) {
         return getStudy(args, InvokeOptions.Empty);
     }
     /**
      * Gets a study.
      * 
      */
-    public static CompletableFuture<GetStudyResult> getStudy(GetStudyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getStudy", TypeShape.of(GetStudyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStudyResult> getStudy(GetStudyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getStudy", TypeShape.of(GetStudyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a trial.
      * 
      */
-    public static CompletableFuture<GetTrialResult> getTrial(GetTrialArgs args) {
+    public static Output<GetTrialResult> getTrial(GetTrialArgs args) {
         return getTrial(args, InvokeOptions.Empty);
     }
     /**
      * Gets a trial.
      * 
      */
-    public static CompletableFuture<GetTrialResult> getTrial(GetTrialArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getTrial", TypeShape.of(GetTrialResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTrialResult> getTrial(GetTrialArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getTrial", TypeShape.of(GetTrialResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a model version. Models can have multiple versions. You can call projects.models.versions.list to get the same information that this method returns for all of the versions of a model.
      * 
      */
-    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args) {
+    public static Output<GetVersionResult> getVersion(GetVersionArgs args) {
         return getVersion(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a model version. Models can have multiple versions. You can call projects.models.versions.list to get the same information that this method returns for all of the versions of a model.
      * 
      */
-    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:ml/v1:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:ml/v1:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
     }
 }

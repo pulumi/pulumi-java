@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     public static final GetServerCertificateArgs Empty = new GetServerCertificateArgs();
 
     @Import(name="serverCertificateName", required=true)
-    private String serverCertificateName;
+    private Output<String> serverCertificateName;
 
-    public String serverCertificateName() {
+    public Output<String> serverCertificateName() {
         return this.serverCertificateName;
     }
 
@@ -43,9 +44,13 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
             $ = new GetServerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder serverCertificateName(String serverCertificateName) {
+        public Builder serverCertificateName(Output<String> serverCertificateName) {
             $.serverCertificateName = serverCertificateName;
             return this;
+        }
+
+        public Builder serverCertificateName(String serverCertificateName) {
+            return serverCertificateName(Output.of(serverCertificateName));
         }
 
         public GetServerCertificateArgs build() {

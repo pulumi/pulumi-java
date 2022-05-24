@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-    private String vmScaleSetName;
+    private Output<String> vmScaleSetName;
 
     /**
      * @return The name of the VM scale set containing the extension.
      * 
      */
-    public String vmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -64,13 +64,13 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
      * 
      */
     @Import(name="vmssExtensionName", required=true)
-    private String vmssExtensionName;
+    private Output<String> vmssExtensionName;
 
     /**
      * @return The name of the VM scale set extension.
      * 
      */
-    public String vmssExtensionName() {
+    public Output<String> vmssExtensionName() {
         return this.vmssExtensionName;
     }
 
@@ -107,8 +107,29 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmScaleSetName The name of the VM scale set containing the extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
+            $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
          * 
          */
         public Builder vmScaleSetName(String vmScaleSetName) {
-            $.vmScaleSetName = vmScaleSetName;
+            return vmScaleSetName(Output.of(vmScaleSetName));
+        }
+
+        /**
+         * @param vmssExtensionName The name of the VM scale set extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmssExtensionName(Output<String> vmssExtensionName) {
+            $.vmssExtensionName = vmssExtensionName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
          * 
          */
         public Builder vmssExtensionName(String vmssExtensionName) {
-            $.vmssExtensionName = vmssExtensionName;
-            return this;
+            return vmssExtensionName(Output.of(vmssExtensionName));
         }
 
         public GetVirtualMachineScaleSetExtensionArgs build() {

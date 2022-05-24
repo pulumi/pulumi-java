@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="consoleName", required=true)
-    private String consoleName;
+    private Output<String> consoleName;
 
     /**
      * @return The name of the console
      * 
      */
-    public String consoleName() {
+    public Output<String> consoleName() {
         return this.consoleName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The provider location
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -73,8 +74,29 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder consoleName(String consoleName) {
+        public Builder consoleName(Output<String> consoleName) {
             $.consoleName = consoleName;
+            return this;
+        }
+
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consoleName(String consoleName) {
+            return consoleName(Output.of(consoleName));
+        }
+
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder location(String location) {
-            $.location = location;
-            return this;
+            return location(Output.of(location));
         }
 
         public GetConsoleWithLocationArgs build() {

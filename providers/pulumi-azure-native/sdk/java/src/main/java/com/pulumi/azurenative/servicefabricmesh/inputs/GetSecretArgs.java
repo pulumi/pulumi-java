@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretResourceName", required=true)
-    private String secretResourceName;
+    private Output<String> secretResourceName;
 
     /**
      * @return The name of the secret resource.
      * 
      */
-    public String secretResourceName() {
+    public Output<String> secretResourceName() {
         return this.secretResourceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretResourceName(Output<String> secretResourceName) {
+            $.secretResourceName = secretResourceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder secretResourceName(String secretResourceName) {
-            $.secretResourceName = secretResourceName;
-            return this;
+            return secretResourceName(Output.of(secretResourceName));
         }
 
         public GetSecretArgs build() {

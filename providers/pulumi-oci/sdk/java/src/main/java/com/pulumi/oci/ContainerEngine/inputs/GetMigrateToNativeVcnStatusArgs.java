@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetMigrateToNativeVcnStatusArgs extends com.pulumi.resources.
     public static final GetMigrateToNativeVcnStatusArgs Empty = new GetMigrateToNativeVcnStatusArgs();
 
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -43,9 +44,13 @@ public final class GetMigrateToNativeVcnStatusArgs extends com.pulumi.resources.
             $ = new GetMigrateToNativeVcnStatusArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
+        }
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
 
         public GetMigrateToNativeVcnStatusArgs build() {

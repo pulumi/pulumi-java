@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.attestation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="providerName", required=true)
-    private String providerName;
+    private Output<String> providerName;
 
     /**
      * @return Name of the attestation provider.
      * 
      */
-    public String providerName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder providerName(String providerName) {
+        public Builder providerName(Output<String> providerName) {
             $.providerName = providerName;
+            return this;
+        }
+
+        /**
+         * @param providerName Name of the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(String providerName) {
+            return providerName(Output.of(providerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAttestationProviderArgs build() {

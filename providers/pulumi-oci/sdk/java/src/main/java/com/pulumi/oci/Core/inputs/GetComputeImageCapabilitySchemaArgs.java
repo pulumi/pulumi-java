@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
      * 
      */
     @Import(name="computeImageCapabilitySchemaId", required=true)
-    private String computeImageCapabilitySchemaId;
+    private Output<String> computeImageCapabilitySchemaId;
 
     /**
      * @return The id of the compute image capability schema or the image ocid
      * 
      */
-    public String computeImageCapabilitySchemaId() {
+    public Output<String> computeImageCapabilitySchemaId() {
         return this.computeImageCapabilitySchemaId;
     }
 
@@ -34,14 +34,14 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
      * 
      */
     @Import(name="isMergeEnabled")
-    private @Nullable String isMergeEnabled;
+    private Output</* @Nullable */ String> isMergeEnabled;
 
     /**
      * @return Merge the image capability schema with the global image capability schema
      * 
      */
-    public Optional<String> isMergeEnabled() {
-        return Optional.ofNullable(this.isMergeEnabled);
+    public Output</* @Nullable */ String> isMergeEnabled() {
+        return this.isMergeEnabled;
     }
 
     private GetComputeImageCapabilitySchemaArgs() {}
@@ -75,8 +75,29 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder computeImageCapabilitySchemaId(String computeImageCapabilitySchemaId) {
+        public Builder computeImageCapabilitySchemaId(Output<String> computeImageCapabilitySchemaId) {
             $.computeImageCapabilitySchemaId = computeImageCapabilitySchemaId;
+            return this;
+        }
+
+        /**
+         * @param computeImageCapabilitySchemaId The id of the compute image capability schema or the image ocid
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeImageCapabilitySchemaId(String computeImageCapabilitySchemaId) {
+            return computeImageCapabilitySchemaId(Output.of(computeImageCapabilitySchemaId));
+        }
+
+        /**
+         * @param isMergeEnabled Merge the image capability schema with the global image capability schema
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isMergeEnabled(Output</* @Nullable */ String> isMergeEnabled) {
+            $.isMergeEnabled = isMergeEnabled;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
          * 
          */
         public Builder isMergeEnabled(@Nullable String isMergeEnabled) {
-            $.isMergeEnabled = isMergeEnabled;
-            return this;
+            return isMergeEnabled(Output.of(isMergeEnabled));
         }
 
         public GetComputeImageCapabilitySchemaArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExadataInsightArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="exadataInsightId", required=true)
-    private String exadataInsightId;
+    private Output<String> exadataInsightId;
 
     /**
      * @return Unique Exadata insight identifier
      * 
      */
-    public String exadataInsightId() {
+    public Output<String> exadataInsightId() {
         return this.exadataInsightId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExadataInsightArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder exadataInsightId(String exadataInsightId) {
+        public Builder exadataInsightId(Output<String> exadataInsightId) {
             $.exadataInsightId = exadataInsightId;
             return this;
+        }
+
+        /**
+         * @param exadataInsightId Unique Exadata insight identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInsightId(String exadataInsightId) {
+            return exadataInsightId(Output.of(exadataInsightId));
         }
 
         public GetExadataInsightArgs build() {

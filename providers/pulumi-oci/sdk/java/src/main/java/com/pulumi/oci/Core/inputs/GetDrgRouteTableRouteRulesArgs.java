@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetDrgRouteTableRouteRulesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="drgRouteTableId", required=true)
-    private String drgRouteTableId;
+    private Output<String> drgRouteTableId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
      * 
      */
-    public String drgRouteTableId() {
+    public Output<String> drgRouteTableId() {
         return this.drgRouteTableId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDrgRouteTableRouteRulesFilter> filters;
+    private Output</* @Nullable */ List<GetDrgRouteTableRouteRulesFilter>> filters;
 
-    public Optional<List<GetDrgRouteTableRouteRulesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDrgRouteTableRouteRulesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="routeType")
-    private @Nullable String routeType;
+    private Output</* @Nullable */ String> routeType;
 
     /**
      * @return Static routes are specified through the DRG route table API. Dynamic routes are learned by the DRG from the DRG attachments through various routing protocols.
      * 
      */
-    public Optional<String> routeType() {
-        return Optional.ofNullable(this.routeType);
+    public Output</* @Nullable */ String> routeType() {
+        return this.routeType;
     }
 
     private GetDrgRouteTableRouteRulesArgs() {}
@@ -85,14 +85,28 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder drgRouteTableId(String drgRouteTableId) {
+        public Builder drgRouteTableId(Output<String> drgRouteTableId) {
             $.drgRouteTableId = drgRouteTableId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteTableRouteRulesFilter> filters) {
+        /**
+         * @param drgRouteTableId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteTableId(String drgRouteTableId) {
+            return drgRouteTableId(Output.of(drgRouteTableId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDrgRouteTableRouteRulesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDrgRouteTableRouteRulesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDrgRouteTableRouteRulesFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder routeType(@Nullable String routeType) {
+        public Builder routeType(Output</* @Nullable */ String> routeType) {
             $.routeType = routeType;
             return this;
+        }
+
+        /**
+         * @param routeType Static routes are specified through the DRG route table API. Dynamic routes are learned by the DRG from the DRG attachments through various routing protocols.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeType(@Nullable String routeType) {
+            return routeType(Output.of(routeType));
         }
 
         public GetDrgRouteTableRouteRulesArgs build() {

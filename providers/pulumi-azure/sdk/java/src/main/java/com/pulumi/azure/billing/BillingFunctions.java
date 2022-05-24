@@ -10,10 +10,10 @@ import com.pulumi.azure.billing.inputs.GetMpaAccountScopeArgs;
 import com.pulumi.azure.billing.outputs.GetEnrollmentAccountScopeResult;
 import com.pulumi.azure.billing.outputs.GetMcaAccountScopeResult;
 import com.pulumi.azure.billing.outputs.GetMpaAccountScopeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BillingFunctions {
     /**
@@ -45,7 +45,7 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnrollmentAccountScopeResult> getEnrollmentAccountScope(GetEnrollmentAccountScopeArgs args) {
+    public static Output<GetEnrollmentAccountScopeResult> getEnrollmentAccountScope(GetEnrollmentAccountScopeArgs args) {
         return getEnrollmentAccountScope(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnrollmentAccountScopeResult> getEnrollmentAccountScope(GetEnrollmentAccountScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:billing/getEnrollmentAccountScope:getEnrollmentAccountScope", TypeShape.of(GetEnrollmentAccountScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnrollmentAccountScopeResult> getEnrollmentAccountScope(GetEnrollmentAccountScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:billing/getEnrollmentAccountScope:getEnrollmentAccountScope", TypeShape.of(GetEnrollmentAccountScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access an ID for your MCA Account billing scope.
@@ -110,7 +110,7 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMcaAccountScopeResult> getMcaAccountScope(GetMcaAccountScopeArgs args) {
+    public static Output<GetMcaAccountScopeResult> getMcaAccountScope(GetMcaAccountScopeArgs args) {
         return getMcaAccountScope(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMcaAccountScopeResult> getMcaAccountScope(GetMcaAccountScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:billing/getMcaAccountScope:getMcaAccountScope", TypeShape.of(GetMcaAccountScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMcaAccountScopeResult> getMcaAccountScope(GetMcaAccountScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:billing/getMcaAccountScope:getMcaAccountScope", TypeShape.of(GetMcaAccountScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access an ID for your MPA Account billing scope.
@@ -175,7 +175,7 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMpaAccountScopeResult> getMpaAccountScope(GetMpaAccountScopeArgs args) {
+    public static Output<GetMpaAccountScopeResult> getMpaAccountScope(GetMpaAccountScopeArgs args) {
         return getMpaAccountScope(args, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +207,7 @@ public final class BillingFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMpaAccountScopeResult> getMpaAccountScope(GetMpaAccountScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:billing/getMpaAccountScope:getMpaAccountScope", TypeShape.of(GetMpaAccountScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMpaAccountScopeResult> getMpaAccountScope(GetMpaAccountScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:billing/getMpaAccountScope:getMpaAccountScope", TypeShape.of(GetMpaAccountScopeResult.class), args, Utilities.withVersion(options));
     }
 }

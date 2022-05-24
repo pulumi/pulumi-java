@@ -4,13 +4,13 @@
 package com.pulumi.azure.eventgrid.inputs;
 
 import com.pulumi.azure.eventgrid.inputs.GetDomainInboundIpRule;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inboundIpRules")
-    private @Nullable List<GetDomainInboundIpRule> inboundIpRules;
+    private Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules;
 
     /**
      * @return One or more `inbound_ip_rule` blocks as defined below.
      * 
      */
-    public Optional<List<GetDomainInboundIpRule>> inboundIpRules() {
-        return Optional.ofNullable(this.inboundIpRules);
+    public Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules() {
+        return this.inboundIpRules;
     }
 
     /**
@@ -38,13 +38,13 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the EventGrid Domain resource.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -53,14 +53,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicNetworkAccessEnabled")
-    private @Nullable Boolean publicNetworkAccessEnabled;
+    private Output</* @Nullable */ Boolean> publicNetworkAccessEnabled;
 
     /**
      * @return Whether or not public network access is allowed for this server.
      * 
      */
-    public Optional<Boolean> publicNetworkAccessEnabled() {
-        return Optional.ofNullable(this.publicNetworkAccessEnabled);
+    public Output</* @Nullable */ Boolean> publicNetworkAccessEnabled() {
+        return this.publicNetworkAccessEnabled;
     }
 
     /**
@@ -68,13 +68,13 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the EventGrid Domain exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,14 +83,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A mapping of tags assigned to the EventGrid Domain.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     private GetDomainArgs() {}
@@ -127,9 +127,19 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder inboundIpRules(@Nullable List<GetDomainInboundIpRule> inboundIpRules) {
+        public Builder inboundIpRules(Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules) {
             $.inboundIpRules = inboundIpRules;
             return this;
+        }
+
+        /**
+         * @param inboundIpRules One or more `inbound_ip_rule` blocks as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inboundIpRules(@Nullable List<GetDomainInboundIpRule> inboundIpRules) {
+            return inboundIpRules(Output.of(inboundIpRules));
         }
 
         /**
@@ -148,8 +158,29 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the EventGrid Domain resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param publicNetworkAccessEnabled Whether or not public network access is allowed for this server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicNetworkAccessEnabled(Output</* @Nullable */ Boolean> publicNetworkAccessEnabled) {
+            $.publicNetworkAccessEnabled = publicNetworkAccessEnabled;
             return this;
         }
 
@@ -160,7 +191,17 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder publicNetworkAccessEnabled(@Nullable Boolean publicNetworkAccessEnabled) {
-            $.publicNetworkAccessEnabled = publicNetworkAccessEnabled;
+            return publicNetworkAccessEnabled(Output.of(publicNetworkAccessEnabled));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the EventGrid Domain exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -171,7 +212,17 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tags A mapping of tags assigned to the EventGrid Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -182,8 +233,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+            return tags(Output.of(tags));
         }
 
         public GetDomainArgs build() {

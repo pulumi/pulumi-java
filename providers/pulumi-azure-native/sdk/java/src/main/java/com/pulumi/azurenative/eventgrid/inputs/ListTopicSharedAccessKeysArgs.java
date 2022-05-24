@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="topicName", required=true)
-    private String topicName;
+    private Output<String> topicName;
 
     /**
      * @return Name of the topic.
      * 
      */
-    public String topicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -73,8 +74,29 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param topicName Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(Output<String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
          * 
          */
         public Builder topicName(String topicName) {
-            $.topicName = topicName;
-            return this;
+            return topicName(Output.of(topicName));
         }
 
         public ListTopicSharedAccessKeysArgs build() {

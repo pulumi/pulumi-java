@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetEnrollmentStatusesFilter> filters;
+    private Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters;
 
-    public Optional<List<GetEnrollmentStatusesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter that returns results that match the lifecycle state specified.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return A filter that returns results that match the Cloud Advisor enrollment status specified.
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     private GetEnrollmentStatusesArgs() {}
@@ -101,14 +101,28 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetEnrollmentStatusesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetEnrollmentStatusesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetEnrollmentStatusesFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter that returns results that match the lifecycle state specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param status A filter that returns results that match the Cloud Advisor enrollment status specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
-            return this;
+            return status(Output.of(status));
         }
 
         public GetEnrollmentStatusesArgs build() {

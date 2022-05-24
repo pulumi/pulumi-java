@@ -6,24 +6,24 @@ package com.pulumi.awsnative.finspace;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.finspace.inputs.GetEnvironmentArgs;
 import com.pulumi.awsnative.finspace.outputs.GetEnvironmentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class FinspaceFunctions {
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:finspace:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:finspace:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -14,80 +14,80 @@ import com.pulumi.awsnative.eks.outputs.GetClusterResult;
 import com.pulumi.awsnative.eks.outputs.GetFargateProfileResult;
 import com.pulumi.awsnative.eks.outputs.GetIdentityProviderConfigResult;
 import com.pulumi.awsnative.eks.outputs.GetNodegroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EksFunctions {
     /**
      * Resource Schema for AWS::EKS::Addon
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+    public static Output<GetAddonResult> getAddon(GetAddonArgs args) {
         return getAddon(args, InvokeOptions.Empty);
     }
     /**
      * Resource Schema for AWS::EKS::Addon
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eks:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eks:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object representing an Amazon EKS cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
      * An object representing an Amazon EKS cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eks:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eks:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::EKS::FargateProfile
      * 
      */
-    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args) {
+    public static Output<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args) {
         return getFargateProfile(args, InvokeOptions.Empty);
     }
     /**
      * Resource Schema for AWS::EKS::FargateProfile
      * 
      */
-    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eks:getFargateProfile", TypeShape.of(GetFargateProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eks:getFargateProfile", TypeShape.of(GetFargateProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object representing an Amazon EKS IdentityProviderConfig.
      * 
      */
-    public static CompletableFuture<GetIdentityProviderConfigResult> getIdentityProviderConfig(GetIdentityProviderConfigArgs args) {
+    public static Output<GetIdentityProviderConfigResult> getIdentityProviderConfig(GetIdentityProviderConfigArgs args) {
         return getIdentityProviderConfig(args, InvokeOptions.Empty);
     }
     /**
      * An object representing an Amazon EKS IdentityProviderConfig.
      * 
      */
-    public static CompletableFuture<GetIdentityProviderConfigResult> getIdentityProviderConfig(GetIdentityProviderConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eks:getIdentityProviderConfig", TypeShape.of(GetIdentityProviderConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIdentityProviderConfigResult> getIdentityProviderConfig(GetIdentityProviderConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eks:getIdentityProviderConfig", TypeShape.of(GetIdentityProviderConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::EKS::Nodegroup
      * 
      */
-    public static CompletableFuture<GetNodegroupResult> getNodegroup(GetNodegroupArgs args) {
+    public static Output<GetNodegroupResult> getNodegroup(GetNodegroupArgs args) {
         return getNodegroup(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::EKS::Nodegroup
      * 
      */
-    public static CompletableFuture<GetNodegroupResult> getNodegroup(GetNodegroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eks:getNodegroup", TypeShape.of(GetNodegroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodegroupResult> getNodegroup(GetNodegroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eks:getNodegroup", TypeShape.of(GetNodegroupResult.class), args, Utilities.withVersion(options));
     }
 }

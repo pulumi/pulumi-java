@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetVirtualCircuitBandwidthShapesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
     public static final GetVirtualCircuitBandwidthShapesArgs Empty = new GetVirtualCircuitBandwidthShapesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetVirtualCircuitBandwidthShapesFilter> filters;
+    private Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters;
 
-    public Optional<List<GetVirtualCircuitBandwidthShapesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="providerServiceId", required=true)
-    private String providerServiceId;
+    private Output<String> providerServiceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
      * 
      */
-    public String providerServiceId() {
+    public Output<String> providerServiceId() {
         return this.providerServiceId;
     }
 
@@ -63,9 +63,13 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
             $ = new GetVirtualCircuitBandwidthShapesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetVirtualCircuitBandwidthShapesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetVirtualCircuitBandwidthShapesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetVirtualCircuitBandwidthShapesFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder providerServiceId(String providerServiceId) {
+        public Builder providerServiceId(Output<String> providerServiceId) {
             $.providerServiceId = providerServiceId;
             return this;
+        }
+
+        /**
+         * @param providerServiceId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerServiceId(String providerServiceId) {
+            return providerServiceId(Output.of(providerServiceId));
         }
 
         public GetVirtualCircuitBandwidthShapesArgs build() {

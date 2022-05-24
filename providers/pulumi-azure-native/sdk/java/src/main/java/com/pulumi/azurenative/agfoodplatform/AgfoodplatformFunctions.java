@@ -8,10 +8,10 @@ import com.pulumi.azurenative.agfoodplatform.inputs.GetExtensionArgs;
 import com.pulumi.azurenative.agfoodplatform.inputs.GetFarmBeatsModelArgs;
 import com.pulumi.azurenative.agfoodplatform.outputs.GetExtensionResult;
 import com.pulumi.azurenative.agfoodplatform.outputs.GetFarmBeatsModelResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AgfoodplatformFunctions {
     /**
@@ -19,7 +19,7 @@ public final class AgfoodplatformFunctions {
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args) {
         return getExtension(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class AgfoodplatformFunctions {
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:agfoodplatform:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * FarmBeats ARM Resource.
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args) {
+    public static Output<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args) {
         return getFarmBeatsModel(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class AgfoodplatformFunctions {
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getFarmBeatsModel", TypeShape.of(GetFarmBeatsModelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:agfoodplatform:getFarmBeatsModel", TypeShape.of(GetFarmBeatsModelResult.class), args, Utilities.withVersion(options));
     }
 }

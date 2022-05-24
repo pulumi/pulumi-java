@@ -6,10 +6,10 @@ package com.pulumi.azure.maintenance;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.maintenance.inputs.GetConfigurationArgs;
 import com.pulumi.azure.maintenance.outputs.GetConfigurationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MaintenanceFunctions {
     /**
@@ -41,7 +41,7 @@ public final class MaintenanceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class MaintenanceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:maintenance/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:maintenance/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

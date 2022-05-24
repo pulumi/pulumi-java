@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.Limits.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return This field is mandatory if the scopeType of the target resource limit is AD. Otherwise, this field should be omitted. If the above requirements are not met, the API returns a 400 - InvalidParameter response.
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment for which data is being fetched.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -49,13 +49,13 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="limitName", required=true)
-    private String limitName;
+    private Output<String> limitName;
 
     /**
      * @return The limit name for which to fetch the data.
      * 
      */
-    public String limitName() {
+    public Output<String> limitName() {
         return this.limitName;
     }
 
@@ -64,13 +64,13 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The service name of the target quota.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -107,8 +107,29 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain This field is mandatory if the scopeType of the target resource limit is AD. Otherwise, this field should be omitted. If the above requirements are not met, the API returns a 400 - InvalidParameter response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment for which data is being fetched.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param limitName The limit name for which to fetch the data.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder limitName(Output<String> limitName) {
+            $.limitName = limitName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder limitName(String limitName) {
-            $.limitName = limitName;
+            return limitName(Output.of(limitName));
+        }
+
+        /**
+         * @param serviceName The service name of the target quota.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetResourceAvailabilityArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetResourceAvailabilityArgs build() {

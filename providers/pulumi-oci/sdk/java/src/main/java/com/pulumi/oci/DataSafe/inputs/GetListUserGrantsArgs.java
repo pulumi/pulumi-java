@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetListUserGrantsFilter;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevel")
-    private @Nullable Integer depthLevel;
+    private Output</* @Nullable */ Integer> depthLevel;
 
     /**
      * @return A filter to return only items that match the specified user grant depth level.
      * 
      */
-    public Optional<Integer> depthLevel() {
-        return Optional.ofNullable(this.depthLevel);
+    public Output</* @Nullable */ Integer> depthLevel() {
+        return this.depthLevel;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevelGreaterThanOrEqualTo")
-    private @Nullable Integer depthLevelGreaterThanOrEqualTo;
+    private Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only items that are at a level greater than or equal to the specified user grant depth level.
      * 
      */
-    public Optional<Integer> depthLevelGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.depthLevelGreaterThanOrEqualTo);
+    public Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo() {
+        return this.depthLevelGreaterThanOrEqualTo;
     }
 
     /**
@@ -52,21 +52,21 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevelLessThan")
-    private @Nullable Integer depthLevelLessThan;
+    private Output</* @Nullable */ Integer> depthLevelLessThan;
 
     /**
      * @return A filter to return only items that are at a level less than the specified user grant depth level.
      * 
      */
-    public Optional<Integer> depthLevelLessThan() {
-        return Optional.ofNullable(this.depthLevelLessThan);
+    public Output</* @Nullable */ Integer> depthLevelLessThan() {
+        return this.depthLevelLessThan;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetListUserGrantsFilter> filters;
+    private Output</* @Nullable */ List<GetListUserGrantsFilter>> filters;
 
-    public Optional<List<GetListUserGrantsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetListUserGrantsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="grantKey")
-    private @Nullable String grantKey;
+    private Output</* @Nullable */ String> grantKey;
 
     /**
      * @return A filter to return only items that match the specified user grant key.
      * 
      */
-    public Optional<String> grantKey() {
-        return Optional.ofNullable(this.grantKey);
+    public Output</* @Nullable */ String> grantKey() {
+        return this.grantKey;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="grantName")
-    private @Nullable String grantName;
+    private Output</* @Nullable */ String> grantName;
 
     /**
      * @return A filter to return only items that match the specified user grant name.
      * 
      */
-    public Optional<String> grantName() {
-        return Optional.ofNullable(this.grantName);
+    public Output</* @Nullable */ String> grantName() {
+        return this.grantName;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privilegeCategory")
-    private @Nullable String privilegeCategory;
+    private Output</* @Nullable */ String> privilegeCategory;
 
     /**
      * @return A filter to return only items that match the specified user privilege category.
      * 
      */
-    public Optional<String> privilegeCategory() {
-        return Optional.ofNullable(this.privilegeCategory);
+    public Output</* @Nullable */ String> privilegeCategory() {
+        return this.privilegeCategory;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privilegeType")
-    private @Nullable String privilegeType;
+    private Output</* @Nullable */ String> privilegeType;
 
     /**
      * @return A filter to return only items that match the specified privilege grant type.
      * 
      */
-    public Optional<String> privilegeType() {
-        return Optional.ofNullable(this.privilegeType);
+    public Output</* @Nullable */ String> privilegeType() {
+        return this.privilegeType;
     }
 
     /**
@@ -134,13 +134,13 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userAssessmentId", required=true)
-    private String userAssessmentId;
+    private Output<String> userAssessmentId;
 
     /**
      * @return The OCID of the user assessment.
      * 
      */
-    public String userAssessmentId() {
+    public Output<String> userAssessmentId() {
         return this.userAssessmentId;
     }
 
@@ -149,13 +149,13 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userKey", required=true)
-    private String userKey;
+    private Output<String> userKey;
 
     /**
      * @return The unique user key. This is a system-generated identifier. ListUsers gets the user key for a user.
      * 
      */
-    public String userKey() {
+    public Output<String> userKey() {
         return this.userKey;
     }
 
@@ -198,8 +198,29 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevel(@Nullable Integer depthLevel) {
+        public Builder depthLevel(Output</* @Nullable */ Integer> depthLevel) {
             $.depthLevel = depthLevel;
+            return this;
+        }
+
+        /**
+         * @param depthLevel A filter to return only items that match the specified user grant depth level.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder depthLevel(@Nullable Integer depthLevel) {
+            return depthLevel(Output.of(depthLevel));
+        }
+
+        /**
+         * @param depthLevelGreaterThanOrEqualTo A filter to return only items that are at a level greater than or equal to the specified user grant depth level.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder depthLevelGreaterThanOrEqualTo(Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo) {
+            $.depthLevelGreaterThanOrEqualTo = depthLevelGreaterThanOrEqualTo;
             return this;
         }
 
@@ -210,7 +231,17 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder depthLevelGreaterThanOrEqualTo(@Nullable Integer depthLevelGreaterThanOrEqualTo) {
-            $.depthLevelGreaterThanOrEqualTo = depthLevelGreaterThanOrEqualTo;
+            return depthLevelGreaterThanOrEqualTo(Output.of(depthLevelGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param depthLevelLessThan A filter to return only items that are at a level less than the specified user grant depth level.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder depthLevelLessThan(Output</* @Nullable */ Integer> depthLevelLessThan) {
+            $.depthLevelLessThan = depthLevelLessThan;
             return this;
         }
 
@@ -221,13 +252,16 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder depthLevelLessThan(@Nullable Integer depthLevelLessThan) {
-            $.depthLevelLessThan = depthLevelLessThan;
+            return depthLevelLessThan(Output.of(depthLevelLessThan));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetListUserGrantsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetListUserGrantsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetListUserGrantsFilter... filters) {
@@ -240,8 +274,29 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder grantKey(@Nullable String grantKey) {
+        public Builder grantKey(Output</* @Nullable */ String> grantKey) {
             $.grantKey = grantKey;
+            return this;
+        }
+
+        /**
+         * @param grantKey A filter to return only items that match the specified user grant key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantKey(@Nullable String grantKey) {
+            return grantKey(Output.of(grantKey));
+        }
+
+        /**
+         * @param grantName A filter to return only items that match the specified user grant name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantName(Output</* @Nullable */ String> grantName) {
+            $.grantName = grantName;
             return this;
         }
 
@@ -252,7 +307,17 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder grantName(@Nullable String grantName) {
-            $.grantName = grantName;
+            return grantName(Output.of(grantName));
+        }
+
+        /**
+         * @param privilegeCategory A filter to return only items that match the specified user privilege category.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privilegeCategory(Output</* @Nullable */ String> privilegeCategory) {
+            $.privilegeCategory = privilegeCategory;
             return this;
         }
 
@@ -263,7 +328,17 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder privilegeCategory(@Nullable String privilegeCategory) {
-            $.privilegeCategory = privilegeCategory;
+            return privilegeCategory(Output.of(privilegeCategory));
+        }
+
+        /**
+         * @param privilegeType A filter to return only items that match the specified privilege grant type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privilegeType(Output</* @Nullable */ String> privilegeType) {
+            $.privilegeType = privilegeType;
             return this;
         }
 
@@ -274,7 +349,17 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder privilegeType(@Nullable String privilegeType) {
-            $.privilegeType = privilegeType;
+            return privilegeType(Output.of(privilegeType));
+        }
+
+        /**
+         * @param userAssessmentId The OCID of the user assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userAssessmentId(Output<String> userAssessmentId) {
+            $.userAssessmentId = userAssessmentId;
             return this;
         }
 
@@ -285,7 +370,17 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder userAssessmentId(String userAssessmentId) {
-            $.userAssessmentId = userAssessmentId;
+            return userAssessmentId(Output.of(userAssessmentId));
+        }
+
+        /**
+         * @param userKey The unique user key. This is a system-generated identifier. ListUsers gets the user key for a user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userKey(Output<String> userKey) {
+            $.userKey = userKey;
             return this;
         }
 
@@ -296,8 +391,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder userKey(String userKey) {
-            $.userKey = userKey;
-            return this;
+            return userKey(Output.of(userKey));
         }
 
         public GetListUserGrantsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Audit;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Audit.inputs.GetEventsArgs;
 import com.pulumi.oci.Audit.outputs.GetConfigurationResult;
 import com.pulumi.oci.Audit.outputs.GetEventsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class AuditFunctions {
     /**
@@ -22,7 +22,7 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Audit/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Audit/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Audit service.
@@ -45,7 +45,7 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEventsResult> getEvents(GetEventsArgs args) {
+    public static Output<GetEventsResult> getEvents(GetEventsArgs args) {
         return getEvents(args, InvokeOptions.Empty);
     }
     /**
@@ -57,7 +57,7 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEventsResult> getEvents(GetEventsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Audit/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventsResult> getEvents(GetEventsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Audit/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
     }
 }

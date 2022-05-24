@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Azure Video Analyzer account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="videoName", required=true)
-    private String videoName;
+    private Output<String> videoName;
 
     /**
      * @return The Video name.
      * 
      */
-    public String videoName() {
+    public Output<String> videoName() {
         return this.videoName;
     }
 
@@ -89,8 +90,29 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param videoName The Video name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder videoName(Output<String> videoName) {
+            $.videoName = videoName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder videoName(String videoName) {
-            $.videoName = videoName;
-            return this;
+            return videoName(Output.of(videoName));
         }
 
         public ListVideoContentTokenArgs build() {

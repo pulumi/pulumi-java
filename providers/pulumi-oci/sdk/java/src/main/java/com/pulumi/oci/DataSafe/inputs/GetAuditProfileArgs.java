@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAuditProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditProfileId", required=true)
-    private String auditProfileId;
+    private Output<String> auditProfileId;
 
     /**
      * @return The OCID of the audit.
      * 
      */
-    public String auditProfileId() {
+    public Output<String> auditProfileId() {
         return this.auditProfileId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAuditProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditProfileId(String auditProfileId) {
+        public Builder auditProfileId(Output<String> auditProfileId) {
             $.auditProfileId = auditProfileId;
             return this;
+        }
+
+        /**
+         * @param auditProfileId The OCID of the audit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditProfileId(String auditProfileId) {
+            return auditProfileId(Output.of(auditProfileId));
         }
 
         public GetAuditProfileArgs build() {

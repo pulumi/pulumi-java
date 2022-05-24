@@ -18,10 +18,10 @@ import com.pulumi.azurenative.peering.outputs.GetPeeringServiceResult;
 import com.pulumi.azurenative.peering.outputs.GetPrefixResult;
 import com.pulumi.azurenative.peering.outputs.GetRegisteredAsnResult;
 import com.pulumi.azurenative.peering.outputs.GetRegisteredPrefixResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PeeringFunctions {
     /**
@@ -29,7 +29,7 @@ public final class PeeringFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args) {
+    public static Output<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args) {
         return getConnectionMonitorTest(args, InvokeOptions.Empty);
     }
     /**
@@ -37,15 +37,15 @@ public final class PeeringFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The essential information related to the peer&#39;s ASN.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args) {
+    public static Output<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args) {
         return getPeerAsn(args, InvokeOptions.Empty);
     }
     /**
@@ -53,15 +53,15 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getPeerAsn", TypeShape.of(GetPeerAsnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getPeerAsn", TypeShape.of(GetPeerAsnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args) {
+    public static Output<GetPeeringResult> getPeering(GetPeeringArgs args) {
         return getPeering(args, InvokeOptions.Empty);
     }
     /**
@@ -69,15 +69,15 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getPeering", TypeShape.of(GetPeeringResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeeringResult> getPeering(GetPeeringArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getPeering", TypeShape.of(GetPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Peering Service
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args) {
+    public static Output<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args) {
         return getPeeringService(args, InvokeOptions.Empty);
     }
     /**
@@ -85,15 +85,15 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getPeeringService", TypeShape.of(GetPeeringServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getPeeringService", TypeShape.of(GetPeeringServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The peering service prefix class.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args) {
+    public static Output<GetPrefixResult> getPrefix(GetPrefixArgs args) {
         return getPrefix(args, InvokeOptions.Empty);
     }
     /**
@@ -101,15 +101,15 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrefixResult> getPrefix(GetPrefixArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The customer&#39;s ASN that is registered by the peering service provider.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args) {
+    public static Output<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args) {
         return getRegisteredAsn(args, InvokeOptions.Empty);
     }
     /**
@@ -117,15 +117,15 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredAsn", TypeShape.of(GetRegisteredAsnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getRegisteredAsn", TypeShape.of(GetRegisteredAsnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The customer&#39;s prefix that is registered by the peering service provider.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args) {
+    public static Output<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args) {
         return getRegisteredPrefix(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args, Utilities.withVersion(options));
     }
 }

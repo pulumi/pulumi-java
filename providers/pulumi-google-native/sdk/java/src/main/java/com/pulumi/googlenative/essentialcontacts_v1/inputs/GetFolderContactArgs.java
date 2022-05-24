@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.essentialcontacts_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetFolderContactArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetFolderContactArgs Empty = new GetFolderContactArgs();
 
     @Import(name="contactId", required=true)
-    private String contactId;
+    private Output<String> contactId;
 
-    public String contactId() {
+    public Output<String> contactId() {
         return this.contactId;
     }
 
     @Import(name="folderId", required=true)
-    private String folderId;
+    private Output<String> folderId;
 
-    public String folderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
@@ -51,14 +52,22 @@ public final class GetFolderContactArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetFolderContactArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder contactId(String contactId) {
+        public Builder contactId(Output<String> contactId) {
             $.contactId = contactId;
             return this;
         }
 
-        public Builder folderId(String folderId) {
+        public Builder contactId(String contactId) {
+            return contactId(Output.of(contactId));
+        }
+
+        public Builder folderId(Output<String> folderId) {
             $.folderId = folderId;
             return this;
+        }
+
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
 
         public GetFolderContactArgs build() {

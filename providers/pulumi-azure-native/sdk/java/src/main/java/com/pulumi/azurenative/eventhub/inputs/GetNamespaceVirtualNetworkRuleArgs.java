@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The Namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
-    private String virtualNetworkRuleName;
+    private Output<String> virtualNetworkRuleName;
 
     /**
      * @return The Virtual Network Rule name.
      * 
      */
-    public String virtualNetworkRuleName() {
+    public Output<String> virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder namespaceName(String namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkRuleName The Virtual Network Rule name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkRuleName(Output<String> virtualNetworkRuleName) {
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
          * 
          */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
-            $.virtualNetworkRuleName = virtualNetworkRuleName;
-            return this;
+            return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
         }
 
         public GetNamespaceVirtualNetworkRuleArgs build() {

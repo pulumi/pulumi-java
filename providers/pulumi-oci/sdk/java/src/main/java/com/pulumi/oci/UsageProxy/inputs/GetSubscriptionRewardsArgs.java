@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.UsageProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRewardsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
     public static final GetSubscriptionRewardsArgs Empty = new GetSubscriptionRewardsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSubscriptionRewardsFilter> filters;
+    private Output</* @Nullable */ List<GetSubscriptionRewardsFilter>> filters;
 
-    public Optional<List<GetSubscriptionRewardsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSubscriptionRewardsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The subscription ID for which rewards information is requested for.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -43,13 +43,13 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -79,9 +79,13 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
             $ = new GetSubscriptionRewardsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionRewardsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetSubscriptionRewardsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetSubscriptionRewardsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSubscriptionRewardsFilter... filters) {
@@ -94,8 +98,29 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder subscriptionId(String subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
+            return this;
+        }
+
+        /**
+         * @param subscriptionId The subscription ID for which rewards information is requested for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(Output<String> tenancyId) {
+            $.tenancyId = tenancyId;
             return this;
         }
 
@@ -106,8 +131,7 @@ public final class GetSubscriptionRewardsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder tenancyId(String tenancyId) {
-            $.tenancyId = tenancyId;
-            return this;
+            return tenancyId(Output.of(tenancyId));
         }
 
         public GetSubscriptionRewardsArgs build() {

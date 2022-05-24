@@ -6,10 +6,10 @@ package com.pulumi.azure.cdn;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.cdn.inputs.GetProfileArgs;
 import com.pulumi.azure.cdn.outputs.GetProfileResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CdnFunctions {
     /**
@@ -41,7 +41,7 @@ public final class CdnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args) {
+    public static Output<GetProfileResult> getProfile(GetProfileArgs args) {
         return getProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class CdnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:cdn/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cdn/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
 }

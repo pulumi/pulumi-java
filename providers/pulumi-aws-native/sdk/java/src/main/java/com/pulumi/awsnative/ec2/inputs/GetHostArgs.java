@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostId", required=true)
-    private String hostId;
+    private Output<String> hostId;
 
     /**
      * @return Id of the host created.
      * 
      */
-    public String hostId() {
+    public Output<String> hostId() {
         return this.hostId;
     }
 
@@ -57,9 +58,19 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostId(String hostId) {
+        public Builder hostId(Output<String> hostId) {
             $.hostId = hostId;
             return this;
+        }
+
+        /**
+         * @param hostId Id of the host created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostId(String hostId) {
+            return hostId(Output.of(hostId));
         }
 
         public GetHostArgs build() {

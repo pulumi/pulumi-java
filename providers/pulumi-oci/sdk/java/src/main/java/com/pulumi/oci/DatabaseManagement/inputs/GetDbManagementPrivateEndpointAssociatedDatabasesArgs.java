@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DatabaseManagement.inputs.GetDbManagementPrivateEndpointAssociatedDatabasesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabasesArgs extends
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabasesArgs extends
      * 
      */
     @Import(name="dbManagementPrivateEndpointId", required=true)
-    private String dbManagementPrivateEndpointId;
+    private Output<String> dbManagementPrivateEndpointId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
      * 
      */
-    public String dbManagementPrivateEndpointId() {
+    public Output<String> dbManagementPrivateEndpointId() {
         return this.dbManagementPrivateEndpointId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter> filters;
+    private Output</* @Nullable */ List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter>> filters;
 
-    public Optional<List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDbManagementPrivateEndpointAssociatedDatabasesArgs() {}
@@ -85,8 +85,29 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabasesArgs extends
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbManagementPrivateEndpointId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbManagementPrivateEndpointId(Output<String> dbManagementPrivateEndpointId) {
+            $.dbManagementPrivateEndpointId = dbManagementPrivateEndpointId;
             return this;
         }
 
@@ -97,13 +118,16 @@ public final class GetDbManagementPrivateEndpointAssociatedDatabasesArgs extends
          * 
          */
         public Builder dbManagementPrivateEndpointId(String dbManagementPrivateEndpointId) {
-            $.dbManagementPrivateEndpointId = dbManagementPrivateEndpointId;
+            return dbManagementPrivateEndpointId(Output.of(dbManagementPrivateEndpointId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDbManagementPrivateEndpointAssociatedDatabasesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbManagementPrivateEndpointAssociatedDatabasesFilter... filters) {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepName", required=true)
-    private String stepName;
+    private Output<String> stepName;
 
     /**
      * @return The name of the deployment step.
      * 
      */
-    public String stepName() {
+    public Output<String> stepName() {
         return this.stepName;
     }
 
@@ -73,8 +74,29 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param stepName The name of the deployment step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stepName(Output<String> stepName) {
+            $.stepName = stepName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stepName(String stepName) {
-            $.stepName = stepName;
-            return this;
+            return stepName(Output.of(stepName));
         }
 
         public GetStepArgs build() {

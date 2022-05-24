@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetEnvgroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEnvgroupArgs Empty = new GetEnvgroupArgs();
 
     @Import(name="envgroupId", required=true)
-    private String envgroupId;
+    private Output<String> envgroupId;
 
-    public String envgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetEnvgroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEnvgroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder envgroupId(String envgroupId) {
+        public Builder envgroupId(Output<String> envgroupId) {
             $.envgroupId = envgroupId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder envgroupId(String envgroupId) {
+            return envgroupId(Output.of(envgroupId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetEnvgroupArgs build() {

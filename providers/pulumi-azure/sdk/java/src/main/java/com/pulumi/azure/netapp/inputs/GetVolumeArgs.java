@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.netapp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the NetApp account where the NetApp pool exists.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,13 +34,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the NetApp Volume.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,13 +49,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolName", required=true)
-    private String poolName;
+    private Output<String> poolName;
 
     /**
      * @return The name of the NetApp pool where the NetApp volume exists.
      * 
      */
-    public String poolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -64,13 +64,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where the NetApp Volume exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,14 +79,14 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityStyle")
-    private @Nullable String securityStyle;
+    private Output</* @Nullable */ String> securityStyle;
 
     /**
      * @return Volume security style
      * 
      */
-    public Optional<String> securityStyle() {
-        return Optional.ofNullable(this.securityStyle);
+    public Output</* @Nullable */ String> securityStyle() {
+        return this.securityStyle;
     }
 
     private GetVolumeArgs() {}
@@ -123,8 +123,29 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the NetApp account where the NetApp pool exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param name The name of the NetApp Volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param poolName The name of the NetApp pool where the NetApp volume exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder poolName(Output<String> poolName) {
+            $.poolName = poolName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder poolName(String poolName) {
-            $.poolName = poolName;
+            return poolName(Output.of(poolName));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where the NetApp Volume exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityStyle Volume security style
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityStyle(Output</* @Nullable */ String> securityStyle) {
+            $.securityStyle = securityStyle;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder securityStyle(@Nullable String securityStyle) {
-            $.securityStyle = securityStyle;
-            return this;
+            return securityStyle(Output.of(securityStyle));
         }
 
         public GetVolumeArgs build() {

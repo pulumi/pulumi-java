@@ -8,38 +8,38 @@ import com.pulumi.awsnative.appintegrations.inputs.GetDataIntegrationArgs;
 import com.pulumi.awsnative.appintegrations.inputs.GetEventIntegrationArgs;
 import com.pulumi.awsnative.appintegrations.outputs.GetDataIntegrationResult;
 import com.pulumi.awsnative.appintegrations.outputs.GetEventIntegrationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppintegrationsFunctions {
     /**
      * Resource Type definition for AWS::AppIntegrations::DataIntegration
      * 
      */
-    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args) {
+    public static Output<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args) {
         return getDataIntegration(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::AppIntegrations::DataIntegration
      * 
      */
-    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getDataIntegration", TypeShape.of(GetDataIntegrationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:appintegrations:getDataIntegration", TypeShape.of(GetDataIntegrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppIntegrations::EventIntegration
      * 
      */
-    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args) {
+    public static Output<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args) {
         return getEventIntegration(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::AppIntegrations::EventIntegration
      * 
      */
-    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getEventIntegration", TypeShape.of(GetEventIntegrationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:appintegrations:getEventIntegration", TypeShape.of(GetEventIntegrationResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.GenericArtifactsContent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="artifactPath", required=true)
-    private String artifactPath;
+    private Output<String> artifactPath;
 
     /**
      * @return The generic artifact path.  Example: `foo/bar/baz`
      * 
      */
-    public String artifactPath() {
+    public Output<String> artifactPath() {
         return this.artifactPath;
     }
 
@@ -32,13 +33,13 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the repository.  Example: `ocid1.repository.oc1..exampleuniqueID`
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -47,13 +48,13 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version", required=true)
-    private String version;
+    private Output<String> version;
 
     /**
      * @return The generic artifact version.  Example: `1.1.2`
      * 
      */
-    public String version() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -89,8 +90,29 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder artifactPath(String artifactPath) {
+        public Builder artifactPath(Output<String> artifactPath) {
             $.artifactPath = artifactPath;
+            return this;
+        }
+
+        /**
+         * @param artifactPath The generic artifact path.  Example: `foo/bar/baz`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactPath(String artifactPath) {
+            return artifactPath(Output.of(artifactPath));
+        }
+
+        /**
+         * @param repositoryId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the repository.  Example: `ocid1.repository.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param version The generic artifact version.  Example: `1.1.2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetArtifactByPathArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder version(String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetArtifactByPathArgs build() {

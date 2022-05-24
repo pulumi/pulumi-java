@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExtendedLocationsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The Azure location to retrieve the Extended Locations for.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -57,9 +58,19 @@ public final class GetExtendedLocationsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
+        }
+
+        /**
+         * @param location The Azure location to retrieve the Extended Locations for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
 
         public GetExtendedLocationsArgs build() {

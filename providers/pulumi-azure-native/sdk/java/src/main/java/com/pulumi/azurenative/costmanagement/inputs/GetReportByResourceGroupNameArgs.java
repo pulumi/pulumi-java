@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
      * 
      */
     @Import(name="reportName", required=true)
-    private String reportName;
+    private Output<String> reportName;
 
     /**
      * @return Report Name.
      * 
      */
-    public String reportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder reportName(String reportName) {
+        public Builder reportName(Output<String> reportName) {
             $.reportName = reportName;
+            return this;
+        }
+
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportName(String reportName) {
+            return reportName(Output.of(reportName));
+        }
+
+        /**
+         * @param resourceGroupName Azure Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetReportByResourceGroupNameArgs build() {

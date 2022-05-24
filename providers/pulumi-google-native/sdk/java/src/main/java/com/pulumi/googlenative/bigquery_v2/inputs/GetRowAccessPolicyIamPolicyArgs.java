@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.bigquery_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetRowAccessPolicyIamPolicyArgs extends com.pulumi.resources.
     public static final GetRowAccessPolicyIamPolicyArgs Empty = new GetRowAccessPolicyIamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="rowAccessPolicyId", required=true)
-    private String rowAccessPolicyId;
+    private Output<String> rowAccessPolicyId;
 
-    public String rowAccessPolicyId() {
+    public Output<String> rowAccessPolicyId() {
         return this.rowAccessPolicyId;
     }
 
     @Import(name="tableId", required=true)
-    private String tableId;
+    private Output<String> tableId;
 
-    public String tableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -69,24 +69,40 @@ public final class GetRowAccessPolicyIamPolicyArgs extends com.pulumi.resources.
             $ = new GetRowAccessPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder rowAccessPolicyId(String rowAccessPolicyId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder rowAccessPolicyId(Output<String> rowAccessPolicyId) {
             $.rowAccessPolicyId = rowAccessPolicyId;
             return this;
         }
 
-        public Builder tableId(String tableId) {
+        public Builder rowAccessPolicyId(String rowAccessPolicyId) {
+            return rowAccessPolicyId(Output.of(rowAccessPolicyId));
+        }
+
+        public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
+        }
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
         }
 
         public GetRowAccessPolicyIamPolicyArgs build() {

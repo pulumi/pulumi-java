@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiscoveryJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="discoveryJobId", required=true)
-    private String discoveryJobId;
+    private Output<String> discoveryJobId;
 
     /**
      * @return The OCID of the discovery job.
      * 
      */
-    public String discoveryJobId() {
+    public Output<String> discoveryJobId() {
         return this.discoveryJobId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDiscoveryJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder discoveryJobId(String discoveryJobId) {
+        public Builder discoveryJobId(Output<String> discoveryJobId) {
             $.discoveryJobId = discoveryJobId;
             return this;
+        }
+
+        /**
+         * @param discoveryJobId The OCID of the discovery job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder discoveryJobId(String discoveryJobId) {
+            return discoveryJobId(Output.of(discoveryJobId));
         }
 
         public GetDiscoveryJobArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetTargetDatabasesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private Output</* @Nullable */ String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
-        return Optional.ofNullable(this.accessLevel);
+    public Output</* @Nullable */ String> accessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="associatedResourceId")
-    private @Nullable String associatedResourceId;
+    private Output</* @Nullable */ String> associatedResourceId;
 
     /**
      * @return A filter to return the target databases that are associated to the resource id passed in as a parameter value.
      * 
      */
-    public Optional<String> associatedResourceId() {
-        return Optional.ofNullable(this.associatedResourceId);
+    public Output</* @Nullable */ String> associatedResourceId() {
+        return this.associatedResourceId;
     }
 
     /**
@@ -52,13 +52,13 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -67,14 +67,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -82,14 +82,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseType")
-    private @Nullable String databaseType;
+    private Output</* @Nullable */ String> databaseType;
 
     /**
      * @return A filter to return target databases that match the database type of the target database.
      * 
      */
-    public Optional<String> databaseType() {
-        return Optional.ofNullable(this.databaseType);
+    public Output</* @Nullable */ String> databaseType() {
+        return this.databaseType;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetTargetDatabasesFilter> filters;
+    private Output</* @Nullable */ List<GetTargetDatabasesFilter>> filters;
 
-    public Optional<List<GetTargetDatabasesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetTargetDatabasesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="infrastructureType")
-    private @Nullable String infrastructureType;
+    private Output</* @Nullable */ String> infrastructureType;
 
     /**
      * @return A filter to return target databases that match the infrastructure type of the target database.
      * 
      */
-    public Optional<String> infrastructureType() {
-        return Optional.ofNullable(this.infrastructureType);
+    public Output</* @Nullable */ String> infrastructureType() {
+        return this.infrastructureType;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return the target databases that matches the current state of the target database.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetDatabaseId")
-    private @Nullable String targetDatabaseId;
+    private Output</* @Nullable */ String> targetDatabaseId;
 
     /**
      * @return A filter to return the target database that matches the specified OCID.
      * 
      */
-    public Optional<String> targetDatabaseId() {
-        return Optional.ofNullable(this.targetDatabaseId);
+    public Output</* @Nullable */ String> targetDatabaseId() {
+        return this.targetDatabaseId;
     }
 
     private GetTargetDatabasesArgs() {}
@@ -198,8 +198,29 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(@Nullable String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param associatedResourceId A filter to return the target databases that are associated to the resource id passed in as a parameter value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associatedResourceId(Output</* @Nullable */ String> associatedResourceId) {
+            $.associatedResourceId = associatedResourceId;
             return this;
         }
 
@@ -210,7 +231,17 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder associatedResourceId(@Nullable String associatedResourceId) {
-            $.associatedResourceId = associatedResourceId;
+            return associatedResourceId(Output.of(associatedResourceId));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -221,7 +252,17 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -232,7 +273,17 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param databaseType A filter to return target databases that match the database type of the target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseType(Output</* @Nullable */ String> databaseType) {
+            $.databaseType = databaseType;
             return this;
         }
 
@@ -243,7 +294,17 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder databaseType(@Nullable String databaseType) {
-            $.databaseType = databaseType;
+            return databaseType(Output.of(databaseType));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -254,13 +315,16 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetTargetDatabasesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetTargetDatabasesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetTargetDatabasesFilter... filters) {
@@ -273,8 +337,29 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder infrastructureType(@Nullable String infrastructureType) {
+        public Builder infrastructureType(Output</* @Nullable */ String> infrastructureType) {
             $.infrastructureType = infrastructureType;
+            return this;
+        }
+
+        /**
+         * @param infrastructureType A filter to return target databases that match the infrastructure type of the target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder infrastructureType(@Nullable String infrastructureType) {
+            return infrastructureType(Output.of(infrastructureType));
+        }
+
+        /**
+         * @param state A filter to return the target databases that matches the current state of the target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -285,7 +370,17 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param targetDatabaseId A filter to return the target database that matches the specified OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetDatabaseId(Output</* @Nullable */ String> targetDatabaseId) {
+            $.targetDatabaseId = targetDatabaseId;
             return this;
         }
 
@@ -296,8 +391,7 @@ public final class GetTargetDatabasesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder targetDatabaseId(@Nullable String targetDatabaseId) {
-            $.targetDatabaseId = targetDatabaseId;
-            return this;
+            return targetDatabaseId(Output.of(targetDatabaseId));
         }
 
         public GetTargetDatabasesArgs build() {

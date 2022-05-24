@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customDomainName", required=true)
-    private String customDomainName;
+    private Output<String> customDomainName;
 
     /**
      * @return Name of the domain under the profile which is unique globally.
      * 
      */
-    public String customDomainName() {
+    public Output<String> customDomainName() {
         return this.customDomainName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder customDomainName(String customDomainName) {
+        public Builder customDomainName(Output<String> customDomainName) {
             $.customDomainName = customDomainName;
+            return this;
+        }
+
+        /**
+         * @param customDomainName Name of the domain under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customDomainName(String customDomainName) {
+            return customDomainName(Output.of(customDomainName));
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAFDCustomDomainArgs build() {

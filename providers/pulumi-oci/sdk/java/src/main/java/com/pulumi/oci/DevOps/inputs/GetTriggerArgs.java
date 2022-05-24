@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="triggerId", required=true)
-    private String triggerId;
+    private Output<String> triggerId;
 
     /**
      * @return Unique trigger identifier.
      * 
      */
-    public String triggerId() {
+    public Output<String> triggerId() {
         return this.triggerId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder triggerId(String triggerId) {
+        public Builder triggerId(Output<String> triggerId) {
             $.triggerId = triggerId;
             return this;
+        }
+
+        /**
+         * @param triggerId Unique trigger identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder triggerId(String triggerId) {
+            return triggerId(Output.of(triggerId));
         }
 
         public GetTriggerArgs build() {

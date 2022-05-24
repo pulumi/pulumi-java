@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListPrivateStoreNewPlansNotificationsArgs extends com.pulumi.
      * 
      */
     @Import(name="privateStoreId", required=true)
-    private String privateStoreId;
+    private Output<String> privateStoreId;
 
     /**
      * @return The store ID - must use the tenant ID
      * 
      */
-    public String privateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
@@ -57,9 +58,19 @@ public final class ListPrivateStoreNewPlansNotificationsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder privateStoreId(String privateStoreId) {
+        public Builder privateStoreId(Output<String> privateStoreId) {
             $.privateStoreId = privateStoreId;
             return this;
+        }
+
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateStoreId(String privateStoreId) {
+            return privateStoreId(Output.of(privateStoreId));
         }
 
         public ListPrivateStoreNewPlansNotificationsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Value must be `PRIVATE` when listing views for private zones.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -32,13 +33,13 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewId", required=true)
-    private String viewId;
+    private Output<String> viewId;
 
     /**
      * @return The OCID of the target view.
      * 
      */
-    public String viewId() {
+    public Output<String> viewId() {
         return this.viewId;
     }
 
@@ -73,8 +74,29 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(String scope) {
+        public Builder scope(Output<String> scope) {
             $.scope = scope;
+            return this;
+        }
+
+        /**
+         * @param scope Value must be `PRIVATE` when listing views for private zones.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param viewId The OCID of the target view.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder viewId(Output<String> viewId) {
+            $.viewId = viewId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder viewId(String viewId) {
-            $.viewId = viewId;
-            return this;
+            return viewId(Output.of(viewId));
         }
 
         public GetViewArgs build() {

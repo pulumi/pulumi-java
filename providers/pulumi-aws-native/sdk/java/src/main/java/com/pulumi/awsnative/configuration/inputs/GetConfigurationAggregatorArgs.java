@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.configuration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="configurationAggregatorName", required=true)
-    private String configurationAggregatorName;
+    private Output<String> configurationAggregatorName;
 
     /**
      * @return The name of the aggregator.
      * 
      */
-    public String configurationAggregatorName() {
+    public Output<String> configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder configurationAggregatorName(String configurationAggregatorName) {
+        public Builder configurationAggregatorName(Output<String> configurationAggregatorName) {
             $.configurationAggregatorName = configurationAggregatorName;
             return this;
+        }
+
+        /**
+         * @param configurationAggregatorName The name of the aggregator.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationAggregatorName(String configurationAggregatorName) {
+            return configurationAggregatorName(Output.of(configurationAggregatorName));
         }
 
         public GetConfigurationAggregatorArgs build() {

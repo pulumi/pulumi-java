@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return The OCID of the key.
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -32,13 +33,13 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managementEndpoint", required=true)
-    private String managementEndpoint;
+    private Output<String> managementEndpoint;
 
     /**
      * @return The service endpoint to perform management operations against. Management operations include &#39;Create,&#39; &#39;Update,&#39; &#39;List,&#39; &#39;Get,&#39; and &#39;Delete&#39; operations. See Vault Management endpoint.
      * 
      */
-    public String managementEndpoint() {
+    public Output<String> managementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -73,8 +74,29 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
+            return this;
+        }
+
+        /**
+         * @param keyId The OCID of the key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        /**
+         * @param managementEndpoint The service endpoint to perform management operations against. Management operations include &#39;Create,&#39; &#39;Update,&#39; &#39;List,&#39; &#39;Get,&#39; and &#39;Delete&#39; operations. See Vault Management endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementEndpoint(Output<String> managementEndpoint) {
+            $.managementEndpoint = managementEndpoint;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder managementEndpoint(String managementEndpoint) {
-            $.managementEndpoint = managementEndpoint;
-            return this;
+            return managementEndpoint(Output.of(managementEndpoint));
         }
 
         public GetKeyArgs build() {

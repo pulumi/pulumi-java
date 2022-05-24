@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkfirewall.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
     public static final GetLoggingConfigurationArgs Empty = new GetLoggingConfigurationArgs();
 
     @Import(name="firewallArn", required=true)
-    private String firewallArn;
+    private Output<String> firewallArn;
 
-    public String firewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
             $ = new GetLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder firewallArn(String firewallArn) {
+        public Builder firewallArn(Output<String> firewallArn) {
             $.firewallArn = firewallArn;
             return this;
+        }
+
+        public Builder firewallArn(String firewallArn) {
+            return firewallArn(Output.of(firewallArn));
         }
 
         public GetLoggingConfigurationArgs build() {

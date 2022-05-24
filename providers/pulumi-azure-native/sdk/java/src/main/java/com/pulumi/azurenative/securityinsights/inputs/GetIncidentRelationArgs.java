@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.securityinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="incidentId", required=true)
-    private String incidentId;
+    private Output<String> incidentId;
 
     /**
      * @return Incident ID
      * 
      */
-    public String incidentId() {
+    public Output<String> incidentId() {
         return this.incidentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-    private String operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     /**
      * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    public String operationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -47,13 +48,13 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relationName", required=true)
-    private String relationName;
+    private Output<String> relationName;
 
     /**
      * @return Relation Name
      * 
      */
-    public String relationName() {
+    public Output<String> relationName() {
         return this.relationName;
     }
 
@@ -62,13 +63,13 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -121,8 +122,29 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder incidentId(String incidentId) {
+        public Builder incidentId(Output<String> incidentId) {
             $.incidentId = incidentId;
+            return this;
+        }
+
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder incidentId(String incidentId) {
+            return incidentId(Output.of(incidentId));
+        }
+
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
+        }
+
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relationName(Output<String> relationName) {
+            $.relationName = relationName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder relationName(String relationName) {
-            $.relationName = relationName;
+            return relationName(Output.of(relationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetIncidentRelationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetIncidentRelationArgs build() {

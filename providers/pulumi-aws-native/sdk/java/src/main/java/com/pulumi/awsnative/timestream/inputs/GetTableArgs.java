@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.timestream.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name for the database which the table to be created belongs to.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -73,8 +74,29 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder databaseName(String databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * @param databaseName The name for the database which the table to be created belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param tableName The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
-            return this;
+            return tableName(Output.of(tableName));
         }
 
         public GetTableArgs build() {

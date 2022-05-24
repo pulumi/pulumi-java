@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends com.pulum
      * 
      */
     @Import(name="networkManagerConnectionName", required=true)
-    private String networkManagerConnectionName;
+    private Output<String> networkManagerConnectionName;
 
     /**
      * @return Name for the network manager connection.
      * 
      */
-    public String networkManagerConnectionName() {
+    public Output<String> networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder networkManagerConnectionName(String networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(Output<String> networkManagerConnectionName) {
             $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
+        }
+
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerConnectionName(String networkManagerConnectionName) {
+            return networkManagerConnectionName(Output.of(networkManagerConnectionName));
         }
 
         public GetSubscriptionNetworkManagerConnectionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storagecache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cacheName", required=true)
-    private String cacheName;
+    private Output<String> cacheName;
 
     /**
      * @return Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
      * 
      */
-    public String cacheName() {
+    public Output<String> cacheName() {
         return this.cacheName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Target resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageTargetName", required=true)
-    private String storageTargetName;
+    private Output<String> storageTargetName;
 
     /**
      * @return Name of Storage Target.
      * 
      */
-    public String storageTargetName() {
+    public Output<String> storageTargetName() {
         return this.storageTargetName;
     }
 
@@ -89,8 +90,29 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder cacheName(String cacheName) {
+        public Builder cacheName(Output<String> cacheName) {
             $.cacheName = cacheName;
+            return this;
+        }
+
+        /**
+         * @param cacheName Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cacheName(String cacheName) {
+            return cacheName(Output.of(cacheName));
+        }
+
+        /**
+         * @param resourceGroupName Target resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param storageTargetName Name of Storage Target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageTargetName(Output<String> storageTargetName) {
+            $.storageTargetName = storageTargetName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder storageTargetName(String storageTargetName) {
-            $.storageTargetName = storageTargetName;
-            return this;
+            return storageTargetName(Output.of(storageTargetName));
         }
 
         public GetStorageTargetArgs build() {

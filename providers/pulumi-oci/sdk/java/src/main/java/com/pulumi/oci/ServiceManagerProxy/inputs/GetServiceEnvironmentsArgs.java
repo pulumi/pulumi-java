@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ServiceManagerProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ServiceManagerProxy.inputs.GetServiceEnvironmentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the resource.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetServiceEnvironmentsFilter> filters;
+    private Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters;
 
-    public Optional<List<GetServiceEnvironmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceEnvironmentId")
-    private @Nullable String serviceEnvironmentId;
+    private Output</* @Nullable */ String> serviceEnvironmentId;
 
     /**
      * @return The unique identifier associated with the service environment.
      * 
      */
-    public Optional<String> serviceEnvironmentId() {
-        return Optional.ofNullable(this.serviceEnvironmentId);
+    public Output</* @Nullable */ String> serviceEnvironmentId() {
+        return this.serviceEnvironmentId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceEnvironmentType")
-    private @Nullable String serviceEnvironmentType;
+    private Output</* @Nullable */ String> serviceEnvironmentType;
 
     /**
      * @return The environment&#39;s service definition type.  For example, &#34;RGBUOROMS&#34; is the service definition type for &#34;Oracle Retail Order Management Cloud Service&#34;.
      * 
      */
-    public Optional<String> serviceEnvironmentType() {
-        return Optional.ofNullable(this.serviceEnvironmentType);
+    public Output</* @Nullable */ String> serviceEnvironmentType() {
+        return this.serviceEnvironmentType;
     }
 
     private GetServiceEnvironmentsArgs() {}
@@ -117,8 +117,29 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName The display name of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetServiceEnvironmentsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetServiceEnvironmentsFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder serviceEnvironmentId(@Nullable String serviceEnvironmentId) {
+        public Builder serviceEnvironmentId(Output</* @Nullable */ String> serviceEnvironmentId) {
             $.serviceEnvironmentId = serviceEnvironmentId;
+            return this;
+        }
+
+        /**
+         * @param serviceEnvironmentId The unique identifier associated with the service environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEnvironmentId(@Nullable String serviceEnvironmentId) {
+            return serviceEnvironmentId(Output.of(serviceEnvironmentId));
+        }
+
+        /**
+         * @param serviceEnvironmentType The environment&#39;s service definition type.  For example, &#34;RGBUOROMS&#34; is the service definition type for &#34;Oracle Retail Order Management Cloud Service&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEnvironmentType(Output</* @Nullable */ String> serviceEnvironmentType) {
+            $.serviceEnvironmentType = serviceEnvironmentType;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder serviceEnvironmentType(@Nullable String serviceEnvironmentType) {
-            $.serviceEnvironmentType = serviceEnvironmentType;
-            return this;
+            return serviceEnvironmentType(Output.of(serviceEnvironmentType));
         }
 
         public GetServiceEnvironmentsArgs build() {

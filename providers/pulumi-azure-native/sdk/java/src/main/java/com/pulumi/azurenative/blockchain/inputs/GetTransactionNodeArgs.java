@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="blockchainMemberName", required=true)
-    private String blockchainMemberName;
+    private Output<String> blockchainMemberName;
 
     /**
      * @return Blockchain member name.
      * 
      */
-    public String blockchainMemberName() {
+    public Output<String> blockchainMemberName() {
         return this.blockchainMemberName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="transactionNodeName", required=true)
-    private String transactionNodeName;
+    private Output<String> transactionNodeName;
 
     /**
      * @return Transaction node name.
      * 
      */
-    public String transactionNodeName() {
+    public Output<String> transactionNodeName() {
         return this.transactionNodeName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder blockchainMemberName(String blockchainMemberName) {
+        public Builder blockchainMemberName(Output<String> blockchainMemberName) {
             $.blockchainMemberName = blockchainMemberName;
+            return this;
+        }
+
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockchainMemberName(String blockchainMemberName) {
+            return blockchainMemberName(Output.of(blockchainMemberName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param transactionNodeName Transaction node name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transactionNodeName(Output<String> transactionNodeName) {
+            $.transactionNodeName = transactionNodeName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder transactionNodeName(String transactionNodeName) {
-            $.transactionNodeName = transactionNodeName;
-            return this;
+            return transactionNodeName(Output.of(transactionNodeName));
         }
 
         public GetTransactionNodeArgs build() {

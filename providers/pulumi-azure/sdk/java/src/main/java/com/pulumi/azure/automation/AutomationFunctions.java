@@ -14,10 +14,10 @@ import com.pulumi.azure.automation.outputs.GetBoolVariableResult;
 import com.pulumi.azure.automation.outputs.GetDateTimeVariableResult;
 import com.pulumi.azure.automation.outputs.GetIntVariableResult;
 import com.pulumi.azure.automation.outputs.GetStringVariableResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AutomationFunctions {
     /**
@@ -49,7 +49,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:automation/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:automation/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Automation Bool Variable.
@@ -114,7 +114,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBoolVariableResult> getBoolVariable(GetBoolVariableArgs args) {
+    public static Output<GetBoolVariableResult> getBoolVariable(GetBoolVariableArgs args) {
         return getBoolVariable(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBoolVariableResult> getBoolVariable(GetBoolVariableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:automation/getBoolVariable:getBoolVariable", TypeShape.of(GetBoolVariableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBoolVariableResult> getBoolVariable(GetBoolVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:automation/getBoolVariable:getBoolVariable", TypeShape.of(GetBoolVariableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Automation Datetime Variable.
@@ -180,7 +180,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDateTimeVariableResult> getDateTimeVariable(GetDateTimeVariableArgs args) {
+    public static Output<GetDateTimeVariableResult> getDateTimeVariable(GetDateTimeVariableArgs args) {
         return getDateTimeVariable(args, InvokeOptions.Empty);
     }
     /**
@@ -213,8 +213,8 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDateTimeVariableResult> getDateTimeVariable(GetDateTimeVariableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:automation/getDateTimeVariable:getDateTimeVariable", TypeShape.of(GetDateTimeVariableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDateTimeVariableResult> getDateTimeVariable(GetDateTimeVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:automation/getDateTimeVariable:getDateTimeVariable", TypeShape.of(GetDateTimeVariableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Automation Int Variable.
@@ -246,7 +246,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIntVariableResult> getIntVariable(GetIntVariableArgs args) {
+    public static Output<GetIntVariableResult> getIntVariable(GetIntVariableArgs args) {
         return getIntVariable(args, InvokeOptions.Empty);
     }
     /**
@@ -279,8 +279,8 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIntVariableResult> getIntVariable(GetIntVariableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:automation/getIntVariable:getIntVariable", TypeShape.of(GetIntVariableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntVariableResult> getIntVariable(GetIntVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:automation/getIntVariable:getIntVariable", TypeShape.of(GetIntVariableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Automation String Variable.
@@ -312,7 +312,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStringVariableResult> getStringVariable(GetStringVariableArgs args) {
+    public static Output<GetStringVariableResult> getStringVariable(GetStringVariableArgs args) {
         return getStringVariable(args, InvokeOptions.Empty);
     }
     /**
@@ -345,7 +345,7 @@ public final class AutomationFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStringVariableResult> getStringVariable(GetStringVariableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:automation/getStringVariable:getStringVariable", TypeShape.of(GetStringVariableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStringVariableResult> getStringVariable(GetStringVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:automation/getStringVariable:getStringVariable", TypeShape.of(GetStringVariableResult.class), args, Utilities.withVersion(options));
     }
 }

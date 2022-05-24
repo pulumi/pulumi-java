@@ -18,108 +18,108 @@ import com.pulumi.awsnative.connect.outputs.GetPhoneNumberResult;
 import com.pulumi.awsnative.connect.outputs.GetQuickConnectResult;
 import com.pulumi.awsnative.connect.outputs.GetUserHierarchyGroupResult;
 import com.pulumi.awsnative.connect.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConnectFunctions {
     /**
      * Resource Type definition for AWS::Connect::ContactFlow
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
         return getContactFlow(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::ContactFlow
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::ContactFlowModule.
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
         return getContactFlowModule(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::ContactFlowModule.
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::HoursOfOperation
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
         return getHoursOfOperation(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::HoursOfOperation
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::PhoneNumber
      * 
      */
-    public static CompletableFuture<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args) {
+    public static Output<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args) {
         return getPhoneNumber(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::PhoneNumber
      * 
      */
-    public static CompletableFuture<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getPhoneNumber", TypeShape.of(GetPhoneNumberResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPhoneNumberResult> getPhoneNumber(GetPhoneNumberArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getPhoneNumber", TypeShape.of(GetPhoneNumberResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::QuickConnect
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
         return getQuickConnect(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::QuickConnect
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::UserHierarchyGroup
      * 
      */
-    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args) {
+    public static Output<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args) {
         return getUserHierarchyGroup(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Connect::UserHierarchyGroup
      * 
      */
-    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:connect:getUserHierarchyGroup", TypeShape.of(GetUserHierarchyGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:connect:getUserHierarchyGroup", TypeShape.of(GetUserHierarchyGroupResult.class), args, Utilities.withVersion(options));
     }
 }

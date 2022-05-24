@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.documentdb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return Cosmos DB database account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return Cosmos DB container name.
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return Cosmos DB database name.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="triggerName", required=true)
-    private String triggerName;
+    private Output<String> triggerName;
 
     /**
      * @return Cosmos DB trigger name.
      * 
      */
-    public String triggerName() {
+    public Output<String> triggerName() {
         return this.triggerName;
     }
 
@@ -121,8 +122,29 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param containerName Cosmos DB container name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(Output<String> containerName) {
+            $.containerName = containerName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder containerName(String containerName) {
-            $.containerName = containerName;
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param databaseName Cosmos DB database name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(Output<String> databaseName) {
+            $.databaseName = databaseName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder databaseName(String databaseName) {
-            $.databaseName = databaseName;
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param triggerName Cosmos DB trigger name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder triggerName(Output<String> triggerName) {
+            $.triggerName = triggerName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetSqlResourceSqlTriggerArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder triggerName(String triggerName) {
-            $.triggerName = triggerName;
-            return this;
+            return triggerName(Output.of(triggerName));
         }
 
         public GetSqlResourceSqlTriggerArgs build() {

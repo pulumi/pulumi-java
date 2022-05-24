@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Analytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Analytics.inputs.GetAnalyticsInstancesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="capacityType")
-    private @Nullable String capacityType;
+    private Output</* @Nullable */ String> capacityType;
 
     /**
      * @return A filter to only return resources matching the capacity type enum. Values are case-insensitive.
      * 
      */
-    public Optional<String> capacityType() {
-        return Optional.ofNullable(this.capacityType);
+    public Output</* @Nullable */ String> capacityType() {
+        return this.capacityType;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,21 +51,21 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="featureSet")
-    private @Nullable String featureSet;
+    private Output</* @Nullable */ String> featureSet;
 
     /**
      * @return A filter to only return resources matching the feature set. Values are case-insensitive.
      * 
      */
-    public Optional<String> featureSet() {
-        return Optional.ofNullable(this.featureSet);
+    public Output</* @Nullable */ String> featureSet() {
+        return this.featureSet;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAnalyticsInstancesFilter> filters;
+    private Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters;
 
-    public Optional<List<GetAnalyticsInstancesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources matching the lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetAnalyticsInstancesArgs() {}
@@ -133,8 +133,29 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder capacityType(@Nullable String capacityType) {
+        public Builder capacityType(Output</* @Nullable */ String> capacityType) {
             $.capacityType = capacityType;
+            return this;
+        }
+
+        /**
+         * @param capacityType A filter to only return resources matching the capacity type enum. Values are case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityType(@Nullable String capacityType) {
+            return capacityType(Output.of(capacityType));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param featureSet A filter to only return resources matching the feature set. Values are case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureSet(Output</* @Nullable */ String> featureSet) {
+            $.featureSet = featureSet;
             return this;
         }
 
@@ -156,13 +187,16 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder featureSet(@Nullable String featureSet) {
-            $.featureSet = featureSet;
+            return featureSet(Output.of(featureSet));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAnalyticsInstancesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAnalyticsInstancesFilter... filters) {
@@ -175,8 +209,29 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to only return resources matching the lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetAnalyticsInstancesArgs build() {

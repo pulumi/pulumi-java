@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetBuildPipelineStagesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="buildPipelineId")
-    private @Nullable String buildPipelineId;
+    private Output</* @Nullable */ String> buildPipelineId;
 
     /**
      * @return The OCID of the parent build pipeline.
      * 
      */
-    public Optional<String> buildPipelineId() {
-        return Optional.ofNullable(this.buildPipelineId);
+    public Output</* @Nullable */ String> buildPipelineId() {
+        return this.buildPipelineId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The OCID of the compartment in which to list resources.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBuildPipelineStagesFilter> filters;
+    private Output</* @Nullable */ List<GetBuildPipelineStagesFilter>> filters;
 
-    public Optional<List<GetBuildPipelineStagesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBuildPipelineStagesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Unique identifier or OCID for listing a single resource by ID.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return the stages that matches the given lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetBuildPipelineStagesArgs() {}
@@ -133,8 +133,29 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder buildPipelineId(@Nullable String buildPipelineId) {
+        public Builder buildPipelineId(Output</* @Nullable */ String> buildPipelineId) {
             $.buildPipelineId = buildPipelineId;
+            return this;
+        }
+
+        /**
+         * @param buildPipelineId The OCID of the parent build pipeline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildPipelineId(@Nullable String buildPipelineId) {
+            return buildPipelineId(Output.of(buildPipelineId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -156,13 +187,16 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBuildPipelineStagesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetBuildPipelineStagesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBuildPipelineStagesFilter... filters) {
@@ -175,8 +209,29 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Unique identifier or OCID for listing a single resource by ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state A filter to return the stages that matches the given lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetBuildPipelineStagesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetBuildPipelineStagesArgs build() {

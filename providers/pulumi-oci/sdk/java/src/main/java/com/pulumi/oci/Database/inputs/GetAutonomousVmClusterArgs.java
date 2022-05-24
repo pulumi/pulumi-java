@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousVmClusterArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autonomousVmClusterId", required=true)
-    private String autonomousVmClusterId;
+    private Output<String> autonomousVmClusterId;
 
     /**
      * @return The autonomous VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousVmClusterId() {
+    public Output<String> autonomousVmClusterId() {
         return this.autonomousVmClusterId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutonomousVmClusterArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder autonomousVmClusterId(String autonomousVmClusterId) {
+        public Builder autonomousVmClusterId(Output<String> autonomousVmClusterId) {
             $.autonomousVmClusterId = autonomousVmClusterId;
             return this;
+        }
+
+        /**
+         * @param autonomousVmClusterId The autonomous VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousVmClusterId(String autonomousVmClusterId) {
+            return autonomousVmClusterId(Output.of(autonomousVmClusterId));
         }
 
         public GetAutonomousVmClusterArgs build() {

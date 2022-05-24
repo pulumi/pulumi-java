@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudresourcemanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetProjectIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
     @Import(name="resource", required=true)
-    private String resource;
+    private Output<String> resource;
 
-    public String resource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -43,9 +44,13 @@ public final class GetProjectIamPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetProjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder resource(String resource) {
+        public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
+        }
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
         }
 
         public GetProjectIamPolicyArgs build() {

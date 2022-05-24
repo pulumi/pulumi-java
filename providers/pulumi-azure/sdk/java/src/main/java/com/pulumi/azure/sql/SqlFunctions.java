@@ -10,10 +10,10 @@ import com.pulumi.azure.sql.inputs.GetSqlManagedInstanceArgs;
 import com.pulumi.azure.sql.outputs.GetDatabaseResult;
 import com.pulumi.azure.sql.outputs.GetServerResult;
 import com.pulumi.azure.sql.outputs.GetSqlManagedInstanceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SqlFunctions {
     /**
@@ -44,7 +44,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:sql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:sql/getDatabase:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -105,7 +105,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+    public static Output<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:sql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:sql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -165,7 +165,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args) {
+    public static Output<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args) {
         return getSqlManagedInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -195,7 +195,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:sql/getSqlManagedInstance:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:sql/getSqlManagedInstance:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="templateId", required=true)
-    private String templateId;
+    private Output<String> templateId;
 
-    public String templateId() {
+    public Output<String> templateId() {
         return this.templateId;
     }
 
@@ -51,14 +52,22 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder templateId(String templateId) {
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
+        }
+
+        public Builder templateId(Output<String> templateId) {
             $.templateId = templateId;
             return this;
+        }
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
 
         public GetTemplateArgs build() {

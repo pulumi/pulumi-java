@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetGuestPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGuestPolicyArgs Empty = new GetGuestPolicyArgs();
 
     @Import(name="guestPolicyId", required=true)
-    private String guestPolicyId;
+    private Output<String> guestPolicyId;
 
-    public String guestPolicyId() {
+    public Output<String> guestPolicyId() {
         return this.guestPolicyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetGuestPolicyArgs() {}
@@ -53,14 +53,22 @@ public final class GetGuestPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGuestPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder guestPolicyId(String guestPolicyId) {
+        public Builder guestPolicyId(Output<String> guestPolicyId) {
             $.guestPolicyId = guestPolicyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder guestPolicyId(String guestPolicyId) {
+            return guestPolicyId(Output.of(guestPolicyId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetGuestPolicyArgs build() {

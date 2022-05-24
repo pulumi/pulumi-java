@@ -10,52 +10,52 @@ import com.pulumi.awsnative.amplify.inputs.GetDomainArgs;
 import com.pulumi.awsnative.amplify.outputs.GetAppResult;
 import com.pulumi.awsnative.amplify.outputs.GetBranchResult;
 import com.pulumi.awsnative.amplify.outputs.GetDomainResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AmplifyFunctions {
     /**
      * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+    public static Output<GetAppResult> getApp(GetAppArgs args) {
         return getApp(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:amplify:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:amplify:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Amplify::Branch resource creates a new branch within an app.
      * 
      */
-    public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args) {
+    public static Output<GetBranchResult> getBranch(GetBranchArgs args) {
         return getBranch(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Amplify::Branch resource creates a new branch within an app.
      * 
      */
-    public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:amplify:getBranch", TypeShape.of(GetBranchResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBranchResult> getBranch(GetBranchArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:amplify:getBranch", TypeShape.of(GetBranchResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:amplify:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:amplify:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

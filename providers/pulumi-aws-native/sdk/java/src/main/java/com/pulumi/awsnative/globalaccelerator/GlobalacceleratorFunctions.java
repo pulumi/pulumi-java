@@ -10,52 +10,52 @@ import com.pulumi.awsnative.globalaccelerator.inputs.GetListenerArgs;
 import com.pulumi.awsnative.globalaccelerator.outputs.GetAcceleratorResult;
 import com.pulumi.awsnative.globalaccelerator.outputs.GetEndpointGroupResult;
 import com.pulumi.awsnative.globalaccelerator.outputs.GetListenerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GlobalacceleratorFunctions {
     /**
      * Resource Type definition for AWS::GlobalAccelerator::Accelerator
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
+    public static Output<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
         return getAccelerator(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::Accelerator
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:globalaccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
      * 
      */
-    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args) {
+    public static Output<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args) {
         return getEndpointGroup(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
      * 
      */
-    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getEndpointGroup", TypeShape.of(GetEndpointGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:globalaccelerator:getEndpointGroup", TypeShape.of(GetEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+    public static Output<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:globalaccelerator:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
 }

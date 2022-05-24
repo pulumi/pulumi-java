@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @Import(name="channelName", required=true)
-    private String channelName;
+    private Output<String> channelName;
 
-    public String channelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -43,9 +44,13 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder channelName(String channelName) {
+        public Builder channelName(Output<String> channelName) {
             $.channelName = channelName;
             return this;
+        }
+
+        public Builder channelName(String channelName) {
+            return channelName(Output.of(channelName));
         }
 
         public GetChannelArgs build() {

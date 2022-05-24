@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.databoxedge.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deviceName", required=true)
-    private String deviceName;
+    private Output<String> deviceName;
 
     /**
      * @return The device name.
      * 
      */
-    public String deviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="roleName", required=true)
-    private String roleName;
+    private Output<String> roleName;
 
     /**
      * @return The role name.
      * 
      */
-    public String roleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder deviceName(String deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleName(Output<String> roleName) {
+            $.roleName = roleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder roleName(String roleName) {
-            $.roleName = roleName;
-            return this;
+            return roleName(Output.of(roleName));
         }
 
         public GetMonitoringConfigArgs build() {

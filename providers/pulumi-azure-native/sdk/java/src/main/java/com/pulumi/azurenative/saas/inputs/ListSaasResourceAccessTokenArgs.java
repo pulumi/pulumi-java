@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.saas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListSaasResourceAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The Saas resource ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -57,9 +58,19 @@ public final class ListSaasResourceAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder resourceId(String resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
+        }
+
+        /**
+         * @param resourceId The Saas resource ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
 
         public ListSaasResourceAccessTokenArgs build() {

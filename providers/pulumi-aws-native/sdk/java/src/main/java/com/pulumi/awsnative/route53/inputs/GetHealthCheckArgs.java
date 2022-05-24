@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
     @Import(name="healthCheckId", required=true)
-    private String healthCheckId;
+    private Output<String> healthCheckId;
 
-    public String healthCheckId() {
+    public Output<String> healthCheckId() {
         return this.healthCheckId;
     }
 
@@ -43,9 +44,13 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder healthCheckId(String healthCheckId) {
+        public Builder healthCheckId(Output<String> healthCheckId) {
             $.healthCheckId = healthCheckId;
             return this;
+        }
+
+        public Builder healthCheckId(String healthCheckId) {
+            return healthCheckId(Output.of(healthCheckId));
         }
 
         public GetHealthCheckArgs build() {

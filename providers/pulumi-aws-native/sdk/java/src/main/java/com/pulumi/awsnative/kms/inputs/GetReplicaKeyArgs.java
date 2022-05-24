@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetReplicaKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReplicaKeyArgs Empty = new GetReplicaKeyArgs();
 
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -43,9 +44,13 @@ public final class GetReplicaKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReplicaKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
+        }
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
 
         public GetReplicaKeyArgs build() {

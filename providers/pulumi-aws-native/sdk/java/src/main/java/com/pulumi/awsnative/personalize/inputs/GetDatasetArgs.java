@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.personalize.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetArn", required=true)
-    private String datasetArn;
+    private Output<String> datasetArn;
 
     /**
      * @return The ARN of the dataset
      * 
      */
-    public String datasetArn() {
+    public Output<String> datasetArn() {
         return this.datasetArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder datasetArn(String datasetArn) {
+        public Builder datasetArn(Output<String> datasetArn) {
             $.datasetArn = datasetArn;
             return this;
+        }
+
+        /**
+         * @param datasetArn The ARN of the dataset
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datasetArn(String datasetArn) {
+            return datasetArn(Output.of(datasetArn));
         }
 
         public GetDatasetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTargetDatabaseArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetDatabaseId", required=true)
-    private String targetDatabaseId;
+    private Output<String> targetDatabaseId;
 
     /**
      * @return The OCID of the Data Safe target database.
      * 
      */
-    public String targetDatabaseId() {
+    public Output<String> targetDatabaseId() {
         return this.targetDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTargetDatabaseArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder targetDatabaseId(String targetDatabaseId) {
+        public Builder targetDatabaseId(Output<String> targetDatabaseId) {
             $.targetDatabaseId = targetDatabaseId;
             return this;
+        }
+
+        /**
+         * @param targetDatabaseId The OCID of the Data Safe target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetDatabaseId(String targetDatabaseId) {
+            return targetDatabaseId(Output.of(targetDatabaseId));
         }
 
         public GetTargetDatabaseArgs build() {

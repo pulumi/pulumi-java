@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @Import(name="deviceId", required=true)
-    private String deviceId;
+    private Output<String> deviceId;
 
-    public String deviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -43,9 +44,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder deviceId(String deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
             return this;
+        }
+
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
         }
 
         public GetDeviceArgs build() {

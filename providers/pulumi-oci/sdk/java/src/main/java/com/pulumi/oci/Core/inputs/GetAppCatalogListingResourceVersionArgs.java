@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppCatalogListingResourceVersionArgs extends com.pulumi.re
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The OCID of the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAppCatalogListingResourceVersionArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceVersion", required=true)
-    private String resourceVersion;
+    private Output<String> resourceVersion;
 
     /**
      * @return Listing Resource Version.
      * 
      */
-    public String resourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion;
     }
 
@@ -73,8 +74,29 @@ public final class GetAppCatalogListingResourceVersionArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
+            return this;
+        }
+
+        /**
+         * @param listingId The OCID of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param resourceVersion Listing Resource Version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceVersion(Output<String> resourceVersion) {
+            $.resourceVersion = resourceVersion;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAppCatalogListingResourceVersionArgs extends com.pulumi.re
          * 
          */
         public Builder resourceVersion(String resourceVersion) {
-            $.resourceVersion = resourceVersion;
-            return this;
+            return resourceVersion(Output.of(resourceVersion));
         }
 
         public GetAppCatalogListingResourceVersionArgs build() {

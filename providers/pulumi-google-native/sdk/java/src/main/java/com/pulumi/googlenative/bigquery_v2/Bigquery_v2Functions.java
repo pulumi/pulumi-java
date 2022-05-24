@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigquery_v2;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,91 +20,90 @@ import com.pulumi.googlenative.bigquery_v2.outputs.GetRoutineResult;
 import com.pulumi.googlenative.bigquery_v2.outputs.GetRowAccessPolicyIamPolicyResult;
 import com.pulumi.googlenative.bigquery_v2.outputs.GetTableIamPolicyResult;
 import com.pulumi.googlenative.bigquery_v2.outputs.GetTableResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Bigquery_v2Functions {
     /**
      * Returns the dataset specified by datasetID.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
     /**
      * Returns the dataset specified by datasetID.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you&#39;re the person who ran the job, or have the Is Owner project role.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
      * Returns information about a specific job. Job information is available for a six month period after creation. Requires that you&#39;re the person who ran the job, or have the Is Owner project role.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified routine resource by routine ID.
      * 
      */
-    public static CompletableFuture<GetRoutineResult> getRoutine(GetRoutineArgs args) {
+    public static Output<GetRoutineResult> getRoutine(GetRoutineArgs args) {
         return getRoutine(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified routine resource by routine ID.
      * 
      */
-    public static CompletableFuture<GetRoutineResult> getRoutine(GetRoutineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getRoutine", TypeShape.of(GetRoutineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRoutineResult> getRoutine(GetRoutineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getRoutine", TypeShape.of(GetRoutineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRowAccessPolicyIamPolicyResult> getRowAccessPolicyIamPolicy(GetRowAccessPolicyIamPolicyArgs args) {
+    public static Output<GetRowAccessPolicyIamPolicyResult> getRowAccessPolicyIamPolicy(GetRowAccessPolicyIamPolicyArgs args) {
         return getRowAccessPolicyIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRowAccessPolicyIamPolicyResult> getRowAccessPolicyIamPolicy(GetRowAccessPolicyIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getRowAccessPolicyIamPolicy", TypeShape.of(GetRowAccessPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRowAccessPolicyIamPolicyResult> getRowAccessPolicyIamPolicy(GetRowAccessPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getRowAccessPolicyIamPolicy", TypeShape.of(GetRowAccessPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTableIamPolicyResult> getTableIamPolicy(GetTableIamPolicyArgs args) {
+    public static Output<GetTableIamPolicyResult> getTableIamPolicy(GetTableIamPolicyArgs args) {
         return getTableIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTableIamPolicyResult> getTableIamPolicy(GetTableIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getTableIamPolicy", TypeShape.of(GetTableIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableIamPolicyResult> getTableIamPolicy(GetTableIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquery/v2:getTableIamPolicy", TypeShape.of(GetTableIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

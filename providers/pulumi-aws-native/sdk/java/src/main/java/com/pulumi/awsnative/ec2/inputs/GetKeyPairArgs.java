@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName", required=true)
-    private String keyName;
+    private Output<String> keyName;
 
     /**
      * @return The name of the SSH key pair
      * 
      */
-    public String keyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -57,9 +58,19 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyName(String keyName) {
+        public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
+        }
+
+        /**
+         * @param keyName The name of the SSH key pair
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
 
         public GetKeyPairArgs build() {

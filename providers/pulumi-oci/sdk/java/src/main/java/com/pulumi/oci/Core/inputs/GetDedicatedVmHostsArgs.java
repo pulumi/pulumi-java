@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetDedicatedVmHostsFilter;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,21 +52,21 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDedicatedVmHostsFilter> filters;
+    private Output</* @Nullable */ List<GetDedicatedVmHostsFilter>> filters;
 
-    public Optional<List<GetDedicatedVmHostsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDedicatedVmHostsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceShapeName")
-    private @Nullable String instanceShapeName;
+    private Output</* @Nullable */ String> instanceShapeName;
 
     /**
      * @return The name for the instance&#39;s shape.
      * 
      */
-    public Optional<String> instanceShapeName() {
-        return Optional.ofNullable(this.instanceShapeName);
+    public Output</* @Nullable */ String> instanceShapeName() {
+        return this.instanceShapeName;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="remainingMemoryInGbsGreaterThanOrEqualTo")
-    private @Nullable Double remainingMemoryInGbsGreaterThanOrEqualTo;
+    private Output</* @Nullable */ Double> remainingMemoryInGbsGreaterThanOrEqualTo;
 
     /**
      * @return The remaining memory of the dedicated VM host, in GBs.
      * 
      */
-    public Optional<Double> remainingMemoryInGbsGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.remainingMemoryInGbsGreaterThanOrEqualTo);
+    public Output</* @Nullable */ Double> remainingMemoryInGbsGreaterThanOrEqualTo() {
+        return this.remainingMemoryInGbsGreaterThanOrEqualTo;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="remainingOcpusGreaterThanOrEqualTo")
-    private @Nullable Double remainingOcpusGreaterThanOrEqualTo;
+    private Output</* @Nullable */ Double> remainingOcpusGreaterThanOrEqualTo;
 
     /**
      * @return The available OCPUs of the dedicated VM host.
      * 
      */
-    public Optional<Double> remainingOcpusGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.remainingOcpusGreaterThanOrEqualTo);
+    public Output</* @Nullable */ Double> remainingOcpusGreaterThanOrEqualTo() {
+        return this.remainingOcpusGreaterThanOrEqualTo;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetDedicatedVmHostsArgs() {}
@@ -166,8 +166,29 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -178,7 +199,17 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -189,13 +220,16 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDedicatedVmHostsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDedicatedVmHostsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDedicatedVmHostsFilter... filters) {
@@ -208,8 +242,29 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder instanceShapeName(@Nullable String instanceShapeName) {
+        public Builder instanceShapeName(Output</* @Nullable */ String> instanceShapeName) {
             $.instanceShapeName = instanceShapeName;
+            return this;
+        }
+
+        /**
+         * @param instanceShapeName The name for the instance&#39;s shape.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceShapeName(@Nullable String instanceShapeName) {
+            return instanceShapeName(Output.of(instanceShapeName));
+        }
+
+        /**
+         * @param remainingMemoryInGbsGreaterThanOrEqualTo The remaining memory of the dedicated VM host, in GBs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remainingMemoryInGbsGreaterThanOrEqualTo(Output</* @Nullable */ Double> remainingMemoryInGbsGreaterThanOrEqualTo) {
+            $.remainingMemoryInGbsGreaterThanOrEqualTo = remainingMemoryInGbsGreaterThanOrEqualTo;
             return this;
         }
 
@@ -220,7 +275,17 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder remainingMemoryInGbsGreaterThanOrEqualTo(@Nullable Double remainingMemoryInGbsGreaterThanOrEqualTo) {
-            $.remainingMemoryInGbsGreaterThanOrEqualTo = remainingMemoryInGbsGreaterThanOrEqualTo;
+            return remainingMemoryInGbsGreaterThanOrEqualTo(Output.of(remainingMemoryInGbsGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param remainingOcpusGreaterThanOrEqualTo The available OCPUs of the dedicated VM host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remainingOcpusGreaterThanOrEqualTo(Output</* @Nullable */ Double> remainingOcpusGreaterThanOrEqualTo) {
+            $.remainingOcpusGreaterThanOrEqualTo = remainingOcpusGreaterThanOrEqualTo;
             return this;
         }
 
@@ -231,7 +296,17 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder remainingOcpusGreaterThanOrEqualTo(@Nullable Double remainingOcpusGreaterThanOrEqualTo) {
-            $.remainingOcpusGreaterThanOrEqualTo = remainingOcpusGreaterThanOrEqualTo;
+            return remainingOcpusGreaterThanOrEqualTo(Output.of(remainingOcpusGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -242,8 +317,7 @@ public final class GetDedicatedVmHostsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetDedicatedVmHostsArgs build() {

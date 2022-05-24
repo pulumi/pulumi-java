@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetComputeGlobalImageCapabilitySchemasVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionsArgs extends co
      * 
      */
     @Import(name="computeGlobalImageCapabilitySchemaId", required=true)
-    private String computeGlobalImageCapabilitySchemaId;
+    private Output<String> computeGlobalImageCapabilitySchemaId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
      * 
      */
-    public String computeGlobalImageCapabilitySchemaId() {
+    public Output<String> computeGlobalImageCapabilitySchemaId() {
         return this.computeGlobalImageCapabilitySchemaId;
     }
 
@@ -36,21 +36,21 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionsArgs extends co
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetComputeGlobalImageCapabilitySchemasVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetComputeGlobalImageCapabilitySchemasVersionsFilter>> filters;
 
-    public Optional<List<GetComputeGlobalImageCapabilitySchemasVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetComputeGlobalImageCapabilitySchemasVersionsFilter>> filters() {
+        return this.filters;
     }
 
     private GetComputeGlobalImageCapabilitySchemasVersionsArgs() {}
@@ -85,8 +85,29 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionsArgs extends co
          * @return builder
          * 
          */
-        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+        public Builder computeGlobalImageCapabilitySchemaId(Output<String> computeGlobalImageCapabilitySchemaId) {
             $.computeGlobalImageCapabilitySchemaId = computeGlobalImageCapabilitySchemaId;
+            return this;
+        }
+
+        /**
+         * @param computeGlobalImageCapabilitySchemaId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+            return computeGlobalImageCapabilitySchemaId(Output.of(computeGlobalImageCapabilitySchemaId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -97,13 +118,16 @@ public final class GetComputeGlobalImageCapabilitySchemasVersionsArgs extends co
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetComputeGlobalImageCapabilitySchemasVersionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetComputeGlobalImageCapabilitySchemasVersionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetComputeGlobalImageCapabilitySchemasVersionsFilter... filters) {

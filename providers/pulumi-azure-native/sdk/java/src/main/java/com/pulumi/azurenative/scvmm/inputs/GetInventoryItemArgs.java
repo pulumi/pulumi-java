@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.scvmm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inventoryItemName", required=true)
-    private String inventoryItemName;
+    private Output<String> inventoryItemName;
 
     /**
      * @return Name of the inventoryItem.
      * 
      */
-    public String inventoryItemName() {
+    public Output<String> inventoryItemName() {
         return this.inventoryItemName;
     }
 
@@ -32,13 +33,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vmmServerName", required=true)
-    private String vmmServerName;
+    private Output<String> vmmServerName;
 
     /**
      * @return Name of the VMMServer.
      * 
      */
-    public String vmmServerName() {
+    public Output<String> vmmServerName() {
         return this.vmmServerName;
     }
 
@@ -89,8 +90,29 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder inventoryItemName(String inventoryItemName) {
+        public Builder inventoryItemName(Output<String> inventoryItemName) {
             $.inventoryItemName = inventoryItemName;
+            return this;
+        }
+
+        /**
+         * @param inventoryItemName Name of the inventoryItem.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inventoryItemName(String inventoryItemName) {
+            return inventoryItemName(Output.of(inventoryItemName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmmServerName Name of the VMMServer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmmServerName(Output<String> vmmServerName) {
+            $.vmmServerName = vmmServerName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder vmmServerName(String vmmServerName) {
-            $.vmmServerName = vmmServerName;
-            return this;
+            return vmmServerName(Output.of(vmmServerName));
         }
 
         public GetInventoryItemArgs build() {

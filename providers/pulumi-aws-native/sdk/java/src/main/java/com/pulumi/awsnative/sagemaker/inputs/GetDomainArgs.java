@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainId", required=true)
-    private String domainId;
+    private Output<String> domainId;
 
     /**
      * @return The domain name.
      * 
      */
-    public String domainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainId(String domainId) {
+        public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
             return this;
+        }
+
+        /**
+         * @param domainId The domain name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
         }
 
         public GetDomainArgs build() {

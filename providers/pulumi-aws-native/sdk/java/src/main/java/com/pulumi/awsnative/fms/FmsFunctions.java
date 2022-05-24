@@ -8,38 +8,38 @@ import com.pulumi.awsnative.fms.inputs.GetNotificationChannelArgs;
 import com.pulumi.awsnative.fms.inputs.GetPolicyArgs;
 import com.pulumi.awsnative.fms.outputs.GetNotificationChannelResult;
 import com.pulumi.awsnative.fms.outputs.GetPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class FmsFunctions {
     /**
      * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+    public static Output<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
     /**
      * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates an AWS Firewall Manager policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args) {
         return getPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Creates an AWS Firewall Manager policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:fms:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:fms:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

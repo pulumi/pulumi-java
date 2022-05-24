@@ -8,38 +8,38 @@ import com.pulumi.awsnative.ssmcontacts.inputs.GetContactArgs;
 import com.pulumi.awsnative.ssmcontacts.inputs.GetContactChannelArgs;
 import com.pulumi.awsnative.ssmcontacts.outputs.GetContactChannelResult;
 import com.pulumi.awsnative.ssmcontacts.outputs.GetContactResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SsmcontactsFunctions {
     /**
      * Resource Type definition for AWS::SSMContacts::Contact
      * 
      */
-    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
+    public static Output<GetContactResult> getContact(GetContactArgs args) {
         return getContact(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::SSMContacts::Contact
      * 
      */
-    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ssmcontacts:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SSMContacts::ContactChannel
      * 
      */
-    public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args) {
+    public static Output<GetContactChannelResult> getContactChannel(GetContactChannelArgs args) {
         return getContactChannel(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::SSMContacts::ContactChannel
      * 
      */
-    public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContactChannel", TypeShape.of(GetContactChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContactChannelResult> getContactChannel(GetContactChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ssmcontacts:getContactChannel", TypeShape.of(GetContactChannelResult.class), args, Utilities.withVersion(options));
     }
 }

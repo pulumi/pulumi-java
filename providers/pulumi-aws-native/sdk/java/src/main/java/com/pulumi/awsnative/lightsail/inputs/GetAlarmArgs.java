@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmName", required=true)
-    private String alarmName;
+    private Output<String> alarmName;
 
     /**
      * @return The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
      * 
      */
-    public String alarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alarmName(String alarmName) {
+        public Builder alarmName(Output<String> alarmName) {
             $.alarmName = alarmName;
             return this;
+        }
+
+        /**
+         * @param alarmName The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alarmName(String alarmName) {
+            return alarmName(Output.of(alarmName));
         }
 
         public GetAlarmArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryDataAssetsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endpointIds")
-    private @Nullable List<String> endpointIds;
+    private Output</* @Nullable */ List<String>> endpointIds;
 
     /**
      * @return Endpoint Ids used for data-plane APIs to filter or prefer specific endpoint.
      * 
      */
-    public Optional<List<String>> endpointIds() {
-        return Optional.ofNullable(this.endpointIds);
+    public Output</* @Nullable */ List<String>> endpointIds() {
+        return this.endpointIds;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="excludeEndpointIds")
-    private @Nullable List<String> excludeEndpointIds;
+    private Output</* @Nullable */ List<String>> excludeEndpointIds;
 
     /**
      * @return Endpoints which will be excluded while listing dataAssets
      * 
      */
-    public Optional<List<String>> excludeEndpointIds() {
-        return Optional.ofNullable(this.excludeEndpointIds);
+    public Output</* @Nullable */ List<String>> excludeEndpointIds() {
+        return this.excludeEndpointIds;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="excludeTypes")
-    private @Nullable List<String> excludeTypes;
+    private Output</* @Nullable */ List<String>> excludeTypes;
 
     /**
      * @return Types which wont be listed while listing dataAsset/Connection
      * 
      */
-    public Optional<List<String>> excludeTypes() {
-        return Optional.ofNullable(this.excludeTypes);
+    public Output</* @Nullable */ List<String>> excludeTypes() {
+        return this.excludeTypes;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="favoritesQueryParam")
-    private @Nullable String favoritesQueryParam;
+    private Output</* @Nullable */ String> favoritesQueryParam;
 
     /**
      * @return If value is FAVORITES_ONLY, then only objects marked as favorite by the requesting user will be included in result. If value is NON_FAVORITES_ONLY, then objects marked as favorites by the requesting user will be skipped. If value is ALL or if not specified, all objects, irrespective of favorites or not will be returned. Default is ALL.
      * 
      */
-    public Optional<String> favoritesQueryParam() {
-        return Optional.ofNullable(this.favoritesQueryParam);
+    public Output</* @Nullable */ String> favoritesQueryParam() {
+        return this.favoritesQueryParam;
     }
 
     /**
@@ -81,21 +81,21 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private Output</* @Nullable */ List<String>> fields;
 
     /**
      * @return Specifies the fields to get for an object.
      * 
      */
-    public Optional<List<String>> fields() {
-        return Optional.ofNullable(this.fields);
+    public Output</* @Nullable */ List<String>> fields() {
+        return this.fields;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRegistryDataAssetsFilter> filters;
+    private Output</* @Nullable */ List<GetRegistryDataAssetsFilter>> filters;
 
-    public Optional<List<GetRegistryDataAssetsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRegistryDataAssetsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="folderId")
-    private @Nullable String folderId;
+    private Output</* @Nullable */ String> folderId;
 
     /**
      * @return Unique key of the folder.
      * 
      */
-    public Optional<String> folderId() {
-        return Optional.ofNullable(this.folderId);
+    public Output</* @Nullable */ String> folderId() {
+        return this.folderId;
     }
 
     /**
@@ -118,14 +118,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includeTypes")
-    private @Nullable List<String> includeTypes;
+    private Output</* @Nullable */ List<String>> includeTypes;
 
     /**
      * @return DataAsset type which needs to be listed while listing dataAssets
      * 
      */
-    public Optional<List<String>> includeTypes() {
-        return Optional.ofNullable(this.includeTypes);
+    public Output</* @Nullable */ List<String>> includeTypes() {
+        return this.includeTypes;
     }
 
     /**
@@ -133,14 +133,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -148,13 +148,13 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -163,14 +163,14 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private Output</* @Nullable */ String> type;
 
     /**
      * @return Specific DataAsset Type
      * 
      */
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
+    public Output</* @Nullable */ String> type() {
+        return this.type;
     }
 
     private GetRegistryDataAssetsArgs() {}
@@ -213,9 +213,19 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder endpointIds(@Nullable List<String> endpointIds) {
+        public Builder endpointIds(Output</* @Nullable */ List<String>> endpointIds) {
             $.endpointIds = endpointIds;
             return this;
+        }
+
+        /**
+         * @param endpointIds Endpoint Ids used for data-plane APIs to filter or prefer specific endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointIds(@Nullable List<String> endpointIds) {
+            return endpointIds(Output.of(endpointIds));
         }
 
         /**
@@ -234,9 +244,19 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder excludeEndpointIds(@Nullable List<String> excludeEndpointIds) {
+        public Builder excludeEndpointIds(Output</* @Nullable */ List<String>> excludeEndpointIds) {
             $.excludeEndpointIds = excludeEndpointIds;
             return this;
+        }
+
+        /**
+         * @param excludeEndpointIds Endpoints which will be excluded while listing dataAssets
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeEndpointIds(@Nullable List<String> excludeEndpointIds) {
+            return excludeEndpointIds(Output.of(excludeEndpointIds));
         }
 
         /**
@@ -255,9 +275,19 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder excludeTypes(@Nullable List<String> excludeTypes) {
+        public Builder excludeTypes(Output</* @Nullable */ List<String>> excludeTypes) {
             $.excludeTypes = excludeTypes;
             return this;
+        }
+
+        /**
+         * @param excludeTypes Types which wont be listed while listing dataAsset/Connection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeTypes(@Nullable List<String> excludeTypes) {
+            return excludeTypes(Output.of(excludeTypes));
         }
 
         /**
@@ -276,8 +306,29 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder favoritesQueryParam(@Nullable String favoritesQueryParam) {
+        public Builder favoritesQueryParam(Output</* @Nullable */ String> favoritesQueryParam) {
             $.favoritesQueryParam = favoritesQueryParam;
+            return this;
+        }
+
+        /**
+         * @param favoritesQueryParam If value is FAVORITES_ONLY, then only objects marked as favorite by the requesting user will be included in result. If value is NON_FAVORITES_ONLY, then objects marked as favorites by the requesting user will be skipped. If value is ALL or if not specified, all objects, irrespective of favorites or not will be returned. Default is ALL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder favoritesQueryParam(@Nullable String favoritesQueryParam) {
+            return favoritesQueryParam(Output.of(favoritesQueryParam));
+        }
+
+        /**
+         * @param fields Specifies the fields to get for an object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -288,8 +339,7 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+            return fields(Output.of(fields));
         }
 
         /**
@@ -302,9 +352,13 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
             return fields(List.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetRegistryDataAssetsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetRegistryDataAssetsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRegistryDataAssetsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRegistryDataAssetsFilter... filters) {
@@ -317,8 +371,29 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder folderId(@Nullable String folderId) {
+        public Builder folderId(Output</* @Nullable */ String> folderId) {
             $.folderId = folderId;
+            return this;
+        }
+
+        /**
+         * @param folderId Unique key of the folder.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folderId(@Nullable String folderId) {
+            return folderId(Output.of(folderId));
+        }
+
+        /**
+         * @param includeTypes DataAsset type which needs to be listed while listing dataAssets
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeTypes(Output</* @Nullable */ List<String>> includeTypes) {
+            $.includeTypes = includeTypes;
             return this;
         }
 
@@ -329,8 +404,7 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder includeTypes(@Nullable List<String> includeTypes) {
-            $.includeTypes = includeTypes;
-            return this;
+            return includeTypes(Output.of(includeTypes));
         }
 
         /**
@@ -349,8 +423,29 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Used to filter by the name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -361,7 +456,17 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
+            return registryId(Output.of(registryId));
+        }
+
+        /**
+         * @param type Specific DataAsset Type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output</* @Nullable */ String> type) {
+            $.type = type;
             return this;
         }
 
@@ -372,8 +477,7 @@ public final class GetRegistryDataAssetsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetRegistryDataAssetsArgs build() {

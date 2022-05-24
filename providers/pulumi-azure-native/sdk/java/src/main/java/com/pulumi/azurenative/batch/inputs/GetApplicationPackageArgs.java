@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Batch account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="applicationName", required=true)
-    private String applicationName;
+    private Output<String> applicationName;
 
     /**
      * @return The name of the application. This must be unique within the account.
      * 
      */
-    public String applicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -47,13 +48,13 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the Batch account.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionName", required=true)
-    private String versionName;
+    private Output<String> versionName;
 
     /**
      * @return The version of the application.
      * 
      */
-    public String versionName() {
+    public Output<String> versionName() {
         return this.versionName;
     }
 
@@ -105,8 +106,29 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationName(Output<String> applicationName) {
+            $.applicationName = applicationName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder applicationName(String applicationName) {
-            $.applicationName = applicationName;
+            return applicationName(Output.of(applicationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param versionName The version of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionName(Output<String> versionName) {
+            $.versionName = versionName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder versionName(String versionName) {
-            $.versionName = versionName;
-            return this;
+            return versionName(Output.of(versionName));
         }
 
         public GetApplicationPackageArgs build() {

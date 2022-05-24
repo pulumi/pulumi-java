@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetKeystoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeystoreArgs Empty = new GetKeystoreArgs();
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="keystoreId", required=true)
-    private String keystoreId;
+    private Output<String> keystoreId;
 
-    public String keystoreId() {
+    public Output<String> keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetKeystoreArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeystoreArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder keystoreId(String keystoreId) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder keystoreId(Output<String> keystoreId) {
             $.keystoreId = keystoreId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder keystoreId(String keystoreId) {
+            return keystoreId(Output.of(keystoreId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetKeystoreArgs build() {

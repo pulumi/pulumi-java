@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deploymentName", required=true)
-    private String deploymentName;
+    private Output<String> deploymentName;
 
     /**
      * @return Inference Endpoint Deployment name.
      * 
      */
-    public String deploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return Inference endpoint name.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -47,13 +48,13 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder deploymentName(String deploymentName) {
+        public Builder deploymentName(Output<String> deploymentName) {
             $.deploymentName = deploymentName;
+            return this;
+        }
+
+        /**
+         * @param deploymentName Inference Endpoint Deployment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
+        }
+
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(Output<String> endpointName) {
+            $.endpointName = endpointName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder endpointName(String endpointName) {
-            $.endpointName = endpointName;
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetOnlineDeploymentArgs build() {

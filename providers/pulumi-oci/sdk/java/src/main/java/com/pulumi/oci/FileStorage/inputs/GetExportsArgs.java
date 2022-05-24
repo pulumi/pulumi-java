@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.FileStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.FileStorage.inputs.GetExportsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportSetId")
-    private @Nullable String exportSetId;
+    private Output</* @Nullable */ String> exportSetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the export set.
      * 
      */
-    public Optional<String> exportSetId() {
-        return Optional.ofNullable(this.exportSetId);
+    public Output</* @Nullable */ String> exportSetId() {
+        return this.exportSetId;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-    private @Nullable String fileSystemId;
+    private Output</* @Nullable */ String> fileSystemId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the file system.
      * 
      */
-    public Optional<String> fileSystemId() {
-        return Optional.ofNullable(this.fileSystemId);
+    public Output</* @Nullable */ String> fileSystemId() {
+        return this.fileSystemId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetExportsFilter> filters;
+    private Output</* @Nullable */ List<GetExportsFilter>> filters;
 
-    public Optional<List<GetExportsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetExportsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter results by the specified lifecycle state. Must be a valid state for the resource type.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetExportsArgs() {}
@@ -133,8 +133,29 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param exportSetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the export set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportSetId(Output</* @Nullable */ String> exportSetId) {
+            $.exportSetId = exportSetId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder exportSetId(@Nullable String exportSetId) {
-            $.exportSetId = exportSetId;
+            return exportSetId(Output.of(exportSetId));
+        }
+
+        /**
+         * @param fileSystemId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the file system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fileSystemId(Output</* @Nullable */ String> fileSystemId) {
+            $.fileSystemId = fileSystemId;
             return this;
         }
 
@@ -156,13 +187,16 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            $.fileSystemId = fileSystemId;
+            return fileSystemId(Output.of(fileSystemId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetExportsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetExportsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetExportsFilter... filters) {
@@ -175,8 +209,29 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state Filter results by the specified lifecycle state. Must be a valid state for the resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetExportsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetExportsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserHierarchyGroupArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userHierarchyGroupArn", required=true)
-    private String userHierarchyGroupArn;
+    private Output<String> userHierarchyGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
      */
-    public String userHierarchyGroupArn() {
+    public Output<String> userHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetUserHierarchyGroupArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder userHierarchyGroupArn(String userHierarchyGroupArn) {
+        public Builder userHierarchyGroupArn(Output<String> userHierarchyGroupArn) {
             $.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
+        }
+
+        /**
+         * @param userHierarchyGroupArn The Amazon Resource Name (ARN) for the user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userHierarchyGroupArn(String userHierarchyGroupArn) {
+            return userHierarchyGroupArn(Output.of(userHierarchyGroupArn));
         }
 
         public GetUserHierarchyGroupArgs build() {

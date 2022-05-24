@@ -6,10 +6,10 @@ package com.pulumi.azure.streamanalytics;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.streamanalytics.inputs.GetJobArgs;
 import com.pulumi.azure.streamanalytics.outputs.GetJobResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class StreamanalyticsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class StreamanalyticsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class StreamanalyticsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:streamanalytics/getJob:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:streamanalytics/getJob:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
 }

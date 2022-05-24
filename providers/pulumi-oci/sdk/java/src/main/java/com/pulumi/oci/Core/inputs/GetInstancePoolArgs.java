@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstancePoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instancePoolId", required=true)
-    private String instancePoolId;
+    private Output<String> instancePoolId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
      * 
      */
-    public String instancePoolId() {
+    public Output<String> instancePoolId() {
         return this.instancePoolId;
     }
 
@@ -57,9 +58,19 @@ public final class GetInstancePoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instancePoolId(String instancePoolId) {
+        public Builder instancePoolId(Output<String> instancePoolId) {
             $.instancePoolId = instancePoolId;
             return this;
+        }
+
+        /**
+         * @param instancePoolId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instancePoolId(String instancePoolId) {
+            return instancePoolId(Output.of(instancePoolId));
         }
 
         public GetInstancePoolArgs build() {

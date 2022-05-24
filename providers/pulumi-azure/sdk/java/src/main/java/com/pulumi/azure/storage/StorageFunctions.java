@@ -26,10 +26,10 @@ import com.pulumi.azure.storage.outputs.GetStorageContainerResult;
 import com.pulumi.azure.storage.outputs.GetSyncGroupResult;
 import com.pulumi.azure.storage.outputs.GetSyncResult;
 import com.pulumi.azure.storage.outputs.GetTableEntityResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class StorageFunctions {
     /**
@@ -61,7 +61,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -93,8 +93,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account Blob Container.
@@ -160,7 +160,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountBlobContainerSASResult> getAccountBlobContainerSAS(GetAccountBlobContainerSASArgs args) {
+    public static Output<GetAccountBlobContainerSASResult> getAccountBlobContainerSAS(GetAccountBlobContainerSASArgs args) {
         return getAccountBlobContainerSAS(args, InvokeOptions.Empty);
     }
     /**
@@ -227,8 +227,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountBlobContainerSASResult> getAccountBlobContainerSAS(GetAccountBlobContainerSASArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getAccountBlobContainerSAS:getAccountBlobContainerSAS", TypeShape.of(GetAccountBlobContainerSASResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountBlobContainerSASResult> getAccountBlobContainerSAS(GetAccountBlobContainerSASArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getAccountBlobContainerSAS:getAccountBlobContainerSAS", TypeShape.of(GetAccountBlobContainerSASResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account.
@@ -302,7 +302,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountSASResult> getAccountSAS(GetAccountSASArgs args) {
+    public static Output<GetAccountSASResult> getAccountSAS(GetAccountSASArgs args) {
         return getAccountSAS(args, InvokeOptions.Empty);
     }
     /**
@@ -377,8 +377,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccountSASResult> getAccountSAS(GetAccountSASArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getAccountSAS:getAccountSAS", TypeShape.of(GetAccountSASResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccountSASResult> getAccountSAS(GetAccountSASArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getAccountSAS:getAccountSAS", TypeShape.of(GetAccountSASResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Blob.
@@ -409,7 +409,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBlobResult> getBlob(GetBlobArgs args) {
+    public static Output<GetBlobResult> getBlob(GetBlobArgs args) {
         return getBlob(args, InvokeOptions.Empty);
     }
     /**
@@ -441,8 +441,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBlobResult> getBlob(GetBlobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getBlob:getBlob", TypeShape.of(GetBlobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBlobResult> getBlob(GetBlobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getBlob:getBlob", TypeShape.of(GetBlobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Encryption Scope.
@@ -478,7 +478,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args) {
+    public static Output<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args) {
         return getEncryptionScope(args, InvokeOptions.Empty);
     }
     /**
@@ -515,8 +515,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getEncryptionScope:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getEncryptionScope:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Management Policy.
@@ -550,7 +550,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args) {
         return getPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -585,8 +585,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getPolicy:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getPolicy:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing File Share.
@@ -617,7 +617,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args) {
+    public static Output<GetShareResult> getShare(GetShareArgs args) {
         return getShare(args, InvokeOptions.Empty);
     }
     /**
@@ -649,8 +649,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getShare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getShare:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Container.
@@ -680,7 +680,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStorageContainerResult> getStorageContainer(GetStorageContainerArgs args) {
+    public static Output<GetStorageContainerResult> getStorageContainer(GetStorageContainerArgs args) {
         return getStorageContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -711,8 +711,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetStorageContainerResult> getStorageContainer(GetStorageContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getStorageContainer:getStorageContainer", TypeShape.of(GetStorageContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStorageContainerResult> getStorageContainer(GetStorageContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getStorageContainer:getStorageContainer", TypeShape.of(GetStorageContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Sync.
@@ -743,7 +743,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSyncResult> getSync(GetSyncArgs args) {
+    public static Output<GetSyncResult> getSync(GetSyncArgs args) {
         return getSync(args, InvokeOptions.Empty);
     }
     /**
@@ -775,8 +775,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSyncResult> getSync(GetSyncArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getSync:getSync", TypeShape.of(GetSyncResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSyncResult> getSync(GetSyncArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getSync:getSync", TypeShape.of(GetSyncResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Sync Group.
@@ -807,7 +807,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args) {
+    public static Output<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args) {
         return getSyncGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -839,8 +839,8 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getSyncGroup:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getSyncGroup:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Storage Table Entity.
@@ -872,7 +872,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTableEntityResult> getTableEntity(GetTableEntityArgs args) {
+    public static Output<GetTableEntityResult> getTableEntity(GetTableEntityArgs args) {
         return getTableEntity(args, InvokeOptions.Empty);
     }
     /**
@@ -905,7 +905,7 @@ public final class StorageFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTableEntityResult> getTableEntity(GetTableEntityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:storage/getTableEntity:getTableEntity", TypeShape.of(GetTableEntityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTableEntityResult> getTableEntity(GetTableEntityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:storage/getTableEntity:getTableEntity", TypeShape.of(GetTableEntityResult.class), args, Utilities.withVersion(options));
     }
 }

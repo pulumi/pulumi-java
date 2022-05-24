@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetConnectionIamPolicyArgs extends com.pulumi.resources.Invok
     public static final GetConnectionIamPolicyArgs Empty = new GetConnectionIamPolicyArgs();
 
     @Import(name="connectionId", required=true)
-    private String connectionId;
+    private Output<String> connectionId;
 
-    public String connectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetConnectionIamPolicyArgs() {}
@@ -61,19 +61,31 @@ public final class GetConnectionIamPolicyArgs extends com.pulumi.resources.Invok
             $ = new GetConnectionIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder connectionId(String connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetConnectionIamPolicyArgs build() {

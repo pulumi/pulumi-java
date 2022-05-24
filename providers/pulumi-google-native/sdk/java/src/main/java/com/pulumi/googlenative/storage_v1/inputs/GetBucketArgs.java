@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketArgs Empty = new GetBucketArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="ifMetagenerationMatch")
-    private @Nullable String ifMetagenerationMatch;
+    private Output</* @Nullable */ String> ifMetagenerationMatch;
 
-    public Optional<String> ifMetagenerationMatch() {
-        return Optional.ofNullable(this.ifMetagenerationMatch);
+    public Output</* @Nullable */ String> ifMetagenerationMatch() {
+        return this.ifMetagenerationMatch;
     }
 
     @Import(name="ifMetagenerationNotMatch")
-    private @Nullable String ifMetagenerationNotMatch;
+    private Output</* @Nullable */ String> ifMetagenerationNotMatch;
 
-    public Optional<String> ifMetagenerationNotMatch() {
-        return Optional.ofNullable(this.ifMetagenerationNotMatch);
+    public Output</* @Nullable */ String> ifMetagenerationNotMatch() {
+        return this.ifMetagenerationNotMatch;
     }
 
     @Import(name="projection")
-    private @Nullable String projection;
+    private Output</* @Nullable */ String> projection;
 
-    public Optional<String> projection() {
-        return Optional.ofNullable(this.projection);
+    public Output</* @Nullable */ String> projection() {
+        return this.projection;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private Output</* @Nullable */ String> userProject;
 
-    public Optional<String> userProject() {
-        return Optional.ofNullable(this.userProject);
+    public Output</* @Nullable */ String> userProject() {
+        return this.userProject;
     }
 
     private GetBucketArgs() {}
@@ -77,29 +77,49 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBucketArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder ifMetagenerationMatch(Output</* @Nullable */ String> ifMetagenerationMatch) {
             $.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
-        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+            return ifMetagenerationMatch(Output.of(ifMetagenerationMatch));
+        }
+
+        public Builder ifMetagenerationNotMatch(Output</* @Nullable */ String> ifMetagenerationNotMatch) {
             $.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
-        public Builder projection(@Nullable String projection) {
+        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+            return ifMetagenerationNotMatch(Output.of(ifMetagenerationNotMatch));
+        }
+
+        public Builder projection(Output</* @Nullable */ String> projection) {
             $.projection = projection;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder projection(@Nullable String projection) {
+            return projection(Output.of(projection));
+        }
+
+        public Builder userProject(Output</* @Nullable */ String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(@Nullable String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetBucketArgs build() {

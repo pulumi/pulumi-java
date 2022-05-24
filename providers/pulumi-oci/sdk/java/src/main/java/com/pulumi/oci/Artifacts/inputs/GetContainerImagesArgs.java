@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Artifacts.inputs.GetContainerImagesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,14 +37,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -52,21 +52,21 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetContainerImagesFilter> filters;
+    private Output</* @Nullable */ List<GetContainerImagesFilter>> filters;
 
-    public Optional<List<GetContainerImagesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetContainerImagesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private Output</* @Nullable */ String> imageId;
 
     /**
      * @return A filter to return a container image summary only for the specified container image OCID.
      * 
      */
-    public Optional<String> imageId() {
-        return Optional.ofNullable(this.imageId);
+    public Output</* @Nullable */ String> imageId() {
+        return this.imageId;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isVersioned")
-    private @Nullable Boolean isVersioned;
+    private Output</* @Nullable */ Boolean> isVersioned;
 
     /**
      * @return A filter to return container images based on whether there are any associated versions.
      * 
      */
-    public Optional<Boolean> isVersioned() {
-        return Optional.ofNullable(this.isVersioned);
+    public Output</* @Nullable */ Boolean> isVersioned() {
+        return this.isVersioned;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repositoryId")
-    private @Nullable String repositoryId;
+    private Output</* @Nullable */ String> repositoryId;
 
     /**
      * @return A filter to return container images only for the specified container repository OCID.
      * 
      */
-    public Optional<String> repositoryId() {
-        return Optional.ofNullable(this.repositoryId);
+    public Output</* @Nullable */ String> repositoryId() {
+        return this.repositoryId;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repositoryName")
-    private @Nullable String repositoryName;
+    private Output</* @Nullable */ String> repositoryName;
 
     /**
      * @return A filter to return container images or container image signatures that match the repository name.  Example: `foo` or `foo*`
      * 
      */
-    public Optional<String> repositoryName() {
-        return Optional.ofNullable(this.repositoryName);
+    public Output</* @Nullable */ String> repositoryName() {
+        return this.repositoryName;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state name exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private Output</* @Nullable */ String> version;
 
     /**
      * @return A filter to return container images that match the version.  Example: `foo` or `foo*`
      * 
      */
-    public Optional<String> version() {
-        return Optional.ofNullable(this.version);
+    public Output</* @Nullable */ String> version() {
+        return this.version;
     }
 
     private GetContainerImagesArgs() {}
@@ -198,8 +198,29 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -210,7 +231,17 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -221,13 +252,16 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetContainerImagesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetContainerImagesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetContainerImagesFilter... filters) {
@@ -240,8 +274,29 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(Output</* @Nullable */ String> imageId) {
             $.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * @param imageId A filter to return a container image summary only for the specified container image OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(@Nullable String imageId) {
+            return imageId(Output.of(imageId));
+        }
+
+        /**
+         * @param isVersioned A filter to return container images based on whether there are any associated versions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isVersioned(Output</* @Nullable */ Boolean> isVersioned) {
+            $.isVersioned = isVersioned;
             return this;
         }
 
@@ -252,7 +307,17 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder isVersioned(@Nullable Boolean isVersioned) {
-            $.isVersioned = isVersioned;
+            return isVersioned(Output.of(isVersioned));
+        }
+
+        /**
+         * @param repositoryId A filter to return container images only for the specified container repository OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output</* @Nullable */ String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -263,7 +328,17 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder repositoryId(@Nullable String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param repositoryName A filter to return container images or container image signatures that match the repository name.  Example: `foo` or `foo*`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryName(Output</* @Nullable */ String> repositoryName) {
+            $.repositoryName = repositoryName;
             return this;
         }
 
@@ -274,7 +349,17 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder repositoryName(@Nullable String repositoryName) {
-            $.repositoryName = repositoryName;
+            return repositoryName(Output.of(repositoryName));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -285,7 +370,17 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param version A filter to return container images that match the version.  Example: `foo` or `foo*`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output</* @Nullable */ String> version) {
+            $.version = version;
             return this;
         }
 
@@ -296,8 +391,7 @@ public final class GetContainerImagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetContainerImagesArgs build() {

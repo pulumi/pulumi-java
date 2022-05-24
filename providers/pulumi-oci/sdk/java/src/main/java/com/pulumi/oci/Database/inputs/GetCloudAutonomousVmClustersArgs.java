@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetCloudAutonomousVmClustersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return A filter to return only resources that match the given availability domain exactly.
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cloudExadataInfrastructureId")
-    private @Nullable String cloudExadataInfrastructureId;
+    private Output</* @Nullable */ String> cloudExadataInfrastructureId;
 
     /**
      * @return If provided, filters the results for the specified cloud Exadata infrastructure.
      * 
      */
-    public Optional<String> cloudExadataInfrastructureId() {
-        return Optional.ofNullable(this.cloudExadataInfrastructureId);
+    public Output</* @Nullable */ String> cloudExadataInfrastructureId() {
+        return this.cloudExadataInfrastructureId;
     }
 
     /**
@@ -51,13 +51,13 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -66,21 +66,21 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCloudAutonomousVmClustersFilter> filters;
+    private Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters;
 
-    public Optional<List<GetCloudAutonomousVmClustersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetCloudAutonomousVmClustersArgs() {}
@@ -133,8 +133,29 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain A filter to return only resources that match the given availability domain exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param cloudExadataInfrastructureId If provided, filters the results for the specified cloud Exadata infrastructure.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudExadataInfrastructureId(Output</* @Nullable */ String> cloudExadataInfrastructureId) {
+            $.cloudExadataInfrastructureId = cloudExadataInfrastructureId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * 
          */
         public Builder cloudExadataInfrastructureId(@Nullable String cloudExadataInfrastructureId) {
-            $.cloudExadataInfrastructureId = cloudExadataInfrastructureId;
+            return cloudExadataInfrastructureId(Output.of(cloudExadataInfrastructureId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -156,7 +187,17 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -167,13 +208,16 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetCloudAutonomousVmClustersFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetCloudAutonomousVmClustersFilter... filters) {
@@ -186,9 +230,19 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetCloudAutonomousVmClustersArgs build() {

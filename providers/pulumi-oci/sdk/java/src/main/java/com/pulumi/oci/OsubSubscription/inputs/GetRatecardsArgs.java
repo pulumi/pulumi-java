@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.OsubSubscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.OsubSubscription.inputs.GetRatecardsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRatecardsFilter> filters;
+    private Output</* @Nullable */ List<GetRatecardsFilter>> filters;
 
-    public Optional<List<GetRatecardsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRatecardsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partNumber")
-    private @Nullable String partNumber;
+    private Output</* @Nullable */ String> partNumber;
 
     /**
      * @return This param is used to get the rate card(s) filterd by the partNumber
      * 
      */
-    public Optional<String> partNumber() {
-        return Optional.ofNullable(this.partNumber);
+    public Output</* @Nullable */ String> partNumber() {
+        return this.partNumber;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return Line level Subscription Id
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -73,14 +73,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeFrom")
-    private @Nullable String timeFrom;
+    private Output</* @Nullable */ String> timeFrom;
 
     /**
      * @return This param is used to get the rate card(s) whose effective start date starts on or after a particular date
      * 
      */
-    public Optional<String> timeFrom() {
-        return Optional.ofNullable(this.timeFrom);
+    public Output</* @Nullable */ String> timeFrom() {
+        return this.timeFrom;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeTo")
-    private @Nullable String timeTo;
+    private Output</* @Nullable */ String> timeTo;
 
     /**
      * @return This param is used to get the rate card(s) whose effective end date ends on or before a particular date
      * 
      */
-    public Optional<String> timeTo() {
-        return Optional.ofNullable(this.timeTo);
+    public Output</* @Nullable */ String> timeTo() {
+        return this.timeTo;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetRatecardsArgs() {}
@@ -149,14 +149,28 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRatecardsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetRatecardsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRatecardsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRatecardsFilter... filters) {
@@ -169,8 +183,29 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partNumber(@Nullable String partNumber) {
+        public Builder partNumber(Output</* @Nullable */ String> partNumber) {
             $.partNumber = partNumber;
+            return this;
+        }
+
+        /**
+         * @param partNumber This param is used to get the rate card(s) filterd by the partNumber
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partNumber(@Nullable String partNumber) {
+            return partNumber(Output.of(partNumber));
+        }
+
+        /**
+         * @param subscriptionId Line level Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -181,7 +216,17 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param timeFrom This param is used to get the rate card(s) whose effective start date starts on or after a particular date
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeFrom(Output</* @Nullable */ String> timeFrom) {
+            $.timeFrom = timeFrom;
             return this;
         }
 
@@ -192,7 +237,17 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeFrom(@Nullable String timeFrom) {
-            $.timeFrom = timeFrom;
+            return timeFrom(Output.of(timeFrom));
+        }
+
+        /**
+         * @param timeTo This param is used to get the rate card(s) whose effective end date ends on or before a particular date
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeTo(Output</* @Nullable */ String> timeTo) {
+            $.timeTo = timeTo;
             return this;
         }
 
@@ -203,7 +258,17 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeTo(@Nullable String timeTo) {
-            $.timeTo = timeTo;
+            return timeTo(Output.of(timeTo));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -214,8 +279,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetRatecardsArgs build() {

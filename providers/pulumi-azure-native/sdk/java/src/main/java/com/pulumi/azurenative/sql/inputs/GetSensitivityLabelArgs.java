@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="columnName", required=true)
-    private String columnName;
+    private Output<String> columnName;
 
     /**
      * @return The name of the column.
      * 
      */
-    public String columnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the database.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="schemaName", required=true)
-    private String schemaName;
+    private Output<String> schemaName;
 
     /**
      * @return The name of the schema.
      * 
      */
-    public String schemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -77,13 +78,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sensitivityLabelSource", required=true)
-    private String sensitivityLabelSource;
+    private Output<String> sensitivityLabelSource;
 
     /**
      * @return The source of the sensitivity label.
      * 
      */
-    public String sensitivityLabelSource() {
+    public Output<String> sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
 
@@ -92,13 +93,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -107,13 +108,13 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return The name of the table.
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -153,8 +154,29 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder columnName(String columnName) {
+        public Builder columnName(Output<String> columnName) {
             $.columnName = columnName;
+            return this;
+        }
+
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnName(String columnName) {
+            return columnName(Output.of(columnName));
+        }
+
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(Output<String> databaseName) {
+            $.databaseName = databaseName;
             return this;
         }
 
@@ -165,7 +187,17 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder databaseName(String databaseName) {
-            $.databaseName = databaseName;
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -176,7 +208,17 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaName(Output<String> schemaName) {
+            $.schemaName = schemaName;
             return this;
         }
 
@@ -187,7 +229,17 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder schemaName(String schemaName) {
-            $.schemaName = schemaName;
+            return schemaName(Output.of(schemaName));
+        }
+
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitivityLabelSource(Output<String> sensitivityLabelSource) {
+            $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
@@ -198,7 +250,17 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
-            $.sensitivityLabelSource = sensitivityLabelSource;
+            return sensitivityLabelSource(Output.of(sensitivityLabelSource));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -209,7 +271,17 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
+            return serverName(Output.of(serverName));
+        }
+
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -220,8 +292,7 @@ public final class GetSensitivityLabelArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
-            return this;
+            return tableName(Output.of(tableName));
         }
 
         public GetSensitivityLabelArgs build() {

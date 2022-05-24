@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="labId")
-    private @Nullable String labId;
+    private Output</* @Nullable */ String> labId;
 
     /**
      * @return The resource Id of the lab
      * 
      */
-    public Optional<String> labId() {
-        return Optional.ofNullable(this.labId);
+    public Output</* @Nullable */ String> labId() {
+        return this.labId;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -75,8 +75,29 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder labId(@Nullable String labId) {
+        public Builder labId(Output</* @Nullable */ String> labId) {
             $.labId = labId;
+            return this;
+        }
+
+        /**
+         * @param labId The resource Id of the lab
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labId(@Nullable String labId) {
+            return labId(Output.of(labId));
+        }
+
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public ListGlobalUserEnvironmentsArgs build() {

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.consumption;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.consumption.inputs.GetBudgetArgs;
 import com.pulumi.azurenative.consumption.outputs.GetBudgetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConsumptionFunctions {
     /**
@@ -17,7 +17,7 @@ public final class ConsumptionFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args) {
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args) {
         return getBudget(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class ConsumptionFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:consumption:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:consumption:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
     }
 }

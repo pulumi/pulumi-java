@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.operationsmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managementAssociationName", required=true)
-    private String managementAssociationName;
+    private Output<String> managementAssociationName;
 
     /**
      * @return User ManagementAssociation Name.
      * 
      */
-    public String managementAssociationName() {
+    public Output<String> managementAssociationName() {
         return this.managementAssociationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="providerName", required=true)
-    private String providerName;
+    private Output<String> providerName;
 
     /**
      * @return Provider name for the parent resource.
      * 
      */
-    public String providerName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to get. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return Parent resource name.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -77,13 +78,13 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return Resource type for the parent resource
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -121,8 +122,29 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder managementAssociationName(String managementAssociationName) {
+        public Builder managementAssociationName(Output<String> managementAssociationName) {
             $.managementAssociationName = managementAssociationName;
+            return this;
+        }
+
+        /**
+         * @param managementAssociationName User ManagementAssociation Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementAssociationName(String managementAssociationName) {
+            return managementAssociationName(Output.of(managementAssociationName));
+        }
+
+        /**
+         * @param providerName Provider name for the parent resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(Output<String> providerName) {
+            $.providerName = providerName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder providerName(String providerName) {
-            $.providerName = providerName;
+            return providerName(Output.of(providerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName Parent resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceType Resource type for the parent resource
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
-            return this;
+            return resourceType(Output.of(resourceType));
         }
 
         public GetManagementAssociationArgs build() {

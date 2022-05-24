@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataLabellingService;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.DataLabellingService.outputs.GetAnnotationFormatsResult;
 import com.pulumi.oci.DataLabellingService.outputs.GetDatasetResult;
 import com.pulumi.oci.DataLabellingService.outputs.GetDatasetsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataLabellingServiceFunctions {
     /**
@@ -26,7 +26,7 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args) {
+    public static Output<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args) {
         return getAnnotationFormat(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getAnnotationFormat:getAnnotationFormat", TypeShape.of(GetAnnotationFormatResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnnotationFormatResult> getAnnotationFormat(GetAnnotationFormatArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataLabellingService/getAnnotationFormat:getAnnotationFormat", TypeShape.of(GetAnnotationFormatResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Annotation Formats in Oracle Cloud Infrastructure Data Labeling Service service.
@@ -48,7 +48,7 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args) {
+    public static Output<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args) {
         return getAnnotationFormats(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getAnnotationFormats:getAnnotationFormats", TypeShape.of(GetAnnotationFormatsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnnotationFormatsResult> getAnnotationFormats(GetAnnotationFormatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataLabellingService/getAnnotationFormats:getAnnotationFormats", TypeShape.of(GetAnnotationFormatsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Dataset resource in Oracle Cloud Infrastructure Data Labeling Service service.
@@ -70,7 +70,7 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getDataset:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataLabellingService/getDataset:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Datasets in Oracle Cloud Infrastructure Data Labeling Service service.
@@ -92,7 +92,7 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatasetsResult> getDatasets(GetDatasetsArgs args) {
+    public static Output<GetDatasetsResult> getDatasets(GetDatasetsArgs args) {
         return getDatasets(args, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public final class DataLabellingServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatasetsResult> getDatasets(GetDatasetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataLabellingService/getDatasets:getDatasets", TypeShape.of(GetDatasetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetsResult> getDatasets(GetDatasetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataLabellingService/getDatasets:getDatasets", TypeShape.of(GetDatasetsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Artifacts.inputs.GetContainerSignaturesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,14 +37,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -52,21 +52,21 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetContainerSignaturesFilter> filters;
+    private Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters;
 
-    public Optional<List<GetContainerSignaturesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="imageDigest")
-    private @Nullable String imageDigest;
+    private Output</* @Nullable */ String> imageDigest;
 
     /**
      * @return The digest of the container image.  Example: `sha256:e7d38b3517548a1c71e41bffe9c8ae6d6d29546ce46bf62159837aad072c90aa`
      * 
      */
-    public Optional<String> imageDigest() {
-        return Optional.ofNullable(this.imageDigest);
+    public Output</* @Nullable */ String> imageDigest() {
+        return this.imageDigest;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private Output</* @Nullable */ String> imageId;
 
     /**
      * @return A filter to return a container image summary only for the specified container image OCID.
      * 
      */
-    public Optional<String> imageId() {
-        return Optional.ofNullable(this.imageId);
+    public Output</* @Nullable */ String> imageId() {
+        return this.imageId;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kmsKeyId")
-    private @Nullable String kmsKeyId;
+    private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
      * 
      */
-    public Optional<String> kmsKeyId() {
-        return Optional.ofNullable(this.kmsKeyId);
+    public Output</* @Nullable */ String> kmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kmsKeyVersionId")
-    private @Nullable String kmsKeyVersionId;
+    private Output</* @Nullable */ String> kmsKeyVersionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
      * 
      */
-    public Optional<String> kmsKeyVersionId() {
-        return Optional.ofNullable(this.kmsKeyVersionId);
+    public Output</* @Nullable */ String> kmsKeyVersionId() {
+        return this.kmsKeyVersionId;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="repositoryId")
-    private @Nullable String repositoryId;
+    private Output</* @Nullable */ String> repositoryId;
 
     /**
      * @return A filter to return container images only for the specified container repository OCID.
      * 
      */
-    public Optional<String> repositoryId() {
-        return Optional.ofNullable(this.repositoryId);
+    public Output</* @Nullable */ String> repositoryId() {
+        return this.repositoryId;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="repositoryName")
-    private @Nullable String repositoryName;
+    private Output</* @Nullable */ String> repositoryName;
 
     /**
      * @return A filter to return container images or container image signatures that match the repository name.  Example: `foo` or `foo*`
      * 
      */
-    public Optional<String> repositoryName() {
-        return Optional.ofNullable(this.repositoryName);
+    public Output</* @Nullable */ String> repositoryName() {
+        return this.repositoryName;
     }
 
     /**
@@ -164,14 +164,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="signingAlgorithm")
-    private @Nullable String signingAlgorithm;
+    private Output</* @Nullable */ String> signingAlgorithm;
 
     /**
      * @return The algorithm to be used for signing. These are the only supported signing algorithms for container images.
      * 
      */
-    public Optional<String> signingAlgorithm() {
-        return Optional.ofNullable(this.signingAlgorithm);
+    public Output</* @Nullable */ String> signingAlgorithm() {
+        return this.signingAlgorithm;
     }
 
     private GetContainerSignaturesArgs() {}
@@ -214,8 +214,29 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -226,7 +247,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -237,13 +268,16 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetContainerSignaturesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetContainerSignaturesFilter... filters) {
@@ -256,8 +290,29 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder imageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(Output</* @Nullable */ String> imageDigest) {
             $.imageDigest = imageDigest;
+            return this;
+        }
+
+        /**
+         * @param imageDigest The digest of the container image.  Example: `sha256:e7d38b3517548a1c71e41bffe9c8ae6d6d29546ce46bf62159837aad072c90aa`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageDigest(@Nullable String imageDigest) {
+            return imageDigest(Output.of(imageDigest));
+        }
+
+        /**
+         * @param imageId A filter to return a container image summary only for the specified container image OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(Output</* @Nullable */ String> imageId) {
+            $.imageId = imageId;
             return this;
         }
 
@@ -268,7 +323,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder imageId(@Nullable String imageId) {
-            $.imageId = imageId;
+            return imageId(Output.of(imageId));
+        }
+
+        /**
+         * @param kmsKeyId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kmsKeyId(Output</* @Nullable */ String> kmsKeyId) {
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
 
@@ -279,7 +344,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            $.kmsKeyId = kmsKeyId;
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        /**
+         * @param kmsKeyVersionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kmsKeyVersionId(Output</* @Nullable */ String> kmsKeyVersionId) {
+            $.kmsKeyVersionId = kmsKeyVersionId;
             return this;
         }
 
@@ -290,7 +365,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder kmsKeyVersionId(@Nullable String kmsKeyVersionId) {
-            $.kmsKeyVersionId = kmsKeyVersionId;
+            return kmsKeyVersionId(Output.of(kmsKeyVersionId));
+        }
+
+        /**
+         * @param repositoryId A filter to return container images only for the specified container repository OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output</* @Nullable */ String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -301,7 +386,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder repositoryId(@Nullable String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param repositoryName A filter to return container images or container image signatures that match the repository name.  Example: `foo` or `foo*`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryName(Output</* @Nullable */ String> repositoryName) {
+            $.repositoryName = repositoryName;
             return this;
         }
 
@@ -312,7 +407,17 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder repositoryName(@Nullable String repositoryName) {
-            $.repositoryName = repositoryName;
+            return repositoryName(Output.of(repositoryName));
+        }
+
+        /**
+         * @param signingAlgorithm The algorithm to be used for signing. These are the only supported signing algorithms for container images.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signingAlgorithm(Output</* @Nullable */ String> signingAlgorithm) {
+            $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
@@ -323,8 +428,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
-            $.signingAlgorithm = signingAlgorithm;
-            return this;
+            return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
         public GetContainerSignaturesArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.securitycenter_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetProjectBigQueryExportArgs extends com.pulumi.resources.Inv
     public static final GetProjectBigQueryExportArgs Empty = new GetProjectBigQueryExportArgs();
 
     @Import(name="bigQueryExportId", required=true)
-    private String bigQueryExportId;
+    private Output<String> bigQueryExportId;
 
-    public String bigQueryExportId() {
+    public Output<String> bigQueryExportId() {
         return this.bigQueryExportId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetProjectBigQueryExportArgs() {}
@@ -53,14 +53,22 @@ public final class GetProjectBigQueryExportArgs extends com.pulumi.resources.Inv
             $ = new GetProjectBigQueryExportArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bigQueryExportId(String bigQueryExportId) {
+        public Builder bigQueryExportId(Output<String> bigQueryExportId) {
             $.bigQueryExportId = bigQueryExportId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder bigQueryExportId(String bigQueryExportId) {
+            return bigQueryExportId(Output.of(bigQueryExportId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetProjectBigQueryExportArgs build() {

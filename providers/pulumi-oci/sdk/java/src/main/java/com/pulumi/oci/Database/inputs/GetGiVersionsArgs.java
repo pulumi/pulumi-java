@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetGiVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetGiVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetGiVersionsFilter>> filters;
 
-    public Optional<List<GetGiVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetGiVersionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shape")
-    private @Nullable String shape;
+    private Output</* @Nullable */ String> shape;
 
     /**
      * @return If provided, filters the results for the given shape.
      * 
      */
-    public Optional<String> shape() {
-        return Optional.ofNullable(this.shape);
+    public Output</* @Nullable */ String> shape() {
+        return this.shape;
     }
 
     private GetGiVersionsArgs() {}
@@ -85,14 +85,28 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetGiVersionsFilter> filters) {
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetGiVersionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetGiVersionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetGiVersionsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder shape(@Nullable String shape) {
+        public Builder shape(Output</* @Nullable */ String> shape) {
             $.shape = shape;
             return this;
+        }
+
+        /**
+         * @param shape If provided, filters the results for the given shape.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shape(@Nullable String shape) {
+            return shape(Output.of(shape));
         }
 
         public GetGiVersionsArgs build() {

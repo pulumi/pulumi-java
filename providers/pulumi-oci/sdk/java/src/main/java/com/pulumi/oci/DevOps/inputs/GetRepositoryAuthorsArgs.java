@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetRepositoryAuthorsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
     public static final GetRepositoryAuthorsArgs Empty = new GetRepositoryAuthorsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoryAuthorsFilter> filters;
+    private Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters;
 
-    public Optional<List<GetRepositoryAuthorsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="refName")
-    private @Nullable String refName;
+    private Output</* @Nullable */ String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Optional<String> refName() {
-        return Optional.ofNullable(this.refName);
+    public Output</* @Nullable */ String> refName() {
+        return this.refName;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -79,9 +79,13 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
             $ = new GetRepositoryAuthorsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRepositoryAuthorsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRepositoryAuthorsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRepositoryAuthorsFilter... filters) {
@@ -94,8 +98,29 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(Output</* @Nullable */ String> refName) {
             $.refName = refName;
+            return this;
+        }
+
+        /**
+         * @param refName A filter to return only resources that match the given reference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder refName(@Nullable String refName) {
+            return refName(Output.of(refName));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -106,8 +131,7 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryAuthorsArgs build() {

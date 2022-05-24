@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="datasetName", required=true)
-    private String datasetName;
+    private Output<String> datasetName;
 
     /**
      * @return The Dataset name.
      * 
      */
-    public String datasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which workspace is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder datasetName(String datasetName) {
+        public Builder datasetName(Output<String> datasetName) {
             $.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * @param datasetName The Dataset name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetMachineLearningDatasetArgs build() {

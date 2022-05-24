@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTagStandardTagNamespaceTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetTagStandardTagNamespaceTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="standardTagNamespaceName", required=true)
-    private String standardTagNamespaceName;
+    private Output<String> standardTagNamespaceName;
 
     /**
      * @return The name of the standard tag namespace tempate that is requested
      * 
      */
-    public String standardTagNamespaceName() {
+    public Output<String> standardTagNamespaceName() {
         return this.standardTagNamespaceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetTagStandardTagNamespaceTemplateArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param standardTagNamespaceName The name of the standard tag namespace tempate that is requested
+         * 
+         * @return builder
+         * 
+         */
+        public Builder standardTagNamespaceName(Output<String> standardTagNamespaceName) {
+            $.standardTagNamespaceName = standardTagNamespaceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTagStandardTagNamespaceTemplateArgs extends com.pulumi.res
          * 
          */
         public Builder standardTagNamespaceName(String standardTagNamespaceName) {
-            $.standardTagNamespaceName = standardTagNamespaceName;
-            return this;
+            return standardTagNamespaceName(Output.of(standardTagNamespaceName));
         }
 
         public GetTagStandardTagNamespaceTemplateArgs build() {

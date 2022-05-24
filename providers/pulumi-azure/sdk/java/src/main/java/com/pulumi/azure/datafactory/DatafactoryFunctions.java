@@ -6,10 +6,10 @@ package com.pulumi.azure.datafactory;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.datafactory.inputs.GetFactoryArgs;
 import com.pulumi.azure.datafactory.outputs.GetFactoryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatafactoryFunctions {
     /**
@@ -41,7 +41,7 @@ public final class DatafactoryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args) {
+    public static Output<GetFactoryResult> getFactory(GetFactoryArgs args) {
         return getFactory(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class DatafactoryFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:datafactory/getFactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFactoryResult> getFactory(GetFactoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:datafactory/getFactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
     }
 }

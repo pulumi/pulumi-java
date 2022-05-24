@@ -8,38 +8,38 @@ import com.pulumi.awsnative.ssmincidents.inputs.GetReplicationSetArgs;
 import com.pulumi.awsnative.ssmincidents.inputs.GetResponsePlanArgs;
 import com.pulumi.awsnative.ssmincidents.outputs.GetReplicationSetResult;
 import com.pulumi.awsnative.ssmincidents.outputs.GetResponsePlanResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SsmincidentsFunctions {
     /**
      * Resource type definition for AWS::SSMIncidents::ReplicationSet
      * 
      */
-    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args) {
+    public static Output<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args) {
         return getReplicationSet(args, InvokeOptions.Empty);
     }
     /**
      * Resource type definition for AWS::SSMIncidents::ReplicationSet
      * 
      */
-    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getReplicationSet", TypeShape.of(GetReplicationSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ssmincidents:getReplicationSet", TypeShape.of(GetReplicationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::SSMIncidents::ResponsePlan
      * 
      */
-    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args) {
+    public static Output<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args) {
         return getResponsePlan(args, InvokeOptions.Empty);
     }
     /**
      * Resource type definition for AWS::SSMIncidents::ResponsePlan
      * 
      */
-    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args, Utilities.withVersion(options));
     }
 }

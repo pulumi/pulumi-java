@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,13 +33,13 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The top-level namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -47,13 +48,13 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="object", required=true)
-    private String object;
+    private Output<String> object;
 
     /**
      * @return The name of the object. Avoid entering confidential information. Example: `test/object1.log`
      * 
      */
-    public String object() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -89,8 +90,29 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param namespace The top-level namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param object The name of the object. Avoid entering confidential information. Example: `test/object1.log`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder object(Output<String> object) {
+            $.object = object;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetObjectHeadArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder object(String object) {
-            $.object = object;
-            return this;
+            return object(Output.of(object));
         }
 
         public GetObjectHeadArgs build() {

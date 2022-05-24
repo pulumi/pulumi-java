@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Analytics;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.oci.Analytics.outputs.GetAnalyticsInstancePrivateAccessChannel
 import com.pulumi.oci.Analytics.outputs.GetAnalyticsInstanceResult;
 import com.pulumi.oci.Analytics.outputs.GetAnalyticsInstancesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class AnalyticsFunctions {
     /**
@@ -24,7 +24,7 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstanceResult> getAnalyticsInstance(GetAnalyticsInstanceArgs args) {
+    public static Output<GetAnalyticsInstanceResult> getAnalyticsInstance(GetAnalyticsInstanceArgs args) {
         return getAnalyticsInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -35,8 +35,8 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstanceResult> getAnalyticsInstance(GetAnalyticsInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Analytics/getAnalyticsInstance:getAnalyticsInstance", TypeShape.of(GetAnalyticsInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalyticsInstanceResult> getAnalyticsInstance(GetAnalyticsInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Analytics/getAnalyticsInstance:getAnalyticsInstance", TypeShape.of(GetAnalyticsInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Analytics Instance Private Access Channel resource in Oracle Cloud Infrastructure Analytics service.
@@ -46,7 +46,7 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstancePrivateAccessChannelResult> getAnalyticsInstancePrivateAccessChannel(GetAnalyticsInstancePrivateAccessChannelArgs args) {
+    public static Output<GetAnalyticsInstancePrivateAccessChannelResult> getAnalyticsInstancePrivateAccessChannel(GetAnalyticsInstancePrivateAccessChannelArgs args) {
         return getAnalyticsInstancePrivateAccessChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -57,8 +57,8 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstancePrivateAccessChannelResult> getAnalyticsInstancePrivateAccessChannel(GetAnalyticsInstancePrivateAccessChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Analytics/getAnalyticsInstancePrivateAccessChannel:getAnalyticsInstancePrivateAccessChannel", TypeShape.of(GetAnalyticsInstancePrivateAccessChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalyticsInstancePrivateAccessChannelResult> getAnalyticsInstancePrivateAccessChannel(GetAnalyticsInstancePrivateAccessChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Analytics/getAnalyticsInstancePrivateAccessChannel:getAnalyticsInstancePrivateAccessChannel", TypeShape.of(GetAnalyticsInstancePrivateAccessChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Analytics Instances in Oracle Cloud Infrastructure Analytics service.
@@ -68,7 +68,7 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstancesResult> getAnalyticsInstances(GetAnalyticsInstancesArgs args) {
+    public static Output<GetAnalyticsInstancesResult> getAnalyticsInstances(GetAnalyticsInstancesArgs args) {
         return getAnalyticsInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class AnalyticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsInstancesResult> getAnalyticsInstances(GetAnalyticsInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Analytics/getAnalyticsInstances:getAnalyticsInstances", TypeShape.of(GetAnalyticsInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalyticsInstancesResult> getAnalyticsInstances(GetAnalyticsInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Analytics/getAnalyticsInstances:getAnalyticsInstances", TypeShape.of(GetAnalyticsInstancesResult.class), args, Utilities.withVersion(options));
     }
 }

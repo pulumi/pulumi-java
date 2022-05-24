@@ -6,11 +6,11 @@ package com.pulumi.azure.storage.inputs;
 import com.pulumi.azure.storage.inputs.GetAccountSASPermissions;
 import com.pulumi.azure.storage.inputs.GetAccountSASResourceTypes;
 import com.pulumi.azure.storage.inputs.GetAccountSASServices;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,13 +23,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionString", required=true)
-    private String connectionString;
+    private Output<String> connectionString;
 
     /**
      * @return The connection string for the storage account to which this SAS applies. Typically directly from the `primary_connection_string` attribute of a `azure.storage.Account` resource.
      * 
      */
-    public String connectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -38,13 +38,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expiry", required=true)
-    private String expiry;
+    private Output<String> expiry;
 
     /**
      * @return The expiration time and date of this SAS. Must be a valid ISO-8601 format time/date string.
      * 
      */
-    public String expiry() {
+    public Output<String> expiry() {
         return this.expiry;
     }
 
@@ -53,14 +53,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpsOnly")
-    private @Nullable Boolean httpsOnly;
+    private Output</* @Nullable */ Boolean> httpsOnly;
 
     /**
      * @return Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
      * 
      */
-    public Optional<Boolean> httpsOnly() {
-        return Optional.ofNullable(this.httpsOnly);
+    public Output</* @Nullable */ Boolean> httpsOnly() {
+        return this.httpsOnly;
     }
 
     /**
@@ -68,14 +68,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddresses")
-    private @Nullable String ipAddresses;
+    private Output</* @Nullable */ String> ipAddresses;
 
     /**
      * @return IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
      * 
      */
-    public Optional<String> ipAddresses() {
-        return Optional.ofNullable(this.ipAddresses);
+    public Output</* @Nullable */ String> ipAddresses() {
+        return this.ipAddresses;
     }
 
     /**
@@ -83,13 +83,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissions", required=true)
-    private GetAccountSASPermissions permissions;
+    private Output<GetAccountSASPermissions> permissions;
 
     /**
      * @return A `permissions` block as defined below.
      * 
      */
-    public GetAccountSASPermissions permissions() {
+    public Output<GetAccountSASPermissions> permissions() {
         return this.permissions;
     }
 
@@ -98,13 +98,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypes", required=true)
-    private GetAccountSASResourceTypes resourceTypes;
+    private Output<GetAccountSASResourceTypes> resourceTypes;
 
     /**
      * @return A `resource_types` block as defined below.
      * 
      */
-    public GetAccountSASResourceTypes resourceTypes() {
+    public Output<GetAccountSASResourceTypes> resourceTypes() {
         return this.resourceTypes;
     }
 
@@ -113,13 +113,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services", required=true)
-    private GetAccountSASServices services;
+    private Output<GetAccountSASServices> services;
 
     /**
      * @return A `services` block as defined below.
      * 
      */
-    public GetAccountSASServices services() {
+    public Output<GetAccountSASServices> services() {
         return this.services;
     }
 
@@ -128,14 +128,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signedVersion")
-    private @Nullable String signedVersion;
+    private Output</* @Nullable */ String> signedVersion;
 
     /**
      * @return Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
      * 
      */
-    public Optional<String> signedVersion() {
-        return Optional.ofNullable(this.signedVersion);
+    public Output</* @Nullable */ String> signedVersion() {
+        return this.signedVersion;
     }
 
     /**
@@ -143,13 +143,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start", required=true)
-    private String start;
+    private Output<String> start;
 
     /**
      * @return The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.
      * 
      */
-    public String start() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -191,8 +191,29 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectionString(String connectionString) {
+        public Builder connectionString(Output<String> connectionString) {
             $.connectionString = connectionString;
+            return this;
+        }
+
+        /**
+         * @param connectionString The connection string for the storage account to which this SAS applies. Typically directly from the `primary_connection_string` attribute of a `azure.storage.Account` resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
+        }
+
+        /**
+         * @param expiry The expiration time and date of this SAS. Must be a valid ISO-8601 format time/date string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiry(Output<String> expiry) {
+            $.expiry = expiry;
             return this;
         }
 
@@ -203,7 +224,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder expiry(String expiry) {
-            $.expiry = expiry;
+            return expiry(Output.of(expiry));
+        }
+
+        /**
+         * @param httpsOnly Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpsOnly(Output</* @Nullable */ Boolean> httpsOnly) {
+            $.httpsOnly = httpsOnly;
             return this;
         }
 
@@ -214,7 +245,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            $.httpsOnly = httpsOnly;
+            return httpsOnly(Output.of(httpsOnly));
+        }
+
+        /**
+         * @param ipAddresses IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddresses(Output</* @Nullable */ String> ipAddresses) {
+            $.ipAddresses = ipAddresses;
             return this;
         }
 
@@ -225,7 +266,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ipAddresses(@Nullable String ipAddresses) {
-            $.ipAddresses = ipAddresses;
+            return ipAddresses(Output.of(ipAddresses));
+        }
+
+        /**
+         * @param permissions A `permissions` block as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(Output<GetAccountSASPermissions> permissions) {
+            $.permissions = permissions;
             return this;
         }
 
@@ -236,7 +287,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder permissions(GetAccountSASPermissions permissions) {
-            $.permissions = permissions;
+            return permissions(Output.of(permissions));
+        }
+
+        /**
+         * @param resourceTypes A `resource_types` block as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceTypes(Output<GetAccountSASResourceTypes> resourceTypes) {
+            $.resourceTypes = resourceTypes;
             return this;
         }
 
@@ -247,7 +308,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceTypes(GetAccountSASResourceTypes resourceTypes) {
-            $.resourceTypes = resourceTypes;
+            return resourceTypes(Output.of(resourceTypes));
+        }
+
+        /**
+         * @param services A `services` block as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder services(Output<GetAccountSASServices> services) {
+            $.services = services;
             return this;
         }
 
@@ -258,7 +329,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder services(GetAccountSASServices services) {
-            $.services = services;
+            return services(Output.of(services));
+        }
+
+        /**
+         * @param signedVersion Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signedVersion(Output</* @Nullable */ String> signedVersion) {
+            $.signedVersion = signedVersion;
             return this;
         }
 
@@ -269,7 +350,17 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder signedVersion(@Nullable String signedVersion) {
-            $.signedVersion = signedVersion;
+            return signedVersion(Output.of(signedVersion));
+        }
+
+        /**
+         * @param start The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder start(Output<String> start) {
+            $.start = start;
             return this;
         }
 
@@ -280,8 +371,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder start(String start) {
-            $.start = start;
-            return this;
+            return start(Output.of(start));
         }
 
         public GetAccountSASArgs build() {

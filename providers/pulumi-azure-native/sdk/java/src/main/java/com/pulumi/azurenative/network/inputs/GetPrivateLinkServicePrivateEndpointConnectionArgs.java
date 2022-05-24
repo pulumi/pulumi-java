@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Expands referenced resources.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="peConnectionName", required=true)
-    private String peConnectionName;
+    private Output<String> peConnectionName;
 
     /**
      * @return The name of the private end point connection.
      * 
      */
-    public String peConnectionName() {
+    public Output<String> peConnectionName() {
         return this.peConnectionName;
     }
 
@@ -49,13 +49,13 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +64,13 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the private link service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -107,8 +107,29 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param peConnectionName The name of the private end point connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peConnectionName(Output<String> peConnectionName) {
+            $.peConnectionName = peConnectionName;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
          * 
          */
         public Builder peConnectionName(String peConnectionName) {
-            $.peConnectionName = peConnectionName;
+            return peConnectionName(Output.of(peConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the private link service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {

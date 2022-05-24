@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.UsageProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionRewardArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The subscription ID for which rewards information is requested for.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSubscriptionRewardArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -73,8 +74,29 @@ public final class GetSubscriptionRewardArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder subscriptionId(String subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
+            return this;
+        }
+
+        /**
+         * @param subscriptionId The subscription ID for which rewards information is requested for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(Output<String> tenancyId) {
+            $.tenancyId = tenancyId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSubscriptionRewardArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder tenancyId(String tenancyId) {
-            $.tenancyId = tenancyId;
-            return this;
+            return tenancyId(Output.of(tenancyId));
         }
 
         public GetSubscriptionRewardArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the scoped resource object.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="scopeName", required=true)
-    private String scopeName;
+    private Output<String> scopeName;
 
     /**
      * @return The name of the Azure Monitor PrivateLinkScope resource.
      * 
      */
-    public String scopeName() {
+    public Output<String> scopeName() {
         return this.scopeName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the scoped resource object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param scopeName The name of the Azure Monitor PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeName(Output<String> scopeName) {
+            $.scopeName = scopeName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateLinkScopedResourceArgs extends com.pulumi.resources
          * 
          */
         public Builder scopeName(String scopeName) {
-            $.scopeName = scopeName;
-            return this;
+            return scopeName(Output.of(scopeName));
         }
 
         public GetPrivateLinkScopedResourceArgs build() {

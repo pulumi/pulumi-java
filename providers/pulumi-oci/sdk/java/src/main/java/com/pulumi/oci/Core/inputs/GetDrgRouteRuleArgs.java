@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDrgRouteRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="drgRouteTableId", required=true)
-    private String drgRouteTableId;
+    private Output<String> drgRouteTableId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
      * 
      */
-    public String drgRouteTableId() {
+    public Output<String> drgRouteTableId() {
         return this.drgRouteTableId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDrgRouteRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder drgRouteTableId(String drgRouteTableId) {
+        public Builder drgRouteTableId(Output<String> drgRouteTableId) {
             $.drgRouteTableId = drgRouteTableId;
             return this;
+        }
+
+        /**
+         * @param drgRouteTableId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteTableId(String drgRouteTableId) {
+            return drgRouteTableId(Output.of(drgRouteTableId));
         }
 
         public GetDrgRouteRuleArgs build() {

@@ -10,52 +10,52 @@ import com.pulumi.awsnative.groundstation.inputs.GetMissionProfileArgs;
 import com.pulumi.awsnative.groundstation.outputs.GetConfigResult;
 import com.pulumi.awsnative.groundstation.outputs.GetDataflowEndpointGroupResult;
 import com.pulumi.awsnative.groundstation.outputs.GetMissionProfileResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GroundstationFunctions {
     /**
      * AWS Ground Station config resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
     /**
      * AWS Ground Station config resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:groundstation:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:groundstation:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
      * 
      */
-    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args) {
+    public static Output<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args) {
         return getDataflowEndpointGroup(args, InvokeOptions.Empty);
     }
     /**
      * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
      * 
      */
-    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:groundstation:getDataflowEndpointGroup", TypeShape.of(GetDataflowEndpointGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:groundstation:getDataflowEndpointGroup", TypeShape.of(GetDataflowEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Ground Station Mission Profile resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args) {
+    public static Output<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args) {
         return getMissionProfile(args, InvokeOptions.Empty);
     }
     /**
      * AWS Ground Station Mission Profile resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:groundstation:getMissionProfile", TypeShape.of(GetMissionProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:groundstation:getMissionProfile", TypeShape.of(GetMissionProfileResult.class), args, Utilities.withVersion(options));
     }
 }

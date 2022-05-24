@@ -12,10 +12,10 @@ import com.pulumi.azurenative.managednetwork.outputs.GetManagedNetworkGroupResul
 import com.pulumi.azurenative.managednetwork.outputs.GetManagedNetworkPeeringPolicyResult;
 import com.pulumi.azurenative.managednetwork.outputs.GetManagedNetworkResult;
 import com.pulumi.azurenative.managednetwork.outputs.GetScopeAssignmentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagednetworkFunctions {
     /**
@@ -23,7 +23,7 @@ public final class ManagednetworkFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkResult> getManagedNetwork(GetManagedNetworkArgs args) {
+    public static Output<GetManagedNetworkResult> getManagedNetwork(GetManagedNetworkArgs args) {
         return getManagedNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -31,15 +31,15 @@ public final class ManagednetworkFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkResult> getManagedNetwork(GetManagedNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetwork", TypeShape.of(GetManagedNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedNetworkResult> getManagedNetwork(GetManagedNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managednetwork:getManagedNetwork", TypeShape.of(GetManagedNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Managed Network Group resource
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkGroupResult> getManagedNetworkGroup(GetManagedNetworkGroupArgs args) {
+    public static Output<GetManagedNetworkGroupResult> getManagedNetworkGroup(GetManagedNetworkGroupArgs args) {
         return getManagedNetworkGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class ManagednetworkFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkGroupResult> getManagedNetworkGroup(GetManagedNetworkGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetworkGroup", TypeShape.of(GetManagedNetworkGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedNetworkGroupResult> getManagedNetworkGroup(GetManagedNetworkGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managednetwork:getManagedNetworkGroup", TypeShape.of(GetManagedNetworkGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Managed Network Peering Policy resource
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkPeeringPolicyResult> getManagedNetworkPeeringPolicy(GetManagedNetworkPeeringPolicyArgs args) {
+    public static Output<GetManagedNetworkPeeringPolicyResult> getManagedNetworkPeeringPolicy(GetManagedNetworkPeeringPolicyArgs args) {
         return getManagedNetworkPeeringPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class ManagednetworkFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedNetworkPeeringPolicyResult> getManagedNetworkPeeringPolicy(GetManagedNetworkPeeringPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetworkPeeringPolicy", TypeShape.of(GetManagedNetworkPeeringPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedNetworkPeeringPolicyResult> getManagedNetworkPeeringPolicy(GetManagedNetworkPeeringPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managednetwork:getManagedNetworkPeeringPolicy", TypeShape.of(GetManagedNetworkPeeringPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Managed Network resource
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeAssignmentResult> getScopeAssignment(GetScopeAssignmentArgs args) {
+    public static Output<GetScopeAssignmentResult> getScopeAssignment(GetScopeAssignmentArgs args) {
         return getScopeAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class ManagednetworkFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeAssignmentResult> getScopeAssignment(GetScopeAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getScopeAssignment", TypeShape.of(GetScopeAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScopeAssignmentResult> getScopeAssignment(GetScopeAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managednetwork:getScopeAssignment", TypeShape.of(GetScopeAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

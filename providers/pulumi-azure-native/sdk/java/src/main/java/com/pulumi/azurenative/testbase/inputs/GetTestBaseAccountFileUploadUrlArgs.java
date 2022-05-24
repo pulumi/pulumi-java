@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.testbase.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="blobName")
-    private @Nullable String blobName;
+    private Output</* @Nullable */ String> blobName;
 
     /**
      * @return The custom file name of the uploaded blob.
      * 
      */
-    public Optional<String> blobName() {
-        return Optional.ofNullable(this.blobName);
+    public Output</* @Nullable */ String> blobName() {
+        return this.blobName;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-    private String testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     /**
      * @return The resource name of the Test Base Account.
      * 
      */
-    public String testBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -91,8 +91,29 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder blobName(@Nullable String blobName) {
+        public Builder blobName(Output</* @Nullable */ String> blobName) {
             $.blobName = blobName;
+            return this;
+        }
+
+        /**
+         * @param blobName The custom file name of the uploaded blob.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blobName(@Nullable String blobName) {
+            return blobName(Output.of(blobName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
          * 
          */
         public Builder testBaseAccountName(String testBaseAccountName) {
-            $.testBaseAccountName = testBaseAccountName;
-            return this;
+            return testBaseAccountName(Output.of(testBaseAccountName));
         }
 
         public GetTestBaseAccountFileUploadUrlArgs build() {

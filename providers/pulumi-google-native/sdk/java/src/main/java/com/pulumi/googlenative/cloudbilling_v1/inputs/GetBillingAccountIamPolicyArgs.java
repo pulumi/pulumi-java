@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudbilling_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetBillingAccountIamPolicyArgs extends com.pulumi.resources.I
     public static final GetBillingAccountIamPolicyArgs Empty = new GetBillingAccountIamPolicyArgs();
 
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     private GetBillingAccountIamPolicyArgs() {}
@@ -53,14 +53,22 @@ public final class GetBillingAccountIamPolicyArgs extends com.pulumi.resources.I
             $ = new GetBillingAccountIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
         }
 
         public GetBillingAccountIamPolicyArgs build() {

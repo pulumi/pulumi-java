@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="availabilityStatus")
-    private @Nullable String availabilityStatus;
+    private Output</* @Nullable */ String> availabilityStatus;
 
     /**
      * @return Filter to return only Management Agents in the particular availability status.
      * 
      */
-    public Optional<String> availabilityStatus() {
-        return Optional.ofNullable(this.availabilityStatus);
+    public Output</* @Nullable */ String> availabilityStatus() {
+        return this.availabilityStatus;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment to which a request will be scoped.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,21 +52,21 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Filter to return only Management Agents having the particular display name.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagementAgentsFilter> filters;
+    private Output</* @Nullable */ List<GetManagementAgentsFilter>> filters;
 
-    public Optional<List<GetManagementAgentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagementAgentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hostId")
-    private @Nullable String hostId;
+    private Output</* @Nullable */ String> hostId;
 
     /**
      * @return Filter to return only Management Agents having the particular agent host id.
      * 
      */
-    public Optional<String> hostId() {
-        return Optional.ofNullable(this.hostId);
+    public Output</* @Nullable */ String> hostId() {
+        return this.hostId;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="installType")
-    private @Nullable String installType;
+    private Output</* @Nullable */ String> installType;
 
     /**
      * @return A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
      * 
      */
-    public Optional<String> installType() {
-        return Optional.ofNullable(this.installType);
+    public Output</* @Nullable */ String> installType() {
+        return this.installType;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isCustomerDeployed")
-    private @Nullable Boolean isCustomerDeployed;
+    private Output</* @Nullable */ Boolean> isCustomerDeployed;
 
     /**
      * @return true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.
      * 
      */
-    public Optional<Boolean> isCustomerDeployed() {
-        return Optional.ofNullable(this.isCustomerDeployed);
+    public Output</* @Nullable */ Boolean> isCustomerDeployed() {
+        return this.isCustomerDeployed;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="platformTypes")
-    private @Nullable List<String> platformTypes;
+    private Output</* @Nullable */ List<String>> platformTypes;
 
     /**
      * @return Filter to return only results having the particular platform type.
      * 
      */
-    public Optional<List<String>> platformTypes() {
-        return Optional.ofNullable(this.platformTypes);
+    public Output</* @Nullable */ List<String>> platformTypes() {
+        return this.platformTypes;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="pluginNames")
-    private @Nullable List<String> pluginNames;
+    private Output</* @Nullable */ List<String>> pluginNames;
 
     /**
      * @return Filter to return only Management Agents having the particular Plugin installed. A special pluginName of &#39;None&#39; can be provided and this will return only Management Agents having no plugin installed.
      * 
      */
-    public Optional<List<String>> pluginNames() {
-        return Optional.ofNullable(this.pluginNames);
+    public Output</* @Nullable */ List<String>> pluginNames() {
+        return this.pluginNames;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter to return only Management Agents in the particular lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -164,14 +164,14 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="versions")
-    private @Nullable List<String> versions;
+    private Output</* @Nullable */ List<String>> versions;
 
     /**
      * @return Filter to return only Management Agents having the particular agent version.
      * 
      */
-    public Optional<List<String>> versions() {
-        return Optional.ofNullable(this.versions);
+    public Output</* @Nullable */ List<String>> versions() {
+        return this.versions;
     }
 
     private GetManagementAgentsArgs() {}
@@ -214,8 +214,29 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder availabilityStatus(@Nullable String availabilityStatus) {
+        public Builder availabilityStatus(Output</* @Nullable */ String> availabilityStatus) {
             $.availabilityStatus = availabilityStatus;
+            return this;
+        }
+
+        /**
+         * @param availabilityStatus Filter to return only Management Agents in the particular availability status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityStatus(@Nullable String availabilityStatus) {
+            return availabilityStatus(Output.of(availabilityStatus));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment to which a request will be scoped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -226,7 +247,17 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Filter to return only Management Agents having the particular display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -237,13 +268,16 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetManagementAgentsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetManagementAgentsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagementAgentsFilter... filters) {
@@ -256,8 +290,29 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder hostId(@Nullable String hostId) {
+        public Builder hostId(Output</* @Nullable */ String> hostId) {
             $.hostId = hostId;
+            return this;
+        }
+
+        /**
+         * @param hostId Filter to return only Management Agents having the particular agent host id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostId(@Nullable String hostId) {
+            return hostId(Output.of(hostId));
+        }
+
+        /**
+         * @param installType A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder installType(Output</* @Nullable */ String> installType) {
+            $.installType = installType;
             return this;
         }
 
@@ -268,7 +323,17 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder installType(@Nullable String installType) {
-            $.installType = installType;
+            return installType(Output.of(installType));
+        }
+
+        /**
+         * @param isCustomerDeployed true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isCustomerDeployed(Output</* @Nullable */ Boolean> isCustomerDeployed) {
+            $.isCustomerDeployed = isCustomerDeployed;
             return this;
         }
 
@@ -279,7 +344,17 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder isCustomerDeployed(@Nullable Boolean isCustomerDeployed) {
-            $.isCustomerDeployed = isCustomerDeployed;
+            return isCustomerDeployed(Output.of(isCustomerDeployed));
+        }
+
+        /**
+         * @param platformTypes Filter to return only results having the particular platform type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder platformTypes(Output</* @Nullable */ List<String>> platformTypes) {
+            $.platformTypes = platformTypes;
             return this;
         }
 
@@ -290,8 +365,7 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder platformTypes(@Nullable List<String> platformTypes) {
-            $.platformTypes = platformTypes;
-            return this;
+            return platformTypes(Output.of(platformTypes));
         }
 
         /**
@@ -310,9 +384,19 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder pluginNames(@Nullable List<String> pluginNames) {
+        public Builder pluginNames(Output</* @Nullable */ List<String>> pluginNames) {
             $.pluginNames = pluginNames;
             return this;
+        }
+
+        /**
+         * @param pluginNames Filter to return only Management Agents having the particular Plugin installed. A special pluginName of &#39;None&#39; can be provided and this will return only Management Agents having no plugin installed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pluginNames(@Nullable List<String> pluginNames) {
+            return pluginNames(Output.of(pluginNames));
         }
 
         /**
@@ -331,8 +415,29 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state Filter to return only Management Agents in the particular lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param versions Filter to return only Management Agents having the particular agent version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versions(Output</* @Nullable */ List<String>> versions) {
+            $.versions = versions;
             return this;
         }
 
@@ -343,8 +448,7 @@ public final class GetManagementAgentsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder versions(@Nullable List<String> versions) {
-            $.versions = versions;
-            return this;
+            return versions(Output.of(versions));
         }
 
         /**

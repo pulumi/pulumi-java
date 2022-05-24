@@ -18,10 +18,10 @@ import com.pulumi.azurenative.notificationhubs.outputs.GetNotificationHubPnsCred
 import com.pulumi.azurenative.notificationhubs.outputs.GetNotificationHubResult;
 import com.pulumi.azurenative.notificationhubs.outputs.ListNamespaceKeysResult;
 import com.pulumi.azurenative.notificationhubs.outputs.ListNotificationHubKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NotificationhubsFunctions {
     /**
@@ -29,7 +29,7 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -37,15 +37,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a Namespace AuthorizationRules.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
         return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -53,15 +53,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a NotificationHub Resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args) {
+    public static Output<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args) {
         return getNotificationHub(args, InvokeOptions.Empty);
     }
     /**
@@ -69,15 +69,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHub", TypeShape.of(GetNotificationHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:getNotificationHub", TypeShape.of(GetNotificationHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a Namespace AuthorizationRules.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args) {
+    public static Output<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args) {
         return getNotificationHubAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -85,15 +85,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubAuthorizationRule", TypeShape.of(GetNotificationHubAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:getNotificationHubAuthorizationRule", TypeShape.of(GetNotificationHubAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a NotificationHub PNS Credentials.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args) {
+    public static Output<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args) {
         return getNotificationHubPnsCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -101,15 +101,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubPnsCredentials", TypeShape.of(GetNotificationHubPnsCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:getNotificationHubPnsCredentials", TypeShape.of(GetNotificationHubPnsCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/NotificationHub Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
         return listNamespaceKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -117,15 +117,15 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/NotificationHub Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args) {
+    public static Output<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args) {
         return listNotificationHubKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNotificationHubKeys", TypeShape.of(ListNotificationHubKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:notificationhubs:listNotificationHubKeys", TypeShape.of(ListNotificationHubKeysResult.class), args, Utilities.withVersion(options));
     }
 }

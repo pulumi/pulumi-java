@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.VisualBuilder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVbInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vbInstanceId", required=true)
-    private String vbInstanceId;
+    private Output<String> vbInstanceId;
 
     /**
      * @return Unique Vb Instance identifier.
      * 
      */
-    public String vbInstanceId() {
+    public Output<String> vbInstanceId() {
         return this.vbInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVbInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vbInstanceId(String vbInstanceId) {
+        public Builder vbInstanceId(Output<String> vbInstanceId) {
             $.vbInstanceId = vbInstanceId;
             return this;
+        }
+
+        /**
+         * @param vbInstanceId Unique Vb Instance identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vbInstanceId(String vbInstanceId) {
+            return vbInstanceId(Output.of(vbInstanceId));
         }
 
         public GetVbInstanceArgs build() {

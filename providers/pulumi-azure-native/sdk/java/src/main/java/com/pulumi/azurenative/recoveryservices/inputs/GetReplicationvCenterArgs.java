@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -62,13 +63,13 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vCenterName", required=true)
-    private String vCenterName;
+    private Output<String> vCenterName;
 
     /**
      * @return vCenter name.
      * 
      */
-    public String vCenterName() {
+    public Output<String> vCenterName() {
         return this.vCenterName;
     }
 
@@ -105,8 +106,29 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param vCenterName vCenter name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vCenterName(Output<String> vCenterName) {
+            $.vCenterName = vCenterName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder vCenterName(String vCenterName) {
-            $.vCenterName = vCenterName;
-            return this;
+            return vCenterName(Output.of(vCenterName));
         }
 
         public GetReplicationvCenterArgs build() {

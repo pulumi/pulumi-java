@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.virtualmachineimages.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="imageTemplateName", required=true)
-    private String imageTemplateName;
+    private Output<String> imageTemplateName;
 
     /**
      * @return The name of the image Template
      * 
      */
-    public String imageTemplateName() {
+    public Output<String> imageTemplateName() {
         return this.imageTemplateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder imageTemplateName(String imageTemplateName) {
+        public Builder imageTemplateName(Output<String> imageTemplateName) {
             $.imageTemplateName = imageTemplateName;
+            return this;
+        }
+
+        /**
+         * @param imageTemplateName The name of the image Template
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageTemplateName(String imageTemplateName) {
+            return imageTemplateName(Output.of(imageTemplateName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetVirtualMachineImageTemplateArgs build() {

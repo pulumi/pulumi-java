@@ -3,10 +3,10 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailNickname")
-    private @Nullable String mailNickname;
+    private Output</* @Nullable */ String> mailNickname;
 
     /**
      * @return The email alias of the user.
      * 
      */
-    public Optional<String> mailNickname() {
-        return Optional.ofNullable(this.mailNickname);
+    public Output</* @Nullable */ String> mailNickname() {
+        return this.mailNickname;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-    private @Nullable String objectId;
+    private Output</* @Nullable */ String> objectId;
 
     /**
      * @return The object ID of the user.
      * 
      */
-    public Optional<String> objectId() {
-        return Optional.ofNullable(this.objectId);
+    public Output</* @Nullable */ String> objectId() {
+        return this.objectId;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPrincipalName")
-    private @Nullable String userPrincipalName;
+    private Output</* @Nullable */ String> userPrincipalName;
 
     /**
      * @return The user principal name (UPN) of the user.
      * 
      */
-    public Optional<String> userPrincipalName() {
-        return Optional.ofNullable(this.userPrincipalName);
+    public Output</* @Nullable */ String> userPrincipalName() {
+        return this.userPrincipalName;
     }
 
     private GetUserArgs() {}
@@ -91,8 +91,29 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailNickname(@Nullable String mailNickname) {
+        public Builder mailNickname(Output</* @Nullable */ String> mailNickname) {
             $.mailNickname = mailNickname;
+            return this;
+        }
+
+        /**
+         * @param mailNickname The email alias of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailNickname(@Nullable String mailNickname) {
+            return mailNickname(Output.of(mailNickname));
+        }
+
+        /**
+         * @param objectId The object ID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(Output</* @Nullable */ String> objectId) {
+            $.objectId = objectId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder objectId(@Nullable String objectId) {
-            $.objectId = objectId;
+            return objectId(Output.of(objectId));
+        }
+
+        /**
+         * @param userPrincipalName The user principal name (UPN) of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userPrincipalName(Output</* @Nullable */ String> userPrincipalName) {
+            $.userPrincipalName = userPrincipalName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            $.userPrincipalName = userPrincipalName;
-            return this;
+            return userPrincipalName(Output.of(userPrincipalName));
         }
 
         public GetUserArgs build() {

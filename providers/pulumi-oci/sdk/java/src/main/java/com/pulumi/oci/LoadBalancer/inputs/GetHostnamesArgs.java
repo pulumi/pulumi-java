@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.LoadBalancer.inputs.GetHostnamesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostnamesArgs Empty = new GetHostnamesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetHostnamesFilter> filters;
+    private Output</* @Nullable */ List<GetHostnamesFilter>> filters;
 
-    public Optional<List<GetHostnamesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetHostnamesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the hostnames to retrieve.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -63,9 +63,13 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostnamesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetHostnamesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetHostnamesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetHostnamesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetHostnamesFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the hostnames to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetHostnamesArgs build() {

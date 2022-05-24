@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The provider location
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -32,13 +33,13 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="userSettingsName", required=true)
-    private String userSettingsName;
+    private Output<String> userSettingsName;
 
     /**
      * @return The name of the user settings
      * 
      */
-    public String userSettingsName() {
+    public Output<String> userSettingsName() {
         return this.userSettingsName;
     }
 
@@ -73,8 +74,29 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userSettingsName(Output<String> userSettingsName) {
+            $.userSettingsName = userSettingsName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
          * 
          */
         public Builder userSettingsName(String userSettingsName) {
-            $.userSettingsName = userSettingsName;
-            return this;
+            return userSettingsName(Output.of(userSettingsName));
         }
 
         public GetUserSettingsWithLocationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the database on which the sync group is hosted.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-    private String syncGroupName;
+    private Output<String> syncGroupName;
 
     /**
      * @return The name of the sync group.
      * 
      */
-    public String syncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder databaseName(String databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * @param databaseName The name of the database on which the sync group is hosted.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
+            return serverName(Output.of(serverName));
+        }
+
+        /**
+         * @param syncGroupName The name of the sync group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syncGroupName(Output<String> syncGroupName) {
+            $.syncGroupName = syncGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder syncGroupName(String syncGroupName) {
-            $.syncGroupName = syncGroupName;
-            return this;
+            return syncGroupName(Output.of(syncGroupName));
         }
 
         public GetSyncGroupArgs build() {

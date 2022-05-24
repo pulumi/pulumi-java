@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="failoverGroupName", required=true)
-    private String failoverGroupName;
+    private Output<String> failoverGroupName;
 
     /**
      * @return The name of the failover group.
      * 
      */
-    public String failoverGroupName() {
+    public Output<String> failoverGroupName() {
         return this.failoverGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locationName", required=true)
-    private String locationName;
+    private Output<String> locationName;
 
     /**
      * @return The name of the region where the resource is located.
      * 
      */
-    public String locationName() {
+    public Output<String> locationName() {
         return this.locationName;
     }
 
@@ -47,13 +48,13 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder failoverGroupName(String failoverGroupName) {
+        public Builder failoverGroupName(Output<String> failoverGroupName) {
             $.failoverGroupName = failoverGroupName;
+            return this;
+        }
+
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder failoverGroupName(String failoverGroupName) {
+            return failoverGroupName(Output.of(failoverGroupName));
+        }
+
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationName(Output<String> locationName) {
+            $.locationName = locationName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder locationName(String locationName) {
-            $.locationName = locationName;
+            return locationName(Output.of(locationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetInstanceFailoverGroupArgs build() {

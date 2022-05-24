@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.secretmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
     /**
      * @return The name of the secret.
      * 
      */
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -75,8 +75,29 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param secretId The name of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretId(Output<String> secretId) {
+            $.secretId = secretId;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder secretId(String secretId) {
-            $.secretId = secretId;
-            return this;
+            return secretId(Output.of(secretId));
         }
 
         public GetSecretArgs build() {

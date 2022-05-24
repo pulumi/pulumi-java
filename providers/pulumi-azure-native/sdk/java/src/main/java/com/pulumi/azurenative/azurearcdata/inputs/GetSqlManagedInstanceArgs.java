@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurearcdata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sqlManagedInstanceName", required=true)
-    private String sqlManagedInstanceName;
+    private Output<String> sqlManagedInstanceName;
 
     /**
      * @return Name of SQL Managed Instance
      * 
      */
-    public String sqlManagedInstanceName() {
+    public Output<String> sqlManagedInstanceName() {
         return this.sqlManagedInstanceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlManagedInstanceName Name of SQL Managed Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlManagedInstanceName(Output<String> sqlManagedInstanceName) {
+            $.sqlManagedInstanceName = sqlManagedInstanceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder sqlManagedInstanceName(String sqlManagedInstanceName) {
-            $.sqlManagedInstanceName = sqlManagedInstanceName;
-            return this;
+            return sqlManagedInstanceName(Output.of(sqlManagedInstanceName));
         }
 
         public GetSqlManagedInstanceArgs build() {

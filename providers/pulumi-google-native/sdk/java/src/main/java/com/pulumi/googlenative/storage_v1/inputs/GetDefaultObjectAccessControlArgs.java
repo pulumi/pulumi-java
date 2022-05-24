@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetDefaultObjectAccessControlArgs extends com.pulumi.resource
     public static final GetDefaultObjectAccessControlArgs Empty = new GetDefaultObjectAccessControlArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="entity", required=true)
-    private String entity;
+    private Output<String> entity;
 
-    public String entity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private Output</* @Nullable */ String> userProject;
 
-    public Optional<String> userProject() {
-        return Optional.ofNullable(this.userProject);
+    public Output</* @Nullable */ String> userProject() {
+        return this.userProject;
     }
 
     private GetDefaultObjectAccessControlArgs() {}
@@ -61,19 +61,31 @@ public final class GetDefaultObjectAccessControlArgs extends com.pulumi.resource
             $ = new GetDefaultObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder entity(String entity) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder entity(Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
+        }
+
+        public Builder userProject(Output</* @Nullable */ String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(@Nullable String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetDefaultObjectAccessControlArgs build() {

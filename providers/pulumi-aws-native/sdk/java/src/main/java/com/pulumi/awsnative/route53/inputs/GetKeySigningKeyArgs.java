@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostedZoneId", required=true)
-    private String hostedZoneId;
+    private Output<String> hostedZoneId;
 
     /**
      * @return The unique string (ID) used to identify a hosted zone.
      * 
      */
-    public String hostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -32,13 +33,13 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder hostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
+            return this;
+        }
+
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
+        }
+
+        /**
+         * @param name An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetKeySigningKeyArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetKeySigningKeyArgs build() {

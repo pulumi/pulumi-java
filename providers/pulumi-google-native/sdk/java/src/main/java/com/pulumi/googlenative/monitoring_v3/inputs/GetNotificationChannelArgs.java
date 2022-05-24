@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @Import(name="notificationChannelId", required=true)
-    private String notificationChannelId;
+    private Output<String> notificationChannelId;
 
-    public String notificationChannelId() {
+    public Output<String> notificationChannelId() {
         return this.notificationChannelId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetNotificationChannelArgs() {}
@@ -53,14 +53,22 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
             $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder notificationChannelId(String notificationChannelId) {
+        public Builder notificationChannelId(Output<String> notificationChannelId) {
             $.notificationChannelId = notificationChannelId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder notificationChannelId(String notificationChannelId) {
+            return notificationChannelId(Output.of(notificationChannelId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetNotificationChannelArgs build() {

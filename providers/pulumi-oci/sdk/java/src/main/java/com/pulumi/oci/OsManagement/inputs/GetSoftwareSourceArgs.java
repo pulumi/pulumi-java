@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSoftwareSourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="softwareSourceId", required=true)
-    private String softwareSourceId;
+    private Output<String> softwareSourceId;
 
     /**
      * @return The OCID of the software source.
      * 
      */
-    public String softwareSourceId() {
+    public Output<String> softwareSourceId() {
         return this.softwareSourceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSoftwareSourceArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder softwareSourceId(String softwareSourceId) {
+        public Builder softwareSourceId(Output<String> softwareSourceId) {
             $.softwareSourceId = softwareSourceId;
             return this;
+        }
+
+        /**
+         * @param softwareSourceId The OCID of the software source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder softwareSourceId(String softwareSourceId) {
+            return softwareSourceId(Output.of(softwareSourceId));
         }
 
         public GetSoftwareSourceArgs build() {

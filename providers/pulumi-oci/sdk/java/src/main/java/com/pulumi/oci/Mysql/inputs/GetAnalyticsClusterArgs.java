@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAnalyticsClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dbSystemId", required=true)
-    private String dbSystemId;
+    private Output<String> dbSystemId;
 
     /**
      * @return The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbSystemId() {
+    public Output<String> dbSystemId() {
         return this.dbSystemId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAnalyticsClusterArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder dbSystemId(String dbSystemId) {
+        public Builder dbSystemId(Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
+        }
+
+        /**
+         * @param dbSystemId The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(String dbSystemId) {
+            return dbSystemId(Output.of(dbSystemId));
         }
 
         public GetAnalyticsClusterArgs build() {

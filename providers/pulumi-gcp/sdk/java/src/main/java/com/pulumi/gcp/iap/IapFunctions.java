@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.iap;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.iap.inputs.GetClientArgs;
 import com.pulumi.gcp.iap.outputs.GetClientResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class IapFunctions {
     /**
@@ -44,7 +44,7 @@ public final class IapFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientResult> getClient(GetClientArgs args) {
+    public static Output<GetClientResult> getClient(GetClientArgs args) {
         return getClient(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class IapFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClientResult> getClient(GetClientArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:iap/getClient:getClient", TypeShape.of(GetClientResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClientResult> getClient(GetClientArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:iap/getClient:getClient", TypeShape.of(GetClientResult.class), args, Utilities.withVersion(options));
     }
 }

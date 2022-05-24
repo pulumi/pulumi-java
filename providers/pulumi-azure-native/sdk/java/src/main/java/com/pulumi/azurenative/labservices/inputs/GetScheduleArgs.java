@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labName", required=true)
-    private String labName;
+    private Output<String> labName;
 
     /**
      * @return The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
      * 
      */
-    public String labName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -32,13 +33,13 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleName", required=true)
-    private String scheduleName;
+    private Output<String> scheduleName;
 
     /**
      * @return The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
      * 
      */
-    public String scheduleName() {
+    public Output<String> scheduleName() {
         return this.scheduleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder labName(String labName) {
+        public Builder labName(Output<String> labName) {
             $.labName = labName;
+            return this;
+        }
+
+        /**
+         * @param labName The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labName(String labName) {
+            return labName(Output.of(labName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param scheduleName The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduleName(Output<String> scheduleName) {
+            $.scheduleName = scheduleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scheduleName(String scheduleName) {
-            $.scheduleName = scheduleName;
-            return this;
+            return scheduleName(Output.of(scheduleName));
         }
 
         public GetScheduleArgs build() {

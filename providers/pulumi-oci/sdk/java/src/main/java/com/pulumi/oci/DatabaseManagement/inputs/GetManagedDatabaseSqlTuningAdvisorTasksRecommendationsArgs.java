@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
      * 
      */
     @Import(name="executionId", required=true)
-    private String executionId;
+    private Output<String> executionId;
 
     /**
      * @return The execution ID for an execution of a SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String executionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter> filters;
+    private Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters;
 
-    public Optional<List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -58,13 +58,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
      * 
      */
     @Import(name="sqlObjectId", required=true)
-    private String sqlObjectId;
+    private Output<String> sqlObjectId;
 
     /**
      * @return The SQL object ID for the SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String sqlObjectId() {
+    public Output<String> sqlObjectId() {
         return this.sqlObjectId;
     }
 
@@ -73,13 +73,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
      * 
      */
     @Import(name="sqlTuningAdvisorTaskId", required=true)
-    private String sqlTuningAdvisorTaskId;
+    private Output<String> sqlTuningAdvisorTaskId;
 
     /**
      * @return The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String sqlTuningAdvisorTaskId() {
+    public Output<String> sqlTuningAdvisorTaskId() {
         return this.sqlTuningAdvisorTaskId;
     }
 
@@ -117,14 +117,28 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
          * @return builder
          * 
          */
-        public Builder executionId(String executionId) {
+        public Builder executionId(Output<String> executionId) {
             $.executionId = executionId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter> filters) {
+        /**
+         * @param executionId The execution ID for an execution of a SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executionId(String executionId) {
+            return executionId(Output.of(executionId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(String managedDatabaseId) {
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param sqlObjectId The SQL object ID for the SQL tuning task. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlObjectId(Output<String> sqlObjectId) {
+            $.sqlObjectId = sqlObjectId;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
          * 
          */
         public Builder sqlObjectId(String sqlObjectId) {
-            $.sqlObjectId = sqlObjectId;
+            return sqlObjectId(Output.of(sqlObjectId));
+        }
+
+        /**
+         * @param sqlTuningAdvisorTaskId The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlTuningAdvisorTaskId(Output<String> sqlTuningAdvisorTaskId) {
+            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
          * 
          */
         public Builder sqlTuningAdvisorTaskId(String sqlTuningAdvisorTaskId) {
-            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
-            return this;
+            return sqlTuningAdvisorTaskId(Output.of(sqlTuningAdvisorTaskId));
         }
 
         public GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs build() {

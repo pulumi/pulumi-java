@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionGatewayName", required=true)
-    private String connectionGatewayName;
+    private Output<String> connectionGatewayName;
 
     /**
      * @return The connection gateway name
      * 
      */
-    public String connectionGatewayName() {
+    public Output<String> connectionGatewayName() {
         return this.connectionGatewayName;
     }
 
@@ -34,13 +34,13 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,14 +49,14 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return Subscription Id
      * 
      */
-    public Optional<String> subscriptionId() {
-        return Optional.ofNullable(this.subscriptionId);
+    public Output</* @Nullable */ String> subscriptionId() {
+        return this.subscriptionId;
     }
 
     private GetConnectionGatewayArgs() {}
@@ -91,8 +91,29 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder connectionGatewayName(String connectionGatewayName) {
+        public Builder connectionGatewayName(Output<String> connectionGatewayName) {
             $.connectionGatewayName = connectionGatewayName;
+            return this;
+        }
+
+        /**
+         * @param connectionGatewayName The connection gateway name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionGatewayName(String connectionGatewayName) {
+            return connectionGatewayName(Output.of(connectionGatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output</* @Nullable */ String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            $.subscriptionId = subscriptionId;
-            return this;
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetConnectionGatewayArgs build() {

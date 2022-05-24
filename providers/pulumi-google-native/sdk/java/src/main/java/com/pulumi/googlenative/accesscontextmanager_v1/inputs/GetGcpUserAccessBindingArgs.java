@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetGcpUserAccessBindingArgs extends com.pulumi.resources.Invo
     public static final GetGcpUserAccessBindingArgs Empty = new GetGcpUserAccessBindingArgs();
 
     @Import(name="gcpUserAccessBindingId", required=true)
-    private String gcpUserAccessBindingId;
+    private Output<String> gcpUserAccessBindingId;
 
-    public String gcpUserAccessBindingId() {
+    public Output<String> gcpUserAccessBindingId() {
         return this.gcpUserAccessBindingId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetGcpUserAccessBindingArgs extends com.pulumi.resources.Invo
             $ = new GetGcpUserAccessBindingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder gcpUserAccessBindingId(String gcpUserAccessBindingId) {
+        public Builder gcpUserAccessBindingId(Output<String> gcpUserAccessBindingId) {
             $.gcpUserAccessBindingId = gcpUserAccessBindingId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder gcpUserAccessBindingId(String gcpUserAccessBindingId) {
+            return gcpUserAccessBindingId(Output.of(gcpUserAccessBindingId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetGcpUserAccessBindingArgs build() {

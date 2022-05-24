@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.blueprint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="blueprintName", required=true)
-    private String blueprintName;
+    private Output<String> blueprintName;
 
     /**
      * @return The name of the Blueprint Definition
      * 
      */
-    public String blueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scopeId", required=true)
-    private String scopeId;
+    private Output<String> scopeId;
 
     /**
      * @return The ID of the Management Group / Subscription where this Blueprint Definition is stored.
      * 
      */
-    public String scopeId() {
+    public Output<String> scopeId() {
         return this.scopeId;
     }
 
@@ -47,13 +48,13 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version", required=true)
-    private String version;
+    private Output<String> version;
 
     /**
      * @return The Version name of the Published Version of the Blueprint Definition
      * 
      */
-    public String version() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -89,8 +90,29 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder blueprintName(String blueprintName) {
+        public Builder blueprintName(Output<String> blueprintName) {
             $.blueprintName = blueprintName;
+            return this;
+        }
+
+        /**
+         * @param blueprintName The name of the Blueprint Definition
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blueprintName(String blueprintName) {
+            return blueprintName(Output.of(blueprintName));
+        }
+
+        /**
+         * @param scopeId The ID of the Management Group / Subscription where this Blueprint Definition is stored.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeId(Output<String> scopeId) {
+            $.scopeId = scopeId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder scopeId(String scopeId) {
-            $.scopeId = scopeId;
+            return scopeId(Output.of(scopeId));
+        }
+
+        /**
+         * @param version The Version name of the Published Version of the Blueprint Definition
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPublishedVersionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder version(String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetPublishedVersionArgs build() {

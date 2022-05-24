@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetBackendBucketArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetBackendBucketArgs Empty = new GetBackendBucketArgs();
 
     @Import(name="backendBucket", required=true)
-    private String backendBucket;
+    private Output<String> backendBucket;
 
-    public String backendBucket() {
+    public Output<String> backendBucket() {
         return this.backendBucket;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetBackendBucketArgs() {}
@@ -53,14 +53,22 @@ public final class GetBackendBucketArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetBackendBucketArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backendBucket(String backendBucket) {
+        public Builder backendBucket(Output<String> backendBucket) {
             $.backendBucket = backendBucket;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder backendBucket(String backendBucket) {
+            return backendBucket(Output.of(backendBucket));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetBackendBucketArgs build() {

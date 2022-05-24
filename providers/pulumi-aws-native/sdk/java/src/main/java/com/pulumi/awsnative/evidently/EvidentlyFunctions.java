@@ -12,66 +12,66 @@ import com.pulumi.awsnative.evidently.outputs.GetExperimentResult;
 import com.pulumi.awsnative.evidently.outputs.GetFeatureResult;
 import com.pulumi.awsnative.evidently.outputs.GetLaunchResult;
 import com.pulumi.awsnative.evidently.outputs.GetProjectResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EvidentlyFunctions {
     /**
      * Resource Type definition for AWS::Evidently::Experiment.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
+    public static Output<GetExperimentResult> getExperiment(GetExperimentArgs args) {
         return getExperiment(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Evidently::Experiment.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:evidently:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:evidently:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Evidently::Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
+    public static Output<GetFeatureResult> getFeature(GetFeatureArgs args) {
         return getFeature(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Evidently::Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:evidently:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:evidently:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Evidently::Launch.
      * 
      */
-    public static CompletableFuture<GetLaunchResult> getLaunch(GetLaunchArgs args) {
+    public static Output<GetLaunchResult> getLaunch(GetLaunchArgs args) {
         return getLaunch(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Evidently::Launch.
      * 
      */
-    public static CompletableFuture<GetLaunchResult> getLaunch(GetLaunchArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:evidently:getLaunch", TypeShape.of(GetLaunchResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLaunchResult> getLaunch(GetLaunchArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:evidently:getLaunch", TypeShape.of(GetLaunchResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Evidently::Project
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Evidently::Project
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:evidently:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:evidently:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

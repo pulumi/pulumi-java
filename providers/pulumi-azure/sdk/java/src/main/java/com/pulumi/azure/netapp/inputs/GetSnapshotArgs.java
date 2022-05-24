@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.netapp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the NetApp Account where the NetApp Pool exists.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the NetApp Snapshot.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolName", required=true)
-    private String poolName;
+    private Output<String> poolName;
 
     /**
      * @return The name of the NetApp Pool where the NetApp Volume exists.
      * 
      */
-    public String poolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where the NetApp Snapshot exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeName", required=true)
-    private String volumeName;
+    private Output<String> volumeName;
 
     /**
      * @return The name of the NetApp Volume where the NetApp Snapshot exists.
      * 
      */
-    public String volumeName() {
+    public Output<String> volumeName() {
         return this.volumeName;
     }
 
@@ -121,8 +122,29 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the NetApp Account where the NetApp Pool exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param name The name of the NetApp Snapshot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param poolName The name of the NetApp Pool where the NetApp Volume exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder poolName(Output<String> poolName) {
+            $.poolName = poolName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder poolName(String poolName) {
-            $.poolName = poolName;
+            return poolName(Output.of(poolName));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where the NetApp Snapshot exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param volumeName The name of the NetApp Volume where the NetApp Snapshot exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeName(Output<String> volumeName) {
+            $.volumeName = volumeName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder volumeName(String volumeName) {
-            $.volumeName = volumeName;
-            return this;
+            return volumeName(Output.of(volumeName));
         }
 
         public GetSnapshotArgs build() {

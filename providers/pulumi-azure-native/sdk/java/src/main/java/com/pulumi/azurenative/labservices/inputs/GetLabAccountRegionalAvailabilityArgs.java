@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
      * 
      */
     @Import(name="labAccountName", required=true)
-    private String labAccountName;
+    private Output<String> labAccountName;
 
     /**
      * @return The name of the lab Account.
      * 
      */
-    public String labAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder labAccountName(String labAccountName) {
+        public Builder labAccountName(Output<String> labAccountName) {
             $.labAccountName = labAccountName;
+            return this;
+        }
+
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labAccountName(String labAccountName) {
+            return labAccountName(Output.of(labAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLabAccountRegionalAvailabilityArgs build() {

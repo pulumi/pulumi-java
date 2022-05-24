@@ -12,66 +12,66 @@ import com.pulumi.awsnative.personalize.outputs.GetDatasetGroupResult;
 import com.pulumi.awsnative.personalize.outputs.GetDatasetResult;
 import com.pulumi.awsnative.personalize.outputs.GetSchemaResult;
 import com.pulumi.awsnative.personalize.outputs.GetSolutionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PersonalizeFunctions {
     /**
      * Resource schema for AWS::Personalize::Dataset.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Personalize::Dataset.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:personalize:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:personalize:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::Personalize::DatasetGroup.
      * 
      */
-    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args) {
+    public static Output<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args) {
         return getDatasetGroup(args, InvokeOptions.Empty);
     }
     /**
      * Resource Schema for AWS::Personalize::DatasetGroup.
      * 
      */
-    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:personalize:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:personalize:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Personalize::Schema.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args) {
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args) {
         return getSchema(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Personalize::Schema.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:personalize:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:personalize:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Personalize::Solution.
      * 
      */
-    public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args) {
+    public static Output<GetSolutionResult> getSolution(GetSolutionArgs args) {
         return getSolution(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Personalize::Solution.
      * 
      */
-    public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:personalize:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:personalize:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
     }
 }

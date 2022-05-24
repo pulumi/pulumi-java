@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.accesscontextmanager_v1beta;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,49 +14,48 @@ import com.pulumi.googlenative.accesscontextmanager_v1beta.inputs.GetServicePeri
 import com.pulumi.googlenative.accesscontextmanager_v1beta.outputs.GetAccessLevelResult;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.outputs.GetAccessPolicyResult;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.outputs.GetServicePerimeterResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Accesscontextmanager_v1betaFunctions {
     /**
      * Get an Access Level by resource name.
      * 
      */
-    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args) {
+    public static Output<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args) {
         return getAccessLevel(args, InvokeOptions.Empty);
     }
     /**
      * Get an Access Level by resource name.
      * 
      */
-    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1beta:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:accesscontextmanager/v1beta:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an AccessPolicy by name.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Get an AccessPolicy by name.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1beta:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:accesscontextmanager/v1beta:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Service Perimeter by resource name.
      * 
      */
-    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args) {
+    public static Output<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args) {
         return getServicePerimeter(args, InvokeOptions.Empty);
     }
     /**
      * Get a Service Perimeter by resource name.
      * 
      */
-    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1beta:getServicePerimeter", TypeShape.of(GetServicePerimeterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:accesscontextmanager/v1beta:getServicePerimeter", TypeShape.of(GetServicePerimeterResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataMaskRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataMaskRuleId", required=true)
-    private String dataMaskRuleId;
+    private Output<String> dataMaskRuleId;
 
     /**
      * @return OCID of dataMaskRule
      * 
      */
-    public String dataMaskRuleId() {
+    public Output<String> dataMaskRuleId() {
         return this.dataMaskRuleId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDataMaskRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataMaskRuleId(String dataMaskRuleId) {
+        public Builder dataMaskRuleId(Output<String> dataMaskRuleId) {
             $.dataMaskRuleId = dataMaskRuleId;
             return this;
+        }
+
+        /**
+         * @param dataMaskRuleId OCID of dataMaskRule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataMaskRuleId(String dataMaskRuleId) {
+            return dataMaskRuleId(Output.of(dataMaskRuleId));
         }
 
         public GetDataMaskRuleArgs build() {

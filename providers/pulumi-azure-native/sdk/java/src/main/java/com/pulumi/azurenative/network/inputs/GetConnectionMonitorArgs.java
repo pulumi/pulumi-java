@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionMonitorName", required=true)
-    private String connectionMonitorName;
+    private Output<String> connectionMonitorName;
 
     /**
      * @return The name of the connection monitor.
      * 
      */
-    public String connectionMonitorName() {
+    public Output<String> connectionMonitorName() {
         return this.connectionMonitorName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkWatcherName", required=true)
-    private String networkWatcherName;
+    private Output<String> networkWatcherName;
 
     /**
      * @return The name of the Network Watcher resource.
      * 
      */
-    public String networkWatcherName() {
+    public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -47,13 +48,13 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group containing Network Watcher.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder connectionMonitorName(String connectionMonitorName) {
+        public Builder connectionMonitorName(Output<String> connectionMonitorName) {
             $.connectionMonitorName = connectionMonitorName;
+            return this;
+        }
+
+        /**
+         * @param connectionMonitorName The name of the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionMonitorName(String connectionMonitorName) {
+            return connectionMonitorName(Output.of(connectionMonitorName));
+        }
+
+        /**
+         * @param networkWatcherName The name of the Network Watcher resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkWatcherName(Output<String> networkWatcherName) {
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder networkWatcherName(String networkWatcherName) {
-            $.networkWatcherName = networkWatcherName;
+            return networkWatcherName(Output.of(networkWatcherName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group containing Network Watcher.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetConnectionMonitorArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetConnectionMonitorArgs build() {

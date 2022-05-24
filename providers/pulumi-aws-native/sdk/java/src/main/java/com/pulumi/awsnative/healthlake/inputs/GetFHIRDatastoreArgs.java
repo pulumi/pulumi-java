@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.healthlake.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetFHIRDatastoreArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetFHIRDatastoreArgs Empty = new GetFHIRDatastoreArgs();
 
     @Import(name="datastoreId", required=true)
-    private String datastoreId;
+    private Output<String> datastoreId;
 
-    public String datastoreId() {
+    public Output<String> datastoreId() {
         return this.datastoreId;
     }
 
@@ -43,9 +44,13 @@ public final class GetFHIRDatastoreArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetFHIRDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datastoreId(String datastoreId) {
+        public Builder datastoreId(Output<String> datastoreId) {
             $.datastoreId = datastoreId;
             return this;
+        }
+
+        public Builder datastoreId(String datastoreId) {
+            return datastoreId(Output.of(datastoreId));
         }
 
         public GetFHIRDatastoreArgs build() {

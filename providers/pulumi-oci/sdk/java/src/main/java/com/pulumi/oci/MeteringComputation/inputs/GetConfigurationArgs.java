@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.MeteringComputation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tenantId", required=true)
-    private String tenantId;
+    private Output<String> tenantId;
 
     /**
      * @return tenant id
      * 
      */
-    public String tenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -57,9 +58,19 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder tenantId(String tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
+        }
+
+        /**
+         * @param tenantId tenant id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
 
         public GetConfigurationArgs build() {

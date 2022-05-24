@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetVnicAttachmentsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVnicAttachmentsFilter> filters;
+    private Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters;
 
-    public Optional<List<GetVnicAttachmentsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private Output</* @Nullable */ String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Optional<String> instanceId() {
-        return Optional.ofNullable(this.instanceId);
+    public Output</* @Nullable */ String> instanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vnicId")
-    private @Nullable String vnicId;
+    private Output</* @Nullable */ String> vnicId;
 
     /**
      * @return The OCID of the VNIC.
      * 
      */
-    public Optional<String> vnicId() {
-        return Optional.ofNullable(this.vnicId);
+    public Output</* @Nullable */ String> vnicId() {
+        return this.vnicId;
     }
 
     private GetVnicAttachmentsArgs() {}
@@ -117,8 +117,29 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetVnicAttachmentsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetVnicAttachmentsFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
             $.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * @param instanceId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(@Nullable String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param vnicId The OCID of the VNIC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnicId(Output</* @Nullable */ String> vnicId) {
+            $.vnicId = vnicId;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder vnicId(@Nullable String vnicId) {
-            $.vnicId = vnicId;
-            return this;
+            return vnicId(Output.of(vnicId));
         }
 
         public GetVnicAttachmentsArgs build() {

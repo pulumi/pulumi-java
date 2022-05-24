@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.eks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return Name of the Cluster
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fargateProfileName", required=true)
-    private String fargateProfileName;
+    private Output<String> fargateProfileName;
 
     /**
      * @return Name of FargateProfile
      * 
      */
-    public String fargateProfileName() {
+    public Output<String> fargateProfileName() {
         return this.fargateProfileName;
     }
 
@@ -73,8 +74,29 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName Name of the Cluster
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param fargateProfileName Name of FargateProfile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fargateProfileName(Output<String> fargateProfileName) {
+            $.fargateProfileName = fargateProfileName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder fargateProfileName(String fargateProfileName) {
-            $.fargateProfileName = fargateProfileName;
-            return this;
+            return fargateProfileName(Output.of(fargateProfileName));
         }
 
         public GetFargateProfileArgs build() {

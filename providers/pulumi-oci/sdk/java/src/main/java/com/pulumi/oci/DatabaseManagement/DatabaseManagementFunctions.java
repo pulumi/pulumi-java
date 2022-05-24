@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -85,7 +86,6 @@ import com.pulumi.oci.DatabaseManagement.outputs.GetManagedDatabasesUserProxyUse
 import com.pulumi.oci.DatabaseManagement.outputs.GetManagedDatabasesUserSystemPrivilegeResult;
 import com.pulumi.oci.DatabaseManagement.outputs.GetManagedDatabasesUserSystemPrivilegesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatabaseManagementFunctions {
     /**
@@ -96,7 +96,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointResult> getDbManagementPrivateEndpoint(GetDbManagementPrivateEndpointArgs args) {
+    public static Output<GetDbManagementPrivateEndpointResult> getDbManagementPrivateEndpoint(GetDbManagementPrivateEndpointArgs args) {
         return getDbManagementPrivateEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -107,8 +107,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointResult> getDbManagementPrivateEndpoint(GetDbManagementPrivateEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getDbManagementPrivateEndpoint:getDbManagementPrivateEndpoint", TypeShape.of(GetDbManagementPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDbManagementPrivateEndpointResult> getDbManagementPrivateEndpoint(GetDbManagementPrivateEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getDbManagementPrivateEndpoint:getDbManagementPrivateEndpoint", TypeShape.of(GetDbManagementPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Db Management Private Endpoint Associated Database resource in Oracle Cloud Infrastructure Database Management service.
@@ -118,7 +118,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointAssociatedDatabaseResult> getDbManagementPrivateEndpointAssociatedDatabase(GetDbManagementPrivateEndpointAssociatedDatabaseArgs args) {
+    public static Output<GetDbManagementPrivateEndpointAssociatedDatabaseResult> getDbManagementPrivateEndpointAssociatedDatabase(GetDbManagementPrivateEndpointAssociatedDatabaseArgs args) {
         return getDbManagementPrivateEndpointAssociatedDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -129,8 +129,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointAssociatedDatabaseResult> getDbManagementPrivateEndpointAssociatedDatabase(GetDbManagementPrivateEndpointAssociatedDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getDbManagementPrivateEndpointAssociatedDatabase:getDbManagementPrivateEndpointAssociatedDatabase", TypeShape.of(GetDbManagementPrivateEndpointAssociatedDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDbManagementPrivateEndpointAssociatedDatabaseResult> getDbManagementPrivateEndpointAssociatedDatabase(GetDbManagementPrivateEndpointAssociatedDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getDbManagementPrivateEndpointAssociatedDatabase:getDbManagementPrivateEndpointAssociatedDatabase", TypeShape.of(GetDbManagementPrivateEndpointAssociatedDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Db Management Private Endpoint Associated Databases in Oracle Cloud Infrastructure Database Management service.
@@ -140,7 +140,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointAssociatedDatabasesResult> getDbManagementPrivateEndpointAssociatedDatabases(GetDbManagementPrivateEndpointAssociatedDatabasesArgs args) {
+    public static Output<GetDbManagementPrivateEndpointAssociatedDatabasesResult> getDbManagementPrivateEndpointAssociatedDatabases(GetDbManagementPrivateEndpointAssociatedDatabasesArgs args) {
         return getDbManagementPrivateEndpointAssociatedDatabases(args, InvokeOptions.Empty);
     }
     /**
@@ -151,8 +151,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointAssociatedDatabasesResult> getDbManagementPrivateEndpointAssociatedDatabases(GetDbManagementPrivateEndpointAssociatedDatabasesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getDbManagementPrivateEndpointAssociatedDatabases:getDbManagementPrivateEndpointAssociatedDatabases", TypeShape.of(GetDbManagementPrivateEndpointAssociatedDatabasesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDbManagementPrivateEndpointAssociatedDatabasesResult> getDbManagementPrivateEndpointAssociatedDatabases(GetDbManagementPrivateEndpointAssociatedDatabasesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getDbManagementPrivateEndpointAssociatedDatabases:getDbManagementPrivateEndpointAssociatedDatabases", TypeShape.of(GetDbManagementPrivateEndpointAssociatedDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Db Management Private Endpoints in Oracle Cloud Infrastructure Database Management service.
@@ -162,7 +162,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointsResult> getDbManagementPrivateEndpoints(GetDbManagementPrivateEndpointsArgs args) {
+    public static Output<GetDbManagementPrivateEndpointsResult> getDbManagementPrivateEndpoints(GetDbManagementPrivateEndpointsArgs args) {
         return getDbManagementPrivateEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -173,8 +173,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbManagementPrivateEndpointsResult> getDbManagementPrivateEndpoints(GetDbManagementPrivateEndpointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getDbManagementPrivateEndpoints:getDbManagementPrivateEndpoints", TypeShape.of(GetDbManagementPrivateEndpointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDbManagementPrivateEndpointsResult> getDbManagementPrivateEndpoints(GetDbManagementPrivateEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getDbManagementPrivateEndpoints:getDbManagementPrivateEndpoints", TypeShape.of(GetDbManagementPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Job Executions Status resource in Oracle Cloud Infrastructure Database Management service.
@@ -184,7 +184,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetJobExecutionsStatusResult> getJobExecutionsStatus(GetJobExecutionsStatusArgs args) {
+    public static Output<GetJobExecutionsStatusResult> getJobExecutionsStatus(GetJobExecutionsStatusArgs args) {
         return getJobExecutionsStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -195,8 +195,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetJobExecutionsStatusResult> getJobExecutionsStatus(GetJobExecutionsStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getJobExecutionsStatus:getJobExecutionsStatus", TypeShape.of(GetJobExecutionsStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobExecutionsStatusResult> getJobExecutionsStatus(GetJobExecutionsStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getJobExecutionsStatus:getJobExecutionsStatus", TypeShape.of(GetJobExecutionsStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Job Executions Statuses in Oracle Cloud Infrastructure Database Management service.
@@ -206,7 +206,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetJobExecutionsStatusesResult> getJobExecutionsStatuses(GetJobExecutionsStatusesArgs args) {
+    public static Output<GetJobExecutionsStatusesResult> getJobExecutionsStatuses(GetJobExecutionsStatusesArgs args) {
         return getJobExecutionsStatuses(args, InvokeOptions.Empty);
     }
     /**
@@ -217,8 +217,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetJobExecutionsStatusesResult> getJobExecutionsStatuses(GetJobExecutionsStatusesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getJobExecutionsStatuses:getJobExecutionsStatuses", TypeShape.of(GetJobExecutionsStatusesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetJobExecutionsStatusesResult> getJobExecutionsStatuses(GetJobExecutionsStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getJobExecutionsStatuses:getJobExecutionsStatuses", TypeShape.of(GetJobExecutionsStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database resource in Oracle Cloud Infrastructure Database Management service.
@@ -228,7 +228,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args) {
+    public static Output<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args) {
         return getManagedDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -239,8 +239,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabase:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabase:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Group resource in Oracle Cloud Infrastructure Database Management service.
@@ -250,7 +250,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseGroupResult> getManagedDatabaseGroup(GetManagedDatabaseGroupArgs args) {
+    public static Output<GetManagedDatabaseGroupResult> getManagedDatabaseGroup(GetManagedDatabaseGroupArgs args) {
         return getManagedDatabaseGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -261,8 +261,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseGroupResult> getManagedDatabaseGroup(GetManagedDatabaseGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseGroup:getManagedDatabaseGroup", TypeShape.of(GetManagedDatabaseGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseGroupResult> getManagedDatabaseGroup(GetManagedDatabaseGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseGroup:getManagedDatabaseGroup", TypeShape.of(GetManagedDatabaseGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database Groups in Oracle Cloud Infrastructure Database Management service.
@@ -275,7 +275,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseGroupsResult> getManagedDatabaseGroups(GetManagedDatabaseGroupsArgs args) {
+    public static Output<GetManagedDatabaseGroupsResult> getManagedDatabaseGroups(GetManagedDatabaseGroupsArgs args) {
         return getManagedDatabaseGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -289,8 +289,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseGroupsResult> getManagedDatabaseGroups(GetManagedDatabaseGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseGroups:getManagedDatabaseGroups", TypeShape.of(GetManagedDatabaseGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseGroupsResult> getManagedDatabaseGroups(GetManagedDatabaseGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseGroups:getManagedDatabaseGroups", TypeShape.of(GetManagedDatabaseGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Task resource in Oracle Cloud Infrastructure Database Management service.
@@ -300,7 +300,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTaskResult> getManagedDatabaseSqlTuningAdvisorTask(GetManagedDatabaseSqlTuningAdvisorTaskArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTaskResult> getManagedDatabaseSqlTuningAdvisorTask(GetManagedDatabaseSqlTuningAdvisorTaskArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTask(args, InvokeOptions.Empty);
     }
     /**
@@ -311,8 +311,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTaskResult> getManagedDatabaseSqlTuningAdvisorTask(GetManagedDatabaseSqlTuningAdvisorTaskArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTask:getManagedDatabaseSqlTuningAdvisorTask", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTaskResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTaskResult> getManagedDatabaseSqlTuningAdvisorTask(GetManagedDatabaseSqlTuningAdvisorTaskArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTask:getManagedDatabaseSqlTuningAdvisorTask", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database Sql Tuning Advisor Tasks in Oracle Cloud Infrastructure Database Management service.
@@ -322,7 +322,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksResult> getManagedDatabaseSqlTuningAdvisorTasks(GetManagedDatabaseSqlTuningAdvisorTasksArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksResult> getManagedDatabaseSqlTuningAdvisorTasks(GetManagedDatabaseSqlTuningAdvisorTasksArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasks(args, InvokeOptions.Empty);
     }
     /**
@@ -333,8 +333,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksResult> getManagedDatabaseSqlTuningAdvisorTasks(GetManagedDatabaseSqlTuningAdvisorTasksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasks:getManagedDatabaseSqlTuningAdvisorTasks", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksResult> getManagedDatabaseSqlTuningAdvisorTasks(GetManagedDatabaseSqlTuningAdvisorTasksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasks:getManagedDatabaseSqlTuningAdvisorTasks", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Tasks Execution Plan Stats Comparision resource in Oracle Cloud Infrastructure Database Management service.
@@ -346,7 +346,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult> getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult> getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison(args, InvokeOptions.Empty);
     }
     /**
@@ -359,8 +359,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult> getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison:getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult> getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison:getManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparison", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksExecutionPlanStatsComparisonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Tasks Finding resource in Oracle Cloud Infrastructure Database Management service.
@@ -370,7 +370,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksFindingResult> getManagedDatabaseSqlTuningAdvisorTasksFinding(GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksFindingResult> getManagedDatabaseSqlTuningAdvisorTasksFinding(GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksFinding(args, InvokeOptions.Empty);
     }
     /**
@@ -381,8 +381,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksFindingResult> getManagedDatabaseSqlTuningAdvisorTasksFinding(GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksFinding:getManagedDatabaseSqlTuningAdvisorTasksFinding", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksFindingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksFindingResult> getManagedDatabaseSqlTuningAdvisorTasksFinding(GetManagedDatabaseSqlTuningAdvisorTasksFindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksFinding:getManagedDatabaseSqlTuningAdvisorTasksFinding", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksFindingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database Sql Tuning Advisor Tasks Findings in Oracle Cloud Infrastructure Database Management service.
@@ -392,7 +392,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult> getManagedDatabaseSqlTuningAdvisorTasksFindings(GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult> getManagedDatabaseSqlTuningAdvisorTasksFindings(GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksFindings(args, InvokeOptions.Empty);
     }
     /**
@@ -403,8 +403,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult> getManagedDatabaseSqlTuningAdvisorTasksFindings(GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksFindings:getManagedDatabaseSqlTuningAdvisorTasksFindings", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult> getManagedDatabaseSqlTuningAdvisorTasksFindings(GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksFindings:getManagedDatabaseSqlTuningAdvisorTasksFindings", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksFindingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Tasks Recommendation resource in Oracle Cloud Infrastructure Database Management service.
@@ -415,7 +415,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendation(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendation(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksRecommendation(args, InvokeOptions.Empty);
     }
     /**
@@ -427,8 +427,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendation(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksRecommendation:getManagedDatabaseSqlTuningAdvisorTasksRecommendation", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendation(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksRecommendation:getManagedDatabaseSqlTuningAdvisorTasksRecommendation", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database Sql Tuning Advisor Tasks Recommendations in Oracle Cloud Infrastructure Database Management service.
@@ -439,7 +439,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendations(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendations(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksRecommendations(args, InvokeOptions.Empty);
     }
     /**
@@ -451,8 +451,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendations(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksRecommendations:getManagedDatabaseSqlTuningAdvisorTasksRecommendations", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult> getManagedDatabaseSqlTuningAdvisorTasksRecommendations(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksRecommendations:getManagedDatabaseSqlTuningAdvisorTasksRecommendations", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Tasks Sql Execution Plan resource in Oracle Cloud Infrastructure Database Management service.
@@ -462,7 +462,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult> getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult> getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -473,8 +473,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult> getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan:getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult> getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan:getManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlan", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksSqlExecutionPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database Sql Tuning Advisor Tasks Summary Report resource in Oracle Cloud Infrastructure Database Management service.
@@ -484,7 +484,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult> getManagedDatabaseSqlTuningAdvisorTasksSummaryReport(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs args) {
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult> getManagedDatabaseSqlTuningAdvisorTasksSummaryReport(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs args) {
         return getManagedDatabaseSqlTuningAdvisorTasksSummaryReport(args, InvokeOptions.Empty);
     }
     /**
@@ -495,8 +495,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult> getManagedDatabaseSqlTuningAdvisorTasksSummaryReport(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksSummaryReport:getManagedDatabaseSqlTuningAdvisorTasksSummaryReport", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult> getManagedDatabaseSqlTuningAdvisorTasksSummaryReport(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseSqlTuningAdvisorTasksSummaryReport:getManagedDatabaseSqlTuningAdvisorTasksSummaryReport", TypeShape.of(GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User resource in Oracle Cloud Infrastructure Database Management service.
@@ -506,7 +506,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserResult> getManagedDatabaseUser(GetManagedDatabaseUserArgs args) {
+    public static Output<GetManagedDatabaseUserResult> getManagedDatabaseUser(GetManagedDatabaseUserArgs args) {
         return getManagedDatabaseUser(args, InvokeOptions.Empty);
     }
     /**
@@ -517,8 +517,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserResult> getManagedDatabaseUser(GetManagedDatabaseUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUser:getManagedDatabaseUser", TypeShape.of(GetManagedDatabaseUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserResult> getManagedDatabaseUser(GetManagedDatabaseUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUser:getManagedDatabaseUser", TypeShape.of(GetManagedDatabaseUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User Consumer Group Privilege resource in Oracle Cloud Infrastructure Database Management service.
@@ -528,7 +528,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserConsumerGroupPrivilegeResult> getManagedDatabaseUserConsumerGroupPrivilege(GetManagedDatabaseUserConsumerGroupPrivilegeArgs args) {
+    public static Output<GetManagedDatabaseUserConsumerGroupPrivilegeResult> getManagedDatabaseUserConsumerGroupPrivilege(GetManagedDatabaseUserConsumerGroupPrivilegeArgs args) {
         return getManagedDatabaseUserConsumerGroupPrivilege(args, InvokeOptions.Empty);
     }
     /**
@@ -539,8 +539,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserConsumerGroupPrivilegeResult> getManagedDatabaseUserConsumerGroupPrivilege(GetManagedDatabaseUserConsumerGroupPrivilegeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserConsumerGroupPrivilege:getManagedDatabaseUserConsumerGroupPrivilege", TypeShape.of(GetManagedDatabaseUserConsumerGroupPrivilegeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserConsumerGroupPrivilegeResult> getManagedDatabaseUserConsumerGroupPrivilege(GetManagedDatabaseUserConsumerGroupPrivilegeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserConsumerGroupPrivilege:getManagedDatabaseUserConsumerGroupPrivilege", TypeShape.of(GetManagedDatabaseUserConsumerGroupPrivilegeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database User Consumer Group Privileges in Oracle Cloud Infrastructure Database Management service.
@@ -550,7 +550,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserConsumerGroupPrivilegesResult> getManagedDatabaseUserConsumerGroupPrivileges(GetManagedDatabaseUserConsumerGroupPrivilegesArgs args) {
+    public static Output<GetManagedDatabaseUserConsumerGroupPrivilegesResult> getManagedDatabaseUserConsumerGroupPrivileges(GetManagedDatabaseUserConsumerGroupPrivilegesArgs args) {
         return getManagedDatabaseUserConsumerGroupPrivileges(args, InvokeOptions.Empty);
     }
     /**
@@ -561,8 +561,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserConsumerGroupPrivilegesResult> getManagedDatabaseUserConsumerGroupPrivileges(GetManagedDatabaseUserConsumerGroupPrivilegesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserConsumerGroupPrivileges:getManagedDatabaseUserConsumerGroupPrivileges", TypeShape.of(GetManagedDatabaseUserConsumerGroupPrivilegesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserConsumerGroupPrivilegesResult> getManagedDatabaseUserConsumerGroupPrivileges(GetManagedDatabaseUserConsumerGroupPrivilegesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserConsumerGroupPrivileges:getManagedDatabaseUserConsumerGroupPrivileges", TypeShape.of(GetManagedDatabaseUserConsumerGroupPrivilegesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User Data Access Container resource in Oracle Cloud Infrastructure Database Management service.
@@ -572,7 +572,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserDataAccessContainerResult> getManagedDatabaseUserDataAccessContainer(GetManagedDatabaseUserDataAccessContainerArgs args) {
+    public static Output<GetManagedDatabaseUserDataAccessContainerResult> getManagedDatabaseUserDataAccessContainer(GetManagedDatabaseUserDataAccessContainerArgs args) {
         return getManagedDatabaseUserDataAccessContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -583,8 +583,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserDataAccessContainerResult> getManagedDatabaseUserDataAccessContainer(GetManagedDatabaseUserDataAccessContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserDataAccessContainer:getManagedDatabaseUserDataAccessContainer", TypeShape.of(GetManagedDatabaseUserDataAccessContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserDataAccessContainerResult> getManagedDatabaseUserDataAccessContainer(GetManagedDatabaseUserDataAccessContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserDataAccessContainer:getManagedDatabaseUserDataAccessContainer", TypeShape.of(GetManagedDatabaseUserDataAccessContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database User Data Access Containers in Oracle Cloud Infrastructure Database Management service.
@@ -594,7 +594,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserDataAccessContainersResult> getManagedDatabaseUserDataAccessContainers(GetManagedDatabaseUserDataAccessContainersArgs args) {
+    public static Output<GetManagedDatabaseUserDataAccessContainersResult> getManagedDatabaseUserDataAccessContainers(GetManagedDatabaseUserDataAccessContainersArgs args) {
         return getManagedDatabaseUserDataAccessContainers(args, InvokeOptions.Empty);
     }
     /**
@@ -605,8 +605,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserDataAccessContainersResult> getManagedDatabaseUserDataAccessContainers(GetManagedDatabaseUserDataAccessContainersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserDataAccessContainers:getManagedDatabaseUserDataAccessContainers", TypeShape.of(GetManagedDatabaseUserDataAccessContainersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserDataAccessContainersResult> getManagedDatabaseUserDataAccessContainers(GetManagedDatabaseUserDataAccessContainersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserDataAccessContainers:getManagedDatabaseUserDataAccessContainers", TypeShape.of(GetManagedDatabaseUserDataAccessContainersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User Object Privilege resource in Oracle Cloud Infrastructure Database Management service.
@@ -616,7 +616,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserObjectPrivilegeResult> getManagedDatabaseUserObjectPrivilege(GetManagedDatabaseUserObjectPrivilegeArgs args) {
+    public static Output<GetManagedDatabaseUserObjectPrivilegeResult> getManagedDatabaseUserObjectPrivilege(GetManagedDatabaseUserObjectPrivilegeArgs args) {
         return getManagedDatabaseUserObjectPrivilege(args, InvokeOptions.Empty);
     }
     /**
@@ -627,8 +627,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserObjectPrivilegeResult> getManagedDatabaseUserObjectPrivilege(GetManagedDatabaseUserObjectPrivilegeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserObjectPrivilege:getManagedDatabaseUserObjectPrivilege", TypeShape.of(GetManagedDatabaseUserObjectPrivilegeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserObjectPrivilegeResult> getManagedDatabaseUserObjectPrivilege(GetManagedDatabaseUserObjectPrivilegeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserObjectPrivilege:getManagedDatabaseUserObjectPrivilege", TypeShape.of(GetManagedDatabaseUserObjectPrivilegeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database User Object Privileges in Oracle Cloud Infrastructure Database Management service.
@@ -638,7 +638,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserObjectPrivilegesResult> getManagedDatabaseUserObjectPrivileges(GetManagedDatabaseUserObjectPrivilegesArgs args) {
+    public static Output<GetManagedDatabaseUserObjectPrivilegesResult> getManagedDatabaseUserObjectPrivileges(GetManagedDatabaseUserObjectPrivilegesArgs args) {
         return getManagedDatabaseUserObjectPrivileges(args, InvokeOptions.Empty);
     }
     /**
@@ -649,8 +649,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserObjectPrivilegesResult> getManagedDatabaseUserObjectPrivileges(GetManagedDatabaseUserObjectPrivilegesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserObjectPrivileges:getManagedDatabaseUserObjectPrivileges", TypeShape.of(GetManagedDatabaseUserObjectPrivilegesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserObjectPrivilegesResult> getManagedDatabaseUserObjectPrivileges(GetManagedDatabaseUserObjectPrivilegesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserObjectPrivileges:getManagedDatabaseUserObjectPrivileges", TypeShape.of(GetManagedDatabaseUserObjectPrivilegesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User Proxied For User resource in Oracle Cloud Infrastructure Database Management service.
@@ -660,7 +660,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserProxiedForUserResult> getManagedDatabaseUserProxiedForUser(GetManagedDatabaseUserProxiedForUserArgs args) {
+    public static Output<GetManagedDatabaseUserProxiedForUserResult> getManagedDatabaseUserProxiedForUser(GetManagedDatabaseUserProxiedForUserArgs args) {
         return getManagedDatabaseUserProxiedForUser(args, InvokeOptions.Empty);
     }
     /**
@@ -671,8 +671,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserProxiedForUserResult> getManagedDatabaseUserProxiedForUser(GetManagedDatabaseUserProxiedForUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserProxiedForUser:getManagedDatabaseUserProxiedForUser", TypeShape.of(GetManagedDatabaseUserProxiedForUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserProxiedForUserResult> getManagedDatabaseUserProxiedForUser(GetManagedDatabaseUserProxiedForUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserProxiedForUser:getManagedDatabaseUserProxiedForUser", TypeShape.of(GetManagedDatabaseUserProxiedForUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database User Proxied For Users in Oracle Cloud Infrastructure Database Management service.
@@ -682,7 +682,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserProxiedForUsersResult> getManagedDatabaseUserProxiedForUsers(GetManagedDatabaseUserProxiedForUsersArgs args) {
+    public static Output<GetManagedDatabaseUserProxiedForUsersResult> getManagedDatabaseUserProxiedForUsers(GetManagedDatabaseUserProxiedForUsersArgs args) {
         return getManagedDatabaseUserProxiedForUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -693,8 +693,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserProxiedForUsersResult> getManagedDatabaseUserProxiedForUsers(GetManagedDatabaseUserProxiedForUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserProxiedForUsers:getManagedDatabaseUserProxiedForUsers", TypeShape.of(GetManagedDatabaseUserProxiedForUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserProxiedForUsersResult> getManagedDatabaseUserProxiedForUsers(GetManagedDatabaseUserProxiedForUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserProxiedForUsers:getManagedDatabaseUserProxiedForUsers", TypeShape.of(GetManagedDatabaseUserProxiedForUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Database User Role resource in Oracle Cloud Infrastructure Database Management service.
@@ -704,7 +704,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserRoleResult> getManagedDatabaseUserRole(GetManagedDatabaseUserRoleArgs args) {
+    public static Output<GetManagedDatabaseUserRoleResult> getManagedDatabaseUserRole(GetManagedDatabaseUserRoleArgs args) {
         return getManagedDatabaseUserRole(args, InvokeOptions.Empty);
     }
     /**
@@ -715,8 +715,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserRoleResult> getManagedDatabaseUserRole(GetManagedDatabaseUserRoleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserRole:getManagedDatabaseUserRole", TypeShape.of(GetManagedDatabaseUserRoleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserRoleResult> getManagedDatabaseUserRole(GetManagedDatabaseUserRoleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserRole:getManagedDatabaseUserRole", TypeShape.of(GetManagedDatabaseUserRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database User Roles in Oracle Cloud Infrastructure Database Management service.
@@ -726,7 +726,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserRolesResult> getManagedDatabaseUserRoles(GetManagedDatabaseUserRolesArgs args) {
+    public static Output<GetManagedDatabaseUserRolesResult> getManagedDatabaseUserRoles(GetManagedDatabaseUserRolesArgs args) {
         return getManagedDatabaseUserRoles(args, InvokeOptions.Empty);
     }
     /**
@@ -737,8 +737,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUserRolesResult> getManagedDatabaseUserRoles(GetManagedDatabaseUserRolesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUserRoles:getManagedDatabaseUserRoles", TypeShape.of(GetManagedDatabaseUserRolesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUserRolesResult> getManagedDatabaseUserRoles(GetManagedDatabaseUserRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUserRoles:getManagedDatabaseUserRoles", TypeShape.of(GetManagedDatabaseUserRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Database Users in Oracle Cloud Infrastructure Database Management service.
@@ -748,7 +748,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUsersResult> getManagedDatabaseUsers(GetManagedDatabaseUsersArgs args) {
+    public static Output<GetManagedDatabaseUsersResult> getManagedDatabaseUsers(GetManagedDatabaseUsersArgs args) {
         return getManagedDatabaseUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -759,8 +759,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseUsersResult> getManagedDatabaseUsers(GetManagedDatabaseUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabaseUsers:getManagedDatabaseUsers", TypeShape.of(GetManagedDatabaseUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabaseUsersResult> getManagedDatabaseUsers(GetManagedDatabaseUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabaseUsers:getManagedDatabaseUsers", TypeShape.of(GetManagedDatabaseUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Databases in Oracle Cloud Infrastructure Database Management service.
@@ -775,7 +775,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesResult> getManagedDatabases(GetManagedDatabasesArgs args) {
+    public static Output<GetManagedDatabasesResult> getManagedDatabases(GetManagedDatabasesArgs args) {
         return getManagedDatabases(args, InvokeOptions.Empty);
     }
     /**
@@ -791,8 +791,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesResult> getManagedDatabases(GetManagedDatabasesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabases:getManagedDatabases", TypeShape.of(GetManagedDatabasesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesResult> getManagedDatabases(GetManagedDatabasesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabases:getManagedDatabases", TypeShape.of(GetManagedDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Databases Asm Properties in Oracle Cloud Infrastructure Database Management service.
@@ -802,7 +802,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesAsmPropertiesResult> getManagedDatabasesAsmProperties(GetManagedDatabasesAsmPropertiesArgs args) {
+    public static Output<GetManagedDatabasesAsmPropertiesResult> getManagedDatabasesAsmProperties(GetManagedDatabasesAsmPropertiesArgs args) {
         return getManagedDatabasesAsmProperties(args, InvokeOptions.Empty);
     }
     /**
@@ -813,8 +813,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesAsmPropertiesResult> getManagedDatabasesAsmProperties(GetManagedDatabasesAsmPropertiesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesAsmProperties:getManagedDatabasesAsmProperties", TypeShape.of(GetManagedDatabasesAsmPropertiesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesAsmPropertiesResult> getManagedDatabasesAsmProperties(GetManagedDatabasesAsmPropertiesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesAsmProperties:getManagedDatabasesAsmProperties", TypeShape.of(GetManagedDatabasesAsmPropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Databases Asm Property resource in Oracle Cloud Infrastructure Database Management service.
@@ -824,7 +824,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesAsmPropertyResult> getManagedDatabasesAsmProperty(GetManagedDatabasesAsmPropertyArgs args) {
+    public static Output<GetManagedDatabasesAsmPropertyResult> getManagedDatabasesAsmProperty(GetManagedDatabasesAsmPropertyArgs args) {
         return getManagedDatabasesAsmProperty(args, InvokeOptions.Empty);
     }
     /**
@@ -835,8 +835,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesAsmPropertyResult> getManagedDatabasesAsmProperty(GetManagedDatabasesAsmPropertyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesAsmProperty:getManagedDatabasesAsmProperty", TypeShape.of(GetManagedDatabasesAsmPropertyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesAsmPropertyResult> getManagedDatabasesAsmProperty(GetManagedDatabasesAsmPropertyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesAsmProperty:getManagedDatabasesAsmProperty", TypeShape.of(GetManagedDatabasesAsmPropertyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Databases Database Parameter resource in Oracle Cloud Infrastructure Database Management service.
@@ -846,7 +846,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesDatabaseParameterResult> getManagedDatabasesDatabaseParameter(GetManagedDatabasesDatabaseParameterArgs args) {
+    public static Output<GetManagedDatabasesDatabaseParameterResult> getManagedDatabasesDatabaseParameter(GetManagedDatabasesDatabaseParameterArgs args) {
         return getManagedDatabasesDatabaseParameter(args, InvokeOptions.Empty);
     }
     /**
@@ -857,8 +857,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesDatabaseParameterResult> getManagedDatabasesDatabaseParameter(GetManagedDatabasesDatabaseParameterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesDatabaseParameter:getManagedDatabasesDatabaseParameter", TypeShape.of(GetManagedDatabasesDatabaseParameterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesDatabaseParameterResult> getManagedDatabasesDatabaseParameter(GetManagedDatabasesDatabaseParameterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesDatabaseParameter:getManagedDatabasesDatabaseParameter", TypeShape.of(GetManagedDatabasesDatabaseParameterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Databases Database Parameters in Oracle Cloud Infrastructure Database Management service.
@@ -868,7 +868,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesDatabaseParametersResult> getManagedDatabasesDatabaseParameters(GetManagedDatabasesDatabaseParametersArgs args) {
+    public static Output<GetManagedDatabasesDatabaseParametersResult> getManagedDatabasesDatabaseParameters(GetManagedDatabasesDatabaseParametersArgs args) {
         return getManagedDatabasesDatabaseParameters(args, InvokeOptions.Empty);
     }
     /**
@@ -879,8 +879,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesDatabaseParametersResult> getManagedDatabasesDatabaseParameters(GetManagedDatabasesDatabaseParametersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesDatabaseParameters:getManagedDatabasesDatabaseParameters", TypeShape.of(GetManagedDatabasesDatabaseParametersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesDatabaseParametersResult> getManagedDatabasesDatabaseParameters(GetManagedDatabasesDatabaseParametersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesDatabaseParameters:getManagedDatabasesDatabaseParameters", TypeShape.of(GetManagedDatabasesDatabaseParametersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Databases User Proxy User resource in Oracle Cloud Infrastructure Database Management service.
@@ -890,7 +890,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserProxyUserResult> getManagedDatabasesUserProxyUser(GetManagedDatabasesUserProxyUserArgs args) {
+    public static Output<GetManagedDatabasesUserProxyUserResult> getManagedDatabasesUserProxyUser(GetManagedDatabasesUserProxyUserArgs args) {
         return getManagedDatabasesUserProxyUser(args, InvokeOptions.Empty);
     }
     /**
@@ -901,8 +901,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserProxyUserResult> getManagedDatabasesUserProxyUser(GetManagedDatabasesUserProxyUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesUserProxyUser:getManagedDatabasesUserProxyUser", TypeShape.of(GetManagedDatabasesUserProxyUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesUserProxyUserResult> getManagedDatabasesUserProxyUser(GetManagedDatabasesUserProxyUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesUserProxyUser:getManagedDatabasesUserProxyUser", TypeShape.of(GetManagedDatabasesUserProxyUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Databases User Proxy Users in Oracle Cloud Infrastructure Database Management service.
@@ -912,7 +912,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserProxyUsersResult> getManagedDatabasesUserProxyUsers(GetManagedDatabasesUserProxyUsersArgs args) {
+    public static Output<GetManagedDatabasesUserProxyUsersResult> getManagedDatabasesUserProxyUsers(GetManagedDatabasesUserProxyUsersArgs args) {
         return getManagedDatabasesUserProxyUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -923,8 +923,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserProxyUsersResult> getManagedDatabasesUserProxyUsers(GetManagedDatabasesUserProxyUsersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesUserProxyUsers:getManagedDatabasesUserProxyUsers", TypeShape.of(GetManagedDatabasesUserProxyUsersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesUserProxyUsersResult> getManagedDatabasesUserProxyUsers(GetManagedDatabasesUserProxyUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesUserProxyUsers:getManagedDatabasesUserProxyUsers", TypeShape.of(GetManagedDatabasesUserProxyUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed Databases User System Privilege resource in Oracle Cloud Infrastructure Database Management service.
@@ -934,7 +934,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserSystemPrivilegeResult> getManagedDatabasesUserSystemPrivilege(GetManagedDatabasesUserSystemPrivilegeArgs args) {
+    public static Output<GetManagedDatabasesUserSystemPrivilegeResult> getManagedDatabasesUserSystemPrivilege(GetManagedDatabasesUserSystemPrivilegeArgs args) {
         return getManagedDatabasesUserSystemPrivilege(args, InvokeOptions.Empty);
     }
     /**
@@ -945,8 +945,8 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserSystemPrivilegeResult> getManagedDatabasesUserSystemPrivilege(GetManagedDatabasesUserSystemPrivilegeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesUserSystemPrivilege:getManagedDatabasesUserSystemPrivilege", TypeShape.of(GetManagedDatabasesUserSystemPrivilegeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesUserSystemPrivilegeResult> getManagedDatabasesUserSystemPrivilege(GetManagedDatabasesUserSystemPrivilegeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesUserSystemPrivilege:getManagedDatabasesUserSystemPrivilege", TypeShape.of(GetManagedDatabasesUserSystemPrivilegeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Databases User System Privileges in Oracle Cloud Infrastructure Database Management service.
@@ -956,7 +956,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserSystemPrivilegesResult> getManagedDatabasesUserSystemPrivileges(GetManagedDatabasesUserSystemPrivilegesArgs args) {
+    public static Output<GetManagedDatabasesUserSystemPrivilegesResult> getManagedDatabasesUserSystemPrivileges(GetManagedDatabasesUserSystemPrivilegesArgs args) {
         return getManagedDatabasesUserSystemPrivileges(args, InvokeOptions.Empty);
     }
     /**
@@ -967,7 +967,7 @@ public final class DatabaseManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedDatabasesUserSystemPrivilegesResult> getManagedDatabasesUserSystemPrivileges(GetManagedDatabasesUserSystemPrivilegesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DatabaseManagement/getManagedDatabasesUserSystemPrivileges:getManagedDatabasesUserSystemPrivileges", TypeShape.of(GetManagedDatabasesUserSystemPrivilegesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDatabasesUserSystemPrivilegesResult> getManagedDatabasesUserSystemPrivileges(GetManagedDatabasesUserSystemPrivilegesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DatabaseManagement/getManagedDatabasesUserSystemPrivileges:getManagedDatabasesUserSystemPrivileges", TypeShape.of(GetManagedDatabasesUserSystemPrivilegesResult.class), args, Utilities.withVersion(options));
     }
 }

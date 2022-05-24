@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetReleaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReleaseArgs Empty = new GetReleaseArgs();
 
     @Import(name="deliveryPipelineId", required=true)
-    private String deliveryPipelineId;
+    private Output<String> deliveryPipelineId;
 
-    public String deliveryPipelineId() {
+    public Output<String> deliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="releaseId", required=true)
-    private String releaseId;
+    private Output<String> releaseId;
 
-    public String releaseId() {
+    public Output<String> releaseId() {
         return this.releaseId;
     }
 
@@ -69,24 +69,40 @@ public final class GetReleaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReleaseArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder deliveryPipelineId(String deliveryPipelineId) {
+        public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
             $.deliveryPipelineId = deliveryPipelineId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder deliveryPipelineId(String deliveryPipelineId) {
+            return deliveryPipelineId(Output.of(deliveryPipelineId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder releaseId(String releaseId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder releaseId(Output<String> releaseId) {
             $.releaseId = releaseId;
             return this;
+        }
+
+        public Builder releaseId(String releaseId) {
+            return releaseId(Output.of(releaseId));
         }
 
         public GetReleaseArgs build() {

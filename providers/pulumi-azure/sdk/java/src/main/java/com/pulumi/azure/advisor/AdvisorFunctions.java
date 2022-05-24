@@ -6,10 +6,10 @@ package com.pulumi.azure.advisor;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.advisor.inputs.GetRecommendationsArgs;
 import com.pulumi.azure.advisor.outputs.GetRecommendationsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AdvisorFunctions {
     /**
@@ -43,7 +43,7 @@ public final class AdvisorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRecommendationsResult> getRecommendations() {
+    public static Output<GetRecommendationsResult> getRecommendations() {
         return getRecommendations(GetRecommendationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +77,7 @@ public final class AdvisorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args) {
+    public static Output<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args) {
         return getRecommendations(args, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class AdvisorFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:advisor/getRecommendations:getRecommendations", TypeShape.of(GetRecommendationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:advisor/getRecommendations:getRecommendations", TypeShape.of(GetRecommendationsResult.class), args, Utilities.withVersion(options));
     }
 }

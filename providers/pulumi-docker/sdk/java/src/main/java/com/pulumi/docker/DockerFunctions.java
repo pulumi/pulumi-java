@@ -3,6 +3,7 @@
 
 package com.pulumi.docker;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.docker.outputs.GetNetworkResult;
 import com.pulumi.docker.outputs.GetPluginResult;
 import com.pulumi.docker.outputs.GetRegistryImageResult;
 import com.pulumi.docker.outputs.GetRemoteImageResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class DockerFunctions {
     /**
@@ -24,7 +24,7 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+    public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args) {
         return getNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("docker:index/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("docker:index/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Reads the local Docker plugin. The plugin must be installed locally.
@@ -47,7 +47,7 @@ public final class DockerFunctions {
      * }
      * 
      */
-    public static CompletableFuture<GetPluginResult> getPlugin() {
+    public static Output<GetPluginResult> getPlugin() {
         return getPlugin(GetPluginArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class DockerFunctions {
      * }
      * 
      */
-    public static CompletableFuture<GetPluginResult> getPlugin(GetPluginArgs args) {
+    public static Output<GetPluginResult> getPlugin(GetPluginArgs args) {
         return getPlugin(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class DockerFunctions {
      * }
      * 
      */
-    public static CompletableFuture<GetPluginResult> getPlugin(GetPluginArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("docker:index/getPlugin:getPlugin", TypeShape.of(GetPluginResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPluginResult> getPlugin(GetPluginArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("docker:index/getPlugin:getPlugin", TypeShape.of(GetPluginResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Reads the image metadata from a Docker Registry. Used in conjunction with the docker.RemoteImage resource to keep an image up to date on the latest available version of the tag.
@@ -84,7 +84,7 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
+    public static Output<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
         return getRegistryImage(args, InvokeOptions.Empty);
     }
     /**
@@ -93,8 +93,8 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("docker:index/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("docker:index/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `docker.RemoteImage` provides details about a specific Docker Image which need to be presend on the Docker Host
@@ -102,7 +102,7 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args) {
+    public static Output<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args) {
         return getRemoteImage(args, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class DockerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("docker:index/getRemoteImage:getRemoteImage", TypeShape.of(GetRemoteImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("docker:index/getRemoteImage:getRemoteImage", TypeShape.of(GetRemoteImageResult.class), args, Utilities.withVersion(options));
     }
 }

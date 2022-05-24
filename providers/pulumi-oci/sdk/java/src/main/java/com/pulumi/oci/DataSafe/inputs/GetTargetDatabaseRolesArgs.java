@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetTargetDatabaseRolesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,21 +22,21 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authenticationType")
-    private @Nullable String authenticationType;
+    private Output</* @Nullable */ String> authenticationType;
 
     /**
      * @return A filter to return roles based on authentication type.
      * 
      */
-    public Optional<String> authenticationType() {
-        return Optional.ofNullable(this.authenticationType);
+    public Output</* @Nullable */ String> authenticationType() {
+        return this.authenticationType;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetTargetDatabaseRolesFilter> filters;
+    private Output</* @Nullable */ List<GetTargetDatabaseRolesFilter>> filters;
 
-    public Optional<List<GetTargetDatabaseRolesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetTargetDatabaseRolesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -44,14 +44,14 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isOracleMaintained")
-    private @Nullable Boolean isOracleMaintained;
+    private Output</* @Nullable */ Boolean> isOracleMaintained;
 
     /**
      * @return A filter to return roles based on whether they are maintained by oracle or not.
      * 
      */
-    public Optional<Boolean> isOracleMaintained() {
-        return Optional.ofNullable(this.isOracleMaintained);
+    public Output</* @Nullable */ Boolean> isOracleMaintained() {
+        return this.isOracleMaintained;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="roleNameContains")
-    private @Nullable String roleNameContains;
+    private Output</* @Nullable */ String> roleNameContains;
 
     /**
      * @return A filter to return only items if role name contains a specific string.
      * 
      */
-    public Optional<String> roleNameContains() {
-        return Optional.ofNullable(this.roleNameContains);
+    public Output</* @Nullable */ String> roleNameContains() {
+        return this.roleNameContains;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="roleNames")
-    private @Nullable List<String> roleNames;
+    private Output</* @Nullable */ List<String>> roleNames;
 
     /**
      * @return A filter to return only a specific role based on role name.
      * 
      */
-    public Optional<List<String>> roleNames() {
-        return Optional.ofNullable(this.roleNames);
+    public Output</* @Nullable */ List<String>> roleNames() {
+        return this.roleNames;
     }
 
     /**
@@ -89,13 +89,13 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetDatabaseId", required=true)
-    private String targetDatabaseId;
+    private Output<String> targetDatabaseId;
 
     /**
      * @return The OCID of the Data Safe target database.
      * 
      */
-    public String targetDatabaseId() {
+    public Output<String> targetDatabaseId() {
         return this.targetDatabaseId;
     }
 
@@ -134,14 +134,28 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder authenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(Output</* @Nullable */ String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTargetDatabaseRolesFilter> filters) {
+        /**
+         * @param authenticationType A filter to return roles based on authentication type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationType(@Nullable String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetTargetDatabaseRolesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetTargetDatabaseRolesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetTargetDatabaseRolesFilter... filters) {
@@ -154,8 +168,29 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder isOracleMaintained(@Nullable Boolean isOracleMaintained) {
+        public Builder isOracleMaintained(Output</* @Nullable */ Boolean> isOracleMaintained) {
             $.isOracleMaintained = isOracleMaintained;
+            return this;
+        }
+
+        /**
+         * @param isOracleMaintained A filter to return roles based on whether they are maintained by oracle or not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isOracleMaintained(@Nullable Boolean isOracleMaintained) {
+            return isOracleMaintained(Output.of(isOracleMaintained));
+        }
+
+        /**
+         * @param roleNameContains A filter to return only items if role name contains a specific string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleNameContains(Output</* @Nullable */ String> roleNameContains) {
+            $.roleNameContains = roleNameContains;
             return this;
         }
 
@@ -166,7 +201,17 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder roleNameContains(@Nullable String roleNameContains) {
-            $.roleNameContains = roleNameContains;
+            return roleNameContains(Output.of(roleNameContains));
+        }
+
+        /**
+         * @param roleNames A filter to return only a specific role based on role name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleNames(Output</* @Nullable */ List<String>> roleNames) {
+            $.roleNames = roleNames;
             return this;
         }
 
@@ -177,8 +222,7 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder roleNames(@Nullable List<String> roleNames) {
-            $.roleNames = roleNames;
-            return this;
+            return roleNames(Output.of(roleNames));
         }
 
         /**
@@ -197,9 +241,19 @@ public final class GetTargetDatabaseRolesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder targetDatabaseId(String targetDatabaseId) {
+        public Builder targetDatabaseId(Output<String> targetDatabaseId) {
             $.targetDatabaseId = targetDatabaseId;
             return this;
+        }
+
+        /**
+         * @param targetDatabaseId The OCID of the Data Safe target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetDatabaseId(String targetDatabaseId) {
+            return targetDatabaseId(Output.of(targetDatabaseId));
         }
 
         public GetTargetDatabaseRolesArgs build() {

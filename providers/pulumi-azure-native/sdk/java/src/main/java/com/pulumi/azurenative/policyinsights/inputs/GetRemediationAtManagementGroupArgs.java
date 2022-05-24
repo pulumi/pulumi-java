@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="managementGroupId", required=true)
-    private String managementGroupId;
+    private Output<String> managementGroupId;
 
     /**
      * @return Management group ID.
      * 
      */
-    public String managementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="managementGroupsNamespace", required=true)
-    private String managementGroupsNamespace;
+    private Output<String> managementGroupsNamespace;
 
     /**
      * @return The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
      * 
      */
-    public String managementGroupsNamespace() {
+    public Output<String> managementGroupsNamespace() {
         return this.managementGroupsNamespace;
     }
 
@@ -47,13 +48,13 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
      * 
      */
     @Import(name="remediationName", required=true)
-    private String remediationName;
+    private Output<String> remediationName;
 
     /**
      * @return The name of the remediation.
      * 
      */
-    public String remediationName() {
+    public Output<String> remediationName() {
         return this.remediationName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder managementGroupId(String managementGroupId) {
+        public Builder managementGroupId(Output<String> managementGroupId) {
             $.managementGroupId = managementGroupId;
+            return this;
+        }
+
+        /**
+         * @param managementGroupId Management group ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupId(String managementGroupId) {
+            return managementGroupId(Output.of(managementGroupId));
+        }
+
+        /**
+         * @param managementGroupsNamespace The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupsNamespace(Output<String> managementGroupsNamespace) {
+            $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
          * 
          */
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
-            $.managementGroupsNamespace = managementGroupsNamespace;
+            return managementGroupsNamespace(Output.of(managementGroupsNamespace));
+        }
+
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remediationName(Output<String> remediationName) {
+            $.remediationName = remediationName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
          * 
          */
         public Builder remediationName(String remediationName) {
-            $.remediationName = remediationName;
-            return this;
+            return remediationName(Output.of(remediationName));
         }
 
         public GetRemediationAtManagementGroupArgs build() {

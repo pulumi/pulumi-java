@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.GoldenGate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentUpgradeArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deploymentUpgradeId", required=true)
-    private String deploymentUpgradeId;
+    private Output<String> deploymentUpgradeId;
 
     /**
      * @return A unique Deployment Upgrade identifier.
      * 
      */
-    public String deploymentUpgradeId() {
+    public Output<String> deploymentUpgradeId() {
         return this.deploymentUpgradeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeploymentUpgradeArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder deploymentUpgradeId(String deploymentUpgradeId) {
+        public Builder deploymentUpgradeId(Output<String> deploymentUpgradeId) {
             $.deploymentUpgradeId = deploymentUpgradeId;
             return this;
+        }
+
+        /**
+         * @param deploymentUpgradeId A unique Deployment Upgrade identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentUpgradeId(String deploymentUpgradeId) {
+            return deploymentUpgradeId(Output.of(deploymentUpgradeId));
         }
 
         public GetDeploymentUpgradeArgs build() {

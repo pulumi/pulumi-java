@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backendName", required=true)
-    private String backendName;
+    private Output<String> backendName;
 
     /**
      * @return The IP address and port of the backend server to retrieve the health status for.  Example: `10.0.0.3:8080`
      * 
      */
-    public String backendName() {
+    public Output<String> backendName() {
         return this.backendName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backendSetName", required=true)
-    private String backendSetName;
+    private Output<String> backendSetName;
 
     /**
      * @return The name of the backend set associated with the backend server to retrieve the health status for.  Example: `example_backend_set`
      * 
      */
-    public String backendSetName() {
+    public Output<String> backendSetName() {
         return this.backendSetName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend server health status to be retrieved.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -89,8 +90,29 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder backendName(String backendName) {
+        public Builder backendName(Output<String> backendName) {
             $.backendName = backendName;
+            return this;
+        }
+
+        /**
+         * @param backendName The IP address and port of the backend server to retrieve the health status for.  Example: `10.0.0.3:8080`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendName(String backendName) {
+            return backendName(Output.of(backendName));
+        }
+
+        /**
+         * @param backendSetName The name of the backend set associated with the backend server to retrieve the health status for.  Example: `example_backend_set`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendSetName(Output<String> backendSetName) {
+            $.backendSetName = backendSetName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder backendSetName(String backendSetName) {
-            $.backendSetName = backendSetName;
+            return backendSetName(Output.of(backendSetName));
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend server health status to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
+            $.loadBalancerId = loadBalancerId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder loadBalancerId(String loadBalancerId) {
-            $.loadBalancerId = loadBalancerId;
-            return this;
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetBackendHealthArgs build() {

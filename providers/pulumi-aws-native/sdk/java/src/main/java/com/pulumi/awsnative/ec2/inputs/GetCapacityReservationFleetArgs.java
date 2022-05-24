@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetCapacityReservationFleetArgs extends com.pulumi.resources.
     public static final GetCapacityReservationFleetArgs Empty = new GetCapacityReservationFleetArgs();
 
     @Import(name="capacityReservationFleetId", required=true)
-    private String capacityReservationFleetId;
+    private Output<String> capacityReservationFleetId;
 
-    public String capacityReservationFleetId() {
+    public Output<String> capacityReservationFleetId() {
         return this.capacityReservationFleetId;
     }
 
@@ -43,9 +44,13 @@ public final class GetCapacityReservationFleetArgs extends com.pulumi.resources.
             $ = new GetCapacityReservationFleetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder capacityReservationFleetId(String capacityReservationFleetId) {
+        public Builder capacityReservationFleetId(Output<String> capacityReservationFleetId) {
             $.capacityReservationFleetId = capacityReservationFleetId;
             return this;
+        }
+
+        public Builder capacityReservationFleetId(String capacityReservationFleetId) {
+            return capacityReservationFleetId(Output.of(capacityReservationFleetId));
         }
 
         public GetCapacityReservationFleetArgs build() {

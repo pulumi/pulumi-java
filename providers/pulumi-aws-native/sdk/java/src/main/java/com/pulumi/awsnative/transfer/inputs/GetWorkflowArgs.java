@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.transfer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workflowId", required=true)
-    private String workflowId;
+    private Output<String> workflowId;
 
     /**
      * @return A unique identifier for the workflow.
      * 
      */
-    public String workflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 
@@ -57,9 +58,19 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder workflowId(String workflowId) {
+        public Builder workflowId(Output<String> workflowId) {
             $.workflowId = workflowId;
             return this;
+        }
+
+        /**
+         * @param workflowId A unique identifier for the workflow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowId(String workflowId) {
+            return workflowId(Output.of(workflowId));
         }
 
         public GetWorkflowArgs build() {

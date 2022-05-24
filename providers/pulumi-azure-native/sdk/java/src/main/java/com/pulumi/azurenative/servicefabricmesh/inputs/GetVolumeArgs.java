@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeResourceName", required=true)
-    private String volumeResourceName;
+    private Output<String> volumeResourceName;
 
     /**
      * @return The identity of the volume.
      * 
      */
-    public String volumeResourceName() {
+    public Output<String> volumeResourceName() {
         return this.volumeResourceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param volumeResourceName The identity of the volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeResourceName(Output<String> volumeResourceName) {
+            $.volumeResourceName = volumeResourceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder volumeResourceName(String volumeResourceName) {
-            $.volumeResourceName = volumeResourceName;
-            return this;
+            return volumeResourceName(Output.of(volumeResourceName));
         }
 
         public GetVolumeArgs build() {

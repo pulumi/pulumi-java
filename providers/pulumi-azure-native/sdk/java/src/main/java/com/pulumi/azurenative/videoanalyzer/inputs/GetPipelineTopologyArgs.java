@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Azure Video Analyzer account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="pipelineTopologyName", required=true)
-    private String pipelineTopologyName;
+    private Output<String> pipelineTopologyName;
 
     /**
      * @return Pipeline topology unique identifier.
      * 
      */
-    public String pipelineTopologyName() {
+    public Output<String> pipelineTopologyName() {
         return this.pipelineTopologyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param pipelineTopologyName Pipeline topology unique identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pipelineTopologyName(Output<String> pipelineTopologyName) {
+            $.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder pipelineTopologyName(String pipelineTopologyName) {
-            $.pipelineTopologyName = pipelineTopologyName;
+            return pipelineTopologyName(Output.of(pipelineTopologyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPipelineTopologyArgs build() {

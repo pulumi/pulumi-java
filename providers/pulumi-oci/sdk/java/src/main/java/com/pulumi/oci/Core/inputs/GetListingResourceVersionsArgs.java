@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetListingResourceVersionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,16 +17,16 @@ public final class GetListingResourceVersionsArgs extends com.pulumi.resources.I
     public static final GetListingResourceVersionsArgs Empty = new GetListingResourceVersionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetListingResourceVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters;
 
-    public Optional<List<GetListingResourceVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters() {
+        return this.filters;
     }
 
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -55,18 +55,26 @@ public final class GetListingResourceVersionsArgs extends com.pulumi.resources.I
             $ = new GetListingResourceVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetListingResourceVersionsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetListingResourceVersionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetListingResourceVersionsFilter... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
             return this;
+        }
+
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
         }
 
         public GetListingResourceVersionsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="associationName", required=true)
-    private String associationName;
+    private Output<String> associationName;
 
     /**
      * @return The name of the diagnostic settings association.
      * 
      */
-    public String associationName() {
+    public Output<String> associationName() {
         return this.associationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified ID of the resource, including the resource name and resource type.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -73,8 +74,29 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder associationName(String associationName) {
+        public Builder associationName(Output<String> associationName) {
             $.associationName = associationName;
+            return this;
+        }
+
+        /**
+         * @param associationName The name of the diagnostic settings association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
+        }
+
+        /**
+         * @param resourceUri The fully qualified ID of the resource, including the resource name and resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public GetGuestDiagnosticsSettingsAssociationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediaconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="entitlementArn", required=true)
-    private String entitlementArn;
+    private Output<String> entitlementArn;
 
     /**
      * @return The ARN of the entitlement.
      * 
      */
-    public String entitlementArn() {
+    public Output<String> entitlementArn() {
         return this.entitlementArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder entitlementArn(String entitlementArn) {
+        public Builder entitlementArn(Output<String> entitlementArn) {
             $.entitlementArn = entitlementArn;
             return this;
+        }
+
+        /**
+         * @param entitlementArn The ARN of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entitlementArn(String entitlementArn) {
+            return entitlementArn(Output.of(entitlementArn));
         }
 
         public GetFlowEntitlementArgs build() {

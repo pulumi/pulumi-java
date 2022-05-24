@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurestack.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="linkedSubscriptionName", required=true)
-    private String linkedSubscriptionName;
+    private Output<String> linkedSubscriptionName;
 
     /**
      * @return Name of the Linked Subscription resource.
      * 
      */
-    public String linkedSubscriptionName() {
+    public Output<String> linkedSubscriptionName() {
         return this.linkedSubscriptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return Name of the resource group.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -73,8 +74,29 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder linkedSubscriptionName(String linkedSubscriptionName) {
+        public Builder linkedSubscriptionName(Output<String> linkedSubscriptionName) {
             $.linkedSubscriptionName = linkedSubscriptionName;
+            return this;
+        }
+
+        /**
+         * @param linkedSubscriptionName Name of the Linked Subscription resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkedSubscriptionName(String linkedSubscriptionName) {
+            return linkedSubscriptionName(Output.of(linkedSubscriptionName));
+        }
+
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetLinkedSubscriptionArgs build() {

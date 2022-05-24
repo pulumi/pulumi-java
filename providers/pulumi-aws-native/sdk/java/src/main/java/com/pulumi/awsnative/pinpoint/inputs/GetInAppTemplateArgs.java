@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.pinpoint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetInAppTemplateArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetInAppTemplateArgs Empty = new GetInAppTemplateArgs();
 
     @Import(name="templateName", required=true)
-    private String templateName;
+    private Output<String> templateName;
 
-    public String templateName() {
+    public Output<String> templateName() {
         return this.templateName;
     }
 
@@ -43,9 +44,13 @@ public final class GetInAppTemplateArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetInAppTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder templateName(String templateName) {
+        public Builder templateName(Output<String> templateName) {
             $.templateName = templateName;
             return this;
+        }
+
+        public Builder templateName(String templateName) {
+            return templateName(Output.of(templateName));
         }
 
         public GetInAppTemplateArgs build() {

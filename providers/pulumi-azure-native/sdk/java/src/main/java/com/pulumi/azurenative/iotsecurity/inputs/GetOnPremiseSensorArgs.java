@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.iotsecurity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="onPremiseSensorName", required=true)
-    private String onPremiseSensorName;
+    private Output<String> onPremiseSensorName;
 
     /**
      * @return Name of the on-premise IoT sensor
      * 
      */
-    public String onPremiseSensorName() {
+    public Output<String> onPremiseSensorName() {
         return this.onPremiseSensorName;
     }
 
@@ -57,9 +58,19 @@ public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder onPremiseSensorName(String onPremiseSensorName) {
+        public Builder onPremiseSensorName(Output<String> onPremiseSensorName) {
             $.onPremiseSensorName = onPremiseSensorName;
             return this;
+        }
+
+        /**
+         * @param onPremiseSensorName Name of the on-premise IoT sensor
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onPremiseSensorName(String onPremiseSensorName) {
+            return onPremiseSensorName(Output.of(onPremiseSensorName));
         }
 
         public GetOnPremiseSensorArgs build() {

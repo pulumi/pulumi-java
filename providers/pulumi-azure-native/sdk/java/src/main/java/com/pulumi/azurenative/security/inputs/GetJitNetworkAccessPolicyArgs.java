@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="ascLocation", required=true)
-    private String ascLocation;
+    private Output<String> ascLocation;
 
     /**
      * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    public String ascLocation() {
+    public Output<String> ascLocation() {
         return this.ascLocation;
     }
 
@@ -32,13 +33,13 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="jitNetworkAccessPolicyName", required=true)
-    private String jitNetworkAccessPolicyName;
+    private Output<String> jitNetworkAccessPolicyName;
 
     /**
      * @return Name of a Just-in-Time access configuration policy.
      * 
      */
-    public String jitNetworkAccessPolicyName() {
+    public Output<String> jitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder ascLocation(String ascLocation) {
+        public Builder ascLocation(Output<String> ascLocation) {
             $.ascLocation = ascLocation;
+            return this;
+        }
+
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ascLocation(String ascLocation) {
+            return ascLocation(Output.of(ascLocation));
+        }
+
+        /**
+         * @param jitNetworkAccessPolicyName Name of a Just-in-Time access configuration policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jitNetworkAccessPolicyName(Output<String> jitNetworkAccessPolicyName) {
+            $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
          * 
          */
         public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
-            $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
+            return jitNetworkAccessPolicyName(Output.of(jitNetworkAccessPolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetJitNetworkAccessPolicyArgs build() {

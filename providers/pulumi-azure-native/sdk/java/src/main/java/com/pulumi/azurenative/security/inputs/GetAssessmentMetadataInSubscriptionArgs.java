@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="assessmentMetadataName", required=true)
-    private String assessmentMetadataName;
+    private Output<String> assessmentMetadataName;
 
     /**
      * @return The Assessment Key - Unique key for the assessment type
      * 
      */
-    public String assessmentMetadataName() {
+    public Output<String> assessmentMetadataName() {
         return this.assessmentMetadataName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder assessmentMetadataName(String assessmentMetadataName) {
+        public Builder assessmentMetadataName(Output<String> assessmentMetadataName) {
             $.assessmentMetadataName = assessmentMetadataName;
             return this;
+        }
+
+        /**
+         * @param assessmentMetadataName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assessmentMetadataName(String assessmentMetadataName) {
+            return assessmentMetadataName(Output.of(assessmentMetadataName));
         }
 
         public GetAssessmentMetadataInSubscriptionArgs build() {

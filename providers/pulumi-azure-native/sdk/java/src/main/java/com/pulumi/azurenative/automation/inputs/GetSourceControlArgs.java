@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceControlName", required=true)
-    private String sourceControlName;
+    private Output<String> sourceControlName;
 
     /**
      * @return The name of source control.
      * 
      */
-    public String sourceControlName() {
+    public Output<String> sourceControlName() {
         return this.sourceControlName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sourceControlName The name of source control.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceControlName(Output<String> sourceControlName) {
+            $.sourceControlName = sourceControlName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder sourceControlName(String sourceControlName) {
-            $.sourceControlName = sourceControlName;
-            return this;
+            return sourceControlName(Output.of(sourceControlName));
         }
 
         public GetSourceControlArgs build() {

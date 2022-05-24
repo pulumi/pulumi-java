@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetAppCatalogSubscriptionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAppCatalogSubscriptionsFilter> filters;
+    private Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters;
 
-    public Optional<List<GetAppCatalogSubscriptionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="listingId")
-    private @Nullable String listingId;
+    private Output</* @Nullable */ String> listingId;
 
     /**
      * @return A filter to return only the listings that matches the given listing id.
      * 
      */
-    public Optional<String> listingId() {
-        return Optional.ofNullable(this.listingId);
+    public Output</* @Nullable */ String> listingId() {
+        return this.listingId;
     }
 
     private GetAppCatalogSubscriptionsArgs() {}
@@ -85,14 +85,28 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAppCatalogSubscriptionsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetAppCatalogSubscriptionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAppCatalogSubscriptionsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder listingId(@Nullable String listingId) {
+        public Builder listingId(Output</* @Nullable */ String> listingId) {
             $.listingId = listingId;
             return this;
+        }
+
+        /**
+         * @param listingId A filter to return only the listings that matches the given listing id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(@Nullable String listingId) {
+            return listingId(Output.of(listingId));
         }
 
         public GetAppCatalogSubscriptionsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetThemeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetThemeArgs Empty = new GetThemeArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -59,19 +60,31 @@ public final class GetThemeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetThemeArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder environmentName(String environmentName) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
-        public Builder id(String id) {
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetThemeArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="activityLogAlertName", required=true)
-    private String activityLogAlertName;
+    private Output<String> activityLogAlertName;
 
     /**
      * @return The name of the Activity Log Alert rule.
      * 
      */
-    public String activityLogAlertName() {
+    public Output<String> activityLogAlertName() {
         return this.activityLogAlertName;
     }
 
@@ -32,13 +33,13 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder activityLogAlertName(String activityLogAlertName) {
+        public Builder activityLogAlertName(Output<String> activityLogAlertName) {
             $.activityLogAlertName = activityLogAlertName;
+            return this;
+        }
+
+        /**
+         * @param activityLogAlertName The name of the Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activityLogAlertName(String activityLogAlertName) {
+            return activityLogAlertName(Output.of(activityLogAlertName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetActivityLogAlertArgs build() {

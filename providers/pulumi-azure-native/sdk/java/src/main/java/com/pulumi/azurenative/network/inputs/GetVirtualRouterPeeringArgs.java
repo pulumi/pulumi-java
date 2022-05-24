@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peeringName", required=true)
-    private String peeringName;
+    private Output<String> peeringName;
 
     /**
      * @return The name of the Virtual Router Peering.
      * 
      */
-    public String peeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="virtualRouterName", required=true)
-    private String virtualRouterName;
+    private Output<String> virtualRouterName;
 
     /**
      * @return The name of the Virtual Router.
      * 
      */
-    public String virtualRouterName() {
+    public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder peeringName(String peeringName) {
+        public Builder peeringName(Output<String> peeringName) {
             $.peeringName = peeringName;
+            return this;
+        }
+
+        /**
+         * @param peeringName The name of the Virtual Router Peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringName(String peeringName) {
+            return peeringName(Output.of(peeringName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualRouterName The name of the Virtual Router.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualRouterName(Output<String> virtualRouterName) {
+            $.virtualRouterName = virtualRouterName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder virtualRouterName(String virtualRouterName) {
-            $.virtualRouterName = virtualRouterName;
-            return this;
+            return virtualRouterName(Output.of(virtualRouterName));
         }
 
         public GetVirtualRouterPeeringArgs build() {

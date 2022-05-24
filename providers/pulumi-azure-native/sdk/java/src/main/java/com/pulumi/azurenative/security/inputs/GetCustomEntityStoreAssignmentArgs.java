@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="customEntityStoreAssignmentName", required=true)
-    private String customEntityStoreAssignmentName;
+    private Output<String> customEntityStoreAssignmentName;
 
     /**
      * @return Name of the custom entity store assignment. Generated name is GUID.
      * 
      */
-    public String customEntityStoreAssignmentName() {
+    public Output<String> customEntityStoreAssignmentName() {
         return this.customEntityStoreAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
+        public Builder customEntityStoreAssignmentName(Output<String> customEntityStoreAssignmentName) {
             $.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param customEntityStoreAssignmentName Name of the custom entity store assignment. Generated name is GUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
+            return customEntityStoreAssignmentName(Output.of(customEntityStoreAssignmentName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCustomEntityStoreAssignmentArgs build() {

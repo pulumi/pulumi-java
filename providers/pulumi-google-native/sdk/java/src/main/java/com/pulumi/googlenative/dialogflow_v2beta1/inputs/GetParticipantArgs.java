@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetParticipantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetParticipantArgs Empty = new GetParticipantArgs();
 
     @Import(name="conversationId", required=true)
-    private String conversationId;
+    private Output<String> conversationId;
 
-    public String conversationId() {
+    public Output<String> conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="participantId", required=true)
-    private String participantId;
+    private Output<String> participantId;
 
-    public String participantId() {
+    public Output<String> participantId() {
         return this.participantId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetParticipantArgs() {}
@@ -69,24 +69,40 @@ public final class GetParticipantArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetParticipantArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder conversationId(String conversationId) {
+        public Builder conversationId(Output<String> conversationId) {
             $.conversationId = conversationId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder conversationId(String conversationId) {
+            return conversationId(Output.of(conversationId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder participantId(String participantId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder participantId(Output<String> participantId) {
             $.participantId = participantId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder participantId(String participantId) {
+            return participantId(Output.of(participantId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetParticipantArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
     /**
      * @return Name of the delivery rule which is unique within the endpoint.
      * 
      */
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -62,13 +63,13 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleSetName", required=true)
-    private String ruleSetName;
+    private Output<String> ruleSetName;
 
     /**
      * @return Name of the rule set under the profile.
      * 
      */
-    public String ruleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
@@ -105,8 +106,29 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder profileName(String profileName) {
+        public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
+            return this;
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param ruleName Name of the delivery rule which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(Output<String> ruleName) {
+            $.ruleName = ruleName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ruleName(String ruleName) {
-            $.ruleName = ruleName;
+            return ruleName(Output.of(ruleName));
+        }
+
+        /**
+         * @param ruleSetName Name of the rule set under the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleSetName(Output<String> ruleSetName) {
+            $.ruleSetName = ruleSetName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ruleSetName(String ruleSetName) {
-            $.ruleSetName = ruleSetName;
-            return this;
+            return ruleSetName(Output.of(ruleSetName));
         }
 
         public GetRuleArgs build() {

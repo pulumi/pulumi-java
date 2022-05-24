@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiagnosticCategoriesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDiagnosticCategoriesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder resourceId(String resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
+        }
+
+        /**
+         * @param resourceId The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
 
         public GetDiagnosticCategoriesArgs build() {

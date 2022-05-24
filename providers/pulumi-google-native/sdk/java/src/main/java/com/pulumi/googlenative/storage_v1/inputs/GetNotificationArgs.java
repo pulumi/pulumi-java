@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNotificationArgs Empty = new GetNotificationArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="notification", required=true)
-    private String notification;
+    private Output<String> notification;
 
-    public String notification() {
+    public Output<String> notification() {
         return this.notification;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private Output</* @Nullable */ String> userProject;
 
-    public Optional<String> userProject() {
-        return Optional.ofNullable(this.userProject);
+    public Output</* @Nullable */ String> userProject() {
+        return this.userProject;
     }
 
     private GetNotificationArgs() {}
@@ -61,19 +61,31 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNotificationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder notification(String notification) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder notification(Output<String> notification) {
             $.notification = notification;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder notification(String notification) {
+            return notification(Output.of(notification));
+        }
+
+        public Builder userProject(Output</* @Nullable */ String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(@Nullable String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetNotificationArgs build() {

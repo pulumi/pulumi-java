@@ -6,10 +6,10 @@ package com.pulumi.azurenative.enterpriseknowledgegraph;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.enterpriseknowledgegraph.inputs.GetEnterpriseKnowledgeGraphArgs;
 import com.pulumi.azurenative.enterpriseknowledgegraph.outputs.GetEnterpriseKnowledgeGraphResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EnterpriseknowledgegraphFunctions {
     /**
@@ -17,7 +17,7 @@ public final class EnterpriseknowledgegraphFunctions {
      * API Version: 2018-12-03.
      * 
      */
-    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args) {
+    public static Output<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args) {
         return getEnterpriseKnowledgeGraph(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class EnterpriseknowledgegraphFunctions {
      * API Version: 2018-12-03.
      * 
      */
-    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:enterpriseknowledgegraph:getEnterpriseKnowledgeGraph", TypeShape.of(GetEnterpriseKnowledgeGraphResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:enterpriseknowledgegraph:getEnterpriseKnowledgeGraph", TypeShape.of(GetEnterpriseKnowledgeGraphResult.class), args, Utilities.withVersion(options));
     }
 }

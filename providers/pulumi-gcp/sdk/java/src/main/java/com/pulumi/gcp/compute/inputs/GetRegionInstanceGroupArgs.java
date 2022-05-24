@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
@@ -44,8 +44,8 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * nor `project` are provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -55,7 +55,7 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return The region in which the resource belongs.  If `self_link`
@@ -63,8 +63,8 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * provided, the provider region is used.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     /**
@@ -72,14 +72,14 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="selfLink")
-    private @Nullable String selfLink;
+    private Output</* @Nullable */ String> selfLink;
 
     /**
      * @return The link to the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
-    public Optional<String> selfLink() {
-        return Optional.ofNullable(this.selfLink);
+    public Output</* @Nullable */ String> selfLink() {
+        return this.selfLink;
     }
 
     private GetRegionInstanceGroupArgs() {}
@@ -115,8 +115,31 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the instance group.  One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If `self_link` is provided, this value is ignored.  If neither `self_link`
+         * nor `project` are provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -129,7 +152,19 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param region The region in which the resource belongs.  If `self_link`
+         * is provided, this value is ignored.  If neither `self_link` nor `region` are
+         * provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(Output</* @Nullable */ String> region) {
+            $.region = region;
             return this;
         }
 
@@ -142,7 +177,17 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder region(@Nullable String region) {
-            $.region = region;
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param selfLink The link to the instance group.  One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selfLink(Output</* @Nullable */ String> selfLink) {
+            $.selfLink = selfLink;
             return this;
         }
 
@@ -153,8 +198,7 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder selfLink(@Nullable String selfLink) {
-            $.selfLink = selfLink;
-            return this;
+            return selfLink(Output.of(selfLink));
         }
 
         public GetRegionInstanceGroupArgs build() {

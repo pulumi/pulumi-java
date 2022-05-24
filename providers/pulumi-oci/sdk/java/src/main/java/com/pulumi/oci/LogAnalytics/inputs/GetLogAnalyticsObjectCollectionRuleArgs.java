@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogAnalyticsObjectCollectionRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="logAnalyticsObjectCollectionRuleId", required=true)
-    private String logAnalyticsObjectCollectionRuleId;
+    private Output<String> logAnalyticsObjectCollectionRuleId;
 
     /**
      * @return The Logging Analytics Object Collection Rule [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
      * 
      */
-    public String logAnalyticsObjectCollectionRuleId() {
+    public Output<String> logAnalyticsObjectCollectionRuleId() {
         return this.logAnalyticsObjectCollectionRuleId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLogAnalyticsObjectCollectionRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -73,8 +74,29 @@ public final class GetLogAnalyticsObjectCollectionRuleArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder logAnalyticsObjectCollectionRuleId(String logAnalyticsObjectCollectionRuleId) {
+        public Builder logAnalyticsObjectCollectionRuleId(Output<String> logAnalyticsObjectCollectionRuleId) {
             $.logAnalyticsObjectCollectionRuleId = logAnalyticsObjectCollectionRuleId;
+            return this;
+        }
+
+        /**
+         * @param logAnalyticsObjectCollectionRuleId The Logging Analytics Object Collection Rule [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsObjectCollectionRuleId(String logAnalyticsObjectCollectionRuleId) {
+            return logAnalyticsObjectCollectionRuleId(Output.of(logAnalyticsObjectCollectionRuleId));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLogAnalyticsObjectCollectionRuleArgs extends com.pulumi.re
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
-            return this;
+            return namespace(Output.of(namespace));
         }
 
         public GetLogAnalyticsObjectCollectionRuleArgs build() {

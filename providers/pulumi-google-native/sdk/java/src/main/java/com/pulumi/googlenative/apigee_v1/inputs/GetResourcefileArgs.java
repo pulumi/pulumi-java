@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,30 +14,30 @@ public final class GetResourcefileArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetResourcefileArgs Empty = new GetResourcefileArgs();
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="type", required=true)
-    private String type;
+    private Output<String> type;
 
-    public String type() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -67,24 +68,40 @@ public final class GetResourcefileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourcefileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder type(String type) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder type(Output<String> type) {
             $.type = type;
             return this;
+        }
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetResourcefileArgs build() {

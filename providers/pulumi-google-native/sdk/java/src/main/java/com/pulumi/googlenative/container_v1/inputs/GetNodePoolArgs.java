@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.container_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,45 +15,45 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodePoolArgs Empty = new GetNodePoolArgs();
 
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="nodePoolId", required=true)
-    private String nodePoolId;
+    private Output<String> nodePoolId;
 
-    public String nodePoolId() {
+    public Output<String> nodePoolId() {
         return this.nodePoolId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="projectId")
-    private @Nullable String projectId;
+    private Output</* @Nullable */ String> projectId;
 
-    public Optional<String> projectId() {
-        return Optional.ofNullable(this.projectId);
+    public Output</* @Nullable */ String> projectId() {
+        return this.projectId;
     }
 
     @Import(name="zone")
-    private @Nullable String zone;
+    private Output</* @Nullable */ String> zone;
 
-    public Optional<String> zone() {
-        return Optional.ofNullable(this.zone);
+    public Output</* @Nullable */ String> zone() {
+        return this.zone;
     }
 
     private GetNodePoolArgs() {}
@@ -85,34 +85,58 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodePoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder nodePoolId(String nodePoolId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder nodePoolId(Output<String> nodePoolId) {
             $.nodePoolId = nodePoolId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder nodePoolId(String nodePoolId) {
+            return nodePoolId(Output.of(nodePoolId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder projectId(@Nullable String projectId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder projectId(Output</* @Nullable */ String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder zone(@Nullable String zone) {
+        public Builder projectId(@Nullable String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public Builder zone(Output</* @Nullable */ String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(@Nullable String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetNodePoolArgs build() {

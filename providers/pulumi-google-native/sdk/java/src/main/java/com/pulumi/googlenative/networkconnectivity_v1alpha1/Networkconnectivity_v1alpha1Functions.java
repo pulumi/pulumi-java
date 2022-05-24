@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networkconnectivity_v1alpha1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,105 +22,104 @@ import com.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.GetServiceCo
 import com.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.GetServiceInstanceIamPolicyResult;
 import com.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.GetSpokeIamPolicyResult;
 import com.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.GetSpokeResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Networkconnectivity_v1alpha1Functions {
     /**
      * Gets details of a single Hub.
      * 
      */
-    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args) {
+    public static Output<GetHubResult> getHub(GetHubArgs args) {
         return getHub(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Hub.
      * 
      */
-    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args) {
+    public static Output<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args) {
         return getHubIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInternalRangeIamPolicyResult> getInternalRangeIamPolicy(GetInternalRangeIamPolicyArgs args) {
+    public static Output<GetInternalRangeIamPolicyResult> getInternalRangeIamPolicy(GetInternalRangeIamPolicyArgs args) {
         return getInternalRangeIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInternalRangeIamPolicyResult> getInternalRangeIamPolicy(GetInternalRangeIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getInternalRangeIamPolicy", TypeShape.of(GetInternalRangeIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInternalRangeIamPolicyResult> getInternalRangeIamPolicy(GetInternalRangeIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getInternalRangeIamPolicy", TypeShape.of(GetInternalRangeIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceConnectPolicyIamPolicyResult> getServiceConnectPolicyIamPolicy(GetServiceConnectPolicyIamPolicyArgs args) {
+    public static Output<GetServiceConnectPolicyIamPolicyResult> getServiceConnectPolicyIamPolicy(GetServiceConnectPolicyIamPolicyArgs args) {
         return getServiceConnectPolicyIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceConnectPolicyIamPolicyResult> getServiceConnectPolicyIamPolicy(GetServiceConnectPolicyIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getServiceConnectPolicyIamPolicy", TypeShape.of(GetServiceConnectPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceConnectPolicyIamPolicyResult> getServiceConnectPolicyIamPolicy(GetServiceConnectPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getServiceConnectPolicyIamPolicy", TypeShape.of(GetServiceConnectPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceInstanceIamPolicyResult> getServiceInstanceIamPolicy(GetServiceInstanceIamPolicyArgs args) {
+    public static Output<GetServiceInstanceIamPolicyResult> getServiceInstanceIamPolicy(GetServiceInstanceIamPolicyArgs args) {
         return getServiceInstanceIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceInstanceIamPolicyResult> getServiceInstanceIamPolicy(GetServiceInstanceIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getServiceInstanceIamPolicy", TypeShape.of(GetServiceInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceInstanceIamPolicyResult> getServiceInstanceIamPolicy(GetServiceInstanceIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getServiceInstanceIamPolicy", TypeShape.of(GetServiceInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Spoke.
      * 
      */
-    public static CompletableFuture<GetSpokeResult> getSpoke(GetSpokeArgs args) {
+    public static Output<GetSpokeResult> getSpoke(GetSpokeArgs args) {
         return getSpoke(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Spoke.
      * 
      */
-    public static CompletableFuture<GetSpokeResult> getSpoke(GetSpokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getSpoke", TypeShape.of(GetSpokeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpokeResult> getSpoke(GetSpokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getSpoke", TypeShape.of(GetSpokeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args) {
+    public static Output<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args) {
         return getSpokeIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkconnectivity/v1alpha1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

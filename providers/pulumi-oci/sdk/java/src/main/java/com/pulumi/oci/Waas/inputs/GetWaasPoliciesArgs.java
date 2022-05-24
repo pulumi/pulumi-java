@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Waas.inputs.GetWaasPoliciesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. This number is generated when the compartment is created.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNames")
-    private @Nullable List<String> displayNames;
+    private Output</* @Nullable */ List<String>> displayNames;
 
     /**
      * @return Filter policies using a list of display names.
      * 
      */
-    public Optional<List<String>> displayNames() {
-        return Optional.ofNullable(this.displayNames);
+    public Output</* @Nullable */ List<String>> displayNames() {
+        return this.displayNames;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetWaasPoliciesFilter> filters;
+    private Output</* @Nullable */ List<GetWaasPoliciesFilter>> filters;
 
-    public Optional<List<GetWaasPoliciesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetWaasPoliciesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ids")
-    private @Nullable List<String> ids;
+    private Output</* @Nullable */ List<String>> ids;
 
     /**
      * @return Filter policies using a list of policy OCIDs.
      * 
      */
-    public Optional<List<String>> ids() {
-        return Optional.ofNullable(this.ids);
+    public Output</* @Nullable */ List<String>> ids() {
+        return this.ids;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private Output</* @Nullable */ List<String>> states;
 
     /**
      * @return Filter policies using a list of lifecycle states.
      * 
      */
-    public Optional<List<String>> states() {
-        return Optional.ofNullable(this.states);
+    public Output</* @Nullable */ List<String>> states() {
+        return this.states;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter that matches policies created on or after the specified date and time.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
+    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
+        return this.timeCreatedGreaterThanOrEqualTo;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private Output</* @Nullable */ String> timeCreatedLessThan;
 
     /**
      * @return A filter that matches policies created before the specified date-time.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
-        return Optional.ofNullable(this.timeCreatedLessThan);
+    public Output</* @Nullable */ String> timeCreatedLessThan() {
+        return this.timeCreatedLessThan;
     }
 
     private GetWaasPoliciesArgs() {}
@@ -149,8 +149,29 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. This number is generated when the compartment is created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayNames Filter policies using a list of display names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNames(Output</* @Nullable */ List<String>> displayNames) {
+            $.displayNames = displayNames;
             return this;
         }
 
@@ -161,8 +182,7 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayNames(@Nullable List<String> displayNames) {
-            $.displayNames = displayNames;
-            return this;
+            return displayNames(Output.of(displayNames));
         }
 
         /**
@@ -175,9 +195,13 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
             return displayNames(List.of(displayNames));
         }
 
-        public Builder filters(@Nullable List<GetWaasPoliciesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetWaasPoliciesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetWaasPoliciesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetWaasPoliciesFilter... filters) {
@@ -190,9 +214,19 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ids(@Nullable List<String> ids) {
+        public Builder ids(Output</* @Nullable */ List<String>> ids) {
             $.ids = ids;
             return this;
+        }
+
+        /**
+         * @param ids Filter policies using a list of policy OCIDs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ids(@Nullable List<String> ids) {
+            return ids(Output.of(ids));
         }
 
         /**
@@ -211,9 +245,19 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(Output</* @Nullable */ List<String>> states) {
             $.states = states;
             return this;
+        }
+
+        /**
+         * @param states Filter policies using a list of lifecycle states.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(@Nullable List<String> states) {
+            return states(Output.of(states));
         }
 
         /**
@@ -232,8 +276,29 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return this;
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter that matches policies created on or after the specified date and time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan A filter that matches policies created before the specified date-time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -244,8 +309,7 @@ public final class GetWaasPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetWaasPoliciesArgs build() {

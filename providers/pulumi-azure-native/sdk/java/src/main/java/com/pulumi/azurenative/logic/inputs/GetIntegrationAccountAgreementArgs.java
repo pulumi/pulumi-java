@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="agreementName", required=true)
-    private String agreementName;
+    private Output<String> agreementName;
 
     /**
      * @return The integration account agreement name.
      * 
      */
-    public String agreementName() {
+    public Output<String> agreementName() {
         return this.agreementName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder agreementName(String agreementName) {
+        public Builder agreementName(Output<String> agreementName) {
             $.agreementName = agreementName;
+            return this;
+        }
+
+        /**
+         * @param agreementName The integration account agreement name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agreementName(String agreementName) {
+            return agreementName(Output.of(agreementName));
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
          * 
          */
         public Builder integrationAccountName(String integrationAccountName) {
-            $.integrationAccountName = integrationAccountName;
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationAccountAgreementArgs build() {

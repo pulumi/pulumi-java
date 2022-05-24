@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLibraryMaskingFormatArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="libraryMaskingFormatId", required=true)
-    private String libraryMaskingFormatId;
+    private Output<String> libraryMaskingFormatId;
 
     /**
      * @return The OCID of the library masking format.
      * 
      */
-    public String libraryMaskingFormatId() {
+    public Output<String> libraryMaskingFormatId() {
         return this.libraryMaskingFormatId;
     }
 
@@ -57,9 +58,19 @@ public final class GetLibraryMaskingFormatArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder libraryMaskingFormatId(String libraryMaskingFormatId) {
+        public Builder libraryMaskingFormatId(Output<String> libraryMaskingFormatId) {
             $.libraryMaskingFormatId = libraryMaskingFormatId;
             return this;
+        }
+
+        /**
+         * @param libraryMaskingFormatId The OCID of the library masking format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder libraryMaskingFormatId(String libraryMaskingFormatId) {
+            return libraryMaskingFormatId(Output.of(libraryMaskingFormatId));
         }
 
         public GetLibraryMaskingFormatArgs build() {

@@ -16,46 +16,46 @@ import com.pulumi.azurenative.datadog.outputs.ListMonitorApiKeysResult;
 import com.pulumi.azurenative.datadog.outputs.ListMonitorHostsResult;
 import com.pulumi.azurenative.datadog.outputs.ListMonitorLinkedResourcesResult;
 import com.pulumi.azurenative.datadog.outputs.ListMonitorMonitoredResourcesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DatadogFunctions {
     /**
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args) {
         return getMonitor(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args) {
+    public static Output<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args) {
         return getMonitorDefaultKey(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:getMonitorDefaultKey", TypeShape.of(GetMonitorDefaultKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:getMonitorDefaultKey", TypeShape.of(GetMonitorDefaultKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args) {
+    public static Output<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args) {
         return listMonitorApiKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorApiKeys", TypeShape.of(ListMonitorApiKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:listMonitorApiKeys", TypeShape.of(ListMonitorApiKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args) {
+    public static Output<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args) {
         return listMonitorHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -79,15 +79,15 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorHosts", TypeShape.of(ListMonitorHostsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:listMonitorHosts", TypeShape.of(ListMonitorHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args) {
+    public static Output<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args) {
         return listMonitorLinkedResources(args, InvokeOptions.Empty);
     }
     /**
@@ -95,15 +95,15 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorLinkedResources", TypeShape.of(ListMonitorLinkedResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:listMonitorLinkedResources", TypeShape.of(ListMonitorLinkedResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of a list operation.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
+    public static Output<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
         return listMonitorMonitoredResources(args, InvokeOptions.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datadog:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
 }

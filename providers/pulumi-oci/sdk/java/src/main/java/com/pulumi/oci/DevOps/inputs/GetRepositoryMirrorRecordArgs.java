@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRepositoryMirrorRecordArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="mirrorRecordType", required=true)
-    private String mirrorRecordType;
+    private Output<String> mirrorRecordType;
 
     /**
      * @return The field of mirror record type. Only one mirror record type can be provided: current - The current mirror record. lastSuccessful - The last successful mirror record.
      * 
      */
-    public String mirrorRecordType() {
+    public Output<String> mirrorRecordType() {
         return this.mirrorRecordType;
     }
 
@@ -32,13 +33,13 @@ public final class GetRepositoryMirrorRecordArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRepositoryMirrorRecordArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder mirrorRecordType(String mirrorRecordType) {
+        public Builder mirrorRecordType(Output<String> mirrorRecordType) {
             $.mirrorRecordType = mirrorRecordType;
+            return this;
+        }
+
+        /**
+         * @param mirrorRecordType The field of mirror record type. Only one mirror record type can be provided: current - The current mirror record. lastSuccessful - The last successful mirror record.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mirrorRecordType(String mirrorRecordType) {
+            return mirrorRecordType(Output.of(mirrorRecordType));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRepositoryMirrorRecordArgs extends com.pulumi.resources.In
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryMirrorRecordArgs build() {

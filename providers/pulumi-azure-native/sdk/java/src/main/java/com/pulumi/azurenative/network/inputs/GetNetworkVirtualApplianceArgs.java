@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Expands referenced resources.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
-    private String networkVirtualApplianceName;
+    private Output<String> networkVirtualApplianceName;
 
     /**
      * @return The name of Network Virtual Appliance.
      * 
      */
-    public String networkVirtualApplianceName() {
+    public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
 
@@ -49,13 +49,13 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param networkVirtualApplianceName The name of Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
+            $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
          * 
          */
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
-            $.networkVirtualApplianceName = networkVirtualApplianceName;
+            return networkVirtualApplianceName(Output.of(networkVirtualApplianceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetNetworkVirtualApplianceArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNetworkVirtualApplianceArgs build() {

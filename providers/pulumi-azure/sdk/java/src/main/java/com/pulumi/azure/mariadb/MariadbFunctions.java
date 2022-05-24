@@ -6,10 +6,10 @@ package com.pulumi.azure.mariadb;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.mariadb.inputs.GetMariaDbServerArgs;
 import com.pulumi.azure.mariadb.outputs.GetMariaDbServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MariadbFunctions {
     /**
@@ -41,7 +41,7 @@ public final class MariadbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args) {
+    public static Output<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args) {
         return getMariaDbServer(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class MariadbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mariadb/getMariaDbServer:getMariaDbServer", TypeShape.of(GetMariaDbServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mariadb/getMariaDbServer:getMariaDbServer", TypeShape.of(GetMariaDbServerResult.class), args, Utilities.withVersion(options));
     }
 }

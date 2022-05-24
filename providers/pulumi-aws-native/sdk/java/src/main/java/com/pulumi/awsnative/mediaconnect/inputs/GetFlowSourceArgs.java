@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediaconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFlowSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceArn", required=true)
-    private String sourceArn;
+    private Output<String> sourceArn;
 
     /**
      * @return The ARN of the source.
      * 
      */
-    public String sourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetFlowSourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceArn(String sourceArn) {
+        public Builder sourceArn(Output<String> sourceArn) {
             $.sourceArn = sourceArn;
             return this;
+        }
+
+        /**
+         * @param sourceArn The ARN of the source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceArn(String sourceArn) {
+            return sourceArn(Output.of(sourceArn));
         }
 
         public GetFlowSourceArgs build() {

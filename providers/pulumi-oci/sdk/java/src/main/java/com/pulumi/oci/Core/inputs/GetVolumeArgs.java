@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeId", required=true)
-    private String volumeId;
+    private Output<String> volumeId;
 
     /**
      * @return The OCID of the volume.
      * 
      */
-    public String volumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeId(String volumeId) {
+        public Builder volumeId(Output<String> volumeId) {
             $.volumeId = volumeId;
             return this;
+        }
+
+        /**
+         * @param volumeId The OCID of the volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
 
         public GetVolumeArgs build() {

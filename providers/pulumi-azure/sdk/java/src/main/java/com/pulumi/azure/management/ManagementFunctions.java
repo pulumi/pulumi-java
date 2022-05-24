@@ -6,10 +6,10 @@ package com.pulumi.azure.management;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.management.inputs.GetGroupArgs;
 import com.pulumi.azure.management.outputs.GetGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagementFunctions {
     /**
@@ -40,7 +40,7 @@ public final class ManagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup() {
+    public static Output<GetGroupResult> getGroup() {
         return getGroup(GetGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +71,7 @@ public final class ManagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public final class ManagementFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:management/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:management/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

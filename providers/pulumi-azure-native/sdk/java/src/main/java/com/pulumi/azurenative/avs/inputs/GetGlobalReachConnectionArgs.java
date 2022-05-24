@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="globalReachConnectionName", required=true)
-    private String globalReachConnectionName;
+    private Output<String> globalReachConnectionName;
 
     /**
      * @return Name of the global reach connection in the private cloud
      * 
      */
-    public String globalReachConnectionName() {
+    public Output<String> globalReachConnectionName() {
         return this.globalReachConnectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder globalReachConnectionName(String globalReachConnectionName) {
+        public Builder globalReachConnectionName(Output<String> globalReachConnectionName) {
             $.globalReachConnectionName = globalReachConnectionName;
+            return this;
+        }
+
+        /**
+         * @param globalReachConnectionName Name of the global reach connection in the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalReachConnectionName(String globalReachConnectionName) {
+            return globalReachConnectionName(Output.of(globalReachConnectionName));
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(Output<String> privateCloudName) {
+            $.privateCloudName = privateCloudName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder privateCloudName(String privateCloudName) {
-            $.privateCloudName = privateCloudName;
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGlobalReachConnectionArgs build() {

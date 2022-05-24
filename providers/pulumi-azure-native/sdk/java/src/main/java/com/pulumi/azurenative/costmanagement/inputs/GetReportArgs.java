@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reportName", required=true)
-    private String reportName;
+    private Output<String> reportName;
 
     /**
      * @return Report Name.
      * 
      */
-    public String reportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -57,9 +58,19 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder reportName(String reportName) {
+        public Builder reportName(Output<String> reportName) {
             $.reportName = reportName;
             return this;
+        }
+
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportName(String reportName) {
+            return reportName(Output.of(reportName));
         }
 
         public GetReportArgs build() {

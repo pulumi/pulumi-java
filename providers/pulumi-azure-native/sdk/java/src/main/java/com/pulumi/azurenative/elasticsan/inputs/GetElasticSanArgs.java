@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.elasticsan.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetElasticSanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticSanName", required=true)
-    private String elasticSanName;
+    private Output<String> elasticSanName;
 
     /**
      * @return The name of the ElasticSan.
      * 
      */
-    public String elasticSanName() {
+    public Output<String> elasticSanName() {
         return this.elasticSanName;
     }
 
@@ -32,13 +33,13 @@ public final class GetElasticSanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetElasticSanArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder elasticSanName(String elasticSanName) {
+        public Builder elasticSanName(Output<String> elasticSanName) {
             $.elasticSanName = elasticSanName;
+            return this;
+        }
+
+        /**
+         * @param elasticSanName The name of the ElasticSan.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder elasticSanName(String elasticSanName) {
+            return elasticSanName(Output.of(elasticSanName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetElasticSanArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetElasticSanArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.tpu;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.tpu.inputs.GetTensorflowVersionsArgs;
 import com.pulumi.gcp.tpu.outputs.GetTensorflowVersionsResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class TpuFunctions {
     /**
@@ -64,7 +64,7 @@ public final class TpuFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions() {
+    public static Output<GetTensorflowVersionsResult> getTensorflowVersions() {
         return getTensorflowVersions(GetTensorflowVersionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -119,7 +119,7 @@ public final class TpuFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args) {
+    public static Output<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args) {
         return getTensorflowVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -174,7 +174,7 @@ public final class TpuFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:tpu/getTensorflowVersions:getTensorflowVersions", TypeShape.of(GetTensorflowVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:tpu/getTensorflowVersions:getTensorflowVersions", TypeShape.of(GetTensorflowVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

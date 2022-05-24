@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.spanner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @Import(name="config")
-    private @Nullable String config;
+    private Output</* @Nullable */ String> config;
 
-    public Optional<String> config() {
-        return Optional.ofNullable(this.config);
+    public Output</* @Nullable */ String> config() {
+        return this.config;
     }
 
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -33,13 +33,13 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the spanner instance.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,15 +49,15 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetInstanceArgs() {}
@@ -87,13 +87,32 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder config(@Nullable String config) {
+        public Builder config(Output</* @Nullable */ String> config) {
             $.config = config;
             return this;
         }
 
-        public Builder displayName(@Nullable String displayName) {
+        public Builder config(@Nullable String config) {
+            return config(Output.of(config));
+        }
+
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        public Builder displayName(@Nullable String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param name The name of the spanner instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -104,7 +123,18 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -116,8 +146,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetInstanceArgs build() {

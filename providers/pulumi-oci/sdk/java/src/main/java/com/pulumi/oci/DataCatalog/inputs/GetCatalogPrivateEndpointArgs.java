@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCatalogPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="catalogPrivateEndpointId", required=true)
-    private String catalogPrivateEndpointId;
+    private Output<String> catalogPrivateEndpointId;
 
     /**
      * @return Unique private reverse connection identifier.
      * 
      */
-    public String catalogPrivateEndpointId() {
+    public Output<String> catalogPrivateEndpointId() {
         return this.catalogPrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCatalogPrivateEndpointArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder catalogPrivateEndpointId(String catalogPrivateEndpointId) {
+        public Builder catalogPrivateEndpointId(Output<String> catalogPrivateEndpointId) {
             $.catalogPrivateEndpointId = catalogPrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param catalogPrivateEndpointId Unique private reverse connection identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogPrivateEndpointId(String catalogPrivateEndpointId) {
+            return catalogPrivateEndpointId(Output.of(catalogPrivateEndpointId));
         }
 
         public GetCatalogPrivateEndpointArgs build() {

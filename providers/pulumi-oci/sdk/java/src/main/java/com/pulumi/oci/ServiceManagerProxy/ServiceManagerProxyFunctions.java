@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ServiceManagerProxy;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.ServiceManagerProxy.inputs.GetServiceEnvironmentsArgs;
 import com.pulumi.oci.ServiceManagerProxy.outputs.GetServiceEnvironmentResult;
 import com.pulumi.oci.ServiceManagerProxy.outputs.GetServiceEnvironmentsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServiceManagerProxyFunctions {
     /**
@@ -22,7 +22,7 @@ public final class ServiceManagerProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args) {
+    public static Output<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args) {
         return getServiceEnvironment(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class ServiceManagerProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ServiceManagerProxy/getServiceEnvironment:getServiceEnvironment", TypeShape.of(GetServiceEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ServiceManagerProxy/getServiceEnvironment:getServiceEnvironment", TypeShape.of(GetServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Service Environments in Oracle Cloud Infrastructure Service Manager Proxy service.
@@ -45,7 +45,7 @@ public final class ServiceManagerProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args) {
+    public static Output<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args) {
         return getServiceEnvironments(args, InvokeOptions.Empty);
     }
     /**
@@ -57,7 +57,7 @@ public final class ServiceManagerProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ServiceManagerProxy/getServiceEnvironments:getServiceEnvironments", TypeShape.of(GetServiceEnvironmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ServiceManagerProxy/getServiceEnvironments:getServiceEnvironments", TypeShape.of(GetServiceEnvironmentsResult.class), args, Utilities.withVersion(options));
     }
 }

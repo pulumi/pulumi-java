@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.cloudfunctions;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.cloudfunctions.inputs.GetFunctionArgs;
 import com.pulumi.gcp.cloudfunctions.outputs.GetFunctionResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudfunctionsFunctions {
     /**
@@ -41,7 +41,7 @@ public final class CloudfunctionsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class CloudfunctionsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:cloudfunctions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:cloudfunctions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
 }

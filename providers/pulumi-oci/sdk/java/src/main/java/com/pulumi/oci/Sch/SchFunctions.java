@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Sch;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Sch.inputs.GetServiceConnectorsArgs;
 import com.pulumi.oci.Sch.outputs.GetServiceConnectorResult;
 import com.pulumi.oci.Sch.outputs.GetServiceConnectorsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class SchFunctions {
     /**
@@ -22,7 +22,7 @@ public final class SchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args) {
+    public static Output<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args) {
         return getServiceConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class SchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Sch/getServiceConnector:getServiceConnector", TypeShape.of(GetServiceConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Sch/getServiceConnector:getServiceConnector", TypeShape.of(GetServiceConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Service Connectors in Oracle Cloud Infrastructure Service Connector Hub service.
@@ -44,7 +44,7 @@ public final class SchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args) {
+    public static Output<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args) {
         return getServiceConnectors(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +55,7 @@ public final class SchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Sch/getServiceConnectors:getServiceConnectors", TypeShape.of(GetServiceConnectorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Sch/getServiceConnectors:getServiceConnectors", TypeShape.of(GetServiceConnectorsResult.class), args, Utilities.withVersion(options));
     }
 }

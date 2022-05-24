@@ -6,10 +6,10 @@ package com.pulumi.azure.mixedreality;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.mixedreality.inputs.GetSpatialAnchorsAccountArgs;
 import com.pulumi.azure.mixedreality.outputs.GetSpatialAnchorsAccountResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MixedrealityFunctions {
     /**
@@ -41,7 +41,7 @@ public final class MixedrealityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args) {
+    public static Output<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args) {
         return getSpatialAnchorsAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class MixedrealityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:mixedreality/getSpatialAnchorsAccount:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpatialAnchorsAccountResult> getSpatialAnchorsAccount(GetSpatialAnchorsAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mixedreality/getSpatialAnchorsAccount:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args, Utilities.withVersion(options));
     }
 }

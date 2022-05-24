@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.StackMonitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.StackMonitoring.inputs.GetDiscoveryJobsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which data is listed.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDiscoveryJobsFilter> filters;
+    private Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters;
 
-    public Optional<List<GetDiscoveryJobsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only discovery jobs that match the entire resource name given.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetDiscoveryJobsArgs() {}
@@ -85,14 +85,28 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryJobsFilter> filters) {
+        /**
+         * @param compartmentId The ID of the compartment in which data is listed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDiscoveryJobsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDiscoveryJobsFilter... filters) {
@@ -105,9 +119,19 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name A filter to return only discovery jobs that match the entire resource name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
         }
 
         public GetDiscoveryJobsArgs build() {

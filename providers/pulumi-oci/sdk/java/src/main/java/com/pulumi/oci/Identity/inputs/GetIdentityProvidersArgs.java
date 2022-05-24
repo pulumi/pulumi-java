@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetIdentityProvidersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetIdentityProvidersFilter> filters;
+    private Output</* @Nullable */ List<GetIdentityProvidersFilter>> filters;
 
-    public Optional<List<GetIdentityProvidersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIdentityProvidersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="protocol", required=true)
-    private String protocol;
+    private Output<String> protocol;
 
     /**
      * @return The protocol used for federation.
      * 
      */
-    public String protocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -73,14 +73,14 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetIdentityProvidersArgs() {}
@@ -117,14 +117,28 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIdentityProvidersFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetIdentityProvidersFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIdentityProvidersFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIdentityProvidersFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to only return resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param protocol The protocol used for federation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocol(Output<String> protocol) {
+            $.protocol = protocol;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder protocol(String protocol) {
-            $.protocol = protocol;
+            return protocol(Output.of(protocol));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetIdentityProvidersArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetIdentityProvidersArgs build() {

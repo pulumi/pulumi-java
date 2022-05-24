@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ObjectStorage;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -35,7 +36,6 @@ import com.pulumi.oci.ObjectStorage.outputs.GetReplicationPoliciesResult;
 import com.pulumi.oci.ObjectStorage.outputs.GetReplicationPolicyResult;
 import com.pulumi.oci.ObjectStorage.outputs.GetReplicationSourcesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ObjectStorageFunctions {
     /**
@@ -46,7 +46,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
     /**
@@ -57,8 +57,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Buckets in Oracle Cloud Infrastructure Object Storage service.
@@ -76,7 +76,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args) {
+    public static Output<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args) {
         return getBucketSummaries(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getBucketSummaries:getBucketSummaries", TypeShape.of(GetBucketSummariesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketSummariesResult> getBucketSummaries(GetBucketSummariesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getBucketSummaries:getBucketSummaries", TypeShape.of(GetBucketSummariesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Namespace resource in Oracle Cloud Infrastructure Object Storage service.
@@ -112,7 +112,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace() {
+    public static Output<GetNamespaceResult> getNamespace() {
         return getNamespace(GetNamespaceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -129,7 +129,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -146,14 +146,14 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getNamespace:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetNamespaceMetadataResult> getNamespaceMetadata(GetNamespaceMetadataArgs args) {
+    public static Output<GetNamespaceMetadataResult> getNamespaceMetadata(GetNamespaceMetadataArgs args) {
         return getNamespaceMetadata(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceMetadataResult> getNamespaceMetadata(GetNamespaceMetadataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getNamespaceMetadata:getNamespaceMetadata", TypeShape.of(GetNamespaceMetadataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceMetadataResult> getNamespaceMetadata(GetNamespaceMetadataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getNamespaceMetadata:getNamespaceMetadata", TypeShape.of(GetNamespaceMetadataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Object resource in Oracle Cloud Infrastructure Object Storage service.
@@ -163,7 +163,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args) {
+    public static Output<GetObjectResult> getObject(GetObjectArgs args) {
         return getObject(args, InvokeOptions.Empty);
     }
     /**
@@ -174,8 +174,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about metadata of a specific Object resource in Oracle Cloud Infrastructure Object Storage service.
@@ -185,7 +185,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args) {
+    public static Output<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args) {
         return getObjectHead(args, InvokeOptions.Empty);
     }
     /**
@@ -196,8 +196,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectHead:getObjectHead", TypeShape.of(GetObjectHeadResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectHeadResult> getObjectHead(GetObjectHeadArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getObjectHead:getObjectHead", TypeShape.of(GetObjectHeadResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Object Lifecycle Policy resource in Oracle Cloud Infrastructure Object Storage service.
@@ -207,7 +207,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args) {
+    public static Output<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args) {
         return getObjectLifecyclePolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -218,8 +218,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectLifecyclePolicy:getObjectLifecyclePolicy", TypeShape.of(GetObjectLifecyclePolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectLifecyclePolicyResult> getObjectLifecyclePolicy(GetObjectLifecyclePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getObjectLifecyclePolicy:getObjectLifecyclePolicy", TypeShape.of(GetObjectLifecyclePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Object Versions in Oracle Cloud Infrastructure Object Storage service.
@@ -236,7 +236,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args) {
+    public static Output<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args) {
         return getObjectVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -254,8 +254,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjectVersions:getObjectVersions", TypeShape.of(GetObjectVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectVersionsResult> getObjectVersions(GetObjectVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getObjectVersions:getObjectVersions", TypeShape.of(GetObjectVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Objects in Oracle Cloud Infrastructure Object Storage service.
@@ -274,7 +274,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args) {
+    public static Output<GetObjectsResult> getObjects(GetObjectsArgs args) {
         return getObjects(args, InvokeOptions.Empty);
     }
     /**
@@ -294,8 +294,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Preauthenticated Request resource in Oracle Cloud Infrastructure Object Storage service.
@@ -305,7 +305,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args) {
+    public static Output<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args) {
         return getPreauthrequest(args, InvokeOptions.Empty);
     }
     /**
@@ -316,8 +316,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getPreauthrequest:getPreauthrequest", TypeShape.of(GetPreauthrequestResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPreauthrequestResult> getPreauthrequest(GetPreauthrequestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getPreauthrequest:getPreauthrequest", TypeShape.of(GetPreauthrequestResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Preauthenticated Requests in Oracle Cloud Infrastructure Object Storage service.
@@ -327,7 +327,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args) {
+    public static Output<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args) {
         return getPreauthrequests(args, InvokeOptions.Empty);
     }
     /**
@@ -338,8 +338,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getPreauthrequests:getPreauthrequests", TypeShape.of(GetPreauthrequestsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPreauthrequestsResult> getPreauthrequests(GetPreauthrequestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getPreauthrequests:getPreauthrequests", TypeShape.of(GetPreauthrequestsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Replication Policies in Oracle Cloud Infrastructure Object Storage service.
@@ -349,7 +349,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args) {
+    public static Output<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args) {
         return getReplicationPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -360,8 +360,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationPolicies:getReplicationPolicies", TypeShape.of(GetReplicationPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationPoliciesResult> getReplicationPolicies(GetReplicationPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getReplicationPolicies:getReplicationPolicies", TypeShape.of(GetReplicationPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Replication Policy resource in Oracle Cloud Infrastructure Object Storage service.
@@ -371,7 +371,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
+    public static Output<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
         return getReplicationPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -382,8 +382,8 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getReplicationPolicy:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Replication Sources in Oracle Cloud Infrastructure Object Storage service.
@@ -393,7 +393,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args) {
+    public static Output<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args) {
         return getReplicationSources(args, InvokeOptions.Empty);
     }
     /**
@@ -404,7 +404,7 @@ public final class ObjectStorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ObjectStorage/getReplicationSources:getReplicationSources", TypeShape.of(GetReplicationSourcesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReplicationSourcesResult> getReplicationSources(GetReplicationSourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ObjectStorage/getReplicationSources:getReplicationSources", TypeShape.of(GetReplicationSourcesResult.class), args, Utilities.withVersion(options));
     }
 }

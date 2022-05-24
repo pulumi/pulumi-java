@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.iam_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRoleArgs Empty = new GetRoleArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="roleId", required=true)
-    private String roleId;
+    private Output<String> roleId;
 
-    public String roleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -53,14 +53,22 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRoleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder roleId(String roleId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder roleId(Output<String> roleId) {
             $.roleId = roleId;
             return this;
+        }
+
+        public Builder roleId(String roleId) {
+            return roleId(Output.of(roleId));
         }
 
         public GetRoleArgs build() {

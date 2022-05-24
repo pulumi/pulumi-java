@@ -4,11 +4,11 @@
 package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.azurenative.recoveryservices.inputs.AADProperties;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return Name of the container.
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -36,14 +36,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="eTag")
-    private @Nullable String eTag;
+    private Output</* @Nullable */ String> eTag;
 
     /**
      * @return Optional ETag.
      * 
      */
-    public Optional<String> eTag() {
-        return Optional.ofNullable(this.eTag);
+    public Output</* @Nullable */ String> eTag() {
+        return this.eTag;
     }
 
     /**
@@ -51,13 +51,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name associated with the container.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -66,14 +66,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-    private @Nullable String location;
+    private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
      * 
      */
-    public Optional<String> location() {
-        return Optional.ofNullable(this.location);
+    public Output</* @Nullable */ String> location() {
+        return this.location;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-    private @Nullable AADProperties properties;
+    private Output</* @Nullable */ AADProperties> properties;
 
     /**
      * @return AADPropertiesResource properties
      * 
      */
-    public Optional<AADProperties> properties() {
-        return Optional.ofNullable(this.properties);
+    public Output</* @Nullable */ AADProperties> properties() {
+        return this.properties;
     }
 
     /**
@@ -96,13 +96,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="protectedItemName", required=true)
-    private String protectedItemName;
+    private Output<String> protectedItemName;
 
     /**
      * @return Name of the Protected Item.
      * 
      */
-    public String protectedItemName() {
+    public Output<String> protectedItemName() {
         return this.protectedItemName;
     }
 
@@ -111,13 +111,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="recoveryPointId", required=true)
-    private String recoveryPointId;
+    private Output<String> recoveryPointId;
 
     /**
      * @return Recovery Point Id
      * 
      */
-    public String recoveryPointId() {
+    public Output<String> recoveryPointId() {
         return this.recoveryPointId;
     }
 
@@ -126,13 +126,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -141,14 +141,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
-        return Optional.ofNullable(this.tags);
+    public Output</* @Nullable */ Map<String,String>> tags() {
+        return this.tags;
     }
 
     /**
@@ -156,13 +156,13 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -205,8 +205,29 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder containerName(String containerName) {
+        public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * @param containerName Name of the container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param eTag Optional ETag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eTag(Output</* @Nullable */ String> eTag) {
+            $.eTag = eTag;
             return this;
         }
 
@@ -217,7 +238,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder eTag(@Nullable String eTag) {
-            $.eTag = eTag;
+            return eTag(Output.of(eTag));
+        }
+
+        /**
+         * @param fabricName Fabric name associated with the container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(Output<String> fabricName) {
+            $.fabricName = fabricName;
             return this;
         }
 
@@ -228,7 +259,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder fabricName(String fabricName) {
-            $.fabricName = fabricName;
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output</* @Nullable */ String> location) {
+            $.location = location;
             return this;
         }
 
@@ -239,7 +280,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder location(@Nullable String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param properties AADPropertiesResource properties
+         * 
+         * @return builder
+         * 
+         */
+        public Builder properties(Output</* @Nullable */ AADProperties> properties) {
+            $.properties = properties;
             return this;
         }
 
@@ -250,7 +301,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder properties(@Nullable AADProperties properties) {
-            $.properties = properties;
+            return properties(Output.of(properties));
+        }
+
+        /**
+         * @param protectedItemName Name of the Protected Item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protectedItemName(Output<String> protectedItemName) {
+            $.protectedItemName = protectedItemName;
             return this;
         }
 
@@ -261,7 +322,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder protectedItemName(String protectedItemName) {
-            $.protectedItemName = protectedItemName;
+            return protectedItemName(Output.of(protectedItemName));
+        }
+
+        /**
+         * @param recoveryPointId Recovery Point Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recoveryPointId(Output<String> recoveryPointId) {
+            $.recoveryPointId = recoveryPointId;
             return this;
         }
 
@@ -272,7 +343,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder recoveryPointId(String recoveryPointId) {
-            $.recoveryPointId = recoveryPointId;
+            return recoveryPointId(Output.of(recoveryPointId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -283,7 +364,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -294,7 +385,17 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -305,8 +406,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetRecoveryPointAccessTokenArgs build() {

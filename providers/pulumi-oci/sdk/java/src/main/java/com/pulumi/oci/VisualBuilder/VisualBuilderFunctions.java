@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.VisualBuilder;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.oci.VisualBuilder.inputs.GetVbInstancesArgs;
 import com.pulumi.oci.VisualBuilder.outputs.GetVbInstanceApplicationsResult;
 import com.pulumi.oci.VisualBuilder.outputs.GetVbInstanceResult;
 import com.pulumi.oci.VisualBuilder.outputs.GetVbInstancesResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class VisualBuilderFunctions {
     /**
@@ -24,7 +24,7 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstanceResult> getVbInstance(GetVbInstanceArgs args) {
+    public static Output<GetVbInstanceResult> getVbInstance(GetVbInstanceArgs args) {
         return getVbInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -35,8 +35,8 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstanceResult> getVbInstance(GetVbInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:VisualBuilder/getVbInstance:getVbInstance", TypeShape.of(GetVbInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVbInstanceResult> getVbInstance(GetVbInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:VisualBuilder/getVbInstance:getVbInstance", TypeShape.of(GetVbInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of published and staged applications of a Visual Builder Instance in Oracle Cloud Infrastructure Visual Builder service.
@@ -46,7 +46,7 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstanceApplicationsResult> getVbInstanceApplications(GetVbInstanceApplicationsArgs args) {
+    public static Output<GetVbInstanceApplicationsResult> getVbInstanceApplications(GetVbInstanceApplicationsArgs args) {
         return getVbInstanceApplications(args, InvokeOptions.Empty);
     }
     /**
@@ -57,8 +57,8 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstanceApplicationsResult> getVbInstanceApplications(GetVbInstanceApplicationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:VisualBuilder/getVbInstanceApplications:getVbInstanceApplications", TypeShape.of(GetVbInstanceApplicationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVbInstanceApplicationsResult> getVbInstanceApplications(GetVbInstanceApplicationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:VisualBuilder/getVbInstanceApplications:getVbInstanceApplications", TypeShape.of(GetVbInstanceApplicationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Vb Instances in Oracle Cloud Infrastructure Visual Builder service.
@@ -68,7 +68,7 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstancesResult> getVbInstances(GetVbInstancesArgs args) {
+    public static Output<GetVbInstancesResult> getVbInstances(GetVbInstancesArgs args) {
         return getVbInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class VisualBuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVbInstancesResult> getVbInstances(GetVbInstancesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:VisualBuilder/getVbInstances:getVbInstances", TypeShape.of(GetVbInstancesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVbInstancesResult> getVbInstances(GetVbInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:VisualBuilder/getVbInstances:getVbInstances", TypeShape.of(GetVbInstancesResult.class), args, Utilities.withVersion(options));
     }
 }

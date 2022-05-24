@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.devtestlab.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Specify the $expand query. Example: &#39;properties($select=status)&#39;
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="labName", required=true)
-    private String labName;
+    private Output<String> labName;
 
     /**
      * @return The name of the lab.
      * 
      */
-    public String labName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -49,13 +49,13 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the schedule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -64,13 +64,13 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,13 +79,13 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="virtualMachineName", required=true)
-    private String virtualMachineName;
+    private Output<String> virtualMachineName;
 
     /**
      * @return The name of the virtual machine.
      * 
      */
-    public String virtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -123,8 +123,29 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=status)&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labName(Output<String> labName) {
+            $.labName = labName;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder labName(String labName) {
-            $.labName = labName;
+            return labName(Output.of(labName));
+        }
+
+        /**
+         * @param name The name of the schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualMachineName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualMachineName(Output<String> virtualMachineName) {
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder virtualMachineName(String virtualMachineName) {
-            $.virtualMachineName = virtualMachineName;
-            return this;
+            return virtualMachineName(Output.of(virtualMachineName));
         }
 
         public GetVirtualMachineScheduleArgs build() {

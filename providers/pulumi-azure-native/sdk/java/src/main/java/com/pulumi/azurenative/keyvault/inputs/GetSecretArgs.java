@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group to which the vault belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretName", required=true)
-    private String secretName;
+    private Output<String> secretName;
 
     /**
      * @return The name of the secret.
      * 
      */
-    public String secretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the vault belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param secretName The name of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretName(Output<String> secretName) {
+            $.secretName = secretName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder secretName(String secretName) {
-            $.secretName = secretName;
+            return secretName(Output.of(secretName));
+        }
+
+        /**
+         * @param vaultName The name of the vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetSecretArgs build() {

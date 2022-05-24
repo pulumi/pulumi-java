@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetTargetHttpsProxyArgs extends com.pulumi.resources.InvokeAr
     public static final GetTargetHttpsProxyArgs Empty = new GetTargetHttpsProxyArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="targetHttpsProxy", required=true)
-    private String targetHttpsProxy;
+    private Output<String> targetHttpsProxy;
 
-    public String targetHttpsProxy() {
+    public Output<String> targetHttpsProxy() {
         return this.targetHttpsProxy;
     }
 
@@ -53,14 +53,22 @@ public final class GetTargetHttpsProxyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetTargetHttpsProxyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder targetHttpsProxy(String targetHttpsProxy) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder targetHttpsProxy(Output<String> targetHttpsProxy) {
             $.targetHttpsProxy = targetHttpsProxy;
             return this;
+        }
+
+        public Builder targetHttpsProxy(String targetHttpsProxy) {
+            return targetHttpsProxy(Output.of(targetHttpsProxy));
         }
 
         public GetTargetHttpsProxyArgs build() {

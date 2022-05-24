@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSenderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="senderId", required=true)
-    private String senderId;
+    private Output<String> senderId;
 
     /**
      * @return The unique OCID of the sender.
      * 
      */
-    public String senderId() {
+    public Output<String> senderId() {
         return this.senderId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSenderArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder senderId(String senderId) {
+        public Builder senderId(Output<String> senderId) {
             $.senderId = senderId;
             return this;
+        }
+
+        /**
+         * @param senderId The unique OCID of the sender.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder senderId(String senderId) {
+            return senderId(Output.of(senderId));
         }
 
         public GetSenderArgs build() {

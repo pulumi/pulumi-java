@@ -18,10 +18,10 @@ import com.pulumi.azurenative.azurestack.outputs.GetProductsResult;
 import com.pulumi.azurenative.azurestack.outputs.GetRegistrationActivationKeyResult;
 import com.pulumi.azurenative.azurestack.outputs.GetRegistrationResult;
 import com.pulumi.azurenative.azurestack.outputs.ListProductDetailsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AzurestackFunctions {
     /**
@@ -29,7 +29,7 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetCustomerSubscriptionResult> getCustomerSubscription(GetCustomerSubscriptionArgs args) {
+    public static Output<GetCustomerSubscriptionResult> getCustomerSubscription(GetCustomerSubscriptionArgs args) {
         return getCustomerSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -37,15 +37,15 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetCustomerSubscriptionResult> getCustomerSubscription(GetCustomerSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getCustomerSubscription", TypeShape.of(GetCustomerSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomerSubscriptionResult> getCustomerSubscription(GetCustomerSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getCustomerSubscription", TypeShape.of(GetCustomerSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Linked Subscription information.
      * API Version: 2020-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetLinkedSubscriptionResult> getLinkedSubscription(GetLinkedSubscriptionArgs args) {
+    public static Output<GetLinkedSubscriptionResult> getLinkedSubscription(GetLinkedSubscriptionArgs args) {
         return getLinkedSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -53,15 +53,15 @@ public final class AzurestackFunctions {
      * API Version: 2020-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetLinkedSubscriptionResult> getLinkedSubscription(GetLinkedSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getLinkedSubscription", TypeShape.of(GetLinkedSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinkedSubscriptionResult> getLinkedSubscription(GetLinkedSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getLinkedSubscription", TypeShape.of(GetLinkedSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Product information.
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+    public static Output<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
     /**
@@ -69,15 +69,15 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Pageable list of products.
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetProductsResult> getProducts(GetProductsArgs args) {
+    public static Output<GetProductsResult> getProducts(GetProductsArgs args) {
         return getProducts(args, InvokeOptions.Empty);
     }
     /**
@@ -85,15 +85,15 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetProductsResult> getProducts(GetProductsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getProducts", TypeShape.of(GetProductsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductsResult> getProducts(GetProductsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getProducts", TypeShape.of(GetProductsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Registration information.
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args) {
+    public static Output<GetRegistrationResult> getRegistration(GetRegistrationArgs args) {
         return getRegistration(args, InvokeOptions.Empty);
     }
     /**
@@ -101,15 +101,15 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistrationResult> getRegistration(GetRegistrationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource containing the Azure Stack activation key.
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationActivationKeyResult> getRegistrationActivationKey(GetRegistrationActivationKeyArgs args) {
+    public static Output<GetRegistrationActivationKeyResult> getRegistrationActivationKey(GetRegistrationActivationKeyArgs args) {
         return getRegistrationActivationKey(args, InvokeOptions.Empty);
     }
     /**
@@ -117,15 +117,15 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationActivationKeyResult> getRegistrationActivationKey(GetRegistrationActivationKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:getRegistrationActivationKey", TypeShape.of(GetRegistrationActivationKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistrationActivationKeyResult> getRegistrationActivationKey(GetRegistrationActivationKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:getRegistrationActivationKey", TypeShape.of(GetRegistrationActivationKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Extended description about the product required for installing it into Azure Stack.
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<ListProductDetailsResult> listProductDetails(ListProductDetailsArgs args) {
+    public static Output<ListProductDetailsResult> listProductDetails(ListProductDetailsArgs args) {
         return listProductDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class AzurestackFunctions {
      * API Version: 2017-06-01.
      * 
      */
-    public static CompletableFuture<ListProductDetailsResult> listProductDetails(ListProductDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:azurestack:listProductDetails", TypeShape.of(ListProductDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListProductDetailsResult> listProductDetails(ListProductDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurestack:listProductDetails", TypeShape.of(ListProductDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

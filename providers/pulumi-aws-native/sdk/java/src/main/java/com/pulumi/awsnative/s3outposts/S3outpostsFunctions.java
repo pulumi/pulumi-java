@@ -12,66 +12,66 @@ import com.pulumi.awsnative.s3outposts.outputs.GetAccessPointResult;
 import com.pulumi.awsnative.s3outposts.outputs.GetBucketPolicyResult;
 import com.pulumi.awsnative.s3outposts.outputs.GetBucketResult;
 import com.pulumi.awsnative.s3outposts.outputs.GetEndpointResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class S3outpostsFunctions {
     /**
      * Resource Type Definition for AWS::S3Outposts::AccessPoint
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
+    public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
         return getAccessPoint(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::AccessPoint
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Bucket
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Bucket
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:s3outposts:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::BucketPolicy
      * 
      */
-    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
+    public static Output<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
         return getBucketPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::BucketPolicy
      * 
      */
-    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:s3outposts:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Endpoint
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Endpoint
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:s3outposts:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

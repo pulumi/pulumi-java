@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalAuthenticatedData")
-    private @Nullable String additionalAuthenticatedData;
+    private Output</* @Nullable */ String> additionalAuthenticatedData;
 
     /**
      * @return The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
      * 
      */
-    public Optional<String> additionalAuthenticatedData() {
-        return Optional.ofNullable(this.additionalAuthenticatedData);
+    public Output</* @Nullable */ String> additionalAuthenticatedData() {
+        return this.additionalAuthenticatedData;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ciphertext", required=true)
-    private String ciphertext;
+    private Output<String> ciphertext;
 
     /**
      * @return The ciphertext to be decrypted, encoded in base64
      * 
      */
-    public String ciphertext() {
+    public Output<String> ciphertext() {
         return this.ciphertext;
     }
 
@@ -51,7 +51,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cryptoKey", required=true)
-    private String cryptoKey;
+    private Output<String> cryptoKey;
 
     /**
      * @return The id of the CryptoKey that will be used to
@@ -59,7 +59,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
      * 
      */
-    public String cryptoKey() {
+    public Output<String> cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -95,8 +95,29 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(Output</* @Nullable */ String> additionalAuthenticatedData) {
             $.additionalAuthenticatedData = additionalAuthenticatedData;
+            return this;
+        }
+
+        /**
+         * @param additionalAuthenticatedData The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+            return additionalAuthenticatedData(Output.of(additionalAuthenticatedData));
+        }
+
+        /**
+         * @param ciphertext The ciphertext to be decrypted, encoded in base64
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciphertext(Output<String> ciphertext) {
+            $.ciphertext = ciphertext;
             return this;
         }
 
@@ -107,7 +128,19 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ciphertext(String ciphertext) {
-            $.ciphertext = ciphertext;
+            return ciphertext(Output.of(ciphertext));
+        }
+
+        /**
+         * @param cryptoKey The id of the CryptoKey that will be used to
+         * decrypt the provided ciphertext. This is represented by the format
+         * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoKey(Output<String> cryptoKey) {
+            $.cryptoKey = cryptoKey;
             return this;
         }
 
@@ -120,8 +153,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder cryptoKey(String cryptoKey) {
-            $.cryptoKey = cryptoKey;
-            return this;
+            return cryptoKey(Output.of(cryptoKey));
         }
 
         public GetKMSSecretArgs build() {

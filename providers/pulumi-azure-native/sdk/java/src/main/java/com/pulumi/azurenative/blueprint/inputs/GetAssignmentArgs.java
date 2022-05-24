@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.blueprint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assignmentName", required=true)
-    private String assignmentName;
+    private Output<String> assignmentName;
 
     /**
      * @return Name of the blueprint assignment.
      * 
      */
-    public String assignmentName() {
+    public Output<String> assignmentName() {
         return this.assignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceScope", required=true)
-    private String resourceScope;
+    private Output<String> resourceScope;
 
     /**
      * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
-    public String resourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -73,8 +74,29 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder assignmentName(String assignmentName) {
+        public Builder assignmentName(Output<String> assignmentName) {
             $.assignmentName = assignmentName;
+            return this;
+        }
+
+        /**
+         * @param assignmentName Name of the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assignmentName(String assignmentName) {
+            return assignmentName(Output.of(assignmentName));
+        }
+
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceScope(Output<String> resourceScope) {
+            $.resourceScope = resourceScope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceScope(String resourceScope) {
-            $.resourceScope = resourceScope;
-            return this;
+            return resourceScope(Output.of(resourceScope));
         }
 
         public GetAssignmentArgs build() {

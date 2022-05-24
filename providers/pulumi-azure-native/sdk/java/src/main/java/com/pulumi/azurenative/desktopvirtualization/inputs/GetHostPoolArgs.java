@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.desktopvirtualization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostPoolName", required=true)
-    private String hostPoolName;
+    private Output<String> hostPoolName;
 
     /**
      * @return The name of the host pool within the specified resource group
      * 
      */
-    public String hostPoolName() {
+    public Output<String> hostPoolName() {
         return this.hostPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostPoolName(String hostPoolName) {
+        public Builder hostPoolName(Output<String> hostPoolName) {
             $.hostPoolName = hostPoolName;
+            return this;
+        }
+
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostPoolName(String hostPoolName) {
+            return hostPoolName(Output.of(hostPoolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetHostPoolArgs build() {

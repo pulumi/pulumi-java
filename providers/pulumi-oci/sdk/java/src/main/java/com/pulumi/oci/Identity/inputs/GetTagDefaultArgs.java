@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTagDefaultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagDefaultId", required=true)
-    private String tagDefaultId;
+    private Output<String> tagDefaultId;
 
     /**
      * @return The OCID of the tag default.
      * 
      */
-    public String tagDefaultId() {
+    public Output<String> tagDefaultId() {
         return this.tagDefaultId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTagDefaultArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagDefaultId(String tagDefaultId) {
+        public Builder tagDefaultId(Output<String> tagDefaultId) {
             $.tagDefaultId = tagDefaultId;
             return this;
+        }
+
+        /**
+         * @param tagDefaultId The OCID of the tag default.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagDefaultId(String tagDefaultId) {
+            return tagDefaultId(Output.of(tagDefaultId));
         }
 
         public GetTagDefaultArgs build() {

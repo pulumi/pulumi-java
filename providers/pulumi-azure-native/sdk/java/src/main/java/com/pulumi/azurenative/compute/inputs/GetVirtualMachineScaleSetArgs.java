@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation. &#39;UserData&#39; retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-    private String vmScaleSetName;
+    private Output<String> vmScaleSetName;
 
     /**
      * @return The name of the VM scale set.
      * 
      */
-    public String vmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -91,8 +91,29 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;UserData&#39; retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
+            $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
          * 
          */
         public Builder vmScaleSetName(String vmScaleSetName) {
-            $.vmScaleSetName = vmScaleSetName;
-            return this;
+            return vmScaleSetName(Output.of(vmScaleSetName));
         }
 
         public GetVirtualMachineScaleSetArgs build() {

@@ -110,12 +110,12 @@ func (mod *modContext) typeString(
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-	// Influences how Map and Array types are generated.
+// Influences how Map and Array types are generated.
 	requireInitializers bool,
-	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
+// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
 	outerOptional bool,
-	// Called in the context of an overload without an `Output<T>` wrapper. We
-	// should act like we are inside an Output<T>.
+// Called in the context of an overload without an `Output<T>` wrapper. We
+// should act like we are inside an Output<T>.
 	inputlessOverload bool,
 ) TypeShape {
 	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, requireInitializers, inputlessOverload)
@@ -385,6 +385,9 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
+	// determines whether the properties should be wrapped in outputs.
+	// for example, PropType becomes Output<PropType> if PropType is not already an output
+	propertiesAsOutputs bool
 }
 
 type propJavadocOptions struct {
@@ -490,7 +493,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	return nil
 }
 
-func (pt *plainType) genInputType(ctx *classFileContext, propertiesAsOutputs bool) error {
+func (pt *plainType) genInputType(ctx *classFileContext) error {
 	dg := defaultsGen{pt.mod, ctx}
 
 	// Determine property types
@@ -508,7 +511,7 @@ func (pt *plainType) genInputType(ctx *classFileContext, propertiesAsOutputs boo
 			false,               // inputless overload
 		)
 
-		if isOutput, _ := propTypes[i].UnOutput(); !isOutput && propertiesAsOutputs {
+		if isOutput, _ := propTypes[i].UnOutput(); !isOutput && pt.propertiesAsOutputs {
 			// wrap the property as an output
 			propTypes[i] = propTypes[i].Output()
 		}
@@ -1564,12 +1567,9 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
-					args:                  true,
+					propertiesAsOutputs:   true,
 				}
-
-				// make sure the input properties are outputs
-				propertiesAsOutputs := true
-				return args.genInputType(ctx, propertiesAsOutputs)
+				return args.genInputType(ctx)
 			}); err != nil {
 				return err
 			}
@@ -1770,7 +1770,7 @@ func (mod *modContext) genType(
 		if !obj.IsInputShape() {
 			pt.baseClass = "com.pulumi.resources.InvokeArgs"
 		}
-		return pt.genInputType(ctx, false)
+		return pt.genInputType(ctx)
 	}
 
 	return pt.genOutputType(ctx)
@@ -2000,7 +2000,7 @@ func (mod *modContext) gen(fs fs) error {
 				properties:            r.InputProperties,
 				args:                  true,
 			}
-			return args.genInputType(ctx, false)
+			return args.genInputType(ctx)
 		}); err != nil {
 			return err
 		}
@@ -2017,7 +2017,7 @@ func (mod *modContext) gen(fs fs) error {
 					properties:            r.StateInputs.Properties,
 					args:                  true,
 				}
-				return state.genInputType(ctx, false)
+				return state.genInputType(ctx)
 			}); err != nil {
 				return err
 			}

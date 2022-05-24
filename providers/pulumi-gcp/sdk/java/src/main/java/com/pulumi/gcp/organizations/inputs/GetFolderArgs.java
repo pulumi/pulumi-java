@@ -3,11 +3,11 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="folder", required=true)
-    private String folder;
+    private Output<String> folder;
 
     /**
      * @return The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
      * 
      */
-    public String folder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -35,14 +35,14 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lookupOrganization")
-    private @Nullable Boolean lookupOrganization;
+    private Output</* @Nullable */ Boolean> lookupOrganization;
 
     /**
      * @return `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
      * 
      */
-    public Optional<Boolean> lookupOrganization() {
-        return Optional.ofNullable(this.lookupOrganization);
+    public Output</* @Nullable */ Boolean> lookupOrganization() {
+        return this.lookupOrganization;
     }
 
     private GetFolderArgs() {}
@@ -76,8 +76,29 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder folder(String folder) {
+        public Builder folder(Output<String> folder) {
             $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
+        }
+
+        /**
+         * @param lookupOrganization `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lookupOrganization(Output</* @Nullable */ Boolean> lookupOrganization) {
+            $.lookupOrganization = lookupOrganization;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
-            $.lookupOrganization = lookupOrganization;
-            return this;
+            return lookupOrganization(Output.of(lookupOrganization));
         }
 
         public GetFolderArgs build() {

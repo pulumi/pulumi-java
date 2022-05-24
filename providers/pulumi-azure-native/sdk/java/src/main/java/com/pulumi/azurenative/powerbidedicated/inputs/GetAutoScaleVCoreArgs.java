@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.powerbidedicated.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutoScaleVCoreArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAutoScaleVCoreArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vcoreName", required=true)
-    private String vcoreName;
+    private Output<String> vcoreName;
 
     /**
      * @return The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    public String vcoreName() {
+    public Output<String> vcoreName() {
         return this.vcoreName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAutoScaleVCoreArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vcoreName The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcoreName(Output<String> vcoreName) {
+            $.vcoreName = vcoreName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAutoScaleVCoreArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder vcoreName(String vcoreName) {
-            $.vcoreName = vcoreName;
-            return this;
+            return vcoreName(Output.of(vcoreName));
         }
 
         public GetAutoScaleVCoreArgs build() {

@@ -6,10 +6,10 @@ package com.pulumi.azure.waf;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.waf.inputs.GetFirewallPolicyArgs;
 import com.pulumi.azure.waf.outputs.GetFirewallPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class WafFunctions {
     /**
@@ -41,7 +41,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
         return getFirewallPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class WafFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:waf/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:waf/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

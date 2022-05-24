@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestErrorsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
     public static final GetIamWorkRequestErrorsArgs Empty = new GetIamWorkRequestErrorsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIamWorkRequestErrorsFilter> filters;
+    private Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters;
 
-    public Optional<List<GetIamWorkRequestErrorsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="iamWorkRequestId", required=true)
-    private String iamWorkRequestId;
+    private Output<String> iamWorkRequestId;
 
     /**
      * @return The OCID of the IAM work request.
      * 
      */
-    public String iamWorkRequestId() {
+    public Output<String> iamWorkRequestId() {
         return this.iamWorkRequestId;
     }
 
@@ -63,9 +63,13 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
             $ = new GetIamWorkRequestErrorsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIamWorkRequestErrorsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIamWorkRequestErrorsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIamWorkRequestErrorsFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder iamWorkRequestId(String iamWorkRequestId) {
+        public Builder iamWorkRequestId(Output<String> iamWorkRequestId) {
             $.iamWorkRequestId = iamWorkRequestId;
             return this;
+        }
+
+        /**
+         * @param iamWorkRequestId The OCID of the IAM work request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iamWorkRequestId(String iamWorkRequestId) {
+            return iamWorkRequestId(Output.of(iamWorkRequestId));
         }
 
         public GetIamWorkRequestErrorsArgs build() {

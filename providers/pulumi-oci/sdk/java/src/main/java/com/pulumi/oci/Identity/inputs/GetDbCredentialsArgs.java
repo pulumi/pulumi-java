@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetDbCredentialsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDbCredentialsArgs Empty = new GetDbCredentialsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetDbCredentialsFilter> filters;
+    private Output</* @Nullable */ List<GetDbCredentialsFilter>> filters;
 
-    public Optional<List<GetDbCredentialsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbCredentialsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -95,9 +95,13 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetDbCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetDbCredentialsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetDbCredentialsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDbCredentialsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbCredentialsFilter... filters) {
@@ -110,8 +114,29 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to only return resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -122,7 +147,17 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(Output<String> userId) {
+            $.userId = userId;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder userId(String userId) {
-            $.userId = userId;
-            return this;
+            return userId(Output.of(userId));
         }
 
         public GetDbCredentialsArgs build() {

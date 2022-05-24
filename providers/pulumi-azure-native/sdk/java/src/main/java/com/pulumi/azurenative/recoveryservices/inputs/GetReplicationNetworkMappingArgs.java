@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Primary fabric name.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="networkMappingName", required=true)
-    private String networkMappingName;
+    private Output<String> networkMappingName;
 
     /**
      * @return Network mapping name.
      * 
      */
-    public String networkMappingName() {
+    public Output<String> networkMappingName() {
         return this.networkMappingName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="networkName", required=true)
-    private String networkName;
+    private Output<String> networkName;
 
     /**
      * @return Primary network name.
      * 
      */
-    public String networkName() {
+    public Output<String> networkName() {
         return this.networkName;
     }
 
@@ -62,13 +63,13 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -121,8 +122,29 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Primary fabric name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param networkMappingName Network mapping name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkMappingName(Output<String> networkMappingName) {
+            $.networkMappingName = networkMappingName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
          * 
          */
         public Builder networkMappingName(String networkMappingName) {
-            $.networkMappingName = networkMappingName;
+            return networkMappingName(Output.of(networkMappingName));
+        }
+
+        /**
+         * @param networkName Primary network name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkName(Output<String> networkName) {
+            $.networkName = networkName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
          * 
          */
         public Builder networkName(String networkName) {
-            $.networkName = networkName;
+            return networkName(Output.of(networkName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetReplicationNetworkMappingArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetReplicationNetworkMappingArgs build() {

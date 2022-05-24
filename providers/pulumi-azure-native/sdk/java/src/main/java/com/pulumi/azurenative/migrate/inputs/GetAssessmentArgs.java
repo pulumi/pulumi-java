@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.migrate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assessmentName", required=true)
-    private String assessmentName;
+    private Output<String> assessmentName;
 
     /**
      * @return Unique name of an assessment within a project.
      * 
      */
-    public String assessmentName() {
+    public Output<String> assessmentName() {
         return this.assessmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return Unique name of a group within a project.
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-    private String projectName;
+    private Output<String> projectName;
 
     /**
      * @return Name of the Azure Migrate project.
      * 
      */
-    public String projectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -62,13 +63,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Azure Resource Group that project is part of.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder assessmentName(String assessmentName) {
+        public Builder assessmentName(Output<String> assessmentName) {
             $.assessmentName = assessmentName;
+            return this;
+        }
+
+        /**
+         * @param assessmentName Unique name of an assessment within a project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assessmentName(String assessmentName) {
+            return assessmentName(Output.of(assessmentName));
+        }
+
+        /**
+         * @param groupName Unique name of a group within a project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(Output<String> groupName) {
+            $.groupName = groupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder groupName(String groupName) {
-            $.groupName = groupName;
+            return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectName(Output<String> projectName) {
+            $.projectName = projectName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder projectName(String projectName) {
-            $.projectName = projectName;
+            return projectName(Output.of(projectName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAssessmentArgs build() {

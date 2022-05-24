@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.container.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @Import(name="digest")
-    private @Nullable String digest;
+    private Output</* @Nullable */ String> digest;
 
-    public Optional<String> digest() {
-        return Optional.ofNullable(this.digest);
+    public Output</* @Nullable */ String> digest() {
+        return this.digest;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     @Import(name="tag")
-    private @Nullable String tag;
+    private Output</* @Nullable */ String> tag;
 
-    public Optional<String> tag() {
-        return Optional.ofNullable(this.tag);
+    public Output</* @Nullable */ String> tag() {
+        return this.tag;
     }
 
     private GetRegistryImageArgs() {}
@@ -77,29 +77,49 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRegistryImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder digest(@Nullable String digest) {
+        public Builder digest(Output</* @Nullable */ String> digest) {
             $.digest = digest;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder digest(@Nullable String digest) {
+            return digest(Output.of(digest));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output</* @Nullable */ String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder tag(@Nullable String tag) {
+        public Builder region(@Nullable String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder tag(Output</* @Nullable */ String> tag) {
             $.tag = tag;
             return this;
+        }
+
+        public Builder tag(@Nullable String tag) {
+            return tag(Output.of(tag));
         }
 
         public GetRegistryImageArgs build() {

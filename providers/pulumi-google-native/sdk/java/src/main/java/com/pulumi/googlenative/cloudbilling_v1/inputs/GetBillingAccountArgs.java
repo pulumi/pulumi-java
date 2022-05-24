@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbilling_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
     public static final GetBillingAccountArgs Empty = new GetBillingAccountArgs();
 
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -43,9 +44,13 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
+        }
+
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
         }
 
         public GetBillingAccountArgs build() {

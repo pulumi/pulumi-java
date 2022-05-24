@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyName", required=true)
-    private String keyName;
+    private Output<String> keyName;
 
     /**
      * @return The name of the shared access policy.
      * 
      */
-    public String keyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -32,13 +33,13 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the IoT hub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the IoT hub.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder keyName(String keyName) {
+        public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * @param keyName The name of the shared access policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public ListIotHubResourceKeysForKeyNameArgs build() {

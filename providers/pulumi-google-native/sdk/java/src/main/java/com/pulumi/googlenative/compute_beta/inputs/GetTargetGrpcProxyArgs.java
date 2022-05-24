@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetTargetGrpcProxyArgs extends com.pulumi.resources.InvokeArg
     public static final GetTargetGrpcProxyArgs Empty = new GetTargetGrpcProxyArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="targetGrpcProxy", required=true)
-    private String targetGrpcProxy;
+    private Output<String> targetGrpcProxy;
 
-    public String targetGrpcProxy() {
+    public Output<String> targetGrpcProxy() {
         return this.targetGrpcProxy;
     }
 
@@ -53,14 +53,22 @@ public final class GetTargetGrpcProxyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetTargetGrpcProxyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder targetGrpcProxy(String targetGrpcProxy) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder targetGrpcProxy(Output<String> targetGrpcProxy) {
             $.targetGrpcProxy = targetGrpcProxy;
             return this;
+        }
+
+        public Builder targetGrpcProxy(String targetGrpcProxy) {
+            return targetGrpcProxy(Output.of(targetGrpcProxy));
         }
 
         public GetTargetGrpcProxyArgs build() {

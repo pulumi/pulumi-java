@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetUsersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalIdentifier")
-    private @Nullable String externalIdentifier;
+    private Output</* @Nullable */ String> externalIdentifier;
 
     /**
      * @return The id of a user in the identity provider.
      * 
      */
-    public Optional<String> externalIdentifier() {
-        return Optional.ofNullable(this.externalIdentifier);
+    public Output</* @Nullable */ String> externalIdentifier() {
+        return this.externalIdentifier;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetUsersFilter> filters;
+    private Output</* @Nullable */ List<GetUsersFilter>> filters;
 
-    public Optional<List<GetUsersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetUsersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityProviderId")
-    private @Nullable String identityProviderId;
+    private Output</* @Nullable */ String> identityProviderId;
 
     /**
      * @return The id of the identity provider.
      * 
      */
-    public Optional<String> identityProviderId() {
-        return Optional.ofNullable(this.identityProviderId);
+    public Output</* @Nullable */ String> identityProviderId() {
+        return this.identityProviderId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetUsersArgs() {}
@@ -133,8 +133,29 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param externalIdentifier The id of a user in the identity provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalIdentifier(Output</* @Nullable */ String> externalIdentifier) {
+            $.externalIdentifier = externalIdentifier;
             return this;
         }
 
@@ -145,13 +166,16 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder externalIdentifier(@Nullable String externalIdentifier) {
-            $.externalIdentifier = externalIdentifier;
+            return externalIdentifier(Output.of(externalIdentifier));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetUsersFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetUsersFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetUsersFilter... filters) {
@@ -164,8 +188,29 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder identityProviderId(@Nullable String identityProviderId) {
+        public Builder identityProviderId(Output</* @Nullable */ String> identityProviderId) {
             $.identityProviderId = identityProviderId;
+            return this;
+        }
+
+        /**
+         * @param identityProviderId The id of the identity provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityProviderId(@Nullable String identityProviderId) {
+            return identityProviderId(Output.of(identityProviderId));
+        }
+
+        /**
+         * @param name A filter to only return resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -176,7 +221,17 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetUsersArgs build() {

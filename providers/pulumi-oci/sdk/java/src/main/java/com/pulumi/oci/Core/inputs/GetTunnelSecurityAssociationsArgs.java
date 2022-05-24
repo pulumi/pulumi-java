@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetTunnelSecurityAssociationsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
     public static final GetTunnelSecurityAssociationsArgs Empty = new GetTunnelSecurityAssociationsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetTunnelSecurityAssociationsFilter> filters;
+    private Output</* @Nullable */ List<GetTunnelSecurityAssociationsFilter>> filters;
 
-    public Optional<List<GetTunnelSecurityAssociationsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetTunnelSecurityAssociationsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ipsecId", required=true)
-    private String ipsecId;
+    private Output<String> ipsecId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
      * 
      */
-    public String ipsecId() {
+    public Output<String> ipsecId() {
         return this.ipsecId;
     }
 
@@ -43,13 +43,13 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tunnelId", required=true)
-    private String tunnelId;
+    private Output<String> tunnelId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tunnel.
      * 
      */
-    public String tunnelId() {
+    public Output<String> tunnelId() {
         return this.tunnelId;
     }
 
@@ -79,9 +79,13 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
             $ = new GetTunnelSecurityAssociationsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetTunnelSecurityAssociationsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetTunnelSecurityAssociationsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetTunnelSecurityAssociationsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetTunnelSecurityAssociationsFilter... filters) {
@@ -94,8 +98,29 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder ipsecId(String ipsecId) {
+        public Builder ipsecId(Output<String> ipsecId) {
             $.ipsecId = ipsecId;
+            return this;
+        }
+
+        /**
+         * @param ipsecId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecId(String ipsecId) {
+            return ipsecId(Output.of(ipsecId));
+        }
+
+        /**
+         * @param tunnelId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the tunnel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelId(Output<String> tunnelId) {
+            $.tunnelId = tunnelId;
             return this;
         }
 
@@ -106,8 +131,7 @@ public final class GetTunnelSecurityAssociationsArgs extends com.pulumi.resource
          * 
          */
         public Builder tunnelId(String tunnelId) {
-            $.tunnelId = tunnelId;
-            return this;
+            return tunnelId(Output.of(tunnelId));
         }
 
         public GetTunnelSecurityAssociationsArgs build() {

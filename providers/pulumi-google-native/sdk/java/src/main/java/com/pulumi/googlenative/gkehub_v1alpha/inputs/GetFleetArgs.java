@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFleetArgs Empty = new GetFleetArgs();
 
     @Import(name="fleetId", required=true)
-    private String fleetId;
+    private Output<String> fleetId;
 
-    public String fleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetFleetArgs() {}
@@ -61,19 +61,31 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFleetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder fleetId(String fleetId) {
+        public Builder fleetId(Output<String> fleetId) {
             $.fleetId = fleetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder fleetId(String fleetId) {
+            return fleetId(Output.of(fleetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetFleetArgs build() {

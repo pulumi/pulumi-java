@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetPeerRegionForRemotePeeringsFilter;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class GetPeerRegionForRemotePeeringsArgs extends com.pulumi.resourc
     public static final GetPeerRegionForRemotePeeringsArgs Empty = new GetPeerRegionForRemotePeeringsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetPeerRegionForRemotePeeringsFilter> filters;
+    private Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters;
 
-    public Optional<List<GetPeerRegionForRemotePeeringsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters() {
+        return this.filters;
     }
 
     private GetPeerRegionForRemotePeeringsArgs() {}
@@ -46,9 +46,13 @@ public final class GetPeerRegionForRemotePeeringsArgs extends com.pulumi.resourc
             $ = new GetPeerRegionForRemotePeeringsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetPeerRegionForRemotePeeringsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetPeerRegionForRemotePeeringsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetPeerRegionForRemotePeeringsFilter... filters) {

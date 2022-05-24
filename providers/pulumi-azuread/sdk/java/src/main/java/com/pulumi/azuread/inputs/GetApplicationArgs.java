@@ -3,10 +3,10 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId")
-    private @Nullable String applicationId;
+    private Output</* @Nullable */ String> applicationId;
 
     /**
      * @return Specifies the Application ID (also called Client ID).
      * 
      */
-    public Optional<String> applicationId() {
-        return Optional.ofNullable(this.applicationId);
+    public Output</* @Nullable */ String> applicationId() {
+        return this.applicationId;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Specifies the display name of the application.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-    private @Nullable String objectId;
+    private Output</* @Nullable */ String> objectId;
 
     /**
      * @return Specifies the Object ID of the application.
      * 
      */
-    public Optional<String> objectId() {
-        return Optional.ofNullable(this.objectId);
+    public Output</* @Nullable */ String> objectId() {
+        return this.objectId;
     }
 
     private GetApplicationArgs() {}
@@ -91,8 +91,29 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(Output</* @Nullable */ String> applicationId) {
             $.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * @param applicationId Specifies the Application ID (also called Client ID).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(@Nullable String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        /**
+         * @param displayName Specifies the display name of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param objectId Specifies the Object ID of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(Output</* @Nullable */ String> objectId) {
+            $.objectId = objectId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder objectId(@Nullable String objectId) {
-            $.objectId = objectId;
-            return this;
+            return objectId(Output.of(objectId));
         }
 
         public GetApplicationArgs build() {

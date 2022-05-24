@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managedInstanceId", required=true)
-    private String managedInstanceId;
+    private Output<String> managedInstanceId;
 
     /**
      * @return OCID for the managed instance
      * 
      */
-    public String managedInstanceId() {
+    public Output<String> managedInstanceId() {
         return this.managedInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managedInstanceId(String managedInstanceId) {
+        public Builder managedInstanceId(Output<String> managedInstanceId) {
             $.managedInstanceId = managedInstanceId;
             return this;
+        }
+
+        /**
+         * @param managedInstanceId OCID for the managed instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceId(String managedInstanceId) {
+            return managedInstanceId(Output.of(managedInstanceId));
         }
 
         public GetManagedInstanceArgs build() {

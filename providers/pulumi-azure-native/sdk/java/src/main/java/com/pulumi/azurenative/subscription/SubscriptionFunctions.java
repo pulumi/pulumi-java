@@ -6,10 +6,10 @@ package com.pulumi.azurenative.subscription;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.subscription.inputs.GetAliasArgs;
 import com.pulumi.azurenative.subscription.outputs.GetAliasResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SubscriptionFunctions {
     /**
@@ -17,7 +17,7 @@ public final class SubscriptionFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args) {
         return getAlias(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class SubscriptionFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:subscription:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:subscription:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.analysisservices.inputs.GetServerDetailsArgs;
 import com.pulumi.azurenative.analysisservices.inputs.ListServerGatewayStatusArgs;
 import com.pulumi.azurenative.analysisservices.outputs.GetServerDetailsResult;
 import com.pulumi.azurenative.analysisservices.outputs.ListServerGatewayStatusResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AnalysisservicesFunctions {
     /**
@@ -19,7 +19,7 @@ public final class AnalysisservicesFunctions {
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args) {
+    public static Output<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args) {
         return getServerDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class AnalysisservicesFunctions {
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Status of gateway is live.
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args) {
+    public static Output<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args) {
         return listServerGatewayStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class AnalysisservicesFunctions {
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:analysisservices:listServerGatewayStatus", TypeShape.of(ListServerGatewayStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:analysisservices:listServerGatewayStatus", TypeShape.of(ListServerGatewayStatusResult.class), args, Utilities.withVersion(options));
     }
 }

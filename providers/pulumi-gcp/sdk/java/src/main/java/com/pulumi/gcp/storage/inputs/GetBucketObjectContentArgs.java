@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the containing bucket.
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,14 +34,14 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="content")
-    private @Nullable String content;
+    private Output</* @Nullable */ String> content;
 
     /**
      * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
      */
-    public Optional<String> content() {
-        return Optional.ofNullable(this.content);
+    public Output</* @Nullable */ String> content() {
+        return this.content;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the object.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -91,8 +91,29 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the containing bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param content (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder content(Output</* @Nullable */ String> content) {
+            $.content = content;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder content(@Nullable String content) {
-            $.content = content;
+            return content(Output.of(content));
+        }
+
+        /**
+         * @param name The name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetBucketObjectContentArgs build() {

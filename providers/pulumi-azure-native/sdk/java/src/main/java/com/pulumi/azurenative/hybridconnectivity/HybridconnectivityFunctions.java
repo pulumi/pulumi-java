@@ -10,10 +10,10 @@ import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointManagedProxy
 import com.pulumi.azurenative.hybridconnectivity.outputs.GetEndpointResult;
 import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointCredentialsResult;
 import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointManagedProxyDetailsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class HybridconnectivityFunctions {
     /**
@@ -21,7 +21,7 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -29,15 +29,15 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The endpoint access for the target resource.
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args) {
+    public static Output<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args) {
         return listEndpointCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -45,15 +45,15 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Managed Proxy
      * API Version: 2022-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args) {
+    public static Output<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args) {
         return listEndpointManagedProxyDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +61,7 @@ public final class HybridconnectivityFunctions {
      * API Version: 2022-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

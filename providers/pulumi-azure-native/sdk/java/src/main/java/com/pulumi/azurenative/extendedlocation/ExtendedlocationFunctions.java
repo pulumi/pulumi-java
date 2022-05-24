@@ -8,10 +8,10 @@ import com.pulumi.azurenative.extendedlocation.inputs.GetCustomLocationArgs;
 import com.pulumi.azurenative.extendedlocation.inputs.GetResourceSyncRuleArgs;
 import com.pulumi.azurenative.extendedlocation.outputs.GetCustomLocationResult;
 import com.pulumi.azurenative.extendedlocation.outputs.GetResourceSyncRuleResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ExtendedlocationFunctions {
     /**
@@ -19,7 +19,7 @@ public final class ExtendedlocationFunctions {
      * API Version: 2021-03-15-preview.
      * 
      */
-    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args) {
+    public static Output<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args) {
         return getCustomLocation(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class ExtendedlocationFunctions {
      * API Version: 2021-03-15-preview.
      * 
      */
-    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:extendedlocation:getCustomLocation", TypeShape.of(GetCustomLocationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:extendedlocation:getCustomLocation", TypeShape.of(GetCustomLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Sync Rules definition.
      * API Version: 2021-08-31-preview.
      * 
      */
-    public static CompletableFuture<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args) {
+    public static Output<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args) {
         return getResourceSyncRule(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class ExtendedlocationFunctions {
      * API Version: 2021-08-31-preview.
      * 
      */
-    public static CompletableFuture<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:extendedlocation:getResourceSyncRule", TypeShape.of(GetResourceSyncRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceSyncRuleResult> getResourceSyncRule(GetResourceSyncRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:extendedlocation:getResourceSyncRule", TypeShape.of(GetResourceSyncRuleResult.class), args, Utilities.withVersion(options));
     }
 }

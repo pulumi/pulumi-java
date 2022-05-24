@@ -5,10 +5,10 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.enums.KeyType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyType")
-    private @Nullable Either<String,KeyType> keyType;
+    private Output</* @Nullable */ Either<String,KeyType>> keyType;
 
     /**
      * @return The key type.
      * 
      */
-    public Optional<Either<String,KeyType>> keyType() {
-        return Optional.ofNullable(this.keyType);
+    public Output</* @Nullable */ Either<String,KeyType>> keyType() {
+        return this.keyType;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="notAfter")
-    private @Nullable String notAfter;
+    private Output</* @Nullable */ String> notAfter;
 
     /**
      * @return The expiry time.
      * 
      */
-    public Optional<String> notAfter() {
-        return Optional.ofNullable(this.notAfter);
+    public Output</* @Nullable */ String> notAfter() {
+        return this.notAfter;
     }
 
     /**
@@ -51,13 +51,13 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,13 +66,13 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workflowName", required=true)
-    private String workflowName;
+    private Output<String> workflowName;
 
     /**
      * @return The workflow name.
      * 
      */
-    public String workflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -109,9 +109,19 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
+        public Builder keyType(Output</* @Nullable */ Either<String,KeyType>> keyType) {
             $.keyType = keyType;
             return this;
+        }
+
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
+            return keyType(Output.of(keyType));
         }
 
         /**
@@ -140,8 +150,29 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder notAfter(@Nullable String notAfter) {
+        public Builder notAfter(Output</* @Nullable */ String> notAfter) {
             $.notAfter = notAfter;
+            return this;
+        }
+
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notAfter(@Nullable String notAfter) {
+            return notAfter(Output.of(notAfter));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -152,7 +183,17 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowName(Output<String> workflowName) {
+            $.workflowName = workflowName;
             return this;
         }
 
@@ -163,8 +204,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder workflowName(String workflowName) {
-            $.workflowName = workflowName;
-            return this;
+            return workflowName(Output.of(workflowName));
         }
 
         public ListWorkflowCallbackUrlArgs build() {

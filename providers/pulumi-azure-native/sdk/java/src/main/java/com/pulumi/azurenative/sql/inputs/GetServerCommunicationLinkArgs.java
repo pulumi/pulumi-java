@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="communicationLinkName", required=true)
-    private String communicationLinkName;
+    private Output<String> communicationLinkName;
 
     /**
      * @return The name of the server communication link.
      * 
      */
-    public String communicationLinkName() {
+    public Output<String> communicationLinkName() {
         return this.communicationLinkName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder communicationLinkName(String communicationLinkName) {
+        public Builder communicationLinkName(Output<String> communicationLinkName) {
             $.communicationLinkName = communicationLinkName;
+            return this;
+        }
+
+        /**
+         * @param communicationLinkName The name of the server communication link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communicationLinkName(String communicationLinkName) {
+            return communicationLinkName(Output.of(communicationLinkName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetServerCommunicationLinkArgs build() {

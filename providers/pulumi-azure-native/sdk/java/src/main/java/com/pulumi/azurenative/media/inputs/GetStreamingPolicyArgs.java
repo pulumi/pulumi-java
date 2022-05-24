@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="streamingPolicyName", required=true)
-    private String streamingPolicyName;
+    private Output<String> streamingPolicyName;
 
     /**
      * @return The Streaming Policy name.
      * 
      */
-    public String streamingPolicyName() {
+    public Output<String> streamingPolicyName() {
         return this.streamingPolicyName;
     }
 
@@ -89,8 +90,29 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param streamingPolicyName The Streaming Policy name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder streamingPolicyName(Output<String> streamingPolicyName) {
+            $.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder streamingPolicyName(String streamingPolicyName) {
-            $.streamingPolicyName = streamingPolicyName;
-            return this;
+            return streamingPolicyName(Output.of(streamingPolicyName));
         }
 
         public GetStreamingPolicyArgs build() {

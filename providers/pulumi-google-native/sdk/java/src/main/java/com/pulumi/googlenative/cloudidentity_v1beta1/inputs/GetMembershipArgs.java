@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
     @Import(name="membershipId", required=true)
-    private String membershipId;
+    private Output<String> membershipId;
 
-    public String membershipId() {
+    public Output<String> membershipId() {
         return this.membershipId;
     }
 
@@ -51,14 +52,22 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMembershipArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
-        public Builder membershipId(String membershipId) {
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        public Builder membershipId(Output<String> membershipId) {
             $.membershipId = membershipId;
             return this;
+        }
+
+        public Builder membershipId(String membershipId) {
+            return membershipId(Output.of(membershipId));
         }
 
         public GetMembershipArgs build() {

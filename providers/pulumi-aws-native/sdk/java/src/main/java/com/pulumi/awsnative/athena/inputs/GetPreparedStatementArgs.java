@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.athena.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="statementName", required=true)
-    private String statementName;
+    private Output<String> statementName;
 
     /**
      * @return The name of the prepared statement.
      * 
      */
-    public String statementName() {
+    public Output<String> statementName() {
         return this.statementName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="workGroup", required=true)
-    private String workGroup;
+    private Output<String> workGroup;
 
     /**
      * @return The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    public String workGroup() {
+    public Output<String> workGroup() {
         return this.workGroup;
     }
 
@@ -73,8 +74,29 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder statementName(String statementName) {
+        public Builder statementName(Output<String> statementName) {
             $.statementName = statementName;
+            return this;
+        }
+
+        /**
+         * @param statementName The name of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statementName(String statementName) {
+            return statementName(Output.of(statementName));
+        }
+
+        /**
+         * @param workGroup The name of the workgroup to which the prepared statement belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workGroup(Output<String> workGroup) {
+            $.workGroup = workGroup;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder workGroup(String workGroup) {
-            $.workGroup = workGroup;
-            return this;
+            return workGroup(Output.of(workGroup));
         }
 
         public GetPreparedStatementArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Nosql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of a table&#39;s compartment. When a table is identified by name, the compartmentId is often needed to provide context for interpreting the name.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableNameOrId", required=true)
-    private String tableNameOrId;
+    private Output<String> tableNameOrId;
 
     /**
      * @return A table name within the compartment, or a table OCID.
      * 
      */
-    public String tableNameOrId() {
+    public Output<String> tableNameOrId() {
         return this.tableNameOrId;
     }
 
@@ -73,8 +74,29 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of a table&#39;s compartment. When a table is identified by name, the compartmentId is often needed to provide context for interpreting the name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param tableNameOrId A table name within the compartment, or a table OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableNameOrId(Output<String> tableNameOrId) {
+            $.tableNameOrId = tableNameOrId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableNameOrId(String tableNameOrId) {
-            $.tableNameOrId = tableNameOrId;
-            return this;
+            return tableNameOrId(Output.of(tableNameOrId));
         }
 
         public GetTableArgs build() {

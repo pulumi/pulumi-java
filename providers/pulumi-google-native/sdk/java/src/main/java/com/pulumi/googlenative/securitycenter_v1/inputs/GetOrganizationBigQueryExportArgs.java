@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.securitycenter_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetOrganizationBigQueryExportArgs extends com.pulumi.resource
     public static final GetOrganizationBigQueryExportArgs Empty = new GetOrganizationBigQueryExportArgs();
 
     @Import(name="bigQueryExportId", required=true)
-    private String bigQueryExportId;
+    private Output<String> bigQueryExportId;
 
-    public String bigQueryExportId() {
+    public Output<String> bigQueryExportId() {
         return this.bigQueryExportId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetOrganizationBigQueryExportArgs extends com.pulumi.resource
             $ = new GetOrganizationBigQueryExportArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bigQueryExportId(String bigQueryExportId) {
+        public Builder bigQueryExportId(Output<String> bigQueryExportId) {
             $.bigQueryExportId = bigQueryExportId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder bigQueryExportId(String bigQueryExportId) {
+            return bigQueryExportId(Output.of(bigQueryExportId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetOrganizationBigQueryExportArgs build() {

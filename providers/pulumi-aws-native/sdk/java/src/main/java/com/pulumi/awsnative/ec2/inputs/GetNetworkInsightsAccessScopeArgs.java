@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNetworkInsightsAccessScopeArgs extends com.pulumi.resource
     public static final GetNetworkInsightsAccessScopeArgs Empty = new GetNetworkInsightsAccessScopeArgs();
 
     @Import(name="networkInsightsAccessScopeId", required=true)
-    private String networkInsightsAccessScopeId;
+    private Output<String> networkInsightsAccessScopeId;
 
-    public String networkInsightsAccessScopeId() {
+    public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
@@ -43,9 +44,13 @@ public final class GetNetworkInsightsAccessScopeArgs extends com.pulumi.resource
             $ = new GetNetworkInsightsAccessScopeArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
+        public Builder networkInsightsAccessScopeId(Output<String> networkInsightsAccessScopeId) {
             $.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
             return this;
+        }
+
+        public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
+            return networkInsightsAccessScopeId(Output.of(networkInsightsAccessScopeId));
         }
 
         public GetNetworkInsightsAccessScopeArgs build() {

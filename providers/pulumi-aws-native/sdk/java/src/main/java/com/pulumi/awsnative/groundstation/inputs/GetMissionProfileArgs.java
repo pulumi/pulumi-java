@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.groundstation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetMissionProfileArgs extends com.pulumi.resources.InvokeArgs
     public static final GetMissionProfileArgs Empty = new GetMissionProfileArgs();
 
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -51,14 +52,22 @@ public final class GetMissionProfileArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetMissionProfileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
-        public Builder id(String id) {
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetMissionProfileArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.subscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasName", required=true)
-    private String aliasName;
+    private Output<String> aliasName;
 
     /**
      * @return Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
      * 
      */
-    public String aliasName() {
+    public Output<String> aliasName() {
         return this.aliasName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder aliasName(String aliasName) {
+        public Builder aliasName(Output<String> aliasName) {
             $.aliasName = aliasName;
             return this;
+        }
+
+        /**
+         * @param aliasName Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aliasName(String aliasName) {
+            return aliasName(Output.of(aliasName));
         }
 
         public GetAliasArgs build() {

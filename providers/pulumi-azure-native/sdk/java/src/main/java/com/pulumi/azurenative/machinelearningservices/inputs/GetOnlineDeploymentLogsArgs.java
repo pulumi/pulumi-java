@@ -5,11 +5,11 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.azurenative.machinelearningservices.enums.ContainerType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerType")
-    private @Nullable Either<String,ContainerType> containerType;
+    private Output</* @Nullable */ Either<String,ContainerType>> containerType;
 
     /**
      * @return The type of container to retrieve logs from.
      * 
      */
-    public Optional<Either<String,ContainerType>> containerType() {
-        return Optional.ofNullable(this.containerType);
+    public Output</* @Nullable */ Either<String,ContainerType>> containerType() {
+        return this.containerType;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deploymentName", required=true)
-    private String deploymentName;
+    private Output<String> deploymentName;
 
     /**
      * @return The name and identifier for the endpoint.
      * 
      */
-    public String deploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName;
     }
 
@@ -52,13 +52,13 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return Inference endpoint name.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -67,13 +67,13 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,14 +82,14 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tail")
-    private @Nullable Integer tail;
+    private Output</* @Nullable */ Integer> tail;
 
     /**
      * @return The maximum number of lines to tail.
      * 
      */
-    public Optional<Integer> tail() {
-        return Optional.ofNullable(this.tail);
+    public Output</* @Nullable */ Integer> tail() {
+        return this.tail;
     }
 
     /**
@@ -97,13 +97,13 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -142,9 +142,19 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder containerType(@Nullable Either<String,ContainerType> containerType) {
+        public Builder containerType(Output</* @Nullable */ Either<String,ContainerType>> containerType) {
             $.containerType = containerType;
             return this;
+        }
+
+        /**
+         * @param containerType The type of container to retrieve logs from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerType(@Nullable Either<String,ContainerType> containerType) {
+            return containerType(Output.of(containerType));
         }
 
         /**
@@ -173,8 +183,29 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder deploymentName(String deploymentName) {
+        public Builder deploymentName(Output<String> deploymentName) {
             $.deploymentName = deploymentName;
+            return this;
+        }
+
+        /**
+         * @param deploymentName The name and identifier for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
+        }
+
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(Output<String> endpointName) {
+            $.endpointName = endpointName;
             return this;
         }
 
@@ -185,7 +216,17 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder endpointName(String endpointName) {
-            $.endpointName = endpointName;
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -196,7 +237,17 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tail The maximum number of lines to tail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tail(Output</* @Nullable */ Integer> tail) {
+            $.tail = tail;
             return this;
         }
 
@@ -207,7 +258,17 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder tail(@Nullable Integer tail) {
-            $.tail = tail;
+            return tail(Output.of(tail));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -218,8 +279,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetOnlineDeploymentLogsArgs build() {

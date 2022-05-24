@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.StackMonitoring;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.StackMonitoring.outputs.GetDiscoveryJobResult;
 import com.pulumi.oci.StackMonitoring.outputs.GetDiscoveryJobsResult;
 import com.pulumi.oci.StackMonitoring.outputs.GetMonitoredResourceResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class StackMonitoringFunctions {
     /**
@@ -26,7 +26,7 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args) {
+    public static Output<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args) {
         return getDiscoveryJob(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:StackMonitoring/getDiscoveryJob:getDiscoveryJob", TypeShape.of(GetDiscoveryJobResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobResult> getDiscoveryJob(GetDiscoveryJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:StackMonitoring/getDiscoveryJob:getDiscoveryJob", TypeShape.of(GetDiscoveryJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Discovery Job Logs in Oracle Cloud Infrastructure Stack Monitoring service.
@@ -48,7 +48,7 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobLogsResult> getDiscoveryJobLogs(GetDiscoveryJobLogsArgs args) {
+    public static Output<GetDiscoveryJobLogsResult> getDiscoveryJobLogs(GetDiscoveryJobLogsArgs args) {
         return getDiscoveryJobLogs(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobLogsResult> getDiscoveryJobLogs(GetDiscoveryJobLogsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:StackMonitoring/getDiscoveryJobLogs:getDiscoveryJobLogs", TypeShape.of(GetDiscoveryJobLogsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobLogsResult> getDiscoveryJobLogs(GetDiscoveryJobLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:StackMonitoring/getDiscoveryJobLogs:getDiscoveryJobLogs", TypeShape.of(GetDiscoveryJobLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Discovery Jobs in Oracle Cloud Infrastructure Stack Monitoring service.
@@ -70,7 +70,7 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResult> getDiscoveryJobs(GetDiscoveryJobsArgs args) {
+    public static Output<GetDiscoveryJobsResult> getDiscoveryJobs(GetDiscoveryJobsArgs args) {
         return getDiscoveryJobs(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDiscoveryJobsResult> getDiscoveryJobs(GetDiscoveryJobsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:StackMonitoring/getDiscoveryJobs:getDiscoveryJobs", TypeShape.of(GetDiscoveryJobsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiscoveryJobsResult> getDiscoveryJobs(GetDiscoveryJobsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:StackMonitoring/getDiscoveryJobs:getDiscoveryJobs", TypeShape.of(GetDiscoveryJobsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Monitored Resource resource in Oracle Cloud Infrastructure Stack Monitoring service.
@@ -92,7 +92,7 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitoredResourceResult> getMonitoredResource(GetMonitoredResourceArgs args) {
+    public static Output<GetMonitoredResourceResult> getMonitoredResource(GetMonitoredResourceArgs args) {
         return getMonitoredResource(args, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public final class StackMonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitoredResourceResult> getMonitoredResource(GetMonitoredResourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:StackMonitoring/getMonitoredResource:getMonitoredResource", TypeShape.of(GetMonitoredResourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitoredResourceResult> getMonitoredResource(GetMonitoredResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:StackMonitoring/getMonitoredResource:getMonitoredResource", TypeShape.of(GetMonitoredResourceResult.class), args, Utilities.withVersion(options));
     }
 }

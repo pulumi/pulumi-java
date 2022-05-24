@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,14 +35,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerEmail")
-    private @Nullable String consumerEmail;
+    private Output</* @Nullable */ String> consumerEmail;
 
     /**
      * @return Email of the user who created the synchronization
      * 
      */
-    public Optional<String> consumerEmail() {
-        return Optional.ofNullable(this.consumerEmail);
+    public Output</* @Nullable */ String> consumerEmail() {
+        return this.consumerEmail;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerName")
-    private @Nullable String consumerName;
+    private Output</* @Nullable */ String> consumerName;
 
     /**
      * @return Name of the user who created the synchronization
      * 
      */
-    public Optional<String> consumerName() {
-        return Optional.ofNullable(this.consumerName);
+    public Output</* @Nullable */ String> consumerName() {
+        return this.consumerName;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="consumerTenantName")
-    private @Nullable String consumerTenantName;
+    private Output</* @Nullable */ String> consumerTenantName;
 
     /**
      * @return Tenant name of the consumer who created the synchronization
      * 
      */
-    public Optional<String> consumerTenantName() {
-        return Optional.ofNullable(this.consumerTenantName);
+    public Output</* @Nullable */ String> consumerTenantName() {
+        return this.consumerTenantName;
     }
 
     /**
@@ -80,14 +80,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="durationMs")
-    private @Nullable Integer durationMs;
+    private Output</* @Nullable */ Integer> durationMs;
 
     /**
      * @return synchronization duration
      * 
      */
-    public Optional<Integer> durationMs() {
-        return Optional.ofNullable(this.durationMs);
+    public Output</* @Nullable */ Integer> durationMs() {
+        return this.durationMs;
     }
 
     /**
@@ -95,14 +95,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="endTime")
-    private @Nullable String endTime;
+    private Output</* @Nullable */ String> endTime;
 
     /**
      * @return End time of synchronization
      * 
      */
-    public Optional<String> endTime() {
-        return Optional.ofNullable(this.endTime);
+    public Output</* @Nullable */ String> endTime() {
+        return this.endTime;
     }
 
     /**
@@ -110,14 +110,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private Output</* @Nullable */ String> filter;
 
     /**
      * @return Filters the results using OData syntax.
      * 
      */
-    public Optional<String> filter() {
-        return Optional.ofNullable(this.filter);
+    public Output</* @Nullable */ String> filter() {
+        return this.filter;
     }
 
     /**
@@ -125,14 +125,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="message")
-    private @Nullable String message;
+    private Output</* @Nullable */ String> message;
 
     /**
      * @return message of synchronization
      * 
      */
-    public Optional<String> message() {
-        return Optional.ofNullable(this.message);
+    public Output</* @Nullable */ String> message() {
+        return this.message;
     }
 
     /**
@@ -140,14 +140,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="orderby")
-    private @Nullable String orderby;
+    private Output</* @Nullable */ String> orderby;
 
     /**
      * @return Sorts the results using OData syntax.
      * 
      */
-    public Optional<String> orderby() {
-        return Optional.ofNullable(this.orderby);
+    public Output</* @Nullable */ String> orderby() {
+        return this.orderby;
     }
 
     /**
@@ -155,13 +155,13 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -170,13 +170,13 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="shareName", required=true)
-    private String shareName;
+    private Output<String> shareName;
 
     /**
      * @return The name of the share.
      * 
      */
-    public String shareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -185,14 +185,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private Output</* @Nullable */ String> skipToken;
 
     /**
      * @return Continuation token
      * 
      */
-    public Optional<String> skipToken() {
-        return Optional.ofNullable(this.skipToken);
+    public Output</* @Nullable */ String> skipToken() {
+        return this.skipToken;
     }
 
     /**
@@ -200,14 +200,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="startTime")
-    private @Nullable String startTime;
+    private Output</* @Nullable */ String> startTime;
 
     /**
      * @return start time of synchronization
      * 
      */
-    public Optional<String> startTime() {
-        return Optional.ofNullable(this.startTime);
+    public Output</* @Nullable */ String> startTime() {
+        return this.startTime;
     }
 
     /**
@@ -215,14 +215,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return Raw Status
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     /**
@@ -230,14 +230,14 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="synchronizationId")
-    private @Nullable String synchronizationId;
+    private Output</* @Nullable */ String> synchronizationId;
 
     /**
      * @return Synchronization id
      * 
      */
-    public Optional<String> synchronizationId() {
-        return Optional.ofNullable(this.synchronizationId);
+    public Output</* @Nullable */ String> synchronizationId() {
+        return this.synchronizationId;
     }
 
     private ListShareSynchronizationDetailsArgs() {}
@@ -284,8 +284,29 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param consumerEmail Email of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerEmail(Output</* @Nullable */ String> consumerEmail) {
+            $.consumerEmail = consumerEmail;
             return this;
         }
 
@@ -296,7 +317,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder consumerEmail(@Nullable String consumerEmail) {
-            $.consumerEmail = consumerEmail;
+            return consumerEmail(Output.of(consumerEmail));
+        }
+
+        /**
+         * @param consumerName Name of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerName(Output</* @Nullable */ String> consumerName) {
+            $.consumerName = consumerName;
             return this;
         }
 
@@ -307,7 +338,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder consumerName(@Nullable String consumerName) {
-            $.consumerName = consumerName;
+            return consumerName(Output.of(consumerName));
+        }
+
+        /**
+         * @param consumerTenantName Tenant name of the consumer who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerTenantName(Output</* @Nullable */ String> consumerTenantName) {
+            $.consumerTenantName = consumerTenantName;
             return this;
         }
 
@@ -318,7 +359,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
-            $.consumerTenantName = consumerTenantName;
+            return consumerTenantName(Output.of(consumerTenantName));
+        }
+
+        /**
+         * @param durationMs synchronization duration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder durationMs(Output</* @Nullable */ Integer> durationMs) {
+            $.durationMs = durationMs;
             return this;
         }
 
@@ -329,7 +380,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder durationMs(@Nullable Integer durationMs) {
-            $.durationMs = durationMs;
+            return durationMs(Output.of(durationMs));
+        }
+
+        /**
+         * @param endTime End time of synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output</* @Nullable */ String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -340,7 +401,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder endTime(@Nullable String endTime) {
-            $.endTime = endTime;
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param filter Filters the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(Output</* @Nullable */ String> filter) {
+            $.filter = filter;
             return this;
         }
 
@@ -351,7 +422,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder filter(@Nullable String filter) {
-            $.filter = filter;
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param message message of synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder message(Output</* @Nullable */ String> message) {
+            $.message = message;
             return this;
         }
 
@@ -362,7 +443,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder message(@Nullable String message) {
-            $.message = message;
+            return message(Output.of(message));
+        }
+
+        /**
+         * @param orderby Sorts the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder orderby(Output</* @Nullable */ String> orderby) {
+            $.orderby = orderby;
             return this;
         }
 
@@ -373,7 +464,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder orderby(@Nullable String orderby) {
-            $.orderby = orderby;
+            return orderby(Output.of(orderby));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -384,7 +485,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareName(Output<String> shareName) {
+            $.shareName = shareName;
             return this;
         }
 
@@ -395,7 +506,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder shareName(String shareName) {
-            $.shareName = shareName;
+            return shareName(Output.of(shareName));
+        }
+
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -406,7 +527,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
+            return skipToken(Output.of(skipToken));
+        }
+
+        /**
+         * @param startTime start time of synchronization
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output</* @Nullable */ String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -417,7 +548,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder startTime(@Nullable String startTime) {
-            $.startTime = startTime;
+            return startTime(Output.of(startTime));
+        }
+
+        /**
+         * @param status Raw Status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -428,7 +569,17 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
+            return status(Output.of(status));
+        }
+
+        /**
+         * @param synchronizationId Synchronization id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder synchronizationId(Output</* @Nullable */ String> synchronizationId) {
+            $.synchronizationId = synchronizationId;
             return this;
         }
 
@@ -439,8 +590,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder synchronizationId(@Nullable String synchronizationId) {
-            $.synchronizationId = synchronizationId;
-            return this;
+            return synchronizationId(Output.of(synchronizationId));
         }
 
         public ListShareSynchronizationDetailsArgs build() {

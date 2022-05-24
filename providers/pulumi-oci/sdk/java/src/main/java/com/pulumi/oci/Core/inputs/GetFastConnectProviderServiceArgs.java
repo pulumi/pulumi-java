@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFastConnectProviderServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="providerServiceId", required=true)
-    private String providerServiceId;
+    private Output<String> providerServiceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
      * 
      */
-    public String providerServiceId() {
+    public Output<String> providerServiceId() {
         return this.providerServiceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetFastConnectProviderServiceArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder providerServiceId(String providerServiceId) {
+        public Builder providerServiceId(Output<String> providerServiceId) {
             $.providerServiceId = providerServiceId;
             return this;
+        }
+
+        /**
+         * @param providerServiceId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerServiceId(String providerServiceId) {
+            return providerServiceId(Output.of(providerServiceId));
         }
 
         public GetFastConnectProviderServiceArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetMaskingReportsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private Output</* @Nullable */ String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
-        return Optional.ofNullable(this.accessLevel);
+    public Output</* @Nullable */ String> accessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,21 +52,21 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMaskingReportsFilter> filters;
+    private Output</* @Nullable */ List<GetMaskingReportsFilter>> filters;
 
-    public Optional<List<GetMaskingReportsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetMaskingReportsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maskingPolicyId")
-    private @Nullable String maskingPolicyId;
+    private Output</* @Nullable */ String> maskingPolicyId;
 
     /**
      * @return A filter to return only the resources that match the specified masking policy OCID.
      * 
      */
-    public Optional<String> maskingPolicyId() {
-        return Optional.ofNullable(this.maskingPolicyId);
+    public Output</* @Nullable */ String> maskingPolicyId() {
+        return this.maskingPolicyId;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetId")
-    private @Nullable String targetId;
+    private Output</* @Nullable */ String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Optional<String> targetId() {
-        return Optional.ofNullable(this.targetId);
+    public Output</* @Nullable */ String> targetId() {
+        return this.targetId;
     }
 
     private GetMaskingReportsArgs() {}
@@ -134,8 +134,29 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(@Nullable String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -146,7 +167,17 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -157,13 +188,16 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetMaskingReportsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetMaskingReportsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetMaskingReportsFilter... filters) {
@@ -176,8 +210,29 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder maskingPolicyId(@Nullable String maskingPolicyId) {
+        public Builder maskingPolicyId(Output</* @Nullable */ String> maskingPolicyId) {
             $.maskingPolicyId = maskingPolicyId;
+            return this;
+        }
+
+        /**
+         * @param maskingPolicyId A filter to return only the resources that match the specified masking policy OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingPolicyId(@Nullable String maskingPolicyId) {
+            return maskingPolicyId(Output.of(maskingPolicyId));
+        }
+
+        /**
+         * @param targetId A filter to return only items related to a specific target OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(Output</* @Nullable */ String> targetId) {
+            $.targetId = targetId;
             return this;
         }
 
@@ -188,8 +243,7 @@ public final class GetMaskingReportsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder targetId(@Nullable String targetId) {
-            $.targetId = targetId;
-            return this;
+            return targetId(Output.of(targetId));
         }
 
         public GetMaskingReportsArgs build() {

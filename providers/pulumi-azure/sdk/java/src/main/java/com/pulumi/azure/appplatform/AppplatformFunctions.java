@@ -8,10 +8,10 @@ import com.pulumi.azure.appplatform.inputs.GetSpringCloudAppArgs;
 import com.pulumi.azure.appplatform.inputs.GetSpringCloudServiceArgs;
 import com.pulumi.azure.appplatform.outputs.GetSpringCloudAppResult;
 import com.pulumi.azure.appplatform.outputs.GetSpringCloudServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppplatformFunctions {
     /**
@@ -44,7 +44,7 @@ public final class AppplatformFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpringCloudAppResult> getSpringCloudApp(GetSpringCloudAppArgs args) {
+    public static Output<GetSpringCloudAppResult> getSpringCloudApp(GetSpringCloudAppArgs args) {
         return getSpringCloudApp(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class AppplatformFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpringCloudAppResult> getSpringCloudApp(GetSpringCloudAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appplatform/getSpringCloudApp:getSpringCloudApp", TypeShape.of(GetSpringCloudAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpringCloudAppResult> getSpringCloudApp(GetSpringCloudAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appplatform/getSpringCloudApp:getSpringCloudApp", TypeShape.of(GetSpringCloudAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Spring Cloud Service.
@@ -109,7 +109,7 @@ public final class AppplatformFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpringCloudServiceResult> getSpringCloudService(GetSpringCloudServiceArgs args) {
+    public static Output<GetSpringCloudServiceResult> getSpringCloudService(GetSpringCloudServiceArgs args) {
         return getSpringCloudService(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public final class AppplatformFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSpringCloudServiceResult> getSpringCloudService(GetSpringCloudServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appplatform/getSpringCloudService:getSpringCloudService", TypeShape.of(GetSpringCloudServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSpringCloudServiceResult> getSpringCloudService(GetSpringCloudServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appplatform/getSpringCloudService:getSpringCloudService", TypeShape.of(GetSpringCloudServiceResult.class), args, Utilities.withVersion(options));
     }
 }

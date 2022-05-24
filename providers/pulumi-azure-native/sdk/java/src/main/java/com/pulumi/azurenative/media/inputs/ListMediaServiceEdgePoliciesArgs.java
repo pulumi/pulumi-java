@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,14 +34,14 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deviceId")
-    private @Nullable String deviceId;
+    private Output</* @Nullable */ String> deviceId;
 
     /**
      * @return Unique identifier of the edge device.
      * 
      */
-    public Optional<String> deviceId() {
-        return Optional.ofNullable(this.deviceId);
+    public Output</* @Nullable */ String> deviceId() {
+        return this.deviceId;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param deviceId Unique identifier of the edge device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(Output</* @Nullable */ String> deviceId) {
+            $.deviceId = deviceId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
          * 
          */
         public Builder deviceId(@Nullable String deviceId) {
-            $.deviceId = deviceId;
+            return deviceId(Output.of(deviceId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListMediaServiceEdgePoliciesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.detective.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="graphArn", required=true)
-    private String graphArn;
+    private Output<String> graphArn;
 
     /**
      * @return The ARN of the graph to which the member account will be invited
      * 
      */
-    public String graphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
 
@@ -32,13 +33,13 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="memberId", required=true)
-    private String memberId;
+    private Output<String> memberId;
 
     /**
      * @return The AWS account ID to be invited to join the graph as a member
      * 
      */
-    public String memberId() {
+    public Output<String> memberId() {
         return this.memberId;
     }
 
@@ -73,8 +74,29 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder graphArn(String graphArn) {
+        public Builder graphArn(Output<String> graphArn) {
             $.graphArn = graphArn;
+            return this;
+        }
+
+        /**
+         * @param graphArn The ARN of the graph to which the member account will be invited
+         * 
+         * @return builder
+         * 
+         */
+        public Builder graphArn(String graphArn) {
+            return graphArn(Output.of(graphArn));
+        }
+
+        /**
+         * @param memberId The AWS account ID to be invited to join the graph as a member
+         * 
+         * @return builder
+         * 
+         */
+        public Builder memberId(Output<String> memberId) {
+            $.memberId = memberId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMemberInvitationArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder memberId(String memberId) {
-            $.memberId = memberId;
-            return this;
+            return memberId(Output.of(memberId));
         }
 
         public GetMemberInvitationArgs build() {

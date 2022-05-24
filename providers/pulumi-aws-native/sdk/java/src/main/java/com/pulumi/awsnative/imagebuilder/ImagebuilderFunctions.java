@@ -18,108 +18,108 @@ import com.pulumi.awsnative.imagebuilder.outputs.GetImagePipelineResult;
 import com.pulumi.awsnative.imagebuilder.outputs.GetImageRecipeResult;
 import com.pulumi.awsnative.imagebuilder.outputs.GetImageResult;
 import com.pulumi.awsnative.imagebuilder.outputs.GetInfrastructureConfigurationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ImagebuilderFunctions {
     /**
      * Resource schema for AWS::ImageBuilder::Component
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args) {
         return getComponent(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::Component
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::ContainerRecipe
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
         return getContainerRecipe(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::ContainerRecipe
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::DistributionConfiguration
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
         return getDistributionConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::DistributionConfiguration
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::Image
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::Image
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::ImagePipeline
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
         return getImagePipeline(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::ImagePipeline
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::ImageRecipe
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
         return getImageRecipe(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::ImageRecipe
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
         return getInfrastructureConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:imagebuilder:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

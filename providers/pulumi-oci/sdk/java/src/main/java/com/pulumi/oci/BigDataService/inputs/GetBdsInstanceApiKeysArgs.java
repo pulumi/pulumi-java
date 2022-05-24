@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.BigDataService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceApiKeysFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,28 +21,28 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bdsInstanceId", required=true)
-    private String bdsInstanceId;
+    private Output<String> bdsInstanceId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public String bdsInstanceId() {
+    public Output<String> bdsInstanceId() {
         return this.bdsInstanceId;
     }
 
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBdsInstanceApiKeysFilter> filters;
+    private Output</* @Nullable */ List<GetBdsInstanceApiKeysFilter>> filters;
 
-    public Optional<List<GetBdsInstanceApiKeysFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBdsInstanceApiKeysFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The current status of the API key.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -65,14 +65,14 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userId")
-    private @Nullable String userId;
+    private Output</* @Nullable */ String> userId;
 
     /**
      * @return The user OCID for which this API key was created.
      * 
      */
-    public Optional<String> userId() {
-        return Optional.ofNullable(this.userId);
+    public Output</* @Nullable */ String> userId() {
+        return this.userId;
     }
 
     private GetBdsInstanceApiKeysArgs() {}
@@ -109,19 +109,37 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder bdsInstanceId(String bdsInstanceId) {
+        public Builder bdsInstanceId(Output<String> bdsInstanceId) {
             $.bdsInstanceId = bdsInstanceId;
             return this;
         }
 
-        public Builder displayName(@Nullable String displayName) {
+        /**
+         * @param bdsInstanceId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bdsInstanceId(String bdsInstanceId) {
+            return bdsInstanceId(Output.of(bdsInstanceId));
+        }
+
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBdsInstanceApiKeysFilter> filters) {
+        public Builder displayName(@Nullable String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBdsInstanceApiKeysFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetBdsInstanceApiKeysFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBdsInstanceApiKeysFilter... filters) {
@@ -134,8 +152,29 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state The current status of the API key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param userId The user OCID for which this API key was created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(Output</* @Nullable */ String> userId) {
+            $.userId = userId;
             return this;
         }
 
@@ -146,8 +185,7 @@ public final class GetBdsInstanceApiKeysArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder userId(@Nullable String userId) {
-            $.userId = userId;
-            return this;
+            return userId(Output.of(userId));
         }
 
         public GetBdsInstanceApiKeysArgs build() {

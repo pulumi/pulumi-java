@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.documentdb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return Cosmos DB database account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="collectionName", required=true)
-    private String collectionName;
+    private Output<String> collectionName;
 
     /**
      * @return Cosmos DB collection name.
      * 
      */
-    public String collectionName() {
+    public Output<String> collectionName() {
         return this.collectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return Cosmos DB database name.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -62,13 +63,13 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param collectionName Cosmos DB collection name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder collectionName(Output<String> collectionName) {
+            $.collectionName = collectionName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
          * 
          */
         public Builder collectionName(String collectionName) {
-            $.collectionName = collectionName;
+            return collectionName(Output.of(collectionName));
+        }
+
+        /**
+         * @param databaseName Cosmos DB database name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(Output<String> databaseName) {
+            $.databaseName = databaseName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
          * 
          */
         public Builder databaseName(String databaseName) {
-            $.databaseName = databaseName;
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetMongoDBResourceMongoDBCollectionArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMongoDBResourceMongoDBCollectionArgs build() {

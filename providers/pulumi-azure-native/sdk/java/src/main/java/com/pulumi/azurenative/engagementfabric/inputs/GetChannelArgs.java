@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.engagementfabric.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return Account Name
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelName", required=true)
-    private String channelName;
+    private Output<String> channelName;
 
     /**
      * @return Channel Name
      * 
      */
-    public String channelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -47,13 +48,13 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource Group Name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName Account Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param channelName Channel Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder channelName(Output<String> channelName) {
+            $.channelName = channelName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder channelName(String channelName) {
-            $.channelName = channelName;
+            return channelName(Output.of(channelName));
+        }
+
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetChannelArgs build() {

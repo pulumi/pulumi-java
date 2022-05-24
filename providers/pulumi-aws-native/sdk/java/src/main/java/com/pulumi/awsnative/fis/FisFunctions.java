@@ -6,24 +6,24 @@ package com.pulumi.awsnative.fis;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.fis.inputs.GetExperimentTemplateArgs;
 import com.pulumi.awsnative.fis.outputs.GetExperimentTemplateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class FisFunctions {
     /**
      * Resource schema for AWS::FIS::ExperimentTemplate
      * 
      */
-    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args) {
+    public static Output<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args) {
         return getExperimentTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::FIS::ExperimentTemplate
      * 
      */
-    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

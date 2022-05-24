@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.role.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return Specifies the Name of either a built-in or custom Role Definition.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleDefinitionId")
-    private @Nullable String roleDefinitionId;
+    private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
      * @return Specifies the ID of the Role Definition as a UUID/GUID.
      * 
      */
-    public Optional<String> roleDefinitionId() {
-        return Optional.ofNullable(this.roleDefinitionId);
+    public Output</* @Nullable */ String> roleDefinitionId() {
+        return this.roleDefinitionId;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope")
-    private @Nullable String scope;
+    private Output</* @Nullable */ String> scope;
 
     /**
      * @return Specifies the Scope at which the Custom Role Definition exists.
      * 
      */
-    public Optional<String> scope() {
-        return Optional.ofNullable(this.scope);
+    public Output</* @Nullable */ String> scope() {
+        return this.scope;
     }
 
     private GetRoleDefinitionArgs() {}
@@ -91,8 +91,29 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the Name of either a built-in or custom Role Definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param roleDefinitionId Specifies the ID of the Role Definition as a UUID/GUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleDefinitionId(Output</* @Nullable */ String> roleDefinitionId) {
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            $.roleDefinitionId = roleDefinitionId;
+            return roleDefinitionId(Output.of(roleDefinitionId));
+        }
+
+        /**
+         * @param scope Specifies the Scope at which the Custom Role Definition exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output</* @Nullable */ String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder scope(@Nullable String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetRoleDefinitionArgs build() {

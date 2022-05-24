@@ -12,66 +12,66 @@ import com.pulumi.awsnative.iottwinmaker.outputs.GetComponentTypeResult;
 import com.pulumi.awsnative.iottwinmaker.outputs.GetEntityResult;
 import com.pulumi.awsnative.iottwinmaker.outputs.GetSceneResult;
 import com.pulumi.awsnative.iottwinmaker.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class IottwinmakerFunctions {
     /**
      * Resource schema for AWS::IoTTwinMaker::ComponentType
      * 
      */
-    public static CompletableFuture<GetComponentTypeResult> getComponentType(GetComponentTypeArgs args) {
+    public static Output<GetComponentTypeResult> getComponentType(GetComponentTypeArgs args) {
         return getComponentType(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::ComponentType
      * 
      */
-    public static CompletableFuture<GetComponentTypeResult> getComponentType(GetComponentTypeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:iottwinmaker:getComponentType", TypeShape.of(GetComponentTypeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetComponentTypeResult> getComponentType(GetComponentTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:iottwinmaker:getComponentType", TypeShape.of(GetComponentTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Entity
      * 
      */
-    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args) {
+    public static Output<GetEntityResult> getEntity(GetEntityArgs args) {
         return getEntity(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Entity
      * 
      */
-    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:iottwinmaker:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:iottwinmaker:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Scene
      * 
      */
-    public static CompletableFuture<GetSceneResult> getScene(GetSceneArgs args) {
+    public static Output<GetSceneResult> getScene(GetSceneArgs args) {
         return getScene(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Scene
      * 
      */
-    public static CompletableFuture<GetSceneResult> getScene(GetSceneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:iottwinmaker:getScene", TypeShape.of(GetSceneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSceneResult> getScene(GetSceneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:iottwinmaker:getScene", TypeShape.of(GetSceneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::IoTTwinMaker::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:iottwinmaker:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:iottwinmaker:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

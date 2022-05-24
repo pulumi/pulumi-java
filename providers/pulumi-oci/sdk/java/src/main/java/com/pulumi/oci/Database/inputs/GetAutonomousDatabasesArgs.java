@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetAutonomousDatabasesFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autonomousContainerDatabaseId")
-    private @Nullable String autonomousContainerDatabaseId;
+    private Output</* @Nullable */ String> autonomousContainerDatabaseId;
 
     /**
      * @return The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> autonomousContainerDatabaseId() {
-        return Optional.ofNullable(this.autonomousContainerDatabaseId);
+    public Output</* @Nullable */ String> autonomousContainerDatabaseId() {
+        return this.autonomousContainerDatabaseId;
     }
 
     /**
@@ -37,13 +37,13 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,14 +52,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dbVersion")
-    private @Nullable String dbVersion;
+    private Output</* @Nullable */ String> dbVersion;
 
     /**
      * @return A filter to return only autonomous database resources that match the specified dbVersion.
      * 
      */
-    public Optional<String> dbVersion() {
-        return Optional.ofNullable(this.dbVersion);
+    public Output</* @Nullable */ String> dbVersion() {
+        return this.dbVersion;
     }
 
     /**
@@ -67,14 +67,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dbWorkload")
-    private @Nullable String dbWorkload;
+    private Output</* @Nullable */ String> dbWorkload;
 
     /**
      * @return A filter to return only autonomous database resources that match the specified workload type.
      * 
      */
-    public Optional<String> dbWorkload() {
-        return Optional.ofNullable(this.dbWorkload);
+    public Output</* @Nullable */ String> dbWorkload() {
+        return this.dbWorkload;
     }
 
     /**
@@ -82,21 +82,21 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousDatabasesFilter> filters;
+    private Output</* @Nullable */ List<GetAutonomousDatabasesFilter>> filters;
 
-    public Optional<List<GetAutonomousDatabasesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAutonomousDatabasesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="infrastructureType")
-    private @Nullable String infrastructureType;
+    private Output</* @Nullable */ String> infrastructureType;
 
     /**
      * @return A filter to return only resources that match the given Infrastructure Type.
      * 
      */
-    public Optional<String> infrastructureType() {
-        return Optional.ofNullable(this.infrastructureType);
+    public Output</* @Nullable */ String> infrastructureType() {
+        return this.infrastructureType;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isDataGuardEnabled")
-    private @Nullable Boolean isDataGuardEnabled;
+    private Output</* @Nullable */ Boolean> isDataGuardEnabled;
 
     /**
      * @return A filter to return only resources that have Data Guard enabled.
      * 
      */
-    public Optional<Boolean> isDataGuardEnabled() {
-        return Optional.ofNullable(this.isDataGuardEnabled);
+    public Output</* @Nullable */ Boolean> isDataGuardEnabled() {
+        return this.isDataGuardEnabled;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isFreeTier")
-    private @Nullable Boolean isFreeTier;
+    private Output</* @Nullable */ Boolean> isFreeTier;
 
     /**
      * @return Filter on the value of the resource&#39;s &#39;isFreeTier&#39; property. A value of `true` returns only Always Free resources. A value of `false` excludes Always Free resources from the returned results. Omitting this parameter returns both Always Free and paid resources.
      * 
      */
-    public Optional<Boolean> isFreeTier() {
-        return Optional.ofNullable(this.isFreeTier);
+    public Output</* @Nullable */ Boolean> isFreeTier() {
+        return this.isFreeTier;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isRefreshableClone")
-    private @Nullable Boolean isRefreshableClone;
+    private Output</* @Nullable */ Boolean> isRefreshableClone;
 
     /**
      * @return Filter on the value of the resource&#39;s &#39;isRefreshableClone&#39; property. A value of `true` returns only refreshable clones. A value of `false` excludes refreshable clones from the returned results. Omitting this parameter returns both refreshable clones and databases that are not refreshable clones.
      * 
      */
-    public Optional<Boolean> isRefreshableClone() {
-        return Optional.ofNullable(this.isRefreshableClone);
+    public Output</* @Nullable */ Boolean> isRefreshableClone() {
+        return this.isRefreshableClone;
     }
 
     /**
@@ -164,14 +164,14 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetAutonomousDatabasesArgs() {}
@@ -214,8 +214,29 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder autonomousContainerDatabaseId(@Nullable String autonomousContainerDatabaseId) {
+        public Builder autonomousContainerDatabaseId(Output</* @Nullable */ String> autonomousContainerDatabaseId) {
             $.autonomousContainerDatabaseId = autonomousContainerDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param autonomousContainerDatabaseId The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousContainerDatabaseId(@Nullable String autonomousContainerDatabaseId) {
+            return autonomousContainerDatabaseId(Output.of(autonomousContainerDatabaseId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -226,7 +247,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbVersion A filter to return only autonomous database resources that match the specified dbVersion.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbVersion(Output</* @Nullable */ String> dbVersion) {
+            $.dbVersion = dbVersion;
             return this;
         }
 
@@ -237,7 +268,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder dbVersion(@Nullable String dbVersion) {
-            $.dbVersion = dbVersion;
+            return dbVersion(Output.of(dbVersion));
+        }
+
+        /**
+         * @param dbWorkload A filter to return only autonomous database resources that match the specified workload type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbWorkload(Output</* @Nullable */ String> dbWorkload) {
+            $.dbWorkload = dbWorkload;
             return this;
         }
 
@@ -248,7 +289,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder dbWorkload(@Nullable String dbWorkload) {
-            $.dbWorkload = dbWorkload;
+            return dbWorkload(Output.of(dbWorkload));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -259,13 +310,16 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAutonomousDatabasesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAutonomousDatabasesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAutonomousDatabasesFilter... filters) {
@@ -278,8 +332,29 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder infrastructureType(@Nullable String infrastructureType) {
+        public Builder infrastructureType(Output</* @Nullable */ String> infrastructureType) {
             $.infrastructureType = infrastructureType;
+            return this;
+        }
+
+        /**
+         * @param infrastructureType A filter to return only resources that match the given Infrastructure Type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder infrastructureType(@Nullable String infrastructureType) {
+            return infrastructureType(Output.of(infrastructureType));
+        }
+
+        /**
+         * @param isDataGuardEnabled A filter to return only resources that have Data Guard enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isDataGuardEnabled(Output</* @Nullable */ Boolean> isDataGuardEnabled) {
+            $.isDataGuardEnabled = isDataGuardEnabled;
             return this;
         }
 
@@ -290,7 +365,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder isDataGuardEnabled(@Nullable Boolean isDataGuardEnabled) {
-            $.isDataGuardEnabled = isDataGuardEnabled;
+            return isDataGuardEnabled(Output.of(isDataGuardEnabled));
+        }
+
+        /**
+         * @param isFreeTier Filter on the value of the resource&#39;s &#39;isFreeTier&#39; property. A value of `true` returns only Always Free resources. A value of `false` excludes Always Free resources from the returned results. Omitting this parameter returns both Always Free and paid resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isFreeTier(Output</* @Nullable */ Boolean> isFreeTier) {
+            $.isFreeTier = isFreeTier;
             return this;
         }
 
@@ -301,7 +386,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder isFreeTier(@Nullable Boolean isFreeTier) {
-            $.isFreeTier = isFreeTier;
+            return isFreeTier(Output.of(isFreeTier));
+        }
+
+        /**
+         * @param isRefreshableClone Filter on the value of the resource&#39;s &#39;isRefreshableClone&#39; property. A value of `true` returns only refreshable clones. A value of `false` excludes refreshable clones from the returned results. Omitting this parameter returns both refreshable clones and databases that are not refreshable clones.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isRefreshableClone(Output</* @Nullable */ Boolean> isRefreshableClone) {
+            $.isRefreshableClone = isRefreshableClone;
             return this;
         }
 
@@ -312,7 +407,17 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder isRefreshableClone(@Nullable Boolean isRefreshableClone) {
-            $.isRefreshableClone = isRefreshableClone;
+            return isRefreshableClone(Output.of(isRefreshableClone));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -323,8 +428,7 @@ public final class GetAutonomousDatabasesArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetAutonomousDatabasesArgs build() {

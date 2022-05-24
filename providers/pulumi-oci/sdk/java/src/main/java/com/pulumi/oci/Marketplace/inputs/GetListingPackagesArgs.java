@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Marketplace.inputs.GetListingPackagesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetListingPackagesFilter> filters;
+    private Output</* @Nullable */ List<GetListingPackagesFilter>> filters;
 
-    public Optional<List<GetListingPackagesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetListingPackagesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The unique identifier for the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -58,14 +58,14 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="packageType")
-    private @Nullable String packageType;
+    private Output</* @Nullable */ String> packageType;
 
     /**
      * @return A filter to return only packages that match the given package type exactly.
      * 
      */
-    public Optional<String> packageType() {
-        return Optional.ofNullable(this.packageType);
+    public Output</* @Nullable */ String> packageType() {
+        return this.packageType;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="packageVersion")
-    private @Nullable String packageVersion;
+    private Output</* @Nullable */ String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public Optional<String> packageVersion() {
-        return Optional.ofNullable(this.packageVersion);
+    public Output</* @Nullable */ String> packageVersion() {
+        return this.packageVersion;
     }
 
     private GetListingPackagesArgs() {}
@@ -117,14 +117,28 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListingPackagesFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetListingPackagesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetListingPackagesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetListingPackagesFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
+            return this;
+        }
+
+        /**
+         * @param listingId The unique identifier for the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param packageType A filter to return only packages that match the given package type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageType(Output</* @Nullable */ String> packageType) {
+            $.packageType = packageType;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder packageType(@Nullable String packageType) {
-            $.packageType = packageType;
+            return packageType(Output.of(packageType));
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(Output</* @Nullable */ String> packageVersion) {
+            $.packageVersion = packageVersion;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetListingPackagesArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder packageVersion(@Nullable String packageVersion) {
-            $.packageVersion = packageVersion;
-            return this;
+            return packageVersion(Output.of(packageVersion));
         }
 
         public GetListingPackagesArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.LoadBalancer.inputs.GetRuleSetsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetRuleSetsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRuleSetsArgs Empty = new GetRuleSetsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRuleSetsFilter> filters;
+    private Output</* @Nullable */ List<GetRuleSetsFilter>> filters;
 
-    public Optional<List<GetRuleSetsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRuleSetsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetRuleSetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the specified load balancer.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -63,9 +63,13 @@ public final class GetRuleSetsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRuleSetsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRuleSetsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetRuleSetsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRuleSetsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRuleSetsFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetRuleSetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the specified load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetRuleSetsArgs build() {

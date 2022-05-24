@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.LoadBalancer.inputs.GetSslCipherSuitesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetSslCipherSuitesArgs extends com.pulumi.resources.InvokeArg
     public static final GetSslCipherSuitesArgs Empty = new GetSslCipherSuitesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSslCipherSuitesFilter> filters;
+    private Output</* @Nullable */ List<GetSslCipherSuitesFilter>> filters;
 
-    public Optional<List<GetSslCipherSuitesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSslCipherSuitesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetSslCipherSuitesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="loadBalancerId")
-    private @Nullable String loadBalancerId;
+    private Output</* @Nullable */ String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated load balancer.
      * 
      */
-    public Optional<String> loadBalancerId() {
-        return Optional.ofNullable(this.loadBalancerId);
+    public Output</* @Nullable */ String> loadBalancerId() {
+        return this.loadBalancerId;
     }
 
     private GetSslCipherSuitesArgs() {}
@@ -63,9 +63,13 @@ public final class GetSslCipherSuitesArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSslCipherSuitesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSslCipherSuitesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetSslCipherSuitesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetSslCipherSuitesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSslCipherSuitesFilter... filters) {
@@ -78,9 +82,19 @@ public final class GetSslCipherSuitesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder loadBalancerId(@Nullable String loadBalancerId) {
+        public Builder loadBalancerId(Output</* @Nullable */ String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(@Nullable String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetSslCipherSuitesArgs build() {

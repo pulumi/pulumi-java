@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.datasync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskArn", required=true)
-    private String taskArn;
+    private Output<String> taskArn;
 
     /**
      * @return The ARN of the task.
      * 
      */
-    public String taskArn() {
+    public Output<String> taskArn() {
         return this.taskArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder taskArn(String taskArn) {
+        public Builder taskArn(Output<String> taskArn) {
             $.taskArn = taskArn;
             return this;
+        }
+
+        /**
+         * @param taskArn The ARN of the task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskArn(String taskArn) {
+            return taskArn(Output.of(taskArn));
         }
 
         public GetTaskArgs build() {

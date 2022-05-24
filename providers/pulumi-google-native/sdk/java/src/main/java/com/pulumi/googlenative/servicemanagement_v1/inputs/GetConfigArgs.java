@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="configId", required=true)
-    private String configId;
+    private Output<String> configId;
 
-    public String configId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetConfigArgs() {}
@@ -61,19 +61,31 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder configId(String configId) {
+        public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
-        public Builder serviceName(String serviceName) {
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
+        }
+
+        public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetConfigArgs build() {

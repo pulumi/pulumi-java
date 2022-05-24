@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appflow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectorProfileArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="connectorProfileName", required=true)
-    private String connectorProfileName;
+    private Output<String> connectorProfileName;
 
     /**
      * @return The maximum number of items to retrieve in a single batch.
      * 
      */
-    public String connectorProfileName() {
+    public Output<String> connectorProfileName() {
         return this.connectorProfileName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectorProfileArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder connectorProfileName(String connectorProfileName) {
+        public Builder connectorProfileName(Output<String> connectorProfileName) {
             $.connectorProfileName = connectorProfileName;
             return this;
+        }
+
+        /**
+         * @param connectorProfileName The maximum number of items to retrieve in a single batch.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectorProfileName(String connectorProfileName) {
+            return connectorProfileName(Output.of(connectorProfileName));
         }
 
         public GetConnectorProfileArgs build() {

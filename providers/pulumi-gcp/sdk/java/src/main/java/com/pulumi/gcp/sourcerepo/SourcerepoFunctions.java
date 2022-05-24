@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.sourcerepo;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.sourcerepo.inputs.GetRepositoryArgs;
 import com.pulumi.gcp.sourcerepo.outputs.GetRepositoryResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class SourcerepoFunctions {
     /**
@@ -42,7 +42,7 @@ public final class SourcerepoFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class SourcerepoFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.autoscaling.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetWarmPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWarmPoolArgs Empty = new GetWarmPoolArgs();
 
     @Import(name="autoScalingGroupName", required=true)
-    private String autoScalingGroupName;
+    private Output<String> autoScalingGroupName;
 
-    public String autoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
@@ -43,9 +44,13 @@ public final class GetWarmPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWarmPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder autoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(Output<String> autoScalingGroupName) {
             $.autoScalingGroupName = autoScalingGroupName;
             return this;
+        }
+
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
+            return autoScalingGroupName(Output.of(autoScalingGroupName));
         }
 
         public GetWarmPoolArgs build() {

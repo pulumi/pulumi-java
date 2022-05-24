@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.codeguruprofiler.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProfilingGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="profilingGroupName", required=true)
-    private String profilingGroupName;
+    private Output<String> profilingGroupName;
 
     /**
      * @return The name of the profiling group.
      * 
      */
-    public String profilingGroupName() {
+    public Output<String> profilingGroupName() {
         return this.profilingGroupName;
     }
 
@@ -57,9 +58,19 @@ public final class GetProfilingGroupArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder profilingGroupName(String profilingGroupName) {
+        public Builder profilingGroupName(Output<String> profilingGroupName) {
             $.profilingGroupName = profilingGroupName;
             return this;
+        }
+
+        /**
+         * @param profilingGroupName The name of the profiling group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profilingGroupName(String profilingGroupName) {
+            return profilingGroupName(Output.of(profilingGroupName));
         }
 
         public GetProfilingGroupArgs build() {

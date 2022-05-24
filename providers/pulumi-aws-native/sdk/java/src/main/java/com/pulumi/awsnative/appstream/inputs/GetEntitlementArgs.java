@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appstream.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="stackName", required=true)
-    private String stackName;
+    private Output<String> stackName;
 
-    public String stackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -51,14 +52,22 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder stackName(String stackName) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder stackName(Output<String> stackName) {
             $.stackName = stackName;
             return this;
+        }
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
         }
 
         public GetEntitlementArgs build() {

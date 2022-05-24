@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainId", required=true)
-    private String domainId;
+    private Output<String> domainId;
 
     /**
      * @return The ID of the associated Domain.
      * 
      */
-    public String domainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-    private String userProfileName;
+    private Output<String> userProfileName;
 
     /**
      * @return A name for the UserProfile.
      * 
      */
-    public String userProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName;
     }
 
@@ -73,8 +74,29 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainId(String domainId) {
+        public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * @param domainId The ID of the associated Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
+        }
+
+        /**
+         * @param userProfileName A name for the UserProfile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userProfileName(Output<String> userProfileName) {
+            $.userProfileName = userProfileName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetUserProfileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder userProfileName(String userProfileName) {
-            $.userProfileName = userProfileName;
-            return this;
+            return userProfileName(Output.of(userProfileName));
         }
 
         public GetUserProfileArgs build() {

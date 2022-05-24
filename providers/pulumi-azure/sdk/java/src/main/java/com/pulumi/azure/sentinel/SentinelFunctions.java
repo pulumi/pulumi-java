@@ -8,10 +8,10 @@ import com.pulumi.azure.sentinel.inputs.GetAlertRuleArgs;
 import com.pulumi.azure.sentinel.inputs.GetAlertRuleTemplateArgs;
 import com.pulumi.azure.sentinel.outputs.GetAlertRuleResult;
 import com.pulumi.azure.sentinel.outputs.GetAlertRuleTemplateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SentinelFunctions {
     /**
@@ -48,7 +48,7 @@ public final class SentinelFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
         return getAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -85,8 +85,8 @@ public final class SentinelFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:sentinel/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:sentinel/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Sentinel Alert Rule Template.
@@ -117,7 +117,7 @@ public final class SentinelFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAlertRuleTemplateResult> getAlertRuleTemplate(GetAlertRuleTemplateArgs args) {
+    public static Output<GetAlertRuleTemplateResult> getAlertRuleTemplate(GetAlertRuleTemplateArgs args) {
         return getAlertRuleTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -149,7 +149,7 @@ public final class SentinelFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAlertRuleTemplateResult> getAlertRuleTemplate(GetAlertRuleTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:sentinel/getAlertRuleTemplate:getAlertRuleTemplate", TypeShape.of(GetAlertRuleTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertRuleTemplateResult> getAlertRuleTemplate(GetAlertRuleTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:sentinel/getAlertRuleTemplate:getAlertRuleTemplate", TypeShape.of(GetAlertRuleTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

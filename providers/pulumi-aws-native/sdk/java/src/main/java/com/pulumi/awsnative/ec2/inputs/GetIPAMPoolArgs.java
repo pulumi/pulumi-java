@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIPAMPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipamPoolId", required=true)
-    private String ipamPoolId;
+    private Output<String> ipamPoolId;
 
     /**
      * @return Id of the IPAM Pool.
      * 
      */
-    public String ipamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -57,9 +58,19 @@ public final class GetIPAMPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(Output<String> ipamPoolId) {
             $.ipamPoolId = ipamPoolId;
             return this;
+        }
+
+        /**
+         * @param ipamPoolId Id of the IPAM Pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipamPoolId(String ipamPoolId) {
+            return ipamPoolId(Output.of(ipamPoolId));
         }
 
         public GetIPAMPoolArgs build() {

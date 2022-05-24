@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetGroupArn", required=true)
-    private String targetGroupArn;
+    private Output<String> targetGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    public String targetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder targetGroupArn(String targetGroupArn) {
+        public Builder targetGroupArn(Output<String> targetGroupArn) {
             $.targetGroupArn = targetGroupArn;
             return this;
+        }
+
+        /**
+         * @param targetGroupArn The Amazon Resource Name (ARN) representing the target group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetGroupArn(String targetGroupArn) {
+            return targetGroupArn(Output.of(targetGroupArn));
         }
 
         public GetDBProxyTargetGroupArgs build() {

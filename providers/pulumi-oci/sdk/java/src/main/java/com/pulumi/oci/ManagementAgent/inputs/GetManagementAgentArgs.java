@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementAgentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managementAgentId", required=true)
-    private String managementAgentId;
+    private Output<String> managementAgentId;
 
     /**
      * @return Unique Management Agent identifier
      * 
      */
-    public String managementAgentId() {
+    public Output<String> managementAgentId() {
         return this.managementAgentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagementAgentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managementAgentId(String managementAgentId) {
+        public Builder managementAgentId(Output<String> managementAgentId) {
             $.managementAgentId = managementAgentId;
             return this;
+        }
+
+        /**
+         * @param managementAgentId Unique Management Agent identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementAgentId(String managementAgentId) {
+            return managementAgentId(Output.of(managementAgentId));
         }
 
         public GetManagementAgentArgs build() {

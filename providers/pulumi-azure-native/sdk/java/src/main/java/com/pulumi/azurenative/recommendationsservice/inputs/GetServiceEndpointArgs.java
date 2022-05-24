@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recommendationsservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the RecommendationsService Account resource.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceEndpointName", required=true)
-    private String serviceEndpointName;
+    private Output<String> serviceEndpointName;
 
     /**
      * @return The name of the ServiceEndpoint resource.
      * 
      */
-    public String serviceEndpointName() {
+    public Output<String> serviceEndpointName() {
         return this.serviceEndpointName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the RecommendationsService Account resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceEndpointName The name of the ServiceEndpoint resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceEndpointName(Output<String> serviceEndpointName) {
+            $.serviceEndpointName = serviceEndpointName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServiceEndpointArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder serviceEndpointName(String serviceEndpointName) {
-            $.serviceEndpointName = serviceEndpointName;
-            return this;
+            return serviceEndpointName(Output.of(serviceEndpointName));
         }
 
         public GetServiceEndpointArgs build() {

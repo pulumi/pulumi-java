@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backendName", required=true)
-    private String backendName;
+    private Output<String> backendName;
 
     /**
      * @return The name of the backend server to retrieve health status for. If the backend was created with an explicitly specified name, that name should be used here. If the backend was created without explicitly specifying the name, but was created using ipAddress, this is specified as &lt;ipAddress&gt;:&lt;port&gt;. If the backend was created without explicitly specifying the name, but was created using targetId, this is specified as &lt;targetId&gt;:&lt;port&gt;.  Example: `10.0.0.3:8080` or `ocid1.privateip..oc1.&lt;var&gt;&amp;lt;unique_ID&amp;gt;&lt;/var&gt;:8080`
      * 
      */
-    public String backendName() {
+    public Output<String> backendName() {
         return this.backendName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backendSetName", required=true)
-    private String backendSetName;
+    private Output<String> backendSetName;
 
     /**
      * @return The name of the backend set associated with the backend server for which to retrieve the health status.  Example: `example_backend_set`
      * 
      */
-    public String backendSetName() {
+    public Output<String> backendSetName() {
         return this.backendSetName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkLoadBalancerId", required=true)
-    private String networkLoadBalancerId;
+    private Output<String> networkLoadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
      * 
      */
-    public String networkLoadBalancerId() {
+    public Output<String> networkLoadBalancerId() {
         return this.networkLoadBalancerId;
     }
 
@@ -89,8 +90,29 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder backendName(String backendName) {
+        public Builder backendName(Output<String> backendName) {
             $.backendName = backendName;
+            return this;
+        }
+
+        /**
+         * @param backendName The name of the backend server to retrieve health status for. If the backend was created with an explicitly specified name, that name should be used here. If the backend was created without explicitly specifying the name, but was created using ipAddress, this is specified as &lt;ipAddress&gt;:&lt;port&gt;. If the backend was created without explicitly specifying the name, but was created using targetId, this is specified as &lt;targetId&gt;:&lt;port&gt;.  Example: `10.0.0.3:8080` or `ocid1.privateip..oc1.&lt;var&gt;&amp;lt;unique_ID&amp;gt;&lt;/var&gt;:8080`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendName(String backendName) {
+            return backendName(Output.of(backendName));
+        }
+
+        /**
+         * @param backendSetName The name of the backend set associated with the backend server for which to retrieve the health status.  Example: `example_backend_set`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendSetName(Output<String> backendSetName) {
+            $.backendSetName = backendSetName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder backendSetName(String backendSetName) {
-            $.backendSetName = backendSetName;
+            return backendSetName(Output.of(backendSetName));
+        }
+
+        /**
+         * @param networkLoadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkLoadBalancerId(Output<String> networkLoadBalancerId) {
+            $.networkLoadBalancerId = networkLoadBalancerId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetBackendHealthArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder networkLoadBalancerId(String networkLoadBalancerId) {
-            $.networkLoadBalancerId = networkLoadBalancerId;
-            return this;
+            return networkLoadBalancerId(Output.of(networkLoadBalancerId));
         }
 
         public GetBackendHealthArgs build() {

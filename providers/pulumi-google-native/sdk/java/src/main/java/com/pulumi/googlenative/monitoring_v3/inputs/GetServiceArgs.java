@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
     @Import(name="v3Id", required=true)
-    private String v3Id;
+    private Output<String> v3Id;
 
-    public String v3Id() {
+    public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
-    private String v3Id1;
+    private Output<String> v3Id1;
 
-    public String v3Id1() {
+    public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
@@ -59,19 +60,31 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
-        public Builder v3Id(String v3Id) {
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
+        }
+
+        public Builder v3Id(Output<String> v3Id) {
             $.v3Id = v3Id;
             return this;
         }
 
-        public Builder v3Id1(String v3Id1) {
+        public Builder v3Id(String v3Id) {
+            return v3Id(Output.of(v3Id));
+        }
+
+        public Builder v3Id1(Output<String> v3Id1) {
             $.v3Id1 = v3Id1;
             return this;
+        }
+
+        public Builder v3Id1(String v3Id1) {
+            return v3Id1(Output.of(v3Id1));
         }
 
         public GetServiceArgs build() {

@@ -40,10 +40,10 @@ import com.pulumi.azurenative.kusto.outputs.GetScriptResult;
 import com.pulumi.azurenative.kusto.outputs.ListClusterFollowerDatabasesResult;
 import com.pulumi.azurenative.kusto.outputs.ListClusterLanguageExtensionsResult;
 import com.pulumi.azurenative.kusto.outputs.ListDatabasePrincipalsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KustoFunctions {
     /**
@@ -51,7 +51,7 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args) {
+    public static Output<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args) {
         return getAttachedDatabaseConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -59,15 +59,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getAttachedDatabaseConfiguration", TypeShape.of(GetAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getAttachedDatabaseConfiguration", TypeShape.of(GetAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a Kusto cluster.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -75,15 +75,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a cluster principal assignment.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args) {
+    public static Output<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args) {
         return getClusterPrincipalAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -91,8 +91,8 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getClusterPrincipalAssignment", TypeShape.of(GetClusterPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getClusterPrincipalAssignment", TypeShape.of(GetClusterPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an data connection.
@@ -103,7 +103,7 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
+    public static Output<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
         return getDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -115,8 +115,8 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a Kusto database.
@@ -127,7 +127,7 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -139,15 +139,15 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a database principal assignment.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
+    public static Output<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
         return getDatabasePrincipalAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -155,15 +155,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an Event Grid data connection.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
+    public static Output<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
         return getEventGridDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -171,15 +171,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an event hub connection.
      * API Version: 2018-09-07-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args) {
+    public static Output<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args) {
         return getEventHubConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -187,15 +187,15 @@ public final class KustoFunctions {
      * API Version: 2018-09-07-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubConnection", TypeShape.of(GetEventHubConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getEventHubConnection", TypeShape.of(GetEventHubConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an event hub data connection.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
+    public static Output<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
         return getEventHubDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -203,15 +203,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an iot hub data connection.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
+    public static Output<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
         return getIotHubDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -219,15 +219,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a managed private endpoint.
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args) {
+    public static Output<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args) {
         return getManagedPrivateEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -235,15 +235,15 @@ public final class KustoFunctions {
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A private endpoint connection
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -251,15 +251,15 @@ public final class KustoFunctions {
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a read only following database.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args) {
+    public static Output<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args) {
         return getReadOnlyFollowingDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -267,15 +267,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadOnlyFollowingDatabase", TypeShape.of(GetReadOnlyFollowingDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getReadOnlyFollowingDatabase", TypeShape.of(GetReadOnlyFollowingDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a read write database.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
+    public static Output<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
         return getReadWriteDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -283,15 +283,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a database script.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
+    public static Output<GetScriptResult> getScript(GetScriptArgs args) {
         return getScript(args, InvokeOptions.Empty);
     }
     /**
@@ -299,15 +299,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list Kusto database principals operation response.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args) {
+    public static Output<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args) {
         return listClusterFollowerDatabases(args, InvokeOptions.Empty);
     }
     /**
@@ -315,15 +315,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterFollowerDatabases", TypeShape.of(ListClusterFollowerDatabasesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:listClusterFollowerDatabases", TypeShape.of(ListClusterFollowerDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of language extension objects.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args) {
+    public static Output<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args) {
         return listClusterLanguageExtensions(args, InvokeOptions.Empty);
     }
     /**
@@ -331,15 +331,15 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterLanguageExtensions", TypeShape.of(ListClusterLanguageExtensionsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:listClusterLanguageExtensions", TypeShape.of(ListClusterLanguageExtensionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list Kusto database principals operation response.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args) {
+    public static Output<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args) {
         return listDatabasePrincipals(args, InvokeOptions.Empty);
     }
     /**
@@ -347,7 +347,7 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:kusto:listDatabasePrincipals", TypeShape.of(ListDatabasePrincipalsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:kusto:listDatabasePrincipals", TypeShape.of(ListDatabasePrincipalsResult.class), args, Utilities.withVersion(options));
     }
 }

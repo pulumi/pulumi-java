@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.iap.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="brand", required=true)
-    private String brand;
+    private Output<String> brand;
 
     /**
      * @return The name of the brand.
      * 
      */
-    public String brand() {
+    public Output<String> brand() {
         return this.brand;
     }
 
@@ -32,13 +33,13 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientId", required=true)
-    private String clientId;
+    private Output<String> clientId;
 
     /**
      * @return The client_id of the brand.
      * 
      */
-    public String clientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -73,8 +74,29 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder brand(String brand) {
+        public Builder brand(Output<String> brand) {
             $.brand = brand;
+            return this;
+        }
+
+        /**
+         * @param brand The name of the brand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder brand(String brand) {
+            return brand(Output.of(brand));
+        }
+
+        /**
+         * @param clientId The client_id of the brand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientId(Output<String> clientId) {
+            $.clientId = clientId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clientId(String clientId) {
-            $.clientId = clientId;
-            return this;
+            return clientId(Output.of(clientId));
         }
 
         public GetClientArgs build() {

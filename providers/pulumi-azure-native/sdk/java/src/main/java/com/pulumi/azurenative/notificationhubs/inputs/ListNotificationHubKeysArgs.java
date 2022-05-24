@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.notificationhubs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-    private String authorizationRuleName;
+    private Output<String> authorizationRuleName;
 
     /**
      * @return The connection string of the NotificationHub for the specified authorizationRule.
      * 
      */
-    public String authorizationRuleName() {
+    public Output<String> authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="notificationHubName", required=true)
-    private String notificationHubName;
+    private Output<String> notificationHubName;
 
     /**
      * @return The notification hub name.
      * 
      */
-    public String notificationHubName() {
+    public Output<String> notificationHubName() {
         return this.notificationHubName;
     }
 
@@ -62,13 +63,13 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder authorizationRuleName(String authorizationRuleName) {
+        public Builder authorizationRuleName(Output<String> authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
+            return this;
+        }
+
+        /**
+         * @param authorizationRuleName The connection string of the NotificationHub for the specified authorizationRule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizationRuleName(String authorizationRuleName) {
+            return authorizationRuleName(Output.of(authorizationRuleName));
+        }
+
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notificationHubName(Output<String> notificationHubName) {
+            $.notificationHubName = notificationHubName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder notificationHubName(String notificationHubName) {
-            $.notificationHubName = notificationHubName;
+            return notificationHubName(Output.of(notificationHubName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListNotificationHubKeysArgs build() {

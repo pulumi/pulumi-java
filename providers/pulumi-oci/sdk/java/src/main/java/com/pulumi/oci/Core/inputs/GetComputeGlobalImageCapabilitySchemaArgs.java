@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetComputeGlobalImageCapabilitySchemaArgs extends com.pulumi.
      * 
      */
     @Import(name="computeGlobalImageCapabilitySchemaId", required=true)
-    private String computeGlobalImageCapabilitySchemaId;
+    private Output<String> computeGlobalImageCapabilitySchemaId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
      * 
      */
-    public String computeGlobalImageCapabilitySchemaId() {
+    public Output<String> computeGlobalImageCapabilitySchemaId() {
         return this.computeGlobalImageCapabilitySchemaId;
     }
 
@@ -57,9 +58,19 @@ public final class GetComputeGlobalImageCapabilitySchemaArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+        public Builder computeGlobalImageCapabilitySchemaId(Output<String> computeGlobalImageCapabilitySchemaId) {
             $.computeGlobalImageCapabilitySchemaId = computeGlobalImageCapabilitySchemaId;
             return this;
+        }
+
+        /**
+         * @param computeGlobalImageCapabilitySchemaId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compute global image capability schema
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeGlobalImageCapabilitySchemaId(String computeGlobalImageCapabilitySchemaId) {
+            return computeGlobalImageCapabilitySchemaId(Output.of(computeGlobalImageCapabilitySchemaId));
         }
 
         public GetComputeGlobalImageCapabilitySchemaArgs build() {

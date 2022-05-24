@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VpnServerConfiguration.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnServerConfigurationName", required=true)
-    private String vpnServerConfigurationName;
+    private Output<String> vpnServerConfigurationName;
 
     /**
      * @return The name of the VpnServerConfiguration being retrieved.
      * 
      */
-    public String vpnServerConfigurationName() {
+    public Output<String> vpnServerConfigurationName() {
         return this.vpnServerConfigurationName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vpnServerConfigurationName The name of the VpnServerConfiguration being retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnServerConfigurationName(Output<String> vpnServerConfigurationName) {
+            $.vpnServerConfigurationName = vpnServerConfigurationName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
          * 
          */
         public Builder vpnServerConfigurationName(String vpnServerConfigurationName) {
-            $.vpnServerConfigurationName = vpnServerConfigurationName;
-            return this;
+            return vpnServerConfigurationName(Output.of(vpnServerConfigurationName));
         }
 
         public GetVpnServerConfigurationArgs build() {

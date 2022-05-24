@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediaconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="flowArn", required=true)
-    private String flowArn;
+    private Output<String> flowArn;
 
     /**
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public String flowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
 
@@ -32,13 +33,13 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder flowArn(String flowArn) {
+        public Builder flowArn(Output<String> flowArn) {
             $.flowArn = flowArn;
+            return this;
+        }
+
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder flowArn(String flowArn) {
+            return flowArn(Output.of(flowArn));
+        }
+
+        /**
+         * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFlowVpcInterfaceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetFlowVpcInterfaceArgs build() {

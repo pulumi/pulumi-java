@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Marketplace;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -35,7 +36,6 @@ import com.pulumi.oci.Marketplace.outputs.GetPublicationResult;
 import com.pulumi.oci.Marketplace.outputs.GetPublicationsResult;
 import com.pulumi.oci.Marketplace.outputs.GetPublishersResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class MarketplaceFunctions {
     /**
@@ -46,7 +46,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args) {
+    public static Output<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args) {
         return getAcceptedAgreement(args, InvokeOptions.Empty);
     }
     /**
@@ -57,8 +57,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getAcceptedAgreement:getAcceptedAgreement", TypeShape.of(GetAcceptedAgreementResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAcceptedAgreementResult> getAcceptedAgreement(GetAcceptedAgreementArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getAcceptedAgreement:getAcceptedAgreement", TypeShape.of(GetAcceptedAgreementResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Accepted Agreements in Oracle Cloud Infrastructure Marketplace service.
@@ -69,7 +69,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args) {
+    public static Output<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args) {
         return getAcceptedAgreements(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getAcceptedAgreements:getAcceptedAgreements", TypeShape.of(GetAcceptedAgreementsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAcceptedAgreementsResult> getAcceptedAgreements(GetAcceptedAgreementsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getAcceptedAgreements:getAcceptedAgreements", TypeShape.of(GetAcceptedAgreementsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Categories in Oracle Cloud Infrastructure Marketplace service.
@@ -93,7 +93,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCategoriesResult> getCategories() {
+    public static Output<GetCategoriesResult> getCategories() {
         return getCategories(GetCategoriesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCategoriesResult> getCategories(GetCategoriesArgs args) {
+    public static Output<GetCategoriesResult> getCategories(GetCategoriesArgs args) {
         return getCategories(args, InvokeOptions.Empty);
     }
     /**
@@ -117,8 +117,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCategoriesResult> getCategories(GetCategoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getCategories:getCategories", TypeShape.of(GetCategoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCategoriesResult> getCategories(GetCategoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getCategories:getCategories", TypeShape.of(GetCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Listing resource in Oracle Cloud Infrastructure Marketplace service.
@@ -142,7 +142,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingResult> getListing(GetListingArgs args) {
+    public static Output<GetListingResult> getListing(GetListingArgs args) {
         return getListing(args, InvokeOptions.Empty);
     }
     /**
@@ -167,8 +167,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingResult> getListing(GetListingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListing:getListing", TypeShape.of(GetListingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingResult> getListing(GetListingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListing:getListing", TypeShape.of(GetListingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Listing Package resource in Oracle Cloud Infrastructure Marketplace service.
@@ -191,7 +191,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackageResult> getListingPackage(GetListingPackageArgs args) {
+    public static Output<GetListingPackageResult> getListingPackage(GetListingPackageArgs args) {
         return getListingPackage(args, InvokeOptions.Empty);
     }
     /**
@@ -215,8 +215,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackageResult> getListingPackage(GetListingPackageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackage:getListingPackage", TypeShape.of(GetListingPackageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingPackageResult> getListingPackage(GetListingPackageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListingPackage:getListingPackage", TypeShape.of(GetListingPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listing Package Agreements in Oracle Cloud Infrastructure Marketplace service.
@@ -226,7 +226,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args) {
+    public static Output<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args) {
         return getListingPackageAgreements(args, InvokeOptions.Empty);
     }
     /**
@@ -237,8 +237,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackageAgreements:getListingPackageAgreements", TypeShape.of(GetListingPackageAgreementsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingPackageAgreementsResult> getListingPackageAgreements(GetListingPackageAgreementsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListingPackageAgreements:getListingPackageAgreements", TypeShape.of(GetListingPackageAgreementsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listing Packages in Oracle Cloud Infrastructure Marketplace service.
@@ -261,7 +261,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args) {
+    public static Output<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args) {
         return getListingPackages(args, InvokeOptions.Empty);
     }
     /**
@@ -285,8 +285,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingPackages:getListingPackages", TypeShape.of(GetListingPackagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingPackagesResult> getListingPackages(GetListingPackagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListingPackages:getListingPackages", TypeShape.of(GetListingPackagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listing Taxes in Oracle Cloud Infrastructure Marketplace service.
@@ -296,7 +296,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args) {
+    public static Output<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args) {
         return getListingTaxes(args, InvokeOptions.Empty);
     }
     /**
@@ -307,8 +307,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListingTaxes:getListingTaxes", TypeShape.of(GetListingTaxesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingTaxesResult> getListingTaxes(GetListingTaxesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListingTaxes:getListingTaxes", TypeShape.of(GetListingTaxesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Listings in Oracle Cloud Infrastructure Marketplace service.
@@ -332,7 +332,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingsResult> getListings() {
+    public static Output<GetListingsResult> getListings() {
         return getListings(GetListingsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -357,7 +357,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingsResult> getListings(GetListingsArgs args) {
+    public static Output<GetListingsResult> getListings(GetListingsArgs args) {
         return getListings(args, InvokeOptions.Empty);
     }
     /**
@@ -382,8 +382,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetListingsResult> getListings(GetListingsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getListings:getListings", TypeShape.of(GetListingsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetListingsResult> getListings(GetListingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getListings:getListings", TypeShape.of(GetListingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Publication resource in Oracle Cloud Infrastructure Marketplace service.
@@ -393,7 +393,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationResult> getPublication(GetPublicationArgs args) {
+    public static Output<GetPublicationResult> getPublication(GetPublicationArgs args) {
         return getPublication(args, InvokeOptions.Empty);
     }
     /**
@@ -404,8 +404,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationResult> getPublication(GetPublicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublication:getPublication", TypeShape.of(GetPublicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicationResult> getPublication(GetPublicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getPublication:getPublication", TypeShape.of(GetPublicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Publication Package resource in Oracle Cloud Infrastructure Marketplace service.
@@ -415,7 +415,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args) {
+    public static Output<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args) {
         return getPublicationPackage(args, InvokeOptions.Empty);
     }
     /**
@@ -426,8 +426,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublicationPackage:getPublicationPackage", TypeShape.of(GetPublicationPackageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicationPackageResult> getPublicationPackage(GetPublicationPackageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getPublicationPackage:getPublicationPackage", TypeShape.of(GetPublicationPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Publication Packages in Oracle Cloud Infrastructure Marketplace service.
@@ -437,7 +437,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args) {
+    public static Output<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args) {
         return getPublicationPackages(args, InvokeOptions.Empty);
     }
     /**
@@ -448,8 +448,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublicationPackages:getPublicationPackages", TypeShape.of(GetPublicationPackagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicationPackagesResult> getPublicationPackages(GetPublicationPackagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getPublicationPackages:getPublicationPackages", TypeShape.of(GetPublicationPackagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Publications in Oracle Cloud Infrastructure Marketplace service.
@@ -459,7 +459,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationsResult> getPublications(GetPublicationsArgs args) {
+    public static Output<GetPublicationsResult> getPublications(GetPublicationsArgs args) {
         return getPublications(args, InvokeOptions.Empty);
     }
     /**
@@ -470,8 +470,8 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicationsResult> getPublications(GetPublicationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublications:getPublications", TypeShape.of(GetPublicationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicationsResult> getPublications(GetPublicationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getPublications:getPublications", TypeShape.of(GetPublicationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Publishers in Oracle Cloud Infrastructure Marketplace service.
@@ -481,7 +481,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublishersResult> getPublishers() {
+    public static Output<GetPublishersResult> getPublishers() {
         return getPublishers(GetPublishersArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -492,7 +492,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublishersResult> getPublishers(GetPublishersArgs args) {
+    public static Output<GetPublishersResult> getPublishers(GetPublishersArgs args) {
         return getPublishers(args, InvokeOptions.Empty);
     }
     /**
@@ -503,7 +503,7 @@ public final class MarketplaceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublishersResult> getPublishers(GetPublishersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Marketplace/getPublishers:getPublishers", TypeShape.of(GetPublishersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublishersResult> getPublishers(GetPublishersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Marketplace/getPublishers:getPublishers", TypeShape.of(GetPublishersResult.class), args, Utilities.withVersion(options));
     }
 }

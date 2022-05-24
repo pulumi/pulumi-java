@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstancesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private Output</* @Nullable */ String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
-        return Optional.ofNullable(this.availabilityDomain);
+    public Output</* @Nullable */ String> availabilityDomain() {
+        return this.availabilityDomain;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,21 +51,21 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dedicatedVmHostId", required=true)
-    private String dedicatedVmHostId;
+    private Output<String> dedicatedVmHostId;
 
     /**
      * @return The OCID of the dedicated VM host.
      * 
      */
-    public String dedicatedVmHostId() {
+    public Output<String> dedicatedVmHostId() {
         return this.dedicatedVmHostId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDedicatedVmHostInstancesFilter> filters;
+    private Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters;
 
-    public Optional<List<GetDedicatedVmHostInstancesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters() {
+        return this.filters;
     }
 
     private GetDedicatedVmHostInstancesArgs() {}
@@ -101,8 +101,29 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -113,7 +134,17 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dedicatedVmHostId The OCID of the dedicated VM host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedVmHostId(Output<String> dedicatedVmHostId) {
+            $.dedicatedVmHostId = dedicatedVmHostId;
             return this;
         }
 
@@ -124,13 +155,16 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
          * 
          */
         public Builder dedicatedVmHostId(String dedicatedVmHostId) {
-            $.dedicatedVmHostId = dedicatedVmHostId;
+            return dedicatedVmHostId(Output.of(dedicatedVmHostId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDedicatedVmHostInstancesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDedicatedVmHostInstancesFilter... filters) {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Logging;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,7 +24,6 @@ import com.pulumi.oci.Logging.outputs.GetLogsResult;
 import com.pulumi.oci.Logging.outputs.GetUnifiedAgentConfigurationResult;
 import com.pulumi.oci.Logging.outputs.GetUnifiedAgentConfigurationsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class LoggingFunctions {
     /**
@@ -34,7 +34,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogResult> getLog(GetLogArgs args) {
+    public static Output<GetLogResult> getLog(GetLogArgs args) {
         return getLog(args, InvokeOptions.Empty);
     }
     /**
@@ -45,8 +45,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogResult> getLog(GetLogArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLog:getLog", TypeShape.of(GetLogResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogResult> getLog(GetLogArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLog:getLog", TypeShape.of(GetLogResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Log Group resource in Oracle Cloud Infrastructure Logging service.
@@ -56,7 +56,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
+    public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
         return getLogGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -67,8 +67,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Log Groups in Oracle Cloud Infrastructure Logging service.
@@ -78,7 +78,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
+    public static Output<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
         return getLogGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Log Saved Search resource in Oracle Cloud Infrastructure Logging service.
@@ -100,7 +100,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogSavedSearchResult> getLogSavedSearch(GetLogSavedSearchArgs args) {
+    public static Output<GetLogSavedSearchResult> getLogSavedSearch(GetLogSavedSearchArgs args) {
         return getLogSavedSearch(args, InvokeOptions.Empty);
     }
     /**
@@ -111,8 +111,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogSavedSearchResult> getLogSavedSearch(GetLogSavedSearchArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLogSavedSearch:getLogSavedSearch", TypeShape.of(GetLogSavedSearchResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogSavedSearchResult> getLogSavedSearch(GetLogSavedSearchArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLogSavedSearch:getLogSavedSearch", TypeShape.of(GetLogSavedSearchResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Log Saved Searches in Oracle Cloud Infrastructure Logging service.
@@ -122,7 +122,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogSavedSearchesResult> getLogSavedSearches(GetLogSavedSearchesArgs args) {
+    public static Output<GetLogSavedSearchesResult> getLogSavedSearches(GetLogSavedSearchesArgs args) {
         return getLogSavedSearches(args, InvokeOptions.Empty);
     }
     /**
@@ -133,8 +133,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogSavedSearchesResult> getLogSavedSearches(GetLogSavedSearchesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLogSavedSearches:getLogSavedSearches", TypeShape.of(GetLogSavedSearchesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogSavedSearchesResult> getLogSavedSearches(GetLogSavedSearchesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLogSavedSearches:getLogSavedSearches", TypeShape.of(GetLogSavedSearchesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Logs in Oracle Cloud Infrastructure Logging service.
@@ -144,7 +144,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogsResult> getLogs(GetLogsArgs args) {
+    public static Output<GetLogsResult> getLogs(GetLogsArgs args) {
         return getLogs(args, InvokeOptions.Empty);
     }
     /**
@@ -155,8 +155,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogsResult> getLogs(GetLogsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getLogs:getLogs", TypeShape.of(GetLogsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLogsResult> getLogs(GetLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getLogs:getLogs", TypeShape.of(GetLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Unified Agent Configuration resource in Oracle Cloud Infrastructure Logging service.
@@ -166,7 +166,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUnifiedAgentConfigurationResult> getUnifiedAgentConfiguration(GetUnifiedAgentConfigurationArgs args) {
+    public static Output<GetUnifiedAgentConfigurationResult> getUnifiedAgentConfiguration(GetUnifiedAgentConfigurationArgs args) {
         return getUnifiedAgentConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -177,8 +177,8 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUnifiedAgentConfigurationResult> getUnifiedAgentConfiguration(GetUnifiedAgentConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getUnifiedAgentConfiguration:getUnifiedAgentConfiguration", TypeShape.of(GetUnifiedAgentConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUnifiedAgentConfigurationResult> getUnifiedAgentConfiguration(GetUnifiedAgentConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getUnifiedAgentConfiguration:getUnifiedAgentConfiguration", TypeShape.of(GetUnifiedAgentConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Unified Agent Configurations in Oracle Cloud Infrastructure Logging service.
@@ -188,7 +188,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUnifiedAgentConfigurationsResult> getUnifiedAgentConfigurations(GetUnifiedAgentConfigurationsArgs args) {
+    public static Output<GetUnifiedAgentConfigurationsResult> getUnifiedAgentConfigurations(GetUnifiedAgentConfigurationsArgs args) {
         return getUnifiedAgentConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -199,7 +199,7 @@ public final class LoggingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUnifiedAgentConfigurationsResult> getUnifiedAgentConfigurations(GetUnifiedAgentConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Logging/getUnifiedAgentConfigurations:getUnifiedAgentConfigurations", TypeShape.of(GetUnifiedAgentConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUnifiedAgentConfigurationsResult> getUnifiedAgentConfigurations(GetUnifiedAgentConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Logging/getUnifiedAgentConfigurations:getUnifiedAgentConfigurations", TypeShape.of(GetUnifiedAgentConfigurationsResult.class), args, Utilities.withVersion(options));
     }
 }

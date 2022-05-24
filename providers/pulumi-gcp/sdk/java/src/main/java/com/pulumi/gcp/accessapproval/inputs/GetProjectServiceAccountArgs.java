@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.accessapproval.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="projectId", required=true)
-    private String projectId;
+    private Output<String> projectId;
 
     /**
      * @return The project ID the service account was created for.
      * 
      */
-    public String projectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -57,9 +58,19 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
+        }
+
+        /**
+         * @param projectId The project ID the service account was created for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
 
         public GetProjectServiceAccountArgs build() {

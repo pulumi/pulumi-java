@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediaconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flowArn", required=true)
-    private String flowArn;
+    private Output<String> flowArn;
 
     /**
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public String flowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder flowArn(String flowArn) {
+        public Builder flowArn(Output<String> flowArn) {
             $.flowArn = flowArn;
             return this;
+        }
+
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder flowArn(String flowArn) {
+            return flowArn(Output.of(flowArn));
         }
 
         public GetFlowArgs build() {

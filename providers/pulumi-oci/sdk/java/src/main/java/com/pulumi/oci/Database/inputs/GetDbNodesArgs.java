@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbNodesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,14 +36,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbServerId")
-    private @Nullable String dbServerId;
+    private Output</* @Nullable */ String> dbServerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exacc Db server.
      * 
      */
-    public Optional<String> dbServerId() {
-        return Optional.ofNullable(this.dbServerId);
+    public Output</* @Nullable */ String> dbServerId() {
+        return this.dbServerId;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private @Nullable String dbSystemId;
+    private Output</* @Nullable */ String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
      * 
      */
-    public Optional<String> dbSystemId() {
-        return Optional.ofNullable(this.dbSystemId);
+    public Output</* @Nullable */ String> dbSystemId() {
+        return this.dbSystemId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbNodesFilter> filters;
+    private Output</* @Nullable */ List<GetDbNodesFilter>> filters;
 
-    public Optional<List<GetDbNodesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbNodesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmClusterId")
-    private @Nullable String vmClusterId;
+    private Output</* @Nullable */ String> vmClusterId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
      * 
      */
-    public Optional<String> vmClusterId() {
-        return Optional.ofNullable(this.vmClusterId);
+    public Output</* @Nullable */ String> vmClusterId() {
+        return this.vmClusterId;
     }
 
     private GetDbNodesArgs() {}
@@ -133,8 +133,29 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbServerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exacc Db server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbServerId(Output</* @Nullable */ String> dbServerId) {
+            $.dbServerId = dbServerId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbServerId(@Nullable String dbServerId) {
-            $.dbServerId = dbServerId;
+            return dbServerId(Output.of(dbServerId));
+        }
+
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+            $.dbSystemId = dbSystemId;
             return this;
         }
 
@@ -156,13 +187,16 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemId(@Nullable String dbSystemId) {
-            $.dbSystemId = dbSystemId;
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbNodesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDbNodesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbNodesFilter... filters) {
@@ -175,8 +209,29 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vmClusterId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(Output</* @Nullable */ String> vmClusterId) {
+            $.vmClusterId = vmClusterId;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vmClusterId(@Nullable String vmClusterId) {
-            $.vmClusterId = vmClusterId;
-            return this;
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetDbNodesArgs build() {

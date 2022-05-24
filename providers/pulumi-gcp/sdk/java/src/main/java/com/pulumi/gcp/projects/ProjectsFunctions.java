@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.projects;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.gcp.projects.inputs.GetOrganizationPolicyArgs;
 import com.pulumi.gcp.projects.inputs.GetProjectArgs;
 import com.pulumi.gcp.projects.outputs.GetOrganizationPolicyResult;
 import com.pulumi.gcp.projects.outputs.GetProjectResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class ProjectsFunctions {
     /**
@@ -45,7 +45,7 @@ public final class ProjectsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
+    public static Output<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
         return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -79,8 +79,8 @@ public final class ProjectsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:projects/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:projects/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a set of projects based on a filter. See the
@@ -116,7 +116,7 @@ public final class ProjectsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+    public static Output<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
     /**
@@ -153,7 +153,7 @@ public final class ProjectsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:projects/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:projects/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

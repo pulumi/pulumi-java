@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.iam;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.gcp.iam.outputs.GetRuleResult;
 import com.pulumi.gcp.iam.outputs.GetTestablePermissionsResult;
 import com.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderResult;
 import com.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class IamFunctions {
     /**
@@ -44,7 +44,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:iam/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:iam/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI.
@@ -108,7 +108,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args) {
+    public static Output<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args) {
         return getTestablePermissions(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:iam/getTestablePermissions:getTestablePermissions", TypeShape.of(GetTestablePermissionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:iam/getTestablePermissions:getTestablePermissions", TypeShape.of(GetTestablePermissionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a IAM workload identity pool from Google Cloud by its id.
@@ -173,7 +173,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args) {
+    public static Output<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args) {
         return getWorkloadIdentityPool(args, InvokeOptions.Empty);
     }
     /**
@@ -203,8 +203,8 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPool:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:iam/getWorkloadIdentityPool:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a IAM workload identity provider from Google Cloud by its id.
@@ -234,7 +234,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args) {
+    public static Output<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args) {
         return getWorkloadIdentityPoolProvider(args, InvokeOptions.Empty);
     }
     /**
@@ -265,7 +265,7 @@ public final class IamFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPoolProvider:getWorkloadIdentityPoolProvider", TypeShape.of(GetWorkloadIdentityPoolProviderResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:iam/getWorkloadIdentityPoolProvider:getWorkloadIdentityPoolProvider", TypeShape.of(GetWorkloadIdentityPoolProviderResult.class), args, Utilities.withVersion(options));
     }
 }

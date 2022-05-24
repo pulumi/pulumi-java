@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Dns.inputs.GetSteeringPoliciesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment the resource belongs to.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,14 +36,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The displayName of a resource.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayNameContains")
-    private @Nullable String displayNameContains;
+    private Output</* @Nullable */ String> displayNameContains;
 
     /**
      * @return The partial displayName of a resource. Will match any resource whose name (case-insensitive) contains the provided value.
      * 
      */
-    public Optional<String> displayNameContains() {
-        return Optional.ofNullable(this.displayNameContains);
+    public Output</* @Nullable */ String> displayNameContains() {
+        return this.displayNameContains;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSteeringPoliciesFilter> filters;
+    private Output</* @Nullable */ List<GetSteeringPoliciesFilter>> filters;
 
-    public Optional<List<GetSteeringPoliciesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSteeringPoliciesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="healthCheckMonitorId")
-    private @Nullable String healthCheckMonitorId;
+    private Output</* @Nullable */ String> healthCheckMonitorId;
 
     /**
      * @return Search by health check monitor OCID. Will match any resource whose health check monitor ID matches the provided value.
      * 
      */
-    public Optional<String> healthCheckMonitorId() {
-        return Optional.ofNullable(this.healthCheckMonitorId);
+    public Output</* @Nullable */ String> healthCheckMonitorId() {
+        return this.healthCheckMonitorId;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The OCID of a resource.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The state of a resource.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -118,14 +118,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="template")
-    private @Nullable String template;
+    private Output</* @Nullable */ String> template;
 
     /**
      * @return Search by steering template type. Will match any resource whose template type matches the provided value.
      * 
      */
-    public Optional<String> template() {
-        return Optional.ofNullable(this.template);
+    public Output</* @Nullable */ String> template() {
+        return this.template;
     }
 
     /**
@@ -133,14 +133,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created on or after the indicated time.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
+    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
+        return this.timeCreatedGreaterThanOrEqualTo;
     }
 
     /**
@@ -148,14 +148,14 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private Output</* @Nullable */ String> timeCreatedLessThan;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created before the indicated time.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
-        return Optional.ofNullable(this.timeCreatedLessThan);
+    public Output</* @Nullable */ String> timeCreatedLessThan() {
+        return this.timeCreatedLessThan;
     }
 
     private GetSteeringPoliciesArgs() {}
@@ -197,8 +197,29 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment the resource belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName The displayName of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -209,7 +230,17 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param displayNameContains The partial displayName of a resource. Will match any resource whose name (case-insensitive) contains the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameContains(Output</* @Nullable */ String> displayNameContains) {
+            $.displayNameContains = displayNameContains;
             return this;
         }
 
@@ -220,13 +251,16 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder displayNameContains(@Nullable String displayNameContains) {
-            $.displayNameContains = displayNameContains;
+            return displayNameContains(Output.of(displayNameContains));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetSteeringPoliciesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetSteeringPoliciesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSteeringPoliciesFilter... filters) {
@@ -239,8 +273,29 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder healthCheckMonitorId(@Nullable String healthCheckMonitorId) {
+        public Builder healthCheckMonitorId(Output</* @Nullable */ String> healthCheckMonitorId) {
             $.healthCheckMonitorId = healthCheckMonitorId;
+            return this;
+        }
+
+        /**
+         * @param healthCheckMonitorId Search by health check monitor OCID. Will match any resource whose health check monitor ID matches the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder healthCheckMonitorId(@Nullable String healthCheckMonitorId) {
+            return healthCheckMonitorId(Output.of(healthCheckMonitorId));
+        }
+
+        /**
+         * @param id The OCID of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output</* @Nullable */ String> id) {
+            $.id = id;
             return this;
         }
 
@@ -251,7 +306,17 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder id(@Nullable String id) {
-            $.id = id;
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state The state of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -262,7 +327,17 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param template Search by steering template type. Will match any resource whose template type matches the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder template(Output</* @Nullable */ String> template) {
+            $.template = template;
             return this;
         }
 
@@ -273,7 +348,17 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder template(@Nullable String template) {
-            $.template = template;
+            return template(Output.of(template));
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created on or after the indicated time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -284,7 +369,17 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
-            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created before the indicated time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -295,8 +390,7 @@ public final class GetSteeringPoliciesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetSteeringPoliciesArgs build() {

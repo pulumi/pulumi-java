@@ -4,10 +4,10 @@
 package com.pulumi.azure.batch.inputs;
 
 import com.pulumi.azure.batch.inputs.GetAccountEncryption;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
     @Import(name="encryption")
-    private @Nullable GetAccountEncryption encryption;
+    private Output</* @Nullable */ GetAccountEncryption> encryption;
 
-    public Optional<GetAccountEncryption> encryption() {
-        return Optional.ofNullable(this.encryption);
+    public Output</* @Nullable */ GetAccountEncryption> encryption() {
+        return this.encryption;
     }
 
     /**
@@ -27,13 +27,13 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Batch account.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -42,13 +42,13 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where this Batch account exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +78,23 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder encryption(@Nullable GetAccountEncryption encryption) {
+        public Builder encryption(Output</* @Nullable */ GetAccountEncryption> encryption) {
             $.encryption = encryption;
+            return this;
+        }
+
+        public Builder encryption(@Nullable GetAccountEncryption encryption) {
+            return encryption(Output.of(encryption));
+        }
+
+        /**
+         * @param name The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -90,7 +105,17 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where this Batch account exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,8 +126,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAccountArgs build() {

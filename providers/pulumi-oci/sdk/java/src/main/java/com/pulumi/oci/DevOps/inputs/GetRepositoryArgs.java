@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private Output</* @Nullable */ List<String>> fields;
 
     /**
      * @return Fields parameter can contain multiple flags useful in deciding the API functionality.
      * 
      */
-    public Optional<List<String>> fields() {
-        return Optional.ofNullable(this.fields);
+    public Output</* @Nullable */ List<String>> fields() {
+        return this.fields;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -76,9 +76,19 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
+        public Builder fields(Output</* @Nullable */ List<String>> fields) {
             $.fields = fields;
             return this;
+        }
+
+        /**
+         * @param fields Fields parameter can contain multiple flags useful in deciding the API functionality.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -97,9 +107,19 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder repositoryId(String repositoryId) {
+        public Builder repositoryId(Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryArgs build() {

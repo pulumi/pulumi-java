@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,15 +20,15 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the subnetwork. One of `name` or `self_link`
      * must be specified.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -37,15 +37,15 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -54,15 +54,15 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return The region this subnetwork has been created in. If
      * unspecified, this defaults to the region configured in the provider.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     /**
@@ -71,15 +71,15 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink")
-    private @Nullable String selfLink;
+    private Output</* @Nullable */ String> selfLink;
 
     /**
      * @return The self link of the subnetwork. If `self_link` is
      * specified, `name`, `project`, and `region` are ignored.
      * 
      */
-    public Optional<String> selfLink() {
-        return Optional.ofNullable(this.selfLink);
+    public Output</* @Nullable */ String> selfLink() {
+        return this.selfLink;
     }
 
     private GetSubnetworkArgs() {}
@@ -116,8 +116,31 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the subnetwork. One of `name` or `self_link`
+         * must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -129,7 +152,18 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param region The region this subnetwork has been created in. If
+         * unspecified, this defaults to the region configured in the provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(Output</* @Nullable */ String> region) {
+            $.region = region;
             return this;
         }
 
@@ -141,7 +175,18 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder region(@Nullable String region) {
-            $.region = region;
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param selfLink The self link of the subnetwork. If `self_link` is
+         * specified, `name`, `project`, and `region` are ignored.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selfLink(Output</* @Nullable */ String> selfLink) {
+            $.selfLink = selfLink;
             return this;
         }
 
@@ -153,8 +198,7 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder selfLink(@Nullable String selfLink) {
-            $.selfLink = selfLink;
-            return this;
+            return selfLink(Output.of(selfLink));
         }
 
         public GetSubnetworkArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.powerbidedicated.inputs.GetAutoScaleVCoreArgs;
 import com.pulumi.azurenative.powerbidedicated.inputs.GetCapacityDetailsArgs;
 import com.pulumi.azurenative.powerbidedicated.outputs.GetAutoScaleVCoreResult;
 import com.pulumi.azurenative.powerbidedicated.outputs.GetCapacityDetailsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PowerbidedicatedFunctions {
     /**
@@ -19,7 +19,7 @@ public final class PowerbidedicatedFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args) {
+    public static Output<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args) {
         return getAutoScaleVCore(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class PowerbidedicatedFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents an instance of a Dedicated Capacity resource.
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args) {
+    public static Output<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args) {
         return getCapacityDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class PowerbidedicatedFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

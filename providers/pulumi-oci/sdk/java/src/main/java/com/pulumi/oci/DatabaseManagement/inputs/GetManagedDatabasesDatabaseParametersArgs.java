@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesDatabaseParametersFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
     public static final GetManagedDatabasesDatabaseParametersArgs Empty = new GetManagedDatabasesDatabaseParametersArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabasesDatabaseParametersFilter> filters;
+    private Output</* @Nullable */ List<GetManagedDatabasesDatabaseParametersFilter>> filters;
 
-    public Optional<List<GetManagedDatabasesDatabaseParametersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagedDatabasesDatabaseParametersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -29,14 +29,14 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="isAllowedValuesIncluded")
-    private @Nullable Boolean isAllowedValuesIncluded;
+    private Output</* @Nullable */ Boolean> isAllowedValuesIncluded;
 
     /**
      * @return When true, results include a list of valid values for parameters (if applicable).
      * 
      */
-    public Optional<Boolean> isAllowedValuesIncluded() {
-        return Optional.ofNullable(this.isAllowedValuesIncluded);
+    public Output</* @Nullable */ Boolean> isAllowedValuesIncluded() {
+        return this.isAllowedValuesIncluded;
     }
 
     /**
@@ -44,13 +44,13 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -59,14 +59,14 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return all parameters that have the text given in their names.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="source")
-    private @Nullable String source;
+    private Output</* @Nullable */ String> source;
 
     /**
      * @return The source used to list database parameters. `CURRENT` is used to get the database parameters that are currently in effect for the database instance. `SPFILE` is used to list parameters from the server parameter file. Default is `CURRENT`.
      * 
      */
-    public Optional<String> source() {
-        return Optional.ofNullable(this.source);
+    public Output</* @Nullable */ String> source() {
+        return this.source;
     }
 
     private GetManagedDatabasesDatabaseParametersArgs() {}
@@ -112,9 +112,13 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
             $ = new GetManagedDatabasesDatabaseParametersArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabasesDatabaseParametersFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetManagedDatabasesDatabaseParametersFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetManagedDatabasesDatabaseParametersFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagedDatabasesDatabaseParametersFilter... filters) {
@@ -127,8 +131,29 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder isAllowedValuesIncluded(@Nullable Boolean isAllowedValuesIncluded) {
+        public Builder isAllowedValuesIncluded(Output</* @Nullable */ Boolean> isAllowedValuesIncluded) {
             $.isAllowedValuesIncluded = isAllowedValuesIncluded;
+            return this;
+        }
+
+        /**
+         * @param isAllowedValuesIncluded When true, results include a list of valid values for parameters (if applicable).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isAllowedValuesIncluded(@Nullable Boolean isAllowedValuesIncluded) {
+            return isAllowedValuesIncluded(Output.of(isAllowedValuesIncluded));
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
+            $.managedDatabaseId = managedDatabaseId;
             return this;
         }
 
@@ -139,7 +164,17 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
          * 
          */
         public Builder managedDatabaseId(String managedDatabaseId) {
-            $.managedDatabaseId = managedDatabaseId;
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param name A filter to return all parameters that have the text given in their names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -150,7 +185,17 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param source The source used to list database parameters. `CURRENT` is used to get the database parameters that are currently in effect for the database instance. `SPFILE` is used to list parameters from the server parameter file. Default is `CURRENT`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder source(Output</* @Nullable */ String> source) {
+            $.source = source;
             return this;
         }
 
@@ -161,8 +206,7 @@ public final class GetManagedDatabasesDatabaseParametersArgs extends com.pulumi.
          * 
          */
         public Builder source(@Nullable String source) {
-            $.source = source;
-            return this;
+            return source(Output.of(source));
         }
 
         public GetManagedDatabasesDatabaseParametersArgs build() {

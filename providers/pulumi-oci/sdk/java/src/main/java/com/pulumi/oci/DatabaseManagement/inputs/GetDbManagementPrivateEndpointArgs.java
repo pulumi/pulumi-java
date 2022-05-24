@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDbManagementPrivateEndpointArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dbManagementPrivateEndpointId", required=true)
-    private String dbManagementPrivateEndpointId;
+    private Output<String> dbManagementPrivateEndpointId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
      * 
      */
-    public String dbManagementPrivateEndpointId() {
+    public Output<String> dbManagementPrivateEndpointId() {
         return this.dbManagementPrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDbManagementPrivateEndpointArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder dbManagementPrivateEndpointId(String dbManagementPrivateEndpointId) {
+        public Builder dbManagementPrivateEndpointId(Output<String> dbManagementPrivateEndpointId) {
             $.dbManagementPrivateEndpointId = dbManagementPrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param dbManagementPrivateEndpointId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Database Management private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbManagementPrivateEndpointId(String dbManagementPrivateEndpointId) {
+            return dbManagementPrivateEndpointId(Output.of(dbManagementPrivateEndpointId));
         }
 
         public GetDbManagementPrivateEndpointArgs build() {

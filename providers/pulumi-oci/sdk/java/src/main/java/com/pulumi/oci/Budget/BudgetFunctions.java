@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Budget;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.Budget.outputs.GetAlertRulesResult;
 import com.pulumi.oci.Budget.outputs.GetBudgetResult;
 import com.pulumi.oci.Budget.outputs.GetBudgetsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class BudgetFunctions {
     /**
@@ -26,7 +26,7 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
         return getAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Budget/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Budget/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alert Rules in Oracle Cloud Infrastructure Budget service.
@@ -48,7 +48,7 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertRulesResult> getAlertRules(GetAlertRulesArgs args) {
+    public static Output<GetAlertRulesResult> getAlertRules(GetAlertRulesArgs args) {
         return getAlertRules(args, InvokeOptions.Empty);
     }
     /**
@@ -59,8 +59,8 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAlertRulesResult> getAlertRules(GetAlertRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Budget/getAlertRules:getAlertRules", TypeShape.of(GetAlertRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertRulesResult> getAlertRules(GetAlertRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Budget/getAlertRules:getAlertRules", TypeShape.of(GetAlertRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Budget resource in Oracle Cloud Infrastructure Budget service.
@@ -70,7 +70,7 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args) {
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args) {
         return getBudget(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Budget/getBudget:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Budget/getBudget:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Budgets in Oracle Cloud Infrastructure Budget service.
@@ -101,7 +101,7 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBudgetsResult> getBudgets(GetBudgetsArgs args) {
+    public static Output<GetBudgetsResult> getBudgets(GetBudgetsArgs args) {
         return getBudgets(args, InvokeOptions.Empty);
     }
     /**
@@ -121,7 +121,7 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBudgetsResult> getBudgets(GetBudgetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Budget/getBudgets:getBudgets", TypeShape.of(GetBudgetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBudgetsResult> getBudgets(GetBudgetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Budget/getBudgets:getBudgets", TypeShape.of(GetBudgetsResult.class), args, Utilities.withVersion(options));
     }
 }

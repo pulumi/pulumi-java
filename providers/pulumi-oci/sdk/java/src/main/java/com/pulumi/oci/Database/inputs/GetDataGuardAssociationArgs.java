@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataGuardAssociationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataGuardAssociationId", required=true)
-    private String dataGuardAssociationId;
+    private Output<String> dataGuardAssociationId;
 
     /**
      * @return The Data Guard association&#39;s [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dataGuardAssociationId() {
+    public Output<String> dataGuardAssociationId() {
         return this.dataGuardAssociationId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDataGuardAssociationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDataGuardAssociationArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder dataGuardAssociationId(String dataGuardAssociationId) {
+        public Builder dataGuardAssociationId(Output<String> dataGuardAssociationId) {
             $.dataGuardAssociationId = dataGuardAssociationId;
+            return this;
+        }
+
+        /**
+         * @param dataGuardAssociationId The Data Guard association&#39;s [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataGuardAssociationId(String dataGuardAssociationId) {
+            return dataGuardAssociationId(Output.of(dataGuardAssociationId));
+        }
+
+        /**
+         * @param databaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(Output<String> databaseId) {
+            $.databaseId = databaseId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDataGuardAssociationArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder databaseId(String databaseId) {
-            $.databaseId = databaseId;
-            return this;
+            return databaseId(Output.of(databaseId));
         }
 
         public GetDataGuardAssociationArgs build() {

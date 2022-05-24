@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.configuration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConformancePackArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="conformancePackName", required=true)
-    private String conformancePackName;
+    private Output<String> conformancePackName;
 
     /**
      * @return Name of the conformance pack which will be assigned as the unique identifier.
      * 
      */
-    public String conformancePackName() {
+    public Output<String> conformancePackName() {
         return this.conformancePackName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConformancePackArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder conformancePackName(String conformancePackName) {
+        public Builder conformancePackName(Output<String> conformancePackName) {
             $.conformancePackName = conformancePackName;
             return this;
+        }
+
+        /**
+         * @param conformancePackName Name of the conformance pack which will be assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conformancePackName(String conformancePackName) {
+            return conformancePackName(Output.of(conformancePackName));
         }
 
         public GetConformancePackArgs build() {

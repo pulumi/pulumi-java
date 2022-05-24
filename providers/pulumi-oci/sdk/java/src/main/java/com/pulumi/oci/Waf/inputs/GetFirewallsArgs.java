@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Waf.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Waf.inputs.GetFirewallsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetFirewallsFilter> filters;
+    private Output</* @Nullable */ List<GetFirewallsFilter>> filters;
 
-    public Optional<List<GetFirewallsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetFirewallsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private Output</* @Nullable */ List<String>> states;
 
     /**
      * @return A filter to return only resources that match the given lifecycleState.
      * 
      */
-    public Optional<List<String>> states() {
-        return Optional.ofNullable(this.states);
+    public Output</* @Nullable */ List<String>> states() {
+        return this.states;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webAppFirewallPolicyId")
-    private @Nullable String webAppFirewallPolicyId;
+    private Output</* @Nullable */ String> webAppFirewallPolicyId;
 
     /**
      * @return A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of related WebAppFirewallPolicy.
      * 
      */
-    public Optional<String> webAppFirewallPolicyId() {
-        return Optional.ofNullable(this.webAppFirewallPolicyId);
+    public Output</* @Nullable */ String> webAppFirewallPolicyId() {
+        return this.webAppFirewallPolicyId;
     }
 
     private GetFirewallsArgs() {}
@@ -133,8 +133,29 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -145,13 +166,16 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetFirewallsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetFirewallsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetFirewallsFilter... filters) {
@@ -164,8 +188,29 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param states A filter to return only resources that match the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(Output</* @Nullable */ List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -176,8 +221,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+            return states(Output.of(states));
         }
 
         /**
@@ -196,9 +240,19 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder webAppFirewallPolicyId(@Nullable String webAppFirewallPolicyId) {
+        public Builder webAppFirewallPolicyId(Output</* @Nullable */ String> webAppFirewallPolicyId) {
             $.webAppFirewallPolicyId = webAppFirewallPolicyId;
             return this;
+        }
+
+        /**
+         * @param webAppFirewallPolicyId A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of related WebAppFirewallPolicy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder webAppFirewallPolicyId(@Nullable String webAppFirewallPolicyId) {
+            return webAppFirewallPolicyId(Output.of(webAppFirewallPolicyId));
         }
 
         public GetFirewallsArgs build() {

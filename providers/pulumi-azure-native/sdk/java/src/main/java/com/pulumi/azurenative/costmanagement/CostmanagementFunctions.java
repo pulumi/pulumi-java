@@ -28,10 +28,10 @@ import com.pulumi.azurenative.costmanagement.outputs.GetScheduledActionResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetSettingResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetViewByScopeResult;
 import com.pulumi.azurenative.costmanagement.outputs.GetViewResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CostmanagementFunctions {
     /**
@@ -39,7 +39,7 @@ public final class CostmanagementFunctions {
      * API Version: 2019-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCloudConnectorResult> getCloudConnector(GetCloudConnectorArgs args) {
+    public static Output<GetCloudConnectorResult> getCloudConnector(GetCloudConnectorArgs args) {
         return getCloudConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class CostmanagementFunctions {
      * API Version: 2019-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCloudConnectorResult> getCloudConnector(GetCloudConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getCloudConnector", TypeShape.of(GetCloudConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCloudConnectorResult> getCloudConnector(GetCloudConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getCloudConnector", TypeShape.of(GetCloudConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The cost allocation rule model definition
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCostAllocationRuleResult> getCostAllocationRule(GetCostAllocationRuleArgs args) {
+    public static Output<GetCostAllocationRuleResult> getCostAllocationRule(GetCostAllocationRuleArgs args) {
         return getCostAllocationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class CostmanagementFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCostAllocationRuleResult> getCostAllocationRule(GetCostAllocationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getCostAllocationRule", TypeShape.of(GetCostAllocationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCostAllocationRuleResult> getCostAllocationRule(GetCostAllocationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getCostAllocationRule", TypeShape.of(GetCostAllocationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An export resource.
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+    public static Output<GetExportResult> getExport(GetExportArgs args) {
         return getExport(args, InvokeOptions.Empty);
     }
     /**
@@ -79,15 +79,15 @@ public final class CostmanagementFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A report resource.
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportResult> getReport(GetReportArgs args) {
+    public static Output<GetReportResult> getReport(GetReportArgs args) {
         return getReport(args, InvokeOptions.Empty);
     }
     /**
@@ -95,15 +95,15 @@ public final class CostmanagementFunctions {
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportResult> getReport(GetReportArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReport", TypeShape.of(GetReportResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportResult> getReport(GetReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getReport", TypeShape.of(GetReportResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A report resource.
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByBillingAccountResult> getReportByBillingAccount(GetReportByBillingAccountArgs args) {
+    public static Output<GetReportByBillingAccountResult> getReportByBillingAccount(GetReportByBillingAccountArgs args) {
         return getReportByBillingAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -111,15 +111,15 @@ public final class CostmanagementFunctions {
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByBillingAccountResult> getReportByBillingAccount(GetReportByBillingAccountArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByBillingAccount", TypeShape.of(GetReportByBillingAccountResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportByBillingAccountResult> getReportByBillingAccount(GetReportByBillingAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getReportByBillingAccount", TypeShape.of(GetReportByBillingAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A report resource.
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByDepartmentResult> getReportByDepartment(GetReportByDepartmentArgs args) {
+    public static Output<GetReportByDepartmentResult> getReportByDepartment(GetReportByDepartmentArgs args) {
         return getReportByDepartment(args, InvokeOptions.Empty);
     }
     /**
@@ -127,15 +127,15 @@ public final class CostmanagementFunctions {
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByDepartmentResult> getReportByDepartment(GetReportByDepartmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByDepartment", TypeShape.of(GetReportByDepartmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportByDepartmentResult> getReportByDepartment(GetReportByDepartmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getReportByDepartment", TypeShape.of(GetReportByDepartmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A report resource.
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByResourceGroupNameResult> getReportByResourceGroupName(GetReportByResourceGroupNameArgs args) {
+    public static Output<GetReportByResourceGroupNameResult> getReportByResourceGroupName(GetReportByResourceGroupNameArgs args) {
         return getReportByResourceGroupName(args, InvokeOptions.Empty);
     }
     /**
@@ -143,15 +143,15 @@ public final class CostmanagementFunctions {
      * API Version: 2018-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetReportByResourceGroupNameResult> getReportByResourceGroupName(GetReportByResourceGroupNameArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByResourceGroupName", TypeShape.of(GetReportByResourceGroupNameResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReportByResourceGroupNameResult> getReportByResourceGroupName(GetReportByResourceGroupNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getReportByResourceGroupName", TypeShape.of(GetReportByResourceGroupNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Scheduled action definition.
      * API Version: 2022-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args) {
+    public static Output<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args) {
         return getScheduledAction(args, InvokeOptions.Empty);
     }
     /**
@@ -159,15 +159,15 @@ public final class CostmanagementFunctions {
      * API Version: 2022-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getScheduledAction", TypeShape.of(GetScheduledActionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledActionResult> getScheduledAction(GetScheduledActionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getScheduledAction", TypeShape.of(GetScheduledActionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Scheduled action definition.
      * API Version: 2022-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args) {
+    public static Output<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args) {
         return getScheduledActionByScope(args, InvokeOptions.Empty);
     }
     /**
@@ -175,15 +175,15 @@ public final class CostmanagementFunctions {
      * API Version: 2022-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getScheduledActionByScope", TypeShape.of(GetScheduledActionByScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledActionByScopeResult> getScheduledActionByScope(GetScheduledActionByScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getScheduledActionByScope", TypeShape.of(GetScheduledActionByScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * State of the myscope setting.
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetSettingResult> getSetting(GetSettingArgs args) {
+    public static Output<GetSettingResult> getSetting(GetSettingArgs args) {
         return getSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -191,15 +191,15 @@ public final class CostmanagementFunctions {
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetSettingResult> getSetting(GetSettingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getSetting", TypeShape.of(GetSettingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSettingResult> getSetting(GetSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getSetting", TypeShape.of(GetSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * States and configurations of Cost Analysis.
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
+    public static Output<GetViewResult> getView(GetViewArgs args) {
         return getView(args, InvokeOptions.Empty);
     }
     /**
@@ -207,15 +207,15 @@ public final class CostmanagementFunctions {
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
+    public static Output<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
     /**
      * States and configurations of Cost Analysis.
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetViewByScopeResult> getViewByScope(GetViewByScopeArgs args) {
+    public static Output<GetViewByScopeResult> getViewByScope(GetViewByScopeArgs args) {
         return getViewByScope(args, InvokeOptions.Empty);
     }
     /**
@@ -223,7 +223,7 @@ public final class CostmanagementFunctions {
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetViewByScopeResult> getViewByScope(GetViewByScopeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getViewByScope", TypeShape.of(GetViewByScopeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetViewByScopeResult> getViewByScope(GetViewByScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:costmanagement:getViewByScope", TypeShape.of(GetViewByScopeResult.class), args, Utilities.withVersion(options));
     }
 }

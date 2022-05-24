@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetRepositoryDiffsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,21 +22,21 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="baseVersion", required=true)
-    private String baseVersion;
+    private Output<String> baseVersion;
 
     /**
      * @return The commit or reference name to compare changes against.
      * 
      */
-    public String baseVersion() {
+    public Output<String> baseVersion() {
         return this.baseVersion;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoryDiffsFilter> filters;
+    private Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters;
 
-    public Optional<List<GetRepositoryDiffsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -44,14 +44,14 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isComparisonFromMergeBase")
-    private @Nullable Boolean isComparisonFromMergeBase;
+    private Output</* @Nullable */ Boolean> isComparisonFromMergeBase;
 
     /**
      * @return Boolean value to indicate whether to use merge base or most recent revision.
      * 
      */
-    public Optional<Boolean> isComparisonFromMergeBase() {
-        return Optional.ofNullable(this.isComparisonFromMergeBase);
+    public Output</* @Nullable */ Boolean> isComparisonFromMergeBase() {
+        return this.isComparisonFromMergeBase;
     }
 
     /**
@@ -59,13 +59,13 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -74,13 +74,13 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetVersion", required=true)
-    private String targetVersion;
+    private Output<String> targetVersion;
 
     /**
      * @return The commit or reference name where changes are coming from.
      * 
      */
-    public String targetVersion() {
+    public Output<String> targetVersion() {
         return this.targetVersion;
     }
 
@@ -118,14 +118,28 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder baseVersion(String baseVersion) {
+        public Builder baseVersion(Output<String> baseVersion) {
             $.baseVersion = baseVersion;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryDiffsFilter> filters) {
+        /**
+         * @param baseVersion The commit or reference name to compare changes against.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder baseVersion(String baseVersion) {
+            return baseVersion(Output.of(baseVersion));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetRepositoryDiffsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRepositoryDiffsFilter... filters) {
@@ -138,8 +152,29 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(@Nullable Boolean isComparisonFromMergeBase) {
+        public Builder isComparisonFromMergeBase(Output</* @Nullable */ Boolean> isComparisonFromMergeBase) {
             $.isComparisonFromMergeBase = isComparisonFromMergeBase;
+            return this;
+        }
+
+        /**
+         * @param isComparisonFromMergeBase Boolean value to indicate whether to use merge base or most recent revision.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isComparisonFromMergeBase(@Nullable Boolean isComparisonFromMergeBase) {
+            return isComparisonFromMergeBase(Output.of(isComparisonFromMergeBase));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -150,7 +185,17 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param targetVersion The commit or reference name where changes are coming from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetVersion(Output<String> targetVersion) {
+            $.targetVersion = targetVersion;
             return this;
         }
 
@@ -161,8 +206,7 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder targetVersion(String targetVersion) {
-            $.targetVersion = targetVersion;
-            return this;
+            return targetVersion(Output.of(targetVersion));
         }
 
         public GetRepositoryDiffsArgs build() {

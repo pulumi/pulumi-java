@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.oslogin_v1alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
     @Import(name="sshPublicKeyId", required=true)
-    private String sshPublicKeyId;
+    private Output<String> sshPublicKeyId;
 
-    public String sshPublicKeyId() {
+    public Output<String> sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -51,14 +52,22 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder sshPublicKeyId(String sshPublicKeyId) {
+        public Builder sshPublicKeyId(Output<String> sshPublicKeyId) {
             $.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
 
-        public Builder userId(String userId) {
+        public Builder sshPublicKeyId(String sshPublicKeyId) {
+            return sshPublicKeyId(Output.of(sshPublicKeyId));
+        }
+
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetSshPublicKeyArgs build() {

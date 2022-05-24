@@ -22,10 +22,10 @@ import com.pulumi.azurenative.timeseriesinsights.outputs.GetGen2EnvironmentResul
 import com.pulumi.azurenative.timeseriesinsights.outputs.GetIoTHubEventSourceResult;
 import com.pulumi.azurenative.timeseriesinsights.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.timeseriesinsights.outputs.GetReferenceDataSetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class TimeseriesinsightsFunctions {
     /**
@@ -33,7 +33,7 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -41,8 +41,8 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
@@ -53,7 +53,7 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
     /**
@@ -65,15 +65,15 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An event source that receives its data from an Azure EventHub.
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args) {
+    public static Output<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args) {
         return getEventHubEventSource(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventHubEventSource", TypeShape.of(GetEventHubEventSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getEventHubEventSource", TypeShape.of(GetEventHubEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
@@ -93,7 +93,7 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
-    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
+    public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
         return getEventSource(args, InvokeOptions.Empty);
     }
     /**
@@ -105,15 +105,15 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
-    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen1 environments have data retention limits.
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args) {
+    public static Output<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args) {
         return getGen1Environment(args, InvokeOptions.Empty);
     }
     /**
@@ -121,15 +121,15 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen1Environment", TypeShape.of(GetGen1EnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getGen1Environment", TypeShape.of(GetGen1EnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource. Gen2 environments do not have set data retention limits.
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args) {
+    public static Output<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args) {
         return getGen2Environment(args, InvokeOptions.Empty);
     }
     /**
@@ -137,15 +137,15 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen2Environment", TypeShape.of(GetGen2EnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getGen2Environment", TypeShape.of(GetGen2EnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An event source that receives its data from an Azure IoTHub.
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args) {
+    public static Output<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args) {
         return getIoTHubEventSource(args, InvokeOptions.Empty);
     }
     /**
@@ -153,15 +153,15 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getIoTHubEventSource", TypeShape.of(GetIoTHubEventSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getIoTHubEventSource", TypeShape.of(GetIoTHubEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-03-31-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -169,15 +169,15 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2021-03-31-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args) {
+    public static Output<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args) {
         return getReferenceDataSet(args, InvokeOptions.Empty);
     }
     /**
@@ -185,7 +185,7 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getReferenceDataSet", TypeShape.of(GetReferenceDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:timeseriesinsights:getReferenceDataSet", TypeShape.of(GetReferenceDataSetResult.class), args, Utilities.withVersion(options));
     }
 }

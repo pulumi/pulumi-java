@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmTraces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTraceAggregatedSnapshotDataArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM Domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetTraceAggregatedSnapshotDataArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="traceKey", required=true)
-    private String traceKey;
+    private Output<String> traceKey;
 
     /**
      * @return Unique Application Performance Monitoring trace identifier (traceId).
      * 
      */
-    public String traceKey() {
+    public Output<String> traceKey() {
         return this.traceKey;
     }
 
@@ -73,8 +74,29 @@ public final class GetTraceAggregatedSnapshotDataArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM Domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param traceKey Unique Application Performance Monitoring trace identifier (traceId).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder traceKey(Output<String> traceKey) {
+            $.traceKey = traceKey;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTraceAggregatedSnapshotDataArgs extends com.pulumi.resourc
          * 
          */
         public Builder traceKey(String traceKey) {
-            $.traceKey = traceKey;
-            return this;
+            return traceKey(Output.of(traceKey));
         }
 
         public GetTraceAggregatedSnapshotDataArgs build() {

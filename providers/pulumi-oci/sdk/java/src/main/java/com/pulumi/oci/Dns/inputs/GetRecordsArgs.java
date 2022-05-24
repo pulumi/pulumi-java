@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Dns.inputs.GetRecordsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The OCID of the compartment the resource belongs to.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain")
-    private @Nullable String domain;
+    private Output</* @Nullable */ String> domain;
 
     /**
      * @return Search by domain. Will match any record whose domain (case-insensitive) equals the provided value.
      * 
      */
-    public Optional<String> domain() {
-        return Optional.ofNullable(this.domain);
+    public Output</* @Nullable */ String> domain() {
+        return this.domain;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainContains")
-    private @Nullable String domainContains;
+    private Output</* @Nullable */ String> domainContains;
 
     /**
      * @return Search by domain. Will match any record whose domain (case-insensitive) contains the provided value.
      * 
      */
-    public Optional<String> domainContains() {
-        return Optional.ofNullable(this.domainContains);
+    public Output</* @Nullable */ String> domainContains() {
+        return this.domainContains;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRecordsFilter> filters;
+    private Output</* @Nullable */ List<GetRecordsFilter>> filters;
 
-    public Optional<List<GetRecordsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetRecordsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rtype")
-    private @Nullable String rtype;
+    private Output</* @Nullable */ String> rtype;
 
     /**
      * @return Search by record type. Will match any record whose [type](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4) (case-insensitive) equals the provided value.
      * 
      */
-    public Optional<String> rtype() {
-        return Optional.ofNullable(this.rtype);
+    public Output</* @Nullable */ String> rtype() {
+        return this.rtype;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortBy")
-    private @Nullable String sortBy;
+    private Output</* @Nullable */ String> sortBy;
 
     /**
      * @return The field by which to sort records. Allowed values are: domain|rtype|ttl
      * 
      */
-    public Optional<String> sortBy() {
-        return Optional.ofNullable(this.sortBy);
+    public Output</* @Nullable */ String> sortBy() {
+        return this.sortBy;
     }
 
     /**
@@ -103,14 +103,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortOrder")
-    private @Nullable String sortOrder;
+    private Output</* @Nullable */ String> sortOrder;
 
     /**
      * @return The order to sort the resources. Allowed values are: ASC|DESC
      * 
      */
-    public Optional<String> sortOrder() {
-        return Optional.ofNullable(this.sortOrder);
+    public Output</* @Nullable */ String> sortOrder() {
+        return this.sortOrder;
     }
 
     /**
@@ -122,7 +122,7 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      */
     @Deprecated /* The 'oci_dns_records' resource has been deprecated. Please use 'oci_dns_rrset' instead. */
     @Import(name="zoneNameOrId", required=true)
-    private String zoneNameOrId;
+    private Output<String> zoneNameOrId;
 
     /**
      * @return The name or OCID of the target zone.
@@ -132,7 +132,7 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Deprecated /* The 'oci_dns_records' resource has been deprecated. Please use 'oci_dns_rrset' instead. */
-    public String zoneNameOrId() {
+    public Output<String> zoneNameOrId() {
         return this.zoneNameOrId;
     }
 
@@ -141,14 +141,14 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneVersion")
-    private @Nullable String zoneVersion;
+    private Output</* @Nullable */ String> zoneVersion;
 
     /**
      * @return The version of the zone for which data is requested.
      * 
      */
-    public Optional<String> zoneVersion() {
-        return Optional.ofNullable(this.zoneVersion);
+    public Output</* @Nullable */ String> zoneVersion() {
+        return this.zoneVersion;
     }
 
     private GetRecordsArgs() {}
@@ -189,8 +189,29 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment the resource belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param domain Search by domain. Will match any record whose domain (case-insensitive) equals the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(Output</* @Nullable */ String> domain) {
+            $.domain = domain;
             return this;
         }
 
@@ -201,7 +222,17 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder domain(@Nullable String domain) {
-            $.domain = domain;
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param domainContains Search by domain. Will match any record whose domain (case-insensitive) contains the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainContains(Output</* @Nullable */ String> domainContains) {
+            $.domainContains = domainContains;
             return this;
         }
 
@@ -212,13 +243,16 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder domainContains(@Nullable String domainContains) {
-            $.domainContains = domainContains;
+            return domainContains(Output.of(domainContains));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetRecordsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetRecordsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetRecordsFilter... filters) {
@@ -231,8 +265,29 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder rtype(@Nullable String rtype) {
+        public Builder rtype(Output</* @Nullable */ String> rtype) {
             $.rtype = rtype;
+            return this;
+        }
+
+        /**
+         * @param rtype Search by record type. Will match any record whose [type](https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4) (case-insensitive) equals the provided value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rtype(@Nullable String rtype) {
+            return rtype(Output.of(rtype));
+        }
+
+        /**
+         * @param sortBy The field by which to sort records. Allowed values are: domain|rtype|ttl
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortBy(Output</* @Nullable */ String> sortBy) {
+            $.sortBy = sortBy;
             return this;
         }
 
@@ -243,7 +298,17 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sortBy(@Nullable String sortBy) {
-            $.sortBy = sortBy;
+            return sortBy(Output.of(sortBy));
+        }
+
+        /**
+         * @param sortOrder The order to sort the resources. Allowed values are: ASC|DESC
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortOrder(Output</* @Nullable */ String> sortOrder) {
+            $.sortOrder = sortOrder;
             return this;
         }
 
@@ -254,7 +319,21 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sortOrder(@Nullable String sortOrder) {
-            $.sortOrder = sortOrder;
+            return sortOrder(Output.of(sortOrder));
+        }
+
+        /**
+         * @param zoneNameOrId The name or OCID of the target zone.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The &#39;oci_dns_records&#39; resource has been deprecated. Please use &#39;oci_dns_rrset&#39; instead.
+         * 
+         */
+        @Deprecated /* The 'oci_dns_records' resource has been deprecated. Please use 'oci_dns_rrset' instead. */
+        public Builder zoneNameOrId(Output<String> zoneNameOrId) {
+            $.zoneNameOrId = zoneNameOrId;
             return this;
         }
 
@@ -269,7 +348,17 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          */
         @Deprecated /* The 'oci_dns_records' resource has been deprecated. Please use 'oci_dns_rrset' instead. */
         public Builder zoneNameOrId(String zoneNameOrId) {
-            $.zoneNameOrId = zoneNameOrId;
+            return zoneNameOrId(Output.of(zoneNameOrId));
+        }
+
+        /**
+         * @param zoneVersion The version of the zone for which data is requested.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zoneVersion(Output</* @Nullable */ String> zoneVersion) {
+            $.zoneVersion = zoneVersion;
             return this;
         }
 
@@ -280,8 +369,7 @@ public final class GetRecordsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder zoneVersion(@Nullable String zoneVersion) {
-            $.zoneVersion = zoneVersion;
-            return this;
+            return zoneVersion(Output.of(zoneVersion));
         }
 
         public GetRecordsArgs build() {

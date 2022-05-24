@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Nosql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Nosql.inputs.GetIndexesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The ID of a table&#39;s compartment. When a table is identified by name, the compartmentId is often needed to provide context for interpreting the name.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetIndexesFilter> filters;
+    private Output</* @Nullable */ List<GetIndexesFilter>> filters;
 
-    public Optional<List<GetIndexesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetIndexesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A shell-globbing-style (*?[]) filter for names.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return Filter list by the lifecycle state of the item.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -73,13 +73,13 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableNameOrId", required=true)
-    private String tableNameOrId;
+    private Output<String> tableNameOrId;
 
     /**
      * @return A table name within the compartment, or a table OCID.
      * 
      */
-    public String tableNameOrId() {
+    public Output<String> tableNameOrId() {
         return this.tableNameOrId;
     }
 
@@ -117,14 +117,28 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIndexesFilter> filters) {
+        /**
+         * @param compartmentId The ID of a table&#39;s compartment. When a table is identified by name, the compartmentId is often needed to provide context for interpreting the name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetIndexesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetIndexesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetIndexesFilter... filters) {
@@ -137,8 +151,29 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A shell-globbing-style (*?[]) filter for names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state Filter list by the lifecycle state of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -149,7 +184,17 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param tableNameOrId A table name within the compartment, or a table OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableNameOrId(Output<String> tableNameOrId) {
+            $.tableNameOrId = tableNameOrId;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetIndexesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableNameOrId(String tableNameOrId) {
-            $.tableNameOrId = tableNameOrId;
-            return this;
+            return tableNameOrId(Output.of(tableNameOrId));
         }
 
         public GetIndexesArgs build() {

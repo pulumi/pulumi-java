@@ -8,10 +8,10 @@ import com.pulumi.azurenative.aad.inputs.GetDomainServiceArgs;
 import com.pulumi.azurenative.aad.inputs.GetOuContainerArgs;
 import com.pulumi.azurenative.aad.outputs.GetDomainServiceResult;
 import com.pulumi.azurenative.aad.outputs.GetOuContainerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AadFunctions {
     /**
@@ -19,7 +19,7 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args) {
+    public static Output<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args) {
         return getDomainService(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource for OuContainer.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args) {
+    public static Output<GetOuContainerResult> getOuContainer(GetOuContainerArgs args) {
         return getOuContainer(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOuContainerResult> getOuContainer(GetOuContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
     }
 }

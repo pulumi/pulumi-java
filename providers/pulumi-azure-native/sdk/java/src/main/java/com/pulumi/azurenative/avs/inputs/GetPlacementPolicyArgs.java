@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return Name of the cluster in the private cloud
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="placementPolicyName", required=true)
-    private String placementPolicyName;
+    private Output<String> placementPolicyName;
 
     /**
      * @return Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
      * 
      */
-    public String placementPolicyName() {
+    public Output<String> placementPolicyName() {
         return this.placementPolicyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -62,13 +63,13 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName Name of the cluster in the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param placementPolicyName Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder placementPolicyName(Output<String> placementPolicyName) {
+            $.placementPolicyName = placementPolicyName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder placementPolicyName(String placementPolicyName) {
-            $.placementPolicyName = placementPolicyName;
+            return placementPolicyName(Output.of(placementPolicyName));
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(Output<String> privateCloudName) {
+            $.privateCloudName = privateCloudName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder privateCloudName(String privateCloudName) {
-            $.privateCloudName = privateCloudName;
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetPlacementPolicyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPlacementPolicyArgs build() {

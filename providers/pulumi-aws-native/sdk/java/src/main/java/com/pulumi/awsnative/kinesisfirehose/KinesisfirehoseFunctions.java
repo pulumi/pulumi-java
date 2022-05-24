@@ -6,24 +6,24 @@ package com.pulumi.awsnative.kinesisfirehose;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.kinesisfirehose.inputs.GetDeliveryStreamArgs;
 import com.pulumi.awsnative.kinesisfirehose.outputs.GetDeliveryStreamResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KinesisfirehoseFunctions {
     /**
      * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
      * 
      */
-    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args) {
+    public static Output<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args) {
         return getDeliveryStream(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
      * 
      */
-    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args, Utilities.withVersion(options));
     }
 }

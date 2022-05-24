@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Opsi.inputs.GetExadataInsightsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -37,14 +37,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return A flag to search all resources within a given compartment and all sub-compartments.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     /**
@@ -52,14 +52,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enterpriseManagerBridgeId")
-    private @Nullable String enterpriseManagerBridgeId;
+    private Output</* @Nullable */ String> enterpriseManagerBridgeId;
 
     /**
      * @return Unique Enterprise Manager bridge identifier
      * 
      */
-    public Optional<String> enterpriseManagerBridgeId() {
-        return Optional.ofNullable(this.enterpriseManagerBridgeId);
+    public Output</* @Nullable */ String> enterpriseManagerBridgeId() {
+        return this.enterpriseManagerBridgeId;
     }
 
     /**
@@ -67,21 +67,21 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exadataTypes")
-    private @Nullable List<String> exadataTypes;
+    private Output</* @Nullable */ List<String>> exadataTypes;
 
     /**
      * @return Filter by one or more Exadata types. Possible value are DBMACHINE, EXACS, and EXACC.
      * 
      */
-    public Optional<List<String>> exadataTypes() {
-        return Optional.ofNullable(this.exadataTypes);
+    public Output</* @Nullable */ List<String>> exadataTypes() {
+        return this.exadataTypes;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetExadataInsightsFilter> filters;
+    private Output</* @Nullable */ List<GetExadataInsightsFilter>> filters;
 
-    public Optional<List<GetExadataInsightsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetExadataInsightsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Optional list of Exadata insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -104,14 +104,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private Output</* @Nullable */ List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Optional<List<String>> states() {
-        return Optional.ofNullable(this.states);
+    public Output</* @Nullable */ List<String>> states() {
+        return this.states;
     }
 
     /**
@@ -119,14 +119,14 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private Output</* @Nullable */ List<String>> statuses;
 
     /**
      * @return Resource Status
      * 
      */
-    public Optional<List<String>> statuses() {
-        return Optional.ofNullable(this.statuses);
+    public Output</* @Nullable */ List<String>> statuses() {
+        return this.statuses;
     }
 
     private GetExadataInsightsArgs() {}
@@ -166,8 +166,29 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree A flag to search all resources within a given compartment and all sub-compartments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -178,7 +199,17 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param enterpriseManagerBridgeId Unique Enterprise Manager bridge identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enterpriseManagerBridgeId(Output</* @Nullable */ String> enterpriseManagerBridgeId) {
+            $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
             return this;
         }
 
@@ -189,7 +220,17 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder enterpriseManagerBridgeId(@Nullable String enterpriseManagerBridgeId) {
-            $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
+            return enterpriseManagerBridgeId(Output.of(enterpriseManagerBridgeId));
+        }
+
+        /**
+         * @param exadataTypes Filter by one or more Exadata types. Possible value are DBMACHINE, EXACS, and EXACC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataTypes(Output</* @Nullable */ List<String>> exadataTypes) {
+            $.exadataTypes = exadataTypes;
             return this;
         }
 
@@ -200,8 +241,7 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder exadataTypes(@Nullable List<String> exadataTypes) {
-            $.exadataTypes = exadataTypes;
-            return this;
+            return exadataTypes(Output.of(exadataTypes));
         }
 
         /**
@@ -214,9 +254,13 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
             return exadataTypes(List.of(exadataTypes));
         }
 
-        public Builder filters(@Nullable List<GetExadataInsightsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetExadataInsightsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetExadataInsightsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetExadataInsightsFilter... filters) {
@@ -229,8 +273,29 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Optional list of Exadata insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param states Lifecycle states
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(Output</* @Nullable */ List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -241,8 +306,7 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+            return states(Output.of(states));
         }
 
         /**
@@ -261,9 +325,19 @@ public final class GetExadataInsightsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
+        public Builder statuses(Output</* @Nullable */ List<String>> statuses) {
             $.statuses = statuses;
             return this;
+        }
+
+        /**
+         * @param statuses Resource Status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(@Nullable List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**

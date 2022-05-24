@@ -8,38 +8,38 @@ import com.pulumi.awsnative.detective.inputs.GetGraphArgs;
 import com.pulumi.awsnative.detective.inputs.GetMemberInvitationArgs;
 import com.pulumi.awsnative.detective.outputs.GetGraphResult;
 import com.pulumi.awsnative.detective.outputs.GetMemberInvitationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DetectiveFunctions {
     /**
      * Resource schema for AWS::Detective::Graph
      * 
      */
-    public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args) {
+    public static Output<GetGraphResult> getGraph(GetGraphArgs args) {
         return getGraph(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Detective::Graph
      * 
      */
-    public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:detective:getGraph", TypeShape.of(GetGraphResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGraphResult> getGraph(GetGraphArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:detective:getGraph", TypeShape.of(GetGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Detective::MemberInvitation
      * 
      */
-    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args) {
+    public static Output<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args) {
         return getMemberInvitation(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Detective::MemberInvitation
      * 
      */
-    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:detective:getMemberInvitation", TypeShape.of(GetMemberInvitationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:detective:getMemberInvitation", TypeShape.of(GetMemberInvitationResult.class), args, Utilities.withVersion(options));
     }
 }

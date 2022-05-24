@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Streaming.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Streaming.inputs.GetStreamsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The OCID of the compartment. Is exclusive with the `streamPoolId` parameter. One of them is required.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetStreamsFilter> filters;
+    private Output</* @Nullable */ List<GetStreamsFilter>> filters;
 
-    public Optional<List<GetStreamsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetStreamsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return A filter to return only resources that match the given ID exactly.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streamPoolId")
-    private @Nullable String streamPoolId;
+    private Output</* @Nullable */ String> streamPoolId;
 
     /**
      * @return The OCID of the stream pool. Is exclusive with the `compartmentId` parameter. One of them is required.
      * 
      */
-    public Optional<String> streamPoolId() {
-        return Optional.ofNullable(this.streamPoolId);
+    public Output</* @Nullable */ String> streamPoolId() {
+        return this.streamPoolId;
     }
 
     private GetStreamsArgs() {}
@@ -133,14 +133,28 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetStreamsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment. Is exclusive with the `streamPoolId` parameter. One of them is required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetStreamsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetStreamsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetStreamsFilter... filters) {
@@ -153,8 +167,29 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id A filter to return only resources that match the given ID exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -165,7 +200,17 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -176,7 +221,17 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param streamPoolId The OCID of the stream pool. Is exclusive with the `compartmentId` parameter. One of them is required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder streamPoolId(Output</* @Nullable */ String> streamPoolId) {
+            $.streamPoolId = streamPoolId;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetStreamsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder streamPoolId(@Nullable String streamPoolId) {
-            $.streamPoolId = streamPoolId;
-            return this;
+            return streamPoolId(Output.of(streamPoolId));
         }
 
         public GetStreamsArgs build() {

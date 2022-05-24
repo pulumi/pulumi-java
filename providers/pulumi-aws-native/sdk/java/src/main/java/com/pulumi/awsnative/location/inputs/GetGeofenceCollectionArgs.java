@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetGeofenceCollectionArgs extends com.pulumi.resources.Invoke
     public static final GetGeofenceCollectionArgs Empty = new GetGeofenceCollectionArgs();
 
     @Import(name="collectionName", required=true)
-    private String collectionName;
+    private Output<String> collectionName;
 
-    public String collectionName() {
+    public Output<String> collectionName() {
         return this.collectionName;
     }
 
@@ -43,9 +44,13 @@ public final class GetGeofenceCollectionArgs extends com.pulumi.resources.Invoke
             $ = new GetGeofenceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder collectionName(String collectionName) {
+        public Builder collectionName(Output<String> collectionName) {
             $.collectionName = collectionName;
             return this;
+        }
+
+        public Builder collectionName(String collectionName) {
+            return collectionName(Output.of(collectionName));
         }
 
         public GetGeofenceCollectionArgs build() {

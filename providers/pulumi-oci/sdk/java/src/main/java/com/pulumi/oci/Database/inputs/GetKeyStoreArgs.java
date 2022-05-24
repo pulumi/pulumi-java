@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeyStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyStoreId", required=true)
-    private String keyStoreId;
+    private Output<String> keyStoreId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the key store.
      * 
      */
-    public String keyStoreId() {
+    public Output<String> keyStoreId() {
         return this.keyStoreId;
     }
 
@@ -57,9 +58,19 @@ public final class GetKeyStoreArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyStoreId(String keyStoreId) {
+        public Builder keyStoreId(Output<String> keyStoreId) {
             $.keyStoreId = keyStoreId;
             return this;
+        }
+
+        /**
+         * @param keyStoreId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the key store.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStoreId(String keyStoreId) {
+            return keyStoreId(Output.of(keyStoreId));
         }
 
         public GetKeyStoreArgs build() {

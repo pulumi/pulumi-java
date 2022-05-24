@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublicIpPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpPoolId", required=true)
-    private String publicIpPoolId;
+    private Output<String> publicIpPoolId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the public IP pool.
      * 
      */
-    public String publicIpPoolId() {
+    public Output<String> publicIpPoolId() {
         return this.publicIpPoolId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPublicIpPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPoolId(String publicIpPoolId) {
+        public Builder publicIpPoolId(Output<String> publicIpPoolId) {
             $.publicIpPoolId = publicIpPoolId;
             return this;
+        }
+
+        /**
+         * @param publicIpPoolId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the public IP pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicIpPoolId(String publicIpPoolId) {
+            return publicIpPoolId(Output.of(publicIpPoolId));
         }
 
         public GetPublicIpPoolArgs build() {

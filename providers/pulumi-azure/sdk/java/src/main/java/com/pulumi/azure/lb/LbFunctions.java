@@ -10,10 +10,10 @@ import com.pulumi.azure.lb.inputs.GetLBRuleArgs;
 import com.pulumi.azure.lb.outputs.GetBackendAddressPoolResult;
 import com.pulumi.azure.lb.outputs.GetLBResult;
 import com.pulumi.azure.lb.outputs.GetLBRuleResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class LbFunctions {
     /**
@@ -51,7 +51,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackendAddressPoolResult> getBackendAddressPool(GetBackendAddressPoolArgs args) {
+    public static Output<GetBackendAddressPoolResult> getBackendAddressPool(GetBackendAddressPoolArgs args) {
         return getBackendAddressPool(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackendAddressPoolResult> getBackendAddressPool(GetBackendAddressPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:lb/getBackendAddressPool:getBackendAddressPool", TypeShape.of(GetBackendAddressPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackendAddressPoolResult> getBackendAddressPool(GetBackendAddressPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:lb/getBackendAddressPool:getBackendAddressPool", TypeShape.of(GetBackendAddressPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Load Balancer
@@ -121,7 +121,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBResult> getLB(GetLBArgs args) {
+    public static Output<GetLBResult> getLB(GetLBArgs args) {
         return getLB(args, InvokeOptions.Empty);
     }
     /**
@@ -153,8 +153,8 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBResult> getLB(GetLBArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:lb/getLB:getLB", TypeShape.of(GetLBResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLBResult> getLB(GetLBArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:lb/getLB:getLB", TypeShape.of(GetLBResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Load Balancer Rule.
@@ -191,7 +191,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBRuleResult> getLBRule(GetLBRuleArgs args) {
+    public static Output<GetLBRuleResult> getLBRule(GetLBRuleArgs args) {
         return getLBRule(args, InvokeOptions.Empty);
     }
     /**
@@ -229,7 +229,7 @@ public final class LbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLBRuleResult> getLBRule(GetLBRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:lb/getLBRule:getLBRule", TypeShape.of(GetLBRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLBRuleResult> getLBRule(GetLBRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:lb/getLBRule:getLBRule", TypeShape.of(GetLBRuleResult.class), args, Utilities.withVersion(options));
     }
 }

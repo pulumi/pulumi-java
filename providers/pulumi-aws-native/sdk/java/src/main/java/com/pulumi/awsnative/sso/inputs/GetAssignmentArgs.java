@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sso.inputs;
 
 import com.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import com.pulumi.awsnative.sso.enums.AssignmentTargetType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceArn", required=true)
-    private String instanceArn;
+    private Output<String> instanceArn;
 
     /**
      * @return The sso instance that the permission set is owned.
      * 
      */
-    public String instanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -34,13 +35,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissionSetArn", required=true)
-    private String permissionSetArn;
+    private Output<String> permissionSetArn;
 
     /**
      * @return The permission set that the assignemt will be assigned
      * 
      */
-    public String permissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -49,13 +50,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-    private String principalId;
+    private Output<String> principalId;
 
     /**
      * @return The assignee&#39;s identifier, user id/group id
      * 
      */
-    public String principalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -64,13 +65,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalType", required=true)
-    private AssignmentPrincipalType principalType;
+    private Output<AssignmentPrincipalType> principalType;
 
     /**
      * @return The assignee&#39;s type, user/group
      * 
      */
-    public AssignmentPrincipalType principalType() {
+    public Output<AssignmentPrincipalType> principalType() {
         return this.principalType;
     }
 
@@ -79,13 +80,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-    private String targetId;
+    private Output<String> targetId;
 
     /**
      * @return The account id to be provisioned.
      * 
      */
-    public String targetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -94,13 +95,13 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetType", required=true)
-    private AssignmentTargetType targetType;
+    private Output<AssignmentTargetType> targetType;
 
     /**
      * @return The type of resource to be provsioned to, only aws account now
      * 
      */
-    public AssignmentTargetType targetType() {
+    public Output<AssignmentTargetType> targetType() {
         return this.targetType;
     }
 
@@ -139,8 +140,29 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceArn(String instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
+            return this;
+        }
+
+        /**
+         * @param instanceArn The sso instance that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
+        }
+
+        /**
+         * @param permissionSetArn The permission set that the assignemt will be assigned
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissionSetArn(Output<String> permissionSetArn) {
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
 
@@ -151,7 +173,17 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder permissionSetArn(String permissionSetArn) {
-            $.permissionSetArn = permissionSetArn;
+            return permissionSetArn(Output.of(permissionSetArn));
+        }
+
+        /**
+         * @param principalId The assignee&#39;s identifier, user id/group id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalId(Output<String> principalId) {
+            $.principalId = principalId;
             return this;
         }
 
@@ -162,7 +194,17 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder principalId(String principalId) {
-            $.principalId = principalId;
+            return principalId(Output.of(principalId));
+        }
+
+        /**
+         * @param principalType The assignee&#39;s type, user/group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalType(Output<AssignmentPrincipalType> principalType) {
+            $.principalType = principalType;
             return this;
         }
 
@@ -173,7 +215,17 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder principalType(AssignmentPrincipalType principalType) {
-            $.principalType = principalType;
+            return principalType(Output.of(principalType));
+        }
+
+        /**
+         * @param targetId The account id to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(Output<String> targetId) {
+            $.targetId = targetId;
             return this;
         }
 
@@ -184,7 +236,17 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder targetId(String targetId) {
-            $.targetId = targetId;
+            return targetId(Output.of(targetId));
+        }
+
+        /**
+         * @param targetType The type of resource to be provsioned to, only aws account now
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetType(Output<AssignmentTargetType> targetType) {
+            $.targetType = targetType;
             return this;
         }
 
@@ -195,8 +257,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder targetType(AssignmentTargetType targetType) {
-            $.targetType = targetType;
-            return this;
+            return targetType(Output.of(targetType));
         }
 
         public GetAssignmentArgs build() {

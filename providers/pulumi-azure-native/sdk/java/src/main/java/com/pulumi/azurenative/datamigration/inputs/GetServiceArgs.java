@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datamigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return Name of the resource group
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return Name of the service
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupName(String groupName) {
+        public Builder groupName(Output<String> groupName) {
             $.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetServiceArgs build() {

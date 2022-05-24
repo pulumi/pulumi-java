@@ -14,80 +14,80 @@ import com.pulumi.awsnative.memorydb.outputs.GetClusterResult;
 import com.pulumi.awsnative.memorydb.outputs.GetParameterGroupResult;
 import com.pulumi.awsnative.memorydb.outputs.GetSubnetGroupResult;
 import com.pulumi.awsnative.memorydb.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class MemorydbFunctions {
     /**
      * Resource Type definition for AWS::MemoryDB::ACL
      * 
      */
-    public static CompletableFuture<GetACLResult> getACL(GetACLArgs args) {
+    public static Output<GetACLResult> getACL(GetACLArgs args) {
         return getACL(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::MemoryDB::ACL
      * 
      */
-    public static CompletableFuture<GetACLResult> getACL(GetACLArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args, Utilities.withVersion(options));
+    public static Output<GetACLResult> getACL(GetACLArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:memorydb:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:memorydb:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
      * 
      */
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
+    public static Output<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
         return getParameterGroup(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
      * 
      */
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:memorydb:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:memorydb:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
         return getSubnetGroup(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::MemoryDB::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::MemoryDB::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:memorydb:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:memorydb:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

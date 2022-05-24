@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return Name of the certificate to retrieve.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-    private String provisioningServiceName;
+    private Output<String> provisioningServiceName;
 
     /**
      * @return Name of the provisioning service the certificate is associated with.
      * 
      */
-    public String provisioningServiceName() {
+    public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group identifier.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
+            return this;
+        }
+
+        /**
+         * @param certificateName Name of the certificate to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param provisioningServiceName Name of the provisioning service the certificate is associated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningServiceName(Output<String> provisioningServiceName) {
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder provisioningServiceName(String provisioningServiceName) {
-            $.provisioningServiceName = provisioningServiceName;
+            return provisioningServiceName(Output.of(provisioningServiceName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDpsCertificateArgs build() {

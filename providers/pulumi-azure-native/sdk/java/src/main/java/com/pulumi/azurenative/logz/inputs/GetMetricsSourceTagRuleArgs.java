@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logz.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="metricsSourceName", required=true)
-    private String metricsSourceName;
+    private Output<String> metricsSourceName;
 
     /**
      * @return Metrics Account resource name
      * 
      */
-    public String metricsSourceName() {
+    public Output<String> metricsSourceName() {
         return this.metricsSourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="monitorName", required=true)
-    private String monitorName;
+    private Output<String> monitorName;
 
     /**
      * @return Monitor resource name
      * 
      */
-    public String monitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -47,20 +48,20 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
-    private String ruleSetName;
+    private Output<String> ruleSetName;
 
-    public String ruleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
@@ -97,8 +98,29 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder metricsSourceName(String metricsSourceName) {
+        public Builder metricsSourceName(Output<String> metricsSourceName) {
             $.metricsSourceName = metricsSourceName;
+            return this;
+        }
+
+        /**
+         * @param metricsSourceName Metrics Account resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metricsSourceName(String metricsSourceName) {
+            return metricsSourceName(Output.of(metricsSourceName));
+        }
+
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorName(Output<String> monitorName) {
+            $.monitorName = monitorName;
             return this;
         }
 
@@ -109,7 +131,17 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder monitorName(String monitorName) {
-            $.monitorName = monitorName;
+            return monitorName(Output.of(monitorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -120,13 +152,16 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder ruleSetName(Output<String> ruleSetName) {
+            $.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(String ruleSetName) {
-            $.ruleSetName = ruleSetName;
-            return this;
+            return ruleSetName(Output.of(ruleSetName));
         }
 
         public GetMetricsSourceTagRuleArgs build() {

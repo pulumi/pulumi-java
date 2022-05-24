@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ServiceCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateApplicationPackageArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateApplicationPackageId", required=true)
-    private String privateApplicationPackageId;
+    private Output<String> privateApplicationPackageId;
 
     /**
      * @return The unique identifier for the private application package.
      * 
      */
-    public String privateApplicationPackageId() {
+    public Output<String> privateApplicationPackageId() {
         return this.privateApplicationPackageId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPrivateApplicationPackageArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder privateApplicationPackageId(String privateApplicationPackageId) {
+        public Builder privateApplicationPackageId(Output<String> privateApplicationPackageId) {
             $.privateApplicationPackageId = privateApplicationPackageId;
             return this;
+        }
+
+        /**
+         * @param privateApplicationPackageId The unique identifier for the private application package.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateApplicationPackageId(String privateApplicationPackageId) {
+            return privateApplicationPackageId(Output.of(privateApplicationPackageId));
         }
 
         public GetPrivateApplicationPackageArgs build() {

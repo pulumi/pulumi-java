@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="canonicalService", required=true)
-    private String canonicalService;
+    private Output<String> canonicalService;
 
     /**
      * @return The name of the canonical service underlying this service.
      * Corresponds to the destination_canonical_service_name metric label in label in Istio metrics.
      * 
      */
-    public String canonicalService() {
+    public Output<String> canonicalService() {
         return this.canonicalService;
     }
 
@@ -37,14 +37,14 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="canonicalServiceNamespace", required=true)
-    private String canonicalServiceNamespace;
+    private Output<String> canonicalServiceNamespace;
 
     /**
      * @return The namespace of the canonical service underlying this service.
      * Corresponds to the destination_canonical_service_namespace metric label in Istio metrics.
      * 
      */
-    public String canonicalServiceNamespace() {
+    public Output<String> canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
 
@@ -54,14 +54,14 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="meshUid", required=true)
-    private String meshUid;
+    private Output<String> meshUid;
 
     /**
      * @return Identifier for the mesh in which this Istio service is defined.
      * Corresponds to the meshUid metric label in Istio metrics.
      * 
      */
-    public String meshUid() {
+    public Output<String> meshUid() {
         return this.meshUid;
     }
 
@@ -71,15 +71,15 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetIstioCanonicalServiceArgs() {}
@@ -116,8 +116,31 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder canonicalService(String canonicalService) {
+        public Builder canonicalService(Output<String> canonicalService) {
             $.canonicalService = canonicalService;
+            return this;
+        }
+
+        /**
+         * @param canonicalService The name of the canonical service underlying this service.
+         * Corresponds to the destination_canonical_service_name metric label in label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canonicalService(String canonicalService) {
+            return canonicalService(Output.of(canonicalService));
+        }
+
+        /**
+         * @param canonicalServiceNamespace The namespace of the canonical service underlying this service.
+         * Corresponds to the destination_canonical_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canonicalServiceNamespace(Output<String> canonicalServiceNamespace) {
+            $.canonicalServiceNamespace = canonicalServiceNamespace;
             return this;
         }
 
@@ -129,7 +152,18 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
-            $.canonicalServiceNamespace = canonicalServiceNamespace;
+            return canonicalServiceNamespace(Output.of(canonicalServiceNamespace));
+        }
+
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined.
+         * Corresponds to the meshUid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder meshUid(Output<String> meshUid) {
+            $.meshUid = meshUid;
             return this;
         }
 
@@ -141,7 +175,18 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder meshUid(String meshUid) {
-            $.meshUid = meshUid;
+            return meshUid(Output.of(meshUid));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -153,8 +198,7 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetIstioCanonicalServiceArgs build() {

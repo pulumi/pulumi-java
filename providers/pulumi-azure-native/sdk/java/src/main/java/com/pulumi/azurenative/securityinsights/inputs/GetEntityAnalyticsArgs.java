@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.securityinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-    private String operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     /**
      * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    public String operationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -32,13 +33,13 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="settingsName", required=true)
-    private String settingsName;
+    private Output<String> settingsName;
 
     /**
      * @return The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
      * 
      */
-    public String settingsName() {
+    public Output<String> settingsName() {
         return this.settingsName;
     }
 
@@ -62,13 +63,13 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
+            return this;
+        }
+
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param settingsName The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
+         * 
+         * @return builder
+         * 
+         */
+        public Builder settingsName(Output<String> settingsName) {
+            $.settingsName = settingsName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder settingsName(String settingsName) {
-            $.settingsName = settingsName;
+            return settingsName(Output.of(settingsName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetEntityAnalyticsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetEntityAnalyticsArgs build() {

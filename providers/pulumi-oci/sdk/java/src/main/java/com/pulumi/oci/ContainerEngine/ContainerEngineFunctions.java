@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ContainerEngine;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -27,7 +28,6 @@ import com.pulumi.oci.ContainerEngine.outputs.GetWorkRequestErrorsResult;
 import com.pulumi.oci.ContainerEngine.outputs.GetWorkRequestLogEntriesResult;
 import com.pulumi.oci.ContainerEngine.outputs.GetWorkRequestsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ContainerEngineFunctions {
     /**
@@ -38,7 +38,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterKubeConfigResult> getClusterKubeConfig(GetClusterKubeConfigArgs args) {
+    public static Output<GetClusterKubeConfigResult> getClusterKubeConfig(GetClusterKubeConfigArgs args) {
         return getClusterKubeConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -49,8 +49,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterKubeConfigResult> getClusterKubeConfig(GetClusterKubeConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getClusterKubeConfig:getClusterKubeConfig", TypeShape.of(GetClusterKubeConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterKubeConfigResult> getClusterKubeConfig(GetClusterKubeConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getClusterKubeConfig:getClusterKubeConfig", TypeShape.of(GetClusterKubeConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Cluster Option resource in Oracle Cloud Infrastructure Container Engine service.
@@ -60,7 +60,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterOptionResult> getClusterOption(GetClusterOptionArgs args) {
+    public static Output<GetClusterOptionResult> getClusterOption(GetClusterOptionArgs args) {
         return getClusterOption(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterOptionResult> getClusterOption(GetClusterOptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getClusterOption:getClusterOption", TypeShape.of(GetClusterOptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterOptionResult> getClusterOption(GetClusterOptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getClusterOption:getClusterOption", TypeShape.of(GetClusterOptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Clusters in Oracle Cloud Infrastructure Container Engine service.
@@ -82,7 +82,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClustersResult> getClusters(GetClustersArgs args) {
+    public static Output<GetClustersResult> getClusters(GetClustersArgs args) {
         return getClusters(args, InvokeOptions.Empty);
     }
     /**
@@ -93,14 +93,14 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClustersResult> getClusters(GetClustersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClustersResult> getClusters(GetClustersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetMigrateToNativeVcnStatusResult> getMigrateToNativeVcnStatus(GetMigrateToNativeVcnStatusArgs args) {
+    public static Output<GetMigrateToNativeVcnStatusResult> getMigrateToNativeVcnStatus(GetMigrateToNativeVcnStatusArgs args) {
         return getMigrateToNativeVcnStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMigrateToNativeVcnStatusResult> getMigrateToNativeVcnStatus(GetMigrateToNativeVcnStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getMigrateToNativeVcnStatus:getMigrateToNativeVcnStatus", TypeShape.of(GetMigrateToNativeVcnStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMigrateToNativeVcnStatusResult> getMigrateToNativeVcnStatus(GetMigrateToNativeVcnStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getMigrateToNativeVcnStatus:getMigrateToNativeVcnStatus", TypeShape.of(GetMigrateToNativeVcnStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Node Pool resource in Oracle Cloud Infrastructure Container Engine service.
@@ -110,7 +110,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args) {
+    public static Output<GetNodePoolResult> getNodePool(GetNodePoolArgs args) {
         return getNodePool(args, InvokeOptions.Empty);
     }
     /**
@@ -121,8 +121,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getNodePool:getNodePool", TypeShape.of(GetNodePoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodePoolResult> getNodePool(GetNodePoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getNodePool:getNodePool", TypeShape.of(GetNodePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Node Pool Option resource in Oracle Cloud Infrastructure Container Engine service.
@@ -132,7 +132,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolOptionResult> getNodePoolOption(GetNodePoolOptionArgs args) {
+    public static Output<GetNodePoolOptionResult> getNodePoolOption(GetNodePoolOptionArgs args) {
         return getNodePoolOption(args, InvokeOptions.Empty);
     }
     /**
@@ -143,8 +143,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolOptionResult> getNodePoolOption(GetNodePoolOptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getNodePoolOption:getNodePoolOption", TypeShape.of(GetNodePoolOptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodePoolOptionResult> getNodePoolOption(GetNodePoolOptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getNodePoolOption:getNodePoolOption", TypeShape.of(GetNodePoolOptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Node Pools in Oracle Cloud Infrastructure Container Engine service.
@@ -154,7 +154,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolsResult> getNodePools(GetNodePoolsArgs args) {
+    public static Output<GetNodePoolsResult> getNodePools(GetNodePoolsArgs args) {
         return getNodePools(args, InvokeOptions.Empty);
     }
     /**
@@ -165,8 +165,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodePoolsResult> getNodePools(GetNodePoolsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getNodePools:getNodePools", TypeShape.of(GetNodePoolsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNodePoolsResult> getNodePools(GetNodePoolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getNodePools:getNodePools", TypeShape.of(GetNodePoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Work Request Errors in Oracle Cloud Infrastructure Container Engine service.
@@ -176,7 +176,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestErrorsResult> getWorkRequestErrors(GetWorkRequestErrorsArgs args) {
+    public static Output<GetWorkRequestErrorsResult> getWorkRequestErrors(GetWorkRequestErrorsArgs args) {
         return getWorkRequestErrors(args, InvokeOptions.Empty);
     }
     /**
@@ -187,8 +187,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestErrorsResult> getWorkRequestErrors(GetWorkRequestErrorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getWorkRequestErrors:getWorkRequestErrors", TypeShape.of(GetWorkRequestErrorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkRequestErrorsResult> getWorkRequestErrors(GetWorkRequestErrorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getWorkRequestErrors:getWorkRequestErrors", TypeShape.of(GetWorkRequestErrorsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Work Request Log Entries in Oracle Cloud Infrastructure Container Engine service.
@@ -198,7 +198,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestLogEntriesResult> getWorkRequestLogEntries(GetWorkRequestLogEntriesArgs args) {
+    public static Output<GetWorkRequestLogEntriesResult> getWorkRequestLogEntries(GetWorkRequestLogEntriesArgs args) {
         return getWorkRequestLogEntries(args, InvokeOptions.Empty);
     }
     /**
@@ -209,8 +209,8 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestLogEntriesResult> getWorkRequestLogEntries(GetWorkRequestLogEntriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getWorkRequestLogEntries:getWorkRequestLogEntries", TypeShape.of(GetWorkRequestLogEntriesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkRequestLogEntriesResult> getWorkRequestLogEntries(GetWorkRequestLogEntriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getWorkRequestLogEntries:getWorkRequestLogEntries", TypeShape.of(GetWorkRequestLogEntriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Work Requests in Oracle Cloud Infrastructure Container Engine service.
@@ -220,7 +220,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestsResult> getWorkRequests(GetWorkRequestsArgs args) {
+    public static Output<GetWorkRequestsResult> getWorkRequests(GetWorkRequestsArgs args) {
         return getWorkRequests(args, InvokeOptions.Empty);
     }
     /**
@@ -231,7 +231,7 @@ public final class ContainerEngineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkRequestsResult> getWorkRequests(GetWorkRequestsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ContainerEngine/getWorkRequests:getWorkRequests", TypeShape.of(GetWorkRequestsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkRequestsResult> getWorkRequests(GetWorkRequestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ContainerEngine/getWorkRequests:getWorkRequests", TypeShape.of(GetWorkRequestsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousDatabaseDataguardAssociationArgs extends com.pul
      * 
      */
     @Import(name="autonomousDatabaseDataguardAssociationId", required=true)
-    private String autonomousDatabaseDataguardAssociationId;
+    private Output<String> autonomousDatabaseDataguardAssociationId;
 
     /**
      * @return The Autonomous Database Dataguard Association [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousDatabaseDataguardAssociationId() {
+    public Output<String> autonomousDatabaseDataguardAssociationId() {
         return this.autonomousDatabaseDataguardAssociationId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAutonomousDatabaseDataguardAssociationArgs extends com.pul
      * 
      */
     @Import(name="autonomousDatabaseId", required=true)
-    private String autonomousDatabaseId;
+    private Output<String> autonomousDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousDatabaseId() {
+    public Output<String> autonomousDatabaseId() {
         return this.autonomousDatabaseId;
     }
 
@@ -73,8 +74,29 @@ public final class GetAutonomousDatabaseDataguardAssociationArgs extends com.pul
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseDataguardAssociationId(String autonomousDatabaseDataguardAssociationId) {
+        public Builder autonomousDatabaseDataguardAssociationId(Output<String> autonomousDatabaseDataguardAssociationId) {
             $.autonomousDatabaseDataguardAssociationId = autonomousDatabaseDataguardAssociationId;
+            return this;
+        }
+
+        /**
+         * @param autonomousDatabaseDataguardAssociationId The Autonomous Database Dataguard Association [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousDatabaseDataguardAssociationId(String autonomousDatabaseDataguardAssociationId) {
+            return autonomousDatabaseDataguardAssociationId(Output.of(autonomousDatabaseDataguardAssociationId));
+        }
+
+        /**
+         * @param autonomousDatabaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousDatabaseId(Output<String> autonomousDatabaseId) {
+            $.autonomousDatabaseId = autonomousDatabaseId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAutonomousDatabaseDataguardAssociationArgs extends com.pul
          * 
          */
         public Builder autonomousDatabaseId(String autonomousDatabaseId) {
-            $.autonomousDatabaseId = autonomousDatabaseId;
-            return this;
+            return autonomousDatabaseId(Output.of(autonomousDatabaseId));
         }
 
         public GetAutonomousDatabaseDataguardAssociationArgs build() {

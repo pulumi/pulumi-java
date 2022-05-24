@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.offazure.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteName", required=true)
-    private String siteName;
+    private Output<String> siteName;
 
     /**
      * @return Site name.
      * 
      */
-    public String siteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteName(Output<String> siteName) {
+            $.siteName = siteName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder siteName(String siteName) {
-            $.siteName = siteName;
-            return this;
+            return siteName(Output.of(siteName));
         }
 
         public GetSiteArgs build() {

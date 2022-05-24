@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatasetArgs Empty = new GetDatasetArgs();
 
     @Import(name="datasetName", required=true)
-    private String datasetName;
+    private Output<String> datasetName;
 
-    public String datasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 
@@ -43,9 +44,13 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetName(String datasetName) {
+        public Builder datasetName(Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
+        }
+
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
         }
 
         public GetDatasetArgs build() {

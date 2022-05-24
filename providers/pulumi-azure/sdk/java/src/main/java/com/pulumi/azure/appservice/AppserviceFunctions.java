@@ -32,10 +32,10 @@ import com.pulumi.azure.appservice.outputs.GetServicePlanResult;
 import com.pulumi.azure.appservice.outputs.GetSourceControlTokenResult;
 import com.pulumi.azure.appservice.outputs.GetWindowsFunctionAppResult;
 import com.pulumi.azure.appservice.outputs.GetWindowsWebAppResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class AppserviceFunctions {
     /**
@@ -65,7 +65,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServiceResult> getAppService(GetAppServiceArgs args) {
+    public static Output<GetAppServiceResult> getAppService(GetAppServiceArgs args) {
         return getAppService(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServiceResult> getAppService(GetAppServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getAppService:getAppService", TypeShape.of(GetAppServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppServiceResult> getAppService(GetAppServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getAppService:getAppService", TypeShape.of(GetAppServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing App Service Environment.
@@ -127,7 +127,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args) {
+    public static Output<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args) {
         return getAppServiceEnvironment(args, InvokeOptions.Empty);
     }
     /**
@@ -159,8 +159,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getAppServiceEnvironment:getAppServiceEnvironment", TypeShape.of(GetAppServiceEnvironmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getAppServiceEnvironment:getAppServiceEnvironment", TypeShape.of(GetAppServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -189,7 +189,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args) {
+    public static Output<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args) {
         return getAppServicePlan(args, InvokeOptions.Empty);
     }
     /**
@@ -219,8 +219,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getAppServicePlan:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getAppServicePlan:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an App Service Certificate.
@@ -251,7 +251,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -283,8 +283,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing App Service Certificate Order.
@@ -315,7 +315,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateOrderResult> getCertificateOrder(GetCertificateOrderArgs args) {
+    public static Output<GetCertificateOrderResult> getCertificateOrder(GetCertificateOrderArgs args) {
         return getCertificateOrder(args, InvokeOptions.Empty);
     }
     /**
@@ -347,8 +347,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateOrderResult> getCertificateOrder(GetCertificateOrderArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getCertificateOrder:getCertificateOrder", TypeShape.of(GetCertificateOrderResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateOrderResult> getCertificateOrder(GetCertificateOrderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getCertificateOrder:getCertificateOrder", TypeShape.of(GetCertificateOrderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing 3rd Generation (v3) App Service Environment.
@@ -379,7 +379,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnvironmentV3Result> getEnvironmentV3(GetEnvironmentV3Args args) {
+    public static Output<GetEnvironmentV3Result> getEnvironmentV3(GetEnvironmentV3Args args) {
         return getEnvironmentV3(args, InvokeOptions.Empty);
     }
     /**
@@ -411,8 +411,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEnvironmentV3Result> getEnvironmentV3(GetEnvironmentV3Args args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getEnvironmentV3:getEnvironmentV3", TypeShape.of(GetEnvironmentV3Result.class), args, Utilities.withVersion(options));
+    public static Output<GetEnvironmentV3Result> getEnvironmentV3(GetEnvironmentV3Args args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getEnvironmentV3:getEnvironmentV3", TypeShape.of(GetEnvironmentV3Result.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -440,7 +440,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionAppResult> getFunctionApp(GetFunctionAppArgs args) {
+    public static Output<GetFunctionAppResult> getFunctionApp(GetFunctionAppArgs args) {
         return getFunctionApp(args, InvokeOptions.Empty);
     }
     /**
@@ -469,8 +469,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionAppResult> getFunctionApp(GetFunctionAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getFunctionApp:getFunctionApp", TypeShape.of(GetFunctionAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionAppResult> getFunctionApp(GetFunctionAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getFunctionApp:getFunctionApp", TypeShape.of(GetFunctionAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to fetch the Host Keys of an existing Function App
@@ -500,7 +500,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionAppHostKeysResult> getFunctionAppHostKeys(GetFunctionAppHostKeysArgs args) {
+    public static Output<GetFunctionAppHostKeysResult> getFunctionAppHostKeys(GetFunctionAppHostKeysArgs args) {
         return getFunctionAppHostKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -531,8 +531,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFunctionAppHostKeysResult> getFunctionAppHostKeys(GetFunctionAppHostKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getFunctionAppHostKeys:getFunctionAppHostKeys", TypeShape.of(GetFunctionAppHostKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFunctionAppHostKeysResult> getFunctionAppHostKeys(GetFunctionAppHostKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getFunctionAppHostKeys:getFunctionAppHostKeys", TypeShape.of(GetFunctionAppHostKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Linux Function App.
@@ -563,7 +563,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinuxFunctionAppResult> getLinuxFunctionApp(GetLinuxFunctionAppArgs args) {
+    public static Output<GetLinuxFunctionAppResult> getLinuxFunctionApp(GetLinuxFunctionAppArgs args) {
         return getLinuxFunctionApp(args, InvokeOptions.Empty);
     }
     /**
@@ -595,8 +595,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinuxFunctionAppResult> getLinuxFunctionApp(GetLinuxFunctionAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getLinuxFunctionApp:getLinuxFunctionApp", TypeShape.of(GetLinuxFunctionAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinuxFunctionAppResult> getLinuxFunctionApp(GetLinuxFunctionAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getLinuxFunctionApp:getLinuxFunctionApp", TypeShape.of(GetLinuxFunctionAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Linux Web App.
@@ -627,7 +627,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinuxWebAppResult> getLinuxWebApp(GetLinuxWebAppArgs args) {
+    public static Output<GetLinuxWebAppResult> getLinuxWebApp(GetLinuxWebAppArgs args) {
         return getLinuxWebApp(args, InvokeOptions.Empty);
     }
     /**
@@ -659,8 +659,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLinuxWebAppResult> getLinuxWebApp(GetLinuxWebAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getLinuxWebApp:getLinuxWebApp", TypeShape.of(GetLinuxWebAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLinuxWebAppResult> getLinuxWebApp(GetLinuxWebAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getLinuxWebApp:getLinuxWebApp", TypeShape.of(GetLinuxWebAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Service Plan.
@@ -691,7 +691,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePlanResult> getServicePlan(GetServicePlanArgs args) {
+    public static Output<GetServicePlanResult> getServicePlan(GetServicePlanArgs args) {
         return getServicePlan(args, InvokeOptions.Empty);
     }
     /**
@@ -723,8 +723,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServicePlanResult> getServicePlan(GetServicePlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getServicePlan:getServicePlan", TypeShape.of(GetServicePlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServicePlanResult> getServicePlan(GetServicePlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getServicePlan:getServicePlan", TypeShape.of(GetServicePlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -752,7 +752,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSourceControlTokenResult> getSourceControlToken(GetSourceControlTokenArgs args) {
+    public static Output<GetSourceControlTokenResult> getSourceControlToken(GetSourceControlTokenArgs args) {
         return getSourceControlToken(args, InvokeOptions.Empty);
     }
     /**
@@ -781,8 +781,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSourceControlTokenResult> getSourceControlToken(GetSourceControlTokenArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getSourceControlToken:getSourceControlToken", TypeShape.of(GetSourceControlTokenResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSourceControlTokenResult> getSourceControlToken(GetSourceControlTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getSourceControlToken:getSourceControlToken", TypeShape.of(GetSourceControlTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Windows Function App.
@@ -813,7 +813,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWindowsFunctionAppResult> getWindowsFunctionApp(GetWindowsFunctionAppArgs args) {
+    public static Output<GetWindowsFunctionAppResult> getWindowsFunctionApp(GetWindowsFunctionAppArgs args) {
         return getWindowsFunctionApp(args, InvokeOptions.Empty);
     }
     /**
@@ -845,8 +845,8 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWindowsFunctionAppResult> getWindowsFunctionApp(GetWindowsFunctionAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getWindowsFunctionApp:getWindowsFunctionApp", TypeShape.of(GetWindowsFunctionAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWindowsFunctionAppResult> getWindowsFunctionApp(GetWindowsFunctionAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getWindowsFunctionApp:getWindowsFunctionApp", TypeShape.of(GetWindowsFunctionAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Windows Web App.
@@ -877,7 +877,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWindowsWebAppResult> getWindowsWebApp(GetWindowsWebAppArgs args) {
+    public static Output<GetWindowsWebAppResult> getWindowsWebApp(GetWindowsWebAppArgs args) {
         return getWindowsWebApp(args, InvokeOptions.Empty);
     }
     /**
@@ -909,7 +909,7 @@ public final class AppserviceFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWindowsWebAppResult> getWindowsWebApp(GetWindowsWebAppArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:appservice/getWindowsWebApp:getWindowsWebApp", TypeShape.of(GetWindowsWebAppResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWindowsWebAppResult> getWindowsWebApp(GetWindowsWebAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:appservice/getWindowsWebApp:getWindowsWebApp", TypeShape.of(GetWindowsWebAppResult.class), args, Utilities.withVersion(options));
     }
 }

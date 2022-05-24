@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -29,7 +30,6 @@ import com.pulumi.oci.CloudGuard.outputs.GetManagedListsResult;
 import com.pulumi.oci.CloudGuard.outputs.GetResponderRecipeResult;
 import com.pulumi.oci.CloudGuard.outputs.GetResponderRecipesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class CloudGuardFunctions {
     /**
@@ -40,7 +40,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args) {
+    public static Output<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args) {
         return getCloudGuardConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -51,8 +51,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getCloudGuardConfiguration:getCloudGuardConfiguration", TypeShape.of(GetCloudGuardConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCloudGuardConfigurationResult> getCloudGuardConfiguration(GetCloudGuardConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getCloudGuardConfiguration:getCloudGuardConfiguration", TypeShape.of(GetCloudGuardConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Data Mask Rule resource in Oracle Cloud Infrastructure Cloud Guard service.
@@ -62,7 +62,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args) {
+    public static Output<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args) {
         return getDataMaskRule(args, InvokeOptions.Empty);
     }
     /**
@@ -73,8 +73,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDataMaskRule:getDataMaskRule", TypeShape.of(GetDataMaskRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataMaskRuleResult> getDataMaskRule(GetDataMaskRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getDataMaskRule:getDataMaskRule", TypeShape.of(GetDataMaskRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Data Mask Rules in Oracle Cloud Infrastructure Cloud Guard service.
@@ -84,7 +84,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args) {
+    public static Output<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args) {
         return getDataMaskRules(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDataMaskRules:getDataMaskRules", TypeShape.of(GetDataMaskRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataMaskRulesResult> getDataMaskRules(GetDataMaskRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getDataMaskRules:getDataMaskRules", TypeShape.of(GetDataMaskRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Detector Recipe resource in Oracle Cloud Infrastructure Cloud Guard service.
@@ -106,7 +106,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args) {
+    public static Output<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args) {
         return getDetectorRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -117,8 +117,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDetectorRecipe:getDetectorRecipe", TypeShape.of(GetDetectorRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDetectorRecipeResult> getDetectorRecipe(GetDetectorRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getDetectorRecipe:getDetectorRecipe", TypeShape.of(GetDetectorRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Detector Recipes in Oracle Cloud Infrastructure Cloud Guard service.
@@ -142,7 +142,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args) {
+    public static Output<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args) {
         return getDetectorRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -167,8 +167,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getDetectorRecipes:getDetectorRecipes", TypeShape.of(GetDetectorRecipesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDetectorRecipesResult> getDetectorRecipes(GetDetectorRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getDetectorRecipes:getDetectorRecipes", TypeShape.of(GetDetectorRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Target resource in Oracle Cloud Infrastructure Cloud Guard service.
@@ -178,7 +178,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args) {
+    public static Output<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args) {
         return getGuardTarget(args, InvokeOptions.Empty);
     }
     /**
@@ -189,8 +189,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getGuardTarget:getGuardTarget", TypeShape.of(GetGuardTargetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuardTargetResult> getGuardTarget(GetGuardTargetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getGuardTarget:getGuardTarget", TypeShape.of(GetGuardTargetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Targets in Oracle Cloud Infrastructure Cloud Guard service.
@@ -213,7 +213,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args) {
+    public static Output<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args) {
         return getGuardTargets(args, InvokeOptions.Empty);
     }
     /**
@@ -237,8 +237,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getGuardTargets:getGuardTargets", TypeShape.of(GetGuardTargetsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuardTargetsResult> getGuardTargets(GetGuardTargetsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getGuardTargets:getGuardTargets", TypeShape.of(GetGuardTargetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Managed List resource in Oracle Cloud Infrastructure Cloud Guard service.
@@ -248,7 +248,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedListResult> getManagedList(GetManagedListArgs args) {
+    public static Output<GetManagedListResult> getManagedList(GetManagedListArgs args) {
         return getManagedList(args, InvokeOptions.Empty);
     }
     /**
@@ -259,8 +259,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedListResult> getManagedList(GetManagedListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getManagedList:getManagedList", TypeShape.of(GetManagedListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedListResult> getManagedList(GetManagedListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getManagedList:getManagedList", TypeShape.of(GetManagedListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Managed Lists in Oracle Cloud Infrastructure Cloud Guard service.
@@ -283,7 +283,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedListsResult> getManagedLists(GetManagedListsArgs args) {
+    public static Output<GetManagedListsResult> getManagedLists(GetManagedListsArgs args) {
         return getManagedLists(args, InvokeOptions.Empty);
     }
     /**
@@ -307,8 +307,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedListsResult> getManagedLists(GetManagedListsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getManagedLists:getManagedLists", TypeShape.of(GetManagedListsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedListsResult> getManagedLists(GetManagedListsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getManagedLists:getManagedLists", TypeShape.of(GetManagedListsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Responder Recipe resource in Oracle Cloud Infrastructure Cloud Guard service.
@@ -318,7 +318,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args) {
+    public static Output<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args) {
         return getResponderRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -329,8 +329,8 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getResponderRecipe:getResponderRecipe", TypeShape.of(GetResponderRecipeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponderRecipeResult> getResponderRecipe(GetResponderRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getResponderRecipe:getResponderRecipe", TypeShape.of(GetResponderRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Responder Recipes in Oracle Cloud Infrastructure Cloud Guard service.
@@ -353,7 +353,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args) {
+    public static Output<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args) {
         return getResponderRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -377,7 +377,7 @@ public final class CloudGuardFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:CloudGuard/getResponderRecipes:getResponderRecipes", TypeShape.of(GetResponderRecipesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponderRecipesResult> getResponderRecipes(GetResponderRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:CloudGuard/getResponderRecipes:getResponderRecipes", TypeShape.of(GetResponderRecipesResult.class), args, Utilities.withVersion(options));
     }
 }

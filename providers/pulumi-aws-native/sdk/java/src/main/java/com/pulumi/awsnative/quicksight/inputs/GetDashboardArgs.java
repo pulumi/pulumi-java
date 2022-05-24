@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dashboardId", required=true)
-    private String dashboardId;
+    private Output<String> dashboardId;
 
-    public String dashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
 
@@ -51,14 +52,22 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder dashboardId(String dashboardId) {
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
+        }
+
+        public Builder dashboardId(Output<String> dashboardId) {
             $.dashboardId = dashboardId;
             return this;
+        }
+
+        public Builder dashboardId(String dashboardId) {
+            return dashboardId(Output.of(dashboardId));
         }
 
         public GetDashboardArgs build() {

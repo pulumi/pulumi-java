@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.iap_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetDestGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDestGroupArgs Empty = new GetDestGroupArgs();
 
     @Import(name="destGroupId", required=true)
-    private String destGroupId;
+    private Output<String> destGroupId;
 
-    public String destGroupId() {
+    public Output<String> destGroupId() {
         return this.destGroupId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetDestGroupArgs() {}
@@ -61,19 +61,31 @@ public final class GetDestGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDestGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder destGroupId(String destGroupId) {
+        public Builder destGroupId(Output<String> destGroupId) {
             $.destGroupId = destGroupId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder destGroupId(String destGroupId) {
+            return destGroupId(Output.of(destGroupId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetDestGroupArgs build() {

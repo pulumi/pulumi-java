@@ -10,52 +10,52 @@ import com.pulumi.awsnative.apprunner.inputs.GetVpcConnectorArgs;
 import com.pulumi.awsnative.apprunner.outputs.GetObservabilityConfigurationResult;
 import com.pulumi.awsnative.apprunner.outputs.GetServiceResult;
 import com.pulumi.awsnative.apprunner.outputs.GetVpcConnectorResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApprunnerFunctions {
     /**
      * The AWS::AppRunner::ObservabilityConfiguration resource  is an AWS App Runner resource type that specifies an App Runner observability configuration
      * 
      */
-    public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args) {
+    public static Output<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args) {
         return getObservabilityConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::AppRunner::ObservabilityConfiguration resource  is an AWS App Runner resource type that specifies an App Runner observability configuration
      * 
      */
-    public static CompletableFuture<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:apprunner:getObservabilityConfiguration", TypeShape.of(GetObservabilityConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetObservabilityConfigurationResult> getObservabilityConfiguration(GetObservabilityConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:apprunner:getObservabilityConfiguration", TypeShape.of(GetObservabilityConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::AppRunner::Service resource specifies an AppRunner Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::AppRunner::Service resource specifies an AppRunner Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:apprunner:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:apprunner:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
      * 
      */
-    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args) {
+    public static Output<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args) {
         return getVpcConnector(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
      * 
      */
-    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args, Utilities.withVersion(options));
     }
 }

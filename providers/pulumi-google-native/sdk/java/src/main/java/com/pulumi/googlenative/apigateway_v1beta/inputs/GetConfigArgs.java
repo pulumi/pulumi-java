@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.apigateway_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="configId", required=true)
-    private String configId;
+    private Output<String> configId;
 
-    public String configId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetConfigArgs() {}
@@ -77,29 +77,49 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
-        public Builder configId(String configId) {
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetConfigArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.elasticache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userGroupId", required=true)
-    private String userGroupId;
+    private Output<String> userGroupId;
 
     /**
      * @return The ID of the user group.
      * 
      */
-    public String userGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetUserGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userGroupId(String userGroupId) {
+        public Builder userGroupId(Output<String> userGroupId) {
             $.userGroupId = userGroupId;
             return this;
+        }
+
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userGroupId(String userGroupId) {
+            return userGroupId(Output.of(userGroupId));
         }
 
         public GetUserGroupArgs build() {

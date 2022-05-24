@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.pubsublite_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,49 +14,48 @@ import com.pulumi.googlenative.pubsublite_v1.inputs.GetTopicArgs;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetReservationResult;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetSubscriptionResult;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetTopicResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Pubsublite_v1Functions {
     /**
      * Returns the reservation configuration.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
+    public static Output<GetReservationResult> getReservation(GetReservationArgs args) {
         return getReservation(args, InvokeOptions.Empty);
     }
     /**
      * Returns the reservation configuration.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsublite/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the subscription configuration.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
      * Returns the subscription configuration.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsublite/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the topic configuration.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
      * Returns the topic configuration.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:pubsublite/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

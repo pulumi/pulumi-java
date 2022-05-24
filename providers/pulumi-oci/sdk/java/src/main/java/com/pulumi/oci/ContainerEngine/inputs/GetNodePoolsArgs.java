@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.ContainerEngine.inputs.GetNodePoolsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId")
-    private @Nullable String clusterId;
+    private Output</* @Nullable */ String> clusterId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public Optional<String> clusterId() {
-        return Optional.ofNullable(this.clusterId);
+    public Output</* @Nullable */ String> clusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -36,21 +36,21 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetNodePoolsFilter> filters;
+    private Output</* @Nullable */ List<GetNodePoolsFilter>> filters;
 
-    public Optional<List<GetNodePoolsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNodePoolsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name to filter on.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetNodePoolsArgs() {}
@@ -101,8 +101,29 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(@Nullable String clusterId) {
+        public Builder clusterId(Output</* @Nullable */ String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(@Nullable String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -113,13 +134,16 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetNodePoolsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetNodePoolsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetNodePoolsFilter... filters) {
@@ -132,9 +156,19 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(Output</* @Nullable */ String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name The name to filter on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            return name(Output.of(name));
         }
 
         public GetNodePoolsArgs build() {

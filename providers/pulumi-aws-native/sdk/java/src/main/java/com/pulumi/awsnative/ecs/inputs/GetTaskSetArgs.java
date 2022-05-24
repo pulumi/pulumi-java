@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cluster", required=true)
-    private String cluster;
+    private Output<String> cluster;
 
     /**
      * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    public String cluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -32,13 +33,13 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return The ID of the task set.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -47,13 +48,13 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-    private String service;
+    private Output<String> service;
 
     /**
      * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    public String service() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -89,8 +90,29 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cluster(String cluster) {
+        public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
+            return this;
+        }
+
+        /**
+         * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
+        }
+
+        /**
+         * @param id The ID of the task set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder id(String id) {
-            $.id = id;
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param service The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder service(Output<String> service) {
+            $.service = service;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTaskSetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder service(String service) {
-            $.service = service;
-            return this;
+            return service(Output.of(service));
         }
 
         public GetTaskSetArgs build() {

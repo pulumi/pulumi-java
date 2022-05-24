@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkGatewayArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkGatewayArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-    private String virtualNetworkGatewayName;
+    private Output<String> virtualNetworkGatewayName;
 
     /**
      * @return The name of the virtual network gateway.
      * 
      */
-    public String virtualNetworkGatewayName() {
+    public Output<String> virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVirtualNetworkGatewayArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkGatewayName(Output<String> virtualNetworkGatewayName) {
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVirtualNetworkGatewayArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
-            return this;
+            return virtualNetworkGatewayName(Output.of(virtualNetworkGatewayName));
         }
 
         public GetVirtualNetworkGatewayArgs build() {

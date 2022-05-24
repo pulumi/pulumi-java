@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPluggableDatabaseArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pluggableDatabaseId", required=true)
-    private String pluggableDatabaseId;
+    private Output<String> pluggableDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String pluggableDatabaseId() {
+    public Output<String> pluggableDatabaseId() {
         return this.pluggableDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPluggableDatabaseArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder pluggableDatabaseId(String pluggableDatabaseId) {
+        public Builder pluggableDatabaseId(Output<String> pluggableDatabaseId) {
             $.pluggableDatabaseId = pluggableDatabaseId;
             return this;
+        }
+
+        /**
+         * @param pluggableDatabaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pluggableDatabaseId(String pluggableDatabaseId) {
+            return pluggableDatabaseId(Output.of(pluggableDatabaseId));
         }
 
         public GetPluggableDatabaseArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPartnerTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partnerTopicName", required=true)
-    private String partnerTopicName;
+    private Output<String> partnerTopicName;
 
     /**
      * @return Name of the partner topic.
      * 
      */
-    public String partnerTopicName() {
+    public Output<String> partnerTopicName() {
         return this.partnerTopicName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPartnerTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPartnerTopicArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partnerTopicName(String partnerTopicName) {
+        public Builder partnerTopicName(Output<String> partnerTopicName) {
             $.partnerTopicName = partnerTopicName;
+            return this;
+        }
+
+        /**
+         * @param partnerTopicName Name of the partner topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerTopicName(String partnerTopicName) {
+            return partnerTopicName(Output.of(partnerTopicName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPartnerTopicArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPartnerTopicArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="format")
-    private @Nullable String format;
+    private Output</* @Nullable */ String> format;
 
     /**
      * @return The archive format query parameter for downloading repository endpoint.
      * 
      */
-    public Optional<String> format() {
-        return Optional.ofNullable(this.format);
+    public Output</* @Nullable */ String> format() {
+        return this.format;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="refName")
-    private @Nullable String refName;
+    private Output</* @Nullable */ String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Optional<String> refName() {
-        return Optional.ofNullable(this.refName);
+    public Output</* @Nullable */ String> refName() {
+        return this.refName;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -91,8 +91,29 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
+        public Builder format(Output</* @Nullable */ String> format) {
             $.format = format;
+            return this;
+        }
+
+        /**
+         * @param format The archive format query parameter for downloading repository endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder format(@Nullable String format) {
+            return format(Output.of(format));
+        }
+
+        /**
+         * @param refName A filter to return only resources that match the given reference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder refName(Output</* @Nullable */ String> refName) {
+            $.refName = refName;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * 
          */
         public Builder refName(@Nullable String refName) {
-            $.refName = refName;
+            return refName(Output.of(refName));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryArchiveContentArgs build() {

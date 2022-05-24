@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataQualityJobDefinitionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="jobDefinitionArn", required=true)
-    private String jobDefinitionArn;
+    private Output<String> jobDefinitionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    public String jobDefinitionArn() {
+    public Output<String> jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetDataQualityJobDefinitionArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder jobDefinitionArn(String jobDefinitionArn) {
+        public Builder jobDefinitionArn(Output<String> jobDefinitionArn) {
             $.jobDefinitionArn = jobDefinitionArn;
             return this;
+        }
+
+        /**
+         * @param jobDefinitionArn The Amazon Resource Name (ARN) of job definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobDefinitionArn(String jobDefinitionArn) {
+            return jobDefinitionArn(Output.of(jobDefinitionArn));
         }
 
         public GetDataQualityJobDefinitionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNetworkInsightsPathArgs extends com.pulumi.resources.Invok
     public static final GetNetworkInsightsPathArgs Empty = new GetNetworkInsightsPathArgs();
 
     @Import(name="networkInsightsPathId", required=true)
-    private String networkInsightsPathId;
+    private Output<String> networkInsightsPathId;
 
-    public String networkInsightsPathId() {
+    public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
@@ -43,9 +44,13 @@ public final class GetNetworkInsightsPathArgs extends com.pulumi.resources.Invok
             $ = new GetNetworkInsightsPathArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkInsightsPathId(String networkInsightsPathId) {
+        public Builder networkInsightsPathId(Output<String> networkInsightsPathId) {
             $.networkInsightsPathId = networkInsightsPathId;
             return this;
+        }
+
+        public Builder networkInsightsPathId(String networkInsightsPathId) {
+            return networkInsightsPathId(Output.of(networkInsightsPathId));
         }
 
         public GetNetworkInsightsPathArgs build() {

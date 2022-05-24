@@ -76,10 +76,10 @@ import com.pulumi.azurenative.securityinsights.outputs.GetUebaResult;
 import com.pulumi.azurenative.securityinsights.outputs.GetWatchlistItemResult;
 import com.pulumi.azurenative.securityinsights.outputs.GetWatchlistResult;
 import com.pulumi.azurenative.securityinsights.outputs.ListSourceControlRepositoriesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SecurityinsightsFunctions {
     /**
@@ -87,7 +87,7 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args) {
+    public static Output<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args) {
         return getAADDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -95,15 +95,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAADDataConnector", TypeShape.of(GetAADDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAADDataConnector", TypeShape.of(GetAADDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents AATP (Azure Advanced Threat Protection) data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args) {
+    public static Output<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args) {
         return getAATPDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -111,15 +111,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAATPDataConnector", TypeShape.of(GetAATPDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAATPDataConnector", TypeShape.of(GetAATPDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents ASC (Azure Security Center) data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args) {
+    public static Output<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args) {
         return getASCDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -127,15 +127,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getASCDataConnector", TypeShape.of(GetASCDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getASCDataConnector", TypeShape.of(GetASCDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Action for alert rule.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args) {
+    public static Output<GetActionResult> getAction(GetActionArgs args) {
         return getAction(args, InvokeOptions.Empty);
     }
     /**
@@ -143,15 +143,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAction", TypeShape.of(GetActionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActionResult> getAction(GetActionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAction", TypeShape.of(GetActionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents Activity entity query.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args) {
+    public static Output<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args) {
         return getActivityCustomEntityQuery(args, InvokeOptions.Empty);
     }
     /**
@@ -159,8 +159,8 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getActivityCustomEntityQuery", TypeShape.of(GetActivityCustomEntityQueryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getActivityCustomEntityQuery", TypeShape.of(GetActivityCustomEntityQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Alert rule.
@@ -171,7 +171,7 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
         return getAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -183,15 +183,15 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Settings with single toggle.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args) {
+    public static Output<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args) {
         return getAnomalies(args, InvokeOptions.Empty);
     }
     /**
@@ -199,15 +199,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAnomalies", TypeShape.of(GetAnomaliesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAnomalies", TypeShape.of(GetAnomaliesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents an automation rule.
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args) {
+    public static Output<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args) {
         return getAutomationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -215,15 +215,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAutomationRule", TypeShape.of(GetAutomationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAutomationRule", TypeShape.of(GetAutomationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents Amazon Web Services CloudTrail data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args) {
+    public static Output<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args) {
         return getAwsCloudTrailDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -231,15 +231,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAwsCloudTrailDataConnector", TypeShape.of(GetAwsCloudTrailDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getAwsCloudTrailDataConnector", TypeShape.of(GetAwsCloudTrailDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a bookmark in Azure Security Insights.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetBookmarkResult> getBookmark(GetBookmarkArgs args) {
+    public static Output<GetBookmarkResult> getBookmark(GetBookmarkArgs args) {
         return getBookmark(args, InvokeOptions.Empty);
     }
     /**
@@ -247,15 +247,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetBookmarkResult> getBookmark(GetBookmarkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmark", TypeShape.of(GetBookmarkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBookmarkResult> getBookmark(GetBookmarkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getBookmark", TypeShape.of(GetBookmarkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a relation between two resources
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args) {
+    public static Output<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args) {
         return getBookmarkRelation(args, InvokeOptions.Empty);
     }
     /**
@@ -263,8 +263,8 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmarkRelation", TypeShape.of(GetBookmarkRelationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getBookmarkRelation", TypeShape.of(GetBookmarkRelationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Data connector.
@@ -275,7 +275,7 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
-    public static CompletableFuture<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args) {
+    public static Output<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args) {
         return getDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -287,15 +287,15 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
-    public static CompletableFuture<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getDataConnector", TypeShape.of(GetDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getDataConnector", TypeShape.of(GetDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The entity timeline result operation response.
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args) {
+    public static Output<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args) {
         return getEntitiesGetTimeline(args, InvokeOptions.Empty);
     }
     /**
@@ -303,15 +303,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntitiesGetTimeline", TypeShape.of(GetEntitiesGetTimelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getEntitiesGetTimeline", TypeShape.of(GetEntitiesGetTimelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Settings with single toggle.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args) {
+    public static Output<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args) {
         return getEntityAnalytics(args, InvokeOptions.Empty);
     }
     /**
@@ -319,15 +319,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityAnalytics", TypeShape.of(GetEntityAnalyticsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getEntityAnalytics", TypeShape.of(GetEntityAnalyticsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Get Insights result operation response.
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args) {
+    public static Output<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args) {
         return getEntityInsights(args, InvokeOptions.Empty);
     }
     /**
@@ -335,8 +335,8 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityInsights", TypeShape.of(GetEntityInsightsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getEntityInsights", TypeShape.of(GetEntityInsightsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Specific entity query.
@@ -347,7 +347,7 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
-    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args) {
+    public static Output<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args) {
         return getEntityQuery(args, InvokeOptions.Empty);
     }
     /**
@@ -359,15 +359,15 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
-    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityQuery", TypeShape.of(GetEntityQueryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getEntityQuery", TypeShape.of(GetEntityQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Settings with single toggle.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEyesOnResult> getEyesOn(GetEyesOnArgs args) {
+    public static Output<GetEyesOnResult> getEyesOn(GetEyesOnArgs args) {
         return getEyesOn(args, InvokeOptions.Empty);
     }
     /**
@@ -375,15 +375,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEyesOnResult> getEyesOn(GetEyesOnArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEyesOn", TypeShape.of(GetEyesOnResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEyesOnResult> getEyesOn(GetEyesOnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getEyesOn", TypeShape.of(GetEyesOnResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents Fusion alert rule.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args) {
+    public static Output<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args) {
         return getFusionAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -391,15 +391,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getFusionAlertRule", TypeShape.of(GetFusionAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getFusionAlertRule", TypeShape.of(GetFusionAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents an incident in Azure Security Insights.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetIncidentResult> getIncident(GetIncidentArgs args) {
+    public static Output<GetIncidentResult> getIncident(GetIncidentArgs args) {
         return getIncident(args, InvokeOptions.Empty);
     }
     /**
@@ -407,15 +407,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetIncidentResult> getIncident(GetIncidentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncident", TypeShape.of(GetIncidentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIncidentResult> getIncident(GetIncidentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getIncident", TypeShape.of(GetIncidentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents an incident comment
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args) {
+    public static Output<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args) {
         return getIncidentComment(args, InvokeOptions.Empty);
     }
     /**
@@ -423,15 +423,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentComment", TypeShape.of(GetIncidentCommentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getIncidentComment", TypeShape.of(GetIncidentCommentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a relation between two resources
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args) {
+    public static Output<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args) {
         return getIncidentRelation(args, InvokeOptions.Empty);
     }
     /**
@@ -439,15 +439,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentRelation", TypeShape.of(GetIncidentRelationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getIncidentRelation", TypeShape.of(GetIncidentRelationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents MCAS (Microsoft Cloud App Security) data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args) {
+    public static Output<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args) {
         return getMCASDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -455,15 +455,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMCASDataConnector", TypeShape.of(GetMCASDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getMCASDataConnector", TypeShape.of(GetMCASDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args) {
+    public static Output<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args) {
         return getMDATPDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -471,15 +471,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMDATPDataConnector", TypeShape.of(GetMDATPDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getMDATPDataConnector", TypeShape.of(GetMDATPDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Metadata resource definition.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetadataResult> getMetadata(GetMetadataArgs args) {
+    public static Output<GetMetadataResult> getMetadata(GetMetadataArgs args) {
         return getMetadata(args, InvokeOptions.Empty);
     }
     /**
@@ -487,15 +487,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetadataResult> getMetadata(GetMetadataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMetadata", TypeShape.of(GetMetadataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMetadataResult> getMetadata(GetMetadataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getMetadata", TypeShape.of(GetMetadataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents MicrosoftSecurityIncidentCreation rule.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args) {
+    public static Output<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args) {
         return getMicrosoftSecurityIncidentCreationAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -503,15 +503,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMicrosoftSecurityIncidentCreationAlertRule", TypeShape.of(GetMicrosoftSecurityIncidentCreationAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getMicrosoftSecurityIncidentCreationAlertRule", TypeShape.of(GetMicrosoftSecurityIncidentCreationAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents office data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args) {
+    public static Output<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args) {
         return getOfficeDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -519,8 +519,8 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getOfficeDataConnector", TypeShape.of(GetOfficeDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getOfficeDataConnector", TypeShape.of(GetOfficeDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Setting.
@@ -531,7 +531,7 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
-    public static CompletableFuture<GetProductSettingResult> getProductSetting(GetProductSettingArgs args) {
+    public static Output<GetProductSettingResult> getProductSetting(GetProductSettingArgs args) {
         return getProductSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -543,15 +543,15 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
-    public static CompletableFuture<GetProductSettingResult> getProductSetting(GetProductSettingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getProductSetting", TypeShape.of(GetProductSettingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProductSettingResult> getProductSetting(GetProductSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getProductSetting", TypeShape.of(GetProductSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents scheduled alert rule.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args) {
+    public static Output<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args) {
         return getScheduledAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -559,15 +559,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getScheduledAlertRule", TypeShape.of(GetScheduledAlertRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getScheduledAlertRule", TypeShape.of(GetScheduledAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Sentinel onboarding state
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args) {
+    public static Output<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args) {
         return getSentinelOnboardingState(args, InvokeOptions.Empty);
     }
     /**
@@ -575,15 +575,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSentinelOnboardingState", TypeShape.of(GetSentinelOnboardingStateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getSentinelOnboardingState", TypeShape.of(GetSentinelOnboardingStateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a SourceControl in Azure Security Insights.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args) {
+    public static Output<GetSourceControlResult> getSourceControl(GetSourceControlArgs args) {
         return getSourceControl(args, InvokeOptions.Empty);
     }
     /**
@@ -591,15 +591,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSourceControl", TypeShape.of(GetSourceControlResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSourceControlResult> getSourceControl(GetSourceControlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getSourceControl", TypeShape.of(GetSourceControlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents threat intelligence data connector.
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args) {
+    public static Output<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args) {
         return getTIDataConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -607,15 +607,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getTIDataConnector", TypeShape.of(GetTIDataConnectorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getTIDataConnector", TypeShape.of(GetTIDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Threat intelligence information object.
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args) {
+    public static Output<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args) {
         return getThreatIntelligenceIndicator(args, InvokeOptions.Empty);
     }
     /**
@@ -623,15 +623,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getThreatIntelligenceIndicator", TypeShape.of(GetThreatIntelligenceIndicatorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getThreatIntelligenceIndicator", TypeShape.of(GetThreatIntelligenceIndicatorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Settings with single toggle.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetUebaResult> getUeba(GetUebaArgs args) {
+    public static Output<GetUebaResult> getUeba(GetUebaArgs args) {
         return getUeba(args, InvokeOptions.Empty);
     }
     /**
@@ -639,15 +639,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetUebaResult> getUeba(GetUebaArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getUeba", TypeShape.of(GetUebaResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUebaResult> getUeba(GetUebaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getUeba", TypeShape.of(GetUebaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a Watchlist in Azure Security Insights.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistResult> getWatchlist(GetWatchlistArgs args) {
+    public static Output<GetWatchlistResult> getWatchlist(GetWatchlistArgs args) {
         return getWatchlist(args, InvokeOptions.Empty);
     }
     /**
@@ -655,15 +655,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistResult> getWatchlist(GetWatchlistArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlist", TypeShape.of(GetWatchlistResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWatchlistResult> getWatchlist(GetWatchlistArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getWatchlist", TypeShape.of(GetWatchlistResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a Watchlist item in Azure Security Insights.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args) {
+    public static Output<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args) {
         return getWatchlistItem(args, InvokeOptions.Empty);
     }
     /**
@@ -671,15 +671,15 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlistItem", TypeShape.of(GetWatchlistItemResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:getWatchlistItem", TypeShape.of(GetWatchlistItemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List all the source controls.
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args) {
+    public static Output<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args) {
         return listSourceControlRepositories(args, InvokeOptions.Empty);
     }
     /**
@@ -687,7 +687,7 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:securityinsights:listSourceControlRepositories", TypeShape.of(ListSourceControlRepositoriesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:securityinsights:listSourceControlRepositories", TypeShape.of(ListSourceControlRepositoriesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackSetId", required=true)
-    private String stackSetId;
+    private Output<String> stackSetId;
 
     /**
      * @return The ID of the stack set that you&#39;re creating.
      * 
      */
-    public String stackSetId() {
+    public Output<String> stackSetId() {
         return this.stackSetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stackSetId(String stackSetId) {
+        public Builder stackSetId(Output<String> stackSetId) {
             $.stackSetId = stackSetId;
             return this;
+        }
+
+        /**
+         * @param stackSetId The ID of the stack set that you&#39;re creating.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stackSetId(String stackSetId) {
+            return stackSetId(Output.of(stackSetId));
         }
 
         public GetStackSetArgs build() {

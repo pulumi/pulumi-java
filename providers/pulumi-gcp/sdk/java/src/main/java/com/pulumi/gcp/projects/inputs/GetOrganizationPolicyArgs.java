@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.projects.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="constraint", required=true)
-    private String constraint;
+    private Output<String> constraint;
 
     /**
      * @return (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    public String constraint() {
+    public Output<String> constraint() {
         return this.constraint;
     }
 
@@ -32,13 +33,13 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project", required=true)
-    private String project;
+    private Output<String> project;
 
     /**
      * @return The project ID.
      * 
      */
-    public String project() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -73,8 +74,29 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder constraint(String constraint) {
+        public Builder constraint(Output<String> constraint) {
             $.constraint = constraint;
+            return this;
+        }
+
+        /**
+         * @param constraint (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder constraint(String constraint) {
+            return constraint(Output.of(constraint));
+        }
+
+        /**
+         * @param project The project ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder project(String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetOrganizationPolicyArgs build() {

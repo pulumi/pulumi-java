@@ -8,10 +8,10 @@ import com.pulumi.azurenative.managedservices.inputs.GetRegistrationAssignmentAr
 import com.pulumi.azurenative.managedservices.inputs.GetRegistrationDefinitionArgs;
 import com.pulumi.azurenative.managedservices.outputs.GetRegistrationAssignmentResult;
 import com.pulumi.azurenative.managedservices.outputs.GetRegistrationDefinitionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagedservicesFunctions {
     /**
@@ -19,7 +19,7 @@ public final class ManagedservicesFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args) {
+    public static Output<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args) {
         return getRegistrationAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class ManagedservicesFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationAssignment", TypeShape.of(GetRegistrationAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistrationAssignmentResult> getRegistrationAssignment(GetRegistrationAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managedservices:getRegistrationAssignment", TypeShape.of(GetRegistrationAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Registration definition.
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args) {
+    public static Output<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args) {
         return getRegistrationDefinition(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class ManagedservicesFunctions {
      * API Version: 2019-09-01.
      * 
      */
-    public static CompletableFuture<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationDefinition", TypeShape.of(GetRegistrationDefinitionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistrationDefinitionResult> getRegistrationDefinition(GetRegistrationDefinitionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managedservices:getRegistrationDefinition", TypeShape.of(GetRegistrationDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

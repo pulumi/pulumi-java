@@ -6,10 +6,10 @@ package com.pulumi.azure.managementgroups;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.managementgroups.inputs.GetManagementGroupArgs;
 import com.pulumi.azure.managementgroups.outputs.GetManagementGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ManagementgroupsFunctions {
     /**
@@ -44,7 +44,7 @@ public final class ManagementgroupsFunctions {
      * 
      */
     @Deprecated /* azure.managementgroups.getManagementGroup has been deprecated in favor of azure.management.getGroup */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup() {
+    public static Output<GetManagementGroupResult> getManagementGroup() {
         return getManagementGroup(GetManagementGroupArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class ManagementgroupsFunctions {
      * 
      */
     @Deprecated /* azure.managementgroups.getManagementGroup has been deprecated in favor of azure.management.getGroup */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args) {
+    public static Output<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args) {
         return getManagementGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -114,7 +114,7 @@ public final class ManagementgroupsFunctions {
      * 
      */
     @Deprecated /* azure.managementgroups.getManagementGroup has been deprecated in favor of azure.management.getGroup */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:managementgroups/getManagementGroup:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:managementgroups/getManagementGroup:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args, Utilities.withVersion(options));
     }
 }

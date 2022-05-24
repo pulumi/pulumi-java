@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetBucketIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetBucketIamPolicyArgs Empty = new GetBucketIamPolicyArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private Output</* @Nullable */ String> userProject;
 
-    public Optional<String> userProject() {
-        return Optional.ofNullable(this.userProject);
+    public Output</* @Nullable */ String> userProject() {
+        return this.userProject;
     }
 
     private GetBucketIamPolicyArgs() {}
@@ -61,19 +61,31 @@ public final class GetBucketIamPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetBucketIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder userProject(Output</* @Nullable */ String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(@Nullable String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetBucketIamPolicyArgs build() {

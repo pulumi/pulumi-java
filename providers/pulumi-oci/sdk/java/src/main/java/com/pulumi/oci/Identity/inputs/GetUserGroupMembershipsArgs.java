@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Identity.inputs.GetUserGroupMembershipsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetUserGroupMembershipsFilter> filters;
+    private Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters;
 
-    public Optional<List<GetUserGroupMembershipsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -43,14 +43,14 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupId")
-    private @Nullable String groupId;
+    private Output</* @Nullable */ String> groupId;
 
     /**
      * @return The OCID of the group.
      * 
      */
-    public Optional<String> groupId() {
-        return Optional.ofNullable(this.groupId);
+    public Output</* @Nullable */ String> groupId() {
+        return this.groupId;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userId")
-    private @Nullable String userId;
+    private Output</* @Nullable */ String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public Optional<String> userId() {
-        return Optional.ofNullable(this.userId);
+    public Output</* @Nullable */ String> userId() {
+        return this.userId;
     }
 
     private GetUserGroupMembershipsArgs() {}
@@ -101,14 +101,28 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetUserGroupMembershipsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetUserGroupMembershipsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetUserGroupMembershipsFilter... filters) {
@@ -121,8 +135,29 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(Output</* @Nullable */ String> groupId) {
             $.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * @param groupId The OCID of the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(@Nullable String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(Output</* @Nullable */ String> userId) {
+            $.userId = userId;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder userId(@Nullable String userId) {
-            $.userId = userId;
-            return this;
+            return userId(Output.of(userId));
         }
 
         public GetUserGroupMembershipsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.secretmanager;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.gcp.secretmanager.inputs.GetSecretArgs;
 import com.pulumi.gcp.secretmanager.inputs.GetSecretVersionArgs;
 import com.pulumi.gcp.secretmanager.outputs.GetSecretResult;
 import com.pulumi.gcp.secretmanager.outputs.GetSecretVersionResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class SecretmanagerFunctions {
     /**
@@ -41,7 +41,7 @@ public final class SecretmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
     /**
@@ -71,8 +71,8 @@ public final class SecretmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:secretmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:secretmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
@@ -101,7 +101,7 @@ public final class SecretmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
         return getSecretVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -131,7 +131,7 @@ public final class SecretmanagerFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:secretmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:secretmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
 }

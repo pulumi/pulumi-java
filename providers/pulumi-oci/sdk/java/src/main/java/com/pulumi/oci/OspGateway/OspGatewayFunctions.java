@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OspGateway;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.oci.OspGateway.outputs.GetInvoicesResult;
 import com.pulumi.oci.OspGateway.outputs.GetSubscriptionResult;
 import com.pulumi.oci.OspGateway.outputs.GetSubscriptionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OspGatewayFunctions {
     /**
@@ -30,7 +30,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoiceResult> getInvoice(GetInvoiceArgs args) {
+    public static Output<GetInvoiceResult> getInvoice(GetInvoiceArgs args) {
         return getInvoice(args, InvokeOptions.Empty);
     }
     /**
@@ -41,8 +41,8 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoiceResult> getInvoice(GetInvoiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getInvoice:getInvoice", TypeShape.of(GetInvoiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvoiceResult> getInvoice(GetInvoiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getInvoice:getInvoice", TypeShape.of(GetInvoiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Invoices in Oracle Cloud Infrastructure Osp Gateway service.
@@ -52,7 +52,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesResult> getInvoices(GetInvoicesArgs args) {
+    public static Output<GetInvoicesResult> getInvoices(GetInvoicesArgs args) {
         return getInvoices(args, InvokeOptions.Empty);
     }
     /**
@@ -63,8 +63,8 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesResult> getInvoices(GetInvoicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getInvoices:getInvoices", TypeShape.of(GetInvoicesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvoicesResult> getInvoices(GetInvoicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getInvoices:getInvoices", TypeShape.of(GetInvoicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Invoices Invoice Line resource in Oracle Cloud Infrastructure Osp Gateway service.
@@ -74,7 +74,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesInvoiceLineResult> getInvoicesInvoiceLine(GetInvoicesInvoiceLineArgs args) {
+    public static Output<GetInvoicesInvoiceLineResult> getInvoicesInvoiceLine(GetInvoicesInvoiceLineArgs args) {
         return getInvoicesInvoiceLine(args, InvokeOptions.Empty);
     }
     /**
@@ -85,8 +85,8 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesInvoiceLineResult> getInvoicesInvoiceLine(GetInvoicesInvoiceLineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getInvoicesInvoiceLine:getInvoicesInvoiceLine", TypeShape.of(GetInvoicesInvoiceLineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvoicesInvoiceLineResult> getInvoicesInvoiceLine(GetInvoicesInvoiceLineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getInvoicesInvoiceLine:getInvoicesInvoiceLine", TypeShape.of(GetInvoicesInvoiceLineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Invoices Invoice Lines in Oracle Cloud Infrastructure Osp Gateway service.
@@ -96,7 +96,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesInvoiceLinesResult> getInvoicesInvoiceLines(GetInvoicesInvoiceLinesArgs args) {
+    public static Output<GetInvoicesInvoiceLinesResult> getInvoicesInvoiceLines(GetInvoicesInvoiceLinesArgs args) {
         return getInvoicesInvoiceLines(args, InvokeOptions.Empty);
     }
     /**
@@ -107,8 +107,8 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInvoicesInvoiceLinesResult> getInvoicesInvoiceLines(GetInvoicesInvoiceLinesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getInvoicesInvoiceLines:getInvoicesInvoiceLines", TypeShape.of(GetInvoicesInvoiceLinesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInvoicesInvoiceLinesResult> getInvoicesInvoiceLines(GetInvoicesInvoiceLinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getInvoicesInvoiceLines:getInvoicesInvoiceLines", TypeShape.of(GetInvoicesInvoiceLinesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Subscription resource in Oracle Cloud Infrastructure Osp Gateway service.
@@ -118,7 +118,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -129,8 +129,8 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Subscriptions in Oracle Cloud Infrastructure Osp Gateway service.
@@ -140,7 +140,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -151,7 +151,7 @@ public final class OspGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OspGateway/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OspGateway/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
 }

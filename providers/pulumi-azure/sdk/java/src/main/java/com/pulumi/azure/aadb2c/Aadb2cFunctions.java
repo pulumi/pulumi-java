@@ -6,10 +6,10 @@ package com.pulumi.azure.aadb2c;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.aadb2c.inputs.GetDirectoryArgs;
 import com.pulumi.azure.aadb2c.outputs.GetDirectoryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class Aadb2cFunctions {
     /**
@@ -41,7 +41,7 @@ public final class Aadb2cFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
         return getDirectory(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class Aadb2cFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:aadb2c/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:aadb2c/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }
 }

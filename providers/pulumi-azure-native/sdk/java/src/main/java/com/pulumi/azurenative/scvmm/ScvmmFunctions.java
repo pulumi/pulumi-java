@@ -18,10 +18,10 @@ import com.pulumi.azurenative.scvmm.outputs.GetVirtualMachineResult;
 import com.pulumi.azurenative.scvmm.outputs.GetVirtualMachineTemplateResult;
 import com.pulumi.azurenative.scvmm.outputs.GetVirtualNetworkResult;
 import com.pulumi.azurenative.scvmm.outputs.GetVmmServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ScvmmFunctions {
     /**
@@ -29,7 +29,7 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args) {
+    public static Output<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args) {
         return getAvailabilitySet(args, InvokeOptions.Empty);
     }
     /**
@@ -37,15 +37,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getAvailabilitySet", TypeShape.of(GetAvailabilitySetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getAvailabilitySet", TypeShape.of(GetAvailabilitySetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Clouds resource definition.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetCloudResult> getCloud(GetCloudArgs args) {
+    public static Output<GetCloudResult> getCloud(GetCloudArgs args) {
         return getCloud(args, InvokeOptions.Empty);
     }
     /**
@@ -53,15 +53,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetCloudResult> getCloud(GetCloudArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getCloud", TypeShape.of(GetCloudResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCloudResult> getCloud(GetCloudArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getCloud", TypeShape.of(GetCloudResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the inventory item.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args) {
+    public static Output<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args) {
         return getInventoryItem(args, InvokeOptions.Empty);
     }
     /**
@@ -69,15 +69,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VirtualMachines resource definition.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
         return getVirtualMachine(args, InvokeOptions.Empty);
     }
     /**
@@ -85,15 +85,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VirtualMachineTemplates resource definition.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args) {
+    public static Output<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args) {
         return getVirtualMachineTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -101,15 +101,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VirtualNetworks resource definition.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -117,15 +117,15 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The VmmServers resource definition.
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVmmServerResult> getVmmServer(GetVmmServerArgs args) {
+    public static Output<GetVmmServerResult> getVmmServer(GetVmmServerArgs args) {
         return getVmmServer(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public final class ScvmmFunctions {
      * API Version: 2020-06-05-preview.
      * 
      */
-    public static CompletableFuture<GetVmmServerResult> getVmmServer(GetVmmServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:scvmm:getVmmServer", TypeShape.of(GetVmmServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVmmServerResult> getVmmServer(GetVmmServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:scvmm:getVmmServer", TypeShape.of(GetVmmServerResult.class), args, Utilities.withVersion(options));
     }
 }

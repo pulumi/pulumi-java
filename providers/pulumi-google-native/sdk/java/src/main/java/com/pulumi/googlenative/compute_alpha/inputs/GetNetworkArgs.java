@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNetworkArgs Empty = new GetNetworkArgs();
 
     @Import(name="network", required=true)
-    private String network;
+    private Output<String> network;
 
-    public String network() {
+    public Output<String> network() {
         return this.network;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetNetworkArgs() {}
@@ -53,14 +53,22 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder network(String network) {
+        public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder network(String network) {
+            return network(Output.of(network));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetNetworkArgs build() {

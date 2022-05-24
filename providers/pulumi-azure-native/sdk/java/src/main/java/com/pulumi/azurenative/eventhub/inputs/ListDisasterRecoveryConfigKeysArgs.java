@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="alias", required=true)
-    private String alias;
+    private Output<String> alias;
 
     /**
      * @return The Disaster Recovery configuration name
      * 
      */
-    public String alias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -32,13 +33,13 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-    private String authorizationRuleName;
+    private Output<String> authorizationRuleName;
 
     /**
      * @return The authorization rule name.
      * 
      */
-    public String authorizationRuleName() {
+    public Output<String> authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -47,13 +48,13 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The Namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -62,13 +63,13 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder alias(String alias) {
+        public Builder alias(Output<String> alias) {
             $.alias = alias;
+            return this;
+        }
+
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
+        }
+
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizationRuleName(Output<String> authorizationRuleName) {
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
          * 
          */
         public Builder authorizationRuleName(String authorizationRuleName) {
-            $.authorizationRuleName = authorizationRuleName;
+            return authorizationRuleName(Output.of(authorizationRuleName));
+        }
+
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListDisasterRecoveryConfigKeysArgs build() {

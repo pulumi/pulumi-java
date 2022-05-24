@@ -6,24 +6,24 @@ package com.pulumi.awsnative.eventschemas;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.eventschemas.inputs.GetRegistryPolicyArgs;
 import com.pulumi.awsnative.eventschemas.outputs.GetRegistryPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EventschemasFunctions {
     /**
      * Resource Type definition for AWS::EventSchemas::RegistryPolicy
      * 
      */
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args) {
+    public static Output<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args) {
         return getRegistryPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::EventSchemas::RegistryPolicy
      * 
      */
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:eventschemas:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:eventschemas:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

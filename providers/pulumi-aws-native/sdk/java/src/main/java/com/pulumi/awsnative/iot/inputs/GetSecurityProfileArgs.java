@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityProfileArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="securityProfileName", required=true)
-    private String securityProfileName;
+    private Output<String> securityProfileName;
 
     /**
      * @return A unique identifier for the security profile.
      * 
      */
-    public String securityProfileName() {
+    public Output<String> securityProfileName() {
         return this.securityProfileName;
     }
 
@@ -57,9 +58,19 @@ public final class GetSecurityProfileArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder securityProfileName(String securityProfileName) {
+        public Builder securityProfileName(Output<String> securityProfileName) {
             $.securityProfileName = securityProfileName;
             return this;
+        }
+
+        /**
+         * @param securityProfileName A unique identifier for the security profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityProfileName(String securityProfileName) {
+            return securityProfileName(Output.of(securityProfileName));
         }
 
         public GetSecurityProfileArgs build() {

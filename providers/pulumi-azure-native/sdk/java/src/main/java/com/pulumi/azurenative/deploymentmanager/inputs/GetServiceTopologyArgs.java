@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceTopologyName", required=true)
-    private String serviceTopologyName;
+    private Output<String> serviceTopologyName;
 
     /**
      * @return The name of the service topology .
      * 
      */
-    public String serviceTopologyName() {
+    public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -73,8 +74,29 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceTopologyName(Output<String> serviceTopologyName) {
+            $.serviceTopologyName = serviceTopologyName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder serviceTopologyName(String serviceTopologyName) {
-            $.serviceTopologyName = serviceTopologyName;
-            return this;
+            return serviceTopologyName(Output.of(serviceTopologyName));
         }
 
         public GetServiceTopologyArgs build() {

@@ -24,10 +24,10 @@ import com.pulumi.azure.keyvault.outputs.GetKeyVaultResult;
 import com.pulumi.azure.keyvault.outputs.GetManagedHardwareSecurityModuleResult;
 import com.pulumi.azure.keyvault.outputs.GetSecretResult;
 import com.pulumi.azure.keyvault.outputs.GetSecretsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class KeyvaultFunctions {
     /**
@@ -58,7 +58,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getAccessPolicy:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getAccessPolicy:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault Certificate.
@@ -126,7 +126,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -163,8 +163,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access data stored in an existing Key Vault Certificate.
@@ -202,7 +202,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateDataResult> getCertificateData(GetCertificateDataArgs args) {
+    public static Output<GetCertificateDataResult> getCertificateData(GetCertificateDataArgs args) {
         return getCertificateData(args, InvokeOptions.Empty);
     }
     /**
@@ -241,8 +241,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateDataResult> getCertificateData(GetCertificateDataArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getCertificateData:getCertificateData", TypeShape.of(GetCertificateDataResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateDataResult> getCertificateData(GetCertificateDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getCertificateData:getCertificateData", TypeShape.of(GetCertificateDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault Certificate Issuer.
@@ -278,7 +278,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateIssuerResult> getCertificateIssuer(GetCertificateIssuerArgs args) {
+    public static Output<GetCertificateIssuerResult> getCertificateIssuer(GetCertificateIssuerArgs args) {
         return getCertificateIssuer(args, InvokeOptions.Empty);
     }
     /**
@@ -315,8 +315,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateIssuerResult> getCertificateIssuer(GetCertificateIssuerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getCertificateIssuer:getCertificateIssuer", TypeShape.of(GetCertificateIssuerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCertificateIssuerResult> getCertificateIssuer(GetCertificateIssuerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getCertificateIssuer:getCertificateIssuer", TypeShape.of(GetCertificateIssuerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Encrypts or Decrypts a value using a Key Vault Key.
@@ -358,7 +358,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptedValueResult> getEncryptedValue(GetEncryptedValueArgs args) {
+    public static Output<GetEncryptedValueResult> getEncryptedValue(GetEncryptedValueArgs args) {
         return getEncryptedValue(args, InvokeOptions.Empty);
     }
     /**
@@ -401,8 +401,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptedValueResult> getEncryptedValue(GetEncryptedValueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getEncryptedValue:getEncryptedValue", TypeShape.of(GetEncryptedValueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEncryptedValueResult> getEncryptedValue(GetEncryptedValueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getEncryptedValue:getEncryptedValue", TypeShape.of(GetEncryptedValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault Key.
@@ -433,7 +433,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -465,8 +465,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault.
@@ -497,7 +497,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyVaultResult> getKeyVault(GetKeyVaultArgs args) {
+    public static Output<GetKeyVaultResult> getKeyVault(GetKeyVaultArgs args) {
         return getKeyVault(args, InvokeOptions.Empty);
     }
     /**
@@ -529,8 +529,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeyVaultResult> getKeyVault(GetKeyVaultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getKeyVault:getKeyVault", TypeShape.of(GetKeyVaultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyVaultResult> getKeyVault(GetKeyVaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getKeyVault:getKeyVault", TypeShape.of(GetKeyVaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault Managed Hardware Security Module.
@@ -561,7 +561,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedHardwareSecurityModuleResult> getManagedHardwareSecurityModule(GetManagedHardwareSecurityModuleArgs args) {
+    public static Output<GetManagedHardwareSecurityModuleResult> getManagedHardwareSecurityModule(GetManagedHardwareSecurityModuleArgs args) {
         return getManagedHardwareSecurityModule(args, InvokeOptions.Empty);
     }
     /**
@@ -593,8 +593,8 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedHardwareSecurityModuleResult> getManagedHardwareSecurityModule(GetManagedHardwareSecurityModuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getManagedHardwareSecurityModule:getManagedHardwareSecurityModule", TypeShape.of(GetManagedHardwareSecurityModuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedHardwareSecurityModuleResult> getManagedHardwareSecurityModule(GetManagedHardwareSecurityModuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getManagedHardwareSecurityModule:getManagedHardwareSecurityModule", TypeShape.of(GetManagedHardwareSecurityModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Key Vault Secret.
@@ -625,7 +625,7 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
     /**
@@ -657,21 +657,21 @@ public final class KeyvaultFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve a list of secret names from an existing Key Vault Secret.
      * 
      */
-    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args) {
+    public static Output<GetSecretsResult> getSecrets(GetSecretsArgs args) {
         return getSecrets(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to retrieve a list of secret names from an existing Key Vault Secret.
      * 
      */
-    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:keyvault/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:keyvault/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

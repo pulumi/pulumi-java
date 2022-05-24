@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.LogAnalytics.inputs.GetNamespaceScheduledTasksFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetNamespaceScheduledTasksFilter> filters;
+    private Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters;
 
-    public Optional<List<GetNamespaceScheduledTasksFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -73,13 +73,13 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="taskType", required=true)
-    private String taskType;
+    private Output<String> taskType;
 
     /**
      * @return Required parameter to specify schedule task type.
      * 
      */
-    public String taskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 
@@ -117,8 +117,29 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetNamespaceScheduledTasksFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetNamespaceScheduledTasksFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param taskType Required parameter to specify schedule task type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskType(Output<String> taskType) {
+            $.taskType = taskType;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * 
          */
         public Builder taskType(String taskType) {
-            $.taskType = taskType;
-            return this;
+            return taskType(Output.of(taskType));
         }
 
         public GetNamespaceScheduledTasksArgs build() {

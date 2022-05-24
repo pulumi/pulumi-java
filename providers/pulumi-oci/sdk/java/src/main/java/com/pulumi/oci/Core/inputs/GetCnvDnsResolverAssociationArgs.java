@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCnvDnsResolverAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vcnId", required=true)
-    private String vcnId;
+    private Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public String vcnId() {
+    public Output<String> vcnId() {
         return this.vcnId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCnvDnsResolverAssociationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder vcnId(String vcnId) {
+        public Builder vcnId(Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
         }
 
         public GetCnvDnsResolverAssociationArgs build() {

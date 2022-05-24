@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationResourceName", required=true)
-    private String applicationResourceName;
+    private Output<String> applicationResourceName;
 
     /**
      * @return The identity of the application.
      * 
      */
-    public String applicationResourceName() {
+    public Output<String> applicationResourceName() {
         return this.applicationResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationResourceName(String applicationResourceName) {
+        public Builder applicationResourceName(Output<String> applicationResourceName) {
             $.applicationResourceName = applicationResourceName;
+            return this;
+        }
+
+        /**
+         * @param applicationResourceName The identity of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationResourceName(String applicationResourceName) {
+            return applicationResourceName(Output.of(applicationResourceName));
+        }
+
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetApplicationArgs build() {

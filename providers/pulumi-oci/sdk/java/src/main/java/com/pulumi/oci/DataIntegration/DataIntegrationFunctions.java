@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataIntegration;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.DataIntegration.inputs.GetWorkspacesArgs;
 import com.pulumi.oci.DataIntegration.outputs.GetWorkspaceResult;
 import com.pulumi.oci.DataIntegration.outputs.GetWorkspacesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DataIntegrationFunctions {
     /**
@@ -22,7 +22,7 @@ public final class DataIntegrationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class DataIntegrationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataIntegration/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataIntegration/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Workspaces in Oracle Cloud Infrastructure Data Integration service.
@@ -44,7 +44,7 @@ public final class DataIntegrationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkspacesResult> getWorkspaces(GetWorkspacesArgs args) {
+    public static Output<GetWorkspacesResult> getWorkspaces(GetWorkspacesArgs args) {
         return getWorkspaces(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +55,7 @@ public final class DataIntegrationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkspacesResult> getWorkspaces(GetWorkspacesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:DataIntegration/getWorkspaces:getWorkspaces", TypeShape.of(GetWorkspacesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspacesResult> getWorkspaces(GetWorkspacesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:DataIntegration/getWorkspaces:getWorkspaces", TypeShape.of(GetWorkspacesResult.class), args, Utilities.withVersion(options));
     }
 }

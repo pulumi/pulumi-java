@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.spanner_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSessionArgs Empty = new GetSessionArgs();
 
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="sessionId", required=true)
-    private String sessionId;
+    private Output<String> sessionId;
 
-    public String sessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
@@ -69,24 +69,40 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSessionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sessionId(String sessionId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sessionId(Output<String> sessionId) {
             $.sessionId = sessionId;
             return this;
+        }
+
+        public Builder sessionId(String sessionId) {
+            return sessionId(Output.of(sessionId));
         }
 
         public GetSessionArgs build() {

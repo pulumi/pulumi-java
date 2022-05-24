@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-    private String integrationRuntimeName;
+    private Output<String> integrationRuntimeName;
 
     /**
      * @return Integration runtime name
      * 
      */
-    public String integrationRuntimeName() {
+    public Output<String> integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
 
@@ -34,14 +34,14 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="metadataPath")
-    private @Nullable String metadataPath;
+    private Output</* @Nullable */ String> metadataPath;
 
     /**
      * @return Metadata path.
      * 
      */
-    public Optional<String> metadataPath() {
-        return Optional.ofNullable(this.metadataPath);
+    public Output</* @Nullable */ String> metadataPath() {
+        return this.metadataPath;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +64,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -107,8 +107,29 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder integrationRuntimeName(String integrationRuntimeName) {
+        public Builder integrationRuntimeName(Output<String> integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
+            return this;
+        }
+
+        /**
+         * @param integrationRuntimeName Integration runtime name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationRuntimeName(String integrationRuntimeName) {
+            return integrationRuntimeName(Output.of(integrationRuntimeName));
+        }
+
+        /**
+         * @param metadataPath Metadata path.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadataPath(Output</* @Nullable */ String> metadataPath) {
+            $.metadataPath = metadataPath;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * 
          */
         public Builder metadataPath(@Nullable String metadataPath) {
-            $.metadataPath = metadataPath;
+            return metadataPath(Output.of(metadataPath));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetIntegrationRuntimeObjectMetadatumArgs build() {

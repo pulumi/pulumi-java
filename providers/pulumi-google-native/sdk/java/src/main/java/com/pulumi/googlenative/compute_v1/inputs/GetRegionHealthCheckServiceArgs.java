@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetRegionHealthCheckServiceArgs extends com.pulumi.resources.
     public static final GetRegionHealthCheckServiceArgs Empty = new GetRegionHealthCheckServiceArgs();
 
     @Import(name="healthCheckService", required=true)
-    private String healthCheckService;
+    private Output<String> healthCheckService;
 
-    public String healthCheckService() {
+    public Output<String> healthCheckService() {
         return this.healthCheckService;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +61,31 @@ public final class GetRegionHealthCheckServiceArgs extends com.pulumi.resources.
             $ = new GetRegionHealthCheckServiceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder healthCheckService(String healthCheckService) {
+        public Builder healthCheckService(Output<String> healthCheckService) {
             $.healthCheckService = healthCheckService;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder healthCheckService(String healthCheckService) {
+            return healthCheckService(Output.of(healthCheckService));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetRegionHealthCheckServiceArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceRegistryName", required=true)
-    private String serviceRegistryName;
+    private Output<String> serviceRegistryName;
 
     /**
      * @return The name of Service Registry.
      * 
      */
-    public String serviceRegistryName() {
+    public Output<String> serviceRegistryName() {
         return this.serviceRegistryName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param serviceRegistryName The name of Service Registry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceRegistryName(Output<String> serviceRegistryName) {
+            $.serviceRegistryName = serviceRegistryName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder serviceRegistryName(String serviceRegistryName) {
-            $.serviceRegistryName = serviceRegistryName;
-            return this;
+            return serviceRegistryName(Output.of(serviceRegistryName));
         }
 
         public GetServiceRegistryArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.certificateauthority.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateAuthorityId")
-    private @Nullable String certificateAuthorityId;
+    private Output</* @Nullable */ String> certificateAuthorityId;
 
     /**
      * @return ID of the certificate authority.
      * 
      */
-    public Optional<String> certificateAuthorityId() {
-        return Optional.ofNullable(this.certificateAuthorityId);
+    public Output</* @Nullable */ String> certificateAuthorityId() {
+        return this.certificateAuthorityId;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-    private @Nullable String location;
+    private Output</* @Nullable */ String> location;
 
     /**
      * @return The location the certificate authority exists in.
      * 
      */
-    public Optional<String> location() {
-        return Optional.ofNullable(this.location);
+    public Output</* @Nullable */ String> location() {
+        return this.location;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pool")
-    private @Nullable String pool;
+    private Output</* @Nullable */ String> pool;
 
     /**
      * @return The name of the pool the certificate authority belongs to.
      * 
      */
-    public Optional<String> pool() {
-        return Optional.ofNullable(this.pool);
+    public Output</* @Nullable */ String> pool() {
+        return this.pool;
     }
 
     /**
@@ -65,15 +65,15 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The ID of the project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetAuthorityArgs() {}
@@ -109,8 +109,29 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateAuthorityId(@Nullable String certificateAuthorityId) {
+        public Builder certificateAuthorityId(Output</* @Nullable */ String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
+            return this;
+        }
+
+        /**
+         * @param certificateAuthorityId ID of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorityId(@Nullable String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
+        }
+
+        /**
+         * @param location The location the certificate authority exists in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output</* @Nullable */ String> location) {
+            $.location = location;
             return this;
         }
 
@@ -121,7 +142,17 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder location(@Nullable String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param pool The name of the pool the certificate authority belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pool(Output</* @Nullable */ String> pool) {
+            $.pool = pool;
             return this;
         }
 
@@ -132,7 +163,18 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder pool(@Nullable String pool) {
-            $.pool = pool;
+            return pool(Output.of(pool));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -144,8 +186,7 @@ public final class GetAuthorityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetAuthorityArgs build() {

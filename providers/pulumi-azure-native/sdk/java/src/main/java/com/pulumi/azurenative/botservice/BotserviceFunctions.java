@@ -20,10 +20,10 @@ import com.pulumi.azurenative.botservice.outputs.GetPrivateEndpointConnectionRes
 import com.pulumi.azurenative.botservice.outputs.ListBotConnectionServiceProvidersResult;
 import com.pulumi.azurenative.botservice.outputs.ListBotConnectionWithSecretsResult;
 import com.pulumi.azurenative.botservice.outputs.ListChannelWithKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class BotserviceFunctions {
     /**
@@ -31,7 +31,7 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+    public static Output<GetBotResult> getBot(GetBotArgs args) {
         return getBot(args, InvokeOptions.Empty);
     }
     /**
@@ -39,15 +39,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Bot channel resource definition
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args) {
+    public static Output<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args) {
         return getBotConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -55,15 +55,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:getBotConnection", TypeShape.of(GetBotConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:getBotConnection", TypeShape.of(GetBotConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Bot channel resource definition
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -71,15 +71,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Enterprise Channel resource definition
      * API Version: 2018-07-12.
      * 
      */
-    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args) {
+    public static Output<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args) {
         return getEnterpriseChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -87,15 +87,15 @@ public final class BotserviceFunctions {
      * API Version: 2018-07-12.
      * 
      */
-    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:getEnterpriseChannel", TypeShape.of(GetEnterpriseChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:getEnterpriseChannel", TypeShape.of(GetEnterpriseChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -103,15 +103,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of bot service providers response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders() {
+    public static Output<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders() {
         return listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -119,7 +119,7 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args) {
+    public static Output<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args) {
         return listBotConnectionServiceProviders(args, InvokeOptions.Empty);
     }
     /**
@@ -127,15 +127,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionServiceProviders", TypeShape.of(ListBotConnectionServiceProvidersResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:listBotConnectionServiceProviders", TypeShape.of(ListBotConnectionServiceProvidersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Bot channel resource definition
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args) {
+    public static Output<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args) {
         return listBotConnectionWithSecrets(args, InvokeOptions.Empty);
     }
     /**
@@ -143,15 +143,15 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionWithSecrets", TypeShape.of(ListBotConnectionWithSecretsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:listBotConnectionWithSecrets", TypeShape.of(ListBotConnectionWithSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The ARM channel of list channel with keys operation response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args) {
+    public static Output<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args) {
         return listChannelWithKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -159,7 +159,7 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:botservice:listChannelWithKeys", TypeShape.of(ListChannelWithKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:botservice:listChannelWithKeys", TypeShape.of(ListChannelWithKeysResult.class), args, Utilities.withVersion(options));
     }
 }

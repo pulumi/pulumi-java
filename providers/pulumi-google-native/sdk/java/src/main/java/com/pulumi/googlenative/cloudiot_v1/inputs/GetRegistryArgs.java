@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudiot_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetRegistryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegistryArgs Empty = new GetRegistryArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -61,19 +61,31 @@ public final class GetRegistryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRegistryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder registryId(String registryId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.certificateregistration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateOrderName", required=true)
-    private String certificateOrderName;
+    private Output<String> certificateOrderName;
 
     /**
      * @return Name of the certificate order..
      * 
      */
-    public String certificateOrderName() {
+    public Output<String> certificateOrderName() {
         return this.certificateOrderName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder certificateOrderName(String certificateOrderName) {
+        public Builder certificateOrderName(Output<String> certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
+            return this;
+        }
+
+        /**
+         * @param certificateOrderName Name of the certificate order..
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateOrderName(String certificateOrderName) {
+            return certificateOrderName(Output.of(certificateOrderName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAppServiceCertificateOrderArgs build() {

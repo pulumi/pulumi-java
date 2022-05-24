@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataCatalog.inputs.GetConnectionsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return Unique catalog identifier.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -37,14 +37,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdById")
-    private @Nullable String createdById;
+    private Output</* @Nullable */ String> createdById;
 
     /**
      * @return OCID of the user who created the resource.
      * 
      */
-    public Optional<String> createdById() {
-        return Optional.ofNullable(this.createdById);
+    public Output</* @Nullable */ String> createdById() {
+        return this.createdById;
     }
 
     /**
@@ -52,13 +52,13 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataAssetKey", required=true)
-    private String dataAssetKey;
+    private Output<String> dataAssetKey;
 
     /**
      * @return Unique data asset key.
      * 
      */
-    public String dataAssetKey() {
+    public Output<String> dataAssetKey() {
         return this.dataAssetKey;
     }
 
@@ -67,14 +67,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -82,14 +82,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNameContains")
-    private @Nullable String displayNameContains;
+    private Output</* @Nullable */ String> displayNameContains;
 
     /**
      * @return A filter to return only resources that match display name pattern given. The match is not case sensitive. For Example : /folders?displayNameContains=Cu.* The above would match all folders with display name that starts with &#34;Cu&#34; or has the pattern &#34;Cu&#34; anywhere in between.
      * 
      */
-    public Optional<String> displayNameContains() {
-        return Optional.ofNullable(this.displayNameContains);
+    public Output</* @Nullable */ String> displayNameContains() {
+        return this.displayNameContains;
     }
 
     /**
@@ -97,14 +97,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalKey")
-    private @Nullable String externalKey;
+    private Output</* @Nullable */ String> externalKey;
 
     /**
      * @return Unique external identifier of this resource in the external source system.
      * 
      */
-    public Optional<String> externalKey() {
-        return Optional.ofNullable(this.externalKey);
+    public Output</* @Nullable */ String> externalKey() {
+        return this.externalKey;
     }
 
     /**
@@ -112,21 +112,21 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private Output</* @Nullable */ List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a connection summary response.
      * 
      */
-    public Optional<List<String>> fields() {
-        return Optional.ofNullable(this.fields);
+    public Output</* @Nullable */ List<String>> fields() {
+        return this.fields;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetConnectionsFilter> filters;
+    private Output</* @Nullable */ List<GetConnectionsFilter>> filters;
 
-    public Optional<List<GetConnectionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetConnectionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -134,14 +134,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isDefault")
-    private @Nullable Boolean isDefault;
+    private Output</* @Nullable */ Boolean> isDefault;
 
     /**
      * @return Indicates whether this connection is the default connection.
      * 
      */
-    public Optional<Boolean> isDefault() {
-        return Optional.ofNullable(this.isDefault);
+    public Output</* @Nullable */ Boolean> isDefault() {
+        return this.isDefault;
     }
 
     /**
@@ -149,14 +149,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     /**
@@ -164,14 +164,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreated")
-    private @Nullable String timeCreated;
+    private Output</* @Nullable */ String> timeCreated;
 
     /**
      * @return Time that the resource was created. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
      * 
      */
-    public Optional<String> timeCreated() {
-        return Optional.ofNullable(this.timeCreated);
+    public Output</* @Nullable */ String> timeCreated() {
+        return this.timeCreated;
     }
 
     /**
@@ -179,14 +179,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeStatusUpdated")
-    private @Nullable String timeStatusUpdated;
+    private Output</* @Nullable */ String> timeStatusUpdated;
 
     /**
      * @return Time that the resource&#39;s status was last updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
      * 
      */
-    public Optional<String> timeStatusUpdated() {
-        return Optional.ofNullable(this.timeStatusUpdated);
+    public Output</* @Nullable */ String> timeStatusUpdated() {
+        return this.timeStatusUpdated;
     }
 
     /**
@@ -194,14 +194,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeUpdated")
-    private @Nullable String timeUpdated;
+    private Output</* @Nullable */ String> timeUpdated;
 
     /**
      * @return Time that the resource was updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
      * 
      */
-    public Optional<String> timeUpdated() {
-        return Optional.ofNullable(this.timeUpdated);
+    public Output</* @Nullable */ String> timeUpdated() {
+        return this.timeUpdated;
     }
 
     /**
@@ -209,14 +209,14 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updatedById")
-    private @Nullable String updatedById;
+    private Output</* @Nullable */ String> updatedById;
 
     /**
      * @return OCID of the user who updated the resource.
      * 
      */
-    public Optional<String> updatedById() {
-        return Optional.ofNullable(this.updatedById);
+    public Output</* @Nullable */ String> updatedById() {
+        return this.updatedById;
     }
 
     private GetConnectionsArgs() {}
@@ -262,8 +262,29 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * @param catalogId Unique catalog identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param createdById OCID of the user who created the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createdById(Output</* @Nullable */ String> createdById) {
+            $.createdById = createdById;
             return this;
         }
 
@@ -274,7 +295,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder createdById(@Nullable String createdById) {
-            $.createdById = createdById;
+            return createdById(Output.of(createdById));
+        }
+
+        /**
+         * @param dataAssetKey Unique data asset key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataAssetKey(Output<String> dataAssetKey) {
+            $.dataAssetKey = dataAssetKey;
             return this;
         }
 
@@ -285,7 +316,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dataAssetKey(String dataAssetKey) {
-            $.dataAssetKey = dataAssetKey;
+            return dataAssetKey(Output.of(dataAssetKey));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -296,7 +337,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param displayNameContains A filter to return only resources that match display name pattern given. The match is not case sensitive. For Example : /folders?displayNameContains=Cu.* The above would match all folders with display name that starts with &#34;Cu&#34; or has the pattern &#34;Cu&#34; anywhere in between.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameContains(Output</* @Nullable */ String> displayNameContains) {
+            $.displayNameContains = displayNameContains;
             return this;
         }
 
@@ -307,7 +358,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayNameContains(@Nullable String displayNameContains) {
-            $.displayNameContains = displayNameContains;
+            return displayNameContains(Output.of(displayNameContains));
+        }
+
+        /**
+         * @param externalKey Unique external identifier of this resource in the external source system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalKey(Output</* @Nullable */ String> externalKey) {
+            $.externalKey = externalKey;
             return this;
         }
 
@@ -318,7 +379,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder externalKey(@Nullable String externalKey) {
-            $.externalKey = externalKey;
+            return externalKey(Output.of(externalKey));
+        }
+
+        /**
+         * @param fields Specifies the fields to return in a connection summary response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -329,8 +400,7 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+            return fields(Output.of(fields));
         }
 
         /**
@@ -343,9 +413,13 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
             return fields(List.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetConnectionsFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetConnectionsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetConnectionsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetConnectionsFilter... filters) {
@@ -358,8 +432,29 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(Output</* @Nullable */ Boolean> isDefault) {
             $.isDefault = isDefault;
+            return this;
+        }
+
+        /**
+         * @param isDefault Indicates whether this connection is the default connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isDefault(@Nullable Boolean isDefault) {
+            return isDefault(Output.of(isDefault));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -370,7 +465,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeCreated Time that the resource was created. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreated(Output</* @Nullable */ String> timeCreated) {
+            $.timeCreated = timeCreated;
             return this;
         }
 
@@ -381,7 +486,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeCreated(@Nullable String timeCreated) {
-            $.timeCreated = timeCreated;
+            return timeCreated(Output.of(timeCreated));
+        }
+
+        /**
+         * @param timeStatusUpdated Time that the resource&#39;s status was last updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStatusUpdated(Output</* @Nullable */ String> timeStatusUpdated) {
+            $.timeStatusUpdated = timeStatusUpdated;
             return this;
         }
 
@@ -392,7 +507,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeStatusUpdated(@Nullable String timeStatusUpdated) {
-            $.timeStatusUpdated = timeStatusUpdated;
+            return timeStatusUpdated(Output.of(timeStatusUpdated));
+        }
+
+        /**
+         * @param timeUpdated Time that the resource was updated. An [RFC3339](https://tools.ietf.org/html/rfc3339) formatted datetime string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeUpdated(Output</* @Nullable */ String> timeUpdated) {
+            $.timeUpdated = timeUpdated;
             return this;
         }
 
@@ -403,7 +528,17 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder timeUpdated(@Nullable String timeUpdated) {
-            $.timeUpdated = timeUpdated;
+            return timeUpdated(Output.of(timeUpdated));
+        }
+
+        /**
+         * @param updatedById OCID of the user who updated the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder updatedById(Output</* @Nullable */ String> updatedById) {
+            $.updatedById = updatedById;
             return this;
         }
 
@@ -414,8 +549,7 @@ public final class GetConnectionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder updatedById(@Nullable String updatedById) {
-            $.updatedById = updatedById;
-            return this;
+            return updatedById(Output.of(updatedById));
         }
 
         public GetConnectionsArgs build() {

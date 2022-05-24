@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetVirtualCircuitPublicPrefixesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
     public static final GetVirtualCircuitPublicPrefixesArgs Empty = new GetVirtualCircuitPublicPrefixesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetVirtualCircuitPublicPrefixesFilter> filters;
+    private Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters;
 
-    public Optional<List<GetVirtualCircuitPublicPrefixesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,14 +28,14 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="verificationState")
-    private @Nullable String verificationState;
+    private Output</* @Nullable */ String> verificationState;
 
     /**
      * @return A filter to only return resources that match the given verification state.
      * 
      */
-    public Optional<String> verificationState() {
-        return Optional.ofNullable(this.verificationState);
+    public Output</* @Nullable */ String> verificationState() {
+        return this.verificationState;
     }
 
     /**
@@ -43,13 +43,13 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="virtualCircuitId", required=true)
-    private String virtualCircuitId;
+    private Output<String> virtualCircuitId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the virtual circuit.
      * 
      */
-    public String virtualCircuitId() {
+    public Output<String> virtualCircuitId() {
         return this.virtualCircuitId;
     }
 
@@ -79,9 +79,13 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
             $ = new GetVirtualCircuitPublicPrefixesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetVirtualCircuitPublicPrefixesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetVirtualCircuitPublicPrefixesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetVirtualCircuitPublicPrefixesFilter... filters) {
@@ -94,8 +98,29 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder verificationState(@Nullable String verificationState) {
+        public Builder verificationState(Output</* @Nullable */ String> verificationState) {
             $.verificationState = verificationState;
+            return this;
+        }
+
+        /**
+         * @param verificationState A filter to only return resources that match the given verification state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder verificationState(@Nullable String verificationState) {
+            return verificationState(Output.of(verificationState));
+        }
+
+        /**
+         * @param virtualCircuitId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the virtual circuit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualCircuitId(Output<String> virtualCircuitId) {
+            $.virtualCircuitId = virtualCircuitId;
             return this;
         }
 
@@ -106,8 +131,7 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
          * 
          */
         public Builder virtualCircuitId(String virtualCircuitId) {
-            $.virtualCircuitId = virtualCircuitId;
-            return this;
+            return virtualCircuitId(Output.of(virtualCircuitId));
         }
 
         public GetVirtualCircuitPublicPrefixesArgs build() {

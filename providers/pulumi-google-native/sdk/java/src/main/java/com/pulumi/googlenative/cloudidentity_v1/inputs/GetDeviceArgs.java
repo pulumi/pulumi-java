@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,16 +15,16 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @Import(name="customer")
-    private @Nullable String customer;
+    private Output</* @Nullable */ String> customer;
 
-    public Optional<String> customer() {
-        return Optional.ofNullable(this.customer);
+    public Output</* @Nullable */ String> customer() {
+        return this.customer;
     }
 
     @Import(name="deviceId", required=true)
-    private String deviceId;
+    private Output<String> deviceId;
 
-    public String deviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -53,14 +53,22 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder customer(@Nullable String customer) {
+        public Builder customer(Output</* @Nullable */ String> customer) {
             $.customer = customer;
             return this;
         }
 
-        public Builder deviceId(String deviceId) {
+        public Builder customer(@Nullable String customer) {
+            return customer(Output.of(customer));
+        }
+
+        public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
             return this;
+        }
+
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
         }
 
         public GetDeviceArgs build() {

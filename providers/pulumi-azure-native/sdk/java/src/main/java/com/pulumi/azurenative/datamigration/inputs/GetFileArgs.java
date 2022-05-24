@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datamigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileName", required=true)
-    private String fileName;
+    private Output<String> fileName;
 
     /**
      * @return Name of the File
      * 
      */
-    public String fileName() {
+    public Output<String> fileName() {
         return this.fileName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return Name of the resource group
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-    private String projectName;
+    private Output<String> projectName;
 
     /**
      * @return Name of the project
      * 
      */
-    public String projectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -62,13 +63,13 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return Name of the service
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileName(String fileName) {
+        public Builder fileName(Output<String> fileName) {
             $.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * @param fileName Name of the File
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fileName(String fileName) {
+            return fileName(Output.of(fileName));
+        }
+
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(Output<String> groupName) {
+            $.groupName = groupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder groupName(String groupName) {
-            $.groupName = groupName;
+            return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectName(Output<String> projectName) {
+            $.projectName = projectName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder projectName(String projectName) {
-            $.projectName = projectName;
+            return projectName(Output.of(projectName));
+        }
+
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetFileArgs build() {

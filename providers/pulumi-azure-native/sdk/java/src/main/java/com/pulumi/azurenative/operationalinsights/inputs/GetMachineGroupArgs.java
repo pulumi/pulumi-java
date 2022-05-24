@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.operationalinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime")
-    private @Nullable String endTime;
+    private Output</* @Nullable */ String> endTime;
 
     /**
      * @return UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
      * 
      */
-    public Optional<String> endTime() {
-        return Optional.ofNullable(this.endTime);
+    public Output</* @Nullable */ String> endTime() {
+        return this.endTime;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="machineGroupName", required=true)
-    private String machineGroupName;
+    private Output<String> machineGroupName;
 
     /**
      * @return Machine Group resource name.
      * 
      */
-    public String machineGroupName() {
+    public Output<String> machineGroupName() {
         return this.machineGroupName;
     }
 
@@ -49,13 +49,13 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group name within the specified subscriptionId.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,14 +64,14 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-    private @Nullable String startTime;
+    private Output</* @Nullable */ String> startTime;
 
     /**
      * @return UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
      * 
      */
-    public Optional<String> startTime() {
-        return Optional.ofNullable(this.startTime);
+    public Output</* @Nullable */ String> startTime() {
+        return this.startTime;
     }
 
     /**
@@ -79,13 +79,13 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return OMS workspace containing the resources of interest.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -123,8 +123,29 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endTime(@Nullable String endTime) {
+        public Builder endTime(Output</* @Nullable */ String> endTime) {
             $.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * @param endTime UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(@Nullable String endTime) {
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param machineGroupName Machine Group resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder machineGroupName(Output<String> machineGroupName) {
+            $.machineGroupName = machineGroupName;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder machineGroupName(String machineGroupName) {
-            $.machineGroupName = machineGroupName;
+            return machineGroupName(Output.of(machineGroupName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group name within the specified subscriptionId.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param startTime UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output</* @Nullable */ String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder startTime(@Nullable String startTime) {
-            $.startTime = startTime;
+            return startTime(Output.of(startTime));
+        }
+
+        /**
+         * @param workspaceName OMS workspace containing the resources of interest.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetMachineGroupArgs build() {

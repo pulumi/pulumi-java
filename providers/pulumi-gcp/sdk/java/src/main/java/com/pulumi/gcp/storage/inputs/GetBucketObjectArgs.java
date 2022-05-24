@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket")
-    private @Nullable String bucket;
+    private Output</* @Nullable */ String> bucket;
 
     /**
      * @return The name of the containing bucket.
      * 
      */
-    public Optional<String> bucket() {
-        return Optional.ofNullable(this.bucket);
+    public Output</* @Nullable */ String> bucket() {
+        return this.bucket;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the object.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetBucketObjectArgs() {}
@@ -75,8 +75,29 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bucket(@Nullable String bucket) {
+        public Builder bucket(Output</* @Nullable */ String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the containing bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(@Nullable String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param name The name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -87,8 +108,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetBucketObjectArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.orbital.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spacecraftName", required=true)
-    private String spacecraftName;
+    private Output<String> spacecraftName;
 
     /**
      * @return Spacecraft ID
      * 
      */
-    public String spacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spacecraftName(Output<String> spacecraftName) {
+            $.spacecraftName = spacecraftName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder spacecraftName(String spacecraftName) {
-            $.spacecraftName = spacecraftName;
-            return this;
+            return spacecraftName(Output.of(spacecraftName));
         }
 
         public GetSpacecraftArgs build() {

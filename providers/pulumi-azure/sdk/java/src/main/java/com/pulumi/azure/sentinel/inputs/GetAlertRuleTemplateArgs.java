@@ -3,10 +3,10 @@
 
 package com.pulumi.azure.sentinel.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="logAnalyticsWorkspaceId", required=true)
-    private String logAnalyticsWorkspaceId;
+    private Output<String> logAnalyticsWorkspaceId;
 
     /**
      * @return The ID of the Log Analytics Workspace.
      * 
      */
-    public String logAnalyticsWorkspaceId() {
+    public Output<String> logAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId;
     }
 
@@ -49,14 +49,14 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetAlertRuleTemplateArgs() {}
@@ -91,8 +91,29 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName The display name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param logAnalyticsWorkspaceId The ID of the Log Analytics Workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsWorkspaceId(Output<String> logAnalyticsWorkspaceId) {
+            $.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder logAnalyticsWorkspaceId(String logAnalyticsWorkspaceId) {
-            $.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
+            return logAnalyticsWorkspaceId(Output.of(logAnalyticsWorkspaceId));
+        }
+
+        /**
+         * @param name The name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetAlertRuleTemplateArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Database.inputs.GetDbVersionsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +22,13 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,14 +37,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private @Nullable String dbSystemId;
+    private Output</* @Nullable */ String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
      * 
      */
-    public Optional<String> dbSystemId() {
-        return Optional.ofNullable(this.dbSystemId);
+    public Output</* @Nullable */ String> dbSystemId() {
+        return this.dbSystemId;
     }
 
     /**
@@ -52,21 +52,21 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemShape")
-    private @Nullable String dbSystemShape;
+    private Output</* @Nullable */ String> dbSystemShape;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for the given shape.
      * 
      */
-    public Optional<String> dbSystemShape() {
-        return Optional.ofNullable(this.dbSystemShape);
+    public Output</* @Nullable */ String> dbSystemShape() {
+        return this.dbSystemShape;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbVersionsFilter> filters;
+    private Output</* @Nullable */ List<GetDbVersionsFilter>> filters;
 
-    public Optional<List<GetDbVersionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDbVersionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -74,14 +74,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isDatabaseSoftwareImageSupported")
-    private @Nullable Boolean isDatabaseSoftwareImageSupported;
+    private Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported;
 
     /**
      * @return If true, filters the results to the set of Oracle Database versions that are supported for Oracle Cloud Infrastructure database software images.
      * 
      */
-    public Optional<Boolean> isDatabaseSoftwareImageSupported() {
-        return Optional.ofNullable(this.isDatabaseSoftwareImageSupported);
+    public Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported() {
+        return this.isDatabaseSoftwareImageSupported;
     }
 
     /**
@@ -89,14 +89,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isUpgradeSupported")
-    private @Nullable Boolean isUpgradeSupported;
+    private Output</* @Nullable */ Boolean> isUpgradeSupported;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for Upgrade.
      * 
      */
-    public Optional<Boolean> isUpgradeSupported() {
-        return Optional.ofNullable(this.isUpgradeSupported);
+    public Output</* @Nullable */ Boolean> isUpgradeSupported() {
+        return this.isUpgradeSupported;
     }
 
     /**
@@ -106,7 +106,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageManagement")
-    private @Nullable String storageManagement;
+    private Output</* @Nullable */ String> storageManagement;
 
     /**
      * @return The DB system storage management option. Used to list database versions available for that storage manager. Valid values are:
@@ -114,8 +114,8 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * * LVM - Logical volume management
      * 
      */
-    public Optional<String> storageManagement() {
-        return Optional.ofNullable(this.storageManagement);
+    public Output</* @Nullable */ String> storageManagement() {
+        return this.storageManagement;
     }
 
     private GetDbVersionsArgs() {}
@@ -154,8 +154,29 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+            $.dbSystemId = dbSystemId;
             return this;
         }
 
@@ -166,7 +187,17 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemId(@Nullable String dbSystemId) {
-            $.dbSystemId = dbSystemId;
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        /**
+         * @param dbSystemShape If provided, filters the results to the set of database versions which are supported for the given shape.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemShape(Output</* @Nullable */ String> dbSystemShape) {
+            $.dbSystemShape = dbSystemShape;
             return this;
         }
 
@@ -177,13 +208,16 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dbSystemShape(@Nullable String dbSystemShape) {
-            $.dbSystemShape = dbSystemShape;
+            return dbSystemShape(Output.of(dbSystemShape));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDbVersionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetDbVersionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDbVersionsFilter... filters) {
@@ -196,8 +230,29 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDatabaseSoftwareImageSupported(@Nullable Boolean isDatabaseSoftwareImageSupported) {
+        public Builder isDatabaseSoftwareImageSupported(Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported) {
             $.isDatabaseSoftwareImageSupported = isDatabaseSoftwareImageSupported;
+            return this;
+        }
+
+        /**
+         * @param isDatabaseSoftwareImageSupported If true, filters the results to the set of Oracle Database versions that are supported for Oracle Cloud Infrastructure database software images.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isDatabaseSoftwareImageSupported(@Nullable Boolean isDatabaseSoftwareImageSupported) {
+            return isDatabaseSoftwareImageSupported(Output.of(isDatabaseSoftwareImageSupported));
+        }
+
+        /**
+         * @param isUpgradeSupported If provided, filters the results to the set of database versions which are supported for Upgrade.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isUpgradeSupported(Output</* @Nullable */ Boolean> isUpgradeSupported) {
+            $.isUpgradeSupported = isUpgradeSupported;
             return this;
         }
 
@@ -208,7 +263,19 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder isUpgradeSupported(@Nullable Boolean isUpgradeSupported) {
-            $.isUpgradeSupported = isUpgradeSupported;
+            return isUpgradeSupported(Output.of(isUpgradeSupported));
+        }
+
+        /**
+         * @param storageManagement The DB system storage management option. Used to list database versions available for that storage manager. Valid values are:
+         * * ASM - Automatic storage management
+         * * LVM - Logical volume management
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageManagement(Output</* @Nullable */ String> storageManagement) {
+            $.storageManagement = storageManagement;
             return this;
         }
 
@@ -221,8 +288,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageManagement(@Nullable String storageManagement) {
-            $.storageManagement = storageManagement;
-            return this;
+            return storageManagement(Output.of(storageManagement));
         }
 
         public GetDbVersionsArgs build() {

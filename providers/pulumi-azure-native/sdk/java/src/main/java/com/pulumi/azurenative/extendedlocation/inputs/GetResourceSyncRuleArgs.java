@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.extendedlocation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="childResourceName", required=true)
-    private String childResourceName;
+    private Output<String> childResourceName;
 
     /**
      * @return Resource Sync Rule name.
      * 
      */
-    public String childResourceName() {
+    public Output<String> childResourceName() {
         return this.childResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return Custom Locations name.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder childResourceName(String childResourceName) {
+        public Builder childResourceName(Output<String> childResourceName) {
             $.childResourceName = childResourceName;
+            return this;
+        }
+
+        /**
+         * @param childResourceName Resource Sync Rule name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder childResourceName(String childResourceName) {
+            return childResourceName(Output.of(childResourceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName Custom Locations name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetResourceSyncRuleArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetResourceSyncRuleArgs build() {

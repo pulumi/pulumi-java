@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.policy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Guest Configuration Assignment.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the Name of the Resource Group where the Guest Configuration Assignment exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
      * 
      */
     @Import(name="virtualMachineName", required=true)
-    private String virtualMachineName;
+    private Output<String> virtualMachineName;
 
     /**
      * @return Only retrieve Policy Set Definitions from this Management Group.
      * 
      */
-    public String virtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Guest Configuration Assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the Name of the Resource Group where the Guest Configuration Assignment exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualMachineName Only retrieve Policy Set Definitions from this Management Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualMachineName(Output<String> virtualMachineName) {
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualMachineConfigurationAssignmentArgs extends com.pulu
          * 
          */
         public Builder virtualMachineName(String virtualMachineName) {
-            $.virtualMachineName = virtualMachineName;
-            return this;
+            return virtualMachineName(Output.of(virtualMachineName));
         }
 
         public GetVirtualMachineConfigurationAssignmentArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.emr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStudioArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="studioId", required=true)
-    private String studioId;
+    private Output<String> studioId;
 
     /**
      * @return The ID of the EMR Studio.
      * 
      */
-    public String studioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -57,9 +58,19 @@ public final class GetStudioArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder studioId(String studioId) {
+        public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
+        }
+
+        /**
+         * @param studioId The ID of the EMR Studio.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studioId(String studioId) {
+            return studioId(Output.of(studioId));
         }
 
         public GetStudioArgs build() {

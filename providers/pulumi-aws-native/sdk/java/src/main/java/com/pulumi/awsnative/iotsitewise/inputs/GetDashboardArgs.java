@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotsitewise.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dashboardId", required=true)
-    private String dashboardId;
+    private Output<String> dashboardId;
 
     /**
      * @return The ID of the dashboard.
      * 
      */
-    public String dashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dashboardId(String dashboardId) {
+        public Builder dashboardId(Output<String> dashboardId) {
             $.dashboardId = dashboardId;
             return this;
+        }
+
+        /**
+         * @param dashboardId The ID of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardId(String dashboardId) {
+            return dashboardId(Output.of(dashboardId));
         }
 
         public GetDashboardArgs build() {

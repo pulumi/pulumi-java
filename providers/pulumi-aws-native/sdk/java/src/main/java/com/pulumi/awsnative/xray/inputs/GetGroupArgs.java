@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.xray.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupARN", required=true)
-    private String groupARN;
+    private Output<String> groupARN;
 
     /**
      * @return The ARN of the group that was generated on creation.
      * 
      */
-    public String groupARN() {
+    public Output<String> groupARN() {
         return this.groupARN;
     }
 
@@ -57,9 +58,19 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupARN(String groupARN) {
+        public Builder groupARN(Output<String> groupARN) {
             $.groupARN = groupARN;
             return this;
+        }
+
+        /**
+         * @param groupARN The ARN of the group that was generated on creation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupARN(String groupARN) {
+            return groupARN(Output.of(groupARN));
         }
 
         public GetGroupArgs build() {

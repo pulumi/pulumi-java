@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.vmmigration_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetDatacenterConnectorArgs extends com.pulumi.resources.Invok
     public static final GetDatacenterConnectorArgs Empty = new GetDatacenterConnectorArgs();
 
     @Import(name="datacenterConnectorId", required=true)
-    private String datacenterConnectorId;
+    private Output<String> datacenterConnectorId;
 
-    public String datacenterConnectorId() {
+    public Output<String> datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="sourceId", required=true)
-    private String sourceId;
+    private Output<String> sourceId;
 
-    public String sourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -69,24 +69,40 @@ public final class GetDatacenterConnectorArgs extends com.pulumi.resources.Invok
             $ = new GetDatacenterConnectorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datacenterConnectorId(String datacenterConnectorId) {
+        public Builder datacenterConnectorId(Output<String> datacenterConnectorId) {
             $.datacenterConnectorId = datacenterConnectorId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder datacenterConnectorId(String datacenterConnectorId) {
+            return datacenterConnectorId(Output.of(datacenterConnectorId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sourceId(String sourceId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sourceId(Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
+        }
+
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
         }
 
         public GetDatacenterConnectorArgs build() {

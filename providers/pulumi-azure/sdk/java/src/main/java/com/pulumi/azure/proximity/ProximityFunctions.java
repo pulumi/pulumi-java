@@ -6,10 +6,10 @@ package com.pulumi.azure.proximity;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.proximity.inputs.GetPlacementGroupArgs;
 import com.pulumi.azure.proximity.outputs.GetPlacementGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ProximityFunctions {
     /**
@@ -41,7 +41,7 @@ public final class ProximityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args) {
+    public static Output<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args) {
         return getPlacementGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class ProximityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:proximity/getPlacementGroup:getPlacementGroup", TypeShape.of(GetPlacementGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPlacementGroupResult> getPlacementGroup(GetPlacementGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:proximity/getPlacementGroup:getPlacementGroup", TypeShape.of(GetPlacementGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSensitiveTypeArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sensitiveTypeId", required=true)
-    private String sensitiveTypeId;
+    private Output<String> sensitiveTypeId;
 
     /**
      * @return The OCID of the sensitive type.
      * 
      */
-    public String sensitiveTypeId() {
+    public Output<String> sensitiveTypeId() {
         return this.sensitiveTypeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSensitiveTypeArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder sensitiveTypeId(String sensitiveTypeId) {
+        public Builder sensitiveTypeId(Output<String> sensitiveTypeId) {
             $.sensitiveTypeId = sensitiveTypeId;
             return this;
+        }
+
+        /**
+         * @param sensitiveTypeId The OCID of the sensitive type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveTypeId(String sensitiveTypeId) {
+            return sensitiveTypeId(Output.of(sensitiveTypeId));
         }
 
         public GetSensitiveTypeArgs build() {

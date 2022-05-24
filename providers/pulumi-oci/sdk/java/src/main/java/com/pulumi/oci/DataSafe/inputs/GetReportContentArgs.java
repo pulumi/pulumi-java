@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportContentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="reportId", required=true)
-    private String reportId;
+    private Output<String> reportId;
 
     /**
      * @return Unique report identifier
      * 
      */
-    public String reportId() {
+    public Output<String> reportId() {
         return this.reportId;
     }
 
@@ -57,9 +58,19 @@ public final class GetReportContentArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder reportId(String reportId) {
+        public Builder reportId(Output<String> reportId) {
             $.reportId = reportId;
             return this;
+        }
+
+        /**
+         * @param reportId Unique report identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportId(String reportId) {
+            return reportId(Output.of(reportId));
         }
 
         public GetReportContentArgs build() {

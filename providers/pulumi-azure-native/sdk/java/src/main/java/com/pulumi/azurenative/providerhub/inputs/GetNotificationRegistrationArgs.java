@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.providerhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="notificationRegistrationName", required=true)
-    private String notificationRegistrationName;
+    private Output<String> notificationRegistrationName;
 
     /**
      * @return The notification registration.
      * 
      */
-    public String notificationRegistrationName() {
+    public Output<String> notificationRegistrationName() {
         return this.notificationRegistrationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerNamespace", required=true)
-    private String providerNamespace;
+    private Output<String> providerNamespace;
 
     /**
      * @return The name of the resource provider hosted within ProviderHub.
      * 
      */
-    public String providerNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -73,8 +74,29 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder notificationRegistrationName(String notificationRegistrationName) {
+        public Builder notificationRegistrationName(Output<String> notificationRegistrationName) {
             $.notificationRegistrationName = notificationRegistrationName;
+            return this;
+        }
+
+        /**
+         * @param notificationRegistrationName The notification registration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notificationRegistrationName(String notificationRegistrationName) {
+            return notificationRegistrationName(Output.of(notificationRegistrationName));
+        }
+
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerNamespace(Output<String> providerNamespace) {
+            $.providerNamespace = providerNamespace;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
          * 
          */
         public Builder providerNamespace(String providerNamespace) {
-            $.providerNamespace = providerNamespace;
-            return this;
+            return providerNamespace(Output.of(providerNamespace));
         }
 
         public GetNotificationRegistrationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatorActionId", required=true)
-    private String operatorActionId;
+    private Output<String> operatorActionId;
 
     /**
      * @return Unique Oracle supplied identifier associated with the operator action.
      * 
      */
-    public String operatorActionId() {
+    public Output<String> operatorActionId() {
         return this.operatorActionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatorActionId(String operatorActionId) {
+        public Builder operatorActionId(Output<String> operatorActionId) {
             $.operatorActionId = operatorActionId;
             return this;
+        }
+
+        /**
+         * @param operatorActionId Unique Oracle supplied identifier associated with the operator action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatorActionId(String operatorActionId) {
+            return operatorActionId(Output.of(operatorActionId));
         }
 
         public GetActionArgs build() {

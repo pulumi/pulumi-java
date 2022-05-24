@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,37 +15,37 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTaskArgs Empty = new GetTaskArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="queueId", required=true)
-    private String queueId;
+    private Output<String> queueId;
 
-    public String queueId() {
+    public Output<String> queueId() {
         return this.queueId;
     }
 
     @Import(name="responseView")
-    private @Nullable String responseView;
+    private Output</* @Nullable */ String> responseView;
 
-    public Optional<String> responseView() {
-        return Optional.ofNullable(this.responseView);
+    public Output</* @Nullable */ String> responseView() {
+        return this.responseView;
     }
 
     @Import(name="taskId", required=true)
-    private String taskId;
+    private Output<String> taskId;
 
-    public String taskId() {
+    public Output<String> taskId() {
         return this.taskId;
     }
 
@@ -77,29 +77,49 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTaskArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder queueId(String queueId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder queueId(Output<String> queueId) {
             $.queueId = queueId;
             return this;
         }
 
-        public Builder responseView(@Nullable String responseView) {
+        public Builder queueId(String queueId) {
+            return queueId(Output.of(queueId));
+        }
+
+        public Builder responseView(Output</* @Nullable */ String> responseView) {
             $.responseView = responseView;
             return this;
         }
 
-        public Builder taskId(String taskId) {
+        public Builder responseView(@Nullable String responseView) {
+            return responseView(Output.of(responseView));
+        }
+
+        public Builder taskId(Output<String> taskId) {
             $.taskId = taskId;
             return this;
+        }
+
+        public Builder taskId(String taskId) {
+            return taskId(Output.of(taskId));
         }
 
         public GetTaskArgs build() {

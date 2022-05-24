@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-    private String integrationRuntimeName;
+    private Output<String> integrationRuntimeName;
 
     /**
      * @return The integration runtime name.
      * 
      */
-    public String integrationRuntimeName() {
+    public Output<String> integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder factoryName(String factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
+            return this;
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param integrationRuntimeName The integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationRuntimeName(Output<String> integrationRuntimeName) {
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
          * 
          */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
-            $.integrationRuntimeName = integrationRuntimeName;
+            return integrationRuntimeName(Output.of(integrationRuntimeName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationRuntimeConnectionInfoArgs build() {

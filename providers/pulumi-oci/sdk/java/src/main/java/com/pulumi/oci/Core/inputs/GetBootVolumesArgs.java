@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetBootVolumesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,21 +36,21 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBootVolumesFilter> filters;
+    private Output</* @Nullable */ List<GetBootVolumesFilter>> filters;
 
-    public Optional<List<GetBootVolumesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBootVolumesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeGroupId")
-    private @Nullable String volumeGroupId;
+    private Output</* @Nullable */ String> volumeGroupId;
 
     /**
      * @return The OCID of the volume group.
      * 
      */
-    public Optional<String> volumeGroupId() {
-        return Optional.ofNullable(this.volumeGroupId);
+    public Output</* @Nullable */ String> volumeGroupId() {
+        return this.volumeGroupId;
     }
 
     private GetBootVolumesArgs() {}
@@ -101,8 +101,29 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -113,13 +134,16 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBootVolumesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetBootVolumesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBootVolumesFilter... filters) {
@@ -132,9 +156,19 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeGroupId(@Nullable String volumeGroupId) {
+        public Builder volumeGroupId(Output</* @Nullable */ String> volumeGroupId) {
             $.volumeGroupId = volumeGroupId;
             return this;
+        }
+
+        /**
+         * @param volumeGroupId The OCID of the volume group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeGroupId(@Nullable String volumeGroupId) {
+            return volumeGroupId(Output.of(volumeGroupId));
         }
 
         public GetBootVolumesArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetBootVolumeBackupsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bootVolumeId")
-    private @Nullable String bootVolumeId;
+    private Output</* @Nullable */ String> bootVolumeId;
 
     /**
      * @return The OCID of the boot volume.
      * 
      */
-    public Optional<String> bootVolumeId() {
-        return Optional.ofNullable(this.bootVolumeId);
+    public Output</* @Nullable */ String> bootVolumeId() {
+        return this.bootVolumeId;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,21 +51,21 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBootVolumeBackupsFilter> filters;
+    private Output</* @Nullable */ List<GetBootVolumeBackupsFilter>> filters;
 
-    public Optional<List<GetBootVolumeBackupsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBootVolumeBackupsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceBootVolumeBackupId")
-    private @Nullable String sourceBootVolumeBackupId;
+    private Output</* @Nullable */ String> sourceBootVolumeBackupId;
 
     /**
      * @return A filter to return only resources that originated from the given source boot volume backup.
      * 
      */
-    public Optional<String> sourceBootVolumeBackupId() {
-        return Optional.ofNullable(this.sourceBootVolumeBackupId);
+    public Output</* @Nullable */ String> sourceBootVolumeBackupId() {
+        return this.sourceBootVolumeBackupId;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetBootVolumeBackupsArgs() {}
@@ -133,8 +133,29 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder bootVolumeId(@Nullable String bootVolumeId) {
+        public Builder bootVolumeId(Output</* @Nullable */ String> bootVolumeId) {
             $.bootVolumeId = bootVolumeId;
+            return this;
+        }
+
+        /**
+         * @param bootVolumeId The OCID of the boot volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootVolumeId(@Nullable String bootVolumeId) {
+            return bootVolumeId(Output.of(bootVolumeId));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,7 +166,17 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -156,13 +187,16 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetBootVolumeBackupsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetBootVolumeBackupsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetBootVolumeBackupsFilter... filters) {
@@ -175,8 +209,29 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder sourceBootVolumeBackupId(@Nullable String sourceBootVolumeBackupId) {
+        public Builder sourceBootVolumeBackupId(Output</* @Nullable */ String> sourceBootVolumeBackupId) {
             $.sourceBootVolumeBackupId = sourceBootVolumeBackupId;
+            return this;
+        }
+
+        /**
+         * @param sourceBootVolumeBackupId A filter to return only resources that originated from the given source boot volume backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceBootVolumeBackupId(@Nullable String sourceBootVolumeBackupId) {
+            return sourceBootVolumeBackupId(Output.of(sourceBootVolumeBackupId));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetBootVolumeBackupsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetBootVolumeBackupsArgs build() {

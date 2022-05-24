@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetTargetDatabaseRoleFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,44 +18,44 @@ public final class GetTargetDatabaseRoleArgs extends com.pulumi.resources.Invoke
     public static final GetTargetDatabaseRoleArgs Empty = new GetTargetDatabaseRoleArgs();
 
     @Import(name="authenticationType")
-    private @Nullable String authenticationType;
+    private Output</* @Nullable */ String> authenticationType;
 
-    public Optional<String> authenticationType() {
-        return Optional.ofNullable(this.authenticationType);
+    public Output</* @Nullable */ String> authenticationType() {
+        return this.authenticationType;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetTargetDatabaseRoleFilter> filters;
+    private Output</* @Nullable */ List<GetTargetDatabaseRoleFilter>> filters;
 
-    public Optional<List<GetTargetDatabaseRoleFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetTargetDatabaseRoleFilter>> filters() {
+        return this.filters;
     }
 
     @Import(name="isOracleMaintained")
-    private @Nullable Boolean isOracleMaintained;
+    private Output</* @Nullable */ Boolean> isOracleMaintained;
 
-    public Optional<Boolean> isOracleMaintained() {
-        return Optional.ofNullable(this.isOracleMaintained);
+    public Output</* @Nullable */ Boolean> isOracleMaintained() {
+        return this.isOracleMaintained;
     }
 
     @Import(name="roleNameContains")
-    private @Nullable String roleNameContains;
+    private Output</* @Nullable */ String> roleNameContains;
 
-    public Optional<String> roleNameContains() {
-        return Optional.ofNullable(this.roleNameContains);
+    public Output</* @Nullable */ String> roleNameContains() {
+        return this.roleNameContains;
     }
 
     @Import(name="roleNames")
-    private @Nullable List<String> roleNames;
+    private Output</* @Nullable */ List<String>> roleNames;
 
-    public Optional<List<String>> roleNames() {
-        return Optional.ofNullable(this.roleNames);
+    public Output</* @Nullable */ List<String>> roleNames() {
+        return this.roleNames;
     }
 
     @Import(name="targetDatabaseId", required=true)
-    private String targetDatabaseId;
+    private Output<String> targetDatabaseId;
 
-    public String targetDatabaseId() {
+    public Output<String> targetDatabaseId() {
         return this.targetDatabaseId;
     }
 
@@ -88,42 +88,66 @@ public final class GetTargetDatabaseRoleArgs extends com.pulumi.resources.Invoke
             $ = new GetTargetDatabaseRoleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder authenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(Output</* @Nullable */ String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTargetDatabaseRoleFilter> filters) {
+        public Builder authenticationType(@Nullable String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetTargetDatabaseRoleFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetTargetDatabaseRoleFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetTargetDatabaseRoleFilter... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder isOracleMaintained(@Nullable Boolean isOracleMaintained) {
+        public Builder isOracleMaintained(Output</* @Nullable */ Boolean> isOracleMaintained) {
             $.isOracleMaintained = isOracleMaintained;
             return this;
         }
 
-        public Builder roleNameContains(@Nullable String roleNameContains) {
+        public Builder isOracleMaintained(@Nullable Boolean isOracleMaintained) {
+            return isOracleMaintained(Output.of(isOracleMaintained));
+        }
+
+        public Builder roleNameContains(Output</* @Nullable */ String> roleNameContains) {
             $.roleNameContains = roleNameContains;
             return this;
         }
 
-        public Builder roleNames(@Nullable List<String> roleNames) {
+        public Builder roleNameContains(@Nullable String roleNameContains) {
+            return roleNameContains(Output.of(roleNameContains));
+        }
+
+        public Builder roleNames(Output</* @Nullable */ List<String>> roleNames) {
             $.roleNames = roleNames;
             return this;
+        }
+
+        public Builder roleNames(@Nullable List<String> roleNames) {
+            return roleNames(Output.of(roleNames));
         }
 
         public Builder roleNames(String... roleNames) {
             return roleNames(List.of(roleNames));
         }
 
-        public Builder targetDatabaseId(String targetDatabaseId) {
+        public Builder targetDatabaseId(Output<String> targetDatabaseId) {
             $.targetDatabaseId = targetDatabaseId;
             return this;
+        }
+
+        public Builder targetDatabaseId(String targetDatabaseId) {
+            return targetDatabaseId(Output.of(targetDatabaseId));
         }
 
         public GetTargetDatabaseRoleArgs build() {

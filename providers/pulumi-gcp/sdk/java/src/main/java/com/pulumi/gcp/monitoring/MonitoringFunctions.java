@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.monitoring;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +22,6 @@ import com.pulumi.gcp.monitoring.outputs.GetNotificationChannelResult;
 import com.pulumi.gcp.monitoring.outputs.GetSecretVersionResult;
 import com.pulumi.gcp.monitoring.outputs.GetUptimeCheckIPsResult;
 import com.pulumi.resources.InvokeArgs;
-import java.util.concurrent.CompletableFuture;
 
 public final class MonitoringFunctions {
     /**
@@ -93,7 +93,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args) {
+    public static Output<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args) {
         return getAppEngineService(args, InvokeOptions.Empty);
     }
     /**
@@ -165,8 +165,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getAppEngineService:getAppEngineService", TypeShape.of(GetAppEngineServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getAppEngineService:getAppEngineService", TypeShape.of(GetAppEngineServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Monitoring Service is the root resource under which operational aspects of a
@@ -211,7 +211,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args) {
+    public static Output<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args) {
         return getClusterIstioService(args, InvokeOptions.Empty);
     }
     /**
@@ -257,8 +257,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getClusterIstioService:getClusterIstioService", TypeShape.of(GetClusterIstioServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getClusterIstioService:getClusterIstioService", TypeShape.of(GetClusterIstioServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Monitoring Service is the root resource under which operational aspects of a
@@ -302,7 +302,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args) {
+    public static Output<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args) {
         return getIstioCanonicalService(args, InvokeOptions.Empty);
     }
     /**
@@ -347,8 +347,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getIstioCanonicalService:getIstioCanonicalService", TypeShape.of(GetIstioCanonicalServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getIstioCanonicalService:getIstioCanonicalService", TypeShape.of(GetIstioCanonicalServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Monitoring Service is the root resource under which operational aspects of a
@@ -392,7 +392,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args) {
+    public static Output<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args) {
         return getMeshIstioService(args, InvokeOptions.Empty);
     }
     /**
@@ -437,8 +437,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getMeshIstioService:getMeshIstioService", TypeShape.of(GetMeshIstioServiceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getMeshIstioService:getMeshIstioService", TypeShape.of(GetMeshIstioServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A NotificationChannel is a medium through which an alert is delivered
@@ -496,7 +496,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel() {
+    public static Output<GetNotificationChannelResult> getNotificationChannel() {
         return getNotificationChannel(GetNotificationChannelArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -555,7 +555,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+    public static Output<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -614,8 +614,8 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getNotificationChannel:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getNotificationChannel:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
@@ -648,7 +648,7 @@ public final class MonitoringFunctions {
      * 
      */
     @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
         return getSecretVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -682,8 +682,8 @@ public final class MonitoringFunctions {
      * 
      */
     @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the list of IP addresses that checkers run from. For more information see
@@ -712,7 +712,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs() {
+    public static Output<GetUptimeCheckIPsResult> getUptimeCheckIPs() {
         return getUptimeCheckIPs(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -742,7 +742,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args) {
+    public static Output<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args) {
         return getUptimeCheckIPs(args, InvokeOptions.Empty);
     }
     /**
@@ -772,7 +772,7 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:monitoring/getUptimeCheckIPs:getUptimeCheckIPs", TypeShape.of(GetUptimeCheckIPsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:monitoring/getUptimeCheckIPs:getUptimeCheckIPs", TypeShape.of(GetUptimeCheckIPsResult.class), args, Utilities.withVersion(options));
     }
 }

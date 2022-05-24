@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.timeseriesinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPolicyName", required=true)
-    private String accessPolicyName;
+    private Output<String> accessPolicyName;
 
     /**
      * @return The name of the Time Series Insights access policy associated with the specified environment.
      * 
      */
-    public String accessPolicyName() {
+    public Output<String> accessPolicyName() {
         return this.accessPolicyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessPolicyName(String accessPolicyName) {
+        public Builder accessPolicyName(Output<String> accessPolicyName) {
             $.accessPolicyName = accessPolicyName;
+            return this;
+        }
+
+        /**
+         * @param accessPolicyName The name of the Time Series Insights access policy associated with the specified environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessPolicyName(String accessPolicyName) {
+            return accessPolicyName(Output.of(accessPolicyName));
+        }
+
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(Output<String> environmentName) {
+            $.environmentName = environmentName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder environmentName(String environmentName) {
-            $.environmentName = environmentName;
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAccessPolicyArgs build() {

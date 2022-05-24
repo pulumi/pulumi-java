@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.devtest.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="labName", required=true)
-    private String labName;
+    private Output<String> labName;
 
     /**
      * @return Specifies the name of the Dev Test Lab.
      * 
      */
-    public String labName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Virtual Network.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group that contains the Virtual Network.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder labName(String labName) {
+        public Builder labName(Output<String> labName) {
             $.labName = labName;
+            return this;
+        }
+
+        /**
+         * @param labName Specifies the name of the Dev Test Lab.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labName(String labName) {
+            return labName(Output.of(labName));
+        }
+
+        /**
+         * @param name Specifies the name of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group that contains the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetVirtualNetworkArgs build() {

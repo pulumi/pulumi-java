@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.NetworkLoadBalancer.inputs.GetNetworkLoadBalancersPoliciesFilter;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class GetNetworkLoadBalancersPoliciesArgs extends com.pulumi.resour
     public static final GetNetworkLoadBalancersPoliciesArgs Empty = new GetNetworkLoadBalancersPoliciesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetNetworkLoadBalancersPoliciesFilter> filters;
+    private Output</* @Nullable */ List<GetNetworkLoadBalancersPoliciesFilter>> filters;
 
-    public Optional<List<GetNetworkLoadBalancersPoliciesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetNetworkLoadBalancersPoliciesFilter>> filters() {
+        return this.filters;
     }
 
     private GetNetworkLoadBalancersPoliciesArgs() {}
@@ -46,9 +46,13 @@ public final class GetNetworkLoadBalancersPoliciesArgs extends com.pulumi.resour
             $ = new GetNetworkLoadBalancersPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetNetworkLoadBalancersPoliciesFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetNetworkLoadBalancersPoliciesFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetNetworkLoadBalancersPoliciesFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetNetworkLoadBalancersPoliciesFilter... filters) {

@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
      */
     @Deprecated /* The 'data.oci_database_autonomous_database_wallet' resource has been deprecated. Please use 'oci_database_autonomous_database_wallet' instead. */
     @Import(name="autonomousDatabaseId", required=true)
-    private String autonomousDatabaseId;
+    private Output<String> autonomousDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
@@ -34,15 +34,15 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
      * 
      */
     @Deprecated /* The 'data.oci_database_autonomous_database_wallet' resource has been deprecated. Please use 'oci_database_autonomous_database_wallet' instead. */
-    public String autonomousDatabaseId() {
+    public Output<String> autonomousDatabaseId() {
         return this.autonomousDatabaseId;
     }
 
     @Import(name="base64EncodeContent")
-    private @Nullable Boolean base64EncodeContent;
+    private Output</* @Nullable */ Boolean> base64EncodeContent;
 
-    public Optional<Boolean> base64EncodeContent() {
-        return Optional.ofNullable(this.base64EncodeContent);
+    public Output</* @Nullable */ Boolean> base64EncodeContent() {
+        return this.base64EncodeContent;
     }
 
     /**
@@ -50,14 +50,14 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="generateType")
-    private @Nullable String generateType;
+    private Output</* @Nullable */ String> generateType;
 
     /**
      * @return The type of wallet to generate.
      * 
      */
-    public Optional<String> generateType() {
-        return Optional.ofNullable(this.generateType);
+    public Output</* @Nullable */ String> generateType() {
+        return this.generateType;
     }
 
     /**
@@ -65,13 +65,13 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="password", required=true)
-    private String password;
+    private Output<String> password;
 
     /**
      * @return The password to encrypt the keys inside the wallet. The password must be at least 8 characters long and must include at least 1 letter and either 1 numeric character or 1 special character.
      * 
      */
-    public String password() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -112,13 +112,42 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
          * 
          */
         @Deprecated /* The 'data.oci_database_autonomous_database_wallet' resource has been deprecated. Please use 'oci_database_autonomous_database_wallet' instead. */
-        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+        public Builder autonomousDatabaseId(Output<String> autonomousDatabaseId) {
             $.autonomousDatabaseId = autonomousDatabaseId;
             return this;
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        /**
+         * @param autonomousDatabaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The &#39;data.oci_database_autonomous_database_wallet&#39; resource has been deprecated. Please use &#39;oci_database_autonomous_database_wallet&#39; instead.
+         * 
+         */
+        @Deprecated /* The 'data.oci_database_autonomous_database_wallet' resource has been deprecated. Please use 'oci_database_autonomous_database_wallet' instead. */
+        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+            return autonomousDatabaseId(Output.of(autonomousDatabaseId));
+        }
+
+        public Builder base64EncodeContent(Output</* @Nullable */ Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
+            return this;
+        }
+
+        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+            return base64EncodeContent(Output.of(base64EncodeContent));
+        }
+
+        /**
+         * @param generateType The type of wallet to generate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder generateType(Output</* @Nullable */ String> generateType) {
+            $.generateType = generateType;
             return this;
         }
 
@@ -129,7 +158,17 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
          * 
          */
         public Builder generateType(@Nullable String generateType) {
-            $.generateType = generateType;
+            return generateType(Output.of(generateType));
+        }
+
+        /**
+         * @param password The password to encrypt the keys inside the wallet. The password must be at least 8 characters long and must include at least 1 letter and either 1 numeric character or 1 special character.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(Output<String> password) {
+            $.password = password;
             return this;
         }
 
@@ -140,8 +179,7 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
          * 
          */
         public Builder password(String password) {
-            $.password = password;
-            return this;
+            return password(Output.of(password));
         }
 
         public GetAutonomousDatabaseWalletArgs build() {

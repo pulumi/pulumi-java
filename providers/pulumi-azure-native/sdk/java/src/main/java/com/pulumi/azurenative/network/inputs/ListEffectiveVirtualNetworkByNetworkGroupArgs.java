@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="networkGroupName", required=true)
-    private String networkGroupName;
+    private Output<String> networkGroupName;
 
     /**
      * @return The name of the network group to get.
      * 
      */
-    public String networkGroupName() {
+    public Output<String> networkGroupName() {
         return this.networkGroupName;
     }
 
@@ -34,13 +34,13 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -49,13 +49,13 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,14 +64,14 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private Output</* @Nullable */ String> skipToken;
 
     /**
      * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    public Optional<String> skipToken() {
-        return Optional.ofNullable(this.skipToken);
+    public Output</* @Nullable */ String> skipToken() {
+        return this.skipToken;
     }
 
     private ListEffectiveVirtualNetworkByNetworkGroupArgs() {}
@@ -107,8 +107,29 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
          * @return builder
          * 
          */
-        public Builder networkGroupName(String networkGroupName) {
+        public Builder networkGroupName(Output<String> networkGroupName) {
             $.networkGroupName = networkGroupName;
+            return this;
+        }
+
+        /**
+         * @param networkGroupName The name of the network group to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkGroupName(String networkGroupName) {
+            return networkGroupName(Output.of(networkGroupName));
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(Output<String> networkManagerName) {
+            $.networkManagerName = networkManagerName;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
          * 
          */
         public Builder networkManagerName(String networkManagerName) {
-            $.networkManagerName = networkManagerName;
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+            return skipToken(Output.of(skipToken));
         }
 
         public ListEffectiveVirtualNetworkByNetworkGroupArgs build() {

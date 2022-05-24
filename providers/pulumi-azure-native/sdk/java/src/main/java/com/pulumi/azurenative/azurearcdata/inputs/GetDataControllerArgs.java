@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurearcdata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
     @Import(name="dataControllerName", required=true)
-    private String dataControllerName;
+    private Output<String> dataControllerName;
 
-    public String dataControllerName() {
+    public Output<String> dataControllerName() {
         return this.dataControllerName;
     }
 
@@ -24,13 +25,13 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,8 +60,23 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetDataControllerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder dataControllerName(String dataControllerName) {
+        public Builder dataControllerName(Output<String> dataControllerName) {
             $.dataControllerName = dataControllerName;
+            return this;
+        }
+
+        public Builder dataControllerName(String dataControllerName) {
+            return dataControllerName(Output.of(dataControllerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDataControllerArgs build() {

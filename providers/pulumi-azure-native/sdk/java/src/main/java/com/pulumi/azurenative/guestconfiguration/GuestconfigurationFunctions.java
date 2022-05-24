@@ -8,10 +8,10 @@ import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationAss
 import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentArgs;
 import com.pulumi.azurenative.guestconfiguration.outputs.GetGuestConfigurationAssignmentResult;
 import com.pulumi.azurenative.guestconfiguration.outputs.GetGuestConfigurationHCRPAssignmentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class GuestconfigurationFunctions {
     /**
@@ -19,7 +19,7 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args) {
+    public static Output<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args) {
         return getGuestConfigurationAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Guest configuration assignment is an association between a machine and guest configuration.
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args) {
+    public static Output<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args) {
         return getGuestConfigurationHCRPAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

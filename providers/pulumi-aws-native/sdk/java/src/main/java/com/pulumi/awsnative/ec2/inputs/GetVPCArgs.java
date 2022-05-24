@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVPCArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-    private String vpcId;
+    private Output<String> vpcId;
 
     /**
      * @return The Id for the model.
      * 
      */
-    public String vpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVPCArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(String vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
+        }
+
+        /**
+         * @param vpcId The Id for the model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
 
         public GetVPCArgs build() {

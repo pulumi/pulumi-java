@@ -8,10 +8,10 @@ import com.pulumi.azure.consumption.inputs.GetBudgetResourceGroupArgs;
 import com.pulumi.azure.consumption.inputs.GetBudgetSubscriptionArgs;
 import com.pulumi.azure.consumption.outputs.GetBudgetResourceGroupResult;
 import com.pulumi.azure.consumption.outputs.GetBudgetSubscriptionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConsumptionFunctions {
     /**
@@ -43,7 +43,7 @@ public final class ConsumptionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBudgetResourceGroupResult> getBudgetResourceGroup(GetBudgetResourceGroupArgs args) {
+    public static Output<GetBudgetResourceGroupResult> getBudgetResourceGroup(GetBudgetResourceGroupArgs args) {
         return getBudgetResourceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class ConsumptionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBudgetResourceGroupResult> getBudgetResourceGroup(GetBudgetResourceGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:consumption/getBudgetResourceGroup:getBudgetResourceGroup", TypeShape.of(GetBudgetResourceGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBudgetResourceGroupResult> getBudgetResourceGroup(GetBudgetResourceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:consumption/getBudgetResourceGroup:getBudgetResourceGroup", TypeShape.of(GetBudgetResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Consumption Budget for a specific subscription.
@@ -107,7 +107,7 @@ public final class ConsumptionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBudgetSubscriptionResult> getBudgetSubscription(GetBudgetSubscriptionArgs args) {
+    public static Output<GetBudgetSubscriptionResult> getBudgetSubscription(GetBudgetSubscriptionArgs args) {
         return getBudgetSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +139,7 @@ public final class ConsumptionFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBudgetSubscriptionResult> getBudgetSubscription(GetBudgetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:consumption/getBudgetSubscription:getBudgetSubscription", TypeShape.of(GetBudgetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBudgetSubscriptionResult> getBudgetSubscription(GetBudgetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:consumption/getBudgetSubscription:getBudgetSubscription", TypeShape.of(GetBudgetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
 }

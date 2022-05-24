@@ -6,10 +6,10 @@ package com.pulumi.azurenative.resourcegraph;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.resourcegraph.inputs.GetGraphQueryArgs;
 import com.pulumi.azurenative.resourcegraph.outputs.GetGraphQueryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ResourcegraphFunctions {
     /**
@@ -17,7 +17,7 @@ public final class ResourcegraphFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args) {
+    public static Output<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args) {
         return getGraphQuery(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class ResourcegraphFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:resourcegraph:getGraphQuery", TypeShape.of(GetGraphQueryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:resourcegraph:getGraphQuery", TypeShape.of(GetGraphQueryResult.class), args, Utilities.withVersion(options));
     }
 }

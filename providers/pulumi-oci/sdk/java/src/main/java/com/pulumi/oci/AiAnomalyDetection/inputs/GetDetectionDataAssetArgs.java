@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.AiAnomalyDetection.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDetectionDataAssetArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataAssetId", required=true)
-    private String dataAssetId;
+    private Output<String> dataAssetId;
 
     /**
      * @return The OCID of the Data Asset.
      * 
      */
-    public String dataAssetId() {
+    public Output<String> dataAssetId() {
         return this.dataAssetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDetectionDataAssetArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder dataAssetId(String dataAssetId) {
+        public Builder dataAssetId(Output<String> dataAssetId) {
             $.dataAssetId = dataAssetId;
             return this;
+        }
+
+        /**
+         * @param dataAssetId The OCID of the Data Asset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataAssetId(String dataAssetId) {
+            return dataAssetId(Output.of(dataAssetId));
         }
 
         public GetDetectionDataAssetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ons;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -15,7 +16,6 @@ import com.pulumi.oci.Ons.outputs.GetNotificationTopicsResult;
 import com.pulumi.oci.Ons.outputs.GetSubscriptionResult;
 import com.pulumi.oci.Ons.outputs.GetSubscriptionsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OnsFunctions {
     /**
@@ -26,7 +26,7 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args) {
+    public static Output<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args) {
         return getNotificationTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -37,8 +37,8 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ons/getNotificationTopic:getNotificationTopic", TypeShape.of(GetNotificationTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationTopicResult> getNotificationTopic(GetNotificationTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ons/getNotificationTopic:getNotificationTopic", TypeShape.of(GetNotificationTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Notification Topics in Oracle Cloud Infrastructure Notifications service.
@@ -50,7 +50,7 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args) {
+    public static Output<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args) {
         return getNotificationTopics(args, InvokeOptions.Empty);
     }
     /**
@@ -63,8 +63,8 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ons/getNotificationTopics:getNotificationTopics", TypeShape.of(GetNotificationTopicsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNotificationTopicsResult> getNotificationTopics(GetNotificationTopicsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ons/getNotificationTopics:getNotificationTopics", TypeShape.of(GetNotificationTopicsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Subscription resource in Oracle Cloud Infrastructure Notifications service.
@@ -76,7 +76,7 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ons/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ons/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Subscriptions in Oracle Cloud Infrastructure Notifications service.
@@ -102,7 +102,7 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -115,7 +115,7 @@ public final class OnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Ons/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ons/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
 }

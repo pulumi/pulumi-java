@@ -28,10 +28,10 @@ import com.pulumi.azurenative.connectedvmwarevsphere.outputs.GetVCenterResult;
 import com.pulumi.azurenative.connectedvmwarevsphere.outputs.GetVirtualMachineResult;
 import com.pulumi.azurenative.connectedvmwarevsphere.outputs.GetVirtualMachineTemplateResult;
 import com.pulumi.azurenative.connectedvmwarevsphere.outputs.GetVirtualNetworkResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ConnectedvmwarevsphereFunctions {
     /**
@@ -39,7 +39,7 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the datastore.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args) {
+    public static Output<GetDatastoreResult> getDatastore(GetDatastoreArgs args) {
         return getDatastore(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the GuestAgent.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args) {
+    public static Output<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args) {
         return getGuestAgent(args, InvokeOptions.Empty);
     }
     /**
@@ -79,15 +79,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getGuestAgent", TypeShape.of(GetGuestAgentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getGuestAgent", TypeShape.of(GetGuestAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the host.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHostResult> getHost(GetHostArgs args) {
+    public static Output<GetHostResult> getHost(GetHostArgs args) {
         return getHost(args, InvokeOptions.Empty);
     }
     /**
@@ -95,15 +95,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHostResult> getHost(GetHostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHost", TypeShape.of(GetHostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHostResult> getHost(GetHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getHost", TypeShape.of(GetHostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the HybridIdentityMetadata.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args) {
+    public static Output<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args) {
         return getHybridIdentityMetadatum(args, InvokeOptions.Empty);
     }
     /**
@@ -111,15 +111,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHybridIdentityMetadatum", TypeShape.of(GetHybridIdentityMetadatumResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getHybridIdentityMetadatum", TypeShape.of(GetHybridIdentityMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the inventory item.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args) {
+    public static Output<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args) {
         return getInventoryItem(args, InvokeOptions.Empty);
     }
     /**
@@ -127,15 +127,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args, Utilities.withVersion(options));
+    public static Output<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes a Machine Extension.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args) {
+    public static Output<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args) {
         return getMachineExtension(args, InvokeOptions.Empty);
     }
     /**
@@ -143,15 +143,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getMachineExtension", TypeShape.of(GetMachineExtensionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getMachineExtension", TypeShape.of(GetMachineExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the resourcePool.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args) {
+    public static Output<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args) {
         return getResourcePool(args, InvokeOptions.Empty);
     }
     /**
@@ -159,15 +159,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getResourcePool", TypeShape.of(GetResourcePoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getResourcePool", TypeShape.of(GetResourcePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the vCenter.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVCenterResult> getVCenter(GetVCenterArgs args) {
+    public static Output<GetVCenterResult> getVCenter(GetVCenterArgs args) {
         return getVCenter(args, InvokeOptions.Empty);
     }
     /**
@@ -175,15 +175,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVCenterResult> getVCenter(GetVCenterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVCenter", TypeShape.of(GetVCenterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVCenterResult> getVCenter(GetVCenterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getVCenter", TypeShape.of(GetVCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the virtualMachine.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
         return getVirtualMachine(args, InvokeOptions.Empty);
     }
     /**
@@ -191,15 +191,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the virtualMachineTemplate.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args) {
+    public static Output<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args) {
         return getVirtualMachineTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -207,15 +207,15 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Define the virtualNetwork.
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -223,7 +223,7 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:connectedvmwarevsphere:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
 }

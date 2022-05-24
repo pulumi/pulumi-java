@@ -8,10 +8,10 @@ import com.pulumi.azurenative.education.inputs.GetGetLabArgs;
 import com.pulumi.azurenative.education.inputs.GetGetStudentArgs;
 import com.pulumi.azurenative.education.outputs.GetGetLabResult;
 import com.pulumi.azurenative.education.outputs.GetGetStudentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EducationFunctions {
     /**
@@ -19,7 +19,7 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args) {
+    public static Output<GetGetLabResult> getGetLab(GetGetLabArgs args) {
         return getGetLab(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:education:getGetLab", TypeShape.of(GetGetLabResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGetLabResult> getGetLab(GetGetLabArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:education:getGetLab", TypeShape.of(GetGetLabResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Student details.
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args) {
+    public static Output<GetGetStudentResult> getGetStudent(GetGetStudentArgs args) {
         return getGetStudent(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:education:getGetStudent", TypeShape.of(GetGetStudentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGetStudentResult> getGetStudent(GetGetStudentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:education:getGetStudent", TypeShape.of(GetGetStudentResult.class), args, Utilities.withVersion(options));
     }
 }

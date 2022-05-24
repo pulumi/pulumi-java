@@ -38,10 +38,10 @@ import com.pulumi.azure.compute.outputs.GetSnapshotResult;
 import com.pulumi.azure.compute.outputs.GetSshPublicKeyResult;
 import com.pulumi.azure.compute.outputs.GetVirtualMachineResult;
 import com.pulumi.azure.compute.outputs.GetVirtualMachineScaleSetResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ComputeFunctions {
     /**
@@ -73,7 +73,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args) {
+    public static Output<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args) {
         return getAvailabilitySet(args, InvokeOptions.Empty);
     }
     /**
@@ -105,8 +105,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getAvailabilitySet:getAvailabilitySet", TypeShape.of(GetAvailabilitySetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getAvailabilitySet:getAvailabilitySet", TypeShape.of(GetAvailabilitySetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Dedicated Host.
@@ -138,7 +138,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
+    public static Output<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
         return getDedicatedHost(args, InvokeOptions.Empty);
     }
     /**
@@ -171,8 +171,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Dedicated Host Group.
@@ -203,7 +203,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args) {
+    public static Output<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args) {
         return getDedicatedHostGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -235,8 +235,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getDedicatedHostGroup:getDedicatedHostGroup", TypeShape.of(GetDedicatedHostGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getDedicatedHostGroup:getDedicatedHostGroup", TypeShape.of(GetDedicatedHostGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Disk Access.
@@ -267,7 +267,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args) {
+    public static Output<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args) {
         return getDiskAccess(args, InvokeOptions.Empty);
     }
     /**
@@ -299,22 +299,22 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getDiskAccess:getDiskAccess", TypeShape.of(GetDiskAccessResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getDiskAccess:getDiskAccess", TypeShape.of(GetDiskAccessResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Disk Encryption Set.
      * 
      */
-    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args) {
+    public static Output<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args) {
         return getDiskEncryptionSet(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing Disk Encryption Set.
      * 
      */
-    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getDiskEncryptionSet:getDiskEncryptionSet", TypeShape.of(GetDiskEncryptionSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getDiskEncryptionSet:getDiskEncryptionSet", TypeShape.of(GetDiskEncryptionSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Image.
@@ -345,7 +345,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -377,8 +377,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about existing Images within a Resource Group.
@@ -407,7 +407,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagesResult> getImages(GetImagesArgs args) {
+    public static Output<GetImagesResult> getImages(GetImagesArgs args) {
         return getImages(args, InvokeOptions.Empty);
     }
     /**
@@ -437,8 +437,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagesResult> getImages(GetImagesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getImages:getImages", TypeShape.of(GetImagesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetImagesResult> getImages(GetImagesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getImages:getImages", TypeShape.of(GetImagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Managed Disk.
@@ -469,7 +469,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedDiskResult> getManagedDisk(GetManagedDiskArgs args) {
+    public static Output<GetManagedDiskResult> getManagedDisk(GetManagedDiskArgs args) {
         return getManagedDisk(args, InvokeOptions.Empty);
     }
     /**
@@ -501,8 +501,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedDiskResult> getManagedDisk(GetManagedDiskArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getManagedDisk:getManagedDisk", TypeShape.of(GetManagedDiskResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedDiskResult> getManagedDisk(GetManagedDiskArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getManagedDisk:getManagedDisk", TypeShape.of(GetManagedDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about a Platform Image.
@@ -535,7 +535,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlatformImageResult> getPlatformImage(GetPlatformImageArgs args) {
+    public static Output<GetPlatformImageResult> getPlatformImage(GetPlatformImageArgs args) {
         return getPlatformImage(args, InvokeOptions.Empty);
     }
     /**
@@ -569,8 +569,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPlatformImageResult> getPlatformImage(GetPlatformImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getPlatformImage:getPlatformImage", TypeShape.of(GetPlatformImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPlatformImageResult> getPlatformImage(GetPlatformImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getPlatformImage:getPlatformImage", TypeShape.of(GetPlatformImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Shared Image within a Shared Image Gallery.
@@ -601,7 +601,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageResult> getSharedImage(GetSharedImageArgs args) {
+    public static Output<GetSharedImageResult> getSharedImage(GetSharedImageArgs args) {
         return getSharedImage(args, InvokeOptions.Empty);
     }
     /**
@@ -633,8 +633,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageResult> getSharedImage(GetSharedImageArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSharedImage:getSharedImage", TypeShape.of(GetSharedImageResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedImageResult> getSharedImage(GetSharedImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSharedImage:getSharedImage", TypeShape.of(GetSharedImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Shared Image Gallery.
@@ -664,7 +664,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageGalleryResult> getSharedImageGallery(GetSharedImageGalleryArgs args) {
+    public static Output<GetSharedImageGalleryResult> getSharedImageGallery(GetSharedImageGalleryArgs args) {
         return getSharedImageGallery(args, InvokeOptions.Empty);
     }
     /**
@@ -695,8 +695,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageGalleryResult> getSharedImageGallery(GetSharedImageGalleryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSharedImageGallery:getSharedImageGallery", TypeShape.of(GetSharedImageGalleryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedImageGalleryResult> getSharedImageGallery(GetSharedImageGalleryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSharedImageGallery:getSharedImageGallery", TypeShape.of(GetSharedImageGalleryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.
@@ -728,7 +728,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageVersionResult> getSharedImageVersion(GetSharedImageVersionArgs args) {
+    public static Output<GetSharedImageVersionResult> getSharedImageVersion(GetSharedImageVersionArgs args) {
         return getSharedImageVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -761,8 +761,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageVersionResult> getSharedImageVersion(GetSharedImageVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSharedImageVersion:getSharedImageVersion", TypeShape.of(GetSharedImageVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedImageVersionResult> getSharedImageVersion(GetSharedImageVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSharedImageVersion:getSharedImageVersion", TypeShape.of(GetSharedImageVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about existing Versions of a Shared Image within a Shared Image Gallery.
@@ -793,7 +793,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageVersionsResult> getSharedImageVersions(GetSharedImageVersionsArgs args) {
+    public static Output<GetSharedImageVersionsResult> getSharedImageVersions(GetSharedImageVersionsArgs args) {
         return getSharedImageVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -825,8 +825,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSharedImageVersionsResult> getSharedImageVersions(GetSharedImageVersionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSharedImageVersions:getSharedImageVersions", TypeShape.of(GetSharedImageVersionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSharedImageVersionsResult> getSharedImageVersions(GetSharedImageVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSharedImageVersions:getSharedImageVersions", TypeShape.of(GetSharedImageVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Snapshot.
@@ -856,7 +856,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -887,8 +887,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing SSH Public Key.
@@ -919,7 +919,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args) {
+    public static Output<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args) {
         return getSshPublicKey(args, InvokeOptions.Empty);
     }
     /**
@@ -951,8 +951,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getSshPublicKey:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getSshPublicKey:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Machine.
@@ -983,7 +983,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
         return getVirtualMachine(args, InvokeOptions.Empty);
     }
     /**
@@ -1015,8 +1015,8 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getVirtualMachine:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getVirtualMachine:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Machine Scale Set.
@@ -1047,7 +1047,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args) {
+    public static Output<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args) {
         return getVirtualMachineScaleSet(args, InvokeOptions.Empty);
     }
     /**
@@ -1079,7 +1079,7 @@ public final class ComputeFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:compute/getVirtualMachineScaleSet:getVirtualMachineScaleSet", TypeShape.of(GetVirtualMachineScaleSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:compute/getVirtualMachineScaleSet:getVirtualMachineScaleSet", TypeShape.of(GetVirtualMachineScaleSetResult.class), args, Utilities.withVersion(options));
     }
 }

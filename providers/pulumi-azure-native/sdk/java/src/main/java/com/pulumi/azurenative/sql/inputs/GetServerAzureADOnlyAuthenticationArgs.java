@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="authenticationName", required=true)
-    private String authenticationName;
+    private Output<String> authenticationName;
 
     /**
      * @return The name of server azure active directory only authentication.
      * 
      */
-    public String authenticationName() {
+    public Output<String> authenticationName() {
         return this.authenticationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder authenticationName(String authenticationName) {
+        public Builder authenticationName(Output<String> authenticationName) {
             $.authenticationName = authenticationName;
+            return this;
+        }
+
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationName(String authenticationName) {
+            return authenticationName(Output.of(authenticationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetServerAzureADOnlyAuthenticationArgs build() {

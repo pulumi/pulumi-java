@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIpsecConnectionTunnelArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ipsecId", required=true)
-    private String ipsecId;
+    private Output<String> ipsecId;
 
     /**
      * @return The OCID of the IPSec connection.
      * 
      */
-    public String ipsecId() {
+    public Output<String> ipsecId() {
         return this.ipsecId;
     }
 
@@ -32,13 +33,13 @@ public final class GetIpsecConnectionTunnelArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tunnelId", required=true)
-    private String tunnelId;
+    private Output<String> tunnelId;
 
     /**
      * @return The OCID of the IPSec connection&#39;s tunnel.
      * 
      */
-    public String tunnelId() {
+    public Output<String> tunnelId() {
         return this.tunnelId;
     }
 
@@ -73,8 +74,29 @@ public final class GetIpsecConnectionTunnelArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder ipsecId(String ipsecId) {
+        public Builder ipsecId(Output<String> ipsecId) {
             $.ipsecId = ipsecId;
+            return this;
+        }
+
+        /**
+         * @param ipsecId The OCID of the IPSec connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecId(String ipsecId) {
+            return ipsecId(Output.of(ipsecId));
+        }
+
+        /**
+         * @param tunnelId The OCID of the IPSec connection&#39;s tunnel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelId(Output<String> tunnelId) {
+            $.tunnelId = tunnelId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetIpsecConnectionTunnelArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder tunnelId(String tunnelId) {
-            $.tunnelId = tunnelId;
-            return this;
+            return tunnelId(Output.of(tunnelId));
         }
 
         public GetIpsecConnectionTunnelArgs build() {

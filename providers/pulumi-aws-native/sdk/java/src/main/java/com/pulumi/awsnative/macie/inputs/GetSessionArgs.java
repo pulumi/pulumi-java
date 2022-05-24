@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.macie.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
     /**
      * @return AWS account ID of customer
      * 
      */
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
+        }
+
+        /**
+         * @param awsAccountId AWS account ID of customer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
 
         public GetSessionArgs build() {

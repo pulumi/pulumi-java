@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.refactorspaces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @Import(name="applicationIdentifier", required=true)
-    private String applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
-    public String applicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-    private String environmentIdentifier;
+    private Output<String> environmentIdentifier;
 
-    public String environmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="routeIdentifier", required=true)
-    private String routeIdentifier;
+    private Output<String> routeIdentifier;
 
-    public String routeIdentifier() {
+    public Output<String> routeIdentifier() {
         return this.routeIdentifier;
     }
 
@@ -59,19 +60,31 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applicationIdentifier(String applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             $.applicationIdentifier = applicationIdentifier;
             return this;
         }
 
-        public Builder environmentIdentifier(String environmentIdentifier) {
+        public Builder applicationIdentifier(String applicationIdentifier) {
+            return applicationIdentifier(Output.of(applicationIdentifier));
+        }
+
+        public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             $.environmentIdentifier = environmentIdentifier;
             return this;
         }
 
-        public Builder routeIdentifier(String routeIdentifier) {
+        public Builder environmentIdentifier(String environmentIdentifier) {
+            return environmentIdentifier(Output.of(environmentIdentifier));
+        }
+
+        public Builder routeIdentifier(Output<String> routeIdentifier) {
             $.routeIdentifier = routeIdentifier;
             return this;
+        }
+
+        public Builder routeIdentifier(String routeIdentifier) {
+            return routeIdentifier(Output.of(routeIdentifier));
         }
 
         public GetRouteArgs build() {

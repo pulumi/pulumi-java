@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.vision_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,30 +15,30 @@ public final class GetReferenceImageArgs extends com.pulumi.resources.InvokeArgs
     public static final GetReferenceImageArgs Empty = new GetReferenceImageArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="productId", required=true)
-    private String productId;
+    private Output<String> productId;
 
-    public String productId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="referenceImageId", required=true)
-    private String referenceImageId;
+    private Output<String> referenceImageId;
 
-    public String referenceImageId() {
+    public Output<String> referenceImageId() {
         return this.referenceImageId;
     }
 
@@ -69,24 +69,40 @@ public final class GetReferenceImageArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetReferenceImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder productId(String productId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder referenceImageId(String referenceImageId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder referenceImageId(Output<String> referenceImageId) {
             $.referenceImageId = referenceImageId;
             return this;
+        }
+
+        public Builder referenceImageId(String referenceImageId) {
+            return referenceImageId(Output.of(referenceImageId));
         }
 
         public GetReferenceImageArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Budget.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Budget.inputs.GetAlertRulesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="budgetId", required=true)
-    private String budgetId;
+    private Output<String> budgetId;
 
     /**
      * @return The unique Budget OCID
      * 
      */
-    public String budgetId() {
+    public Output<String> budgetId() {
         return this.budgetId;
     }
 
@@ -36,21 +36,21 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAlertRulesFilter> filters;
+    private Output</* @Nullable */ List<GetAlertRulesFilter>> filters;
 
-    public Optional<List<GetAlertRulesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetAlertRulesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return The current state of the resource to filter by.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetAlertRulesArgs() {}
@@ -101,8 +101,29 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder budgetId(String budgetId) {
+        public Builder budgetId(Output<String> budgetId) {
             $.budgetId = budgetId;
+            return this;
+        }
+
+        /**
+         * @param budgetId The unique Budget OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder budgetId(String budgetId) {
+            return budgetId(Output.of(budgetId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -113,13 +134,16 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetAlertRulesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetAlertRulesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetAlertRulesFilter... filters) {
@@ -132,9 +156,19 @@ public final class GetAlertRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state The current state of the resource to filter by.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetAlertRulesArgs build() {

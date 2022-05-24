@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-    private String virtualNetworkName;
+    private Output<String> virtualNetworkName;
 
     /**
      * @return Name of the virtual network resource.
      * 
      */
-    public String virtualNetworkName() {
+    public Output<String> virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkName Name of the virtual network resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkName(Output<String> virtualNetworkName) {
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder virtualNetworkName(String virtualNetworkName) {
-            $.virtualNetworkName = virtualNetworkName;
-            return this;
+            return virtualNetworkName(Output.of(virtualNetworkName));
         }
 
         public GetVirtualNetworkArgs build() {

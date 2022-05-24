@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstancePoolLoadBalancerAttachmentArgs extends com.pulumi.
      * 
      */
     @Import(name="instancePoolId", required=true)
-    private String instancePoolId;
+    private Output<String> instancePoolId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
      * 
      */
-    public String instancePoolId() {
+    public Output<String> instancePoolId() {
         return this.instancePoolId;
     }
 
@@ -32,13 +33,13 @@ public final class GetInstancePoolLoadBalancerAttachmentArgs extends com.pulumi.
      * 
      */
     @Import(name="instancePoolLoadBalancerAttachmentId", required=true)
-    private String instancePoolLoadBalancerAttachmentId;
+    private Output<String> instancePoolLoadBalancerAttachmentId;
 
     /**
      * @return The OCID of the load balancer attachment.
      * 
      */
-    public String instancePoolLoadBalancerAttachmentId() {
+    public Output<String> instancePoolLoadBalancerAttachmentId() {
         return this.instancePoolLoadBalancerAttachmentId;
     }
 
@@ -73,8 +74,29 @@ public final class GetInstancePoolLoadBalancerAttachmentArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder instancePoolId(String instancePoolId) {
+        public Builder instancePoolId(Output<String> instancePoolId) {
             $.instancePoolId = instancePoolId;
+            return this;
+        }
+
+        /**
+         * @param instancePoolId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instancePoolId(String instancePoolId) {
+            return instancePoolId(Output.of(instancePoolId));
+        }
+
+        /**
+         * @param instancePoolLoadBalancerAttachmentId The OCID of the load balancer attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instancePoolLoadBalancerAttachmentId(Output<String> instancePoolLoadBalancerAttachmentId) {
+            $.instancePoolLoadBalancerAttachmentId = instancePoolLoadBalancerAttachmentId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetInstancePoolLoadBalancerAttachmentArgs extends com.pulumi.
          * 
          */
         public Builder instancePoolLoadBalancerAttachmentId(String instancePoolLoadBalancerAttachmentId) {
-            $.instancePoolLoadBalancerAttachmentId = instancePoolLoadBalancerAttachmentId;
-            return this;
+            return instancePoolLoadBalancerAttachmentId(Output.of(instancePoolLoadBalancerAttachmentId));
         }
 
         public GetInstancePoolLoadBalancerAttachmentArgs build() {

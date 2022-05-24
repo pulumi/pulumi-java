@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.autoscaling.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="launchConfigurationName", required=true)
-    private String launchConfigurationName;
+    private Output<String> launchConfigurationName;
 
     /**
      * @return The name of the launch configuration. This name must be unique per Region per account.
      * 
      */
-    public String launchConfigurationName() {
+    public Output<String> launchConfigurationName() {
         return this.launchConfigurationName;
     }
 
@@ -57,9 +58,19 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder launchConfigurationName(String launchConfigurationName) {
+        public Builder launchConfigurationName(Output<String> launchConfigurationName) {
             $.launchConfigurationName = launchConfigurationName;
             return this;
+        }
+
+        /**
+         * @param launchConfigurationName The name of the launch configuration. This name must be unique per Region per account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder launchConfigurationName(String launchConfigurationName) {
+            return launchConfigurationName(Output.of(launchConfigurationName));
         }
 
         public GetLaunchConfigurationArgs build() {

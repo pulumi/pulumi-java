@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.wisdom.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetAssistantAssociationArgs extends com.pulumi.resources.Invo
     public static final GetAssistantAssociationArgs Empty = new GetAssistantAssociationArgs();
 
     @Import(name="assistantAssociationId", required=true)
-    private String assistantAssociationId;
+    private Output<String> assistantAssociationId;
 
-    public String assistantAssociationId() {
+    public Output<String> assistantAssociationId() {
         return this.assistantAssociationId;
     }
 
     @Import(name="assistantId", required=true)
-    private String assistantId;
+    private Output<String> assistantId;
 
-    public String assistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
 
@@ -51,14 +52,22 @@ public final class GetAssistantAssociationArgs extends com.pulumi.resources.Invo
             $ = new GetAssistantAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder assistantAssociationId(String assistantAssociationId) {
+        public Builder assistantAssociationId(Output<String> assistantAssociationId) {
             $.assistantAssociationId = assistantAssociationId;
             return this;
         }
 
-        public Builder assistantId(String assistantId) {
+        public Builder assistantAssociationId(String assistantAssociationId) {
+            return assistantAssociationId(Output.of(assistantAssociationId));
+        }
+
+        public Builder assistantId(Output<String> assistantId) {
             $.assistantId = assistantId;
             return this;
+        }
+
+        public Builder assistantId(String assistantId) {
+            return assistantId(Output.of(assistantId));
         }
 
         public GetAssistantAssociationArgs build() {

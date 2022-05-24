@@ -5,10 +5,10 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.azurenative.media.enums.AssetContainerPermission;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,13 +36,13 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assetName", required=true)
-    private String assetName;
+    private Output<String> assetName;
 
     /**
      * @return The Asset name.
      * 
      */
-    public String assetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -51,14 +51,14 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expiryTime")
-    private @Nullable String expiryTime;
+    private Output</* @Nullable */ String> expiryTime;
 
     /**
      * @return The SAS URL expiration time.  This must be less than 24 hours from the current time.
      * 
      */
-    public Optional<String> expiryTime() {
-        return Optional.ofNullable(this.expiryTime);
+    public Output</* @Nullable */ String> expiryTime() {
+        return this.expiryTime;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions")
-    private @Nullable Either<String,AssetContainerPermission> permissions;
+    private Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions;
 
     /**
      * @return The permissions to set on the SAS URL.
      * 
      */
-    public Optional<Either<String,AssetContainerPermission>> permissions() {
-        return Optional.ofNullable(this.permissions);
+    public Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions() {
+        return this.permissions;
     }
 
     /**
@@ -81,13 +81,13 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +125,29 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assetName(Output<String> assetName) {
+            $.assetName = assetName;
             return this;
         }
 
@@ -137,7 +158,17 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder assetName(String assetName) {
-            $.assetName = assetName;
+            return assetName(Output.of(assetName));
+        }
+
+        /**
+         * @param expiryTime The SAS URL expiration time.  This must be less than 24 hours from the current time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiryTime(Output</* @Nullable */ String> expiryTime) {
+            $.expiryTime = expiryTime;
             return this;
         }
 
@@ -148,7 +179,17 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder expiryTime(@Nullable String expiryTime) {
-            $.expiryTime = expiryTime;
+            return expiryTime(Output.of(expiryTime));
+        }
+
+        /**
+         * @param permissions The permissions to set on the SAS URL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions) {
+            $.permissions = permissions;
             return this;
         }
 
@@ -159,8 +200,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder permissions(@Nullable Either<String,AssetContainerPermission> permissions) {
-            $.permissions = permissions;
-            return this;
+            return permissions(Output.of(permissions));
         }
 
         /**
@@ -189,9 +229,19 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListAssetContainerSasArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,21 +36,21 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deploymentType")
-    private @Nullable String deploymentType;
+    private Output</* @Nullable */ String> deploymentType;
 
     /**
      * @return A filter to return Managed Databases of the specified deployment type.
      * 
      */
-    public Optional<String> deploymentType() {
-        return Optional.ofNullable(this.deploymentType);
+    public Output</* @Nullable */ String> deploymentType() {
+        return this.deploymentType;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabasesFilter> filters;
+    private Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters;
 
-    public Optional<List<GetManagedDatabasesFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managementOption")
-    private @Nullable String managementOption;
+    private Output</* @Nullable */ String> managementOption;
 
     /**
      * @return A filter to return Managed Databases with the specified management option.
      * 
      */
-    public Optional<String> managementOption() {
-        return Optional.ofNullable(this.managementOption);
+    public Output</* @Nullable */ String> managementOption() {
+        return this.managementOption;
     }
 
     /**
@@ -88,14 +88,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     private GetManagedDatabasesArgs() {}
@@ -133,8 +133,29 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param deploymentType A filter to return Managed Databases of the specified deployment type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentType(Output</* @Nullable */ String> deploymentType) {
+            $.deploymentType = deploymentType;
             return this;
         }
 
@@ -145,13 +166,16 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder deploymentType(@Nullable String deploymentType) {
-            $.deploymentType = deploymentType;
+            return deploymentType(Output.of(deploymentType));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetManagedDatabasesFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagedDatabasesFilter... filters) {
@@ -164,8 +188,29 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param managementOption A filter to return Managed Databases with the specified management option.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementOption(Output</* @Nullable */ String> managementOption) {
+            $.managementOption = managementOption;
             return this;
         }
 
@@ -176,7 +221,17 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder managementOption(@Nullable String managementOption) {
-            $.managementOption = managementOption;
+            return managementOption(Output.of(managementOption));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -187,8 +242,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetManagedDatabasesArgs build() {

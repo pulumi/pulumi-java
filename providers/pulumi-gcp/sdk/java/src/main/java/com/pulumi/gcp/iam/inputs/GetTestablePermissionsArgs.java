@@ -3,11 +3,11 @@
 
 package com.pulumi.gcp.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customSupportLevel")
-    private @Nullable String customSupportLevel;
+    private Output</* @Nullable */ String> customSupportLevel;
 
     /**
      * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
-    public Optional<String> customSupportLevel() {
-        return Optional.ofNullable(this.customSupportLevel);
+    public Output</* @Nullable */ String> customSupportLevel() {
+        return this.customSupportLevel;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullResourceName", required=true)
-    private String fullResourceName;
+    private Output<String> fullResourceName;
 
     /**
      * @return See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
      * 
      */
-    public String fullResourceName() {
+    public Output<String> fullResourceName() {
         return this.fullResourceName;
     }
 
@@ -50,14 +50,14 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="stages")
-    private @Nullable List<String> stages;
+    private Output</* @Nullable */ List<String>> stages;
 
     /**
      * @return The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
      * 
      */
-    public Optional<List<String>> stages() {
-        return Optional.ofNullable(this.stages);
+    public Output</* @Nullable */ List<String>> stages() {
+        return this.stages;
     }
 
     private GetTestablePermissionsArgs() {}
@@ -92,8 +92,29 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder customSupportLevel(@Nullable String customSupportLevel) {
+        public Builder customSupportLevel(Output</* @Nullable */ String> customSupportLevel) {
             $.customSupportLevel = customSupportLevel;
+            return this;
+        }
+
+        /**
+         * @param customSupportLevel The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customSupportLevel(@Nullable String customSupportLevel) {
+            return customSupportLevel(Output.of(customSupportLevel));
+        }
+
+        /**
+         * @param fullResourceName See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fullResourceName(Output<String> fullResourceName) {
+            $.fullResourceName = fullResourceName;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder fullResourceName(String fullResourceName) {
-            $.fullResourceName = fullResourceName;
+            return fullResourceName(Output.of(fullResourceName));
+        }
+
+        /**
+         * @param stages The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stages(Output</* @Nullable */ List<String>> stages) {
+            $.stages = stages;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder stages(@Nullable List<String> stages) {
-            $.stages = stages;
-            return this;
+            return stages(Output.of(stages));
         }
 
         /**

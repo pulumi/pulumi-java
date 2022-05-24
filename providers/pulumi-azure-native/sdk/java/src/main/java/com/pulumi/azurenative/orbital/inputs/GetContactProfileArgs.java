@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.orbital.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="contactProfileName", required=true)
-    private String contactProfileName;
+    private Output<String> contactProfileName;
 
     /**
      * @return Contact Profile Name
      * 
      */
-    public String contactProfileName() {
+    public Output<String> contactProfileName() {
         return this.contactProfileName;
     }
 
@@ -32,13 +33,13 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder contactProfileName(String contactProfileName) {
+        public Builder contactProfileName(Output<String> contactProfileName) {
             $.contactProfileName = contactProfileName;
+            return this;
+        }
+
+        /**
+         * @param contactProfileName Contact Profile Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactProfileName(String contactProfileName) {
+            return contactProfileName(Output.of(contactProfileName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetContactProfileArgs build() {

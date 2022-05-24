@@ -4,11 +4,11 @@
 package com.pulumi.azure.storage.inputs;
 
 import com.pulumi.azure.storage.inputs.GetAccountBlobContainerSASPermissions;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="cacheControl")
-    private @Nullable String cacheControl;
+    private Output</* @Nullable */ String> cacheControl;
 
     /**
      * @return The `Cache-Control` response header that is sent when this SAS token is used.
      * 
      */
-    public Optional<String> cacheControl() {
-        return Optional.ofNullable(this.cacheControl);
+    public Output</* @Nullable */ String> cacheControl() {
+        return this.cacheControl;
     }
 
     /**
@@ -36,13 +36,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionString", required=true)
-    private String connectionString;
+    private Output<String> connectionString;
 
     /**
      * @return The connection string for the storage account to which this SAS applies. Typically directly from the `primary_connection_string` attribute of an `azure.storage.Account` resource.
      * 
      */
-    public String connectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -51,13 +51,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return Name of the container.
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -66,14 +66,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentDisposition")
-    private @Nullable String contentDisposition;
+    private Output</* @Nullable */ String> contentDisposition;
 
     /**
      * @return The `Content-Disposition` response header that is sent when this SAS token is used.
      * 
      */
-    public Optional<String> contentDisposition() {
-        return Optional.ofNullable(this.contentDisposition);
+    public Output</* @Nullable */ String> contentDisposition() {
+        return this.contentDisposition;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentEncoding")
-    private @Nullable String contentEncoding;
+    private Output</* @Nullable */ String> contentEncoding;
 
     /**
      * @return The `Content-Encoding` response header that is sent when this SAS token is used.
      * 
      */
-    public Optional<String> contentEncoding() {
-        return Optional.ofNullable(this.contentEncoding);
+    public Output</* @Nullable */ String> contentEncoding() {
+        return this.contentEncoding;
     }
 
     /**
@@ -96,14 +96,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentLanguage")
-    private @Nullable String contentLanguage;
+    private Output</* @Nullable */ String> contentLanguage;
 
     /**
      * @return The `Content-Language` response header that is sent when this SAS token is used.
      * 
      */
-    public Optional<String> contentLanguage() {
-        return Optional.ofNullable(this.contentLanguage);
+    public Output</* @Nullable */ String> contentLanguage() {
+        return this.contentLanguage;
     }
 
     /**
@@ -111,14 +111,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentType")
-    private @Nullable String contentType;
+    private Output</* @Nullable */ String> contentType;
 
     /**
      * @return The `Content-Type` response header that is sent when this SAS token is used.
      * 
      */
-    public Optional<String> contentType() {
-        return Optional.ofNullable(this.contentType);
+    public Output</* @Nullable */ String> contentType() {
+        return this.contentType;
     }
 
     /**
@@ -126,13 +126,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expiry", required=true)
-    private String expiry;
+    private Output<String> expiry;
 
     /**
      * @return The expiration time and date of this SAS. Must be a valid ISO-8601 format time/date string.
      * 
      */
-    public String expiry() {
+    public Output<String> expiry() {
         return this.expiry;
     }
 
@@ -141,14 +141,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="httpsOnly")
-    private @Nullable Boolean httpsOnly;
+    private Output</* @Nullable */ Boolean> httpsOnly;
 
     /**
      * @return Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
      * 
      */
-    public Optional<Boolean> httpsOnly() {
-        return Optional.ofNullable(this.httpsOnly);
+    public Output</* @Nullable */ Boolean> httpsOnly() {
+        return this.httpsOnly;
     }
 
     /**
@@ -156,14 +156,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="ipAddress")
-    private @Nullable String ipAddress;
+    private Output</* @Nullable */ String> ipAddress;
 
     /**
      * @return Single IPv4 address or range (connected with a dash) of IPv4 addresses.
      * 
      */
-    public Optional<String> ipAddress() {
-        return Optional.ofNullable(this.ipAddress);
+    public Output</* @Nullable */ String> ipAddress() {
+        return this.ipAddress;
     }
 
     /**
@@ -171,13 +171,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="permissions", required=true)
-    private GetAccountBlobContainerSASPermissions permissions;
+    private Output<GetAccountBlobContainerSASPermissions> permissions;
 
     /**
      * @return A `permissions` block as defined below.
      * 
      */
-    public GetAccountBlobContainerSASPermissions permissions() {
+    public Output<GetAccountBlobContainerSASPermissions> permissions() {
         return this.permissions;
     }
 
@@ -186,13 +186,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="start", required=true)
-    private String start;
+    private Output<String> start;
 
     /**
      * @return The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.
      * 
      */
-    public String start() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -237,8 +237,29 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder cacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(Output</* @Nullable */ String> cacheControl) {
             $.cacheControl = cacheControl;
+            return this;
+        }
+
+        /**
+         * @param cacheControl The `Cache-Control` response header that is sent when this SAS token is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cacheControl(@Nullable String cacheControl) {
+            return cacheControl(Output.of(cacheControl));
+        }
+
+        /**
+         * @param connectionString The connection string for the storage account to which this SAS applies. Typically directly from the `primary_connection_string` attribute of an `azure.storage.Account` resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionString(Output<String> connectionString) {
+            $.connectionString = connectionString;
             return this;
         }
 
@@ -249,7 +270,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder connectionString(String connectionString) {
-            $.connectionString = connectionString;
+            return connectionString(Output.of(connectionString));
+        }
+
+        /**
+         * @param containerName Name of the container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(Output<String> containerName) {
+            $.containerName = containerName;
             return this;
         }
 
@@ -260,7 +291,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder containerName(String containerName) {
-            $.containerName = containerName;
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param contentDisposition The `Content-Disposition` response header that is sent when this SAS token is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentDisposition(Output</* @Nullable */ String> contentDisposition) {
+            $.contentDisposition = contentDisposition;
             return this;
         }
 
@@ -271,7 +312,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            $.contentDisposition = contentDisposition;
+            return contentDisposition(Output.of(contentDisposition));
+        }
+
+        /**
+         * @param contentEncoding The `Content-Encoding` response header that is sent when this SAS token is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentEncoding(Output</* @Nullable */ String> contentEncoding) {
+            $.contentEncoding = contentEncoding;
             return this;
         }
 
@@ -282,7 +333,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            $.contentEncoding = contentEncoding;
+            return contentEncoding(Output.of(contentEncoding));
+        }
+
+        /**
+         * @param contentLanguage The `Content-Language` response header that is sent when this SAS token is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentLanguage(Output</* @Nullable */ String> contentLanguage) {
+            $.contentLanguage = contentLanguage;
             return this;
         }
 
@@ -293,7 +354,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            $.contentLanguage = contentLanguage;
+            return contentLanguage(Output.of(contentLanguage));
+        }
+
+        /**
+         * @param contentType The `Content-Type` response header that is sent when this SAS token is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentType(Output</* @Nullable */ String> contentType) {
+            $.contentType = contentType;
             return this;
         }
 
@@ -304,7 +375,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder contentType(@Nullable String contentType) {
-            $.contentType = contentType;
+            return contentType(Output.of(contentType));
+        }
+
+        /**
+         * @param expiry The expiration time and date of this SAS. Must be a valid ISO-8601 format time/date string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiry(Output<String> expiry) {
+            $.expiry = expiry;
             return this;
         }
 
@@ -315,7 +396,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder expiry(String expiry) {
-            $.expiry = expiry;
+            return expiry(Output.of(expiry));
+        }
+
+        /**
+         * @param httpsOnly Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpsOnly(Output</* @Nullable */ Boolean> httpsOnly) {
+            $.httpsOnly = httpsOnly;
             return this;
         }
 
@@ -326,7 +417,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            $.httpsOnly = httpsOnly;
+            return httpsOnly(Output.of(httpsOnly));
+        }
+
+        /**
+         * @param ipAddress Single IPv4 address or range (connected with a dash) of IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(Output</* @Nullable */ String> ipAddress) {
+            $.ipAddress = ipAddress;
             return this;
         }
 
@@ -337,7 +438,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder ipAddress(@Nullable String ipAddress) {
-            $.ipAddress = ipAddress;
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        /**
+         * @param permissions A `permissions` block as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(Output<GetAccountBlobContainerSASPermissions> permissions) {
+            $.permissions = permissions;
             return this;
         }
 
@@ -348,7 +459,17 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder permissions(GetAccountBlobContainerSASPermissions permissions) {
-            $.permissions = permissions;
+            return permissions(Output.of(permissions));
+        }
+
+        /**
+         * @param start The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder start(Output<String> start) {
+            $.start = start;
             return this;
         }
 
@@ -359,8 +480,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * 
          */
         public Builder start(String start) {
-            $.start = start;
-            return this;
+            return start(Output.of(start));
         }
 
         public GetAccountBlobContainerSASArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.healthcare_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,37 +15,37 @@ public final class GetUserDataMappingArgs extends com.pulumi.resources.InvokeArg
     public static final GetUserDataMappingArgs Empty = new GetUserDataMappingArgs();
 
     @Import(name="consentStoreId", required=true)
-    private String consentStoreId;
+    private Output<String> consentStoreId;
 
-    public String consentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="userDataMappingId", required=true)
-    private String userDataMappingId;
+    private Output<String> userDataMappingId;
 
-    public String userDataMappingId() {
+    public Output<String> userDataMappingId() {
         return this.userDataMappingId;
     }
 
@@ -77,29 +77,49 @@ public final class GetUserDataMappingArgs extends com.pulumi.resources.InvokeArg
             $ = new GetUserDataMappingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder consentStoreId(String consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder consentStoreId(String consentStoreId) {
+            return consentStoreId(Output.of(consentStoreId));
+        }
+
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder userDataMappingId(String userDataMappingId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder userDataMappingId(Output<String> userDataMappingId) {
             $.userDataMappingId = userDataMappingId;
             return this;
+        }
+
+        public Builder userDataMappingId(String userDataMappingId) {
+            return userDataMappingId(Output.of(userDataMappingId));
         }
 
         public GetUserDataMappingArgs build() {

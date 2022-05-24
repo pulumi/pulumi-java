@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.osconfig_v1beta;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,35 +12,34 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.GetGuestPolicyArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.GetPatchDeploymentArgs;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.GetGuestPolicyResult;
 import com.pulumi.googlenative.osconfig_v1beta.outputs.GetPatchDeploymentResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Osconfig_v1betaFunctions {
     /**
      * Get an OS Config guest policy.
      * 
      */
-    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args) {
+    public static Output<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args) {
         return getGuestPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Get an OS Config guest policy.
      * 
      */
-    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getGuestPolicy", TypeShape.of(GetGuestPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:osconfig/v1beta:getGuestPolicy", TypeShape.of(GetGuestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an OS Config patch deployment.
      * 
      */
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args) {
+    public static Output<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args) {
         return getPatchDeployment(args, InvokeOptions.Empty);
     }
     /**
      * Get an OS Config patch deployment.
      * 
      */
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:osconfig/v1beta:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
     }
 }

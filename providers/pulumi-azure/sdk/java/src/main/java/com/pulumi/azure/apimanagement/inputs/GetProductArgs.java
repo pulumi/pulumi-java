@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiManagementName", required=true)
-    private String apiManagementName;
+    private Output<String> apiManagementName;
 
     /**
      * @return The Name of the API Management Service in which this Product exists.
      * 
      */
-    public String apiManagementName() {
+    public Output<String> apiManagementName() {
         return this.apiManagementName;
     }
 
@@ -32,13 +33,13 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productId", required=true)
-    private String productId;
+    private Output<String> productId;
 
     /**
      * @return The Identifier for the API Management Product.
      * 
      */
-    public String productId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -47,13 +48,13 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group in which the API Management Service exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiManagementName(String apiManagementName) {
+        public Builder apiManagementName(Output<String> apiManagementName) {
             $.apiManagementName = apiManagementName;
+            return this;
+        }
+
+        /**
+         * @param apiManagementName The Name of the API Management Service in which this Product exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiManagementName(String apiManagementName) {
+            return apiManagementName(Output.of(apiManagementName));
+        }
+
+        /**
+         * @param productId The Identifier for the API Management Product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder productId(Output<String> productId) {
+            $.productId = productId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder productId(String productId) {
-            $.productId = productId;
+            return productId(Output.of(productId));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group in which the API Management Service exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetProductArgs build() {

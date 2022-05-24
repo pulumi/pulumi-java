@@ -40,10 +40,10 @@ import com.pulumi.azurenative.servicebus.outputs.ListDisasterRecoveryConfigKeysR
 import com.pulumi.azurenative.servicebus.outputs.ListNamespaceKeysResult;
 import com.pulumi.azurenative.servicebus.outputs.ListQueueKeysResult;
 import com.pulumi.azurenative.servicebus.outputs.ListTopicKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class ServicebusFunctions {
     /**
@@ -51,7 +51,7 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args) {
+    public static Output<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args) {
         return getDisasterRecoveryConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -59,15 +59,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Single item in List or Get Migration Config operation
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args) {
+    public static Output<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args) {
         return getMigrationConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -75,15 +75,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getMigrationConfig", TypeShape.of(GetMigrationConfigResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getMigrationConfig", TypeShape.of(GetMigrationConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a namespace resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -91,15 +91,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a namespace authorization rule.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
         return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -107,15 +107,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Single item in a List or Get IpFilterRules operation
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args) {
+    public static Output<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args) {
         return getNamespaceIpFilterRule(args, InvokeOptions.Empty);
     }
     /**
@@ -123,15 +123,15 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of NetworkRuleSet resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args) {
+    public static Output<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args) {
         return getNamespaceNetworkRuleSet(args, InvokeOptions.Empty);
     }
     /**
@@ -139,15 +139,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Single item in a List or Get VirtualNetworkRules operation
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args) {
+    public static Output<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args) {
         return getNamespaceVirtualNetworkRule(args, InvokeOptions.Empty);
     }
     /**
@@ -155,15 +155,15 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Properties of the PrivateEndpointConnection.
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -171,15 +171,15 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of queue Resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -187,15 +187,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a namespace authorization rule.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args) {
+    public static Output<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args) {
         return getQueueAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -203,15 +203,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of Rule Resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -219,15 +219,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of subscription resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -235,15 +235,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of topic resource.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -251,15 +251,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of a namespace authorization rule.
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args) {
+    public static Output<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args) {
         return getTopicAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -267,15 +267,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args) {
+    public static Output<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args) {
         return listDisasterRecoveryConfigKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -283,15 +283,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
         return listNamespaceKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -299,15 +299,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args) {
+    public static Output<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args) {
         return listQueueKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -315,15 +315,15 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:listQueueKeys", TypeShape.of(ListQueueKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:listQueueKeys", TypeShape.of(ListQueueKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Namespace/ServiceBus Connection String
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args) {
+    public static Output<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args) {
         return listTopicKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -331,7 +331,7 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:servicebus:listTopicKeys", TypeShape.of(ListTopicKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicebus:listTopicKeys", TypeShape.of(ListTopicKeysResult.class), args, Utilities.withVersion(options));
     }
 }

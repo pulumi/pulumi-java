@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
     @Import(name="gcsPath", required=true)
-    private String gcsPath;
+    private Output<String> gcsPath;
 
-    public String gcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private Output</* @Nullable */ String> view;
 
-    public Optional<String> view() {
-        return Optional.ofNullable(this.view);
+    public Output</* @Nullable */ String> view() {
+        return this.view;
     }
 
     private GetTemplateArgs() {}
@@ -69,24 +69,40 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder gcsPath(String gcsPath) {
+        public Builder gcsPath(Output<String> gcsPath) {
             $.gcsPath = gcsPath;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder gcsPath(String gcsPath) {
+            return gcsPath(Output.of(gcsPath));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder view(Output</* @Nullable */ String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(@Nullable String view) {
+            return view(Output.of(view));
         }
 
         public GetTemplateArgs build() {

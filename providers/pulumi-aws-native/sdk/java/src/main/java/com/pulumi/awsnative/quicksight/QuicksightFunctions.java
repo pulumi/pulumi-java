@@ -16,94 +16,94 @@ import com.pulumi.awsnative.quicksight.outputs.GetDataSetResult;
 import com.pulumi.awsnative.quicksight.outputs.GetDataSourceResult;
 import com.pulumi.awsnative.quicksight.outputs.GetTemplateResult;
 import com.pulumi.awsnative.quicksight.outputs.GetThemeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class QuicksightFunctions {
     /**
      * Definition of the AWS::QuickSight::Analysis Resource Type.
      * 
      */
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
+    public static Output<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
         return getAnalysis(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::Analysis Resource Type.
      * 
      */
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Dashboard Resource Type.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::Dashboard Resource Type.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::DataSet Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args) {
+    public static Output<GetDataSetResult> getDataSet(GetDataSetArgs args) {
         return getDataSet(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::DataSet Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::DataSource Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::DataSource Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Template Resource Type.
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
+    public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args) {
         return getTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::Template Resource Type.
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Theme Resource Type.
      * 
      */
-    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args) {
+    public static Output<GetThemeResult> getTheme(GetThemeArgs args) {
         return getTheme(args, InvokeOptions.Empty);
     }
     /**
      * Definition of the AWS::QuickSight::Theme Resource Type.
      * 
      */
-    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:quicksight:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kubernetesClusterName", required=true)
-    private String kubernetesClusterName;
+    private Output<String> kubernetesClusterName;
 
     /**
      * @return The Name of the Kubernetes Cluster where this Node Pool is located.
      * 
      */
-    public String kubernetesClusterName() {
+    public Output<String> kubernetesClusterName() {
         return this.kubernetesClusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Kubernetes Cluster Node Pool.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group where the Kubernetes Cluster exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder kubernetesClusterName(String kubernetesClusterName) {
+        public Builder kubernetesClusterName(Output<String> kubernetesClusterName) {
             $.kubernetesClusterName = kubernetesClusterName;
+            return this;
+        }
+
+        /**
+         * @param kubernetesClusterName The Name of the Kubernetes Cluster where this Node Pool is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kubernetesClusterName(String kubernetesClusterName) {
+            return kubernetesClusterName(Output.of(kubernetesClusterName));
+        }
+
+        /**
+         * @param name The name of this Kubernetes Cluster Node Pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group where the Kubernetes Cluster exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetClusterNodePoolArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetClusterNodePoolArgs build() {

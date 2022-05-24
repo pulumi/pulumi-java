@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Core.inputs.GetDrgRouteDistributionStatementsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class GetDrgRouteDistributionStatementsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="drgRouteDistributionId", required=true)
-    private String drgRouteDistributionId;
+    private Output<String> drgRouteDistributionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
      * 
      */
-    public String drgRouteDistributionId() {
+    public Output<String> drgRouteDistributionId() {
         return this.drgRouteDistributionId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDrgRouteDistributionStatementsFilter> filters;
+    private Output</* @Nullable */ List<GetDrgRouteDistributionStatementsFilter>> filters;
 
-    public Optional<List<GetDrgRouteDistributionStatementsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetDrgRouteDistributionStatementsFilter>> filters() {
+        return this.filters;
     }
 
     private GetDrgRouteDistributionStatementsArgs() {}
@@ -69,14 +69,28 @@ public final class GetDrgRouteDistributionStatementsArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+        public Builder drgRouteDistributionId(Output<String> drgRouteDistributionId) {
             $.drgRouteDistributionId = drgRouteDistributionId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteDistributionStatementsFilter> filters) {
+        /**
+         * @param drgRouteDistributionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+            return drgRouteDistributionId(Output.of(drgRouteDistributionId));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetDrgRouteDistributionStatementsFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetDrgRouteDistributionStatementsFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetDrgRouteDistributionStatementsFilter... filters) {

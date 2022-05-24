@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFoldersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentId", required=true)
-    private String parentId;
+    private Output<String> parentId;
 
     /**
      * @return A string parent as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list#query-parameters).
      * 
      */
-    public String parentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetFoldersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parentId(String parentId) {
+        public Builder parentId(Output<String> parentId) {
             $.parentId = parentId;
             return this;
+        }
+
+        /**
+         * @param parentId A string parent as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list#query-parameters).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentId(String parentId) {
+            return parentId(Output.of(parentId));
         }
 
         public GetFoldersArgs build() {

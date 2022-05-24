@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,31 +15,31 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends com.pulumi.reso
     public static final GetInstanceClusterBackupIamPolicyArgs Empty = new GetInstanceClusterBackupIamPolicyArgs();
 
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetInstanceClusterBackupIamPolicyArgs() {}
@@ -69,24 +69,40 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends com.pulumi.reso
             $ = new GetInstanceClusterBackupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
-        public Builder clusterId(String clusterId) {
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetInstanceClusterBackupIamPolicyArgs build() {

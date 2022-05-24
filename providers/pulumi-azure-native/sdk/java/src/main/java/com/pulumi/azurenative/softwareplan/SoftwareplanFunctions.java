@@ -6,10 +6,10 @@ package com.pulumi.azurenative.softwareplan;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.softwareplan.inputs.GetHybridUseBenefitArgs;
 import com.pulumi.azurenative.softwareplan.outputs.GetHybridUseBenefitResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SoftwareplanFunctions {
     /**
@@ -17,7 +17,7 @@ public final class SoftwareplanFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args) {
+    public static Output<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args) {
         return getHybridUseBenefit(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class SoftwareplanFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:softwareplan:getHybridUseBenefit", TypeShape.of(GetHybridUseBenefitResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:softwareplan:getHybridUseBenefit", TypeShape.of(GetHybridUseBenefitResult.class), args, Utilities.withVersion(options));
     }
 }

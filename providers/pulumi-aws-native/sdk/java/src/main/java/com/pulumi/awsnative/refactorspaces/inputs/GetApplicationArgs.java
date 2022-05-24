@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.refactorspaces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
     @Import(name="applicationIdentifier", required=true)
-    private String applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
-    public String applicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-    private String environmentIdentifier;
+    private Output<String> environmentIdentifier;
 
-    public String environmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
@@ -51,14 +52,22 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applicationIdentifier(String applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             $.applicationIdentifier = applicationIdentifier;
             return this;
         }
 
-        public Builder environmentIdentifier(String environmentIdentifier) {
+        public Builder applicationIdentifier(String applicationIdentifier) {
+            return applicationIdentifier(Output.of(applicationIdentifier));
+        }
+
+        public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             $.environmentIdentifier = environmentIdentifier;
             return this;
+        }
+
+        public Builder environmentIdentifier(String environmentIdentifier) {
+            return environmentIdentifier(Output.of(environmentIdentifier));
         }
 
         public GetApplicationArgs build() {

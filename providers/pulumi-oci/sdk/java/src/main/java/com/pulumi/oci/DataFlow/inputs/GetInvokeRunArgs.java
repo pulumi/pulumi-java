@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInvokeRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runId", required=true)
-    private String runId;
+    private Output<String> runId;
 
     /**
      * @return The unique ID for the run
      * 
      */
-    public String runId() {
+    public Output<String> runId() {
         return this.runId;
     }
 
@@ -57,9 +58,19 @@ public final class GetInvokeRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder runId(String runId) {
+        public Builder runId(Output<String> runId) {
             $.runId = runId;
             return this;
+        }
+
+        /**
+         * @param runId The unique ID for the run
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runId(String runId) {
+            return runId(Output.of(runId));
         }
 
         public GetInvokeRunArgs build() {

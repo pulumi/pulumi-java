@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return Project from which to list available zones. Defaults to project declared in the provider.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private Output</* @Nullable */ String> region;
 
     /**
      * @return Region from which to list available zones. Defaults to region declared in the provider.
      * 
      */
-    public Optional<String> region() {
-        return Optional.ofNullable(this.region);
+    public Output</* @Nullable */ String> region() {
+        return this.region;
     }
 
     /**
@@ -50,15 +50,15 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return Allows to filter list of zones based on their current status. Status can be either `UP` or `DOWN`.
      * Defaults to no filtering (all available zones - both `UP` and `DOWN`).
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     private GetZonesArgs() {}
@@ -93,8 +93,29 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project Project from which to list available zones. Defaults to project declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param region Region from which to list available zones. Defaults to region declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(Output</* @Nullable */ String> region) {
+            $.region = region;
             return this;
         }
 
@@ -105,7 +126,18 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder region(@Nullable String region) {
-            $.region = region;
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param status Allows to filter list of zones based on their current status. Status can be either `UP` or `DOWN`.
+         * Defaults to no filtering (all available zones - both `UP` and `DOWN`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -117,8 +149,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
-            return this;
+            return status(Output.of(status));
         }
 
         public GetZonesArgs build() {

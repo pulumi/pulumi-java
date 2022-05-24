@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.certificatemanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetDnsAuthorizationArgs extends com.pulumi.resources.InvokeAr
     public static final GetDnsAuthorizationArgs Empty = new GetDnsAuthorizationArgs();
 
     @Import(name="dnsAuthorizationId", required=true)
-    private String dnsAuthorizationId;
+    private Output<String> dnsAuthorizationId;
 
-    public String dnsAuthorizationId() {
+    public Output<String> dnsAuthorizationId() {
         return this.dnsAuthorizationId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetDnsAuthorizationArgs() {}
@@ -61,19 +61,31 @@ public final class GetDnsAuthorizationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetDnsAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder dnsAuthorizationId(String dnsAuthorizationId) {
+        public Builder dnsAuthorizationId(Output<String> dnsAuthorizationId) {
             $.dnsAuthorizationId = dnsAuthorizationId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder dnsAuthorizationId(String dnsAuthorizationId) {
+            return dnsAuthorizationId(Output.of(dnsAuthorizationId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetDnsAuthorizationArgs build() {

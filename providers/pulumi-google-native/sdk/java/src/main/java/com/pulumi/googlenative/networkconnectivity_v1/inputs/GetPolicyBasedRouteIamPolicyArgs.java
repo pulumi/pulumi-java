@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends com.pulumi.resources
     public static final GetPolicyBasedRouteIamPolicyArgs Empty = new GetPolicyBasedRouteIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
-        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
+    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
+        return this.optionsRequestedPolicyVersion;
     }
 
     @Import(name="policyBasedRouteId", required=true)
-    private String policyBasedRouteId;
+    private Output<String> policyBasedRouteId;
 
-    public String policyBasedRouteId() {
+    public Output<String> policyBasedRouteId() {
         return this.policyBasedRouteId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetPolicyBasedRouteIamPolicyArgs() {}
@@ -61,19 +61,31 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends com.pulumi.resources
             $ = new GetPolicyBasedRouteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder policyBasedRouteId(String policyBasedRouteId) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder policyBasedRouteId(Output<String> policyBasedRouteId) {
             $.policyBasedRouteId = policyBasedRouteId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder policyBasedRouteId(String policyBasedRouteId) {
+            return policyBasedRouteId(Output.of(policyBasedRouteId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetPolicyBasedRouteIamPolicyArgs build() {

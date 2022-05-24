@@ -3,12 +3,12 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminManaged")
-    private @Nullable Boolean adminManaged;
+    private Output</* @Nullable */ Boolean> adminManaged;
 
     /**
      * @return Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> adminManaged() {
-        return Optional.ofNullable(this.adminManaged);
+    public Output</* @Nullable */ Boolean> adminManaged() {
+        return this.adminManaged;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeUnverified")
-    private @Nullable Boolean includeUnverified;
+    private Output</* @Nullable */ Boolean> includeUnverified;
 
     /**
      * @return Set to `true` if unverified Azure AD domains should be included. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> includeUnverified() {
-        return Optional.ofNullable(this.includeUnverified);
+    public Output</* @Nullable */ Boolean> includeUnverified() {
+        return this.includeUnverified;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyDefault")
-    private @Nullable Boolean onlyDefault;
+    private Output</* @Nullable */ Boolean> onlyDefault;
 
     /**
      * @return Set to `true` to only return the default domain.
      * 
      */
-    public Optional<Boolean> onlyDefault() {
-        return Optional.ofNullable(this.onlyDefault);
+    public Output</* @Nullable */ Boolean> onlyDefault() {
+        return this.onlyDefault;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyInitial")
-    private @Nullable Boolean onlyInitial;
+    private Output</* @Nullable */ Boolean> onlyInitial;
 
     /**
      * @return Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> onlyInitial() {
-        return Optional.ofNullable(this.onlyInitial);
+    public Output</* @Nullable */ Boolean> onlyInitial() {
+        return this.onlyInitial;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyRoot")
-    private @Nullable Boolean onlyRoot;
+    private Output</* @Nullable */ Boolean> onlyRoot;
 
     /**
      * @return Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
      * 
      */
-    public Optional<Boolean> onlyRoot() {
-        return Optional.ofNullable(this.onlyRoot);
+    public Output</* @Nullable */ Boolean> onlyRoot() {
+        return this.onlyRoot;
     }
 
     /**
@@ -96,14 +96,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="supportsServices")
-    private @Nullable List<String> supportsServices;
+    private Output</* @Nullable */ List<String>> supportsServices;
 
     /**
      * @return A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
      * 
      */
-    public Optional<List<String>> supportsServices() {
-        return Optional.ofNullable(this.supportsServices);
+    public Output</* @Nullable */ List<String>> supportsServices() {
+        return this.supportsServices;
     }
 
     private GetDomainsArgs() {}
@@ -141,8 +141,29 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder adminManaged(@Nullable Boolean adminManaged) {
+        public Builder adminManaged(Output</* @Nullable */ Boolean> adminManaged) {
             $.adminManaged = adminManaged;
+            return this;
+        }
+
+        /**
+         * @param adminManaged Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adminManaged(@Nullable Boolean adminManaged) {
+            return adminManaged(Output.of(adminManaged));
+        }
+
+        /**
+         * @param includeUnverified Set to `true` if unverified Azure AD domains should be included. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeUnverified(Output</* @Nullable */ Boolean> includeUnverified) {
+            $.includeUnverified = includeUnverified;
             return this;
         }
 
@@ -153,7 +174,17 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder includeUnverified(@Nullable Boolean includeUnverified) {
-            $.includeUnverified = includeUnverified;
+            return includeUnverified(Output.of(includeUnverified));
+        }
+
+        /**
+         * @param onlyDefault Set to `true` to only return the default domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onlyDefault(Output</* @Nullable */ Boolean> onlyDefault) {
+            $.onlyDefault = onlyDefault;
             return this;
         }
 
@@ -164,7 +195,17 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder onlyDefault(@Nullable Boolean onlyDefault) {
-            $.onlyDefault = onlyDefault;
+            return onlyDefault(Output.of(onlyDefault));
+        }
+
+        /**
+         * @param onlyInitial Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onlyInitial(Output</* @Nullable */ Boolean> onlyInitial) {
+            $.onlyInitial = onlyInitial;
             return this;
         }
 
@@ -175,7 +216,17 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder onlyInitial(@Nullable Boolean onlyInitial) {
-            $.onlyInitial = onlyInitial;
+            return onlyInitial(Output.of(onlyInitial));
+        }
+
+        /**
+         * @param onlyRoot Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onlyRoot(Output</* @Nullable */ Boolean> onlyRoot) {
+            $.onlyRoot = onlyRoot;
             return this;
         }
 
@@ -186,7 +237,17 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder onlyRoot(@Nullable Boolean onlyRoot) {
-            $.onlyRoot = onlyRoot;
+            return onlyRoot(Output.of(onlyRoot));
+        }
+
+        /**
+         * @param supportsServices A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder supportsServices(Output</* @Nullable */ List<String>> supportsServices) {
+            $.supportsServices = supportsServices;
             return this;
         }
 
@@ -197,8 +258,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder supportsServices(@Nullable List<String> supportsServices) {
-            $.supportsServices = supportsServices;
-            return this;
+            return supportsServices(Output.of(supportsServices));
         }
 
         /**

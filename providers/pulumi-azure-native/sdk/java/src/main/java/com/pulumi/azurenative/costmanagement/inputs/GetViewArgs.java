@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewName", required=true)
-    private String viewName;
+    private Output<String> viewName;
 
     /**
      * @return View name
      * 
      */
-    public String viewName() {
+    public Output<String> viewName() {
         return this.viewName;
     }
 
@@ -57,9 +58,19 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewName(String viewName) {
+        public Builder viewName(Output<String> viewName) {
             $.viewName = viewName;
             return this;
+        }
+
+        /**
+         * @param viewName View name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder viewName(String viewName) {
+            return viewName(Output.of(viewName));
         }
 
         public GetViewArgs build() {

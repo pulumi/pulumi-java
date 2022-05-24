@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.qldb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="ledgerName", required=true)
-    private String ledgerName;
+    private Output<String> ledgerName;
 
-    public String ledgerName() {
+    public Output<String> ledgerName() {
         return this.ledgerName;
     }
 
@@ -51,14 +52,22 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStreamArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder ledgerName(String ledgerName) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder ledgerName(Output<String> ledgerName) {
             $.ledgerName = ledgerName;
             return this;
+        }
+
+        public Builder ledgerName(String ledgerName) {
+            return ledgerName(Output.of(ledgerName));
         }
 
         public GetStreamArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.accessapproval.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationServiceAccountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
     /**
      * @return The organization ID the service account was created for.
      * 
      */
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOrganizationServiceAccountArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder organizationId(String organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        /**
+         * @param organizationId The organization ID the service account was created for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetOrganizationServiceAccountArgs build() {

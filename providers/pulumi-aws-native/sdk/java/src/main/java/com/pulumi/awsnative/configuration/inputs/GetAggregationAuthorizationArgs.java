@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.configuration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAggregationAuthorizationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="aggregationAuthorizationArn", required=true)
-    private String aggregationAuthorizationArn;
+    private Output<String> aggregationAuthorizationArn;
 
     /**
      * @return The ARN of the AggregationAuthorization.
      * 
      */
-    public String aggregationAuthorizationArn() {
+    public Output<String> aggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetAggregationAuthorizationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder aggregationAuthorizationArn(String aggregationAuthorizationArn) {
+        public Builder aggregationAuthorizationArn(Output<String> aggregationAuthorizationArn) {
             $.aggregationAuthorizationArn = aggregationAuthorizationArn;
             return this;
+        }
+
+        /**
+         * @param aggregationAuthorizationArn The ARN of the AggregationAuthorization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aggregationAuthorizationArn(String aggregationAuthorizationArn) {
+            return aggregationAuthorizationArn(Output.of(aggregationAuthorizationArn));
         }
 
         public GetAggregationAuthorizationArgs build() {

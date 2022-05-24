@@ -3,11 +3,11 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group in which the Image exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -35,14 +35,14 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagsFilter")
-    private @Nullable Map<String,String> tagsFilter;
+    private Output</* @Nullable */ Map<String,String>> tagsFilter;
 
     /**
      * @return A mapping of tags to filter the list of images against.
      * 
      */
-    public Optional<Map<String,String>> tagsFilter() {
-        return Optional.ofNullable(this.tagsFilter);
+    public Output</* @Nullable */ Map<String,String>> tagsFilter() {
+        return this.tagsFilter;
     }
 
     private GetImagesArgs() {}
@@ -76,8 +76,29 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group in which the Image exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param tagsFilter A mapping of tags to filter the list of images against.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagsFilter(Output</* @Nullable */ Map<String,String>> tagsFilter) {
+            $.tagsFilter = tagsFilter;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tagsFilter(@Nullable Map<String,String> tagsFilter) {
-            $.tagsFilter = tagsFilter;
-            return this;
+            return tagsFilter(Output.of(tagsFilter));
         }
 
         public GetImagesArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryApplicationName", required=true)
-    private String galleryApplicationName;
+    private Output<String> galleryApplicationName;
 
     /**
      * @return The name of the gallery Application Definition in which the Application Version resides.
      * 
      */
-    public String galleryApplicationName() {
+    public Output<String> galleryApplicationName() {
         return this.galleryApplicationName;
     }
 
@@ -49,13 +49,13 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryApplicationVersionName", required=true)
-    private String galleryApplicationVersionName;
+    private Output<String> galleryApplicationVersionName;
 
     /**
      * @return The name of the gallery Application Version to be retrieved.
      * 
      */
-    public String galleryApplicationVersionName() {
+    public Output<String> galleryApplicationVersionName() {
         return this.galleryApplicationVersionName;
     }
 
@@ -64,13 +64,13 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Application Gallery in which the Application Definition resides.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -79,13 +79,13 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,8 +123,29 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition in which the Application Version resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryApplicationName(Output<String> galleryApplicationName) {
+            $.galleryApplicationName = galleryApplicationName;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
          * 
          */
         public Builder galleryApplicationName(String galleryApplicationName) {
-            $.galleryApplicationName = galleryApplicationName;
+            return galleryApplicationName(Output.of(galleryApplicationName));
+        }
+
+        /**
+         * @param galleryApplicationVersionName The name of the gallery Application Version to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryApplicationVersionName(Output<String> galleryApplicationVersionName) {
+            $.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
          * 
          */
         public Builder galleryApplicationVersionName(String galleryApplicationVersionName) {
-            $.galleryApplicationVersionName = galleryApplicationVersionName;
+            return galleryApplicationVersionName(Output.of(galleryApplicationVersionName));
+        }
+
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(Output<String> galleryName) {
+            $.galleryName = galleryName;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
          * 
          */
         public Builder galleryName(String galleryName) {
-            $.galleryName = galleryName;
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGalleryApplicationVersionArgs build() {

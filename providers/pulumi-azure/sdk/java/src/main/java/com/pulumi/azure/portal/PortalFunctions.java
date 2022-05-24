@@ -6,10 +6,10 @@ package com.pulumi.azure.portal;
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.portal.inputs.GetDashboardArgs;
 import com.pulumi.azure.portal.outputs.GetDashboardResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PortalFunctions {
     /**
@@ -41,7 +41,7 @@ public final class PortalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +73,7 @@ public final class PortalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:portal/getDashboard:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:portal/getDashboard:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
 }

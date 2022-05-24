@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networkservices_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -31,175 +32,174 @@ import com.pulumi.googlenative.networkservices_v1beta1.outputs.GetServiceBinding
 import com.pulumi.googlenative.networkservices_v1beta1.outputs.GetServiceBindingResult;
 import com.pulumi.googlenative.networkservices_v1beta1.outputs.GetTcpRouteResult;
 import com.pulumi.googlenative.networkservices_v1beta1.outputs.GetTlsRouteResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Networkservices_v1beta1Functions {
     /**
      * Gets details of a single EndpointPolicy.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args) {
+    public static Output<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args) {
         return getEndpointPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single EndpointPolicy.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args) {
+    public static Output<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args) {
         return getEndpointPolicyIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Gateway.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Gateway.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args) {
+    public static Output<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args) {
         return getGatewayIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getGatewayIamPolicy", TypeShape.of(GetGatewayIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getGatewayIamPolicy", TypeShape.of(GetGatewayIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single GrpcRoute.
      * 
      */
-    public static CompletableFuture<GetGrpcRouteResult> getGrpcRoute(GetGrpcRouteArgs args) {
+    public static Output<GetGrpcRouteResult> getGrpcRoute(GetGrpcRouteArgs args) {
         return getGrpcRoute(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single GrpcRoute.
      * 
      */
-    public static CompletableFuture<GetGrpcRouteResult> getGrpcRoute(GetGrpcRouteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getGrpcRoute", TypeShape.of(GetGrpcRouteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGrpcRouteResult> getGrpcRoute(GetGrpcRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getGrpcRoute", TypeShape.of(GetGrpcRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single HttpRoute.
      * 
      */
-    public static CompletableFuture<GetHttpRouteResult> getHttpRoute(GetHttpRouteArgs args) {
+    public static Output<GetHttpRouteResult> getHttpRoute(GetHttpRouteArgs args) {
         return getHttpRoute(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single HttpRoute.
      * 
      */
-    public static CompletableFuture<GetHttpRouteResult> getHttpRoute(GetHttpRouteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getHttpRoute", TypeShape.of(GetHttpRouteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHttpRouteResult> getHttpRoute(GetHttpRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getHttpRoute", TypeShape.of(GetHttpRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Mesh.
      * 
      */
-    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args) {
+    public static Output<GetMeshResult> getMesh(GetMeshArgs args) {
         return getMesh(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Mesh.
      * 
      */
-    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getMesh", TypeShape.of(GetMeshResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMeshResult> getMesh(GetMeshArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getMesh", TypeShape.of(GetMeshResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMeshIamPolicyResult> getMeshIamPolicy(GetMeshIamPolicyArgs args) {
+    public static Output<GetMeshIamPolicyResult> getMeshIamPolicy(GetMeshIamPolicyArgs args) {
         return getMeshIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMeshIamPolicyResult> getMeshIamPolicy(GetMeshIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getMeshIamPolicy", TypeShape.of(GetMeshIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMeshIamPolicyResult> getMeshIamPolicy(GetMeshIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getMeshIamPolicy", TypeShape.of(GetMeshIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single ServiceBinding.
      * 
      */
-    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args) {
+    public static Output<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args) {
         return getServiceBinding(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single ServiceBinding.
      * 
      */
-    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBinding", TypeShape.of(GetServiceBindingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getServiceBinding", TypeShape.of(GetServiceBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args) {
+    public static Output<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args) {
         return getServiceBindingIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBindingIamPolicy", TypeShape.of(GetServiceBindingIamPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getServiceBindingIamPolicy", TypeShape.of(GetServiceBindingIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single TcpRoute.
      * 
      */
-    public static CompletableFuture<GetTcpRouteResult> getTcpRoute(GetTcpRouteArgs args) {
+    public static Output<GetTcpRouteResult> getTcpRoute(GetTcpRouteArgs args) {
         return getTcpRoute(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single TcpRoute.
      * 
      */
-    public static CompletableFuture<GetTcpRouteResult> getTcpRoute(GetTcpRouteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getTcpRoute", TypeShape.of(GetTcpRouteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTcpRouteResult> getTcpRoute(GetTcpRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getTcpRoute", TypeShape.of(GetTcpRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single TlsRoute.
      * 
      */
-    public static CompletableFuture<GetTlsRouteResult> getTlsRoute(GetTlsRouteArgs args) {
+    public static Output<GetTlsRouteResult> getTlsRoute(GetTlsRouteArgs args) {
         return getTlsRoute(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single TlsRoute.
      * 
      */
-    public static CompletableFuture<GetTlsRouteResult> getTlsRoute(GetTlsRouteArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getTlsRoute", TypeShape.of(GetTlsRouteResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTlsRouteResult> getTlsRoute(GetTlsRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:networkservices/v1beta1:getTlsRoute", TypeShape.of(GetTlsRouteResult.class), args, Utilities.withVersion(options));
     }
 }

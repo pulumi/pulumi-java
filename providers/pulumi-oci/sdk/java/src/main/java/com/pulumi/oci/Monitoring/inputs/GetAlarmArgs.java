@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmId", required=true)
-    private String alarmId;
+    private Output<String> alarmId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an alarm.
      * 
      */
-    public String alarmId() {
+    public Output<String> alarmId() {
         return this.alarmId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alarmId(String alarmId) {
+        public Builder alarmId(Output<String> alarmId) {
             $.alarmId = alarmId;
             return this;
+        }
+
+        /**
+         * @param alarmId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an alarm.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alarmId(String alarmId) {
+            return alarmId(Output.of(alarmId));
         }
 
         public GetAlarmArgs build() {

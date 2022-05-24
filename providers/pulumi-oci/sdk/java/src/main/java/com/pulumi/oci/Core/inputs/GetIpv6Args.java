@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIpv6Args extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6id", required=true)
-    private String ipv6id;
+    private Output<String> ipv6id;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6.
      * 
      */
-    public String ipv6id() {
+    public Output<String> ipv6id() {
         return this.ipv6id;
     }
 
@@ -57,9 +58,19 @@ public final class GetIpv6Args extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipv6id(String ipv6id) {
+        public Builder ipv6id(Output<String> ipv6id) {
             $.ipv6id = ipv6id;
             return this;
+        }
+
+        /**
+         * @param ipv6id The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPv6.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6id(String ipv6id) {
+            return ipv6id(Output.of(ipv6id));
         }
 
         public GetIpv6Args build() {

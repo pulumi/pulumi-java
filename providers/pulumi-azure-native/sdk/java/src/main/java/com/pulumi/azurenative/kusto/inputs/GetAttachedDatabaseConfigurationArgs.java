@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.kusto.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
-    private String attachedDatabaseConfigurationName;
+    private Output<String> attachedDatabaseConfigurationName;
 
     /**
      * @return The name of the attached database configuration.
      * 
      */
-    public String attachedDatabaseConfigurationName() {
+    public Output<String> attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the Kusto cluster.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group containing the Kusto cluster.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(Output<String> attachedDatabaseConfigurationName) {
             $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
+            return this;
+        }
+
+        /**
+         * @param attachedDatabaseConfigurationName The name of the attached database configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+            return attachedDatabaseConfigurationName(Output.of(attachedDatabaseConfigurationName));
+        }
+
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAttachedDatabaseConfigurationArgs build() {

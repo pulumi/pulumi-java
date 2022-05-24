@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEnterpriseManagerBridgeArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="enterpriseManagerBridgeId", required=true)
-    private String enterpriseManagerBridgeId;
+    private Output<String> enterpriseManagerBridgeId;
 
     /**
      * @return Unique Enterprise Manager bridge identifier
      * 
      */
-    public String enterpriseManagerBridgeId() {
+    public Output<String> enterpriseManagerBridgeId() {
         return this.enterpriseManagerBridgeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetEnterpriseManagerBridgeArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder enterpriseManagerBridgeId(String enterpriseManagerBridgeId) {
+        public Builder enterpriseManagerBridgeId(Output<String> enterpriseManagerBridgeId) {
             $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
             return this;
+        }
+
+        /**
+         * @param enterpriseManagerBridgeId Unique Enterprise Manager bridge identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enterpriseManagerBridgeId(String enterpriseManagerBridgeId) {
+            return enterpriseManagerBridgeId(Output.of(enterpriseManagerBridgeId));
         }
 
         public GetEnterpriseManagerBridgeArgs build() {

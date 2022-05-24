@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dns_v1beta2;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,91 +20,90 @@ import com.pulumi.googlenative.dns_v1beta2.outputs.GetPolicyResult;
 import com.pulumi.googlenative.dns_v1beta2.outputs.GetResourceRecordSetResult;
 import com.pulumi.googlenative.dns_v1beta2.outputs.GetResponsePolicyResult;
 import com.pulumi.googlenative.dns_v1beta2.outputs.GetResponsePolicyRuleResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Dns_v1beta2Functions {
     /**
      * Fetches the representation of an existing Change.
      * 
      */
-    public static CompletableFuture<GetChangeResult> getChange(GetChangeArgs args) {
+    public static Output<GetChangeResult> getChange(GetChangeArgs args) {
         return getChange(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing Change.
      * 
      */
-    public static CompletableFuture<GetChangeResult> getChange(GetChangeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getChange", TypeShape.of(GetChangeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetChangeResult> getChange(GetChangeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getChange", TypeShape.of(GetChangeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing ManagedZone.
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
+    public static Output<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
         return getManagedZone(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing ManagedZone.
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args) {
         return getPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing Policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing ResourceRecordSet.
      * 
      */
-    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args) {
+    public static Output<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args) {
         return getResourceRecordSet(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing ResourceRecordSet.
      * 
      */
-    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResourceRecordSet", TypeShape.of(GetResourceRecordSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getResourceRecordSet", TypeShape.of(GetResourceRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Response Policy.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args) {
+    public static Output<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args) {
         return getResponsePolicy(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing Response Policy.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResponsePolicy", TypeShape.of(GetResponsePolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getResponsePolicy", TypeShape.of(GetResponsePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Response Policy Rule.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args) {
+    public static Output<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args) {
         return getResponsePolicyRule(args, InvokeOptions.Empty);
     }
     /**
      * Fetches the representation of an existing Response Policy Rule.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResponsePolicyRule", TypeShape.of(GetResponsePolicyRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:dns/v1beta2:getResponsePolicyRule", TypeShape.of(GetResponsePolicyRuleResult.class), args, Utilities.withVersion(options));
     }
 }

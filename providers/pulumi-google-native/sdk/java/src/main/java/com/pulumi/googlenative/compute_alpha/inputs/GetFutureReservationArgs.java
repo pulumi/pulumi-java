@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,23 +15,23 @@ public final class GetFutureReservationArgs extends com.pulumi.resources.InvokeA
     public static final GetFutureReservationArgs Empty = new GetFutureReservationArgs();
 
     @Import(name="futureReservation", required=true)
-    private String futureReservation;
+    private Output<String> futureReservation;
 
-    public String futureReservation() {
+    public Output<String> futureReservation() {
         return this.futureReservation;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +61,31 @@ public final class GetFutureReservationArgs extends com.pulumi.resources.InvokeA
             $ = new GetFutureReservationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder futureReservation(String futureReservation) {
+        public Builder futureReservation(Output<String> futureReservation) {
             $.futureReservation = futureReservation;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder futureReservation(String futureReservation) {
+            return futureReservation(Output.of(futureReservation));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetFutureReservationArgs build() {

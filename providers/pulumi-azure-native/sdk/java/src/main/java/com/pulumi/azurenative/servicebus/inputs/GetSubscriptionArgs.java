@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionName", required=true)
-    private String subscriptionName;
+    private Output<String> subscriptionName;
 
     /**
      * @return The subscription name.
      * 
      */
-    public String subscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topicName", required=true)
-    private String topicName;
+    private Output<String> topicName;
 
     /**
      * @return The topic name.
      * 
      */
-    public String topicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -105,8 +106,29 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespaceName(String namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionName(Output<String> subscriptionName) {
+            $.subscriptionName = subscriptionName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder subscriptionName(String subscriptionName) {
-            $.subscriptionName = subscriptionName;
+            return subscriptionName(Output.of(subscriptionName));
+        }
+
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(Output<String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder topicName(String topicName) {
-            $.topicName = topicName;
-            return this;
+            return topicName(Output.of(topicName));
         }
 
         public GetSubscriptionArgs build() {

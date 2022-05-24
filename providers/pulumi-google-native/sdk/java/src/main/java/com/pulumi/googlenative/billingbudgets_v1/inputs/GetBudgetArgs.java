@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBudgetArgs Empty = new GetBudgetArgs();
 
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="budgetId", required=true)
-    private String budgetId;
+    private Output<String> budgetId;
 
-    public String budgetId() {
+    public Output<String> budgetId() {
         return this.budgetId;
     }
 
@@ -51,14 +52,22 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBudgetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder budgetId(String budgetId) {
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        public Builder budgetId(Output<String> budgetId) {
             $.budgetId = budgetId;
             return this;
+        }
+
+        public Builder budgetId(String budgetId) {
+            return budgetId(Output.of(budgetId));
         }
 
         public GetBudgetArgs build() {

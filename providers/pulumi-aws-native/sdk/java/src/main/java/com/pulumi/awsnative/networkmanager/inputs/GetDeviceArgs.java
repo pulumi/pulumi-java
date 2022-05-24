@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceId", required=true)
-    private String deviceId;
+    private Output<String> deviceId;
 
     /**
      * @return The ID of the device.
      * 
      */
-    public String deviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deviceId(String deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * @param deviceId The ID of the device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder globalNetworkId(String globalNetworkId) {
-            $.globalNetworkId = globalNetworkId;
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
 
         public GetDeviceArgs build() {

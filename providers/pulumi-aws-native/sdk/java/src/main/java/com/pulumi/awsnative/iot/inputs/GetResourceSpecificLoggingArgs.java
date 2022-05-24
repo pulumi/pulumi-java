@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceSpecificLoggingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="targetId", required=true)
-    private String targetId;
+    private Output<String> targetId;
 
     /**
      * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
      */
-    public String targetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetResourceSpecificLoggingArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder targetId(String targetId) {
+        public Builder targetId(Output<String> targetId) {
             $.targetId = targetId;
             return this;
+        }
+
+        /**
+         * @param targetId Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
         }
 
         public GetResourceSpecificLoggingArgs build() {

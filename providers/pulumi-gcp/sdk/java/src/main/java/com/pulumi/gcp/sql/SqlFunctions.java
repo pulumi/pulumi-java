@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.sql;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.gcp.sql.inputs.GetDatabaseInstanceArgs;
 import com.pulumi.gcp.sql.outputs.GetBackupRunResult;
 import com.pulumi.gcp.sql.outputs.GetCaCertsResult;
 import com.pulumi.gcp.sql.outputs.GetDatabaseInstanceResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class SqlFunctions {
     /**
@@ -44,7 +44,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
+    public static Output<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
         return getBackupRun(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:sql/getBackupRun:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:sql/getBackupRun:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the
@@ -85,7 +85,7 @@ public final class SqlFunctions {
      * [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
      * 
      */
-    public static CompletableFuture<GetCaCertsResult> getCaCerts(GetCaCertsArgs args) {
+    public static Output<GetCaCertsResult> getCaCerts(GetCaCertsArgs args) {
         return getCaCerts(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class SqlFunctions {
      * [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
      * 
      */
-    public static CompletableFuture<GetCaCertsResult> getCaCerts(GetCaCertsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:sql/getCaCerts:getCaCerts", TypeShape.of(GetCaCertsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCaCertsResult> getCaCerts(GetCaCertsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:sql/getCaCerts:getCaCerts", TypeShape.of(GetCaCertsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a Cloud SQL instance.
@@ -125,7 +125,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args) {
+    public static Output<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args) {
         return getDatabaseInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -155,7 +155,7 @@ public final class SqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:sql/getDatabaseInstance:getDatabaseInstance", TypeShape.of(GetDatabaseInstanceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:sql/getDatabaseInstance:getDatabaseInstance", TypeShape.of(GetDatabaseInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

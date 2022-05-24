@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.cloudkms_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetEkmConnectionArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetEkmConnectionArgs Empty = new GetEkmConnectionArgs();
 
     @Import(name="ekmConnectionId", required=true)
-    private String ekmConnectionId;
+    private Output<String> ekmConnectionId;
 
-    public String ekmConnectionId() {
+    public Output<String> ekmConnectionId() {
         return this.ekmConnectionId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetEkmConnectionArgs() {}
@@ -61,19 +61,31 @@ public final class GetEkmConnectionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetEkmConnectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ekmConnectionId(String ekmConnectionId) {
+        public Builder ekmConnectionId(Output<String> ekmConnectionId) {
             $.ekmConnectionId = ekmConnectionId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder ekmConnectionId(String ekmConnectionId) {
+            return ekmConnectionId(Output.of(ekmConnectionId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetEkmConnectionArgs build() {

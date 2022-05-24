@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.aad.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainServiceName", required=true)
-    private String domainServiceName;
+    private Output<String> domainServiceName;
 
     /**
      * @return The name of the domain service.
      * 
      */
-    public String domainServiceName() {
+    public Output<String> domainServiceName() {
         return this.domainServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ouContainerName", required=true)
-    private String ouContainerName;
+    private Output<String> ouContainerName;
 
     /**
      * @return The name of the OuContainer.
      * 
      */
-    public String ouContainerName() {
+    public Output<String> ouContainerName() {
         return this.ouContainerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainServiceName(String domainServiceName) {
+        public Builder domainServiceName(Output<String> domainServiceName) {
             $.domainServiceName = domainServiceName;
+            return this;
+        }
+
+        /**
+         * @param domainServiceName The name of the domain service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainServiceName(String domainServiceName) {
+            return domainServiceName(Output.of(domainServiceName));
+        }
+
+        /**
+         * @param ouContainerName The name of the OuContainer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ouContainerName(Output<String> ouContainerName) {
+            $.ouContainerName = ouContainerName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ouContainerName(String ouContainerName) {
-            $.ouContainerName = ouContainerName;
+            return ouContainerName(Output.of(ouContainerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetOuContainerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetOuContainerArgs build() {

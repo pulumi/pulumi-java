@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="configName", required=true)
-    private String configName;
+    private Output<String> configName;
 
     /**
      * @return The name of the maintenance configuration.
      * 
      */
-    public String configName() {
+    public Output<String> configName() {
         return this.configName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the managed cluster resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder configName(String configName) {
+        public Builder configName(Output<String> configName) {
             $.configName = configName;
+            return this;
+        }
+
+        /**
+         * @param configName The name of the maintenance configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configName(String configName) {
+            return configName(Output.of(configName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetMaintenanceConfigurationArgs build() {

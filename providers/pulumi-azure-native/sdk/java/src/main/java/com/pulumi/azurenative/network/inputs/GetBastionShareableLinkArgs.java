@@ -4,11 +4,11 @@
 package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.azurenative.network.inputs.BastionShareableLink;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="bastionHostName", required=true)
-    private String bastionHostName;
+    private Output<String> bastionHostName;
 
     /**
      * @return The name of the Bastion Host.
      * 
      */
-    public String bastionHostName() {
+    public Output<String> bastionHostName() {
         return this.bastionHostName;
     }
 
@@ -36,13 +36,13 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -51,14 +51,14 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vms")
-    private @Nullable List<BastionShareableLink> vms;
+    private Output</* @Nullable */ List<BastionShareableLink>> vms;
 
     /**
      * @return List of VM references.
      * 
      */
-    public Optional<List<BastionShareableLink>> vms() {
-        return Optional.ofNullable(this.vms);
+    public Output</* @Nullable */ List<BastionShareableLink>> vms() {
+        return this.vms;
     }
 
     private GetBastionShareableLinkArgs() {}
@@ -93,8 +93,29 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder bastionHostName(String bastionHostName) {
+        public Builder bastionHostName(Output<String> bastionHostName) {
             $.bastionHostName = bastionHostName;
+            return this;
+        }
+
+        /**
+         * @param bastionHostName The name of the Bastion Host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionHostName(String bastionHostName) {
+            return bastionHostName(Output.of(bastionHostName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -105,7 +126,17 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vms List of VM references.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vms(Output</* @Nullable */ List<BastionShareableLink>> vms) {
+            $.vms = vms;
             return this;
         }
 
@@ -116,8 +147,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder vms(@Nullable List<BastionShareableLink> vms) {
-            $.vms = vms;
-            return this;
+            return vms(Output.of(vms));
         }
 
         /**

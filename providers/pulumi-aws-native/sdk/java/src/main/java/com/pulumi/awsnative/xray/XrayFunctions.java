@@ -8,38 +8,38 @@ import com.pulumi.awsnative.xray.inputs.GetGroupArgs;
 import com.pulumi.awsnative.xray.inputs.GetSamplingRuleArgs;
 import com.pulumi.awsnative.xray.outputs.GetGroupResult;
 import com.pulumi.awsnative.xray.outputs.GetSamplingRuleResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class XrayFunctions {
     /**
      * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
      * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
      * 
      */
-    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args) {
+    public static Output<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args) {
         return getSamplingRule(args, InvokeOptions.Empty);
     }
     /**
      * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
      * 
      */
-    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
     }
 }

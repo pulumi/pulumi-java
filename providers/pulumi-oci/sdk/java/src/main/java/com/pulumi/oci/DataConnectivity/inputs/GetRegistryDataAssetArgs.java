@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistryDataAssetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataAssetKey", required=true)
-    private String dataAssetKey;
+    private Output<String> dataAssetKey;
 
     /**
      * @return The data asset key.
      * 
      */
-    public String dataAssetKey() {
+    public Output<String> dataAssetKey() {
         return this.dataAssetKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegistryDataAssetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRegistryDataAssetArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder dataAssetKey(String dataAssetKey) {
+        public Builder dataAssetKey(Output<String> dataAssetKey) {
             $.dataAssetKey = dataAssetKey;
+            return this;
+        }
+
+        /**
+         * @param dataAssetKey The data asset key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataAssetKey(String dataAssetKey) {
+            return dataAssetKey(Output.of(dataAssetKey));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRegistryDataAssetArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
-            return this;
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryDataAssetArgs build() {

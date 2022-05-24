@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudsearch_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,35 +12,34 @@ import com.pulumi.googlenative.cloudsearch_v1.inputs.GetDataSourceArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.GetSearchApplicationArgs;
 import com.pulumi.googlenative.cloudsearch_v1.outputs.GetDataSourceResult;
 import com.pulumi.googlenative.cloudsearch_v1.outputs.GetSearchApplicationResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Cloudsearch_v1Functions {
     /**
      * Gets a datasource. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
         return getDataSource(args, InvokeOptions.Empty);
     }
     /**
      * Gets a datasource. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified search application. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args) {
+    public static Output<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args) {
         return getSearchApplication(args, InvokeOptions.Empty);
     }
     /**
      * Gets the specified search application. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

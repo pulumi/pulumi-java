@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,37 +15,37 @@ public final class GetPerfSampleSeriesArgs extends com.pulumi.resources.InvokeAr
     public static final GetPerfSampleSeriesArgs Empty = new GetPerfSampleSeriesArgs();
 
     @Import(name="executionId", required=true)
-    private String executionId;
+    private Output<String> executionId;
 
-    public String executionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
-    private String historyId;
+    private Output<String> historyId;
 
-    public String historyId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     @Import(name="sampleSeriesId", required=true)
-    private String sampleSeriesId;
+    private Output<String> sampleSeriesId;
 
-    public String sampleSeriesId() {
+    public Output<String> sampleSeriesId() {
         return this.sampleSeriesId;
     }
 
     @Import(name="stepId", required=true)
-    private String stepId;
+    private Output<String> stepId;
 
-    public String stepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 
@@ -77,29 +77,49 @@ public final class GetPerfSampleSeriesArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPerfSampleSeriesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder executionId(String executionId) {
+        public Builder executionId(Output<String> executionId) {
             $.executionId = executionId;
             return this;
         }
 
-        public Builder historyId(String historyId) {
+        public Builder executionId(String executionId) {
+            return executionId(Output.of(executionId));
+        }
+
+        public Builder historyId(Output<String> historyId) {
             $.historyId = historyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder historyId(String historyId) {
+            return historyId(Output.of(historyId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sampleSeriesId(String sampleSeriesId) {
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sampleSeriesId(Output<String> sampleSeriesId) {
             $.sampleSeriesId = sampleSeriesId;
             return this;
         }
 
-        public Builder stepId(String stepId) {
+        public Builder sampleSeriesId(String sampleSeriesId) {
+            return sampleSeriesId(Output.of(sampleSeriesId));
+        }
+
+        public Builder stepId(Output<String> stepId) {
             $.stepId = stepId;
             return this;
+        }
+
+        public Builder stepId(String stepId) {
+            return stepId(Output.of(stepId));
         }
 
         public GetPerfSampleSeriesArgs build() {

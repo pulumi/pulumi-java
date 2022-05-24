@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineName", required=true)
-    private String pipelineName;
+    private Output<String> pipelineName;
 
     /**
      * @return The name of the Pipeline.
      * 
      */
-    public String pipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName;
     }
 
@@ -57,9 +58,19 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pipelineName(String pipelineName) {
+        public Builder pipelineName(Output<String> pipelineName) {
             $.pipelineName = pipelineName;
             return this;
+        }
+
+        /**
+         * @param pipelineName The name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pipelineName(String pipelineName) {
+            return pipelineName(Output.of(pipelineName));
         }
 
         public GetPipelineArgs build() {

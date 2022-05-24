@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.projects.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-    private String filter;
+    private Output<String> filter;
 
     /**
      * @return A string filter as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters).
      * 
      */
-    public String filter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -57,9 +58,19 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filter(String filter) {
+        public Builder filter(Output<String> filter) {
             $.filter = filter;
             return this;
+        }
+
+        /**
+         * @param filter A string filter as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
 
         public GetProjectArgs build() {

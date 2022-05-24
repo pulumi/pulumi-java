@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetFeedbackMessageArgs extends com.pulumi.resources.InvokeArg
     public static final GetFeedbackMessageArgs Empty = new GetFeedbackMessageArgs();
 
     @Import(name="annotatedDatasetId", required=true)
-    private String annotatedDatasetId;
+    private Output<String> annotatedDatasetId;
 
-    public String annotatedDatasetId() {
+    public Output<String> annotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="feedbackMessageId", required=true)
-    private String feedbackMessageId;
+    private Output<String> feedbackMessageId;
 
-    public String feedbackMessageId() {
+    public Output<String> feedbackMessageId() {
         return this.feedbackMessageId;
     }
 
     @Import(name="feedbackThreadId", required=true)
-    private String feedbackThreadId;
+    private Output<String> feedbackThreadId;
 
-    public String feedbackThreadId() {
+    public Output<String> feedbackThreadId() {
         return this.feedbackThreadId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetFeedbackMessageArgs() {}
@@ -77,29 +77,49 @@ public final class GetFeedbackMessageArgs extends com.pulumi.resources.InvokeArg
             $ = new GetFeedbackMessageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder annotatedDatasetId(String annotatedDatasetId) {
+        public Builder annotatedDatasetId(Output<String> annotatedDatasetId) {
             $.annotatedDatasetId = annotatedDatasetId;
             return this;
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder annotatedDatasetId(String annotatedDatasetId) {
+            return annotatedDatasetId(Output.of(annotatedDatasetId));
+        }
+
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder feedbackMessageId(String feedbackMessageId) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder feedbackMessageId(Output<String> feedbackMessageId) {
             $.feedbackMessageId = feedbackMessageId;
             return this;
         }
 
-        public Builder feedbackThreadId(String feedbackThreadId) {
+        public Builder feedbackMessageId(String feedbackMessageId) {
+            return feedbackMessageId(Output.of(feedbackMessageId));
+        }
+
+        public Builder feedbackThreadId(Output<String> feedbackThreadId) {
             $.feedbackThreadId = feedbackThreadId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder feedbackThreadId(String feedbackThreadId) {
+            return feedbackThreadId(Output.of(feedbackThreadId));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetFeedbackMessageArgs build() {

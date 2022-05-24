@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketName", required=true)
-    private String bucketName;
+    private Output<String> bucketName;
 
     /**
      * @return The name for the bucket.
      * 
      */
-    public String bucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -57,9 +58,19 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bucketName(String bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
+        }
+
+        /**
+         * @param bucketName The name for the bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
 
         public GetBucketArgs build() {

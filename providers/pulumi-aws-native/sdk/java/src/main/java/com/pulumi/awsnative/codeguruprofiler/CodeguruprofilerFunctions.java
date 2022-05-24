@@ -6,24 +6,24 @@ package com.pulumi.awsnative.codeguruprofiler;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.codeguruprofiler.inputs.GetProfilingGroupArgs;
 import com.pulumi.awsnative.codeguruprofiler.outputs.GetProfilingGroupResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CodeguruprofilerFunctions {
     /**
      * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
      * 
      */
-    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args) {
+    public static Output<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args) {
         return getProfilingGroup(args, InvokeOptions.Empty);
     }
     /**
      * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
      * 
      */
-    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws-native:codeguruprofiler:getProfilingGroup", TypeShape.of(GetProfilingGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:codeguruprofiler:getProfilingGroup", TypeShape.of(GetProfilingGroupResult.class), args, Utilities.withVersion(options));
     }
 }

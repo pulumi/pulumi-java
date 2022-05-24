@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return Project from which to list available regions. Defaults to project declared in the provider.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     /**
@@ -35,15 +35,15 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return Allows to filter list of regions based on their current status. Status can be either `UP` or `DOWN`.
      * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     private GetRegionsArgs() {}
@@ -77,8 +77,30 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project Project from which to list available regions. Defaults to project declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param status Allows to filter list of regions based on their current status. Status can be either `UP` or `DOWN`.
+         * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -90,8 +112,7 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
-            return this;
+            return status(Output.of(status));
         }
 
         public GetRegionsArgs build() {

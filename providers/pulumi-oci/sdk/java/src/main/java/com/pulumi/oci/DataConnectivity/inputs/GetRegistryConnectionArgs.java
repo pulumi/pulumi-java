@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistryConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectionKey", required=true)
-    private String connectionKey;
+    private Output<String> connectionKey;
 
     /**
      * @return The connection key.
      * 
      */
-    public String connectionKey() {
+    public Output<String> connectionKey() {
         return this.connectionKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegistryConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRegistryConnectionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder connectionKey(String connectionKey) {
+        public Builder connectionKey(Output<String> connectionKey) {
             $.connectionKey = connectionKey;
+            return this;
+        }
+
+        /**
+         * @param connectionKey The connection key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionKey(String connectionKey) {
+            return connectionKey(Output.of(connectionKey));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRegistryConnectionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
-            return this;
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryConnectionArgs build() {

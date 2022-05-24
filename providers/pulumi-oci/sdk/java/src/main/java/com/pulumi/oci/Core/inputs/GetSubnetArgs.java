@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-    private String subnetId;
+    private Output<String> subnetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet.
      * 
      */
-    public String subnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subnetId(String subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
+        }
+
+        /**
+         * @param subnetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
 
         public GetSubnetArgs build() {

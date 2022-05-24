@@ -70,10 +70,10 @@ import com.pulumi.azurenative.synapse.outputs.GetkustoPoolResult;
 import com.pulumi.azurenative.synapse.outputs.ListIntegrationRuntimeAuthKeyResult;
 import com.pulumi.azurenative.synapse.outputs.ListKustoPoolFollowerDatabasesResult;
 import com.pulumi.azurenative.synapse.outputs.ListKustoPoolLanguageExtensionsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SynapseFunctions {
     /**
@@ -81,7 +81,7 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args) {
+    public static Output<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args) {
         return getBigDataPool(args, InvokeOptions.Empty);
     }
     /**
@@ -89,8 +89,8 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getBigDataPool", TypeShape.of(GetBigDataPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getBigDataPool", TypeShape.of(GetBigDataPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a data connection.
@@ -101,7 +101,7 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
+    public static Output<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
         return getDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -113,8 +113,8 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a Kusto database.
@@ -125,7 +125,7 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -137,15 +137,15 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a database principal assignment.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
+    public static Output<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
         return getDatabasePrincipalAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -153,15 +153,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an Event Grid data connection.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
+    public static Output<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
         return getEventGridDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -169,15 +169,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an event hub data connection.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
+    public static Output<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
         return getEventHubDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -185,15 +185,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Integration runtime resource type.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args) {
+    public static Output<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args) {
         return getIntegrationRuntime(args, InvokeOptions.Empty);
     }
     /**
@@ -201,15 +201,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Connection information for encrypting the on-premises data source credentials.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args) {
+    public static Output<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args) {
         return getIntegrationRuntimeConnectionInfo(args, InvokeOptions.Empty);
     }
     /**
@@ -217,15 +217,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A list of SSIS object metadata.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args) {
+    public static Output<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args) {
         return getIntegrationRuntimeObjectMetadatum(args, InvokeOptions.Empty);
     }
     /**
@@ -233,15 +233,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Integration runtime status response.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args) {
+    public static Output<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args) {
         return getIntegrationRuntimeStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -249,15 +249,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an iot hub data connection.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
+    public static Output<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
         return getIotHubDataConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -265,15 +265,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * IP firewall rule
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args) {
+    public static Output<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args) {
         return getIpFirewallRule(args, InvokeOptions.Empty);
     }
     /**
@@ -281,15 +281,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getIpFirewallRule", TypeShape.of(GetIpFirewallRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getIpFirewallRule", TypeShape.of(GetIpFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A workspace key
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+    public static Output<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
     /**
@@ -297,15 +297,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing an attached database configuration.
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args) {
+    public static Output<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args) {
         return getKustoPoolAttachedDatabaseConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -313,15 +313,15 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolAttachedDatabaseConfiguration", TypeShape.of(GetKustoPoolAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getKustoPoolAttachedDatabaseConfiguration", TypeShape.of(GetKustoPoolAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a cluster principal assignment.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args) {
+    public static Output<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args) {
         return getKustoPoolPrincipalAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -329,15 +329,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolPrincipalAssignment", TypeShape.of(GetKustoPoolPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getKustoPoolPrincipalAssignment", TypeShape.of(GetKustoPoolPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A private endpoint connection
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -345,15 +345,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A privateLinkHub
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args) {
+    public static Output<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args) {
         return getPrivateLinkHub(args, InvokeOptions.Empty);
     }
     /**
@@ -361,15 +361,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getPrivateLinkHub", TypeShape.of(GetPrivateLinkHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getPrivateLinkHub", TypeShape.of(GetPrivateLinkHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a read write database.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
+    public static Output<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
         return getReadWriteDatabase(args, InvokeOptions.Empty);
     }
     /**
@@ -377,15 +377,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
+    public static Output<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL Analytics pool
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args) {
+    public static Output<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args) {
         return getSqlPool(args, InvokeOptions.Empty);
     }
     /**
@@ -393,15 +393,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPool", TypeShape.of(GetSqlPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPool", TypeShape.of(GetSqlPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A sensitivity label.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args) {
+    public static Output<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args) {
         return getSqlPoolSensitivityLabel(args, InvokeOptions.Empty);
     }
     /**
@@ -409,15 +409,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolSensitivityLabel", TypeShape.of(GetSqlPoolSensitivityLabelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolSensitivityLabel", TypeShape.of(GetSqlPoolSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a Sql pool transparent data encryption configuration.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args) {
+    public static Output<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args) {
         return getSqlPoolTransparentDataEncryption(args, InvokeOptions.Empty);
     }
     /**
@@ -425,15 +425,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolTransparentDataEncryption", TypeShape.of(GetSqlPoolTransparentDataEncryptionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolTransparentDataEncryption", TypeShape.of(GetSqlPoolTransparentDataEncryptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Sql pool vulnerability assessment.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args) {
+    public static Output<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args) {
         return getSqlPoolVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
     /**
@@ -441,15 +441,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolVulnerabilityAssessment", TypeShape.of(GetSqlPoolVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolVulnerabilityAssessment", TypeShape.of(GetSqlPoolVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Sql pool vulnerability assessment rule baseline.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args) {
+    public static Output<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args) {
         return getSqlPoolVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
     /**
@@ -457,15 +457,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetSqlPoolVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetSqlPoolVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workload classifier operations for a data warehouse
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args) {
+    public static Output<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args) {
         return getSqlPoolWorkloadClassifier(args, InvokeOptions.Empty);
     }
     /**
@@ -473,15 +473,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadClassifier", TypeShape.of(GetSqlPoolWorkloadClassifierResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolWorkloadClassifier", TypeShape.of(GetSqlPoolWorkloadClassifierResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workload group operations for a sql pool
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args) {
+    public static Output<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args) {
         return getSqlPoolWorkloadGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -489,15 +489,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadGroup", TypeShape.of(GetSqlPoolWorkloadGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getSqlPoolWorkloadGroup", TypeShape.of(GetSqlPoolWorkloadGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A workspace
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -505,15 +505,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace active directory administrator
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args) {
+    public static Output<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args) {
         return getWorkspaceAadAdmin(args, InvokeOptions.Empty);
     }
     /**
@@ -521,15 +521,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceAadAdmin", TypeShape.of(GetWorkspaceAadAdminResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getWorkspaceAadAdmin", TypeShape.of(GetWorkspaceAadAdminResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A server vulnerability assessment.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args) {
+    public static Output<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args) {
         return getWorkspaceManagedSqlServerVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
     /**
@@ -537,15 +537,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceManagedSqlServerVulnerabilityAssessment", TypeShape.of(GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getWorkspaceManagedSqlServerVulnerabilityAssessment", TypeShape.of(GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Workspace active directory administrator
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args) {
+    public static Output<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args) {
         return getWorkspaceSqlAadAdmin(args, InvokeOptions.Empty);
     }
     /**
@@ -553,15 +553,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceSqlAadAdmin", TypeShape.of(GetWorkspaceSqlAadAdminResult.class), args, Utilities.withVersion(options));
+    public static Output<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getWorkspaceSqlAadAdmin", TypeShape.of(GetWorkspaceSqlAadAdminResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Class representing a Kusto kusto pool.
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args) {
+    public static Output<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args) {
         return getkustoPool(args, InvokeOptions.Empty);
     }
     /**
@@ -569,15 +569,15 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:getkustoPool", TypeShape.of(GetkustoPoolResult.class), args, Utilities.withVersion(options));
+    public static Output<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:getkustoPool", TypeShape.of(GetkustoPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration runtime authentication keys.
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args) {
+    public static Output<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args) {
         return listIntegrationRuntimeAuthKey(args, InvokeOptions.Empty);
     }
     /**
@@ -585,15 +585,15 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:listIntegrationRuntimeAuthKey", TypeShape.of(ListIntegrationRuntimeAuthKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:listIntegrationRuntimeAuthKey", TypeShape.of(ListIntegrationRuntimeAuthKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list Kusto database principals operation response.
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args) {
+    public static Output<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args) {
         return listKustoPoolFollowerDatabases(args, InvokeOptions.Empty);
     }
     /**
@@ -601,15 +601,15 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolFollowerDatabases", TypeShape.of(ListKustoPoolFollowerDatabasesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:listKustoPoolFollowerDatabases", TypeShape.of(ListKustoPoolFollowerDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of language extension objects.
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args) {
+    public static Output<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args) {
         return listKustoPoolLanguageExtensions(args, InvokeOptions.Empty);
     }
     /**
@@ -617,7 +617,7 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolLanguageExtensions", TypeShape.of(ListKustoPoolLanguageExtensionsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:synapse:listKustoPoolLanguageExtensions", TypeShape.of(ListKustoPoolLanguageExtensionsResult.class), args, Utilities.withVersion(options));
     }
 }

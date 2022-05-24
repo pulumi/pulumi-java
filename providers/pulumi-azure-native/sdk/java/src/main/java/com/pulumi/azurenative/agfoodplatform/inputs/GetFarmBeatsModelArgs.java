@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.agfoodplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="farmBeatsResourceName", required=true)
-    private String farmBeatsResourceName;
+    private Output<String> farmBeatsResourceName;
 
     /**
      * @return FarmBeats resource name.
      * 
      */
-    public String farmBeatsResourceName() {
+    public Output<String> farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder farmBeatsResourceName(String farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {
             $.farmBeatsResourceName = farmBeatsResourceName;
+            return this;
+        }
+
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder farmBeatsResourceName(String farmBeatsResourceName) {
+            return farmBeatsResourceName(Output.of(farmBeatsResourceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetFarmBeatsModelArgs build() {

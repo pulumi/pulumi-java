@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.OsubSubscription.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commitmentId", required=true)
-    private String commitmentId;
+    private Output<String> commitmentId;
 
     /**
      * @return The Commitment Id
      * 
      */
-    public String commitmentId() {
+    public Output<String> commitmentId() {
         return this.commitmentId;
     }
 
@@ -34,14 +34,14 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneGatewaySubscriptionId")
-    private @Nullable String xOneGatewaySubscriptionId;
+    private Output</* @Nullable */ String> xOneGatewaySubscriptionId;
 
     /**
      * @return This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
      * 
      */
-    public Optional<String> xOneGatewaySubscriptionId() {
-        return Optional.ofNullable(this.xOneGatewaySubscriptionId);
+    public Output</* @Nullable */ String> xOneGatewaySubscriptionId() {
+        return this.xOneGatewaySubscriptionId;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private Output</* @Nullable */ String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
-        return Optional.ofNullable(this.xOneOriginRegion);
+    public Output</* @Nullable */ String> xOneOriginRegion() {
+        return this.xOneOriginRegion;
     }
 
     private GetCommitmentArgs() {}
@@ -91,8 +91,29 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder commitmentId(String commitmentId) {
+        public Builder commitmentId(Output<String> commitmentId) {
             $.commitmentId = commitmentId;
+            return this;
+        }
+
+        /**
+         * @param commitmentId The Commitment Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder commitmentId(String commitmentId) {
+            return commitmentId(Output.of(commitmentId));
+        }
+
+        /**
+         * @param xOneGatewaySubscriptionId This header is meant to be used only for internal purposes and will be ignored on any public request. The purpose of this header is  to help on Gateway to API calls identification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneGatewaySubscriptionId(Output</* @Nullable */ String> xOneGatewaySubscriptionId) {
+            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder xOneGatewaySubscriptionId(@Nullable String xOneGatewaySubscriptionId) {
-            $.xOneGatewaySubscriptionId = xOneGatewaySubscriptionId;
+            return xOneGatewaySubscriptionId(Output.of(xOneGatewaySubscriptionId));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetCommitmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetCommitmentArgs build() {

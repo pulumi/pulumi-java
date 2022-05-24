@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
     /**
      * @return The resourceId of the environment
      * 
      */
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -34,14 +34,14 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Specify the $expand query. Example: &#39;properties($expand=environment)&#39;
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -91,8 +91,29 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * @param environmentId The resourceId of the environment
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($expand=environment)&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetGlobalUserEnvironmentArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetGlobalUserEnvironmentArgs build() {

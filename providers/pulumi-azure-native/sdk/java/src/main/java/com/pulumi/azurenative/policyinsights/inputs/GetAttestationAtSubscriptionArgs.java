@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAttestationAtSubscriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="attestationName", required=true)
-    private String attestationName;
+    private Output<String> attestationName;
 
     /**
      * @return The name of the attestation.
      * 
      */
-    public String attestationName() {
+    public Output<String> attestationName() {
         return this.attestationName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAttestationAtSubscriptionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder attestationName(String attestationName) {
+        public Builder attestationName(Output<String> attestationName) {
             $.attestationName = attestationName;
             return this;
+        }
+
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attestationName(String attestationName) {
+            return attestationName(Output.of(attestationName));
         }
 
         public GetAttestationAtSubscriptionArgs build() {

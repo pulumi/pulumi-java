@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="remediationName", required=true)
-    private String remediationName;
+    private Output<String> remediationName;
 
     /**
      * @return The name of the remediation.
      * 
      */
-    public String remediationName() {
+    public Output<String> remediationName() {
         return this.remediationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return Resource ID.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder remediationName(String remediationName) {
+        public Builder remediationName(Output<String> remediationName) {
             $.remediationName = remediationName;
+            return this;
+        }
+
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
+        }
+
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(Output<String> resourceId) {
+            $.resourceId = resourceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceId(String resourceId) {
-            $.resourceId = resourceId;
-            return this;
+            return resourceId(Output.of(resourceId));
         }
 
         public GetRemediationAtResourceArgs build() {

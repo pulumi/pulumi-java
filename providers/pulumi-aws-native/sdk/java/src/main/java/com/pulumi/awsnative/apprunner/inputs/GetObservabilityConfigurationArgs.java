@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apprunner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetObservabilityConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="observabilityConfigurationArn", required=true)
-    private String observabilityConfigurationArn;
+    private Output<String> observabilityConfigurationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of this ObservabilityConfiguration
      * 
      */
-    public String observabilityConfigurationArn() {
+    public Output<String> observabilityConfigurationArn() {
         return this.observabilityConfigurationArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetObservabilityConfigurationArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder observabilityConfigurationArn(String observabilityConfigurationArn) {
+        public Builder observabilityConfigurationArn(Output<String> observabilityConfigurationArn) {
             $.observabilityConfigurationArn = observabilityConfigurationArn;
             return this;
+        }
+
+        /**
+         * @param observabilityConfigurationArn The Amazon Resource Name (ARN) of this ObservabilityConfiguration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder observabilityConfigurationArn(String observabilityConfigurationArn) {
+            return observabilityConfigurationArn(Output.of(observabilityConfigurationArn));
         }
 
         public GetObservabilityConfigurationArgs build() {

@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.LoadBalancer.inputs.GetLoadBalancersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the load balancers to list.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,14 +36,14 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="detail")
-    private @Nullable String detail;
+    private Output</* @Nullable */ String> detail;
 
     /**
      * @return The level of detail to return for each result. Can be `full` or `simple`.  Example: `full`
      * 
      */
-    public Optional<String> detail() {
-        return Optional.ofNullable(this.detail);
+    public Output</* @Nullable */ String> detail() {
+        return this.detail;
     }
 
     /**
@@ -51,21 +51,21 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.  Example: `example_load_balancer`
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLoadBalancersFilter> filters;
+    private Output</* @Nullable */ List<GetLoadBalancersFilter>> filters;
 
-    public Optional<List<GetLoadBalancersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetLoadBalancersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state.  Example: `SUCCEEDED`
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetLoadBalancersArgs() {}
@@ -117,8 +117,29 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the load balancers to list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param detail The level of detail to return for each result. Can be `full` or `simple`.  Example: `full`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder detail(Output</* @Nullable */ String> detail) {
+            $.detail = detail;
             return this;
         }
 
@@ -129,7 +150,17 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder detail(@Nullable String detail) {
-            $.detail = detail;
+            return detail(Output.of(detail));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.  Example: `example_load_balancer`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -140,13 +171,16 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetLoadBalancersFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetLoadBalancersFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetLoadBalancersFilter... filters) {
@@ -159,9 +193,19 @@ public final class GetLoadBalancersArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(Output</* @Nullable */ String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state.  Example: `SUCCEEDED`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable String state) {
+            return state(Output.of(state));
         }
 
         public GetLoadBalancersArgs build() {

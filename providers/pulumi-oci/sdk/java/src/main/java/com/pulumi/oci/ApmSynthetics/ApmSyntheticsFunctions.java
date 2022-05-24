@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmSynthetics;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +22,6 @@ import com.pulumi.oci.ApmSynthetics.outputs.GetScriptsResult;
 import com.pulumi.oci.ApmSynthetics.outputs.GetVantagePointResult;
 import com.pulumi.oci.ApmSynthetics.outputs.GetVantagePointsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApmSyntheticsFunctions {
     /**
@@ -32,7 +32,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args) {
         return getMonitor(args, InvokeOptions.Empty);
     }
     /**
@@ -43,8 +43,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getMonitor:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getMonitor:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Monitors in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -54,7 +54,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitorsResult> getMonitors(GetMonitorsArgs args) {
+    public static Output<GetMonitorsResult> getMonitors(GetMonitorsArgs args) {
         return getMonitors(args, InvokeOptions.Empty);
     }
     /**
@@ -65,8 +65,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMonitorsResult> getMonitors(GetMonitorsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getMonitors:getMonitors", TypeShape.of(GetMonitorsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMonitorsResult> getMonitors(GetMonitorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getMonitors:getMonitors", TypeShape.of(GetMonitorsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Result resource in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -76,7 +76,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResultResult> getResult(GetResultArgs args) {
+    public static Output<GetResultResult> getResult(GetResultArgs args) {
         return getResult(args, InvokeOptions.Empty);
     }
     /**
@@ -87,8 +87,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResultResult> getResult(GetResultArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getResult:getResult", TypeShape.of(GetResultResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResultResult> getResult(GetResultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getResult:getResult", TypeShape.of(GetResultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Script resource in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -98,7 +98,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
+    public static Output<GetScriptResult> getScript(GetScriptArgs args) {
         return getScript(args, InvokeOptions.Empty);
     }
     /**
@@ -109,8 +109,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Scripts in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -120,7 +120,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetScriptsResult> getScripts(GetScriptsArgs args) {
+    public static Output<GetScriptsResult> getScripts(GetScriptsArgs args) {
         return getScripts(args, InvokeOptions.Empty);
     }
     /**
@@ -131,8 +131,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetScriptsResult> getScripts(GetScriptsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getScripts:getScripts", TypeShape.of(GetScriptsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetScriptsResult> getScripts(GetScriptsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getScripts:getScripts", TypeShape.of(GetScriptsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Public Vantage Point resource in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -142,7 +142,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVantagePointResult> getVantagePoint(GetVantagePointArgs args) {
+    public static Output<GetVantagePointResult> getVantagePoint(GetVantagePointArgs args) {
         return getVantagePoint(args, InvokeOptions.Empty);
     }
     /**
@@ -153,8 +153,8 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVantagePointResult> getVantagePoint(GetVantagePointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getVantagePoint:getVantagePoint", TypeShape.of(GetVantagePointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVantagePointResult> getVantagePoint(GetVantagePointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getVantagePoint:getVantagePoint", TypeShape.of(GetVantagePointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Public Vantage Points in Oracle Cloud Infrastructure Apm Synthetics service.
@@ -164,7 +164,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args) {
+    public static Output<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args) {
         return getVantagePoints(args, InvokeOptions.Empty);
     }
     /**
@@ -175,7 +175,7 @@ public final class ApmSyntheticsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ApmSynthetics/getVantagePoints:getVantagePoints", TypeShape.of(GetVantagePointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmSynthetics/getVantagePoints:getVantagePoints", TypeShape.of(GetVantagePointsResult.class), args, Utilities.withVersion(options));
     }
 }

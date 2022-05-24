@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="eventHubEndpointName", required=true)
-    private String eventHubEndpointName;
+    private Output<String> eventHubEndpointName;
 
     /**
      * @return The name of the Event Hub-compatible endpoint in the IoT hub.
      * 
      */
-    public String eventHubEndpointName() {
+    public Output<String> eventHubEndpointName() {
         return this.eventHubEndpointName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the consumer group to retrieve.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the IoT hub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the IoT hub.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder eventHubEndpointName(String eventHubEndpointName) {
+        public Builder eventHubEndpointName(Output<String> eventHubEndpointName) {
             $.eventHubEndpointName = eventHubEndpointName;
+            return this;
+        }
+
+        /**
+         * @param eventHubEndpointName The name of the Event Hub-compatible endpoint in the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventHubEndpointName(String eventHubEndpointName) {
+            return eventHubEndpointName(Output.of(eventHubEndpointName));
+        }
+
+        /**
+         * @param name The name of the consumer group to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetIotHubResourceEventHubConsumerGroupArgs build() {

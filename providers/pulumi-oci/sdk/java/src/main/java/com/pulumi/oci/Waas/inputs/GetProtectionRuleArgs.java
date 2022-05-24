@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProtectionRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="protectionRuleKey", required=true)
-    private String protectionRuleKey;
+    private Output<String> protectionRuleKey;
 
     /**
      * @return The protection rule key.
      * 
      */
-    public String protectionRuleKey() {
+    public Output<String> protectionRuleKey() {
         return this.protectionRuleKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetProtectionRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="waasPolicyId", required=true)
-    private String waasPolicyId;
+    private Output<String> waasPolicyId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WAAS policy.
      * 
      */
-    public String waasPolicyId() {
+    public Output<String> waasPolicyId() {
         return this.waasPolicyId;
     }
 
@@ -73,8 +74,29 @@ public final class GetProtectionRuleArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder protectionRuleKey(String protectionRuleKey) {
+        public Builder protectionRuleKey(Output<String> protectionRuleKey) {
             $.protectionRuleKey = protectionRuleKey;
+            return this;
+        }
+
+        /**
+         * @param protectionRuleKey The protection rule key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protectionRuleKey(String protectionRuleKey) {
+            return protectionRuleKey(Output.of(protectionRuleKey));
+        }
+
+        /**
+         * @param waasPolicyId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the WAAS policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder waasPolicyId(Output<String> waasPolicyId) {
+            $.waasPolicyId = waasPolicyId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetProtectionRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder waasPolicyId(String waasPolicyId) {
-            $.waasPolicyId = waasPolicyId;
-            return this;
+            return waasPolicyId(Output.of(waasPolicyId));
         }
 
         public GetProtectionRuleArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.azure.postgresql.inputs.GetFlexibleServerArgs;
 import com.pulumi.azure.postgresql.inputs.GetServerArgs;
 import com.pulumi.azure.postgresql.outputs.GetFlexibleServerResult;
 import com.pulumi.azure.postgresql.outputs.GetServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class PostgresqlFunctions {
     /**
@@ -43,7 +43,7 @@ public final class PostgresqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args) {
+    public static Output<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args) {
         return getFlexibleServer(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class PostgresqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:postgresql/getFlexibleServer:getFlexibleServer", TypeShape.of(GetFlexibleServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFlexibleServerResult> getFlexibleServer(GetFlexibleServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:postgresql/getFlexibleServer:getFlexibleServer", TypeShape.of(GetFlexibleServerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing PostgreSQL Azure Database Server.
@@ -107,7 +107,7 @@ public final class PostgresqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+    public static Output<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +139,7 @@ public final class PostgresqlFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:postgresql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:postgresql/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
 }

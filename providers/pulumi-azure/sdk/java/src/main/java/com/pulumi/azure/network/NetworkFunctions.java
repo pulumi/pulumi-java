@@ -58,10 +58,10 @@ import com.pulumi.azure.network.outputs.GetVirtualNetworkGatewayResult;
 import com.pulumi.azure.network.outputs.GetVirtualNetworkResult;
 import com.pulumi.azure.network.outputs.GetVirtualWanResult;
 import com.pulumi.azure.network.outputs.GetVpnGatewayResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class NetworkFunctions {
     /**
@@ -93,7 +93,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args) {
+    public static Output<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args) {
         return getApplicationGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -125,8 +125,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getApplicationGateway:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getApplicationGateway:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Application Security Group.
@@ -157,7 +157,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args) {
+    public static Output<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args) {
         return getApplicationSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -189,8 +189,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getApplicationSecurityGroup:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getApplicationSecurityGroup:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing ExpressRoute circuit.
@@ -222,7 +222,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args) {
+    public static Output<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args) {
         return getExpressRouteCircuit(args, InvokeOptions.Empty);
     }
     /**
@@ -255,8 +255,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getExpressRouteCircuit:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args, Utilities.withVersion(options));
+    public static Output<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getExpressRouteCircuit:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Azure Firewall.
@@ -287,7 +287,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args) {
+    public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args) {
         return getFirewall(args, InvokeOptions.Empty);
     }
     /**
@@ -319,8 +319,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getFirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getFirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Firewall Policy.
@@ -351,7 +351,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
         return getFirewallPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -383,8 +383,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Network Gateway Connection.
@@ -415,7 +415,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args) {
+    public static Output<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args) {
         return getGatewayConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -447,8 +447,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getGatewayConnection:getGatewayConnection", TypeShape.of(GetGatewayConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getGatewayConnection:getGatewayConnection", TypeShape.of(GetGatewayConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing IP Group.
@@ -479,7 +479,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args) {
+    public static Output<GetIpGroupResult> getIpGroup(GetIpGroupArgs args) {
         return getIpGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -511,8 +511,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getIpGroup:getIpGroup", TypeShape.of(GetIpGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetIpGroupResult> getIpGroup(GetIpGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getIpGroup:getIpGroup", TypeShape.of(GetIpGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Local Network Gateway.
@@ -543,7 +543,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args) {
+    public static Output<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args) {
         return getLocalNetworkGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -575,22 +575,22 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getLocalNetworkGateway:getLocalNetworkGateway", TypeShape.of(GetLocalNetworkGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getLocalNetworkGateway:getLocalNetworkGateway", TypeShape.of(GetLocalNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing NAT Gateway.
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
         return getNatGateway(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing NAT Gateway.
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Azure Network DDoS Protection Plan.
@@ -621,7 +621,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args) {
+    public static Output<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args) {
         return getNetworkDdosProtectionPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -653,8 +653,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getNetworkDdosProtectionPlan:getNetworkDdosProtectionPlan", TypeShape.of(GetNetworkDdosProtectionPlanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkDdosProtectionPlan:getNetworkDdosProtectionPlan", TypeShape.of(GetNetworkDdosProtectionPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Network Interface.
@@ -685,7 +685,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
         return getNetworkInterface(args, InvokeOptions.Empty);
     }
     /**
@@ -717,8 +717,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Network Security Group.
@@ -749,7 +749,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
         return getNetworkSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -781,8 +781,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Network Watcher.
@@ -813,7 +813,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args) {
+    public static Output<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args) {
         return getNetworkWatcher(args, InvokeOptions.Empty);
     }
     /**
@@ -845,8 +845,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getNetworkWatcher:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args, Utilities.withVersion(options));
+    public static Output<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkWatcher:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Public IP Address.
@@ -945,7 +945,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPResult> getPublicIP(GetPublicIPArgs args) {
+    public static Output<GetPublicIPResult> getPublicIP(GetPublicIPArgs args) {
         return getPublicIP(args, InvokeOptions.Empty);
     }
     /**
@@ -1045,8 +1045,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPResult> getPublicIP(GetPublicIPArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getPublicIP:getPublicIP", TypeShape.of(GetPublicIPResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIPResult> getPublicIP(GetPublicIPArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIP:getPublicIP", TypeShape.of(GetPublicIPResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about a set of existing Public IP Addresses.
@@ -1076,7 +1076,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args) {
+    public static Output<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args) {
         return getPublicIPs(args, InvokeOptions.Empty);
     }
     /**
@@ -1107,8 +1107,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getPublicIPs:getPublicIPs", TypeShape.of(GetPublicIPsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIPs:getPublicIPs", TypeShape.of(GetPublicIPsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Public IP Prefix.
@@ -1140,7 +1140,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args) {
+    public static Output<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args) {
         return getPublicIpPrefix(args, InvokeOptions.Empty);
     }
     /**
@@ -1173,8 +1173,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getPublicIpPrefix:getPublicIpPrefix", TypeShape.of(GetPublicIpPrefixResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIpPrefix:getPublicIpPrefix", TypeShape.of(GetPublicIpPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Route Filter.
@@ -1205,7 +1205,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args) {
+    public static Output<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args) {
         return getRouteFilter(args, InvokeOptions.Empty);
     }
     /**
@@ -1237,8 +1237,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getRouteFilter:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getRouteFilter:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Route Table.
@@ -1268,7 +1268,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
         return getRouteTable(args, InvokeOptions.Empty);
     }
     /**
@@ -1299,8 +1299,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about Service Tags.
@@ -1333,7 +1333,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args) {
+    public static Output<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args) {
         return getServiceTags(args, InvokeOptions.Empty);
     }
     /**
@@ -1367,8 +1367,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getServiceTags:getServiceTags", TypeShape.of(GetServiceTagsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getServiceTags:getServiceTags", TypeShape.of(GetServiceTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Subnet within a Virtual Network.
@@ -1400,7 +1400,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args) {
         return getSubnet(args, InvokeOptions.Empty);
     }
     /**
@@ -1433,8 +1433,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
@@ -1465,7 +1465,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args) {
+    public static Output<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args) {
         return getTrafficManager(args, InvokeOptions.Empty);
     }
     /**
@@ -1497,8 +1497,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getTrafficManager:getTrafficManager", TypeShape.of(GetTrafficManagerResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getTrafficManager:getTrafficManager", TypeShape.of(GetTrafficManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Traffic Manager Profile.
@@ -1529,7 +1529,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args) {
+    public static Output<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args) {
         return getTrafficManagerProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -1561,8 +1561,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getTrafficManagerProfile:getTrafficManagerProfile", TypeShape.of(GetTrafficManagerProfileResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getTrafficManagerProfile:getTrafficManagerProfile", TypeShape.of(GetTrafficManagerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Uses this data source to access information about an existing Virtual Hub.
@@ -1593,7 +1593,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args) {
+    public static Output<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args) {
         return getVirtualHub(args, InvokeOptions.Empty);
     }
     /**
@@ -1625,8 +1625,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getVirtualHub:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualHub:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Network.
@@ -1657,7 +1657,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -1689,8 +1689,8 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Network Gateway.
@@ -1721,7 +1721,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args) {
+    public static Output<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args) {
         return getVirtualNetworkGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -1753,22 +1753,22 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getVirtualNetworkGateway:getVirtualNetworkGateway", TypeShape.of(GetVirtualNetworkGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualNetworkGateway:getVirtualNetworkGateway", TypeShape.of(GetVirtualNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Wan.
      * 
      */
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args) {
+    public static Output<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args) {
         return getVirtualWan(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing Virtual Wan.
      * 
      */
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getVirtualWan:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualWan:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing VPN Gateway within a Virtual Hub.
@@ -1799,7 +1799,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
         return getVpnGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -1831,7 +1831,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:network/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

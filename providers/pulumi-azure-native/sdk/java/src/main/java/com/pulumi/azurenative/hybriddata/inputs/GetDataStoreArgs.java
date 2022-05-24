@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybriddata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-    private String dataManagerName;
+    private Output<String> dataManagerName;
 
     /**
      * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    public String dataManagerName() {
+    public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataStoreName", required=true)
-    private String dataStoreName;
+    private Output<String> dataStoreName;
 
     /**
      * @return The data store/repository name queried.
      * 
      */
-    public String dataStoreName() {
+    public Output<String> dataStoreName() {
         return this.dataStoreName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataManagerName(String dataManagerName) {
+        public Builder dataManagerName(Output<String> dataManagerName) {
             $.dataManagerName = dataManagerName;
+            return this;
+        }
+
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataManagerName(String dataManagerName) {
+            return dataManagerName(Output.of(dataManagerName));
+        }
+
+        /**
+         * @param dataStoreName The data store/repository name queried.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataStoreName(Output<String> dataStoreName) {
+            $.dataStoreName = dataStoreName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dataStoreName(String dataStoreName) {
-            $.dataStoreName = dataStoreName;
+            return dataStoreName(Output.of(dataStoreName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDataStoreArgs build() {

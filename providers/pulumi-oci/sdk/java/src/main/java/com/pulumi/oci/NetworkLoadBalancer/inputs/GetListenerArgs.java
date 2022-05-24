@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listenerName", required=true)
-    private String listenerName;
+    private Output<String> listenerName;
 
     /**
      * @return The name of the listener to get.  Example: `example_listener`
      * 
      */
-    public String listenerName() {
+    public Output<String> listenerName() {
         return this.listenerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkLoadBalancerId", required=true)
-    private String networkLoadBalancerId;
+    private Output<String> networkLoadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
      * 
      */
-    public String networkLoadBalancerId() {
+    public Output<String> networkLoadBalancerId() {
         return this.networkLoadBalancerId;
     }
 
@@ -73,8 +74,29 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder listenerName(String listenerName) {
+        public Builder listenerName(Output<String> listenerName) {
             $.listenerName = listenerName;
+            return this;
+        }
+
+        /**
+         * @param listenerName The name of the listener to get.  Example: `example_listener`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listenerName(String listenerName) {
+            return listenerName(Output.of(listenerName));
+        }
+
+        /**
+         * @param networkLoadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkLoadBalancerId(Output<String> networkLoadBalancerId) {
+            $.networkLoadBalancerId = networkLoadBalancerId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder networkLoadBalancerId(String networkLoadBalancerId) {
-            $.networkLoadBalancerId = networkLoadBalancerId;
-            return this;
+            return networkLoadBalancerId(Output.of(networkLoadBalancerId));
         }
 
         public GetListenerArgs build() {

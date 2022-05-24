@@ -3,11 +3,11 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,13 +20,13 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
      * 
      */
     @Import(name="remediationName", required=true)
-    private String remediationName;
+    private Output<String> remediationName;
 
     /**
      * @return The name of the remediation.
      * 
      */
-    public String remediationName() {
+    public Output<String> remediationName() {
         return this.remediationName;
     }
 
@@ -35,14 +35,14 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private Output</* @Nullable */ Integer> top;
 
     /**
      * @return Maximum number of records to return.
      * 
      */
-    public Optional<Integer> top() {
-        return Optional.ofNullable(this.top);
+    public Output</* @Nullable */ Integer> top() {
+        return this.top;
     }
 
     private ListRemediationDeploymentsAtSubscriptionArgs() {}
@@ -76,8 +76,29 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder remediationName(String remediationName) {
+        public Builder remediationName(Output<String> remediationName) {
             $.remediationName = remediationName;
+            return this;
+        }
+
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
+        }
+
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(Output</* @Nullable */ Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -88,8 +109,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends com.pulu
          * 
          */
         public Builder top(@Nullable Integer top) {
-            $.top = top;
-            return this;
+            return top(Output.of(top));
         }
 
         public ListRemediationDeploymentsAtSubscriptionArgs build() {

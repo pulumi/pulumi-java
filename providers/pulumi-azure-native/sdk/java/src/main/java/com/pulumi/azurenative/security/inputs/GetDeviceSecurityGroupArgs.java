@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deviceSecurityGroupName", required=true)
-    private String deviceSecurityGroupName;
+    private Output<String> deviceSecurityGroupName;
 
     /**
      * @return The name of the device security group. Note that the name of the device security group is case insensitive.
      * 
      */
-    public String deviceSecurityGroupName() {
+    public Output<String> deviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder deviceSecurityGroupName(String deviceSecurityGroupName) {
+        public Builder deviceSecurityGroupName(Output<String> deviceSecurityGroupName) {
             $.deviceSecurityGroupName = deviceSecurityGroupName;
+            return this;
+        }
+
+        /**
+         * @param deviceSecurityGroupName The name of the device security group. Note that the name of the device security group is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceSecurityGroupName(String deviceSecurityGroupName) {
+            return deviceSecurityGroupName(Output.of(deviceSecurityGroupName));
+        }
+
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(Output<String> resourceId) {
+            $.resourceId = resourceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceId(String resourceId) {
-            $.resourceId = resourceId;
-            return this;
+            return resourceId(Output.of(resourceId));
         }
 
         public GetDeviceSecurityGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetCloudFormationProvisionedProductArgs extends com.pulumi.re
     public static final GetCloudFormationProvisionedProductArgs Empty = new GetCloudFormationProvisionedProductArgs();
 
     @Import(name="provisionedProductId", required=true)
-    private String provisionedProductId;
+    private Output<String> provisionedProductId;
 
-    public String provisionedProductId() {
+    public Output<String> provisionedProductId() {
         return this.provisionedProductId;
     }
 
@@ -43,9 +44,13 @@ public final class GetCloudFormationProvisionedProductArgs extends com.pulumi.re
             $ = new GetCloudFormationProvisionedProductArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder provisionedProductId(String provisionedProductId) {
+        public Builder provisionedProductId(Output<String> provisionedProductId) {
             $.provisionedProductId = provisionedProductId;
             return this;
+        }
+
+        public Builder provisionedProductId(String provisionedProductId) {
+            return provisionedProductId(Output.of(provisionedProductId));
         }
 
         public GetCloudFormationProvisionedProductArgs build() {

@@ -8,10 +8,10 @@ import com.pulumi.azure.devtest.inputs.GetLabArgs;
 import com.pulumi.azure.devtest.inputs.GetVirtualNetworkArgs;
 import com.pulumi.azure.devtest.outputs.GetLabResult;
 import com.pulumi.azure.devtest.outputs.GetVirtualNetworkResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class DevtestFunctions {
     /**
@@ -43,7 +43,7 @@ public final class DevtestFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLabResult> getLab(GetLabArgs args) {
+    public static Output<GetLabResult> getLab(GetLabArgs args) {
         return getLab(args, InvokeOptions.Empty);
     }
     /**
@@ -75,8 +75,8 @@ public final class DevtestFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLabResult> getLab(GetLabArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:devtest/getLab:getLab", TypeShape.of(GetLabResult.class), args, Utilities.withVersion(options));
+    public static Output<GetLabResult> getLab(GetLabArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:devtest/getLab:getLab", TypeShape.of(GetLabResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Dev Test Lab Virtual Network.
@@ -108,7 +108,7 @@ public final class DevtestFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public final class DevtestFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure:devtest/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:devtest/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.accessapproval.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFolderServiceAccountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="folderId", required=true)
-    private String folderId;
+    private Output<String> folderId;
 
     /**
      * @return The folder ID the service account was created for.
      * 
      */
-    public String folderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
@@ -57,9 +58,19 @@ public final class GetFolderServiceAccountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder folderId(String folderId) {
+        public Builder folderId(Output<String> folderId) {
             $.folderId = folderId;
             return this;
+        }
+
+        /**
+         * @param folderId The folder ID the service account was created for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
 
         public GetFolderServiceAccountArgs build() {

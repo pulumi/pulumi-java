@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Events;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -11,7 +12,6 @@ import com.pulumi.oci.Events.inputs.GetRulesArgs;
 import com.pulumi.oci.Events.outputs.GetRuleResult;
 import com.pulumi.oci.Events.outputs.GetRulesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class EventsFunctions {
     /**
@@ -22,7 +22,7 @@ public final class EventsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -33,8 +33,8 @@ public final class EventsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Events/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Events/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Rules in Oracle Cloud Infrastructure Events service.
@@ -44,7 +44,7 @@ public final class EventsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRulesResult> getRules(GetRulesArgs args) {
+    public static Output<GetRulesResult> getRules(GetRulesArgs args) {
         return getRules(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +55,7 @@ public final class EventsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRulesResult> getRules(GetRulesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Events/getRules:getRules", TypeShape.of(GetRulesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRulesResult> getRules(GetRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Events/getRules:getRules", TypeShape.of(GetRulesResult.class), args, Utilities.withVersion(options));
     }
 }

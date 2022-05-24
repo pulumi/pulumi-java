@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
      * 
      */
     @Import(name="categoryDisplayText")
-    private @Nullable String categoryDisplayText;
+    private Output</* @Nullable */ String> categoryDisplayText;
 
     /**
      * @return The category display text used for filtering. Only categories matching the specified display name or description will be returned.
      * 
      */
-    public Optional<String> categoryDisplayText() {
-        return Optional.ofNullable(this.categoryDisplayText);
+    public Output</* @Nullable */ String> categoryDisplayText() {
+        return this.categoryDisplayText;
     }
 
     /**
@@ -34,14 +34,14 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
      * 
      */
     @Import(name="categoryType")
-    private @Nullable String categoryType;
+    private Output</* @Nullable */ String> categoryType;
 
     /**
      * @return A comma-separated list of category types used for filtering. Only categories of the specified types will be returned.
      * 
      */
-    public Optional<String> categoryType() {
-        return Optional.ofNullable(this.categoryType);
+    public Output</* @Nullable */ String> categoryType() {
+        return this.categoryType;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only log analytics category whose name matches the entire name given. The match is case-insensitive.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -64,13 +64,13 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -107,8 +107,29 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder categoryDisplayText(@Nullable String categoryDisplayText) {
+        public Builder categoryDisplayText(Output</* @Nullable */ String> categoryDisplayText) {
             $.categoryDisplayText = categoryDisplayText;
+            return this;
+        }
+
+        /**
+         * @param categoryDisplayText The category display text used for filtering. Only categories matching the specified display name or description will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categoryDisplayText(@Nullable String categoryDisplayText) {
+            return categoryDisplayText(Output.of(categoryDisplayText));
+        }
+
+        /**
+         * @param categoryType A comma-separated list of category types used for filtering. Only categories of the specified types will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categoryType(Output</* @Nullable */ String> categoryType) {
+            $.categoryType = categoryType;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
          * 
          */
         public Builder categoryType(@Nullable String categoryType) {
-            $.categoryType = categoryType;
+            return categoryType(Output.of(categoryType));
+        }
+
+        /**
+         * @param name A filter to return only log analytics category whose name matches the entire name given. The match is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetLogAnalyticsCategoriesListArgs extends com.pulumi.resource
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
-            return this;
+            return namespace(Output.of(namespace));
         }
 
         public GetLogAnalyticsCategoriesListArgs build() {

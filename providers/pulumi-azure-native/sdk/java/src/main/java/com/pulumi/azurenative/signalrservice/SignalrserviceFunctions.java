@@ -16,10 +16,10 @@ import com.pulumi.azurenative.signalrservice.outputs.GetSignalRPrivateEndpointCo
 import com.pulumi.azurenative.signalrservice.outputs.GetSignalRResult;
 import com.pulumi.azurenative.signalrservice.outputs.GetSignalRSharedPrivateLinkResourceResult;
 import com.pulumi.azurenative.signalrservice.outputs.ListSignalRKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class SignalrserviceFunctions {
     /**
@@ -27,7 +27,7 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRResult> getSignalR(GetSignalRArgs args) {
+    public static Output<GetSignalRResult> getSignalR(GetSignalRArgs args) {
         return getSignalR(args, InvokeOptions.Empty);
     }
     /**
@@ -35,15 +35,15 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRResult> getSignalR(GetSignalRArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalR", TypeShape.of(GetSignalRResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalRResult> getSignalR(GetSignalRArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:getSignalR", TypeShape.of(GetSignalRResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A custom certificate.
      * API Version: 2022-02-01.
      * 
      */
-    public static CompletableFuture<GetSignalRCustomCertificateResult> getSignalRCustomCertificate(GetSignalRCustomCertificateArgs args) {
+    public static Output<GetSignalRCustomCertificateResult> getSignalRCustomCertificate(GetSignalRCustomCertificateArgs args) {
         return getSignalRCustomCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -51,15 +51,15 @@ public final class SignalrserviceFunctions {
      * API Version: 2022-02-01.
      * 
      */
-    public static CompletableFuture<GetSignalRCustomCertificateResult> getSignalRCustomCertificate(GetSignalRCustomCertificateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRCustomCertificate", TypeShape.of(GetSignalRCustomCertificateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalRCustomCertificateResult> getSignalRCustomCertificate(GetSignalRCustomCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:getSignalRCustomCertificate", TypeShape.of(GetSignalRCustomCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A custom domain
      * API Version: 2022-02-01.
      * 
      */
-    public static CompletableFuture<GetSignalRCustomDomainResult> getSignalRCustomDomain(GetSignalRCustomDomainArgs args) {
+    public static Output<GetSignalRCustomDomainResult> getSignalRCustomDomain(GetSignalRCustomDomainArgs args) {
         return getSignalRCustomDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -67,15 +67,15 @@ public final class SignalrserviceFunctions {
      * API Version: 2022-02-01.
      * 
      */
-    public static CompletableFuture<GetSignalRCustomDomainResult> getSignalRCustomDomain(GetSignalRCustomDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRCustomDomain", TypeShape.of(GetSignalRCustomDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalRCustomDomainResult> getSignalRCustomDomain(GetSignalRCustomDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:getSignalRCustomDomain", TypeShape.of(GetSignalRCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A private endpoint connection to SignalR resource
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args) {
+    public static Output<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args) {
         return getSignalRPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -83,15 +83,15 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRPrivateEndpointConnection", TypeShape.of(GetSignalRPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:getSignalRPrivateEndpointConnection", TypeShape.of(GetSignalRPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes a Shared Private Link Resource
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args) {
+    public static Output<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args) {
         return getSignalRSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
     /**
@@ -99,15 +99,15 @@ public final class SignalrserviceFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRSharedPrivateLinkResource", TypeShape.of(GetSignalRSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:getSignalRSharedPrivateLinkResource", TypeShape.of(GetSignalRSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A class represents the access keys of SignalR service.
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args) {
+    public static Output<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args) {
         return listSignalRKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -115,7 +115,7 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:signalrservice:listSignalRKeys", TypeShape.of(ListSignalRKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:signalrservice:listSignalRKeys", TypeShape.of(ListSignalRKeysResult.class), args, Utilities.withVersion(options));
     }
 }

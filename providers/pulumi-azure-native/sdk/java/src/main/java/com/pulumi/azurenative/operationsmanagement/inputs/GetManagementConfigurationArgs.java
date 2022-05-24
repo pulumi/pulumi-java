@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.operationsmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="managementConfigurationName", required=true)
-    private String managementConfigurationName;
+    private Output<String> managementConfigurationName;
 
     /**
      * @return User Management Configuration Name.
      * 
      */
-    public String managementConfigurationName() {
+    public Output<String> managementConfigurationName() {
         return this.managementConfigurationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to get. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder managementConfigurationName(String managementConfigurationName) {
+        public Builder managementConfigurationName(Output<String> managementConfigurationName) {
             $.managementConfigurationName = managementConfigurationName;
+            return this;
+        }
+
+        /**
+         * @param managementConfigurationName User Management Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementConfigurationName(String managementConfigurationName) {
+            return managementConfigurationName(Output.of(managementConfigurationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagementConfigurationArgs build() {

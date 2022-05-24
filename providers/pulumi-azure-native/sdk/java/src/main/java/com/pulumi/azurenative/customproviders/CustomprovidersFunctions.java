@@ -8,10 +8,10 @@ import com.pulumi.azurenative.customproviders.inputs.GetAssociationArgs;
 import com.pulumi.azurenative.customproviders.inputs.GetCustomResourceProviderArgs;
 import com.pulumi.azurenative.customproviders.outputs.GetAssociationResult;
 import com.pulumi.azurenative.customproviders.outputs.GetCustomResourceProviderResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class CustomprovidersFunctions {
     /**
@@ -19,7 +19,7 @@ public final class CustomprovidersFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args) {
+    public static Output<GetAssociationResult> getAssociation(GetAssociationArgs args) {
         return getAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -27,15 +27,15 @@ public final class CustomprovidersFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:customproviders:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:customproviders:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A manifest file that defines the custom resource provider resources.
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args) {
+    public static Output<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args) {
         return getCustomResourceProvider(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +43,7 @@ public final class CustomprovidersFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:customproviders:getCustomResourceProvider", TypeShape.of(GetCustomResourceProviderResult.class), args, Utilities.withVersion(options));
+    public static Output<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:customproviders:getCustomResourceProvider", TypeShape.of(GetCustomResourceProviderResult.class), args, Utilities.withVersion(options));
     }
 }

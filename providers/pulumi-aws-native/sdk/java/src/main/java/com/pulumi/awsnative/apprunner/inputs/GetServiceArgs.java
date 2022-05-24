@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apprunner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceArn", required=true)
-    private String serviceArn;
+    private Output<String> serviceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
      */
-    public String serviceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder serviceArn(String serviceArn) {
+        public Builder serviceArn(Output<String> serviceArn) {
             $.serviceArn = serviceArn;
             return this;
+        }
+
+        /**
+         * @param serviceArn The Amazon Resource Name (ARN) of the AppRunner Service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceArn(String serviceArn) {
+            return serviceArn(Output.of(serviceArn));
         }
 
         public GetServiceArgs build() {

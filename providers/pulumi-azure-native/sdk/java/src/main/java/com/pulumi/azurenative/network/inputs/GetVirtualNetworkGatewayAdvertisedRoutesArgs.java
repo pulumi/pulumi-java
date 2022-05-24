@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="peer", required=true)
-    private String peer;
+    private Output<String> peer;
 
     /**
      * @return The IP address of the peer.
      * 
      */
-    public String peer() {
+    public Output<String> peer() {
         return this.peer;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-    private String virtualNetworkGatewayName;
+    private Output<String> virtualNetworkGatewayName;
 
     /**
      * @return The name of the virtual network gateway.
      * 
      */
-    public String virtualNetworkGatewayName() {
+    public Output<String> virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder peer(String peer) {
+        public Builder peer(Output<String> peer) {
             $.peer = peer;
+            return this;
+        }
+
+        /**
+         * @param peer The IP address of the peer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peer(String peer) {
+            return peer(Output.of(peer));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkGatewayName(Output<String> virtualNetworkGatewayName) {
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
          * 
          */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
-            return this;
+            return virtualNetworkGatewayName(Output.of(virtualNetworkGatewayName));
         }
 
         public GetVirtualNetworkGatewayAdvertisedRoutesArgs build() {

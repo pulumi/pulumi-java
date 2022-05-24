@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Functions.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionId", required=true)
-    private String functionId;
+    private Output<String> functionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this function.
      * 
      */
-    public String functionId() {
+    public Output<String> functionId() {
         return this.functionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionId(String functionId) {
+        public Builder functionId(Output<String> functionId) {
             $.functionId = functionId;
             return this;
+        }
+
+        /**
+         * @param functionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionId(String functionId) {
+            return functionId(Output.of(functionId));
         }
 
         public GetFunctionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.kms;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +20,6 @@ import com.pulumi.gcp.kms.outputs.GetKMSKeyRingResult;
 import com.pulumi.gcp.kms.outputs.GetKMSSecretAsymmetricResult;
 import com.pulumi.gcp.kms.outputs.GetKMSSecretCiphertextResult;
 import com.pulumi.gcp.kms.outputs.GetKMSSecretResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class KmsFunctions {
     /**
@@ -61,7 +61,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args) {
+    public static Output<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args) {
         return getKMSCryptoKey(args, InvokeOptions.Empty);
     }
     /**
@@ -103,8 +103,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKey:getKMSCryptoKey", TypeShape.of(GetKMSCryptoKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSCryptoKey:getKMSCryptoKey", TypeShape.of(GetKMSCryptoKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to a Google Cloud Platform KMS CryptoKeyVersion. For more information see
@@ -148,7 +148,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args) {
+    public static Output<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args) {
         return getKMSCryptoKeyVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -193,8 +193,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKeyVersion:getKMSCryptoKeyVersion", TypeShape.of(GetKMSCryptoKeyVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSCryptoKeyVersion:getKMSCryptoKeyVersion", TypeShape.of(GetKMSCryptoKeyVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to Google Cloud Platform KMS KeyRing. For more information see
@@ -230,7 +230,7 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args) {
+    public static Output<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args) {
         return getKMSKeyRing(args, InvokeOptions.Empty);
     }
     /**
@@ -267,8 +267,8 @@ public final class KmsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSKeyRing:getKMSKeyRing", TypeShape.of(GetKMSKeyRingResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSKeyRing:getKMSKeyRing", TypeShape.of(GetKMSKeyRingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source allows you to use data encrypted with Google Cloud KMS
@@ -283,7 +283,7 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args) {
+    public static Output<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args) {
         return getKMSSecret(args, InvokeOptions.Empty);
     }
     /**
@@ -299,8 +299,8 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecret:getKMSSecret", TypeShape.of(GetKMSSecretResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSSecret:getKMSSecret", TypeShape.of(GetKMSSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## get the public key to encrypt the secret with
@@ -340,7 +340,7 @@ public final class KmsFunctions {
      * A9XFJmOVdkvRY9nnz/iVLAdd0Q3vFtLqCdUYsNN2yh4=
      * 
      */
-    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args) {
+    public static Output<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args) {
         return getKMSSecretAsymmetric(args, InvokeOptions.Empty);
     }
     /**
@@ -381,8 +381,8 @@ public final class KmsFunctions {
      * A9XFJmOVdkvRY9nnz/iVLAdd0Q3vFtLqCdUYsNN2yh4=
      * 
      */
-    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretAsymmetric:getKMSSecretAsymmetric", TypeShape.of(GetKMSSecretAsymmetricResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSSecretAsymmetric:getKMSSecretAsymmetric", TypeShape.of(GetKMSSecretAsymmetricResult.class), args, Utilities.withVersion(options));
     }
     /**
      * !&gt; **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
@@ -399,7 +399,7 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args) {
+    public static Output<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args) {
         return getKMSSecretCiphertext(args, InvokeOptions.Empty);
     }
     /**
@@ -417,7 +417,7 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretCiphertext:getKMSSecretCiphertext", TypeShape.of(GetKMSSecretCiphertextResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:kms/getKMSSecretCiphertext:getKMSSecretCiphertext", TypeShape.of(GetKMSSecretCiphertextResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultId", required=true)
-    private String keyVaultId;
+    private Output<String> keyVaultId;
 
     /**
      * @return Specifies the ID of the Key Vault instance to fetch secret names from, available on the `azure.keyvault.KeyVault` Data Source / Resource.
      * 
      */
-    public String keyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyVaultId(String keyVaultId) {
+        public Builder keyVaultId(Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
+        }
+
+        /**
+         * @param keyVaultId Specifies the ID of the Key Vault instance to fetch secret names from, available on the `azure.keyvault.KeyVault` Data Source / Resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
         }
 
         public GetSecretsArgs build() {

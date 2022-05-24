@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.s3objectlambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessPointPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="objectLambdaAccessPoint", required=true)
-    private String objectLambdaAccessPoint;
+    private Output<String> objectLambdaAccessPoint;
 
     /**
      * @return The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
      * 
      */
-    public String objectLambdaAccessPoint() {
+    public Output<String> objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessPointPolicyArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
+        public Builder objectLambdaAccessPoint(Output<String> objectLambdaAccessPoint) {
             $.objectLambdaAccessPoint = objectLambdaAccessPoint;
             return this;
+        }
+
+        /**
+         * @param objectLambdaAccessPoint The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
+            return objectLambdaAccessPoint(Output.of(objectLambdaAccessPoint));
         }
 
         public GetAccessPointPolicyArgs build() {

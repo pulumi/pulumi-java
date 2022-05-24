@@ -3,10 +3,10 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,21 +19,21 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="family")
-    private @Nullable String family;
+    private Output</* @Nullable */ String> family;
 
     /**
      * @return The family name of the image.
      * 
      */
-    public Optional<String> family() {
-        return Optional.ofNullable(this.family);
+    public Output</* @Nullable */ String> family() {
+        return this.family;
     }
 
     @Import(name="filter")
-    private @Nullable String filter;
+    private Output</* @Nullable */ String> filter;
 
-    public Optional<String> filter() {
-        return Optional.ofNullable(this.filter);
+    public Output</* @Nullable */ String> filter() {
+        return this.filter;
     }
 
     /**
@@ -41,14 +41,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the image.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,7 +58,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
     /**
      * @return The project in which the resource belongs. If it is not
@@ -66,8 +66,8 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * [public base image][pubimg], be sure to specify the correct Image Project.
      * 
      */
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetImageArgs() {}
@@ -103,13 +103,38 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder family(@Nullable String family) {
+        public Builder family(Output</* @Nullable */ String> family) {
             $.family = family;
             return this;
         }
 
-        public Builder filter(@Nullable String filter) {
+        /**
+         * @param family The family name of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder family(@Nullable String family) {
+            return family(Output.of(family));
+        }
+
+        public Builder filter(Output</* @Nullable */ String> filter) {
             $.filter = filter;
+            return this;
+        }
+
+        public Builder filter(@Nullable String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param name The name of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -120,7 +145,19 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The project in which the resource belongs. If it is not
+         * provided, the provider project is used. If you are using a
+         * [public base image][pubimg], be sure to specify the correct Image Project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(Output</* @Nullable */ String> project) {
+            $.project = project;
             return this;
         }
 
@@ -133,8 +170,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+            return project(Output.of(project));
         }
 
         public GetImageArgs build() {

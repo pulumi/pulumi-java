@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.customerprofiles.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-    private String uri;
+    private Output<String> uri;
 
     /**
      * @return The URI of the S3 bucket or any other type of data source.
      * 
      */
-    public String uri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -73,8 +74,29 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param uri The URI of the S3 bucket or any other type of data source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder uri(Output<String> uri) {
+            $.uri = uri;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetIntegrationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder uri(String uri) {
-            $.uri = uri;
-            return this;
+            return uri(Output.of(uri));
         }
 
         public GetIntegrationArgs build() {

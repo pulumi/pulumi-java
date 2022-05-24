@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,38 +15,38 @@ public final class GetAnnotationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnnotationArgs Empty = new GetAnnotationArgs();
 
     @Import(name="annotationId", required=true)
-    private String annotationId;
+    private Output<String> annotationId;
 
-    public String annotationId() {
+    public Output<String> annotationId() {
         return this.annotationId;
     }
 
     @Import(name="annotationStoreId", required=true)
-    private String annotationStoreId;
+    private Output<String> annotationStoreId;
 
-    public String annotationStoreId() {
+    public Output<String> annotationStoreId() {
         return this.annotationStoreId;
     }
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetAnnotationArgs() {}
@@ -77,29 +77,49 @@ public final class GetAnnotationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder annotationId(String annotationId) {
+        public Builder annotationId(Output<String> annotationId) {
             $.annotationId = annotationId;
             return this;
         }
 
-        public Builder annotationStoreId(String annotationStoreId) {
+        public Builder annotationId(String annotationId) {
+            return annotationId(Output.of(annotationId));
+        }
+
+        public Builder annotationStoreId(Output<String> annotationStoreId) {
             $.annotationStoreId = annotationStoreId;
             return this;
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder annotationStoreId(String annotationStoreId) {
+            return annotationStoreId(Output.of(annotationStoreId));
+        }
+
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetAnnotationArgs build() {

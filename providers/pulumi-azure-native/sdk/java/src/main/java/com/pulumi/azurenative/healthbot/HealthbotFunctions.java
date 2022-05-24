@@ -6,10 +6,10 @@ package com.pulumi.azurenative.healthbot;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.healthbot.inputs.GetBotArgs;
 import com.pulumi.azurenative.healthbot.outputs.GetBotResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class HealthbotFunctions {
     /**
@@ -17,7 +17,7 @@ public final class HealthbotFunctions {
      * API Version: 2020-12-08.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+    public static Output<GetBotResult> getBot(GetBotArgs args) {
         return getBot(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +25,7 @@ public final class HealthbotFunctions {
      * API Version: 2020-12-08.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:healthbot:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
+    public static Output<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:healthbot:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
 }

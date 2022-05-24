@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inventoryItemName", required=true)
-    private String inventoryItemName;
+    private Output<String> inventoryItemName;
 
     /**
      * @return Name of the inventoryItem.
      * 
      */
-    public String inventoryItemName() {
+    public Output<String> inventoryItemName() {
         return this.inventoryItemName;
     }
 
@@ -32,13 +33,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vcenterName", required=true)
-    private String vcenterName;
+    private Output<String> vcenterName;
 
     /**
      * @return Name of the vCenter.
      * 
      */
-    public String vcenterName() {
+    public Output<String> vcenterName() {
         return this.vcenterName;
     }
 
@@ -89,8 +90,29 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder inventoryItemName(String inventoryItemName) {
+        public Builder inventoryItemName(Output<String> inventoryItemName) {
             $.inventoryItemName = inventoryItemName;
+            return this;
+        }
+
+        /**
+         * @param inventoryItemName Name of the inventoryItem.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inventoryItemName(String inventoryItemName) {
+            return inventoryItemName(Output.of(inventoryItemName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcenterName(Output<String> vcenterName) {
+            $.vcenterName = vcenterName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder vcenterName(String vcenterName) {
-            $.vcenterName = vcenterName;
-            return this;
+            return vcenterName(Output.of(vcenterName));
         }
 
         public GetInventoryItemArgs build() {

@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.timeseriesinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -34,14 +34,14 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder environmentName(String environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param expand Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGen1EnvironmentArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobAgentName", required=true)
-    private String jobAgentName;
+    private Output<String> jobAgentName;
 
     /**
      * @return The name of the job agent.
      * 
      */
-    public String jobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The name of the job.
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -47,13 +48,13 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -77,13 +78,13 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepName", required=true)
-    private String stepName;
+    private Output<String> stepName;
 
     /**
      * @return The name of the job step.
      * 
      */
-    public String stepName() {
+    public Output<String> stepName() {
         return this.stepName;
     }
 
@@ -121,8 +122,29 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder jobAgentName(String jobAgentName) {
+        public Builder jobAgentName(Output<String> jobAgentName) {
             $.jobAgentName = jobAgentName;
+            return this;
+        }
+
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobAgentName(String jobAgentName) {
+            return jobAgentName(Output.of(jobAgentName));
+        }
+
+        /**
+         * @param jobName The name of the job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(Output<String> jobName) {
+            $.jobName = jobName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobName(String jobName) {
-            $.jobName = jobName;
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
+            return serverName(Output.of(serverName));
+        }
+
+        /**
+         * @param stepName The name of the job step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stepName(Output<String> stepName) {
+            $.stepName = stepName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetJobStepArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stepName(String stepName) {
-            $.stepName = stepName;
-            return this;
+            return stepName(Output.of(stepName));
         }
 
         public GetJobStepArgs build() {

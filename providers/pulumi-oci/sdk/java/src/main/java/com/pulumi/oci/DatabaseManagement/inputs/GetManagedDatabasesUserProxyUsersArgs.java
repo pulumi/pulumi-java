@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesUserProxyUsersFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
     public static final GetManagedDatabasesUserProxyUsersArgs Empty = new GetManagedDatabasesUserProxyUsersArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabasesUserProxyUsersFilter> filters;
+    private Output</* @Nullable */ List<GetManagedDatabasesUserProxyUsersFilter>> filters;
 
-    public Optional<List<GetManagedDatabasesUserProxyUsersFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetManagedDatabasesUserProxyUsersFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -28,13 +28,13 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -43,14 +43,14 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -58,13 +58,13 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user whose details are to be viewed.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -95,9 +95,13 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
             $ = new GetManagedDatabasesUserProxyUsersArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabasesUserProxyUsersFilter> filters) {
+        public Builder filters(Output</* @Nullable */ List<GetManagedDatabasesUserProxyUsersFilter>> filters) {
             $.filters = filters;
             return this;
+        }
+
+        public Builder filters(@Nullable List<GetManagedDatabasesUserProxyUsersFilter> filters) {
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetManagedDatabasesUserProxyUsersFilter... filters) {
@@ -110,8 +114,29 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(String managedDatabaseId) {
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -122,7 +147,17 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param userName The name of the user whose details are to be viewed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -133,8 +168,7 @@ public final class GetManagedDatabasesUserProxyUsersArgs extends com.pulumi.reso
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetManagedDatabasesUserProxyUsersArgs build() {

@@ -12,10 +12,10 @@ import com.pulumi.azurenative.edgeorder.outputs.GetAddressByNameResult;
 import com.pulumi.azurenative.edgeorder.outputs.GetOrderItemByNameResult;
 import com.pulumi.azurenative.edgeorder.outputs.ListConfigurationsResult;
 import com.pulumi.azurenative.edgeorder.outputs.ListProductFamiliesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import java.util.concurrent.CompletableFuture;
 
 public final class EdgeorderFunctions {
     /**
@@ -23,7 +23,7 @@ public final class EdgeorderFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<GetAddressByNameResult> getAddressByName(GetAddressByNameArgs args) {
+    public static Output<GetAddressByNameResult> getAddressByName(GetAddressByNameArgs args) {
         return getAddressByName(args, InvokeOptions.Empty);
     }
     /**
@@ -31,15 +31,15 @@ public final class EdgeorderFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<GetAddressByNameResult> getAddressByName(GetAddressByNameArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getAddressByName", TypeShape.of(GetAddressByNameResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAddressByNameResult> getAddressByName(GetAddressByNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:edgeorder:getAddressByName", TypeShape.of(GetAddressByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents order item contract
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<GetOrderItemByNameResult> getOrderItemByName(GetOrderItemByNameArgs args) {
+    public static Output<GetOrderItemByNameResult> getOrderItemByName(GetOrderItemByNameArgs args) {
         return getOrderItemByName(args, InvokeOptions.Empty);
     }
     /**
@@ -47,15 +47,15 @@ public final class EdgeorderFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<GetOrderItemByNameResult> getOrderItemByName(GetOrderItemByNameArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getOrderItemByName", TypeShape.of(GetOrderItemByNameResult.class), args, Utilities.withVersion(options));
+    public static Output<GetOrderItemByNameResult> getOrderItemByName(GetOrderItemByNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:edgeorder:getOrderItemByName", TypeShape.of(GetOrderItemByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of configurations.
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
+    public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
         return listConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -63,15 +63,15 @@ public final class EdgeorderFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:edgeorder:listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:edgeorder:listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of product families.
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
+    public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
         return listProductFamilies(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +79,7 @@ public final class EdgeorderFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("azure-native:edgeorder:listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+    public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:edgeorder:listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }
 }

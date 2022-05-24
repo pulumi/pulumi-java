@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Mysql;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -31,7 +32,6 @@ import com.pulumi.oci.Mysql.outputs.GetMysqlDbSystemsResult;
 import com.pulumi.oci.Mysql.outputs.GetMysqlVersionResult;
 import com.pulumi.oci.Mysql.outputs.GetShapesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class MysqlFunctions {
     /**
@@ -43,7 +43,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsClusterResult> getAnalyticsCluster(GetAnalyticsClusterArgs args) {
+    public static Output<GetAnalyticsClusterResult> getAnalyticsCluster(GetAnalyticsClusterArgs args) {
         return getAnalyticsCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -55,8 +55,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAnalyticsClusterResult> getAnalyticsCluster(GetAnalyticsClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getAnalyticsCluster:getAnalyticsCluster", TypeShape.of(GetAnalyticsClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAnalyticsClusterResult> getAnalyticsCluster(GetAnalyticsClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getAnalyticsCluster:getAnalyticsCluster", TypeShape.of(GetAnalyticsClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Channel resource in Oracle Cloud Infrastructure MySQL Database service.
@@ -68,7 +68,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -81,8 +81,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getChannel:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getChannel:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Channels in Oracle Cloud Infrastructure MySQL Database service.
@@ -92,7 +92,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetChannelsResult> getChannels(GetChannelsArgs args) {
+    public static Output<GetChannelsResult> getChannels(GetChannelsArgs args) {
         return getChannels(args, InvokeOptions.Empty);
     }
     /**
@@ -103,8 +103,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetChannelsResult> getChannels(GetChannelsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getChannels:getChannels", TypeShape.of(GetChannelsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetChannelsResult> getChannels(GetChannelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getChannels:getChannels", TypeShape.of(GetChannelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific HeatWave cluster resource in Oracle Cloud Infrastructure MySQL Database service.
@@ -114,7 +114,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHeatWaveClusterResult> getHeatWaveCluster(GetHeatWaveClusterArgs args) {
+    public static Output<GetHeatWaveClusterResult> getHeatWaveCluster(GetHeatWaveClusterArgs args) {
         return getHeatWaveCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -125,8 +125,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHeatWaveClusterResult> getHeatWaveCluster(GetHeatWaveClusterArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getHeatWaveCluster:getHeatWaveCluster", TypeShape.of(GetHeatWaveClusterResult.class), args, Utilities.withVersion(options));
+    public static Output<GetHeatWaveClusterResult> getHeatWaveCluster(GetHeatWaveClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getHeatWaveCluster:getHeatWaveCluster", TypeShape.of(GetHeatWaveClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Mysql Backup resource in Oracle Cloud Infrastructure MySQL Database service.
@@ -136,7 +136,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlBackupResult> getMysqlBackup(GetMysqlBackupArgs args) {
+    public static Output<GetMysqlBackupResult> getMysqlBackup(GetMysqlBackupArgs args) {
         return getMysqlBackup(args, InvokeOptions.Empty);
     }
     /**
@@ -147,8 +147,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlBackupResult> getMysqlBackup(GetMysqlBackupArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlBackup:getMysqlBackup", TypeShape.of(GetMysqlBackupResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlBackupResult> getMysqlBackup(GetMysqlBackupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlBackup:getMysqlBackup", TypeShape.of(GetMysqlBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Mysql Backups in Oracle Cloud Infrastructure MySQL Database service.
@@ -158,7 +158,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlBackupsResult> getMysqlBackups(GetMysqlBackupsArgs args) {
+    public static Output<GetMysqlBackupsResult> getMysqlBackups(GetMysqlBackupsArgs args) {
         return getMysqlBackups(args, InvokeOptions.Empty);
     }
     /**
@@ -169,8 +169,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlBackupsResult> getMysqlBackups(GetMysqlBackupsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlBackups:getMysqlBackups", TypeShape.of(GetMysqlBackupsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlBackupsResult> getMysqlBackups(GetMysqlBackupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlBackups:getMysqlBackups", TypeShape.of(GetMysqlBackupsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Mysql Configuration resource in Oracle Cloud Infrastructure MySQL Database service.
@@ -180,7 +180,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlConfigurationResult> getMysqlConfiguration(GetMysqlConfigurationArgs args) {
+    public static Output<GetMysqlConfigurationResult> getMysqlConfiguration(GetMysqlConfigurationArgs args) {
         return getMysqlConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -191,8 +191,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlConfigurationResult> getMysqlConfiguration(GetMysqlConfigurationArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlConfiguration:getMysqlConfiguration", TypeShape.of(GetMysqlConfigurationResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlConfigurationResult> getMysqlConfiguration(GetMysqlConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlConfiguration:getMysqlConfiguration", TypeShape.of(GetMysqlConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Mysql Configurations in Oracle Cloud Infrastructure MySQL Database service.
@@ -209,7 +209,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlConfigurationsResult> getMysqlConfigurations(GetMysqlConfigurationsArgs args) {
+    public static Output<GetMysqlConfigurationsResult> getMysqlConfigurations(GetMysqlConfigurationsArgs args) {
         return getMysqlConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -227,8 +227,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlConfigurationsResult> getMysqlConfigurations(GetMysqlConfigurationsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlConfigurations:getMysqlConfigurations", TypeShape.of(GetMysqlConfigurationsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlConfigurationsResult> getMysqlConfigurations(GetMysqlConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlConfigurations:getMysqlConfigurations", TypeShape.of(GetMysqlConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Mysql Db System resource in Oracle Cloud Infrastructure MySQL Database service.
@@ -238,7 +238,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlDbSystemResult> getMysqlDbSystem(GetMysqlDbSystemArgs args) {
+    public static Output<GetMysqlDbSystemResult> getMysqlDbSystem(GetMysqlDbSystemArgs args) {
         return getMysqlDbSystem(args, InvokeOptions.Empty);
     }
     /**
@@ -249,8 +249,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlDbSystemResult> getMysqlDbSystem(GetMysqlDbSystemArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlDbSystem:getMysqlDbSystem", TypeShape.of(GetMysqlDbSystemResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlDbSystemResult> getMysqlDbSystem(GetMysqlDbSystemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlDbSystem:getMysqlDbSystem", TypeShape.of(GetMysqlDbSystemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Mysql Db Systems in Oracle Cloud Infrastructure MySQL Database service.
@@ -261,7 +261,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlDbSystemsResult> getMysqlDbSystems(GetMysqlDbSystemsArgs args) {
+    public static Output<GetMysqlDbSystemsResult> getMysqlDbSystems(GetMysqlDbSystemsArgs args) {
         return getMysqlDbSystems(args, InvokeOptions.Empty);
     }
     /**
@@ -273,8 +273,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlDbSystemsResult> getMysqlDbSystems(GetMysqlDbSystemsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlDbSystems:getMysqlDbSystems", TypeShape.of(GetMysqlDbSystemsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlDbSystemsResult> getMysqlDbSystems(GetMysqlDbSystemsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlDbSystems:getMysqlDbSystems", TypeShape.of(GetMysqlDbSystemsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Mysql Versions in Oracle Cloud Infrastructure MySQL Database service.
@@ -286,7 +286,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlVersionResult> getMysqlVersion(GetMysqlVersionArgs args) {
+    public static Output<GetMysqlVersionResult> getMysqlVersion(GetMysqlVersionArgs args) {
         return getMysqlVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -299,8 +299,8 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMysqlVersionResult> getMysqlVersion(GetMysqlVersionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getMysqlVersion:getMysqlVersion", TypeShape.of(GetMysqlVersionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetMysqlVersionResult> getMysqlVersion(GetMysqlVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getMysqlVersion:getMysqlVersion", TypeShape.of(GetMysqlVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Shapes in Oracle Cloud Infrastructure MySQL Database service.
@@ -313,7 +313,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args) {
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args) {
         return getShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -327,7 +327,7 @@ public final class MysqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Mysql/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetShapesResult> getShapes(GetShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Mysql/getShapes:getShapes", TypeShape.of(GetShapesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,11 +3,11 @@
 
 package com.pulumi.azure.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="includePreview")
-    private @Nullable Boolean includePreview;
+    private Output</* @Nullable */ Boolean> includePreview;
 
     /**
      * @return Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
      * 
      */
-    public Optional<Boolean> includePreview() {
-        return Optional.ofNullable(this.includePreview);
+    public Output</* @Nullable */ Boolean> includePreview() {
+        return this.includePreview;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return Specifies the location in which to query for versions.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -50,14 +50,14 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versionPrefix")
-    private @Nullable String versionPrefix;
+    private Output</* @Nullable */ String> versionPrefix;
 
     /**
      * @return A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
      * 
      */
-    public Optional<String> versionPrefix() {
-        return Optional.ofNullable(this.versionPrefix);
+    public Output</* @Nullable */ String> versionPrefix() {
+        return this.versionPrefix;
     }
 
     private GetKubernetesServiceVersionsArgs() {}
@@ -92,8 +92,29 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder includePreview(@Nullable Boolean includePreview) {
+        public Builder includePreview(Output</* @Nullable */ Boolean> includePreview) {
             $.includePreview = includePreview;
+            return this;
+        }
+
+        /**
+         * @param includePreview Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includePreview(@Nullable Boolean includePreview) {
+            return includePreview(Output.of(includePreview));
+        }
+
+        /**
+         * @param location Specifies the location in which to query for versions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * 
          */
         public Builder location(String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param versionPrefix A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionPrefix(Output</* @Nullable */ String> versionPrefix) {
+            $.versionPrefix = versionPrefix;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * 
          */
         public Builder versionPrefix(@Nullable String versionPrefix) {
-            $.versionPrefix = versionPrefix;
-            return this;
+            return versionPrefix(Output.of(versionPrefix));
         }
 
         public GetKubernetesServiceVersionsArgs build() {

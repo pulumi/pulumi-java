@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.Bastion.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.Bastion.inputs.GetSessionsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +21,13 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bastionId", required=true)
-    private String bastionId;
+    private Output<String> bastionId;
 
     /**
      * @return The unique identifier (OCID) of the bastion in which to list sessions.
      * 
      */
-    public String bastionId() {
+    public Output<String> bastionId() {
         return this.bastionId;
     }
 
@@ -36,21 +36,21 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSessionsFilter> filters;
+    private Output</* @Nullable */ List<GetSessionsFilter>> filters;
 
-    public Optional<List<GetSessionsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSessionsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -58,14 +58,14 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionId")
-    private @Nullable String sessionId;
+    private Output</* @Nullable */ String> sessionId;
 
     /**
      * @return The unique identifier (OCID) of the session in which to list resources.
      * 
      */
-    public Optional<String> sessionId() {
-        return Optional.ofNullable(this.sessionId);
+    public Output</* @Nullable */ String> sessionId() {
+        return this.sessionId;
     }
 
     /**
@@ -73,14 +73,14 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionLifecycleState")
-    private @Nullable String sessionLifecycleState;
+    private Output</* @Nullable */ String> sessionLifecycleState;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Optional<String> sessionLifecycleState() {
-        return Optional.ofNullable(this.sessionLifecycleState);
+    public Output</* @Nullable */ String> sessionLifecycleState() {
+        return this.sessionLifecycleState;
     }
 
     private GetSessionsArgs() {}
@@ -117,8 +117,29 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bastionId(String bastionId) {
+        public Builder bastionId(Output<String> bastionId) {
             $.bastionId = bastionId;
+            return this;
+        }
+
+        /**
+         * @param bastionId The unique identifier (OCID) of the bastion in which to list sessions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionId(String bastionId) {
+            return bastionId(Output.of(bastionId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -129,13 +150,16 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetSessionsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetSessionsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSessionsFilter... filters) {
@@ -148,8 +172,29 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionId(@Nullable String sessionId) {
+        public Builder sessionId(Output</* @Nullable */ String> sessionId) {
             $.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * @param sessionId The unique identifier (OCID) of the session in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionId(@Nullable String sessionId) {
+            return sessionId(Output.of(sessionId));
+        }
+
+        /**
+         * @param sessionLifecycleState A filter to return only resources their lifecycleState matches the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionLifecycleState(Output</* @Nullable */ String> sessionLifecycleState) {
+            $.sessionLifecycleState = sessionLifecycleState;
             return this;
         }
 
@@ -160,8 +205,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sessionLifecycleState(@Nullable String sessionLifecycleState) {
-            $.sessionLifecycleState = sessionLifecycleState;
-            return this;
+            return sessionLifecycleState(Output.of(sessionLifecycleState));
         }
 
         public GetSessionsArgs build() {

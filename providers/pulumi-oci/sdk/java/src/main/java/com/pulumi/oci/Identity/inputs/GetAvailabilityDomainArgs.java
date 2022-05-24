@@ -3,11 +3,11 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="adNumber")
-    private @Nullable Integer adNumber;
+    private Output</* @Nullable */ Integer> adNumber;
 
     /**
      * @return The number of the Availability Domain. Required if `id` is not specified. This number corresponds to the integer in the Availability Domain `name`.
      * 
      */
-    public Optional<Integer> adNumber() {
-        return Optional.ofNullable(this.adNumber);
+    public Output</* @Nullable */ Integer> adNumber() {
+        return this.adNumber;
     }
 
     /**
@@ -35,13 +35,13 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -50,14 +50,14 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return The OCID of the Availability Domain. Required if `ad_number` is not specified.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     private GetAvailabilityDomainArgs() {}
@@ -92,8 +92,29 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder adNumber(@Nullable Integer adNumber) {
+        public Builder adNumber(Output</* @Nullable */ Integer> adNumber) {
             $.adNumber = adNumber;
+            return this;
+        }
+
+        /**
+         * @param adNumber The number of the Availability Domain. Required if `id` is not specified. This number corresponds to the integer in the Availability Domain `name`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adNumber(@Nullable Integer adNumber) {
+            return adNumber(Output.of(adNumber));
+        }
+
+        /**
+         * @param compartmentId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -104,7 +125,17 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param id The OCID of the Availability Domain. Required if `ad_number` is not specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output</* @Nullable */ String> id) {
+            $.id = id;
             return this;
         }
 
@@ -115,8 +146,7 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder id(@Nullable String id) {
-            $.id = id;
-            return this;
+            return id(Output.of(id));
         }
 
         public GetAvailabilityDomainArgs build() {

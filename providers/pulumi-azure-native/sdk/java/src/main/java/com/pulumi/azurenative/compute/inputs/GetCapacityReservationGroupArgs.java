@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="capacityReservationGroupName", required=true)
-    private String capacityReservationGroupName;
+    private Output<String> capacityReservationGroupName;
 
     /**
      * @return The name of the capacity reservation group.
      * 
      */
-    public String capacityReservationGroupName() {
+    public Output<String> capacityReservationGroupName() {
         return this.capacityReservationGroupName;
     }
 
@@ -34,14 +34,14 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +91,29 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder capacityReservationGroupName(String capacityReservationGroupName) {
+        public Builder capacityReservationGroupName(Output<String> capacityReservationGroupName) {
             $.capacityReservationGroupName = capacityReservationGroupName;
+            return this;
+        }
+
+        /**
+         * @param capacityReservationGroupName The name of the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationGroupName(String capacityReservationGroupName) {
+            return capacityReservationGroupName(Output.of(capacityReservationGroupName));
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Output</* @Nullable */ String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -103,7 +124,17 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
          * 
          */
         public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +145,7 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCapacityReservationGroupArgs build() {

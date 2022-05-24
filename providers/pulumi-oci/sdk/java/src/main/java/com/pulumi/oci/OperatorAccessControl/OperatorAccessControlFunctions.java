@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OperatorAccessControl;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -25,7 +26,6 @@ import com.pulumi.oci.OperatorAccessControl.outputs.GetControlAssignmentsResult;
 import com.pulumi.oci.OperatorAccessControl.outputs.GetControlResult;
 import com.pulumi.oci.OperatorAccessControl.outputs.GetControlsResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class OperatorAccessControlFunctions {
     /**
@@ -36,7 +36,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestResult> getAccessRequest(GetAccessRequestArgs args) {
+    public static Output<GetAccessRequestResult> getAccessRequest(GetAccessRequestArgs args) {
         return getAccessRequest(args, InvokeOptions.Empty);
     }
     /**
@@ -47,8 +47,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestResult> getAccessRequest(GetAccessRequestArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getAccessRequest:getAccessRequest", TypeShape.of(GetAccessRequestResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessRequestResult> getAccessRequest(GetAccessRequestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getAccessRequest:getAccessRequest", TypeShape.of(GetAccessRequestResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Access Request History resource in Oracle Cloud Infrastructure Operator Access Control service.
@@ -58,7 +58,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestHistoryResult> getAccessRequestHistory(GetAccessRequestHistoryArgs args) {
+    public static Output<GetAccessRequestHistoryResult> getAccessRequestHistory(GetAccessRequestHistoryArgs args) {
         return getAccessRequestHistory(args, InvokeOptions.Empty);
     }
     /**
@@ -69,8 +69,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestHistoryResult> getAccessRequestHistory(GetAccessRequestHistoryArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getAccessRequestHistory:getAccessRequestHistory", TypeShape.of(GetAccessRequestHistoryResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessRequestHistoryResult> getAccessRequestHistory(GetAccessRequestHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getAccessRequestHistory:getAccessRequestHistory", TypeShape.of(GetAccessRequestHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Access Requests in Oracle Cloud Infrastructure Operator Access Control service.
@@ -80,7 +80,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestsResult> getAccessRequests(GetAccessRequestsArgs args) {
+    public static Output<GetAccessRequestsResult> getAccessRequests(GetAccessRequestsArgs args) {
         return getAccessRequests(args, InvokeOptions.Empty);
     }
     /**
@@ -91,8 +91,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessRequestsResult> getAccessRequests(GetAccessRequestsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getAccessRequests:getAccessRequests", TypeShape.of(GetAccessRequestsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAccessRequestsResult> getAccessRequests(GetAccessRequestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getAccessRequests:getAccessRequests", TypeShape.of(GetAccessRequestsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Operator Action resource in Oracle Cloud Infrastructure Operator Access Control service.
@@ -102,7 +102,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args) {
+    public static Output<GetActionResult> getAction(GetActionArgs args) {
         return getAction(args, InvokeOptions.Empty);
     }
     /**
@@ -113,8 +113,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getAction:getAction", TypeShape.of(GetActionResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActionResult> getAction(GetActionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getAction:getAction", TypeShape.of(GetActionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Operator Actions in Oracle Cloud Infrastructure Operator Access Control service.
@@ -124,7 +124,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetActionsResult> getActions(GetActionsArgs args) {
+    public static Output<GetActionsResult> getActions(GetActionsArgs args) {
         return getActions(args, InvokeOptions.Empty);
     }
     /**
@@ -135,8 +135,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetActionsResult> getActions(GetActionsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getActions:getActions", TypeShape.of(GetActionsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetActionsResult> getActions(GetActionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getActions:getActions", TypeShape.of(GetActionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Operator Control resource in Oracle Cloud Infrastructure Operator Access Control service.
@@ -146,7 +146,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlResult> getControl(GetControlArgs args) {
+    public static Output<GetControlResult> getControl(GetControlArgs args) {
         return getControl(args, InvokeOptions.Empty);
     }
     /**
@@ -157,8 +157,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlResult> getControl(GetControlArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getControl:getControl", TypeShape.of(GetControlResult.class), args, Utilities.withVersion(options));
+    public static Output<GetControlResult> getControl(GetControlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getControl:getControl", TypeShape.of(GetControlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Operator Control Assignment resource in Oracle Cloud Infrastructure Operator Access Control service.
@@ -168,7 +168,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlAssignmentResult> getControlAssignment(GetControlAssignmentArgs args) {
+    public static Output<GetControlAssignmentResult> getControlAssignment(GetControlAssignmentArgs args) {
         return getControlAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -179,8 +179,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlAssignmentResult> getControlAssignment(GetControlAssignmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getControlAssignment:getControlAssignment", TypeShape.of(GetControlAssignmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetControlAssignmentResult> getControlAssignment(GetControlAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getControlAssignment:getControlAssignment", TypeShape.of(GetControlAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Operator Control Assignments in Oracle Cloud Infrastructure Operator Access Control service.
@@ -190,7 +190,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlAssignmentsResult> getControlAssignments(GetControlAssignmentsArgs args) {
+    public static Output<GetControlAssignmentsResult> getControlAssignments(GetControlAssignmentsArgs args) {
         return getControlAssignments(args, InvokeOptions.Empty);
     }
     /**
@@ -201,8 +201,8 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlAssignmentsResult> getControlAssignments(GetControlAssignmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getControlAssignments:getControlAssignments", TypeShape.of(GetControlAssignmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetControlAssignmentsResult> getControlAssignments(GetControlAssignmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getControlAssignments:getControlAssignments", TypeShape.of(GetControlAssignmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Operator Controls in Oracle Cloud Infrastructure Operator Access Control service.
@@ -212,7 +212,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlsResult> getControls(GetControlsArgs args) {
+    public static Output<GetControlsResult> getControls(GetControlsArgs args) {
         return getControls(args, InvokeOptions.Empty);
     }
     /**
@@ -223,7 +223,7 @@ public final class OperatorAccessControlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetControlsResult> getControls(GetControlsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:OperatorAccessControl/getControls:getControls", TypeShape.of(GetControlsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetControlsResult> getControls(GetControlsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OperatorAccessControl/getControls:getControls", TypeShape.of(GetControlsResult.class), args, Utilities.withVersion(options));
     }
 }

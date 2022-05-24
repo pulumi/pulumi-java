@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ResourceManager;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.oci.ResourceManager.outputs.GetStackResult;
 import com.pulumi.oci.ResourceManager.outputs.GetStackTfStateResult;
 import com.pulumi.oci.ResourceManager.outputs.GetStacksResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ResourceManagerFunctions {
     /**
@@ -24,7 +24,7 @@ public final class ResourceManagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args) {
+    public static Output<GetStackResult> getStack(GetStackArgs args) {
         return getStack(args, InvokeOptions.Empty);
     }
     /**
@@ -35,22 +35,22 @@ public final class ResourceManagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ResourceManager/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args) {
+    public static Output<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args) {
         return getStackTfState(args, InvokeOptions.Empty);
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStackTfState:getStackTfState", TypeShape.of(GetStackTfStateResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ResourceManager/getStackTfState:getStackTfState", TypeShape.of(GetStackTfStateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Stacks in Oracle Cloud Infrastructure Resource Manager service.
@@ -62,7 +62,7 @@ public final class ResourceManagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStacksResult> getStacks(GetStacksArgs args) {
+    public static Output<GetStacksResult> getStacks(GetStacksArgs args) {
         return getStacks(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class ResourceManagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStacksResult> getStacks(GetStacksArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStacks:getStacks", TypeShape.of(GetStacksResult.class), args, Utilities.withVersion(options));
+    public static Output<GetStacksResult> getStacks(GetStacksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ResourceManager/getStacks:getStacks", TypeShape.of(GetStacksResult.class), args, Utilities.withVersion(options));
     }
 }

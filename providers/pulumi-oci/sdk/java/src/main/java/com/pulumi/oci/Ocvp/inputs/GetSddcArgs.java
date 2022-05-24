@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ocvp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSddcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sddcId", required=true)
-    private String sddcId;
+    private Output<String> sddcId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the SDDC.
      * 
      */
-    public String sddcId() {
+    public Output<String> sddcId() {
         return this.sddcId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSddcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sddcId(String sddcId) {
+        public Builder sddcId(Output<String> sddcId) {
             $.sddcId = sddcId;
             return this;
+        }
+
+        /**
+         * @param sddcId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the SDDC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sddcId(String sddcId) {
+            return sddcId(Output.of(sddcId));
         }
 
         public GetSddcArgs build() {

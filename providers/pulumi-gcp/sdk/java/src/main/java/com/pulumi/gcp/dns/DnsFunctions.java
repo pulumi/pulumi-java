@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.dns;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.gcp.dns.inputs.GetRecordSetArgs;
 import com.pulumi.gcp.dns.outputs.GetKeysResult;
 import com.pulumi.gcp.dns.outputs.GetManagedZoneResult;
 import com.pulumi.gcp.dns.outputs.GetRecordSetResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class DnsFunctions {
     /**
@@ -54,7 +54,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args) {
+    public static Output<GetKeysResult> getKeys(GetKeysArgs args) {
         return getKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -95,8 +95,8 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to a zone&#39;s attributes within Google Cloud DNS.
@@ -135,7 +135,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
+    public static Output<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
         return getManagedZone(args, InvokeOptions.Empty);
     }
     /**
@@ -175,8 +175,8 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
+    public static Output<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a DNS record set within Google Cloud DNS
@@ -215,7 +215,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args) {
+    public static Output<GetRecordSetResult> getRecordSet(GetRecordSetArgs args) {
         return getRecordSet(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +255,7 @@ public final class DnsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:dns/getRecordSet:getRecordSet", TypeShape.of(GetRecordSetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRecordSetResult> getRecordSet(GetRecordSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:dns/getRecordSet:getRecordSet", TypeShape.of(GetRecordSetResult.class), args, Utilities.withVersion(options));
     }
 }

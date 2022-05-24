@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends com.pulum
      * 
      */
     @Import(name="localGatewayRouteTableVpcAssociationId", required=true)
-    private String localGatewayRouteTableVpcAssociationId;
+    private Output<String> localGatewayRouteTableVpcAssociationId;
 
     /**
      * @return The ID of the association.
      * 
      */
-    public String localGatewayRouteTableVpcAssociationId() {
+    public Output<String> localGatewayRouteTableVpcAssociationId() {
         return this.localGatewayRouteTableVpcAssociationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder localGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
+        public Builder localGatewayRouteTableVpcAssociationId(Output<String> localGatewayRouteTableVpcAssociationId) {
             $.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
             return this;
+        }
+
+        /**
+         * @param localGatewayRouteTableVpcAssociationId The ID of the association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
+            return localGatewayRouteTableVpcAssociationId(Output.of(localGatewayRouteTableVpcAssociationId));
         }
 
         public GetLocalGatewayRouteTableVPCAssociationArgs build() {

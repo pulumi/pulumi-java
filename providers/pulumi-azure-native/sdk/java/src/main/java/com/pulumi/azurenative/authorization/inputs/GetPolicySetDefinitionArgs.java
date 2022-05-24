@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="policySetDefinitionName", required=true)
-    private String policySetDefinitionName;
+    private Output<String> policySetDefinitionName;
 
     /**
      * @return The name of the policy set definition to get.
      * 
      */
-    public String policySetDefinitionName() {
+    public Output<String> policySetDefinitionName() {
         return this.policySetDefinitionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder policySetDefinitionName(String policySetDefinitionName) {
+        public Builder policySetDefinitionName(Output<String> policySetDefinitionName) {
             $.policySetDefinitionName = policySetDefinitionName;
             return this;
+        }
+
+        /**
+         * @param policySetDefinitionName The name of the policy set definition to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policySetDefinitionName(String policySetDefinitionName) {
+            return policySetDefinitionName(Output.of(policySetDefinitionName));
         }
 
         public GetPolicySetDefinitionArgs build() {

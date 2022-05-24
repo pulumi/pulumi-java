@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="crossConnectionName", required=true)
-    private String crossConnectionName;
+    private Output<String> crossConnectionName;
 
     /**
      * @return The name of the ExpressRouteCrossConnection.
      * 
      */
-    public String crossConnectionName() {
+    public Output<String> crossConnectionName() {
         return this.crossConnectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="peeringName", required=true)
-    private String peeringName;
+    private Output<String> peeringName;
 
     /**
      * @return The name of the peering.
      * 
      */
-    public String peeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder crossConnectionName(String crossConnectionName) {
+        public Builder crossConnectionName(Output<String> crossConnectionName) {
             $.crossConnectionName = crossConnectionName;
+            return this;
+        }
+
+        /**
+         * @param crossConnectionName The name of the ExpressRouteCrossConnection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder crossConnectionName(String crossConnectionName) {
+            return crossConnectionName(Output.of(crossConnectionName));
+        }
+
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringName(Output<String> peeringName) {
+            $.peeringName = peeringName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
          * 
          */
         public Builder peeringName(String peeringName) {
-            $.peeringName = peeringName;
+            return peeringName(Output.of(peeringName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteCrossConnectionPeeringArgs build() {

@@ -3,13 +3,13 @@
 
 package com.pulumi.gcp.certificateauthority;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.certificateauthority.inputs.GetAuthorityArgs;
 import com.pulumi.gcp.certificateauthority.outputs.GetAuthorityResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class CertificateauthorityFunctions {
     /**
@@ -42,7 +42,7 @@ public final class CertificateauthorityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorityResult> getAuthority() {
+    public static Output<GetAuthorityResult> getAuthority() {
         return getAuthority(GetAuthorityArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +75,7 @@ public final class CertificateauthorityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorityResult> getAuthority(GetAuthorityArgs args) {
+    public static Output<GetAuthorityResult> getAuthority(GetAuthorityArgs args) {
         return getAuthority(args, InvokeOptions.Empty);
     }
     /**
@@ -108,7 +108,7 @@ public final class CertificateauthorityFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorityResult> getAuthority(GetAuthorityArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("gcp:certificateauthority/getAuthority:getAuthority", TypeShape.of(GetAuthorityResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAuthorityResult> getAuthority(GetAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:certificateauthority/getAuthority:getAuthority", TypeShape.of(GetAuthorityResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-    private String destinationCidrBlock;
+    private Output<String> destinationCidrBlock;
 
     /**
      * @return The CIDR block used for destination matches.
      * 
      */
-    public String destinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -32,13 +33,13 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
-    private String localGatewayRouteTableId;
+    private Output<String> localGatewayRouteTableId;
 
     /**
      * @return The ID of the local gateway route table.
      * 
      */
-    public String localGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
 
@@ -73,8 +74,29 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder destinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+
+        /**
+         * @param destinationCidrBlock The CIDR block used for destination matches.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
+        }
+
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
-            $.localGatewayRouteTableId = localGatewayRouteTableId;
-            return this;
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
 
         public GetLocalGatewayRouteArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Apm;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -13,7 +14,6 @@ import com.pulumi.oci.Apm.outputs.GetApmDomainResult;
 import com.pulumi.oci.Apm.outputs.GetApmDomainsResult;
 import com.pulumi.oci.Apm.outputs.GetDataKeysResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class ApmFunctions {
     /**
@@ -24,7 +24,7 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApmDomainResult> getApmDomain(GetApmDomainArgs args) {
+    public static Output<GetApmDomainResult> getApmDomain(GetApmDomainArgs args) {
         return getApmDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -35,8 +35,8 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApmDomainResult> getApmDomain(GetApmDomainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Apm/getApmDomain:getApmDomain", TypeShape.of(GetApmDomainResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApmDomainResult> getApmDomain(GetApmDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Apm/getApmDomain:getApmDomain", TypeShape.of(GetApmDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Apm Domains in Oracle Cloud Infrastructure Apm service.
@@ -46,7 +46,7 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args) {
+    public static Output<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args) {
         return getApmDomains(args, InvokeOptions.Empty);
     }
     /**
@@ -57,8 +57,8 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Apm/getApmDomains:getApmDomains", TypeShape.of(GetApmDomainsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetApmDomainsResult> getApmDomains(GetApmDomainsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Apm/getApmDomains:getApmDomains", TypeShape.of(GetApmDomainsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Data Keys in Oracle Cloud Infrastructure Apm service.
@@ -69,7 +69,7 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataKeysResult> getDataKeys(GetDataKeysArgs args) {
+    public static Output<GetDataKeysResult> getDataKeys(GetDataKeysArgs args) {
         return getDataKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +81,7 @@ public final class ApmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataKeysResult> getDataKeys(GetDataKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Apm/getDataKeys:getDataKeys", TypeShape.of(GetDataKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetDataKeysResult> getDataKeys(GetDataKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Apm/getDataKeys:getDataKeys", TypeShape.of(GetDataKeysResult.class), args, Utilities.withVersion(options));
     }
 }

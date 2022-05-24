@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.configuration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetStoredQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStoredQueryArgs Empty = new GetStoredQueryArgs();
 
     @Import(name="queryName", required=true)
-    private String queryName;
+    private Output<String> queryName;
 
-    public String queryName() {
+    public Output<String> queryName() {
         return this.queryName;
     }
 
@@ -43,9 +44,13 @@ public final class GetStoredQueryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStoredQueryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder queryName(String queryName) {
+        public Builder queryName(Output<String> queryName) {
             $.queryName = queryName;
             return this;
+        }
+
+        public Builder queryName(String queryName) {
+            return queryName(Output.of(queryName));
         }
 
         public GetStoredQueryArgs build() {

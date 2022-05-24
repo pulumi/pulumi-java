@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRecommendationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="recommendationId", required=true)
-    private String recommendationId;
+    private Output<String> recommendationId;
 
     /**
      * @return The unique OCID associated with the recommendation.
      * 
      */
-    public String recommendationId() {
+    public Output<String> recommendationId() {
         return this.recommendationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetRecommendationArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder recommendationId(String recommendationId) {
+        public Builder recommendationId(Output<String> recommendationId) {
             $.recommendationId = recommendationId;
             return this;
+        }
+
+        /**
+         * @param recommendationId The unique OCID associated with the recommendation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recommendationId(String recommendationId) {
+            return recommendationId(Output.of(recommendationId));
         }
 
         public GetRecommendationArgs build() {

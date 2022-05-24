@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Streaming.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectHarnessArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectHarnessId", required=true)
-    private String connectHarnessId;
+    private Output<String> connectHarnessId;
 
     /**
      * @return The OCID of the connect harness.
      * 
      */
-    public String connectHarnessId() {
+    public Output<String> connectHarnessId() {
         return this.connectHarnessId;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectHarnessArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder connectHarnessId(String connectHarnessId) {
+        public Builder connectHarnessId(Output<String> connectHarnessId) {
             $.connectHarnessId = connectHarnessId;
             return this;
+        }
+
+        /**
+         * @param connectHarnessId The OCID of the connect harness.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectHarnessId(String connectHarnessId) {
+            return connectHarnessId(Output.of(connectHarnessId));
         }
 
         public GetConnectHarnessArgs build() {

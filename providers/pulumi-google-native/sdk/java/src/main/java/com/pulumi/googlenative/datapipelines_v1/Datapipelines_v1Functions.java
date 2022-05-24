@@ -3,27 +3,27 @@
 
 package com.pulumi.googlenative.datapipelines_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GetPipelineArgs;
 import com.pulumi.googlenative.datapipelines_v1.outputs.GetPipelineResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class Datapipelines_v1Functions {
     /**
      * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args) {
         return getPipeline(args, InvokeOptions.Empty);
     }
     /**
      * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("google-native:datapipelines/v1:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:datapipelines/v1:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

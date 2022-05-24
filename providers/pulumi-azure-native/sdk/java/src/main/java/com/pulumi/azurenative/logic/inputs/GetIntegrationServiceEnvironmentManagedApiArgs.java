@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="apiName", required=true)
-    private String apiName;
+    private Output<String> apiName;
 
     /**
      * @return The api name.
      * 
      */
-    public String apiName() {
+    public Output<String> apiName() {
         return this.apiName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
-    private String integrationServiceEnvironmentName;
+    private Output<String> integrationServiceEnvironmentName;
 
     /**
      * @return The integration service environment name.
      * 
      */
-    public String integrationServiceEnvironmentName() {
+    public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder apiName(String apiName) {
+        public Builder apiName(Output<String> apiName) {
             $.apiName = apiName;
+            return this;
+        }
+
+        /**
+         * @param apiName The api name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiName(String apiName) {
+            return apiName(Output.of(apiName));
+        }
+
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
+            $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
          * 
          */
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
-            $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
+            return integrationServiceEnvironmentName(Output.of(integrationServiceEnvironmentName));
+        }
+
+        /**
+         * @param resourceGroup The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetIntegrationServiceEnvironmentManagedApiArgs build() {

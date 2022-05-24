@@ -3,12 +3,12 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DevOps.inputs.GetBuildRunsFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildPipelineId")
-    private @Nullable String buildPipelineId;
+    private Output</* @Nullable */ String> buildPipelineId;
 
     /**
      * @return Unique build pipeline identifier.
      * 
      */
-    public Optional<String> buildPipelineId() {
-        return Optional.ofNullable(this.buildPipelineId);
+    public Output</* @Nullable */ String> buildPipelineId() {
+        return this.buildPipelineId;
     }
 
     /**
@@ -36,14 +36,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private Output</* @Nullable */ String> compartmentId;
 
     /**
      * @return The OCID of the compartment in which to list resources.
      * 
      */
-    public Optional<String> compartmentId() {
-        return Optional.ofNullable(this.compartmentId);
+    public Output</* @Nullable */ String> compartmentId() {
+        return this.compartmentId;
     }
 
     /**
@@ -51,14 +51,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
-        return Optional.ofNullable(this.displayName);
+    public Output</* @Nullable */ String> displayName() {
+        return this.displayName;
     }
 
     /**
@@ -66,14 +66,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetBuildRunsFilter> filters;
+    private Output</* @Nullable */ List<GetBuildRunsFilter>> filters;
 
     /**
      * @return The filters for the trigger.
      * 
      */
-    public Optional<List<GetBuildRunsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetBuildRunsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -81,14 +81,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private Output</* @Nullable */ String> id;
 
     /**
      * @return Unique identifier or OCID for listing a single resource by ID.
      * 
      */
-    public Optional<String> id() {
-        return Optional.ofNullable(this.id);
+    public Output</* @Nullable */ String> id() {
+        return this.id;
     }
 
     /**
@@ -96,14 +96,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectId")
-    private @Nullable String projectId;
+    private Output</* @Nullable */ String> projectId;
 
     /**
      * @return unique project identifier
      * 
      */
-    public Optional<String> projectId() {
-        return Optional.ofNullable(this.projectId);
+    public Output</* @Nullable */ String> projectId() {
+        return this.projectId;
     }
 
     /**
@@ -111,14 +111,14 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private Output</* @Nullable */ String> state;
 
     /**
      * @return A filter to return only build runs that matches the given lifecycle state.
      * 
      */
-    public Optional<String> state() {
-        return Optional.ofNullable(this.state);
+    public Output</* @Nullable */ String> state() {
+        return this.state;
     }
 
     private GetBuildRunsArgs() {}
@@ -157,8 +157,29 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder buildPipelineId(@Nullable String buildPipelineId) {
+        public Builder buildPipelineId(Output</* @Nullable */ String> buildPipelineId) {
             $.buildPipelineId = buildPipelineId;
+            return this;
+        }
+
+        /**
+         * @param buildPipelineId Unique build pipeline identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildPipelineId(@Nullable String buildPipelineId) {
+            return buildPipelineId(Output.of(buildPipelineId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -169,7 +190,17 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(Output</* @Nullable */ String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -180,7 +211,17 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param filters The filters for the trigger.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(Output</* @Nullable */ List<GetBuildRunsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
@@ -191,8 +232,7 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder filters(@Nullable List<GetBuildRunsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         /**
@@ -211,8 +251,29 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(Output</* @Nullable */ String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Unique identifier or OCID for listing a single resource by ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param projectId unique project identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder projectId(Output</* @Nullable */ String> projectId) {
+            $.projectId = projectId;
             return this;
         }
 
@@ -223,7 +284,17 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder projectId(@Nullable String projectId) {
-            $.projectId = projectId;
+            return projectId(Output.of(projectId));
+        }
+
+        /**
+         * @param state A filter to return only build runs that matches the given lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(Output</* @Nullable */ String> state) {
+            $.state = state;
             return this;
         }
 
@@ -234,8 +305,7 @@ public final class GetBuildRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+            return state(Output.of(state));
         }
 
         public GetBuildRunsArgs build() {

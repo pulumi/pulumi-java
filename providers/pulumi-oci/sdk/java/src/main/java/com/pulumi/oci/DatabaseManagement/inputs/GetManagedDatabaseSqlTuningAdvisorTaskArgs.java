@@ -3,10 +3,10 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -34,14 +34,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private Output</* @Nullable */ String> name;
 
     /**
      * @return The optional query parameter to filter the SQL Tuning Advisor task list by name.
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public Output</* @Nullable */ String> name() {
+        return this.name;
     }
 
     /**
@@ -49,14 +49,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
      * 
      */
     @Import(name="status")
-    private @Nullable String status;
+    private Output</* @Nullable */ String> status;
 
     /**
      * @return The optional query parameter to filter the SQL Tuning Advisor task list by status.
      * 
      */
-    public Optional<String> status() {
-        return Optional.ofNullable(this.status);
+    public Output</* @Nullable */ String> status() {
+        return this.status;
     }
 
     /**
@@ -64,14 +64,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
      * 
      */
     @Import(name="timeGreaterThanOrEqualTo")
-    private @Nullable String timeGreaterThanOrEqualTo;
+    private Output</* @Nullable */ String> timeGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to query parameter to filter the timestamp.
      * 
      */
-    public Optional<String> timeGreaterThanOrEqualTo() {
-        return Optional.ofNullable(this.timeGreaterThanOrEqualTo);
+    public Output</* @Nullable */ String> timeGreaterThanOrEqualTo() {
+        return this.timeGreaterThanOrEqualTo;
     }
 
     /**
@@ -79,14 +79,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
      * 
      */
     @Import(name="timeLessThanOrEqualTo")
-    private @Nullable String timeLessThanOrEqualTo;
+    private Output</* @Nullable */ String> timeLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter the timestamp.
      * 
      */
-    public Optional<String> timeLessThanOrEqualTo() {
-        return Optional.ofNullable(this.timeLessThanOrEqualTo);
+    public Output</* @Nullable */ String> timeLessThanOrEqualTo() {
+        return this.timeLessThanOrEqualTo;
     }
 
     private GetManagedDatabaseSqlTuningAdvisorTaskArgs() {}
@@ -123,8 +123,29 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(String managedDatabaseId) {
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param name The optional query parameter to filter the SQL Tuning Advisor task list by name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output</* @Nullable */ String> name) {
+            $.name = name;
             return this;
         }
 
@@ -135,7 +156,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
          * 
          */
         public Builder name(@Nullable String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param status The optional query parameter to filter the SQL Tuning Advisor task list by status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(Output</* @Nullable */ String> status) {
+            $.status = status;
             return this;
         }
 
@@ -146,7 +177,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
          * 
          */
         public Builder status(@Nullable String status) {
-            $.status = status;
+            return status(Output.of(status));
+        }
+
+        /**
+         * @param timeGreaterThanOrEqualTo The optional greater than or equal to query parameter to filter the timestamp.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeGreaterThanOrEqualTo(Output</* @Nullable */ String> timeGreaterThanOrEqualTo) {
+            $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
             return this;
         }
 
@@ -157,7 +198,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
          * 
          */
         public Builder timeGreaterThanOrEqualTo(@Nullable String timeGreaterThanOrEqualTo) {
-            $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
+            return timeGreaterThanOrEqualTo(Output.of(timeGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeLessThanOrEqualTo The optional less than or equal to query parameter to filter the timestamp.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeLessThanOrEqualTo(Output</* @Nullable */ String> timeLessThanOrEqualTo) {
+            $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
             return this;
         }
 
@@ -168,8 +219,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTaskArgs extends com.pulumi
          * 
          */
         public Builder timeLessThanOrEqualTo(@Nullable String timeLessThanOrEqualTo) {
-            $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
-            return this;
+            return timeLessThanOrEqualTo(Output.of(timeLessThanOrEqualTo));
         }
 
         public GetManagedDatabaseSqlTuningAdvisorTaskArgs build() {

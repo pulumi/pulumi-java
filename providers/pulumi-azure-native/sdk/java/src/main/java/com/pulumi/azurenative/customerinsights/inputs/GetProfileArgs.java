@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.customerinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,13 +19,13 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-    private String hubName;
+    private Output<String> hubName;
 
     /**
      * @return The name of the hub.
      * 
      */
-    public String hubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -34,14 +34,14 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localeCode")
-    private @Nullable String localeCode;
+    private Output</* @Nullable */ String> localeCode;
 
     /**
      * @return Locale of profile to retrieve, default is en-us.
      * 
      */
-    public Optional<String> localeCode() {
-        return Optional.ofNullable(this.localeCode);
+    public Output</* @Nullable */ String> localeCode() {
+        return this.localeCode;
     }
 
     /**
@@ -49,13 +49,13 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return The name of the profile.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -64,13 +64,13 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +107,29 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hubName(String hubName) {
+        public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
+            return this;
+        }
+
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubName(String hubName) {
+            return hubName(Output.of(hubName));
+        }
+
+        /**
+         * @param localeCode Locale of profile to retrieve, default is en-us.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localeCode(Output</* @Nullable */ String> localeCode) {
+            $.localeCode = localeCode;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder localeCode(@Nullable String localeCode) {
-            $.localeCode = localeCode;
+            return localeCode(Output.of(localeCode));
+        }
+
+        /**
+         * @param profileName The name of the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetProfileArgs build() {

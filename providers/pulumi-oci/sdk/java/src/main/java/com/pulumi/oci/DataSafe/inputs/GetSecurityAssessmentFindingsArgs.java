@@ -3,13 +3,13 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.oci.DataSafe.inputs.GetSecurityAssessmentFindingsFilter;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private Output</* @Nullable */ String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
-        return Optional.ofNullable(this.accessLevel);
+    public Output</* @Nullable */ String> accessLevel() {
+        return this.accessLevel;
     }
 
     /**
@@ -37,21 +37,21 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
-        return Optional.ofNullable(this.compartmentIdInSubtree);
+    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
+        return this.compartmentIdInSubtree;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSecurityAssessmentFindingsFilter> filters;
+    private Output</* @Nullable */ List<GetSecurityAssessmentFindingsFilter>> filters;
 
-    public Optional<List<GetSecurityAssessmentFindingsFilter>> filters() {
-        return Optional.ofNullable(this.filters);
+    public Output</* @Nullable */ List<GetSecurityAssessmentFindingsFilter>> filters() {
+        return this.filters;
     }
 
     /**
@@ -59,14 +59,14 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="findingKey")
-    private @Nullable String findingKey;
+    private Output</* @Nullable */ String> findingKey;
 
     /**
      * @return Each finding has a key. This key is same for the finding across targets
      * 
      */
-    public Optional<String> findingKey() {
-        return Optional.ofNullable(this.findingKey);
+    public Output</* @Nullable */ String> findingKey() {
+        return this.findingKey;
     }
 
     /**
@@ -74,13 +74,13 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="securityAssessmentId", required=true)
-    private String securityAssessmentId;
+    private Output<String> securityAssessmentId;
 
     /**
      * @return The OCID of the security assessment.
      * 
      */
-    public String securityAssessmentId() {
+    public Output<String> securityAssessmentId() {
         return this.securityAssessmentId;
     }
 
@@ -89,14 +89,14 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="severity")
-    private @Nullable String severity;
+    private Output</* @Nullable */ String> severity;
 
     /**
      * @return A filter to return only findings of a particular risk level.
      * 
      */
-    public Optional<String> severity() {
-        return Optional.ofNullable(this.severity);
+    public Output</* @Nullable */ String> severity() {
+        return this.severity;
     }
 
     private GetSecurityAssessmentFindingsArgs() {}
@@ -134,8 +134,29 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(@Nullable String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -146,13 +167,16 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
          * 
          */
         public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        public Builder filters(Output</* @Nullable */ List<GetSecurityAssessmentFindingsFilter>> filters) {
+            $.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<GetSecurityAssessmentFindingsFilter> filters) {
-            $.filters = filters;
-            return this;
+            return filters(Output.of(filters));
         }
 
         public Builder filters(GetSecurityAssessmentFindingsFilter... filters) {
@@ -165,8 +189,29 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder findingKey(@Nullable String findingKey) {
+        public Builder findingKey(Output</* @Nullable */ String> findingKey) {
             $.findingKey = findingKey;
+            return this;
+        }
+
+        /**
+         * @param findingKey Each finding has a key. This key is same for the finding across targets
+         * 
+         * @return builder
+         * 
+         */
+        public Builder findingKey(@Nullable String findingKey) {
+            return findingKey(Output.of(findingKey));
+        }
+
+        /**
+         * @param securityAssessmentId The OCID of the security assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityAssessmentId(Output<String> securityAssessmentId) {
+            $.securityAssessmentId = securityAssessmentId;
             return this;
         }
 
@@ -177,7 +222,17 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
          * 
          */
         public Builder securityAssessmentId(String securityAssessmentId) {
-            $.securityAssessmentId = securityAssessmentId;
+            return securityAssessmentId(Output.of(securityAssessmentId));
+        }
+
+        /**
+         * @param severity A filter to return only findings of a particular risk level.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder severity(Output</* @Nullable */ String> severity) {
+            $.severity = severity;
             return this;
         }
 
@@ -188,8 +243,7 @@ public final class GetSecurityAssessmentFindingsArgs extends com.pulumi.resource
          * 
          */
         public Builder severity(@Nullable String severity) {
-            $.severity = severity;
-            return this;
+            return severity(Output.of(severity));
         }
 
         public GetSecurityAssessmentFindingsArgs build() {

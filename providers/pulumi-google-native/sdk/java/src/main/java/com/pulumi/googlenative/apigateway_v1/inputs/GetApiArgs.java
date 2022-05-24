@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.apigateway_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,24 +15,24 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApiArgs Empty = new GetApiArgs();
 
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetApiArgs() {}
@@ -61,19 +61,31 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApiArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetApiArgs build() {

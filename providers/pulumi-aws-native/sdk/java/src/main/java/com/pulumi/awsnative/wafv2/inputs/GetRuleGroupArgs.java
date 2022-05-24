@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.enums.RuleGroupScope;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -14,23 +15,23 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="scope", required=true)
-    private RuleGroupScope scope;
+    private Output<RuleGroupScope> scope;
 
-    public RuleGroupScope scope() {
+    public Output<RuleGroupScope> scope() {
         return this.scope;
     }
 
@@ -60,19 +61,31 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder scope(RuleGroupScope scope) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder scope(Output<RuleGroupScope> scope) {
             $.scope = scope;
             return this;
+        }
+
+        public Builder scope(RuleGroupScope scope) {
+            return scope(Output.of(scope));
         }
 
         public GetRuleGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devops.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineName", required=true)
-    private String pipelineName;
+    private Output<String> pipelineName;
 
     /**
      * @return The name of the Pipeline resource in ARM.
      * 
      */
-    public String pipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pipelineName(String pipelineName) {
+        public Builder pipelineName(Output<String> pipelineName) {
             $.pipelineName = pipelineName;
+            return this;
+        }
+
+        /**
+         * @param pipelineName The name of the Pipeline resource in ARM.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pipelineName(String pipelineName) {
+            return pipelineName(Output.of(pipelineName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPipelineArgs build() {

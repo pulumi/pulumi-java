@@ -3,10 +3,10 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +19,14 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private Output</* @Nullable */ String> expand;
 
     /**
      * @return Specify the $expand query. Example: &#39;properties($select=author)&#39;
      * 
      */
-    public Optional<String> expand() {
-        return Optional.ofNullable(this.expand);
+    public Output</* @Nullable */ String> expand() {
+        return this.expand;
     }
 
     /**
@@ -34,13 +34,13 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryImageName", required=true)
-    private String galleryImageName;
+    private Output<String> galleryImageName;
 
     /**
      * @return The name of the gallery Image.
      * 
      */
-    public String galleryImageName() {
+    public Output<String> galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -49,13 +49,13 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labAccountName", required=true)
-    private String labAccountName;
+    private Output<String> labAccountName;
 
     /**
      * @return The name of the lab Account.
      * 
      */
-    public String labAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -64,13 +64,13 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +107,29 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(Output</* @Nullable */ String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=author)&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param galleryImageName The name of the gallery Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryImageName(Output<String> galleryImageName) {
+            $.galleryImageName = galleryImageName;
             return this;
         }
 
@@ -119,7 +140,17 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder galleryImageName(String galleryImageName) {
-            $.galleryImageName = galleryImageName;
+            return galleryImageName(Output.of(galleryImageName));
+        }
+
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labAccountName(Output<String> labAccountName) {
+            $.labAccountName = labAccountName;
             return this;
         }
 
@@ -130,7 +161,17 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder labAccountName(String labAccountName) {
-            $.labAccountName = labAccountName;
+            return labAccountName(Output.of(labAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +182,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGalleryImageArgs build() {

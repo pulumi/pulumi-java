@@ -3,10 +3,10 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +15,17 @@ public final class GetHttpHealthCheckArgs extends com.pulumi.resources.InvokeArg
     public static final GetHttpHealthCheckArgs Empty = new GetHttpHealthCheckArgs();
 
     @Import(name="httpHealthCheck", required=true)
-    private String httpHealthCheck;
+    private Output<String> httpHealthCheck;
 
-    public String httpHealthCheck() {
+    public Output<String> httpHealthCheck() {
         return this.httpHealthCheck;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private Output</* @Nullable */ String> project;
 
-    public Optional<String> project() {
-        return Optional.ofNullable(this.project);
+    public Output</* @Nullable */ String> project() {
+        return this.project;
     }
 
     private GetHttpHealthCheckArgs() {}
@@ -53,14 +53,22 @@ public final class GetHttpHealthCheckArgs extends com.pulumi.resources.InvokeArg
             $ = new GetHttpHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder httpHealthCheck(String httpHealthCheck) {
+        public Builder httpHealthCheck(Output<String> httpHealthCheck) {
             $.httpHealthCheck = httpHealthCheck;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder httpHealthCheck(String httpHealthCheck) {
+            return httpHealthCheck(Output.of(httpHealthCheck));
+        }
+
+        public Builder project(Output</* @Nullable */ String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(@Nullable String project) {
+            return project(Output.of(project));
         }
 
         public GetHttpHealthCheckArgs build() {

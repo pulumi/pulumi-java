@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -37,22 +38,21 @@ import com.pulumi.oci.Dns.outputs.GetViewResult;
 import com.pulumi.oci.Dns.outputs.GetViewsResult;
 import com.pulumi.oci.Dns.outputs.GetZonesResult;
 import com.pulumi.oci.Utilities;
-import java.util.concurrent.CompletableFuture;
 
 public final class DnsFunctions {
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRecordsResult> getRecords(GetRecordsArgs args) {
+    public static Output<GetRecordsResult> getRecords(GetRecordsArgs args) {
         return getRecords(args, InvokeOptions.Empty);
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRecordsResult> getRecords(GetRecordsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getRecords:getRecords", TypeShape.of(GetRecordsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRecordsResult> getRecords(GetRecordsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getRecords:getRecords", TypeShape.of(GetRecordsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Resolver resource in Oracle Cloud Infrastructure DNS service.
@@ -64,7 +64,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverResult> getResolver(GetResolverArgs args) {
+    public static Output<GetResolverResult> getResolver(GetResolverArgs args) {
         return getResolver(args, InvokeOptions.Empty);
     }
     /**
@@ -77,8 +77,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverResult> getResolver(GetResolverArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getResolver:getResolver", TypeShape.of(GetResolverResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverResult> getResolver(GetResolverArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolver:getResolver", TypeShape.of(GetResolverResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Resolver Endpoint resource in Oracle Cloud Infrastructure DNS service.
@@ -90,7 +90,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
         return getResolverEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -103,8 +103,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Resolver Endpoints in Oracle Cloud Infrastructure DNS service.
@@ -117,7 +117,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args) {
+    public static Output<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args) {
         return getResolverEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -131,8 +131,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getResolverEndpoints:getResolverEndpoints", TypeShape.of(GetResolverEndpointsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolverEndpoints:getResolverEndpoints", TypeShape.of(GetResolverEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Resolvers in Oracle Cloud Infrastructure DNS service.
@@ -147,7 +147,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolversResult> getResolvers(GetResolversArgs args) {
+    public static Output<GetResolversResult> getResolvers(GetResolversArgs args) {
         return getResolvers(args, InvokeOptions.Empty);
     }
     /**
@@ -163,8 +163,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolversResult> getResolvers(GetResolversArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getResolvers:getResolvers", TypeShape.of(GetResolversResult.class), args, Utilities.withVersion(options));
+    public static Output<GetResolversResult> getResolvers(GetResolversArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolvers:getResolvers", TypeShape.of(GetResolversResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Rrset resource in Oracle Cloud Infrastructure DNS service.
@@ -177,7 +177,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRrsetResult> getRrset(GetRrsetArgs args) {
+    public static Output<GetRrsetResult> getRrset(GetRrsetArgs args) {
         return getRrset(args, InvokeOptions.Empty);
     }
     /**
@@ -191,8 +191,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRrsetResult> getRrset(GetRrsetArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getRrset:getRrset", TypeShape.of(GetRrsetResult.class), args, Utilities.withVersion(options));
+    public static Output<GetRrsetResult> getRrset(GetRrsetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getRrset:getRrset", TypeShape.of(GetRrsetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Steering Policies in Oracle Cloud Infrastructure DNS service.
@@ -202,7 +202,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args) {
+    public static Output<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args) {
         return getSteeringPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -213,8 +213,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicies:getSteeringPolicies", TypeShape.of(GetSteeringPoliciesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicies:getSteeringPolicies", TypeShape.of(GetSteeringPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Steering Policy resource in Oracle Cloud Infrastructure DNS service.
@@ -224,7 +224,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args) {
+    public static Output<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args) {
         return getSteeringPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -235,8 +235,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicy:getSteeringPolicy", TypeShape.of(GetSteeringPolicyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicy:getSteeringPolicy", TypeShape.of(GetSteeringPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Steering Policy Attachment resource in Oracle Cloud Infrastructure DNS service.
@@ -246,7 +246,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args) {
+    public static Output<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args) {
         return getSteeringPolicyAttachment(args, InvokeOptions.Empty);
     }
     /**
@@ -257,8 +257,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicyAttachment:getSteeringPolicyAttachment", TypeShape.of(GetSteeringPolicyAttachmentResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicyAttachment:getSteeringPolicyAttachment", TypeShape.of(GetSteeringPolicyAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Steering Policy Attachments in Oracle Cloud Infrastructure DNS service.
@@ -268,7 +268,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args) {
+    public static Output<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args) {
         return getSteeringPolicyAttachments(args, InvokeOptions.Empty);
     }
     /**
@@ -279,8 +279,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicyAttachments:getSteeringPolicyAttachments", TypeShape.of(GetSteeringPolicyAttachmentsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicyAttachments:getSteeringPolicyAttachments", TypeShape.of(GetSteeringPolicyAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Tsig Key resource in Oracle Cloud Infrastructure DNS service.
@@ -290,7 +290,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args) {
+    public static Output<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args) {
         return getTsigKey(args, InvokeOptions.Empty);
     }
     /**
@@ -301,8 +301,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getTsigKey:getTsigKey", TypeShape.of(GetTsigKeyResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getTsigKey:getTsigKey", TypeShape.of(GetTsigKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Tsig Keys in Oracle Cloud Infrastructure DNS service.
@@ -312,7 +312,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args) {
+    public static Output<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args) {
         return getTsigKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -323,8 +323,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getTsigKeys:getTsigKeys", TypeShape.of(GetTsigKeysResult.class), args, Utilities.withVersion(options));
+    public static Output<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getTsigKeys:getTsigKeys", TypeShape.of(GetTsigKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific View resource in Oracle Cloud Infrastructure DNS service.
@@ -336,7 +336,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
+    public static Output<GetViewResult> getView(GetViewArgs args) {
         return getView(args, InvokeOptions.Empty);
     }
     /**
@@ -349,8 +349,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getView:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
+    public static Output<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getView:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Views in Oracle Cloud Infrastructure DNS service.
@@ -365,7 +365,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewsResult> getViews(GetViewsArgs args) {
+    public static Output<GetViewsResult> getViews(GetViewsArgs args) {
         return getViews(args, InvokeOptions.Empty);
     }
     /**
@@ -381,8 +381,8 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewsResult> getViews(GetViewsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getViews:getViews", TypeShape.of(GetViewsResult.class), args, Utilities.withVersion(options));
+    public static Output<GetViewsResult> getViews(GetViewsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getViews:getViews", TypeShape.of(GetViewsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Zones in Oracle Cloud Infrastructure DNS service.
@@ -395,7 +395,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args) {
+    public static Output<GetZonesResult> getZones(GetZonesArgs args) {
         return getZones(args, InvokeOptions.Empty);
     }
     /**
@@ -409,7 +409,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("oci:Dns/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
+    public static Output<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
 }

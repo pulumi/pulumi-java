@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.communication.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCommunicationServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="communicationServiceName", required=true)
-    private String communicationServiceName;
+    private Output<String> communicationServiceName;
 
     /**
      * @return The name of the CommunicationService resource.
      * 
      */
-    public String communicationServiceName() {
+    public Output<String> communicationServiceName() {
         return this.communicationServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCommunicationServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCommunicationServiceArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder communicationServiceName(String communicationServiceName) {
+        public Builder communicationServiceName(Output<String> communicationServiceName) {
             $.communicationServiceName = communicationServiceName;
+            return this;
+        }
+
+        /**
+         * @param communicationServiceName The name of the CommunicationService resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communicationServiceName(String communicationServiceName) {
+            return communicationServiceName(Output.of(communicationServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCommunicationServiceArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCommunicationServiceArgs build() {
