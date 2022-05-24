@@ -177,7 +177,7 @@ public class ResourcePackages {
                     "Deserialize/ResourcePackages: can't find a resource: '%s'; version=%s urn=%s",
                     type, version, urn
             );
-            this.log.debugOrExcessive(message, message + String.format(
+            this.log.debugOrExcessive(message, String.format(
                     "; Available resources type names:\n %s",
                     String.join("\n", ResourcePackages.resourceTypes.get().keySet())
             ));
