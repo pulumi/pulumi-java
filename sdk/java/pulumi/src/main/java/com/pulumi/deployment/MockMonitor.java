@@ -4,8 +4,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import com.pulumi.Log;
-import com.pulumi.core.Urn;
 import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.Urn;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.Stack.StackInternal;
@@ -13,7 +13,6 @@ import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
-import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.ReadResourceResponse;
@@ -29,6 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 public class MockMonitor implements Monitor {
@@ -43,7 +43,7 @@ public class MockMonitor implements Monitor {
     public MockMonitor(Mocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
         this.serializer = new Serializer(log);
-        this.deserializer = new Deserializer();
+        this.deserializer = new Deserializer(log);
         this.registeredResources = Collections.synchronizedMap(new HashMap<>());
         this.resources = Collections.synchronizedList(new LinkedList<>());
     }
@@ -101,7 +101,13 @@ public class MockMonitor implements Monitor {
         )).thenCompose(idAndState -> {
             var id = idAndState.t1;
             var state = idAndState.t2;
-            var urn = Urn.create(request.getParent(), request.getType(), request.getName());
+            var urn = Urn.create(
+                    Deployment.getInstance().getStackName(),
+                    Deployment.getInstance().getProjectName(),
+                    Optional.of(request.getParent()),
+                    request.getType(),
+                    request.getName()
+            );
             return serializeToMap(state)
                     .thenApply(serializedState -> {
                         var builder = ImmutableMap.<String, Object>builder();
@@ -128,7 +134,13 @@ public class MockMonitor implements Monitor {
         if (StackInternal.RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
-                            .setUrn(Urn.create(request.getParent(), request.getType(), request.getName()))
+                            .setUrn(Urn.create(
+                                    Deployment.getInstance().getStackName(),
+                                    Deployment.getInstance().getProjectName(),
+                                    Optional.of(request.getParent()),
+                                    request.getType(),
+                                    request.getName()
+                            ))
                             .setObject(Struct.newBuilder().build())
                             .build()
             );
@@ -143,7 +155,13 @@ public class MockMonitor implements Monitor {
         )).thenCompose(idAndState -> {
             var id = idAndState.t1;
             var state = idAndState.t2;
-            var urn = Urn.create(request.getParent(), request.getType(), request.getName());
+            var urn = Urn.create(
+                    Deployment.getInstance().getStackName(),
+                    Deployment.getInstance().getProjectName(),
+                    Optional.of(request.getParent()),
+                    request.getType(),
+                    request.getName()
+            );
             return serializeToMap(state)
                     .thenApply(serializedState -> {
                         registeredResources.put(urn, ImmutableMap.of(

@@ -3,10 +3,10 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
+import com.pulumi.Context;
 import com.pulumi.core.Output;
-import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
-import com.pulumi.core.annotations.Export;
+import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.MockCallArgs;
@@ -20,7 +20,6 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -31,12 +30,21 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+import static com.pulumi.core.OutputTests.waitFor;
+import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceRefPropertyTest {
+
+    private static final Class<ImmutableMap<String, String>> ValuesClass =
+            TypeShape.<ImmutableMap<String, String>>builder(ImmutableMap.class)
+                    .addParameter(String.class)
+                    .addParameter(String.class)
+                    .build()
+                    .getType();
 
     private static DeploymentTests.DeploymentMock mock;
 
@@ -53,16 +61,17 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-        var res = resources.stream()
+        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+                .throwOnError();
+        var res = result.resources.stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
                 .findFirst()
                 .orElse(null);
         assertThat(res).isNotNull();
 
-        var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
-        var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
+        var urn = waitForValue(res.getUrn());
+        var id = waitFor(res.getId()).getValueOrDefault("");
 
         var v = serializeToValueAsync(res).join();
 
@@ -77,8 +86,9 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-        var res = resources.stream()
+        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+                .throwOnError();
+        var res = result.resources.stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
                 .findFirst()
@@ -98,16 +108,8 @@ class ResourceRefPropertyTest {
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
-
-        var resources = mock.testAsync(DeserializeCustomResourceStack::new).join();
-        var stack = resources.stream()
-                .filter(r -> r instanceof DeserializeCustomResourceStack)
-                .map(r -> (DeserializeCustomResourceStack) r)
-                .findFirst()
-                .orElse(null);
-        assertThat(stack).isNotNull();
-
-        var values = OutputTests.waitFor(stack.values).getValueNullable();
+        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
+        var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
         assertThat(values.get("expectedId")).isEqualTo(values.get("actualId"));
@@ -120,16 +122,8 @@ class ResourceRefPropertyTest {
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
-
-        var resources = mock.testAsync(DeserializeMissingCustomResourceStack::new).join();
-        var stack = resources.stream()
-                .filter(r -> r instanceof DeserializeMissingCustomResourceStack)
-                .map(r -> (DeserializeMissingCustomResourceStack) r)
-                .findFirst()
-                .orElse(null);
-        assertThat(stack).isNotNull();
-
-        var values = OutputTests.waitFor(stack.values).getValueNullable();
+        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
+        var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -142,15 +136,16 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-        var res = resources.stream()
+        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+                .throwOnError();
+        var res = result.resources.stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
                 .findFirst()
                 .orElse(null);
         assertThat(res).isNotNull();
 
-        var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
+        var urn = waitForValue(res.getUrn());
         var v = serializeToValueAsync(res).join();
 
         assertThat(v).isEqualTo(createComponentResourceReference(urn));
@@ -164,8 +159,9 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-        var res = resources.stream()
+        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+                .throwOnError();
+        var res = result.resources.stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
                 .findFirst()
@@ -186,15 +182,8 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(DeserializeComponentResourceStack::new).join();
-        var stack = resources.stream()
-                .filter(r -> r instanceof DeserializeComponentResourceStack)
-                .map(r -> (DeserializeComponentResourceStack) r)
-                .findFirst()
-                .orElse(null);
-        assertThat(stack).isNotNull();
-
-        var values = OutputTests.waitFor(stack.values).getValueNullable();
+        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeComponentResourceStack).join();
+        var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -206,16 +195,8 @@ class ResourceRefPropertyTest {
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
-
-        var resources = mock.testAsync(DeserializeMissingComponentResourceStack::new).join();
-        var stack = resources.stream()
-                .filter(r -> r instanceof DeserializeMissingComponentResourceStack)
-                .map(r -> (DeserializeMissingComponentResourceStack) r)
-                .findFirst()
-                .orElse(null);
-        assertThat(stack).isNotNull();
-
-        var values = OutputTests.waitFor(stack.values).getValueNullable();
+        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();
+        var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -250,102 +231,71 @@ class ResourceRefPropertyTest {
         }
     }
 
-    public static class MyStack extends Stack {
-        public MyStack() {
-            new MyCustomResource("test", null, null);
-            new MyComponentResource("test", null, null);
-        }
+    public static void myStack(Context context) {
+        new MyCustomResource("test", null, null);
+        new MyComponentResource("test", null, null);
     }
 
-    public static class DeserializeCustomResourceStack extends Stack {
-
-        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
-        public final Output<ImmutableMap<String, String>> values;
-
-        public DeserializeCustomResourceStack() {
-            var res = new MyCustomResource("test", null, null);
-
-            var urn = OutputTests.waitFor(res.getUrn()).getValueOrDefault("");
-            var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
-
-            var v = deserializeFromValue(
-                    createCustomResourceReference(urn, ""),
-                    MyCustomResource.class
-            );
-
-            this.values = Output.of(ImmutableMap.of(
-                    "expectedUrn", urn,
-                    "expectedId", id,
-                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueOrDefault(""),
-                    "actualId", OutputTests.waitFor(v.getId()).getValueOrDefault("")
-            ));
-        }
+    public static void deserializeCustomResourceStack(Context ctx) {
+        var res = new MyCustomResource("test", null, null);
+        var urn = waitFor(res.getUrn()).getValueOrDefault("");
+        var id = waitFor(res.getId()).getValueOrDefault("");
+        var v = deserializeFromValue(
+                createCustomResourceReference(urn, ""),
+                MyCustomResource.class
+        );
+        var values = Output.of(ImmutableMap.of(
+                "expectedUrn", urn,
+                "expectedId", id,
+                "actualUrn", waitFor(v.getUrn()).getValueOrDefault(""),
+                "actualId", waitFor(v.getId()).getValueOrDefault("")));
+        ctx.export("values", values);
     }
 
-    public static class DeserializeMissingCustomResourceStack extends Stack {
-
-        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
-        public final Output<ImmutableMap<String, String>> values;
-
-        public DeserializeMissingCustomResourceStack() {
-            var res = new MissingCustomResource("test", null, null);
-
-            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
-
-            var v = deserializeFromValue(
-                    createCustomResourceReference(urn, ""),
-                    Resource.class
-            );
-
-            this.values = Output.of(ImmutableMap.of(
-                    "expectedUrn", urn,
-                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
-            ));
-        }
+    public static void deserializeMissingCustomResourceStack(Context ctx) {
+        var res = new MissingCustomResource("test", null, null);
+        var urn = waitForValue(res.getUrn());
+        var v = deserializeFromValue(
+                createCustomResourceReference(urn, ""),
+                Resource.class
+        );
+        var values = Output.of(ImmutableMap.of(
+                "expectedUrn", urn,
+                "actualUrn", waitForValue(v.getUrn())
+        ));
+        ctx.export("values", values);
     }
 
-    public static class DeserializeComponentResourceStack extends Stack {
-
-        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
-        public final Output<ImmutableMap<String, String>> values;
-
-        public DeserializeComponentResourceStack() {
-            var res = new MyComponentResource("test", null, null);
-
-            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
-
-            var v = deserializeFromValue(
-                    createComponentResourceReference(urn),
-                    MyComponentResource.class
-            );
-
-            this.values = Output.of(ImmutableMap.of(
-                    "expectedUrn", urn,
-                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
-            ));
-        }
+    public static void deserializeComponentResourceStack(Context ctx) {
+        var res = new MyComponentResource("test", null, null);
+        var urn = waitFor(res.getUrn()).getValueNullable();
+        var v = deserializeFromValue(
+                createComponentResourceReference(urn),
+                MyComponentResource.class
+        );
+        var values = Output.of(ImmutableMap.of(
+                "expectedUrn", urn,
+                "actualUrn", waitForValue(v.getUrn())
+        ));
+        ctx.export("values", values);
     }
 
-    public static class DeserializeMissingComponentResourceStack extends Stack {
+    public static void deserializeMissingComponentResourceStack(Context ctx) {
+        var res = new MissingComponentResource("test", null, null);
 
-        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
-        public Output<ImmutableMap<String, String>> values;
+        var urn = waitFor(res.getUrn()).getValueNullable();
 
-        public DeserializeMissingComponentResourceStack() {
-            var res = new MissingComponentResource("test", null, null);
+        var v = deserializeFromValue(
+                createComponentResourceReference(urn),
+                Resource.class
+        );
 
-            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
+        var values = Output.of(ImmutableMap.of(
+                "expectedUrn", urn,
+                "actualUrn", waitForValue(v.getUrn())
+        ));
 
-            var v = deserializeFromValue(
-                    createComponentResourceReference(urn),
-                    Resource.class
-            );
-
-            this.values = Output.of(ImmutableMap.of(
-                    "expectedUrn", urn,
-                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
-            ));
-        }
+        ctx.export("values", values);
     }
 
     static class MyMocks implements Mocks {

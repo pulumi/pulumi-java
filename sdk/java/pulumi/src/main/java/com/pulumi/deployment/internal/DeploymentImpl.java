@@ -135,7 +135,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
         this.serialization = new PropertiesSerializer(this.log);
-        this.deserializer = new Deserializer();
+        this.deserializer = new Deserializer(this.log);
         this.converter = new Converter(this.log, this.deserializer);
         this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
@@ -1132,8 +1132,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var data = response.data;
                         var dependencies = response.dependencies;
                         log.excessive(
-                                "Read response for resource: t=%s, name=%s, urn=%s, id=%s, remote=%s",
-                                resource.getResourceType(), resource.getResourceName(), urn, id, remote
+                                "Read response for resource: t=%s, name=%s, urn=%s, id=%s, remote=%s, data=%s",
+                                resource.getResourceType(), resource.getResourceName(), urn, id, remote, data
                         );
 
                         lazy.urn().completeOrThrow(new OutputInternal(
@@ -1156,6 +1156,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             // 'response.data' so that each field can have independent isKnown/isSecret values.
                             // We do not want to bubble up isKnown/isSecret from one field to the rest.
                             var value = Structs.tryGetValue(data, fieldName);
+                            log.excessive(String.format(
+                                    "Setting OutputCompletionSource for field=%s shape=%s value=%s",
+                                    fieldName, completionSource.getTypeShape().asString(), value
+                            ));
                             if (value.isPresent()) {
                                 var contextInfo = String.format("%s.%s", resource.getClass().getTypeName(), fieldName);
                                 var depsOrEmpty = Maps.tryGetValue(dependencies, fieldName).orElse(ImmutableSet.of());
@@ -1662,15 +1666,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     @VisibleForTesting
     static class DefaultRunner implements Runner {
-        private static final int ProcessExitedSuccessfully = 0;
-        private static final int ProcessExitedBeforeLoggingUserActionableMessage = 1;
-        // Keep track if we already logged the information about an unhandled error to the user.
-        // If so, we end with a different exit code. The language host recognizes this and will not print
-        // any further messages to the user since we already took care of it.
-        //
-        // 32 was picked to be very unlikely to collide with any other error codes.
-        private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
-
         private final Logger standardLogger;
         private final EngineLogger engineLogger;
 

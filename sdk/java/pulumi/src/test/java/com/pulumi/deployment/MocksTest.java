@@ -1,9 +1,12 @@
 package com.pulumi.deployment;
 
+import com.google.common.base.Functions;
 import com.google.common.collect.ImmutableMap;
+import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
+import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
 import com.pulumi.core.annotations.CustomType.Parameter;
@@ -20,6 +23,7 @@ import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
 import io.grpc.Status;
+import io.grpc.StatusRuntimeException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,11 +31,12 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
-import static com.pulumi.core.TypeShape.of;
+import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
@@ -51,9 +56,10 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var result = mock.runTestAsync(MocksTest::myStack).join()
+                .throwOnError();
 
-        var instance = resources.stream()
+        var instance = result.resources.stream()
                 .filter(r -> r instanceof Instance)
                 .map(r -> (Instance) r)
                 .findFirst();
@@ -72,8 +78,9 @@ public class MocksTest {
         assertThat(id.getResources()).contains(instance.get()).hasSize(1);
 
         var urn = OutputTests.waitFor(instance.get().getUrn());
-        assertThat(urn.getValueNullable()).isEqualTo("urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2" +
-                "/instance:Instance::instance");
+        assertThat(urn.getValueNullable()).isEqualTo(
+                "urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/instance:Instance::instance"
+        );
         assertThat(urn.isKnown()).isTrue();
         assertThat(urn.isSecret()).isFalse();
         assertThat(urn.getResources()).contains(instance.get()).hasSize(1);
@@ -86,9 +93,10 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var result = mock.runTestAsync(MocksTest::myStack).join()
+                .throwOnError();
 
-        var myCustom = resources.stream()
+        var myCustom = result.resources.stream()
                 .filter(r -> r instanceof MyCustom)
                 .map(r -> (MyCustom) r)
                 .findFirst();
@@ -109,16 +117,9 @@ public class MocksTest {
                 .setMocks(new MyMocks())
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
-
-        var stack = resources.stream()
-                .filter(r -> r instanceof MyStack)
-                .map(r -> (MyStack) r)
-                .findFirst();
-        assertThat(stack).isPresent();
-
-        var ip = OutputTests.waitFor(stack.get().publicIp).getValueNullable();
-        assertThat(ip).isEqualTo("203.0.113.12");
+        var result = mock.runTestAsync(MocksTest::myStack).join();
+        var publicIp = waitForValue(result.stackOutput("publicIp", String.class));
+        assertThat(publicIp).isEqualTo("203.0.113.12");
     }
 
     // Test inspired by https://github.com/pulumi/pulumi/issues/8163
@@ -131,24 +132,31 @@ public class MocksTest {
 
         mock.standardLogger.setLevel(Level.OFF);
 
-        var result = mock.runAsync(
-                () -> mock.deployment.invokeAsync(
-                        "aws:iam/getRole:getRole",
-                        of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
-                ).thenApply(__ -> {
-                    var myInstance = new Instance("instance", new InstanceArgs(), null);
+        var result = mock.runTestAsync(ctx -> {
+            var invokeResult = mock.deployment.invokeAsync(
+                    "aws:iam/getRole:getRole",
+                    TypeShape.of(GetRoleResult.class),
+                    new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
+            );
 
-                    return ImmutableMap.<String, Output<?>>builder()
-                            .put("result", Output.of("x"))
-                            .put("instance", Output.of(myInstance.publicIp))
-                            .build();
-                })).join();
+            var publicIp = Output.of(invokeResult.thenApply(__ -> {
+                var myInstance = new Instance("instance", new InstanceArgs(),
+                        CustomResourceOptions.builder()
+                                .build());
+                return myInstance.publicIp;
+            })).apply(Functions.identity());
+
+            ctx.export("result", Output.of("x"));
+            ctx.export("instance", publicIp);
+        }).join();
 
         var resources = result.resources;
         var exceptions = result.exceptions;
+        var errors = result.errors;
 
         assertThat(resources).isNotEmpty();
         assertThat(exceptions).isNotEmpty();
+        assertThat(errors).isNotEmpty();
 
         var stack = resources.stream()
                 .filter(r -> r instanceof Stack)
@@ -162,12 +170,15 @@ public class MocksTest {
                 .findFirst();
         assertThat(instance).isNotPresent();
 
-        assertThat(exceptions).hasSize(1);
-        var exception = exceptions.stream().findFirst().get();
+        assertThat(errors).hasSize(1);
+        var error = errors.stream().findFirst().get();
+        assertThat(error).startsWith("Running program [");
+        assertThat(error).contains("failed with an unhandled exception:");
+        assertThat(error).contains("io.grpc.StatusRuntimeException: UNKNOWN: error code 404");
 
-        assertThat(exception).hasMessageStartingWith("Running program [");
-        assertThat(exception).hasMessageContaining("failed with an unhandled exception:");
-        assertThat(exception).hasMessageContaining("io.grpc.StatusRuntimeException: UNKNOWN: error code 404");
+        assertThat(exceptions).hasSize(2);
+        assertThat(exceptions.get(0)).isInstanceOf(CompletionException.class);
+        assertThat(exceptions.get(1)).isInstanceOf(StatusRuntimeException.class);
     }
 
     @Test
@@ -179,7 +190,7 @@ public class MocksTest {
                 .setStandardLogger(log)
                 .setSpyGlobalInstance();
 
-        var result = mock.tryTestAsync(MyStack::new).join();
+        var result = mock.runTestAsync(MocksTest::myStack).join();
         var resources = result.resources;
         assertThat(resources).isNotEmpty();
 
@@ -188,18 +199,13 @@ public class MocksTest {
         assertThat(exceptions.stream().map(Throwable::getMessage).collect(Collectors.toList()))
                 .haveAtLeastOne(containsString("Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."));
 
-        var stack = resources.stream()
-                .filter(r -> r instanceof MyStack)
-                .map(r -> (MyStack) r)
-                .findFirst();
-        assertThat(stack).isPresent();
-
-        var ipFuture = Internal.of(stack.get().publicIp).getDataAsync();
+        var publicIp = result.stackOutput("publicIp");
+        var ipFuture = Internal.of(publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
 
         // Wait for all exceptions to propagate. If we do not, these exceptions contaminate the next test.
         // TODO properly isolate tests.
-        CompletableFuture.runAsync(() -> {}, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
+        CompletableFuture.runAsync(() -> { /* Empty */ }, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS)).join();
     }
 
     @ResourceType(type = "aws:ec2/instance:Instance")
@@ -262,16 +268,11 @@ public class MocksTest {
         }
     }
 
-    public static class MyStack extends Stack {
-        @Export(type = String.class)
-        public final Output<String> publicIp;
-
-        public MyStack() {
-            var myInstance = new Instance("instance", new InstanceArgs(), null);
-            //noinspection unused
-            var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
-            this.publicIp = myInstance.publicIp;
-        }
+    public static void myStack(Context ctx) {
+        var myInstance = new Instance("instance", new InstanceArgs(), null);
+        //noinspection unused
+        var res = new MyCustom("mycustom", new MyCustomArgs(myInstance), null);
+        ctx.export("publicIp", myInstance.publicIp);
     }
 
     public static class MyMocks implements Mocks {
