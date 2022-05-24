@@ -110,12 +110,12 @@ func (mod *modContext) typeString(
 	t schema.Type,
 	qualifier qualifier,
 	input bool,
-// Influences how Map and Array types are generated.
+	// Influences how Map and Array types are generated.
 	requireInitializers bool,
-// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
+	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
 	outerOptional bool,
-// Called in the context of an overload without an `Output<T>` wrapper. We
-// should act like we are inside an Output<T>.
+	// Called in the context of an overload without an `Output<T>` wrapper. We
+	// should act like we are inside an Output<T>.
 	inputlessOverload bool,
 ) TypeShape {
 	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, requireInitializers, inputlessOverload)
