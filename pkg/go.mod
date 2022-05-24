@@ -12,7 +12,7 @@ require (
 	github.com/hashicorp/hcl/v2 v2.11.1
 	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/pkg/v3 v3.33.2-0.20220523224435-36cbf572f457
-	github.com/pulumi/pulumi/sdk/v3 v3.33.1
+	github.com/pulumi/pulumi/sdk/v3 v3.33.2-0.20220523224435-36cbf572f457
 	github.com/spf13/cobra v1.4.0
 	github.com/stretchr/testify v1.7.1
 	github.com/zclconf/go-cty v1.10.0
