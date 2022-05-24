@@ -54,7 +54,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join()
                 .throwOnError();
@@ -91,7 +91,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join()
                 .throwOnError();
@@ -115,7 +115,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
         var publicIp = waitForValue(result.stackOutput("publicIp", String.class));
@@ -128,7 +128,7 @@ public class MocksTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new ThrowingMocks())
-                .setSpyGlobalInstance();
+                .build();
 
         mock.standardLogger.setLevel(Level.OFF);
 
@@ -188,7 +188,7 @@ public class MocksTest {
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyInvalidMocks())
                 .setStandardLogger(log)
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
         var resources = result.resources;

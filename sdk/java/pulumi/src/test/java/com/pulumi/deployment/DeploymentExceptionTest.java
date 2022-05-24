@@ -27,7 +27,7 @@ public class DeploymentExceptionTest {
     public static void mockSetup() {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setMocks(new MyIncorrectMocks())
-                .setSpyGlobalInstance();
+                .build();
     }
 
     @AfterAll

@@ -29,7 +29,7 @@ public class DeploymentTest {
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
             .setMocks(new MocksTest.MyMocks())
-            .setSpyGlobalInstance();
+            .build();
     }
 
     @AfterAll
