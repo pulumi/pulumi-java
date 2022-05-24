@@ -4,10 +4,12 @@ import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentTests.DeploymentMock.TestResult;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -43,7 +45,8 @@ class StackTest {
     private TestResult run(Consumer<Context> factory) {
         var mock = DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setSpyGlobalInstance();
+                .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .build();
 
         var result = mock.runTestAsync(factory).join();
         //noinspection unchecked

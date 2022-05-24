@@ -37,7 +37,7 @@ public class ConstructorConfusionTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new ConfusionMocks())
-                .setSpyGlobalInstance();
+                .build();
         var resourcePackages = new ResourcePackages(Log.ignore());
         var result = mock.runTestAsync(
                         context -> resourcePackages.tryConstruct(

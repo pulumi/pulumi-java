@@ -24,7 +24,7 @@ public abstract class OutputTestBase {
         DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
                 .setOptions(new TestOptions(isPreview()))
-                .setMockGlobalInstance();
+                .build();
     }
 
     @AfterAll

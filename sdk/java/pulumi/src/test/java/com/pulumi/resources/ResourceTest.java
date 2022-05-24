@@ -31,7 +31,7 @@ public class ResourceTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(false))
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .build();
     }
 
     @AfterAll

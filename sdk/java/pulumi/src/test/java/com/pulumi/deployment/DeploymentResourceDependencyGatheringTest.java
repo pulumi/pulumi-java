@@ -31,7 +31,7 @@ public class DeploymentResourceDependencyGatheringTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks(true))
-                .setSpyGlobalInstance();
+                .build();
     }
 
     @AfterAll
