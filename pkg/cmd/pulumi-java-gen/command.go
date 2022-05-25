@@ -130,9 +130,13 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 		}
 
 		if javaSdkVersionArg != "" {
+			parsedVersion, err := semver.ParseTolerant(javaSdkVersionArg)
+			if err != nil {
+				return err
+			}
 			opts.PackageInfo = opts.PackageInfo.With(java.PackageInfo{
 				Packages: map[string]string{
-					"com.pulumi:pulumi": javaSdkVersionArg,
+					"com.pulumi:pulumi": parsedVersion.String(),
 				},
 			})
 		}
