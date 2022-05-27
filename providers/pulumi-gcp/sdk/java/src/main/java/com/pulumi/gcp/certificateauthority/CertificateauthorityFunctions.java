@@ -45,9 +45,69 @@ public final class CertificateauthorityFunctions {
     public static CompletableFuture<GetAuthorityResult> getAuthority() {
         return getAuthority(GetAuthorityArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(CertificateauthorityFunctions.getAuthority(GetAuthorityArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .pool(&#34;pool-name&#34;)
+     *             .certificateAuthorityId(&#34;ca-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;csr&#34;, default_.getPemCsr());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAuthorityResult> getAuthority(GetAuthorityArgs args) {
         return getAuthority(args, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(CertificateauthorityFunctions.getAuthority(GetAuthorityArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .pool(&#34;pool-name&#34;)
+     *             .certificateAuthorityId(&#34;ca-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;csr&#34;, default_.getPemCsr());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAuthorityResult> getAuthority(GetAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:certificateauthority/getAuthority:getAuthority", TypeShape.of(GetAuthorityResult.class), args, Utilities.withVersion(options));
     }

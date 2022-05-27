@@ -43,6 +43,34 @@ public final class ServicediscoveryFunctions {
     public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args) {
         return getDnsNamespace(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves information about a Service Discovery private or public DNS namespace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ServicediscoveryFunctions.getDnsNamespace(GetDnsNamespaceArgs.builder()
+     *             .name(&#34;example.service.local&#34;)
+     *             .type(&#34;DNS_PRIVATE&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicediscovery/getDnsNamespace:getDnsNamespace", TypeShape.of(GetDnsNamespaceResult.class), args, Utilities.withVersion(options));
     }

@@ -26,6 +26,11 @@ public final class DeviceupdateFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Device Update account details.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +42,11 @@ public final class DeviceupdateFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Device Update instance details.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -48,6 +58,11 @@ public final class DeviceupdateFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +74,11 @@ public final class DeviceupdateFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionProxyResult> getPrivateEndpointConnectionProxy(GetPrivateEndpointConnectionProxyArgs args) {
         return getPrivateEndpointConnectionProxy(args, InvokeOptions.Empty);
     }
+    /**
+     * Private endpoint connection proxy details.
+     * API Version: 2020-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionProxyResult> getPrivateEndpointConnectionProxy(GetPrivateEndpointConnectionProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getPrivateEndpointConnectionProxy", TypeShape.of(GetPrivateEndpointConnectionProxyResult.class), args, Utilities.withVersion(options));
     }

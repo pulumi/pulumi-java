@@ -20,6 +20,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### Bindings_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new Binding(&#34;binding&#34;, BindingArgs.builder()        
+ *             .appName(&#34;myapp&#34;)
+ *             .bindingName(&#34;mybinding&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;bindingParameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiType&#34;, &#34;SQL&#34;),
+ *                     Map.entry(&#34;databaseName&#34;, &#34;db1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;key&#34;, &#34;xxxx&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

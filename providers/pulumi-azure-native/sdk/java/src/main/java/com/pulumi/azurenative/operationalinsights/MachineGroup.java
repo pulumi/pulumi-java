@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2015-11-01-preview.
  * 
  * ## Example Usage
+ * ### SMMachineGroupsUpdatePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineGroup = new MachineGroup(&#34;machineGroup&#34;, MachineGroupArgs.builder()        
+ *             .count(1)
+ *             .displayName(&#34;Foo&#34;)
+ *             .kind(&#34;machineGroup&#34;)
+ *             .machineGroupName(&#34;ccfbf4bf-dc08-4371-9e9b-00a8d875d45a&#34;)
+ *             .machines(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519&#34;),
+ *                 Map.entry(&#34;kind&#34;, &#34;ref:machinewithhints&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg-sm&#34;)
+ *             .workspaceName(&#34;D6F79F14-E563-469B-84B5-9286D2803B2F&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

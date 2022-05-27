@@ -23,6 +23,10 @@ public final class File_v1beta1Functions {
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
         return getBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a specific backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1beta1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class File_v1beta1Functions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a specific instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1beta1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class File_v1beta1Functions {
     public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the details of a specific snapshot.
+     * 
+     */
     public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1beta1:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }

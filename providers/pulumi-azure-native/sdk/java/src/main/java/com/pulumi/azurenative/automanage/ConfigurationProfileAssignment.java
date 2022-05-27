@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-30-preview.
  * 
  * ## Example Usage
+ * ### Create or update configuration profile assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configurationProfileAssignment = new ConfigurationProfileAssignment(&#34;configurationProfileAssignment&#34;, ConfigurationProfileAssignmentArgs.builder()        
+ *             .configurationProfileAssignmentName(&#34;default&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;accountId&#34;, &#34;/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/AutomanageAccount&#34;),
+ *                 Map.entry(&#34;configurationProfile&#34;, &#34;Azure virtual machine best practices – Production&#34;),
+ *                 Map.entry(&#34;configurationProfilePreferenceId&#34;, &#34;/subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .vmName(&#34;myVMName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

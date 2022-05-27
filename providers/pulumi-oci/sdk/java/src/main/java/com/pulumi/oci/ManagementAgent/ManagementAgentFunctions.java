@@ -41,6 +41,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args) {
         return getManagementAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Management Agent resource in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Gets complete details of the inventory of a given agent id
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentResult> getManagementAgent(GetManagementAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgent:getManagementAgent", TypeShape.of(GetManagementAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +63,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args) {
         return getManagementAgentAvailableHistories(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Management Agent Available Histories in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Lists the availability history records of Management Agent
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentAvailableHistoriesResult> getManagementAgentAvailableHistories(GetManagementAgentAvailableHistoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentAvailableHistories:getManagementAgentAvailableHistories", TypeShape.of(GetManagementAgentAvailableHistoriesResult.class), args, Utilities.withVersion(options));
     }
@@ -70,6 +86,15 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args) {
         return getManagementAgentCount(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Management Agent Count resource in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Gets count of the inventory of agents for a given compartment id, group by, and isPluginDeployed parameters.
+     * Supported groupBy parameters: availabilityStatus, platformType, version
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentCountResult> getManagementAgentCount(GetManagementAgentCountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentCount:getManagementAgentCount", TypeShape.of(GetManagementAgentCountResult.class), args, Utilities.withVersion(options));
     }
@@ -85,6 +110,15 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args) {
         return getManagementAgentGetAutoUpgradableConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Management Agent Get Auto Upgradable Config resource in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Get the AutoUpgradable configuration for all agents in a tenancy.
+     * The supplied compartmentId must be a tenancy root.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentGetAutoUpgradableConfigResult> getManagementAgentGetAutoUpgradableConfig(GetManagementAgentGetAutoUpgradableConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentGetAutoUpgradableConfig:getManagementAgentGetAutoUpgradableConfig", TypeShape.of(GetManagementAgentGetAutoUpgradableConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -99,6 +133,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args) {
         return getManagementAgentImages(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Management Agent Images in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Get supported agent image information
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentImagesResult> getManagementAgentImages(GetManagementAgentImagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentImages:getManagementAgentImages", TypeShape.of(GetManagementAgentImagesResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +155,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args) {
         return getManagementAgentInstallKey(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Management Agent Install Key resource in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Gets complete details of the Agent install Key for a given key id
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentInstallKeyResult> getManagementAgentInstallKey(GetManagementAgentInstallKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentInstallKey:getManagementAgentInstallKey", TypeShape.of(GetManagementAgentInstallKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -127,6 +177,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args) {
         return getManagementAgentInstallKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Management Agent Install Keys in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Returns a list of Management Agent installed Keys.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentInstallKeysResult> getManagementAgentInstallKeys(GetManagementAgentInstallKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentInstallKeys:getManagementAgentInstallKeys", TypeShape.of(GetManagementAgentInstallKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -142,6 +200,15 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args) {
         return getManagementAgentPluginCount(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Management Agent Plugin Count resource in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Gets count of the inventory of management agent plugins for a given compartment id and group by parameter.
+     * Supported groupBy parameter: pluginName
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentPluginCountResult> getManagementAgentPluginCount(GetManagementAgentPluginCountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentPluginCount:getManagementAgentPluginCount", TypeShape.of(GetManagementAgentPluginCountResult.class), args, Utilities.withVersion(options));
     }
@@ -156,6 +223,14 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args) {
         return getManagementAgentPlugins(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Management Agent Plugins in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Returns a list of managementAgentPlugins.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentPluginsResult> getManagementAgentPlugins(GetManagementAgentPluginsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgentPlugins:getManagementAgentPlugins", TypeShape.of(GetManagementAgentPluginsResult.class), args, Utilities.withVersion(options));
     }
@@ -171,6 +246,15 @@ public final class ManagementAgentFunctions {
     public static CompletableFuture<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args) {
         return getManagementAgents(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Management Agents in Oracle Cloud Infrastructure Management Agent service.
+     * 
+     * Returns a list of Management Agents.
+     * If no explicit page size limit is specified, it will default to 5000.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetManagementAgentsResult> getManagementAgents(GetManagementAgentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ManagementAgent/getManagementAgents:getManagementAgents", TypeShape.of(GetManagementAgentsResult.class), args, Utilities.withVersion(options));
     }

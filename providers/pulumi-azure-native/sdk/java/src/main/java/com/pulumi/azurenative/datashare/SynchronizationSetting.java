@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### SynchronizationSettings_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var synchronizationSetting = new SynchronizationSetting(&#34;synchronizationSetting&#34;, SynchronizationSettingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .kind(&#34;ScheduleBased&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .synchronizationSettingName(&#34;Dataset1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

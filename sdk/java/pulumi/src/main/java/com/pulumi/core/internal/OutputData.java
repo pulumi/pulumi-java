@@ -1,7 +1,6 @@
 package com.pulumi.core.internal;
 
 import com.google.common.base.MoreObjects;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
@@ -20,15 +19,14 @@ import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import static java.util.Objects.requireNonNull;
 
@@ -264,34 +262,6 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
                         .thenApply(nested -> nested.compose(data -> data)));
     }
 
-    @InternalUse
-    public static <T> CompletableFuture<OutputData<List<T>>> allHelperAsync(
-            List<CompletableFuture<OutputData<T>>> values
-    ) {
-        return CompletableFutures.allOf(values)
-                .thenApply(dataList ->
-                        builder(new ArrayList<T>(dataList.size()))
-                                .accumulate(dataList, (ts, t) -> {
-                                    if (t != null) {
-                                        ts.add(t);
-                                    }
-                                    return ts;
-                                })
-                                .build(ImmutableList::copyOf)
-                );
-    }
-
-    @InternalUse
-    public static CompletableFuture<OutputData<Object>> copyInputOutputData(
-            @SuppressWarnings("rawtypes") @Nullable Output obj
-    ) {
-        if (obj == null) {
-            return CompletableFuture.completedFuture(OutputData.ofNullable(null));
-        }
-        //noinspection unchecked,rawtypes
-        return ((OutputInternal<Object>) obj).getDataAsync().copy();
-    }
-
     public static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<OutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tuple(
             Output<T1> output1, Output<T2> output2, Output<T3> output3, Output<T4> output4,
             Output<T5> output5, Output<T6> output6, Output<T7> output7, Output<T8> output8
@@ -353,6 +323,12 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
 
         @CanIgnoreReturnValue
         public <E> Builder<T> accumulate(Collection<OutputData<E>> dataCollection, BiFunction<T, E, T> reduce) {
+            dataCollection.forEach(data -> accumulate(data, reduce));
+            return this;
+        }
+
+        @CanIgnoreReturnValue
+        public <E> Builder<T> accumulate(Stream<OutputData<E>> dataCollection, BiFunction<T, E, T> reduce) {
             dataCollection.forEach(data -> accumulate(data, reduce));
             return this;
         }

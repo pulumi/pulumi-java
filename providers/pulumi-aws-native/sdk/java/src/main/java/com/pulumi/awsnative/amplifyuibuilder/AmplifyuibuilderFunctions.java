@@ -21,6 +21,10 @@ public final class AmplifyuibuilderFunctions {
     public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
         return getComponent(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Component Resource Type
+     * 
+     */
     public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class AmplifyuibuilderFunctions {
     public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args) {
         return getTheme(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+     * 
+     */
     public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }

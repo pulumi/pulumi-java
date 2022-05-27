@@ -48,6 +48,39 @@ public final class ServerlessrepositoryFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information about an AWS Serverless Application Repository application. For example, this can be used to determine the required `capabilities` for an application.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleApplication = Output.of(ServerlessrepositoryFunctions.getApplication(GetApplicationArgs.builder()
+     *             .applicationId(&#34;arn:aws:serverlessrepo:us-east-1:123456789012:applications/ExampleApplication&#34;)
+     *             .build()));
+     * 
+     *         var exampleCloudFormationStack = new CloudFormationStack(&#34;exampleCloudFormationStack&#34;, CloudFormationStackArgs.builder()        
+     *             .applicationId(exampleApplication.apply(getApplicationResult -&gt; getApplicationResult.getApplicationId()))
+     *             .semanticVersion(exampleApplication.apply(getApplicationResult -&gt; getApplicationResult.getSemanticVersion()))
+     *             .capabilities(exampleApplication.apply(getApplicationResult -&gt; getApplicationResult.getRequiredCapabilities()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:serverlessrepository/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }

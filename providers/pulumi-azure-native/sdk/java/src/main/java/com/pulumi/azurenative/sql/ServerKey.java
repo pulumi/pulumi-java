@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a server key
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverKey = new ServerKey(&#34;serverKey&#34;, ServerKeyArgs.builder()        
+ *             .keyName(&#34;someVault_someKey_01234567890123456789012345678901&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-7398&#34;)
+ *             .serverKeyType(&#34;AzureKeyVault&#34;)
+ *             .serverName(&#34;sqlcrudtest-4645&#34;)
+ *             .uri(&#34;https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

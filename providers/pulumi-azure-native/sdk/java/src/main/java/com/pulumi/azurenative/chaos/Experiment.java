@@ -23,16 +23,6 @@ import javax.annotation.Nullable;
  * Model that represents a Experiment resource.
  * API Version: 2021-09-15-preview.
  * 
- * ## Example Usage
- * 
- * ## Import
- * 
- * An existing resource can be imported using its type token, name, and identifier, e.g.
- * 
- * ```sh
- * $ pulumi import azure-native:chaos:Experiment exampleExperiment /subscriptions/6b052e15-03d3-4f17-b2e1-be7f07588291/resourceGroups/exampleRG/providers/Microsoft.Chaos/experiments/exampleExperiment 
- * ```
- * 
  */
 @ResourceType(type="azure-native:chaos:Experiment")
 public class Experiment extends com.pulumi.resources.CustomResource {

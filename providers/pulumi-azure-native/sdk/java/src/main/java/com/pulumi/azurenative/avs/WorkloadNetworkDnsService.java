@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### WorkloadNetworks_CreateDnsService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadNetworkDnsService = new WorkloadNetworkDnsService(&#34;workloadNetworkDnsService&#34;, WorkloadNetworkDnsServiceArgs.builder()        
+ *             .defaultDnsZone(&#34;defaultDnsZone1&#34;)
+ *             .displayName(&#34;dnsService1&#34;)
+ *             .dnsServiceId(&#34;dnsService1&#34;)
+ *             .dnsServiceIp(&#34;5.5.5.5&#34;)
+ *             .fqdnZones(&#34;fqdnZone1&#34;)
+ *             .logLevel(&#34;INFO&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .revision(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

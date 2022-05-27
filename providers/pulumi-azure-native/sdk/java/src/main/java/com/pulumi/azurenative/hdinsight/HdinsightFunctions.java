@@ -26,6 +26,11 @@ public final class HdinsightFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * The HDInsight cluster application
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +42,11 @@ public final class HdinsightFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * The HDInsight cluster.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -48,6 +58,11 @@ public final class HdinsightFunctions {
     public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(GetClusterGatewaySettingsArgs args) {
         return getClusterGatewaySettings(args, InvokeOptions.Empty);
     }
+    /**
+     * Gateway settings.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(GetClusterGatewaySettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +74,11 @@ public final class HdinsightFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The private endpoint connection.
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }

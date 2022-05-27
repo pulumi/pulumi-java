@@ -31,6 +31,264 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### PUT Private DNS Zone A Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .aRecords(Map.of(&#34;ipv4Address&#34;, &#34;1.2.3.4&#34;))
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;A&#34;)
+ *             .relativeRecordSetName(&#34;recordA&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone AAAA Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .aaaaRecords(Map.of(&#34;ipv6Address&#34;, &#34;::1&#34;))
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;AAAA&#34;)
+ *             .relativeRecordSetName(&#34;recordAAAA&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone CNAME Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .cnameRecord(Map.of(&#34;cname&#34;, &#34;contoso.com&#34;))
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;CNAME&#34;)
+ *             .relativeRecordSetName(&#34;recordCNAME&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone MX Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .mxRecords(Map.ofEntries(
+ *                 Map.entry(&#34;exchange&#34;, &#34;mail.privatezone1.com&#34;),
+ *                 Map.entry(&#34;preference&#34;, 0)
+ *             ))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;MX&#34;)
+ *             .relativeRecordSetName(&#34;recordMX&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone PTR Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;0.0.127.in-addr.arpa&#34;)
+ *             .ptrRecords(Map.of(&#34;ptrdname&#34;, &#34;localhost&#34;))
+ *             .recordType(&#34;PTR&#34;)
+ *             .relativeRecordSetName(&#34;1&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone SOA Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;SOA&#34;)
+ *             .relativeRecordSetName(&#34;@&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .soaRecord(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, &#34;azureprivatedns-hostmaster.microsoft.com&#34;),
+ *                 Map.entry(&#34;expireTime&#34;, 2419200),
+ *                 Map.entry(&#34;host&#34;, &#34;azureprivatedns.net&#34;),
+ *                 Map.entry(&#34;minimumTtl&#34;, 300),
+ *                 Map.entry(&#34;refreshTime&#34;, 3600),
+ *                 Map.entry(&#34;retryTime&#34;, 300),
+ *                 Map.entry(&#34;serialNumber&#34;, 1)
+ *             ))
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone SRV Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;SRV&#34;)
+ *             .relativeRecordSetName(&#34;recordSRV&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .srvRecords(Map.ofEntries(
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;priority&#34;, 0),
+ *                 Map.entry(&#34;target&#34;, &#34;contoso.com&#34;),
+ *                 Map.entry(&#34;weight&#34;, 10)
+ *             ))
+ *             .ttl(3600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PUT Private DNS Zone TXT Record Set
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateRecordSet = new PrivateRecordSet(&#34;privateRecordSet&#34;, PrivateRecordSetArgs.builder()        
+ *             .metadata(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .recordType(&#34;TXT&#34;)
+ *             .relativeRecordSetName(&#34;recordTXT&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ttl(3600)
+ *             .txtRecords(Map.of(&#34;value&#34;,             
+ *                 &#34;string1&#34;,
+ *                 &#34;string2&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

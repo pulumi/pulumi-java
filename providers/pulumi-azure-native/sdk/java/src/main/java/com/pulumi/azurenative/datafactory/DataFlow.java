@@ -23,6 +23,142 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01.
  * 
  * ## Example Usage
+ * ### DataFlows_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataFlow = new DataFlow(&#34;dataFlow&#34;, DataFlowArgs.builder()        
+ *             .dataFlowName(&#34;exampleDataFlow&#34;)
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.&#34;),
+ *                 Map.entry(&#34;script&#34;, &#34;&#34;&#34;
+ * source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~&gt; USDCurrency
+ * source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~&gt; CADSource
+ * USDCurrency, CADSource union(byName: true)~&gt; Union
+ * Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~&gt; NewCurrencyColumn
+ * NewCurrencyColumn split(Country == &#39;USD&#39;,Country == &#39;CAD&#39;,disjoint: false) ~&gt; ConditionalSplit1{@literal @}(USD, CAD)
+ * ConditionalSplit1@USD sink(saveMode:&#39;overwrite&#39; ) ~&gt; USDSink
+ * ConditionalSplit1@CAD sink(saveMode:&#39;overwrite&#39; ) ~&gt; CADSink                &#34;&#34;&#34;),
+ *                 Map.entry(&#34;sinks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;USDOutput&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;USDSink&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CADOutput&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;CADSink&#34;)
+ *                     )),
+ *                 Map.entry(&#34;sources&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CurrencyDatasetUSD&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;USDCurrency&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CurrencyDatasetCAD&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;CADSource&#34;)
+ *                     )),
+ *                 Map.entry(&#34;type&#34;, &#34;MappingDataFlow&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataFlows_Update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataFlow = new DataFlow(&#34;dataFlow&#34;, DataFlowArgs.builder()        
+ *             .dataFlowName(&#34;exampleDataFlow&#34;)
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.&#34;),
+ *                 Map.entry(&#34;script&#34;, &#34;&#34;&#34;
+ * source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~&gt; USDCurrency
+ * source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~&gt; CADSource
+ * USDCurrency, CADSource union(byName: true)~&gt; Union
+ * Union derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~&gt; NewCurrencyColumn
+ * NewCurrencyColumn split(Country == &#39;USD&#39;,Country == &#39;CAD&#39;,disjoint: false) ~&gt; ConditionalSplit1{@literal @}(USD, CAD)
+ * ConditionalSplit1@USD sink(saveMode:&#39;overwrite&#39; ) ~&gt; USDSink
+ * ConditionalSplit1@CAD sink(saveMode:&#39;overwrite&#39; ) ~&gt; CADSink                &#34;&#34;&#34;),
+ *                 Map.entry(&#34;sinks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;USDOutput&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;USDSink&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CADOutput&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;CADSink&#34;)
+ *                     )),
+ *                 Map.entry(&#34;sources&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CurrencyDatasetUSD&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;USDCurrency&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;dataset&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;referenceName&#34;, &#34;CurrencyDatasetCAD&#34;),
+ *                             Map.entry(&#34;type&#34;, &#34;DatasetReference&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;CADSource&#34;)
+ *                     )),
+ *                 Map.entry(&#34;type&#34;, &#34;MappingDataFlow&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

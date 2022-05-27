@@ -22,6 +22,11 @@ public final class CustomprovidersFunctions {
     public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args) {
         return getAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * The resource definition of this association.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class CustomprovidersFunctions {
     public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args) {
         return getCustomResourceProvider(args, InvokeOptions.Empty);
     }
+    /**
+     * A manifest file that defines the custom resource provider resources.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getCustomResourceProvider", TypeShape.of(GetCustomResourceProviderResult.class), args, Utilities.withVersion(options));
     }

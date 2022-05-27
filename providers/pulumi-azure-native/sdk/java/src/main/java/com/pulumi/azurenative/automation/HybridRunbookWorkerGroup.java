@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-22.
  * 
  * ## Example Usage
+ * ### Create a hybrid worker group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hybridRunbookWorkerGroup = new HybridRunbookWorkerGroup(&#34;hybridRunbookWorkerGroup&#34;, HybridRunbookWorkerGroupArgs.builder()        
+ *             .automationAccountName(&#34;testaccount&#34;)
+ *             .credential(Map.of(&#34;name&#34;, &#34;myRunAsCredentialName&#34;))
+ *             .hybridRunbookWorkerGroupName(&#34;TestHybridGroup&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

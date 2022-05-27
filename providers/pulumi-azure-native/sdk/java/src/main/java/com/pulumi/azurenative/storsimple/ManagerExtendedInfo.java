@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### ManagersCreateExtendedInfo
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managerExtendedInfo = new ManagerExtendedInfo(&#34;managerExtendedInfo&#34;, ManagerExtendedInfoArgs.builder()        
+ *             .algorithm(&#34;None&#34;)
+ *             .integrityKey(&#34;BIl+RHqO8PZ6DRvuXTTK7g==&#34;)
+ *             .managerName(&#34;ManagerForSDKTest2&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

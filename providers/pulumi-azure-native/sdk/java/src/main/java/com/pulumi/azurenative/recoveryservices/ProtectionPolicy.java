@@ -28,6 +28,254 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### Create or Update Full Azure Vm Protection Policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var protectionPolicy = new ProtectionPolicy(&#34;protectionPolicy&#34;, ProtectionPolicyArgs.builder()        
+ *             .policyName(&#34;testPolicy1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backupManagementType&#34;, &#34;AzureIaasVM&#34;),
+ *                 Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;monthlySchedule&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;count&#34;, 2),
+ *                             Map.entry(&#34;durationType&#34;, &#34;Months&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionScheduleFormatType&#34;, &#34;Weekly&#34;),
+ *                         Map.entry(&#34;retentionScheduleWeekly&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;daysOfTheWeek&#34;,                             
+ *                                 &#34;Wednesday&#34;,
+ *                                 &#34;Thursday&#34;),
+ *                             Map.entry(&#34;weeksOfTheMonth&#34;,                             
+ *                                 &#34;First&#34;,
+ *                                 &#34;Third&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                     )),
+ *                     Map.entry(&#34;retentionPolicyType&#34;, &#34;LongTermRetentionPolicy&#34;),
+ *                     Map.entry(&#34;weeklySchedule&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;daysOfTheWeek&#34;,                         
+ *                             &#34;Monday&#34;,
+ *                             &#34;Wednesday&#34;,
+ *                             &#34;Thursday&#34;),
+ *                         Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;count&#34;, 1),
+ *                             Map.entry(&#34;durationType&#34;, &#34;Weeks&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                     )),
+ *                     Map.entry(&#34;yearlySchedule&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;monthsOfYear&#34;,                         
+ *                             &#34;February&#34;,
+ *                             &#34;November&#34;),
+ *                         Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;count&#34;, 4),
+ *                             Map.entry(&#34;durationType&#34;, &#34;Years&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionScheduleFormatType&#34;, &#34;Weekly&#34;),
+ *                         Map.entry(&#34;retentionScheduleWeekly&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;daysOfTheWeek&#34;,                             
+ *                                 &#34;Monday&#34;,
+ *                                 &#34;Thursday&#34;),
+ *                             Map.entry(&#34;weeksOfTheMonth&#34;, &#34;Fourth&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;schedulePolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;schedulePolicyType&#34;, &#34;SimpleSchedulePolicy&#34;),
+ *                     Map.entry(&#34;scheduleRunDays&#34;,                     
+ *                         &#34;Monday&#34;,
+ *                         &#34;Wednesday&#34;,
+ *                         &#34;Thursday&#34;),
+ *                     Map.entry(&#34;scheduleRunFrequency&#34;, &#34;Weekly&#34;),
+ *                     Map.entry(&#34;scheduleRunTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeZone&#34;, &#34;Pacific Standard Time&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;SwaggerTestRg&#34;)
+ *             .vaultName(&#34;NetSDKTestRsVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update Full Azure Workload Protection Policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var protectionPolicy = new ProtectionPolicy(&#34;protectionPolicy&#34;, ProtectionPolicyArgs.builder()        
+ *             .policyName(&#34;testPolicy1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backupManagementType&#34;, &#34;AzureWorkload&#34;),
+ *                 Map.entry(&#34;settings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;issqlcompression&#34;, false),
+ *                     Map.entry(&#34;timeZone&#34;, &#34;Pacific Standard Time&#34;)
+ *                 )),
+ *                 Map.entry(&#34;subProtectionPolicy&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;policyType&#34;, &#34;Full&#34;),
+ *                         Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;monthlySchedule&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;count&#34;, 1),
+ *                                     Map.entry(&#34;durationType&#34;, &#34;Months&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;retentionScheduleFormatType&#34;, &#34;Weekly&#34;),
+ *                                 Map.entry(&#34;retentionScheduleWeekly&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;daysOfTheWeek&#34;, &#34;Sunday&#34;),
+ *                                     Map.entry(&#34;weeksOfTheMonth&#34;, &#34;Second&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                             )),
+ *                             Map.entry(&#34;retentionPolicyType&#34;, &#34;LongTermRetentionPolicy&#34;),
+ *                             Map.entry(&#34;weeklySchedule&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;daysOfTheWeek&#34;,                                 
+ *                                     &#34;Sunday&#34;,
+ *                                     &#34;Tuesday&#34;),
+ *                                 Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;count&#34;, 2),
+ *                                     Map.entry(&#34;durationType&#34;, &#34;Weeks&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                             )),
+ *                             Map.entry(&#34;yearlySchedule&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;monthsOfYear&#34;,                                 
+ *                                     &#34;January&#34;,
+ *                                     &#34;June&#34;,
+ *                                     &#34;December&#34;),
+ *                                 Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;count&#34;, 1),
+ *                                     Map.entry(&#34;durationType&#34;, &#34;Years&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;retentionScheduleFormatType&#34;, &#34;Weekly&#34;),
+ *                                 Map.entry(&#34;retentionScheduleWeekly&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;daysOfTheWeek&#34;, &#34;Sunday&#34;),
+ *                                     Map.entry(&#34;weeksOfTheMonth&#34;, &#34;Last&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;schedulePolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;schedulePolicyType&#34;, &#34;SimpleSchedulePolicy&#34;),
+ *                             Map.entry(&#34;scheduleRunDays&#34;,                             
+ *                                 &#34;Sunday&#34;,
+ *                                 &#34;Tuesday&#34;),
+ *                             Map.entry(&#34;scheduleRunFrequency&#34;, &#34;Weekly&#34;),
+ *                             Map.entry(&#34;scheduleRunTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                         ))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;policyType&#34;, &#34;Differential&#34;),
+ *                         Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;count&#34;, 8),
+ *                                 Map.entry(&#34;durationType&#34;, &#34;Days&#34;)
+ *                             )),
+ *                             Map.entry(&#34;retentionPolicyType&#34;, &#34;SimpleRetentionPolicy&#34;)
+ *                         )),
+ *                         Map.entry(&#34;schedulePolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;schedulePolicyType&#34;, &#34;SimpleSchedulePolicy&#34;),
+ *                             Map.entry(&#34;scheduleRunDays&#34;, &#34;Friday&#34;),
+ *                             Map.entry(&#34;scheduleRunFrequency&#34;, &#34;Weekly&#34;),
+ *                             Map.entry(&#34;scheduleRunTimes&#34;, &#34;2018-01-24T10:00:00Z&#34;)
+ *                         ))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;policyType&#34;, &#34;Log&#34;),
+ *                         Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;count&#34;, 7),
+ *                                 Map.entry(&#34;durationType&#34;, &#34;Days&#34;)
+ *                             )),
+ *                             Map.entry(&#34;retentionPolicyType&#34;, &#34;SimpleRetentionPolicy&#34;)
+ *                         )),
+ *                         Map.entry(&#34;schedulePolicy&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;scheduleFrequencyInMins&#34;, 60),
+ *                             Map.entry(&#34;schedulePolicyType&#34;, &#34;LogSchedulePolicy&#34;)
+ *                         ))
+ *                     )),
+ *                 Map.entry(&#34;workLoadType&#34;, &#34;SQLDataBase&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;SwaggerTestRg&#34;)
+ *             .vaultName(&#34;NetSDKTestRsVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update Simple Azure Vm Protection Policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var protectionPolicy = new ProtectionPolicy(&#34;protectionPolicy&#34;, ProtectionPolicyArgs.builder()        
+ *             .policyName(&#34;testPolicy1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backupManagementType&#34;, &#34;AzureIaasVM&#34;),
+ *                 Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dailySchedule&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;retentionDuration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;count&#34;, 1),
+ *                             Map.entry(&#34;durationType&#34;, &#34;Days&#34;)
+ *                         )),
+ *                         Map.entry(&#34;retentionTimes&#34;, &#34;2018-01-24T02:00:00Z&#34;)
+ *                     )),
+ *                     Map.entry(&#34;retentionPolicyType&#34;, &#34;LongTermRetentionPolicy&#34;)
+ *                 )),
+ *                 Map.entry(&#34;schedulePolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;schedulePolicyType&#34;, &#34;SimpleSchedulePolicy&#34;),
+ *                     Map.entry(&#34;scheduleRunFrequency&#34;, &#34;Daily&#34;),
+ *                     Map.entry(&#34;scheduleRunTimes&#34;, &#34;2018-01-24T02:00:00Z&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeZone&#34;, &#34;Pacific Standard Time&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;SwaggerTestRg&#34;)
+ *             .vaultName(&#34;NetSDKTestRsVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

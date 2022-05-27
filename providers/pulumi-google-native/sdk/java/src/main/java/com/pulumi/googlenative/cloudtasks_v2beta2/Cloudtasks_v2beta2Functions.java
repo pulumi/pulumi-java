@@ -23,6 +23,10 @@ public final class Cloudtasks_v2beta2Functions {
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a queue.
+     * 
+     */
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2beta2:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Cloudtasks_v2beta2Functions {
     public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(GetQueueIamPolicyArgs args) {
         return getQueueIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
+     * 
+     */
     public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(GetQueueIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2beta2:getQueueIamPolicy", TypeShape.of(GetQueueIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Cloudtasks_v2beta2Functions {
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
         return getTask(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a task.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2beta2:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }

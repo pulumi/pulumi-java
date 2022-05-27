@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create a credential
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var credential = new Credential(&#34;credential&#34;, CredentialArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount18&#34;)
+ *             .credentialName(&#34;myCredential&#34;)
+ *             .description(&#34;my description goes here&#34;)
+ *             .name(&#34;myCredential&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .userName(&#34;mylingaiah&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

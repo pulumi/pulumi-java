@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### PutMonitoringConfig
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var monitoringConfig = new MonitoringConfig(&#34;monitoringConfig&#34;, MonitoringConfigArgs.builder()        
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .metricConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;counterSets&#34;, Map.of(&#34;counters&#34;, Map.of(&#34;name&#34;, &#34;test&#34;))),
+ *                 Map.entry(&#34;mdmAccount&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;metricNameSpace&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;test&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .roleName(&#34;testrole&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

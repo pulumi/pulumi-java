@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connection = new Connection(&#34;connection&#34;, ConnectionArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount28&#34;)
+ *             .connectionName(&#34;mysConnection&#34;)
+ *             .connectionType(Map.of(&#34;name&#34;, &#34;Azure&#34;))
+ *             .description(&#34;my description goes here&#34;)
+ *             .fieldDefinitionValues(Map.ofEntries(
+ *                 Map.entry(&#34;AutomationCertificateName&#34;, &#34;mysCertificateName&#34;),
+ *                 Map.entry(&#34;SubscriptionID&#34;, &#34;subid&#34;)
+ *             ))
+ *             .name(&#34;mysConnection&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,10 @@ public final class PowerbiFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2020-06-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class PowerbiFunctions {
     public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args) {
         return getWorkspaceCollection(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2016-01-29.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:getWorkspaceCollection", TypeShape.of(GetWorkspaceCollectionResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class PowerbiFunctions {
     public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args) {
         return listWorkspaceCollectionAccessKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2016-01-29.
+     * 
+     */
     public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args, Utilities.withVersion(options));
     }

@@ -25,6 +25,69 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create network security group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkSecurityGroup = new NetworkSecurityGroup(&#34;networkSecurityGroup&#34;, NetworkSecurityGroupArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .networkSecurityGroupName(&#34;testnsg&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create network security group with rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkSecurityGroup = new NetworkSecurityGroup(&#34;networkSecurityGroup&#34;, NetworkSecurityGroupArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .networkSecurityGroupName(&#34;testnsg&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .securityRules(Map.ofEntries(
+ *                 Map.entry(&#34;access&#34;, &#34;Allow&#34;),
+ *                 Map.entry(&#34;destinationAddressPrefix&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;destinationPortRange&#34;, &#34;80&#34;),
+ *                 Map.entry(&#34;direction&#34;, &#34;Inbound&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                 Map.entry(&#34;priority&#34;, 130),
+ *                 Map.entry(&#34;protocol&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;sourceAddressPrefix&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;sourcePortRange&#34;, &#34;*&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

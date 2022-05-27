@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### KustoScriptsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var script = new Script(&#34;script&#34;, ScriptArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .continueOnErrors(true)
+ *             .databaseName(&#34;KustoDatabase8&#34;)
+ *             .forceUpdateTag(&#34;2bcf3c21-ffd1-4444-b9dd-e52e00ee53fe&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .scriptName(&#34;kustoScript1&#34;)
+ *             .scriptUrl(&#34;https://mysa.blob.core.windows.net/container/script.txt&#34;)
+ *             .scriptUrlSasToken(&#34;?sv=2019-02-02&amp;st=2019-04-29T22%3A18%3A26Z&amp;se=2019-04-30T02%3A23%3A26Z&amp;sr=b&amp;sp=rw&amp;sip=168.1.5.60-168.1.5.70&amp;spr=https&amp;sig=********************************&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

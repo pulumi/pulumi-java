@@ -26,6 +26,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### Create or Update Azure Vm Protection Intent
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var protectionIntent = new ProtectionIntent(&#34;protectionIntent&#34;, ProtectionIntentArgs.builder()        
+ *             .fabricName(&#34;Azure&#34;)
+ *             .intentObjectName(&#34;vm;iaasvmcontainerv2;chamsrgtest;chamscandel&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;policyId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy&#34;),
+ *                 Map.entry(&#34;protectionIntentItemType&#34;, &#34;AzureResourceItem&#34;),
+ *                 Map.entry(&#34;sourceResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .vaultName(&#34;myVault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

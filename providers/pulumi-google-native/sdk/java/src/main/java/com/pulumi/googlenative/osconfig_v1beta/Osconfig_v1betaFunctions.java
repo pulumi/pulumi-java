@@ -21,6 +21,10 @@ public final class Osconfig_v1betaFunctions {
     public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args) {
         return getGuestPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Get an OS Config guest policy.
+     * 
+     */
     public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getGuestPolicy", TypeShape.of(GetGuestPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Osconfig_v1betaFunctions {
     public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args) {
         return getPatchDeployment(args, InvokeOptions.Empty);
     }
+    /**
+     * Get an OS Config patch deployment.
+     * 
+     */
     public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
     }

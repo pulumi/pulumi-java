@@ -29,6 +29,45 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create a Job
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .correlationData(Map.ofEntries(
+ *                 Map.entry(&#34;Key 2&#34;, &#34;Value 2&#34;),
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;)
+ *             ))
+ *             .input(Map.ofEntries(
+ *                 Map.entry(&#34;assetName&#34;, &#34;job1-InputAsset&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.JobInputAsset&#34;)
+ *             ))
+ *             .jobName(&#34;job1&#34;)
+ *             .outputs(Map.ofEntries(
+ *                 Map.entry(&#34;assetName&#34;, &#34;job1-OutputAsset&#34;),
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.JobOutputAsset&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;contosoresources&#34;)
+ *             .transformName(&#34;exampleTransform&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

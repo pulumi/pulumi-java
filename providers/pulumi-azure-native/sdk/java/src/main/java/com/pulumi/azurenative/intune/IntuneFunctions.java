@@ -22,6 +22,11 @@ public final class IntuneFunctions {
     public static CompletableFuture<GetAndroidMAMPolicyByNameResult> getAndroidMAMPolicyByName(GetAndroidMAMPolicyByNameArgs args) {
         return getAndroidMAMPolicyByName(args, InvokeOptions.Empty);
     }
+    /**
+     * Android Policy entity for Intune MAM.
+     * API Version: 2015-01-14-preview.
+     * 
+     */
     public static CompletableFuture<GetAndroidMAMPolicyByNameResult> getAndroidMAMPolicyByName(GetAndroidMAMPolicyByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:intune:getAndroidMAMPolicyByName", TypeShape.of(GetAndroidMAMPolicyByNameResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class IntuneFunctions {
     public static CompletableFuture<GetIoMAMPolicyByNameResult> getIoMAMPolicyByName(GetIoMAMPolicyByNameArgs args) {
         return getIoMAMPolicyByName(args, InvokeOptions.Empty);
     }
+    /**
+     * iOS Policy entity for Intune MAM.
+     * API Version: 2015-01-14-preview.
+     * 
+     */
     public static CompletableFuture<GetIoMAMPolicyByNameResult> getIoMAMPolicyByName(GetIoMAMPolicyByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:intune:getIoMAMPolicyByName", TypeShape.of(GetIoMAMPolicyByNameResult.class), args, Utilities.withVersion(options));
     }

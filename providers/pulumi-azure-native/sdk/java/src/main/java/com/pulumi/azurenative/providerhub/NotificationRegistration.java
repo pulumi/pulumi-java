@@ -20,6 +20,49 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### NotificationRegistrations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var notificationRegistration = new NotificationRegistration(&#34;notificationRegistration&#34;, NotificationRegistrationArgs.builder()        
+ *             .notificationRegistrationName(&#34;fooNotificationRegistration&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;includedEvents&#34;,                 
+ *                     &#34;*{@literal /}write&#34;,
+ *                     &#34;Microsoft.Contoso/employees/delete&#34;),
+ *                 Map.entry(&#34;messageScope&#34;, &#34;RegisteredSubscriptions&#34;),
+ *                 Map.entry(&#34;notificationEndpoints&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;locations&#34;,                         
+ *                             &#34;&#34;,
+ *                             &#34;East US&#34;),
+ *                         Map.entry(&#34;notificationDestination&#34;, &#34;/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-eastus/providers/Microsoft.EventHub/namespaces/unitedstates-mgmtexpint/eventhubs/armlinkednotifications&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;locations&#34;, &#34;North Europe&#34;),
+ *                         Map.entry(&#34;notificationDestination&#34;, &#34;/subscriptions/ac6bcfb5-3dc1-491f-95a6-646b89bf3e88/resourceGroups/mgmtexp-northeurope/providers/Microsoft.EventHub/namespaces/europe-mgmtexpint/eventhubs/armlinkednotifications&#34;)
+ *                     )),
+ *                 Map.entry(&#34;notificationMode&#34;, &#34;EventHub&#34;)
+ *             ))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,11 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args) {
         return getConfigurationStore(args, InvokeOptions.Empty);
     }
+    /**
+     * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +44,11 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<GetKeyValueResult> getKeyValue(GetKeyValueArgs args) {
         return getKeyValue(args, InvokeOptions.Empty);
     }
+    /**
+     * The key-value resource along with all resource properties.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
     public static CompletableFuture<GetKeyValueResult> getKeyValue(GetKeyValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getKeyValue", TypeShape.of(GetKeyValueResult.class), args, Utilities.withVersion(options));
     }
@@ -50,6 +60,11 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-06-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +76,11 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(ListConfigurationStoreKeyValueArgs args) {
         return listConfigurationStoreKeyValue(args, InvokeOptions.Empty);
     }
+    /**
+     * The result of a request to retrieve a key-value from the specified configuration store.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(ListConfigurationStoreKeyValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeyValue", TypeShape.of(ListConfigurationStoreKeyValueResult.class), args, Utilities.withVersion(options));
     }
@@ -72,6 +92,11 @@ public final class AppconfigurationFunctions {
     public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(ListConfigurationStoreKeysArgs args) {
         return listConfigurationStoreKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * The result of a request to list API keys.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(ListConfigurationStoreKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeys", TypeShape.of(ListConfigurationStoreKeysResult.class), args, Utilities.withVersion(options));
     }

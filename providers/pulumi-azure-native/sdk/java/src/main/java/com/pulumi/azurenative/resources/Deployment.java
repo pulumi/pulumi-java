@@ -22,6 +22,134 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create a deployment that will deploy a template with a uri and queryString
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Incremental&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;queryString&#34;, &#34;sv=2019-02-02&amp;st=2019-04-29T22%3A18%3A26Z&amp;se=2019-04-30T02%3A23%3A26Z&amp;sr=b&amp;sp=rw&amp;sip=168.1.5.60-168.1.5.70&amp;spr=https&amp;sig=xxxxxxxx0xxxxxxxxxxxxx%2bxxxxxxxxxxxxxxxxxxxx%3d&#34;),
+ *                     Map.entry(&#34;uri&#34;, &#34;https://example.com/exampleTemplate.json&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a deployment that will deploy a templateSpec with the given resourceId
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Incremental&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a deployment that will redeploy another deployment on failure
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Complete&#34;),
+ *                 Map.entry(&#34;onErrorDeployment&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;deploymentName&#34;, &#34;name-of-deployment-to-use&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;SpecificDeployment&#34;)
+ *                 )),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;uri&#34;, &#34;https://example.com/exampleTemplate.json&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a deployment that will redeploy the last successful deployment on failure
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Complete&#34;),
+ *                 Map.entry(&#34;onErrorDeployment&#34;, Map.of(&#34;type&#34;, &#34;LastSuccessful&#34;)),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;uri&#34;, &#34;https://example.com/exampleTemplate.json&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

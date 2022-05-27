@@ -29,6 +29,366 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateMultiRegionServiceWithCustomHostname
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .additionalLocations(Map.ofEntries(
+ *                 Map.entry(&#34;disableGateway&#34;, true),
+ *                 Map.entry(&#34;location&#34;, &#34;East US&#34;),
+ *                 Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;capacity&#34;, 1),
+ *                     Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *                 ))
+ *             ))
+ *             .apiVersionConstraint(Map.of(&#34;minApiVersion&#34;, &#34;2019-01-01&#34;))
+ *             .hostnameConfigurations(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;certificatePassword&#34;, &#34;Password&#34;),
+ *                     Map.entry(&#34;defaultSslBinding&#34;, true),
+ *                     Map.entry(&#34;encodedCertificate&#34;, &#34;****** Base 64 Encoded Certificate ************&#34;),
+ *                     Map.entry(&#34;hostName&#34;, &#34;gateway1.msitesting.net&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Proxy&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;certificatePassword&#34;, &#34;Password&#34;),
+ *                     Map.entry(&#34;encodedCertificate&#34;, &#34;****** Base 64 Encoded Certificate ************&#34;),
+ *                     Map.entry(&#34;hostName&#34;, &#34;mgmt.msitesting.net&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Management&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;certificatePassword&#34;, &#34;Password&#34;),
+ *                     Map.entry(&#34;encodedCertificate&#34;, &#34;****** Base 64 Encoded Certificate ************&#34;),
+ *                     Map.entry(&#34;hostName&#34;, &#34;portal1.msitesting.net&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Portal&#34;)
+ *                 ))
+ *             .location(&#34;West US&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .virtualNetworkType(&#34;None&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .publisherEmail(&#34;foo@contoso.com&#34;)
+ *             .publisherName(&#34;foo&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Developer&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;Contoso&#34;),
+ *                 Map.entry(&#34;Test&#34;, &#34;User&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateServiceHavingMsi
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 0),
+ *                 Map.entry(&#34;name&#34;, &#34;Consumption&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateServiceInZones
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .location(&#34;North europe&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .zones(            
+ *                 &#34;1&#34;,
+ *                 &#34;2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateServiceWithCustomHostnameKeyVault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .apiVersionConstraint(Map.of(&#34;minApiVersion&#34;, &#34;2019-01-01&#34;))
+ *             .hostnameConfigurations(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;defaultSslBinding&#34;, true),
+ *                     Map.entry(&#34;hostName&#34;, &#34;gateway1.msitesting.net&#34;),
+ *                     Map.entry(&#34;identityClientId&#34;, &#34;329419bc-adec-4dce-9568-25a6d486e468&#34;),
+ *                     Map.entry(&#34;keyVaultId&#34;, &#34;https://rpbvtkeyvaultintegration.vault.azure.net/secrets/msitestingCert&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Proxy&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;hostName&#34;, &#34;mgmt.msitesting.net&#34;),
+ *                     Map.entry(&#34;identityClientId&#34;, &#34;329419bc-adec-4dce-9568-25a6d486e468&#34;),
+ *                     Map.entry(&#34;keyVaultId&#34;, &#34;https://rpbvtkeyvaultintegration.vault.azure.net/secrets/msitestingCert&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Management&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;hostName&#34;, &#34;portal1.msitesting.net&#34;),
+ *                     Map.entry(&#34;identityClientId&#34;, &#34;329419bc-adec-4dce-9568-25a6d486e468&#34;),
+ *                     Map.entry(&#34;keyVaultId&#34;, &#34;https://rpbvtkeyvaultintegration.vault.azure.net/secrets/msitestingCert&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Portal&#34;)
+ *                 ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;, ))
+ *             ))
+ *             .location(&#34;North Europe&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .virtualNetworkType(&#34;None&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateServiceWithSystemCertificates
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .certificates(Map.ofEntries(
+ *                 Map.entry(&#34;certificatePassword&#34;, &#34;Password&#34;),
+ *                 Map.entry(&#34;encodedCertificate&#34;, &#34;*******Base64 encoded Certificate******************&#34;),
+ *                 Map.entry(&#34;storeName&#34;, &#34;CertificateAuthority&#34;)
+ *             ))
+ *             .location(&#34;Central US&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateServiceWithUserAssignedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1&#34;, ))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .publisherEmail(&#34;apim@autorestsdk.com&#34;)
+ *             .publisherName(&#34;autorestsdk&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 0),
+ *                 Map.entry(&#34;name&#34;, &#34;Consumption&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;),
+ *                 Map.entry(&#34;tag3&#34;, &#34;value3&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementUndelete
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiManagementService = new ApiManagementService(&#34;apiManagementService&#34;, ApiManagementServiceArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .publisherEmail(&#34;foo@contoso.com&#34;)
+ *             .publisherName(&#34;foo&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .restore(true)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Developer&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

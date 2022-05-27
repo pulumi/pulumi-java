@@ -21,6 +21,10 @@ public final class Jobs_v3Functions {
     public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args) {
         return getCompany(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves specified company.
+     * 
+     */
     public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v3:getCompany", TypeShape.of(GetCompanyResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Jobs_v3Functions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v3:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }

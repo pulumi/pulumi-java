@@ -19,6 +19,10 @@ public final class Assuredworkloads_v1Functions {
     public static CompletableFuture<GetWorkloadResult> getWorkload(GetWorkloadArgs args) {
         return getWorkload(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets Assured Workload associated with a CRM Node
+     * 
+     */
     public static CompletableFuture<GetWorkloadResult> getWorkload(GetWorkloadArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:assuredworkloads/v1:getWorkload", TypeShape.of(GetWorkloadResult.class), args, Utilities.withVersion(options));
     }

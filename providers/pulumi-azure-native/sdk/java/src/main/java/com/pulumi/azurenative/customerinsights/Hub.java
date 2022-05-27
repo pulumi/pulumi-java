@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Hubs_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hub = new Hub(&#34;hub&#34;, HubArgs.builder()        
+ *             .hubBillingInfo(Map.ofEntries(
+ *                 Map.entry(&#34;maxUnits&#34;, 5),
+ *                 Map.entry(&#34;minUnits&#34;, 1),
+ *                 Map.entry(&#34;skuName&#34;, &#34;B0&#34;)
+ *             ))
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

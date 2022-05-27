@@ -21,13 +21,44 @@ import javax.annotation.Nullable;
  * API Version: 2017-05-01-preview.
  * 
  * ## Example Usage
+ * ### CreateProject
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Project(&#34;project&#34;, ProjectArgs.builder()        
+ *             .accountName(&#34;testaccount&#34;)
+ *             .friendlyName(&#34;testName&#34;)
+ *             .gitrepo(&#34;https://github/abc&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .projectName(&#34;testProject&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;tagKey1&#34;, &#34;TagValue1&#34;))
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:machinelearningexperimentation:Project testProject /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace/projects/testProject 
+ * $ pulumi import azure-native:machinelearningexperimentation:Project teamAccountcrud5678 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace/projects/testProject 
  * ```
  * 
  */

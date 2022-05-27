@@ -24,6 +24,72 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateGateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gateway = new Gateway(&#34;gateway&#34;, GatewayArgs.builder()        
+ *             .description(&#34;Service Fabric Mesh sample gateway.&#34;)
+ *             .destinationNetwork(Map.of(&#34;name&#34;, &#34;helloWorldNetwork&#34;))
+ *             .gatewayResourceName(&#34;sampleGateway&#34;)
+ *             .http(Map.ofEntries(
+ *                 Map.entry(&#34;hosts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;contoso.com&#34;),
+ *                     Map.entry(&#34;routes&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;destination&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;applicationName&#34;, &#34;httpHelloWorldApp&#34;),
+ *                             Map.entry(&#34;endpointName&#34;, &#34;indexHttpEndpoint&#34;),
+ *                             Map.entry(&#34;serviceName&#34;, &#34;indexService&#34;)
+ *                         )),
+ *                         Map.entry(&#34;match&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;headers&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;accept&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;exact&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;application/json&#34;)
+ *                             )),
+ *                             Map.entry(&#34;path&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;rewrite&#34;, &#34;/&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;prefix&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;/index&#34;)
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;index&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;contosoWebsite&#34;),
+ *                 Map.entry(&#34;port&#34;, 8081)
+ *             ))
+ *             .location(&#34;EastUS&#34;)
+ *             .resourceGroupName(&#34;sbz_demo&#34;)
+ *             .sourceNetwork(Map.of(&#34;name&#34;, &#34;Open&#34;))
+ *             .tags()
+ *             .tcp(Map.ofEntries(
+ *                 Map.entry(&#34;destination&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationName&#34;, &#34;helloWorldApp&#34;),
+ *                     Map.entry(&#34;endpointName&#34;, &#34;helloWorldListener&#34;),
+ *                     Map.entry(&#34;serviceName&#34;, &#34;helloWorldService&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;web&#34;),
+ *                 Map.entry(&#34;port&#34;, 80)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

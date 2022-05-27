@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create server DNS alias
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverDnsAlias = new ServerDnsAlias(&#34;serverDnsAlias&#34;, ServerDnsAliasArgs.builder()        
+ *             .dnsAliasName(&#34;dns-alias-name-1&#34;)
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .serverName(&#34;dns-alias-server&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

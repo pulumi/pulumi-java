@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-04-01.
  * 
  * ## Example Usage
+ * ### ControllersCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var controller = new Controller(&#34;controller&#34;, ControllerArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .name(&#34;myControllerResource&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags()
+ *             .targetContainerHostCredentialsBase64(&#34;QmFzZTY0IEVuY29kZWQgVmFsdWUK&#34;)
+ *             .targetContainerHostResourceId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

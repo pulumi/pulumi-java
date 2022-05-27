@@ -60,6 +60,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(GetAutomationAccountArgs args) {
         return getAutomationAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the automation account type.
+     * API Version: 2021-06-22.
+     * 
+     */
     public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(GetAutomationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getAutomationAccount", TypeShape.of(GetAutomationAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +76,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the certificate.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -82,6 +92,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the connection.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -93,6 +108,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetConnectionTypeResult> getConnectionType(GetConnectionTypeArgs args) {
         return getConnectionType(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the connection type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetConnectionTypeResult> getConnectionType(GetConnectionTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnectionType", TypeShape.of(GetConnectionTypeResult.class), args, Utilities.withVersion(options));
     }
@@ -104,6 +124,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetCredentialResult> getCredential(GetCredentialArgs args) {
         return getCredential(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the credential.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetCredentialResult> getCredential(GetCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getCredential", TypeShape.of(GetCredentialResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +140,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(GetDscConfigurationArgs args) {
         return getDscConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the configuration type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(GetDscConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getDscConfiguration", TypeShape.of(GetDscConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -126,6 +156,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(GetDscNodeConfigurationArgs args) {
         return getDscNodeConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the dsc node configuration.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(GetDscNodeConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getDscNodeConfiguration", TypeShape.of(GetDscNodeConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +172,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(GetHybridRunbookWorkerArgs args) {
         return getHybridRunbookWorker(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of hybrid runbook worker.
+     * API Version: 2021-06-22.
+     * 
+     */
     public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(GetHybridRunbookWorkerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorker", TypeShape.of(GetHybridRunbookWorkerResult.class), args, Utilities.withVersion(options));
     }
@@ -148,6 +188,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(GetHybridRunbookWorkerGroupArgs args) {
         return getHybridRunbookWorkerGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of hybrid runbook worker group.
+     * API Version: 2021-06-22.
+     * 
+     */
     public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(GetHybridRunbookWorkerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorkerGroup", TypeShape.of(GetHybridRunbookWorkerGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -159,6 +204,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetJobScheduleResult> getJobSchedule(GetJobScheduleArgs args) {
         return getJobSchedule(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the job schedule.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetJobScheduleResult> getJobSchedule(GetJobScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getJobSchedule", TypeShape.of(GetJobScheduleResult.class), args, Utilities.withVersion(options));
     }
@@ -170,6 +220,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetModuleResult> getModule(GetModuleArgs args) {
         return getModule(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the module type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetModuleResult> getModule(GetModuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getModule", TypeShape.of(GetModuleResult.class), args, Utilities.withVersion(options));
     }
@@ -181,6 +236,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-01-13-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -192,6 +252,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetPython2PackageResult> getPython2Package(GetPython2PackageArgs args) {
         return getPython2Package(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the module type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetPython2PackageResult> getPython2Package(GetPython2PackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getPython2Package", TypeShape.of(GetPython2PackageResult.class), args, Utilities.withVersion(options));
     }
@@ -203,6 +268,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetRunbookResult> getRunbook(GetRunbookArgs args) {
         return getRunbook(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the runbook type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetRunbookResult> getRunbook(GetRunbookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getRunbook", TypeShape.of(GetRunbookResult.class), args, Utilities.withVersion(options));
     }
@@ -214,6 +284,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args) {
         return getSchedule(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the schedule.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSchedule", TypeShape.of(GetScheduleResult.class), args, Utilities.withVersion(options));
     }
@@ -225,6 +300,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(GetSoftwareUpdateConfigurationByNameArgs args) {
         return getSoftwareUpdateConfigurationByName(args, InvokeOptions.Empty);
     }
+    /**
+     * Software update configuration properties.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(GetSoftwareUpdateConfigurationByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSoftwareUpdateConfigurationByName", TypeShape.of(GetSoftwareUpdateConfigurationByNameResult.class), args, Utilities.withVersion(options));
     }
@@ -236,6 +316,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args) {
         return getSourceControl(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the source control.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSourceControl", TypeShape.of(GetSourceControlResult.class), args, Utilities.withVersion(options));
     }
@@ -247,6 +332,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the variable.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
@@ -258,6 +348,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetWatcherResult> getWatcher(GetWatcherArgs args) {
         return getWatcher(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the watcher type.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetWatcherResult> getWatcher(GetWatcherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWatcher", TypeShape.of(GetWatcherResult.class), args, Utilities.withVersion(options));
     }
@@ -269,6 +364,11 @@ public final class AutomationFunctions {
     public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
         return getWebhook(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of the webhook type.
+     * API Version: 2015-10-31.
+     * 
+     */
     public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }
@@ -279,6 +379,10 @@ public final class AutomationFunctions {
     public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(ListKeyByAutomationAccountArgs args) {
         return listKeyByAutomationAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2021-06-22.
+     * 
+     */
     public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(ListKeyByAutomationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:listKeyByAutomationAccount", TypeShape.of(ListKeyByAutomationAccountResult.class), args, Utilities.withVersion(options));
     }

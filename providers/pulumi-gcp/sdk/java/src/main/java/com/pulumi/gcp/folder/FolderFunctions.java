@@ -46,6 +46,37 @@ public final class FolderFunctions {
     public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
         return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Allows management of Organization policies for a Google Folder. For more information see
+     * [the official
+     * documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(FolderFunctions.getOrganizationPolicy(GetOrganizationPolicyArgs.builder()
+     *             .folder(&#34;folders/folderid&#34;)
+     *             .constraint(&#34;constraints/compute.trustedImageProjects&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;version&#34;, policy.apply(getOrganizationPolicyResult -&gt; getOrganizationPolicyResult.getVersion()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:folder/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }

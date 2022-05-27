@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2018-03-01-beta.
  * 
  * ## Example Usage
+ * ### Create subscription level SaaS resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var saasSubscriptionLevel = new SaasSubscriptionLevel(&#34;saasSubscriptionLevel&#34;, SaasSubscriptionLevelArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .name(&#34;MyContosoSubscription&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;offerId&#34;, &#34;contosoOffer&#34;),
+ *                 Map.entry(&#34;paymentChannelMetadata&#34;, Map.of(&#34;AzureSubscriptionId&#34;, &#34;155af98a-3205-47e7-883b-a2ab9db9f88d&#34;)),
+ *                 Map.entry(&#34;paymentChannelType&#34;, &#34;SubscriptionDelegated&#34;),
+ *                 Map.entry(&#34;publisherId&#34;, &#34;microsoft-contoso&#34;),
+ *                 Map.entry(&#34;saasResourceName&#34;, &#34;MyContosoSubscription&#34;),
+ *                 Map.entry(&#34;skuId&#34;, &#34;free&#34;),
+ *                 Map.entry(&#34;termId&#34;, &#34;hjdtn7tfnxcy&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;my-saas-rg&#34;)
+ *             .resourceName(&#34;MyContosoSubscription&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

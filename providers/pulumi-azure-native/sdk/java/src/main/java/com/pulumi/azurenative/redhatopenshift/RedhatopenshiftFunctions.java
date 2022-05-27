@@ -24,6 +24,11 @@ public final class RedhatopenshiftFunctions {
     public static CompletableFuture<GetOpenShiftClusterResult> getOpenShiftCluster(GetOpenShiftClusterArgs args) {
         return getOpenShiftCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     * API Version: 2020-04-30.
+     * 
+     */
     public static CompletableFuture<GetOpenShiftClusterResult> getOpenShiftCluster(GetOpenShiftClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:getOpenShiftCluster", TypeShape.of(GetOpenShiftClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class RedhatopenshiftFunctions {
     public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> listOpenShiftClusterAdminCredentials(ListOpenShiftClusterAdminCredentialsArgs args) {
         return listOpenShiftClusterAdminCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster&#39;s admin kubeconfig.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
     public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> listOpenShiftClusterAdminCredentials(ListOpenShiftClusterAdminCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class RedhatopenshiftFunctions {
     public static CompletableFuture<ListOpenShiftClusterCredentialsResult> listOpenShiftClusterCredentials(ListOpenShiftClusterCredentialsArgs args) {
         return listOpenShiftClusterCredentials(args, InvokeOptions.Empty);
     }
+    /**
+     * OpenShiftClusterCredentials represents an OpenShift cluster&#39;s credentials
+     * API Version: 2020-04-30.
+     * 
+     */
     public static CompletableFuture<ListOpenShiftClusterCredentialsResult> listOpenShiftClusterCredentials(ListOpenShiftClusterCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterCredentials", TypeShape.of(ListOpenShiftClusterCredentialsResult.class), args, Utilities.withVersion(options));
     }

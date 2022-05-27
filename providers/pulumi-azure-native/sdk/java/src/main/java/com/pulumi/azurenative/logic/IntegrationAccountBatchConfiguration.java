@@ -22,6 +22,46 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a batch configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountBatchConfiguration = new IntegrationAccountBatchConfiguration(&#34;integrationAccountBatchConfiguration&#34;, IntegrationAccountBatchConfigurationArgs.builder()        
+ *             .batchConfigurationName(&#34;testBatchConfiguration&#34;)
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;batchGroupName&#34;, &#34;DEFAULT&#34;),
+ *                 Map.entry(&#34;releaseCriteria&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;batchSize&#34;, 234567),
+ *                     Map.entry(&#34;messageCount&#34;, 10),
+ *                     Map.entry(&#34;recurrence&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;frequency&#34;, &#34;Minute&#34;),
+ *                         Map.entry(&#34;interval&#34;, 1),
+ *                         Map.entry(&#34;startTime&#34;, &#34;2017-03-24T11:43:00&#34;),
+ *                         Map.entry(&#34;timeZone&#34;, &#34;India Standard Time&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

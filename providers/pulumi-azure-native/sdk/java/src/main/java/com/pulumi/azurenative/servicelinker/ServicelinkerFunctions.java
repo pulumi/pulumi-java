@@ -22,6 +22,11 @@ public final class ServicelinkerFunctions {
     public static CompletableFuture<GetLinkerResult> getLinker(GetLinkerArgs args) {
         return getLinker(args, InvokeOptions.Empty);
     }
+    /**
+     * Linker of source and target resource
+     * API Version: 2021-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetLinkerResult> getLinker(GetLinkerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:getLinker", TypeShape.of(GetLinkerResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class ServicelinkerFunctions {
     public static CompletableFuture<ListLinkerConfigurationsResult> listLinkerConfigurations(ListLinkerConfigurationsArgs args) {
         return listLinkerConfigurations(args, InvokeOptions.Empty);
     }
+    /**
+     * Configurations for source resource, include appSettings, connectionString and serviceBindings
+     * API Version: 2021-11-01-preview.
+     * 
+     */
     public static CompletableFuture<ListLinkerConfigurationsResult> listLinkerConfigurations(ListLinkerConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:listLinkerConfigurations", TypeShape.of(ListLinkerConfigurationsResult.class), args, Utilities.withVersion(options));
     }

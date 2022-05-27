@@ -76,15 +76,14 @@ func main() {
 			if err != nil {
 				cmdutil.Exit(err)
 			}
-        	javaExec, err = newJBangExecutor(cmd, binary)
-       		if err != nil {
-                cmdutil.Exit(err)
-            }
+			javaExec, err = newJBangExecutor(cmd, binary)
+			if err != nil {
+				cmdutil.Exit(err)
+			}
 		default:
 			cmdutil.Exit(fmt.Errorf("Could not find way to use binary: `%s` with `%s`", binary, suffix))
 
 		}
-
 
 	default:
 		pathExec, err := probeExecutor()
@@ -198,7 +197,10 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	args := host.exec.pluginArgs
 	output, err := host.runJavaCommand(ctx, cmd, args)
 	if err != nil {
-		return nil, errors.Wrapf(err, "language host could not run plugin discovery command successfully")
+		// Plugin determination is an advisory feature so it does not need to escalate to an error.
+		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
+			"returning empty plugins; cause: %s", err)
+		return []plugin.PulumiPluginJSON{}, nil
 	}
 
 	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
@@ -209,7 +211,10 @@ func (host *javaLanguageHost) determinePulumiPackages(
 		if e, ok := err.(*json.SyntaxError); ok {
 			logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
 		}
-		return nil, errors.Wrapf(err, "language host could not unmarshall plugin package information")
+		// Plugin determination is an advisory feature so it doe not need to escalate to an error.
+		logging.V(3).Infof("language host could not unmarshall plugin package information, "+
+			"returning empty plugins; cause: %s", err)
+		return []plugin.PulumiPluginJSON{}, nil
 	}
 
 	return plugins, nil
@@ -411,7 +416,7 @@ func probeJBangExecutor() (string, error) {
 			jbang = "./jbang"
 		}
 	}
-	return jbang, nil;
+	return jbang, nil
 }
 
 func probeExecutor() (string, error) {
@@ -493,9 +498,10 @@ func resolveExecutor(exec string) (*javaExecutor, error) {
 func newGradleExecutor(cmd string) (*javaExecutor, error) {
 	return &javaExecutor{
 		cmd:       cmd,
-		buildArgs: []string{"build", "-q", "--console=plain"},
-		runArgs:   []string{"run", "-q", "--console=plain"},
+		buildArgs: []string{"build", "--console=plain"},
+		runArgs:   []string{"run", "--console=plain"},
 		pluginArgs: []string{
+			/* STDOUT needs to be clean of gradle output, because we expect a JSON with plugin results */
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
 			"-PmainClass=com.pulumi.bootstrap.internal.Main",
@@ -507,10 +513,12 @@ func newGradleExecutor(cmd string) (*javaExecutor, error) {
 func newMavenExecutor(cmd string) (*javaExecutor, error) {
 	return &javaExecutor{
 		cmd:       cmd,
-		buildArgs: []string{"--quiet", "--no-transfer-progress", "compile"},
-		runArgs:   []string{"--quiet", "--no-transfer-progress", "compile", "exec:java"},
+		buildArgs: []string{"--no-transfer-progress", "compile"},
+		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
-			"--quiet", "--no-transfer-progress", "compile", "exec:java",
+			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
+			"-Dorg.slf4j.simpleLogger.logFile=System.err",
+			"--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
 		},
@@ -523,7 +531,7 @@ func newJBangExecutor(cmd string, script string) (*javaExecutor, error) {
 	return &javaExecutor{
 		cmd:       cmd,
 		buildArgs: []string{"--quiet", "build", script},
-		runArgs:   []string{"--quiet",  "run", script},
+		runArgs:   []string{"--quiet", "run", script},
 		pluginArgs: []string{
 			"--quiet", "run",
 			"--main=com.pulumi.bootstrap.internal.Main",

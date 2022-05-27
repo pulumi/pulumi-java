@@ -22,6 +22,47 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01-preview.
  * 
  * ## Example Usage
+ * ### PrivateEndpointConnectionProxyCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnectionProxy = new PrivateEndpointConnectionProxy(&#34;privateEndpointConnectionProxy&#34;, PrivateEndpointConnectionProxyArgs.builder()        
+ *             .accountName(&#34;contoso&#34;)
+ *             .privateEndpointConnectionProxyId(&#34;peexample01&#34;)
+ *             .remotePrivateEndpoint(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{peName}&#34;),
+ *                 Map.entry(&#34;immutableResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{peName}&#34;),
+ *                 Map.entry(&#34;immutableSubscriptionId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;),
+ *                 Map.entry(&#34;location&#34;, &#34;westus2&#34;),
+ *                 Map.entry(&#34;manualPrivateLinkServiceConnections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;groupIds&#34;, &#34;DeviceUpdate&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;{privateEndpointConnectionProxyId}&#34;),
+ *                     Map.entry(&#34;requestMessage&#34;, &#34;Please approve my connection, thanks.&#34;)
+ *                 )),
+ *                 Map.entry(&#34;privateLinkServiceProxies&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;groupConnectivityInformation&#34;, ),
+ *                     Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;test-rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

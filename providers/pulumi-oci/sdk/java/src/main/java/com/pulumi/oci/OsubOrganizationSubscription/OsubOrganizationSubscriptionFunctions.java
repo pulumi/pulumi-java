@@ -23,6 +23,14 @@ public final class OsubOrganizationSubscriptionFunctions {
     public static CompletableFuture<GetOrganizationSubscriptionsResult> getOrganizationSubscriptions(GetOrganizationSubscriptionsArgs args) {
         return getOrganizationSubscriptions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Organization Subscriptions in Oracle Cloud Infrastructure Osub Organization Subscription service.
+     * 
+     * API that returns data for the list of subscription ids returned from Organizations API
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetOrganizationSubscriptionsResult> getOrganizationSubscriptions(GetOrganizationSubscriptionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubOrganizationSubscription/getOrganizationSubscriptions:getOrganizationSubscriptions", TypeShape.of(GetOrganizationSubscriptionsResult.class), args, Utilities.withVersion(options));
     }

@@ -21,6 +21,10 @@ public final class SignerFunctions {
     public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(GetProfilePermissionArgs args) {
         return getProfilePermission(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(GetProfilePermissionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getProfilePermission", TypeShape.of(GetProfilePermissionResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class SignerFunctions {
     public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args) {
         return getSigningProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
+     * 
+     */
     public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args, Utilities.withVersion(options));
     }

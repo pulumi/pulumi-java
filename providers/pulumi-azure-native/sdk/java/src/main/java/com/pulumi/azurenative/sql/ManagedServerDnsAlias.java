@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create managed server DNS alias
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedServerDnsAlias = new ManagedServerDnsAlias(&#34;managedServerDnsAlias&#34;, ManagedServerDnsAliasArgs.builder()        
+ *             .dnsAliasName(&#34;dns-alias-mi&#34;)
+ *             .managedInstanceName(&#34;dns-mi&#34;)
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

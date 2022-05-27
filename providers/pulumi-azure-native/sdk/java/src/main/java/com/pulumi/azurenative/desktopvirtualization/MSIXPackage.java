@@ -23,6 +23,55 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### MSIXPackage_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var msixPackage = new MSIXPackage(&#34;msixPackage&#34;, MSIXPackageArgs.builder()        
+ *             .displayName(&#34;displayname&#34;)
+ *             .hostPoolName(&#34;hostpool1&#34;)
+ *             .imagePath(&#34;imagepath&#34;)
+ *             .isActive(false)
+ *             .isRegularRegistration(false)
+ *             .lastUpdated(&#34;2008-09-22T14:01:54.9571247Z&#34;)
+ *             .msixPackageFullName(&#34;msixpackagefullname&#34;)
+ *             .packageApplications(Map.ofEntries(
+ *                 Map.entry(&#34;appId&#34;, &#34;ApplicationId&#34;),
+ *                 Map.entry(&#34;appUserModelID&#34;, &#34;AppUserModelId&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;application-desc&#34;),
+ *                 Map.entry(&#34;friendlyName&#34;, &#34;friendlyname&#34;),
+ *                 Map.entry(&#34;iconImageName&#34;, &#34;Apptile&#34;),
+ *                 Map.entry(&#34;rawIcon&#34;, &#34;VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo&#34;),
+ *                 Map.entry(&#34;rawPng&#34;, &#34;VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo&#34;)
+ *             ))
+ *             .packageDependencies(Map.ofEntries(
+ *                 Map.entry(&#34;dependencyName&#34;, &#34;MsixTest_Dependency_Name&#34;),
+ *                 Map.entry(&#34;minVersion&#34;, &#34;version&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;PublishedName&#34;)
+ *             ))
+ *             .packageFamilyName(&#34;MsixPackage_FamilyName&#34;)
+ *             .packageName(&#34;MsixPackage_name&#34;)
+ *             .packageRelativePath(&#34;packagerelativepath&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .version(&#34;version&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

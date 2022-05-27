@@ -46,6 +46,35 @@ public final class CloudidentityFunctions {
     public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args) {
         return getGroupMemberships(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get list of the Cloud Identity Group Memberships within a given Group.
+     * 
+     * https://cloud.google.com/identity/docs/concepts/overview#memberships
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var members = Output.of(CloudidentityFunctions.getGroupMemberships(GetGroupMembershipsArgs.builder()
+     *             .group(&#34;groups/123eab45c6defghi&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroupMemberships:getGroupMemberships", TypeShape.of(GetGroupMembershipsResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +110,35 @@ public final class CloudidentityFunctions {
     public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
         return getGroups(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get list of the Cloud Identity Groups under a customer or namespace.
+     * 
+     * https://cloud.google.com/identity/docs/concepts/overview#groups
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var groups = Output.of(CloudidentityFunctions.getGroups(GetGroupsArgs.builder()
+     *             .parent(&#34;customers/A01b123xz&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }

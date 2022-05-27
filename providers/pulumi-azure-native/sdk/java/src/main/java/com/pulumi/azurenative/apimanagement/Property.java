@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateProperty
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var property = new Property(&#34;property&#34;, PropertyArgs.builder()        
+ *             .displayName(&#34;prop3name&#34;)
+ *             .propId(&#34;testprop2&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .secret(true)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .value(&#34;propValue&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

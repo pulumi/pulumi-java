@@ -22,6 +22,57 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01.
  * 
  * ## Example Usage
+ * ### Create or update an Iot Connector FHIR destination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotConnectorFhirDestination = new IotConnectorFhirDestination(&#34;iotConnectorFhirDestination&#34;, IotConnectorFhirDestinationArgs.builder()        
+ *             .fhirDestinationName(&#34;dest1&#34;)
+ *             .fhirMapping(Map.of(&#34;content&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;template&#34;, IotMappingProperties.builder()
+ *                     .template(Map.ofEntries(
+ *                         Map.entry(&#34;codes&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;code&#34;, &#34;8867-4&#34;),
+ *                             Map.entry(&#34;display&#34;, &#34;Heart rate&#34;),
+ *                             Map.entry(&#34;system&#34;, &#34;http://loinc.org&#34;)
+ *                         )),
+ *                         Map.entry(&#34;periodInterval&#34;, 60),
+ *                         Map.entry(&#34;typeName&#34;, &#34;heartrate&#34;),
+ *                         Map.entry(&#34;value&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;defaultPeriod&#34;, 5000),
+ *                             Map.entry(&#34;unit&#34;, &#34;count/min&#34;),
+ *                             Map.entry(&#34;valueName&#34;, &#34;hr&#34;),
+ *                             Map.entry(&#34;valueType&#34;, &#34;SampledData&#34;)
+ *                         ))
+ *                     ))
+ *                     .templateType(&#34;CodeValueFhir&#34;)
+ *                     .build()),
+ *                 Map.entry(&#34;templateType&#34;, &#34;CollectionFhirTemplate&#34;)
+ *             )))
+ *             .fhirServiceResourceId(&#34;subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice&#34;)
+ *             .iotConnectorName(&#34;blue&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;testRG&#34;)
+ *             .resourceIdentityResolutionType(&#34;Create&#34;)
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -181,7 +232,8 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:IotConnectorFhirDestination").build()),
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:IotConnectorFhirDestination").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:IotConnectorFhirDestination").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20220131preview:IotConnectorFhirDestination").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

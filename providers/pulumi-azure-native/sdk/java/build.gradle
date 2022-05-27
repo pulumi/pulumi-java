@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_AZURE_NATIVE_PROVIDER_SDK_VERSION") ?: "1.63.0";
+version = System.getenv("PULUMI_AZURE_NATIVE_PROVIDER_SDK_VERSION") ?: "1.64.0";
 
 java {
     toolchain {
@@ -44,7 +44,7 @@ repositories {
 
 def prerelease = version.contains("+")
 
-def defaultPulumiJavaSdkVersion = "0.1.0";
+def defaultPulumiJavaSdkVersion = "0.2.1";
 
 def pulumiJavaSdkVersion = prerelease
     ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)

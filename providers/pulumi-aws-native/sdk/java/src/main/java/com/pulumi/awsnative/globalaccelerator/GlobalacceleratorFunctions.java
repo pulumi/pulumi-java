@@ -23,6 +23,10 @@ public final class GlobalacceleratorFunctions {
     public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
         return getAccelerator(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::GlobalAccelerator::Accelerator
+     * 
+     */
     public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class GlobalacceleratorFunctions {
     public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args) {
         return getEndpointGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
+     * 
+     */
     public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getEndpointGroup", TypeShape.of(GetEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class GlobalacceleratorFunctions {
     public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
         return getListener(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::GlobalAccelerator::Listener
+     * 
+     */
     public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }

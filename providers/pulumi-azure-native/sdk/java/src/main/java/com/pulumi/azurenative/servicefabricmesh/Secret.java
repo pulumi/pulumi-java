@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateSecret
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var secret = new Secret(&#34;secret&#34;, SecretArgs.builder()        
+ *             .location(&#34;EastUS&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;sbz_demo&#34;)
+ *             .secretResourceName(&#34;dbConnectionString&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

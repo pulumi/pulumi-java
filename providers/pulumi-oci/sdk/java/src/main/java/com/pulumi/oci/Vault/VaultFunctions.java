@@ -27,6 +27,14 @@ public final class VaultFunctions {
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Secret resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified secret.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Vault/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +49,14 @@ public final class VaultFunctions {
     public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
         return getSecretVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Secret Version resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified version of a secret.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Vault/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +71,14 @@ public final class VaultFunctions {
     public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args) {
         return getSecrets(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Secrets in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Lists all secrets in the specified vault and compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Vault/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
     }

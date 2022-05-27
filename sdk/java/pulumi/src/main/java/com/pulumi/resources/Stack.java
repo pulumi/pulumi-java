@@ -48,7 +48,7 @@ public class Stack extends ComponentResource {
     /**
      * Create a Stack with stack resources created by the <code>init</code> callback.
      * An instance of this will be automatically created when
-     * any @see {@link Deployment#runAsync(Supplier)} overload is called.
+     * any @see {@link com.pulumi.deployment.internal.Runner#runAsync(Supplier)} overload is called.
      */
     @InternalUse
     private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {

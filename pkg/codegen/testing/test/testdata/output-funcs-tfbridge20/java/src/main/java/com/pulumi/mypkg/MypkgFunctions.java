@@ -25,6 +25,14 @@ public final class MypkgFunctions {
     public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
         return getAmiIds(args, InvokeOptions.Empty);
     }
+    /**
+     * Taken from pulumi-AWS to regress an issue
+     * 
+     * @deprecated
+     * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
+     * 
+     */
+    @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
     public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
@@ -36,6 +44,11 @@ public final class MypkgFunctions {
     public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args) {
         return listStorageAccountKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * The response from the ListKeys operation.
+     * API Version: 2021-02-01.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("mypkg::listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }

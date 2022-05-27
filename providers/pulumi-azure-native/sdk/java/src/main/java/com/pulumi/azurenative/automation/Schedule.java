@@ -24,6 +24,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update a schedule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var schedule = new Schedule(&#34;schedule&#34;, ScheduleArgs.builder()        
+ *             .advancedSchedule()
+ *             .automationAccountName(&#34;myAutomationAccount33&#34;)
+ *             .description(&#34;my description of schedule goes here&#34;)
+ *             .expiryTime(&#34;2017-04-01T17:28:57.2494819Z&#34;)
+ *             .frequency(&#34;Hour&#34;)
+ *             .interval(1)
+ *             .name(&#34;mySchedule&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .scheduleName(&#34;mySchedule&#34;)
+ *             .startTime(&#34;2017-03-27T17:28:57.2494819Z&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

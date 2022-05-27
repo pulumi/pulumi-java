@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-09-15-preview.
  * 
  * ## Example Usage
+ * ### Create/update a Target that extends a virtual machine resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var target = new Target(&#34;target&#34;, TargetArgs.builder()        
+ *             .parentProviderNamespace(&#34;Microsoft.Compute&#34;)
+ *             .parentResourceName(&#34;exampleVM&#34;)
+ *             .parentResourceType(&#34;virtualMachines&#34;)
+ *             .properties(Map.of(&#34;identities&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;subject&#34;, &#34;CN=example.subject&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;CertificateSubjectIssuer&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;exampleRG&#34;)
+ *             .targetName(&#34;Microsoft-Agent&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

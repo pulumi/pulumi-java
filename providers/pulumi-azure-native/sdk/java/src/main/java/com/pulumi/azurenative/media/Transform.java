@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a Transform
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var transform = new Transform(&#34;transform&#34;, TransformArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .description(&#34;Example Transform to illustrate create and update.&#34;)
+ *             .outputs(Map.of(&#34;preset&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.BuiltInStandardEncoderPreset&#34;),
+ *                 Map.entry(&#34;presetName&#34;, &#34;AdaptiveStreaming&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;contosoresources&#34;)
+ *             .transformName(&#34;createdTransform&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update an guest diagnostic settings association
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var guestDiagnosticsSettingsAssociation = new GuestDiagnosticsSettingsAssociation(&#34;guestDiagnosticsSettingsAssociation&#34;, GuestDiagnosticsSettingsAssociationArgs.builder()        
+ *             .associationName(&#34;healthSystemMachineConfigAssociation&#34;)
+ *             .guestDiagnosticSettingsName(&#34;/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity&#34;)
+ *             .location(&#34;Global&#34;)
+ *             .resourceUri(&#34;subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

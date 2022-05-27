@@ -19,6 +19,10 @@ public final class Workflowexecutions_v1Functions {
     public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args) {
         return getExecution(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns an execution of the given name.
+     * 
+     */
     public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflowexecutions/v1:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
     }

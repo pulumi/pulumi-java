@@ -28,6 +28,139 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a security automation for all assessments (including all severities)
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var automation = new Automation(&#34;automation&#34;, AutomationArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionType&#34;, &#34;LogicApp&#34;),
+ *                 Map.entry(&#34;logicAppResourceId&#34;, &#34;/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://exampleTriggerUri1.com&#34;)
+ *             ))
+ *             .automationName(&#34;exampleAutomation&#34;)
+ *             .description(&#34;An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment&#34;)
+ *             .isEnabled(true)
+ *             .location(&#34;Central US&#34;)
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .scopes(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5&#34;),
+ *                 Map.entry(&#34;scopePath&#34;, &#34;/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup&#34;)
+ *             ))
+ *             .sources(Map.of(&#34;eventSource&#34;, &#34;Assessments&#34;))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a security automation for all high severity assessments
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var automation = new Automation(&#34;automation&#34;, AutomationArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionType&#34;, &#34;LogicApp&#34;),
+ *                 Map.entry(&#34;logicAppResourceId&#34;, &#34;/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://exampleTriggerUri1.com&#34;)
+ *             ))
+ *             .automationName(&#34;exampleAutomation&#34;)
+ *             .description(&#34;An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment&#34;)
+ *             .isEnabled(true)
+ *             .location(&#34;Central US&#34;)
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .scopes(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5&#34;),
+ *                 Map.entry(&#34;scopePath&#34;, &#34;/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup&#34;)
+ *             ))
+ *             .sources(Map.ofEntries(
+ *                 Map.entry(&#34;eventSource&#34;, &#34;Assessments&#34;),
+ *                 Map.entry(&#34;ruleSets&#34;, Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;expectedValue&#34;, &#34;High&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;Equals&#34;),
+ *                     Map.entry(&#34;propertyJPath&#34;, &#34;properties.metadata.severity&#34;),
+ *                     Map.entry(&#34;propertyType&#34;, &#34;String&#34;)
+ *                 )))
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Disable or enable a security automation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var automation = new Automation(&#34;automation&#34;, AutomationArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionType&#34;, &#34;LogicApp&#34;),
+ *                 Map.entry(&#34;logicAppResourceId&#34;, &#34;/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://exampleTriggerUri1.com&#34;)
+ *             ))
+ *             .automationName(&#34;exampleAutomation&#34;)
+ *             .description(&#34;An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment&#34;)
+ *             .isEnabled(false)
+ *             .location(&#34;Central US&#34;)
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .scopes(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5&#34;),
+ *                 Map.entry(&#34;scopePath&#34;, &#34;/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup&#34;)
+ *             ))
+ *             .sources(Map.ofEntries(
+ *                 Map.entry(&#34;eventSource&#34;, &#34;Assessments&#34;),
+ *                 Map.entry(&#34;ruleSets&#34;, Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;expectedValue&#34;, &#34;customAssessment&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;Equals&#34;),
+ *                     Map.entry(&#34;propertyJPath&#34;, &#34;$.Entity.AssessmentType&#34;),
+ *                     Map.entry(&#34;propertyType&#34;, &#34;String&#34;)
+ *                 )))
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

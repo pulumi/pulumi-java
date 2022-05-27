@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-01.
  * 
  * ## Example Usage
+ * ### PutDeployment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .accountName(&#34;accountName&#34;)
+ *             .deploymentName(&#34;deploymentName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;model&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;format&#34;, &#34;OpenAI&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;ada&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;scaleSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;capacity&#34;, 1),
+ *                     Map.entry(&#34;scaleType&#34;, &#34;Manual&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

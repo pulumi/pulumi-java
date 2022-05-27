@@ -25,6 +25,10 @@ public final class Containeranalysis_v1beta1Functions {
     public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args) {
         return getNote(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified note.
+     * 
+     */
     public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getNote", TypeShape.of(GetNoteResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Containeranalysis_v1beta1Functions {
     public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args) {
         return getNoteIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a note or an occurrence resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
+     * 
+     */
     public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getNoteIamPolicy", TypeShape.of(GetNoteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Containeranalysis_v1beta1Functions {
     public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args) {
         return getOccurrence(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified occurrence.
+     * 
+     */
     public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Containeranalysis_v1beta1Functions {
     public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args) {
         return getOccurrenceIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a note or an occurrence resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
+     * 
+     */
     public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getOccurrenceIamPolicy", TypeShape.of(GetOccurrenceIamPolicyResult.class), args, Utilities.withVersion(options));
     }

@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### VMwareCollectors_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vMwareCollector = new VMwareCollector(&#34;vMwareCollector&#34;, VMwareCollectorArgs.builder()        
+ *             .eTag(&#34;\&#34;01003d32-0000-0d00-0000-5d74d2e50000\&#34;&#34;)
+ *             .projectName(&#34;abgoyalWEselfhostb72bproject&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;agentProperties&#34;, Map.of(&#34;spnDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationId&#34;, &#34;fc717575-8173-4b21-92a5-658b655e613e&#34;),
+ *                     Map.entry(&#34;audience&#34;, &#34;https://72f988bf-86f1-41af-91ab-2d7cd011db47/PortalvCenterbc2fagentauthaadapp&#34;),
+ *                     Map.entry(&#34;authority&#34;, &#34;https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;29d94f38-db94-4980-aec0-0cfd55ab1cd0&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;discoverySiteId&#34;, &#34;/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;abgoyal-westEurope&#34;)
+ *             .vmWareCollectorName(&#34;PortalvCenterbc2fcollector&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

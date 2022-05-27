@@ -22,6 +22,11 @@ public final class FluidrelayFunctions {
     public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(GetFluidRelayServerArgs args) {
         return getFluidRelayServer(args, InvokeOptions.Empty);
     }
+    /**
+     * A FluidRelay Server.
+     * API Version: 2021-03-12-preview.
+     * 
+     */
     public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(GetFluidRelayServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServer", TypeShape.of(GetFluidRelayServerResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class FluidrelayFunctions {
     public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(GetFluidRelayServerKeysArgs args) {
         return getFluidRelayServerKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * The set of available keys for this server.
+     * API Version: 2021-03-12-preview.
+     * 
+     */
     public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(GetFluidRelayServerKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServerKeys", TypeShape.of(GetFluidRelayServerKeysResult.class), args, Utilities.withVersion(options));
     }

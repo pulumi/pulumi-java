@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Put Data Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataPool = new DataPool(&#34;dataPool&#34;, DataPoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .dataPoolName(&#34;sampledp&#34;)
+ *             .locations(Map.ofEntries(
+ *                 Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keyName&#34;, &#34;key1&#34;),
+ *                     Map.entry(&#34;keyVaultUri&#34;, &#34;https://vaulturi&#34;),
+ *                     Map.entry(&#34;keyVersion&#34;, &#34;123&#34;),
+ *                     Map.entry(&#34;userAssignedIdentity&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;westus&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;adpClient&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

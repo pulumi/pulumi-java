@@ -1,11 +1,42 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ec2.Vpc;
+import com.pulumi.aws.ec2.VpcArgs;
+import com.pulumi.aws.ec2.InternetGateway;
+import com.pulumi.aws.ec2.InternetGatewayArgs;
+import com.pulumi.aws.ec2.RouteTable;
+import com.pulumi.aws.ec2.RouteTableArgs;
+import com.pulumi.aws.ec2.inputs.RouteTableRouteArgs;
+import com.pulumi.aws.AwsFunctions;
+import com.pulumi.aws.inputs.GetAvailabilityZonesArgs;
+import com.pulumi.aws.ec2.Subnet;
+import com.pulumi.aws.ec2.SubnetArgs;
+import com.pulumi.aws.ec2.RouteTableAssociation;
+import com.pulumi.aws.ec2.RouteTableAssociationArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.iam.Role;
+import com.pulumi.aws.iam.RoleArgs;
+import com.pulumi.aws.iam.RolePolicyAttachment;
+import com.pulumi.aws.iam.RolePolicyAttachmentArgs;
+import com.pulumi.aws.eks.Cluster;
+import com.pulumi.aws.eks.ClusterArgs;
+import com.pulumi.aws.eks.inputs.ClusterVpcConfigArgs;
+import com.pulumi.aws.eks.NodeGroup;
+import com.pulumi.aws.eks.NodeGroupArgs;
+import com.pulumi.aws.eks.inputs.NodeGroupScalingConfigArgs;
 import static com.pulumi.codegen.internal.Serialization.*;
 import com.pulumi.codegen.internal.KeyedValue;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
@@ -37,7 +68,7 @@ public class App {
 
         final var zones = Output.of(AwsFunctions.getAvailabilityZones());
 
-        final var vpcSubnet = zones.apply(getAvailabilityZonesResult -> {
+        final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
                 var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                
@@ -55,7 +86,7 @@ public class App {
             return resources;
         });
 
-        final var rta = zones.apply(getAvailabilityZonesResult -> {
+        final var rta = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<RouteTableAssociation>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
                 var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()                
@@ -171,7 +202,7 @@ public class App {
             .build());
 
         ctx.export("clusterName", eksCluster.name());
-        ctx.export("kubeconfig", Output.tuple(eksCluster.endpoint(), eksCluster.certificateAuthority(), eksCluster.name()).apply(values -> {
+        ctx.export("kubeconfig", Output.tuple(eksCluster.endpoint(), eksCluster.certificateAuthority(), eksCluster.name()).applyValue(values -> {
             var endpoint = values.t1;
             var certificateAuthority = values.t2;
             var name = values.t3;

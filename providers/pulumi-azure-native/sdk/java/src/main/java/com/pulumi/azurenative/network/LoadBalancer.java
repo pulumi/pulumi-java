@@ -30,6 +30,377 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create load balancer
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools(Map.of(&#34;name&#34;, &#34;be-lb&#34;))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb&#34;))
+ *             ))
+ *             .inboundNatPools()
+ *             .inboundNatRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 3389),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;enableTcpReset&#34;, false),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 3389),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;in-nat-rule&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;backendPort&#34;, 80),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;enableTcpReset&#34;, false),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 80),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;loadDistribution&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rulelb&#34;),
+ *                 Map.entry(&#34;probe&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb&#34;)),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .probes(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;probe-lb&#34;),
+ *                 Map.entry(&#34;numberOfProbes&#34;, 2),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestPath&#34;, &#34;healthcheck.aspx&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create load balancer with Frontend IP in Zone 1
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools(Map.of(&#34;name&#34;, &#34;be-lb&#34;))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb&#34;)),
+ *                 Map.entry(&#34;zones&#34;, &#34;1&#34;)
+ *             ))
+ *             .inboundNatPools()
+ *             .inboundNatRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 3389),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 3389),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;in-nat-rule&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;backendPort&#34;, 80),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 80),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;loadDistribution&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rulelb&#34;),
+ *                 Map.entry(&#34;probe&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb&#34;)),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .outboundRules()
+ *             .probes(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;probe-lb&#34;),
+ *                 Map.entry(&#34;numberOfProbes&#34;, 2),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestPath&#34;, &#34;healthcheck.aspx&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create load balancer with Global Tier and one regional load balancer in its backend pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerBackendAddresses&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;loadBalancerFrontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/regional-lb-rg1/providers/Microsoft.Network/loadBalancers/regional-lb/frontendIPConfigurations/fe-rlb&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;regional-lb1-address&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;be-lb&#34;)
+ *             ))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb&#34;))
+ *             ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;backendPort&#34;, 80),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, false),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 80),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;loadDistribution&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rulelb&#34;),
+ *                 Map.entry(&#34;probe&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb&#34;)),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .probes(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;probe-lb&#34;),
+ *                 Map.entry(&#34;numberOfProbes&#34;, 2),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestPath&#34;, &#34;healthcheck.aspx&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Global&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create load balancer with Standard SKU
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools(Map.of(&#34;name&#34;, &#34;be-lb&#34;))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb&#34;))
+ *             ))
+ *             .inboundNatPools()
+ *             .inboundNatRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 3389),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 3389),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;in-nat-rule&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;backendPort&#34;, 80),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 80),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;loadDistribution&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rulelb&#34;),
+ *                 Map.entry(&#34;probe&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb&#34;)),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .outboundRules()
+ *             .probes(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;probe-lb&#34;),
+ *                 Map.entry(&#34;numberOfProbes&#34;, 2),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestPath&#34;, &#34;healthcheck.aspx&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create load balancer with inbound nat pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools()
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;privateIPAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet&#34;)),
+ *                 Map.entry(&#34;zones&#34;, )
+ *             ))
+ *             .inboundNatPools(Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 8888),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;enableTcpReset&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test&#34;)),
+ *                 Map.entry(&#34;frontendPortRangeEnd&#34;, 8085),
+ *                 Map.entry(&#34;frontendPortRangeStart&#34;, 8080),
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/inboundNatPools/test&#34;),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 10),
+ *                 Map.entry(&#34;name&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .inboundNatRules()
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules()
+ *             .location(&#34;eastus&#34;)
+ *             .outboundRules()
+ *             .probes()
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create load balancer with outbound rules
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadBalancer = new LoadBalancer(&#34;loadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .backendAddressPools(Map.of(&#34;name&#34;, &#34;be-lb&#34;))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip&#34;))
+ *             ))
+ *             .inboundNatPools()
+ *             .inboundNatRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 3389),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 3389),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;in-nat-rule&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .loadBalancerName(&#34;lb&#34;)
+ *             .loadBalancingRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;backendPort&#34;, 80),
+ *                 Map.entry(&#34;disableOutboundSnat&#34;, true),
+ *                 Map.entry(&#34;enableFloatingIP&#34;, true),
+ *                 Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;frontendPort&#34;, 80),
+ *                 Map.entry(&#34;idleTimeoutInMinutes&#34;, 15),
+ *                 Map.entry(&#34;loadDistribution&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;rulelb&#34;),
+ *                 Map.entry(&#34;probe&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb&#34;)),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Tcp&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .outboundRules(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb&#34;)),
+ *                 Map.entry(&#34;frontendIPConfigurations&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;All&#34;)
+ *             ))
+ *             .probes(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 15),
+ *                 Map.entry(&#34;name&#34;, &#34;probe-lb&#34;),
+ *                 Map.entry(&#34;numberOfProbes&#34;, 2),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestPath&#34;, &#34;healthcheck.aspx&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

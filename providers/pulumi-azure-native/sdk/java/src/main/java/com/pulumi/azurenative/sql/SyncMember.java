@@ -21,6 +21,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a new sync member
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncMember = new SyncMember(&#34;syncMember&#34;, SyncMemberArgs.builder()        
+ *             .databaseName(&#34;syncgroupcrud-7421&#34;)
+ *             .databaseType(&#34;AzureSqlDatabase&#34;)
+ *             .resourceGroupName(&#34;syncgroupcrud-65440&#34;)
+ *             .serverName(&#34;syncgroupcrud-3379.database.windows.net&#34;)
+ *             .syncDirection(&#34;Bidirectional&#34;)
+ *             .syncGroupName(&#34;syncgroupcrud-3187&#34;)
+ *             .syncMemberAzureDatabaseResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328&#34;)
+ *             .syncMemberName(&#34;syncmembercrud-4879&#34;)
+ *             .usePrivateLinkConnection(true)
+ *             .userName(&#34;myUser&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a sync member
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncMember = new SyncMember(&#34;syncMember&#34;, SyncMemberArgs.builder()        
+ *             .databaseName(&#34;syncgroupcrud-7421&#34;)
+ *             .databaseType(&#34;AzureSqlDatabase&#34;)
+ *             .resourceGroupName(&#34;syncgroupcrud-65440&#34;)
+ *             .serverName(&#34;syncgroupcrud-8475&#34;)
+ *             .syncDirection(&#34;Bidirectional&#34;)
+ *             .syncGroupName(&#34;syncgroupcrud-3187&#34;)
+ *             .syncMemberAzureDatabaseResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328&#34;)
+ *             .syncMemberName(&#34;syncmembercrud-4879&#34;)
+ *             .usePrivateLinkConnection(true)
+ *             .userName(&#34;myUser&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -43,6 +43,14 @@ public final class KmsFunctions {
     public static CompletableFuture<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args) {
         return getDecryptedData(args, InvokeOptions.Empty);
     }
+    /**
+     * The `oci.Kms.getDecryptedData` data source provides details about a specific DecryptedData
+     * 
+     * Decrypts data using the given DecryptDataDetails resource.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDecryptedDataResult> getDecryptedData(GetDecryptedDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getDecryptedData:getDecryptedData", TypeShape.of(GetDecryptedDataResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +67,16 @@ public final class KmsFunctions {
     public static CompletableFuture<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args) {
         return getEncryptedData(args, InvokeOptions.Empty);
     }
+    /**
+     * The `oci.Kms.EncryptedData` data source provides details about a specific EncryptedData
+     * 
+     * Encrypts data using the given EncryptDataDetails resource.
+     * Plaintext included in the example request is a base64-encoded value
+     * of a UTF-8 string.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetEncryptedDataResult> getEncryptedData(GetEncryptedDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getEncryptedData:getEncryptedData", TypeShape.of(GetEncryptedDataResult.class), args, Utilities.withVersion(options));
     }
@@ -78,6 +96,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
         return getKey(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Key resource in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Gets information about the specified master encryption key.
+     * 
+     * As a management operation, this call is subject to a Key Management limit that applies to the total number
+     * of requests across all management read operations. Key Management might throttle this call to reject an
+     * otherwise valid request when the total rate of management read operations exceeds 10 requests per second for
+     * a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -97,6 +128,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args) {
         return getKeyVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Key Version resource in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Gets information about the specified key version.
+     * 
+     * As a management operation, this call is subject to a Key Management limit that applies to the total number
+     * of requests across all management read operations. Key Management might throttle this call to reject an
+     * otherwise valid request when the total rate of management read operations exceeds 10 requests per second
+     * for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeyVersionResult> getKeyVersion(GetKeyVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getKeyVersion:getKeyVersion", TypeShape.of(GetKeyVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -117,6 +161,20 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args) {
         return getKeyVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Key Versions in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Lists all [KeyVersion](https://docs.cloud.oracle.com/iaas/api/#/en/key/latest/KeyVersion/) resources for the specified
+     * master encryption key.
+     * 
+     * As a management operation, this call is subject to a Key Management limit that applies to the total number
+     * of requests across all management read operations. Key Management might throttle this call to reject an
+     * otherwise valid request when the total rate of management read operations exceeds 10 requests per second
+     * for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeyVersionsResult> getKeyVersions(GetKeyVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getKeyVersions:getKeyVersions", TypeShape.of(GetKeyVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -136,6 +194,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args) {
         return getKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Keys in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Lists the master encryption keys in the specified vault and compartment.
+     * 
+     * As a management operation, this call is subject to a Key Management limit that applies to the total number
+     * of requests across all management read operations. Key Management might throttle this call to reject an
+     * otherwise valid request when the total rate of management read operations exceeds 10 requests per second
+     * for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -153,6 +224,17 @@ public final class KmsFunctions {
     public static CompletableFuture<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args) {
         return getReplicationStatus(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Replication Status resource in Oracle Cloud Infrastructure Kms service.
+     * 
+     * When a vault has a replica, each operation on the vault or its resources, such as
+     * keys, is replicated and has an associated replicationId. Replication status provides
+     * details about whether the operation associated with the given replicationId has been
+     * successfully applied across replicas.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetReplicationStatusResult> getReplicationStatus(GetReplicationStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getReplicationStatus:getReplicationStatus", TypeShape.of(GetReplicationStatusResult.class), args, Utilities.withVersion(options));
     }
@@ -172,6 +254,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
         return getVault(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vault resource in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Gets the specified vault&#39;s configuration information.
+     * 
+     * As a provisioning operation, this call is subject to a Key Management limit that applies to
+     * the total number of requests across all provisioning read operations. Key Management might
+     * throttle this call to reject an otherwise valid request when the total rate of provisioning
+     * read operations exceeds 10 requests per second for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
@@ -191,6 +286,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args) {
         return getVaultReplicas(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vault Replicas in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Lists the replicas for a vault
+     * 
+     * As a provisioning operation, this call is subject to a Key Management limit that applies to
+     * the total number of requests across all provisioning write operations. Key Management might
+     * throttle this call to reject an otherwise valid request when the total rate of provisioning
+     * write operations exceeds 10 requests per second for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVaultReplicasResult> getVaultReplicas(GetVaultReplicasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getVaultReplicas:getVaultReplicas", TypeShape.of(GetVaultReplicasResult.class), args, Utilities.withVersion(options));
     }
@@ -205,6 +313,14 @@ public final class KmsFunctions {
     public static CompletableFuture<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args) {
         return getVaultUsage(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Vault Usage resource in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Gets the count of keys and key versions in the specified vault to calculate usage against service limits.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVaultUsageResult> getVaultUsage(GetVaultUsageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getVaultUsage:getVaultUsage", TypeShape.of(GetVaultUsageResult.class), args, Utilities.withVersion(options));
     }
@@ -224,6 +340,19 @@ public final class KmsFunctions {
     public static CompletableFuture<GetVaultsResult> getVaults(GetVaultsArgs args) {
         return getVaults(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vaults in Oracle Cloud Infrastructure Kms service.
+     * 
+     * Lists the vaults in the specified compartment.
+     * 
+     * As a provisioning operation, this call is subject to a Key Management limit that applies to
+     * the total number of requests across all provisioning read operations. Key Management might
+     * throttle this call to reject an otherwise valid request when the total rate of provisioning
+     * read operations exceeds 10 requests per second for a given tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVaultsResult> getVaults(GetVaultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Kms/getVaults:getVaults", TypeShape.of(GetVaultsResult.class), args, Utilities.withVersion(options));
     }

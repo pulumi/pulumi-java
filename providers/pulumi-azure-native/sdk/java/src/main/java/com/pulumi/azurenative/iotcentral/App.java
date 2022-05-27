@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01.
  * 
  * ## Example Usage
+ * ### Apps_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;, AppArgs.builder()        
+ *             .displayName(&#34;My IoT Central App&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .resourceName(&#34;myIoTCentralApp&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;F1&#34;))
+ *             .subdomain(&#34;my-iot-central-app&#34;)
+ *             .template(&#34;iotc-default@1.0.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

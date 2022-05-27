@@ -23,6 +23,45 @@ import javax.annotation.Nullable;
  * API Version: 2017-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates an availability group listener.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var availabilityGroupListener = new AvailabilityGroupListener(&#34;availabilityGroupListener&#34;, AvailabilityGroupListenerArgs.builder()        
+ *             .availabilityGroupListenerName(&#34;agl-test&#34;)
+ *             .availabilityGroupName(&#34;ag-test&#34;)
+ *             .loadBalancerConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test&#34;),
+ *                 Map.entry(&#34;privateIpAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;ipAddress&#34;, &#34;10.1.0.112&#34;),
+ *                     Map.entry(&#34;subnetResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default&#34;)
+ *                 )),
+ *                 Map.entry(&#34;probePort&#34;, 59983),
+ *                 Map.entry(&#34;sqlVirtualMachineInstances&#34;,                 
+ *                     &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm2&#34;,
+ *                     &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm3&#34;)
+ *             ))
+ *             .port(1433)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlVirtualMachineGroupName(&#34;testvmgroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

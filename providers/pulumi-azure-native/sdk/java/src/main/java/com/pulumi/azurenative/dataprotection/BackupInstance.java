@@ -21,6 +21,62 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create BackupInstance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupInstance = new BackupInstance(&#34;backupInstance&#34;, BackupInstanceArgs.builder()        
+ *             .backupInstanceName(&#34;testInstance1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;dataSourceInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;datasourceType&#34;, &#34;OssDB&#34;),
+ *                     Map.entry(&#34;objectType&#34;, &#34;Datasource&#34;),
+ *                     Map.entry(&#34;resourceID&#34;, &#34;/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb&#34;),
+ *                     Map.entry(&#34;resourceLocation&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;resourceName&#34;, &#34;testdb&#34;),
+ *                     Map.entry(&#34;resourceType&#34;, &#34;Microsoft.DBforPostgreSQL/servers/databases&#34;),
+ *                     Map.entry(&#34;resourceUri&#34;, &#34;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataSourceSetInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;datasourceType&#34;, &#34;OssDB&#34;),
+ *                     Map.entry(&#34;objectType&#34;, &#34;DatasourceSet&#34;),
+ *                     Map.entry(&#34;resourceID&#34;, &#34;/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest&#34;),
+ *                     Map.entry(&#34;resourceLocation&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;resourceName&#34;, &#34;viveksipgtest&#34;),
+ *                     Map.entry(&#34;resourceType&#34;, &#34;Microsoft.DBforPostgreSQL/servers&#34;),
+ *                     Map.entry(&#34;resourceUri&#34;, &#34;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;friendlyName&#34;, &#34;harshitbi2&#34;),
+ *                 Map.entry(&#34;objectType&#34;, &#34;BackupInstance&#34;),
+ *                 Map.entry(&#34;policyInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;policyId&#34;, &#34;/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1&#34;),
+ *                     Map.entry(&#34;policyParameters&#34;, Map.of(&#34;dataStoreParametersList&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataStoreType&#34;, &#34;OperationalStore&#34;),
+ *                         Map.entry(&#34;objectType&#34;, &#34;AzureOperationalStoreParameters&#34;),
+ *                         Map.entry(&#34;resourceGroupId&#34;, &#34;/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest&#34;)
+ *                     )))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;000pikumar&#34;)
+ *             .vaultName(&#34;PratikPrivatePreviewVault1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

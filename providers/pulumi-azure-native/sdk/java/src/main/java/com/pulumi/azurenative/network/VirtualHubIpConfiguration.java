@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VirtualHubIpConfigurationPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualHubIpConfiguration = new VirtualHubIpConfiguration(&#34;virtualHubIpConfiguration&#34;, VirtualHubIpConfigurationArgs.builder()        
+ *             .ipConfigName(&#34;ipconfig1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnet(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1&#34;))
+ *             .virtualHubName(&#34;hub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

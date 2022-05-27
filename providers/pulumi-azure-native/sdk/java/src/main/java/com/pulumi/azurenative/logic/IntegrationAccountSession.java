@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update an integration account session
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountSession = new IntegrationAccountSession(&#34;integrationAccountSession&#34;, IntegrationAccountSessionArgs.builder()        
+ *             .content(Map.ofEntries(
+ *                 Map.entry(&#34;controlNumber&#34;, &#34;1234&#34;),
+ *                 Map.entry(&#34;controlNumberChangedTime&#34;, &#34;2017-02-21T22:30:11.9923759Z&#34;)
+ *             ))
+ *             .integrationAccountName(&#34;testia123&#34;)
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .sessionName(&#34;testsession123-ICN&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

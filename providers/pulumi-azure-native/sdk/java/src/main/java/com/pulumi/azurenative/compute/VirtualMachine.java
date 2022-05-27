@@ -37,6 +37,1761 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a Linux vm with a patch setting assessmentMode of ImageDefault.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;linuxConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;patchSettings&#34;, Map.of(&#34;assessmentMode&#34;, &#34;ImageDefault&#34;)),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;16.04-LTS&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Linux vm with a patch setting patchMode of ImageDefault.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;linuxConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;patchSettings&#34;, Map.of(&#34;patchMode&#34;, &#34;ImageDefault&#34;)),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;16.04-LTS&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Linux vm with a patch settings patchMode and assessmentMode set to AutomaticByPlatform.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;linuxConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;patchSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;assessmentMode&#34;, &#34;AutomaticByPlatform&#34;),
+ *                         Map.entry(&#34;patchMode&#34;, &#34;AutomaticByPlatform&#34;)
+ *                     )),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;16.04-LTS&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a VM with Uefi Settings of secureBoot and vTPM.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .securityProfile(Map.ofEntries(
+ *                 Map.entry(&#34;securityType&#34;, &#34;TrustedLaunch&#34;),
+ *                 Map.entry(&#34;uefiSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;secureBootEnabled&#34;, true),
+ *                     Map.entry(&#34;vTpmEnabled&#34;, true)
+ *                 ))
+ *             ))
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windowsserver-gen2preview-preview&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows10-tvm&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;18363.592.2001092016&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;StandardSSD_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a VM with UserData
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .diagnosticsProfile(Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *             )))
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;{vm-name}&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;vmOSdisk&#34;)
+ *                 ))
+ *             ))
+ *             .userData(&#34;RXhhbXBsZSBVc2VyRGF0YQ==&#34;)
+ *             .vmName(&#34;{vm-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a VM with network interface configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkApiVersion&#34;, &#34;2020-11-01&#34;),
+ *                 Map.entry(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;deleteOption&#34;, &#34;Delete&#34;),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{ip-config-name}&#34;),
+ *                         Map.entry(&#34;primary&#34;, true),
+ *                         Map.entry(&#34;publicIPAddressConfiguration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;deleteOption&#34;, &#34;Detach&#34;),
+ *                             Map.entry(&#34;name&#34;, &#34;{publicIP-config-name}&#34;),
+ *                             Map.entry(&#34;publicIPAllocationMethod&#34;, &#34;Static&#34;),
+ *                             Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                                 Map.entry(&#34;tier&#34;, &#34;Global&#34;)
+ *                             ))
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{nic-config-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))
+ *             ))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Windows vm with a patch setting assessmentMode of ImageDefault.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableAutomaticUpdates&#34;, true),
+ *                     Map.entry(&#34;patchSettings&#34;, Map.of(&#34;assessmentMode&#34;, &#34;ImageDefault&#34;)),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Windows vm with a patch setting patchMode of AutomaticByOS.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableAutomaticUpdates&#34;, true),
+ *                     Map.entry(&#34;patchSettings&#34;, Map.of(&#34;patchMode&#34;, &#34;AutomaticByOS&#34;)),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Windows vm with a patch setting patchMode of AutomaticByPlatform and enableHotpatching set to true.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableAutomaticUpdates&#34;, true),
+ *                     Map.entry(&#34;patchSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;enableHotpatching&#34;, true),
+ *                         Map.entry(&#34;patchMode&#34;, &#34;AutomaticByPlatform&#34;)
+ *                     )),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Windows vm with a patch setting patchMode of Manual.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableAutomaticUpdates&#34;, true),
+ *                     Map.entry(&#34;patchSettings&#34;, Map.of(&#34;patchMode&#34;, &#34;Manual&#34;)),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Windows vm with patch settings patchMode and assessmentMode set to AutomaticByPlatform.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableAutomaticUpdates&#34;, true),
+ *                     Map.entry(&#34;patchSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;assessmentMode&#34;, &#34;AutomaticByPlatform&#34;),
+ *                         Map.entry(&#34;patchMode&#34;, &#34;AutomaticByPlatform&#34;)
+ *                     )),
+ *                     Map.entry(&#34;provisionVMAgent&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a custom-image vm from an unmanaged generalized os image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;osDisk&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                 Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                 Map.entry(&#34;image&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Windows&#34;),
+ *                 Map.entry(&#34;vhd&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd&#34;))
+ *             )))
+ *             .vmName(&#34;{vm-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a platform-image vm with unmanaged os and data disks.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 0),
+ *                         Map.entry(&#34;vhd&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk0.vhd&#34;))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 1),
+ *                         Map.entry(&#34;vhd&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk1.vhd&#34;))
+ *                     )),
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;),
+ *                     Map.entry(&#34;vhd&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/myDisk.vhd&#34;))
+ *                 ))
+ *             ))
+ *             .vmName(&#34;{vm-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm from a custom image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}&#34;)),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm from a generalized shared image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage&#34;)),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm from a specialized shared image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage&#34;)),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm in a Virtual Machine Scale Set with customer assigned platformFaultDomain.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .platformFaultDomain(1)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .virtualMachineScaleSet(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}&#34;))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm in an availability set.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .availabilitySet(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}&#34;))
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with DiskEncryptionSet resource id in the os disk and data disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 0),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                             Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                         ))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;Attach&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 1),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                             Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}&#34;),
+ *                             Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                         ))
+ *                     )),
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}&#34;)),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                         Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with Host Encryption using encryptionAtHost property.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .securityProfile(Map.of(&#34;encryptionAtHost&#34;, true))
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with Scheduled Events Profile
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .diagnosticsProfile(Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *             )))
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scheduledEventsProfile(Map.of(&#34;terminateNotificationProfile&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;enable&#34;, true),
+ *                 Map.entry(&#34;notBeforeTimeout&#34;, &#34;PT10M&#34;)
+ *             )))
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with a marketplace image plan.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with an extensions time budget.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .diagnosticsProfile(Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *             )))
+ *             .extensionsTimeBudget(&#34;PT30M&#34;)
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with boot diagnostics.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .diagnosticsProfile(Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *             )))
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with empty data disks.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D2_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 0)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 1)
+ *                     )),
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with ephemeral os disk provisioning in Cache disk using placement property.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;diffDiskSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;option&#34;, &#34;Local&#34;),
+ *                         Map.entry(&#34;placement&#34;, &#34;CacheDisk&#34;)
+ *                     )),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with ephemeral os disk provisioning in Resource disk using placement property.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;diffDiskSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;option&#34;, &#34;Local&#34;),
+ *                         Map.entry(&#34;placement&#34;, &#34;ResourceDisk&#34;)
+ *                     )),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with ephemeral os disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;diffDiskSettings&#34;, Map.of(&#34;option&#34;, &#34;Local&#34;)),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with managed boot diagnostics.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .diagnosticsProfile(Map.of(&#34;bootDiagnostics&#34;, Map.of(&#34;enabled&#34;, true)))
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with password authentication.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with premium storage.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a vm with ssh authentication.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .hardwareProfile(Map.of(&#34;vmSize&#34;, &#34;Standard_D1_v2&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .networkProfile(Map.of(&#34;networkInterfaces&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}&#34;),
+ *                 Map.entry(&#34;primary&#34;, true)
+ *             )))
+ *             .osProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                 Map.entry(&#34;computerName&#34;, &#34;myVM&#34;),
+ *                 Map.entry(&#34;linuxConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;disablePasswordAuthentication&#34;, true),
+ *                     Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;keyData&#34;, &#34;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1&#34;),
+ *                         Map.entry(&#34;path&#34;, &#34;/home/{your-username}/.ssh/authorized_keys&#34;)
+ *                     )))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;{image_offer}&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;{image_publisher}&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;{image_sku}&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;myVMosdisk&#34;)
+ *                 ))
+ *             ))
+ *             .vmName(&#34;myVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

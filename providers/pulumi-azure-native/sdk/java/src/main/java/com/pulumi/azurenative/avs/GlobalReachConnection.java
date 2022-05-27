@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### GlobalReachConnections_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var globalReachConnection = new GlobalReachConnection(&#34;globalReachConnection&#34;, GlobalReachConnectionArgs.builder()        
+ *             .authorizationKey(&#34;01010101-0101-0101-0101-010101010101&#34;)
+ *             .globalReachConnectionName(&#34;connection1&#34;)
+ *             .peerExpressRouteCircuit(&#34;/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

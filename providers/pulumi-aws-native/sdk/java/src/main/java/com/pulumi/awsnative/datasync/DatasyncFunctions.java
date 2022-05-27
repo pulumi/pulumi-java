@@ -39,6 +39,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args) {
         return getAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::Agent.
+     * 
+     */
     public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getAgent", TypeShape.of(GetAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +53,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationEFSResult> getLocationEFS(GetLocationEFSArgs args) {
         return getLocationEFS(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationEFS.
+     * 
+     */
     public static CompletableFuture<GetLocationEFSResult> getLocationEFS(GetLocationEFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationEFS", TypeShape.of(GetLocationEFSResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +67,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationFSxLustreResult> getLocationFSxLustre(GetLocationFSxLustreArgs args) {
         return getLocationFSxLustre(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationFSxLustre.
+     * 
+     */
     public static CompletableFuture<GetLocationFSxLustreResult> getLocationFSxLustre(GetLocationFSxLustreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxLustre", TypeShape.of(GetLocationFSxLustreResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +81,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationFSxOpenZFSResult> getLocationFSxOpenZFS(GetLocationFSxOpenZFSArgs args) {
         return getLocationFSxOpenZFS(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationFSxOpenZFS.
+     * 
+     */
     public static CompletableFuture<GetLocationFSxOpenZFSResult> getLocationFSxOpenZFS(GetLocationFSxOpenZFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxOpenZFS", TypeShape.of(GetLocationFSxOpenZFSResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +95,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(GetLocationFSxWindowsArgs args) {
         return getLocationFSxWindows(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationFSxWindows.
+     * 
+     */
     public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(GetLocationFSxWindowsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxWindows", TypeShape.of(GetLocationFSxWindowsResult.class), args, Utilities.withVersion(options));
     }
@@ -89,6 +109,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(GetLocationHDFSArgs args) {
         return getLocationHDFS(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationHDFS.
+     * 
+     */
     public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(GetLocationHDFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationHDFS", TypeShape.of(GetLocationHDFSResult.class), args, Utilities.withVersion(options));
     }
@@ -99,6 +123,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationNFSResult> getLocationNFS(GetLocationNFSArgs args) {
         return getLocationNFS(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationNFS
+     * 
+     */
     public static CompletableFuture<GetLocationNFSResult> getLocationNFS(GetLocationNFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationNFS", TypeShape.of(GetLocationNFSResult.class), args, Utilities.withVersion(options));
     }
@@ -109,6 +137,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(GetLocationObjectStorageArgs args) {
         return getLocationObjectStorage(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationObjectStorage.
+     * 
+     */
     public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(GetLocationObjectStorageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationObjectStorage", TypeShape.of(GetLocationObjectStorageResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +151,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationS3Result> getLocationS3(GetLocationS3Args args) {
         return getLocationS3(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationS3
+     * 
+     */
     public static CompletableFuture<GetLocationS3Result> getLocationS3(GetLocationS3Args args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationS3", TypeShape.of(GetLocationS3Result.class), args, Utilities.withVersion(options));
     }
@@ -129,6 +165,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetLocationSMBResult> getLocationSMB(GetLocationSMBArgs args) {
         return getLocationSMB(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::LocationSMB.
+     * 
+     */
     public static CompletableFuture<GetLocationSMBResult> getLocationSMB(GetLocationSMBArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationSMB", TypeShape.of(GetLocationSMBResult.class), args, Utilities.withVersion(options));
     }
@@ -139,6 +179,10 @@ public final class DatasyncFunctions {
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
         return getTask(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataSync::Task.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }

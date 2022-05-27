@@ -28,6 +28,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VpnConnectionPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpnConnection = new VpnConnection(&#34;vpnConnection&#34;, VpnConnectionArgs.builder()        
+ *             .connectionName(&#34;vpnConnection1&#34;)
+ *             .gatewayName(&#34;gateway1&#34;)
+ *             .remoteVpnSite(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .trafficSelectorPolicies()
+ *             .vpnLinkConnections(Map.ofEntries(
+ *                 Map.entry(&#34;connectionBandwidth&#34;, 200),
+ *                 Map.entry(&#34;name&#34;, &#34;Connection-Link1&#34;),
+ *                 Map.entry(&#34;sharedKey&#34;, &#34;key&#34;),
+ *                 Map.entry(&#34;usePolicyBasedTrafficSelectors&#34;, false),
+ *                 Map.entry(&#34;vpnConnectionProtocolType&#34;, &#34;IKEv2&#34;),
+ *                 Map.entry(&#34;vpnLinkConnectionMode&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;vpnSiteLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

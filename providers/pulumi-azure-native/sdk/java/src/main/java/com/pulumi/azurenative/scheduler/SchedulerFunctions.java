@@ -21,6 +21,10 @@ public final class SchedulerFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class SchedulerFunctions {
     public static CompletableFuture<GetJobCollectionResult> getJobCollection(GetJobCollectionArgs args) {
         return getJobCollection(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2016-03-01.
+     * 
+     */
     public static CompletableFuture<GetJobCollectionResult> getJobCollection(GetJobCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJobCollection", TypeShape.of(GetJobCollectionResult.class), args, Utilities.withVersion(options));
     }

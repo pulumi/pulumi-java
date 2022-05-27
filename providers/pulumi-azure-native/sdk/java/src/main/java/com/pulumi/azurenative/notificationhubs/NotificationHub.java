@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### NotificationHubCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var notificationHub = new NotificationHub(&#34;notificationHub&#34;, NotificationHubArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .namespaceName(&#34;nh-sdk-ns&#34;)
+ *             .notificationHubName(&#34;nh-sdk-hub&#34;)
+ *             .resourceGroupName(&#34;5ktrial&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

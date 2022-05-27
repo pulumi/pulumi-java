@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a partner
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationAccountPartner = new IntegrationAccountPartner(&#34;integrationAccountPartner&#34;, IntegrationAccountPartnerArgs.builder()        
+ *             .content(Map.of(&#34;b2b&#34;, Map.of(&#34;businessIdentities&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;qualifier&#34;, &#34;AA&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;ZZ&#34;)
+ *             ))))
+ *             .integrationAccountName(&#34;testIntegrationAccount&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .metadata()
+ *             .partnerName(&#34;testPartner&#34;)
+ *             .partnerType(&#34;B2B&#34;)
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

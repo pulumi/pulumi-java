@@ -23,6 +23,49 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-30.
  * 
  * ## Example Usage
+ * ### Create or update a simple gallery Application Version.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryApplicationVersion = new GalleryApplicationVersion(&#34;galleryApplicationVersion&#34;, GalleryApplicationVersionArgs.builder()        
+ *             .galleryApplicationName(&#34;myGalleryApplicationName&#34;)
+ *             .galleryApplicationVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.ofEntries(
+ *                 Map.entry(&#34;endOfLifeDate&#34;, &#34;2019-07-01T07:00:00Z&#34;),
+ *                 Map.entry(&#34;manageActions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;install&#34;, &#34;powershell -command \&#34;Expand-Archive -Path package.zip -DestinationPath C:\\package\&#34;&#34;),
+ *                     Map.entry(&#34;remove&#34;, &#34;del C:\\package &#34;)
+ *                 )),
+ *                 Map.entry(&#34;replicaCount&#34;, 1),
+ *                 Map.entry(&#34;source&#34;, Map.of(&#34;mediaLink&#34;, &#34;https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}&#34;)),
+ *                 Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;),
+ *                 Map.entry(&#34;targetRegions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

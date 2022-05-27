@@ -21,6 +21,93 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### CreateCertificate - Full
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .certificateName(&#34;sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e&#34;)
+ *             .data(&#34;MIIJsgIBAzCCCW4GCSqGSIb3DQE...&#34;)
+ *             .format(&#34;Pfx&#34;)
+ *             .password(&#34;&lt;ExamplePassword&gt;&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .thumbprint(&#34;0a0e4f50d51beadeac1d35afc5116098e7902e6e&#34;)
+ *             .thumbprintAlgorithm(&#34;sha1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreateCertificate - Minimal Cer
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .certificateName(&#34;sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e&#34;)
+ *             .data(&#34;MIICrjCCAZagAwI...&#34;)
+ *             .format(&#34;Cer&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreateCertificate - Minimal Pfx
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .certificateName(&#34;sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e&#34;)
+ *             .data(&#34;MIIJsgIBAzCCCW4GCSqGSIb3DQE...&#34;)
+ *             .password(&#34;&lt;ExamplePassword&gt;&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,10 @@ public final class LicensemanagerFunctions {
     public static CompletableFuture<GetGrantResult> getGrant(GetGrantArgs args) {
         return getGrant(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetGrantResult> getGrant(GetGrantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getGrant", TypeShape.of(GetGrantResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class LicensemanagerFunctions {
     public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args) {
         return getLicense(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::LicenseManager::License
+     * 
+     */
     public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getLicense", TypeShape.of(GetLicenseResult.class), args, Utilities.withVersion(options));
     }

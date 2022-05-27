@@ -3,6 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Value;
+import com.pulumi.Log;
 import com.pulumi.asset.Archive;
 import com.pulumi.asset.Asset;
 import com.pulumi.asset.AssetArchive;
@@ -14,6 +15,7 @@ import com.pulumi.asset.RemoteAsset;
 import com.pulumi.asset.StringAsset;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.Urn;
 import com.pulumi.resources.DependencyResource;
 import com.pulumi.resources.Resource;
 
@@ -43,8 +45,12 @@ import static java.util.Objects.requireNonNull;
  */
 public class Deserializer {
 
-    public Deserializer() {
-        // Empty
+    private final Log log;
+    private final ResourcePackages resourcePackages;
+
+    public Deserializer(Log log) {
+        this.log = requireNonNull(log);
+        this.resourcePackages = new ResourcePackages(log);
     }
 
     public OutputData<Object> deserialize(Value value) {
@@ -356,13 +362,9 @@ public class Deserializer {
         var version = tryGetStringValue(struct, Constants.ResourceVersionName)
                 .orElse("");
 
-        // TODO: a good candidate for some new URN methods with good unit tests
-        var urnParts = urn.split("::");
-        var qualifiedType = urnParts[2];
-        var qualifiedTypeParts = qualifiedType.split("\\$");
-        var type = qualifiedTypeParts[qualifiedTypeParts.length - 1];
-
-        var resource = ResourcePackages.tryConstruct(type, version, urn);
+        var urnParsed = Urn.parse(urn);
+        var type = urnParsed.qualifiedType.type.asString();
+        var resource = this.resourcePackages.tryConstruct(type, version, urn);
         if (resource.isPresent()) {
             return resource;
         }

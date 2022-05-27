@@ -24,6 +24,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create packet capture
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var packetCapture = new PacketCapture(&#34;packetCapture&#34;, PacketCaptureArgs.builder()        
+ *             .bytesToCapturePerPacket(10000)
+ *             .filters(Map.ofEntries(
+ *                 Map.entry(&#34;localIPAddress&#34;, &#34;10.0.0.4&#34;),
+ *                 Map.entry(&#34;localPort&#34;, &#34;80&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;TCP&#34;)
+ *             ))
+ *             .networkWatcherName(&#34;nw1&#34;)
+ *             .packetCaptureName(&#34;pc1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .storageLocation(Map.ofEntries(
+ *                 Map.entry(&#34;filePath&#34;, &#34;D:\\capture\\pc1.cap&#34;),
+ *                 Map.entry(&#34;storageId&#34;, &#34;/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore&#34;),
+ *                 Map.entry(&#34;storagePath&#34;, &#34;https://mytestaccountname.blob.core.windows.net/capture/pc1.cap&#34;)
+ *             ))
+ *             .target(&#34;/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1&#34;)
+ *             .timeLimitInSeconds(100)
+ *             .totalBytesPerSession(100000)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

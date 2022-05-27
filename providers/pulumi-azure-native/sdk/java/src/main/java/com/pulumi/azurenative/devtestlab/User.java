@@ -23,6 +23,45 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### Users_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var user = new User(&#34;user&#34;, UserArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;appId&#34;, &#34;{appId}&#34;),
+ *                 Map.entry(&#34;objectId&#34;, &#34;{objectId}&#34;),
+ *                 Map.entry(&#34;principalId&#34;, &#34;{principalId}&#34;),
+ *                 Map.entry(&#34;principalName&#34;, &#34;{principalName}&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;{tenantId}&#34;)
+ *             ))
+ *             .labName(&#34;{devtestlabName}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{userName}&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .secretStore(Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultId&#34;, &#34;{keyVaultId}&#34;),
+ *                 Map.entry(&#34;keyVaultUri&#34;, &#34;{keyVaultUri}&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;tagName1&#34;, &#34;tagValue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-31-preview.
  * 
  * ## Example Usage
+ * ### Create/Update Resource Sync Rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var resourceSyncRule = new ResourceSyncRule(&#34;resourceSyncRule&#34;, ResourceSyncRuleArgs.builder()        
+ *             .childResourceName(&#34;resourceSyncRule01&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .priority(999)
+ *             .resourceGroupName(&#34;testresourcegroup&#34;)
+ *             .resourceName(&#34;customLocation01&#34;)
+ *             .selector(Map.of(&#34;matchLabels&#34;, Map.of(&#34;key1&#34;, &#34;value1&#34;)))
+ *             .targetResourceGroup(&#34;/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

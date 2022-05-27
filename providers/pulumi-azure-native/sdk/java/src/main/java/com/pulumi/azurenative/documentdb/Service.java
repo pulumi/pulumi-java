@@ -22,6 +22,64 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### DataTransferServiceCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .instanceCount(1)
+ *             .instanceSize(&#34;Cosmos.D4s&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;DataTransfer&#34;)
+ *             .serviceType(&#34;DataTransfer&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### SqlDedicatedGatewayServiceCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .instanceCount(1)
+ *             .instanceSize(&#34;Cosmos.D4s&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;SqlDedicatedGateway&#34;)
+ *             .serviceType(&#34;SqlDedicatedGateway&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

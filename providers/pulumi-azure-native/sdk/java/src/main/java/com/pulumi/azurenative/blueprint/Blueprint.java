@@ -25,6 +25,132 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### ManagementGroupBlueprint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blueprint = new Blueprint(&#34;blueprint&#34;, BlueprintArgs.builder()        
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .description(&#34;blueprint contains all artifact kinds {&#39;template&#39;, &#39;rbac&#39;, &#39;policy&#39;}&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;force cost center tag for all resources under given subscription.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;owners&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;assign owners to subscription along with blueprint assignment.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;array&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;storage account type.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Contains storageAccounts that collect all shoebox logs.&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;storage resource group&#34;)
+ *             )))
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .targetScope(&#34;subscription&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ResourceGroupWithTags
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blueprint = new Blueprint(&#34;blueprint&#34;, BlueprintArgs.builder()        
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .description(&#34;An example blueprint containing an RG with two tags.&#34;)
+ *             .resourceGroups(Map.of(&#34;myRGName&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;displayName&#34;, &#34;My Resource Group&#34;),
+ *                 Map.entry(&#34;location&#34;, &#34;westus&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;myRGName&#34;),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;costcenter&#34;, &#34;123456&#34;),
+ *                     Map.entry(&#34;nameOnlyTag&#34;, &#34;&#34;)
+ *                 ))
+ *             )))
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/{ManagementGroupId}&#34;)
+ *             .targetScope(&#34;subscription&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### SubscriptionBlueprint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blueprint = new Blueprint(&#34;blueprint&#34;, BlueprintArgs.builder()        
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .description(&#34;blueprint contains all artifact kinds {&#39;template&#39;, &#39;rbac&#39;, &#39;policy&#39;}&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;force cost center tag for all resources under given subscription.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;owners&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;assign owners to subscription along with blueprint assignment.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;array&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;displayName&#34;, &#34;storage account type.&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Contains storageAccounts that collect all shoebox logs.&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;storage resource group&#34;)
+ *             )))
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .targetScope(&#34;subscription&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

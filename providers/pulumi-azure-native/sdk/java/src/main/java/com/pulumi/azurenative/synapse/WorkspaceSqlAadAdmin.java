@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * Note: SQL AAD Admin is configured automatically during workspace creation and assigned to the current user. One can&#39;t add more admins with this resource unless you manually delete the current SQL AAD Admin.
  * 
  * ## Example Usage
+ * ### Create or update workspace active directory admin
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspaceSqlAadAdmin = new WorkspaceSqlAadAdmin(&#34;workspaceSqlAadAdmin&#34;, WorkspaceSqlAadAdminArgs.builder()        
+ *             .administratorType(&#34;ActiveDirectory&#34;)
+ *             .login(&#34;bob@contoso.com&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .sid(&#34;c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c&#34;)
+ *             .tenantId(&#34;c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c&#34;)
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

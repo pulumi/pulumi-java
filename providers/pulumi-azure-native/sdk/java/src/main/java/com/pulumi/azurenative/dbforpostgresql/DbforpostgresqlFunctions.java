@@ -36,6 +36,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a Configuration.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +52,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a Database.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -58,6 +68,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
         return getFirewallRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a server firewall rule.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +84,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2018-06-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -80,6 +100,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a server.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +116,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(GetServerAdministratorArgs args) {
         return getServerAdministrator(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a and external administrator to be created.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(GetServerAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getServerAdministrator", TypeShape.of(GetServerAdministratorResult.class), args, Utilities.withVersion(options));
     }
@@ -102,6 +132,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args) {
         return getServerKey(args, InvokeOptions.Empty);
     }
+    /**
+     * A PostgreSQL Server key.
+     * API Version: 2020-01-01.
+     * 
+     */
     public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getServerKey", TypeShape.of(GetServerKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -113,6 +148,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args) {
         return getServerSecurityAlertPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A server security alert policy.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getServerSecurityAlertPolicy", TypeShape.of(GetServerSecurityAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -124,6 +164,11 @@ public final class DbforpostgresqlFunctions {
     public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
         return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
+    /**
+     * A virtual network rule.
+     * API Version: 2017-12-01.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }

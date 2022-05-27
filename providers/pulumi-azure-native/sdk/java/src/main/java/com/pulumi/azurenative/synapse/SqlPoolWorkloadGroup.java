@@ -22,6 +22,69 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a workload group with all properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolWorkloadGroup = new SqlPoolWorkloadGroup(&#34;sqlPoolWorkloadGroup&#34;, SqlPoolWorkloadGroupArgs.builder()        
+ *             .importance(&#34;normal&#34;)
+ *             .maxResourcePercent(100)
+ *             .maxResourcePercentPerRequest(3)
+ *             .minResourcePercent(0)
+ *             .minResourcePercentPerRequest(3)
+ *             .queryExecutionTimeout(0)
+ *             .resourceGroupName(&#34;sqlcrudtest-6852&#34;)
+ *             .sqlPoolName(&#34;sqlcrudtest-9187&#34;)
+ *             .workloadGroupName(&#34;smallrc&#34;)
+ *             .workspaceName(&#34;sqlcrudtest-2080&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a workload group with the required properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolWorkloadGroup = new SqlPoolWorkloadGroup(&#34;sqlPoolWorkloadGroup&#34;, SqlPoolWorkloadGroupArgs.builder()        
+ *             .maxResourcePercent(100)
+ *             .minResourcePercent(0)
+ *             .minResourcePercentPerRequest(3)
+ *             .resourceGroupName(&#34;sqlcrudtest-6852&#34;)
+ *             .sqlPoolName(&#34;sqlcrudtest-9187&#34;)
+ *             .workloadGroupName(&#34;smallrc&#34;)
+ *             .workspaceName(&#34;sqlcrudtest-2080&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

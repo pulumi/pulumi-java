@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### PutManagementGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementGroup = new ManagementGroup(&#34;managementGroup&#34;, ManagementGroupArgs.builder()        
+ *             .details(Map.of(&#34;parent&#34;, Map.of(&#34;id&#34;, &#34;/providers/Microsoft.Management/managementGroups/RootGroup&#34;)))
+ *             .displayName(&#34;ChildGroup&#34;)
+ *             .groupId(&#34;ChildGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

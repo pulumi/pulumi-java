@@ -20,6 +20,11 @@ public final class WindowsesuFunctions {
     public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(GetMultipleActivationKeyArgs args) {
         return getMultipleActivationKey(args, InvokeOptions.Empty);
     }
+    /**
+     * MAK key details.
+     * API Version: 2019-09-16-preview.
+     * 
+     */
     public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(GetMultipleActivationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:windowsesu:getMultipleActivationKey", TypeShape.of(GetMultipleActivationKeyResult.class), args, Utilities.withVersion(options));
     }

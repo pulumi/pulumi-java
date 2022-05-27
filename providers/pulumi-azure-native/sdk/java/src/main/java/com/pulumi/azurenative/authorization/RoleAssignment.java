@@ -20,6 +20,90 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
+ * ### Create role assignment for resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignment = new RoleAssignment(&#34;roleAssignment&#34;, RoleAssignmentArgs.builder()        
+ *             .principalId(&#34;ce2ce14e-85d7-4629-bdbc-454d0519d987&#34;)
+ *             .principalType(&#34;User&#34;)
+ *             .roleAssignmentName(&#34;05c5a614-a7d6-4502-b150-c2fb455033ff&#34;)
+ *             .roleDefinitionId(&#34;/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d&#34;)
+ *             .scope(&#34;subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create role assignment for resource group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignment = new RoleAssignment(&#34;roleAssignment&#34;, RoleAssignmentArgs.builder()        
+ *             .principalId(&#34;ce2ce14e-85d7-4629-bdbc-454d0519d987&#34;)
+ *             .principalType(&#34;User&#34;)
+ *             .roleAssignmentName(&#34;05c5a614-a7d6-4502-b150-c2fb455033ff&#34;)
+ *             .roleDefinitionId(&#34;/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d&#34;)
+ *             .scope(&#34;subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create role assignment for subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var roleAssignment = new RoleAssignment(&#34;roleAssignment&#34;, RoleAssignmentArgs.builder()        
+ *             .principalId(&#34;ce2ce14e-85d7-4629-bdbc-454d0519d987&#34;)
+ *             .principalType(&#34;User&#34;)
+ *             .roleAssignmentName(&#34;05c5a614-a7d6-4502-b150-c2fb455033ff&#34;)
+ *             .roleDefinitionId(&#34;/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d&#34;)
+ *             .scope(&#34;subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

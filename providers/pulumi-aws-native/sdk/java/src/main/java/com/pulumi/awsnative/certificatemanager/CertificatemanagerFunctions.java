@@ -19,6 +19,10 @@ public final class CertificatemanagerFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::CertificateManager::Account.
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:certificatemanager:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }

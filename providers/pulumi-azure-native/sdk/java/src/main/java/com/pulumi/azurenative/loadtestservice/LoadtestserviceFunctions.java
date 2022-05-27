@@ -20,6 +20,11 @@ public final class LoadtestserviceFunctions {
     public static CompletableFuture<GetLoadTestResult> getLoadTest(GetLoadTestArgs args) {
         return getLoadTest(args, InvokeOptions.Empty);
     }
+    /**
+     * LoadTest details
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static CompletableFuture<GetLoadTestResult> getLoadTest(GetLoadTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args, Utilities.withVersion(options));
     }

@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-02.
  * 
  * ## Example Usage
+ * ### Create or Update a Machine Extension (PUT)
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineExtension = new MachineExtension(&#34;machineExtension&#34;, MachineExtensionArgs.builder()        
+ *             .extensionName(&#34;CustomScriptExtension&#34;)
+ *             .location(&#34;eastus2euap&#34;)
+ *             .name(&#34;myMachine&#34;)
+ *             .publisher(&#34;Microsoft.Compute&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .settings(Map.of(&#34;commandToExecute&#34;, &#34;powershell.exe -c \&#34;Get-Process | Where-Object { $_.CPU -gt 10000 }\&#34;&#34;))
+ *             .type(&#34;CustomScriptExtension&#34;)
+ *             .typeHandlerVersion(&#34;1.10&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

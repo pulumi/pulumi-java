@@ -27,12 +27,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.Lists.newArrayList;
-import static com.pulumi.core.internal.OutputData.allHelperAsync;
 import static com.pulumi.core.internal.OutputInternal.TupleZeroOut;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toCollection;
@@ -189,7 +188,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      */
     @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
     static <T> Output<List<T>> all(Output<T>... outputs) {
-        return all(List.of(outputs));
+        return all(Stream.of(outputs));
     }
 
     /**
@@ -199,16 +198,17 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#all(Output[])  for more details.
      */
     static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
-        return all(newArrayList(outputs));
+        return all(StreamSupport.stream(outputs.spliterator(), /* not parallel */ false));
     }
 
-    private static <T> Output<List<T>> all(List<Output<T>> outputs) {
-        return new OutputInternal<>(
-                allHelperAsync(outputs
-                        .stream()
-                        .map(output -> Internal.of(output).getDataAsync())
-                        .collect(Collectors.toList()))
-        );
+    private static <T> Output<List<T>> all(Stream<Output<T>> outputs) {
+        var data = outputs
+                .map(output -> Internal.of(output).getDataAsync())
+                .collect(toCollection(ArrayList::new)); // ArrayList preserves null
+        var futureResult = CompletableFutures.flatAllOf(data)
+                .thenApply(completed -> completed.stream().map(Output::joinOrThrow)) // already complete at this point
+                .thenApply(Output::accumulateOutputData);
+        return new OutputInternal<>(futureResult);
     }
 
     /**
@@ -231,24 +231,8 @@ public interface Output<T> extends Copyable<Output<T>> {
      */
     static Output<String> format(String formattableString, @Nullable Object... arguments) {
         var argumentsOrEmpty = arguments == null ? List.of() : newArrayList(arguments);
-        var data = argumentsOrEmpty.stream()
-                .map(Output::ensureOutput)
-                .map(OutputData::copyInputOutputData)
-                .collect(toCollection(ArrayList::new)); // ArrayList preserves null
-
-        var futureResult = CompletableFutures.allOf(data)
-                .thenApply(dataList ->
-                        OutputData.builder(new ArrayList<>(dataList.size()))
-                                .accumulate(dataList, (ts, t) -> {
-                                    ts.add(t);
-                                    return ts;
-                                })
-                                .build()
-                )
-                .thenApply(
-                        objs -> objs.apply(v -> String.format(formattableString, v.toArray()))
-                );
-        return new OutputInternal<>(futureResult);
+        var outputs = argumentsOrEmpty.stream().map(Output::ensureOutput);
+        return Output.all(outputs).applyValue(objs -> String.format(formattableString, objs.toArray()));
     }
 
     private static Output<Object> ensureOutput(@Nullable Object o) {
@@ -257,6 +241,20 @@ public interface Output<T> extends Copyable<Output<T>> {
             return (Output<Object>) o;
         }
         return Output.ofNullable(o);
+    }
+
+    private static <T> OutputData<T> joinOrThrow(CompletableFuture<OutputData<T>> futureData) {
+        var d = futureData.join();
+        return requireNonNull(d, "unexpected null OutputData from a CompletableFuture");
+    }
+
+    private static <T> OutputData<List<T>> accumulateOutputData(Stream<OutputData<T>> nullableStream) {
+        return OutputData.builder(new ArrayList<T>()) // ArrayList preserves null
+                .accumulate(nullableStream, (ts, t) -> {
+                    ts.add(t);
+                    return ts;
+                })
+                .build(ts -> ts);
     }
 
     // Convenience methods for Either (a.k.a. Union)

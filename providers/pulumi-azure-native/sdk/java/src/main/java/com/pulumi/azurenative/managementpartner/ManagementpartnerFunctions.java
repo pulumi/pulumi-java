@@ -20,6 +20,11 @@ public final class ManagementpartnerFunctions {
     public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args) {
         return getPartner(args, InvokeOptions.Empty);
     }
+    /**
+     * this is the management partner operations response
+     * API Version: 2018-02-01.
+     * 
+     */
     public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managementpartner:getPartner", TypeShape.of(GetPartnerResult.class), args, Utilities.withVersion(options));
     }

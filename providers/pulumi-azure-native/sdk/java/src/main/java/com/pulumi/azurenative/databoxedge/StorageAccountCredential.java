@@ -22,6 +22,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### SACPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccountCredential = new StorageAccountCredential(&#34;storageAccountCredential&#34;, StorageAccountCredentialArgs.builder()        
+ *             .accountKey(Map.ofEntries(
+ *                 Map.entry(&#34;encryptionAlgorithm&#34;, &#34;AES256&#34;),
+ *                 Map.entry(&#34;encryptionCertThumbprint&#34;, &#34;2A9D8D6BE51574B5461230AEF02F162C5F01AD31&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==&#34;)
+ *             ))
+ *             .accountType(&#34;BlobStorage&#34;)
+ *             .alias(&#34;sac1&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .name(&#34;sac1&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .sslStatus(&#34;Disabled&#34;)
+ *             .userName(&#34;cisbvt&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

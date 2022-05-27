@@ -22,6 +22,69 @@ import javax.annotation.Nullable;
  * API Version: 2017-12-01.
  * 
  * ## Example Usage
+ * ### Update a server&#39;s threat detection policy with all parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverSecurityAlertPolicy = new ServerSecurityAlertPolicy(&#34;serverSecurityAlertPolicy&#34;, ServerSecurityAlertPolicyArgs.builder()        
+ *             .disabledAlerts(            
+ *                 &#34;Access_Anomaly&#34;,
+ *                 &#34;Usage_Anomaly&#34;)
+ *             .emailAccountAdmins(true)
+ *             .emailAddresses(&#34;testSecurityAlert@microsoft.com&#34;)
+ *             .resourceGroupName(&#34;securityalert-4799&#34;)
+ *             .retentionDays(5)
+ *             .securityAlertPolicyName(&#34;Default&#34;)
+ *             .serverName(&#34;securityalert-6440&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .storageAccountAccessKey(&#34;sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==&#34;)
+ *             .storageEndpoint(&#34;https://mystorage.blob.core.windows.net&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a server&#39;s threat detection policy with minimal parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverSecurityAlertPolicy = new ServerSecurityAlertPolicy(&#34;serverSecurityAlertPolicy&#34;, ServerSecurityAlertPolicyArgs.builder()        
+ *             .emailAccountAdmins(true)
+ *             .resourceGroupName(&#34;securityalert-4799&#34;)
+ *             .securityAlertPolicyName(&#34;Default&#34;)
+ *             .serverName(&#34;securityalert-6440&#34;)
+ *             .state(&#34;Disabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

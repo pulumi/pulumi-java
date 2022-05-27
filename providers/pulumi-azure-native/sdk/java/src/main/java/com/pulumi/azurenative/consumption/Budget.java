@@ -27,13 +27,82 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateBudget
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var budget = new Budget(&#34;budget&#34;, BudgetArgs.builder()        
+ *             .amount(100.65)
+ *             .budgetName(&#34;TestBudget&#34;)
+ *             .category(&#34;Cost&#34;)
+ *             .eTag(&#34;\&#34;1d34d016a593709\&#34;&#34;)
+ *             .filter(Map.of(&#34;and&#34;,             
+ *                 Map.of(&#34;dimensions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;ResourceId&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;In&#34;),
+ *                     Map.entry(&#34;values&#34;,                     
+ *                         &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2&#34;,
+ *                         &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1&#34;)
+ *                 )),
+ *                 Map.of(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;category&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;In&#34;),
+ *                     Map.entry(&#34;values&#34;,                     
+ *                         &#34;Dev&#34;,
+ *                         &#34;Prod&#34;)
+ *                 )),
+ *                 Map.of(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;department&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;In&#34;),
+ *                     Map.entry(&#34;values&#34;,                     
+ *                         &#34;engineering&#34;,
+ *                         &#34;sales&#34;)
+ *                 ))))
+ *             .notifications(Map.of(&#34;Actual_GreaterThan_80_Percent&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;contactEmails&#34;,                 
+ *                     &#34;johndoe@contoso.com&#34;,
+ *                     &#34;janesmith@contoso.com&#34;),
+ *                 Map.entry(&#34;contactGroups&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup&#34;),
+ *                 Map.entry(&#34;contactRoles&#34;,                 
+ *                     &#34;Contributor&#34;,
+ *                     &#34;Reader&#34;),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;locale&#34;, &#34;en-us&#34;),
+ *                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                 Map.entry(&#34;threshold&#34;, 80),
+ *                 Map.entry(&#34;thresholdType&#34;, &#34;Actual&#34;)
+ *             )))
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .timeGrain(&#34;Monthly&#34;)
+ *             .timePeriod(Map.ofEntries(
+ *                 Map.entry(&#34;endDate&#34;, &#34;2018-10-31T00:00:00Z&#34;),
+ *                 Map.entry(&#34;startDate&#34;, &#34;2017-10-01T00:00:00Z&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
+ * $ pulumi import azure-native:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/TestBudget 
  * ```
  * 
  */

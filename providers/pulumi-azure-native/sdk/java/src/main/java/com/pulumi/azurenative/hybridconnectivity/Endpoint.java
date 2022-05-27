@@ -20,6 +20,59 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-06-preview.
  * 
  * ## Example Usage
+ * ### HybridConnectivityEndpointsPutCustom
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .endpointName(&#34;custom&#34;)
+ *             .resourceId(&#34;/subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.Relay/namespaces/custom-relay-namespace&#34;)
+ *             .resourceUri(&#34;subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine&#34;)
+ *             .type(&#34;custom&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### HybridConnectivityEndpointsPutDefault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .endpointName(&#34;default&#34;)
+ *             .resourceUri(&#34;subscriptions/f5bcc1d9-23af-4ae9-aca1-041d0f593a63/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/machines/testMachine&#34;)
+ *             .type(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

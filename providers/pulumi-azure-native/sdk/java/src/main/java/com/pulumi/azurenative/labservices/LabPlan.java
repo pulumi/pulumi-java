@@ -26,6 +26,54 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-01-preview.
  * 
  * ## Example Usage
+ * ### putLabPlan
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var labPlan = new LabPlan(&#34;labPlan&#34;, LabPlanArgs.builder()        
+ *             .defaultAutoShutdownProfile(Map.ofEntries(
+ *                 Map.entry(&#34;disconnectDelay&#34;, &#34;00:05&#34;),
+ *                 Map.entry(&#34;idleDelay&#34;, &#34;01:00&#34;),
+ *                 Map.entry(&#34;noConnectDelay&#34;, &#34;01:00&#34;),
+ *                 Map.entry(&#34;shutdownOnDisconnect&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;shutdownOnIdle&#34;, &#34;UserAbsence&#34;),
+ *                 Map.entry(&#34;shutdownWhenNotConnected&#34;, &#34;Enabled&#34;)
+ *             ))
+ *             .defaultConnectionProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientRdpAccess&#34;, &#34;Public&#34;),
+ *                 Map.entry(&#34;clientSshAccess&#34;, &#34;Public&#34;),
+ *                 Map.entry(&#34;webRdpAccess&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;webSshAccess&#34;, &#34;None&#34;)
+ *             ))
+ *             .defaultNetworkProfile(Map.of(&#34;subnetId&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default&#34;))
+ *             .labPlanName(&#34;testlabplan&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .sharedGalleryId(&#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Compute/galleries/testsig&#34;)
+ *             .supportInfo(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, &#34;help@contoso.com&#34;),
+ *                 Map.entry(&#34;instructions&#34;, &#34;Contact support for help.&#34;),
+ *                 Map.entry(&#34;phone&#34;, &#34;+1-202-555-0123&#34;),
+ *                 Map.entry(&#34;url&#34;, &#34;help.contoso.com&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

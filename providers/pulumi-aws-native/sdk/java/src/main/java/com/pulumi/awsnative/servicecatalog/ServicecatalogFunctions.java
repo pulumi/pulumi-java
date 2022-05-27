@@ -23,6 +23,10 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetCloudFormationProvisionedProductResult> getCloudFormationProvisionedProduct(GetCloudFormationProvisionedProductArgs args) {
         return getCloudFormationProvisionedProduct(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+     * 
+     */
     public static CompletableFuture<GetCloudFormationProvisionedProductResult> getCloudFormationProvisionedProduct(GetCloudFormationProvisionedProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getCloudFormationProvisionedProduct", TypeShape.of(GetCloudFormationProvisionedProductResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetServiceActionResult> getServiceAction(GetServiceActionArgs args) {
         return getServiceAction(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalog::ServiceAction
+     * 
+     */
     public static CompletableFuture<GetServiceActionResult> getServiceAction(GetServiceActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getServiceAction", TypeShape.of(GetServiceActionResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetServiceActionAssociationResult> getServiceActionAssociation(GetServiceActionAssociationArgs args) {
         return getServiceActionAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::ServiceCatalog::ServiceActionAssociation
+     * 
+     */
     public static CompletableFuture<GetServiceActionAssociationResult> getServiceActionAssociation(GetServiceActionAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalog:getServiceActionAssociation", TypeShape.of(GetServiceActionAssociationResult.class), args, Utilities.withVersion(options));
     }

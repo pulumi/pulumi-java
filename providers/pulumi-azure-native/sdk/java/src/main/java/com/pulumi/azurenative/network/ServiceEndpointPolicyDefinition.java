@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create service endpoint policy definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceEndpointPolicyDefinition = new ServiceEndpointPolicyDefinition(&#34;serviceEndpointPolicyDefinition&#34;, ServiceEndpointPolicyDefinitionArgs.builder()        
+ *             .description(&#34;Storage Service EndpointPolicy Definition&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .service(&#34;Microsoft.Storage&#34;)
+ *             .serviceEndpointPolicyDefinitionName(&#34;testDefinition&#34;)
+ *             .serviceEndpointPolicyName(&#34;testPolicy&#34;)
+ *             .serviceResources(            
+ *                 &#34;/subscriptions/subid1&#34;,
+ *                 &#34;/subscriptions/subid1/resourceGroups/storageRg&#34;,
+ *                 &#34;/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

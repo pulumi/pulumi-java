@@ -33,6 +33,247 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create AKS Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.of(&#34;computeType&#34;, &#34;AKS&#34;))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a AML Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;computeType&#34;, &#34;AmlCompute&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableNodePublicIp&#34;, true),
+ *                     Map.entry(&#34;isolatedNetwork&#34;, false),
+ *                     Map.entry(&#34;osType&#34;, &#34;Windows&#34;),
+ *                     Map.entry(&#34;remoteLoginPortPublicAccess&#34;, &#34;NotSpecified&#34;),
+ *                     Map.entry(&#34;scaleSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;maxNodeCount&#34;, 1),
+ *                         Map.entry(&#34;minNodeCount&#34;, 0),
+ *                         Map.entry(&#34;nodeIdleTimeBeforeScaleDown&#34;, &#34;PT5M&#34;)
+ *                     )),
+ *                     Map.entry(&#34;virtualMachineImage&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1&#34;)),
+ *                     Map.entry(&#34;vmPriority&#34;, &#34;Dedicated&#34;),
+ *                     Map.entry(&#34;vmSize&#34;, &#34;STANDARD_NC6&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a DataFactory Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.of(&#34;computeType&#34;, &#34;DataFactory&#34;))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an ComputeInstance Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;computeType&#34;, &#34;ComputeInstance&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationSharingPolicy&#34;, &#34;Personal&#34;),
+ *                     Map.entry(&#34;computeInstanceAuthorizationType&#34;, &#34;personal&#34;),
+ *                     Map.entry(&#34;personalComputeInstanceSettings&#34;, Map.of(&#34;assignedUser&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;objectId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;),
+ *                         Map.entry(&#34;tenantId&#34;, &#34;00000000-0000-0000-0000-000000000000&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;sshSettings&#34;, Map.of(&#34;sshPublicAccess&#34;, &#34;Disabled&#34;)),
+ *                     Map.entry(&#34;subnet&#34;, &#34;test-subnet-resource-id&#34;),
+ *                     Map.entry(&#34;vmSize&#34;, &#34;STANDARD_NC6&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an ComputeInstance Compute with minimal inputs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;computeType&#34;, &#34;ComputeInstance&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.of(&#34;vmSize&#34;, &#34;STANDARD_NC6&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a AKS Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;computeType&#34;, &#34;AKS&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;some compute&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.of(&#34;agentCount&#34;, 4)),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a AML Compute
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningCompute = new MachineLearningCompute(&#34;machineLearningCompute&#34;, MachineLearningComputeArgs.builder()        
+ *             .computeName(&#34;compute123&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;computeType&#34;, &#34;AmlCompute&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;some compute&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.of(&#34;scaleSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxNodeCount&#34;, 4),
+ *                     Map.entry(&#34;minNodeCount&#34;, 4),
+ *                     Map.entry(&#34;nodeIdleTimeBeforeScaleDown&#34;, &#34;PT5M&#34;)
+ *                 )))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

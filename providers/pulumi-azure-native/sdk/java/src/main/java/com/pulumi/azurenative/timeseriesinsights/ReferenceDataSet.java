@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-15.
  * 
  * ## Example Usage
+ * ### ReferenceDataSetsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var referenceDataSet = new ReferenceDataSet(&#34;referenceDataSet&#34;, ReferenceDataSetArgs.builder()        
+ *             .environmentName(&#34;env1&#34;)
+ *             .keyProperties(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;DeviceId1&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;DeviceFloor&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Double&#34;)
+ *                 ))
+ *             .location(&#34;West US&#34;)
+ *             .referenceDataSetName(&#34;rds1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

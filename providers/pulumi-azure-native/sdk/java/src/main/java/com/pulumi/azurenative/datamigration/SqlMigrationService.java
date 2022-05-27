@@ -22,6 +22,58 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-30-preview.
  * 
  * ## Example Usage
+ * ### Create or Update SQL Migration Service with maximum parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlMigrationService = new SqlMigrationService(&#34;sqlMigrationService&#34;, SqlMigrationServiceArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlMigrationServiceName(&#34;testagent&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update SQL Migration Service with minimum parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlMigrationService = new SqlMigrationService(&#34;sqlMigrationService&#34;, SqlMigrationServiceArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlMigrationServiceName(&#34;testagent&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

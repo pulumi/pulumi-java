@@ -24,6 +24,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### ExpressRouteGatewayCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteGateway = new ExpressRouteGateway(&#34;expressRouteGateway&#34;, ExpressRouteGatewayArgs.builder()        
+ *             .autoScaleConfiguration(Map.of(&#34;bounds&#34;, Map.of(&#34;min&#34;, 3)))
+ *             .expressRouteGatewayName(&#34;gateway-2&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

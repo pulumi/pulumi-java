@@ -24,6 +24,11 @@ public final class SolutionsFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about managed application.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class SolutionsFunctions {
     public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(GetApplicationDefinitionArgs args) {
         return getApplicationDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about managed application definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(GetApplicationDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getApplicationDefinition", TypeShape.of(GetApplicationDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class SolutionsFunctions {
     public static CompletableFuture<GetJitRequestResult> getJitRequest(GetJitRequestArgs args) {
         return getJitRequest(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about JIT request definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static CompletableFuture<GetJitRequestResult> getJitRequest(GetJitRequestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getJitRequest", TypeShape.of(GetJitRequestResult.class), args, Utilities.withVersion(options));
     }

@@ -21,6 +21,10 @@ public final class ForecastFunctions {
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type Definition for AWS::Forecast::Dataset
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:forecast:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class ForecastFunctions {
     public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args) {
         return getDatasetGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a dataset group that holds a collection of related datasets
+     * 
+     */
     public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:forecast:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args, Utilities.withVersion(options));
     }

@@ -24,6 +24,158 @@ import javax.annotation.Nullable;
  * API Version: 2015-04-01.
  * 
  * ## Example Usage
+ * ### Create or update an autoscale setting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var autoscaleSetting = new AutoscaleSetting(&#34;autoscaleSetting&#34;, AutoscaleSettingArgs.builder()        
+ *             .autoscaleSettingName(&#34;MySetting&#34;)
+ *             .enabled(true)
+ *             .location(&#34;West US&#34;)
+ *             .notifications(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;customEmails&#34;,                     
+ *                         &#34;gu@ms.com&#34;,
+ *                         &#34;ge@ns.net&#34;),
+ *                     Map.entry(&#34;sendToSubscriptionAdministrator&#34;, true),
+ *                     Map.entry(&#34;sendToSubscriptionCoAdministrators&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;operation&#34;, &#34;Scale&#34;),
+ *                 Map.entry(&#34;webhooks&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;serviceUri&#34;, &#34;http://myservice.com&#34;)
+ *                 ))
+ *             ))
+ *             .profiles(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;capacity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;default&#34;, &#34;1&#34;),
+ *                         Map.entry(&#34;maximum&#34;, &#34;10&#34;),
+ *                         Map.entry(&#34;minimum&#34;, &#34;1&#34;)
+ *                     )),
+ *                     Map.entry(&#34;fixedDate&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;end&#34;, &#34;2015-03-05T14:30:00Z&#34;),
+ *                         Map.entry(&#34;start&#34;, &#34;2015-03-05T14:00:00Z&#34;),
+ *                         Map.entry(&#34;timeZone&#34;, &#34;UTC&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;adios&#34;),
+ *                     Map.entry(&#34;rules&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;metricTrigger&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dividePerInstance&#34;, false),
+ *                                 Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                                 Map.entry(&#34;metricResourceUri&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc&#34;),
+ *                                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                                 Map.entry(&#34;statistic&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;threshold&#34;, 10),
+ *                                 Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;timeGrain&#34;, &#34;PT1M&#34;),
+ *                                 Map.entry(&#34;timeWindow&#34;, &#34;PT5M&#34;)
+ *                             )),
+ *                             Map.entry(&#34;scaleAction&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;cooldown&#34;, &#34;PT5M&#34;),
+ *                                 Map.entry(&#34;direction&#34;, &#34;Increase&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;ChangeCount&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;1&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;metricTrigger&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dividePerInstance&#34;, false),
+ *                                 Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                                 Map.entry(&#34;metricResourceUri&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc&#34;),
+ *                                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                                 Map.entry(&#34;statistic&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;threshold&#34;, 15),
+ *                                 Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;timeGrain&#34;, &#34;PT2M&#34;),
+ *                                 Map.entry(&#34;timeWindow&#34;, &#34;PT5M&#34;)
+ *                             )),
+ *                             Map.entry(&#34;scaleAction&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;cooldown&#34;, &#34;PT6M&#34;),
+ *                                 Map.entry(&#34;direction&#34;, &#34;Decrease&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;ChangeCount&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;2&#34;)
+ *                             ))
+ *                         ))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;capacity&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;default&#34;, &#34;1&#34;),
+ *                         Map.entry(&#34;maximum&#34;, &#34;10&#34;),
+ *                         Map.entry(&#34;minimum&#34;, &#34;1&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;saludos&#34;),
+ *                     Map.entry(&#34;recurrence&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;frequency&#34;, &#34;Week&#34;),
+ *                         Map.entry(&#34;schedule&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;days&#34;, &#34;1&#34;),
+ *                             Map.entry(&#34;hours&#34;, 5),
+ *                             Map.entry(&#34;minutes&#34;, 15),
+ *                             Map.entry(&#34;timeZone&#34;, &#34;UTC&#34;)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;rules&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;metricTrigger&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dividePerInstance&#34;, false),
+ *                                 Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                                 Map.entry(&#34;metricResourceUri&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc&#34;),
+ *                                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                                 Map.entry(&#34;statistic&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;threshold&#34;, 10),
+ *                                 Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;timeGrain&#34;, &#34;PT1M&#34;),
+ *                                 Map.entry(&#34;timeWindow&#34;, &#34;PT5M&#34;)
+ *                             )),
+ *                             Map.entry(&#34;scaleAction&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;cooldown&#34;, &#34;PT5M&#34;),
+ *                                 Map.entry(&#34;direction&#34;, &#34;Increase&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;ChangeCount&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;1&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;metricTrigger&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;dividePerInstance&#34;, false),
+ *                                 Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                                 Map.entry(&#34;metricResourceUri&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc&#34;),
+ *                                 Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                                 Map.entry(&#34;statistic&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;threshold&#34;, 15),
+ *                                 Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;),
+ *                                 Map.entry(&#34;timeGrain&#34;, &#34;PT2M&#34;),
+ *                                 Map.entry(&#34;timeWindow&#34;, &#34;PT5M&#34;)
+ *                             )),
+ *                             Map.entry(&#34;scaleAction&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;cooldown&#34;, &#34;PT6M&#34;),
+ *                                 Map.entry(&#34;direction&#34;, &#34;Decrease&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;ChangeCount&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;2&#34;)
+ *                             ))
+ *                         ))
+ *                 ))
+ *             .resourceGroupName(&#34;TestingMetricsScaleSet&#34;)
+ *             .tags()
+ *             .targetResourceUri(&#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

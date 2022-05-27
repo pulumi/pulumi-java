@@ -19,6 +19,10 @@ public final class Inspectorv2Functions {
     public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args) {
         return getFilter(args, InvokeOptions.Empty);
     }
+    /**
+     * Inspector Filter resource schema
+     * 
+     */
     public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args, Utilities.withVersion(options));
     }

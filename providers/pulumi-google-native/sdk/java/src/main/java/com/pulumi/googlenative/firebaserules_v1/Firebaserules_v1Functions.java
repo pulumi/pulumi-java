@@ -21,6 +21,10 @@ public final class Firebaserules_v1Functions {
     public static CompletableFuture<GetReleaseResult> getRelease(GetReleaseArgs args) {
         return getRelease(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a `Release` by name.
+     * 
+     */
     public static CompletableFuture<GetReleaseResult> getRelease(GetReleaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRelease", TypeShape.of(GetReleaseResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Firebaserules_v1Functions {
     public static CompletableFuture<GetRulesetResult> getRuleset(GetRulesetArgs args) {
         return getRuleset(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a `Ruleset` by name including the full `Source` contents.
+     * 
+     */
     public static CompletableFuture<GetRulesetResult> getRuleset(GetRulesetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRuleset", TypeShape.of(GetRulesetResult.class), args, Utilities.withVersion(options));
     }

@@ -42,6 +42,33 @@ public final class QldbFunctions {
     public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args) {
         return getLedger(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to fetch information about a Quantum Ledger Database.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(QldbFunctions.getLedger(GetLedgerArgs.builder()
+     *             .name(&#34;an_example_ledger&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:qldb/getLedger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }

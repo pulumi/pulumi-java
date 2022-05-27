@@ -24,6 +24,70 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a sync group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncGroup = new SyncGroup(&#34;syncGroup&#34;, SyncGroupArgs.builder()        
+ *             .conflictResolutionPolicy(&#34;HubWin&#34;)
+ *             .databaseName(&#34;syncgroupcrud-4328&#34;)
+ *             .hubDatabaseUserName(&#34;hubUser&#34;)
+ *             .interval(&#34;TODO: GenUnaryOpExpression&#34;)
+ *             .resourceGroupName(&#34;syncgroupcrud-65440&#34;)
+ *             .serverName(&#34;syncgroupcrud-8475&#34;)
+ *             .syncDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328&#34;)
+ *             .syncGroupName(&#34;syncgroupcrud-3187&#34;)
+ *             .usePrivateLinkConnection(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a sync group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncGroup = new SyncGroup(&#34;syncGroup&#34;, SyncGroupArgs.builder()        
+ *             .conflictResolutionPolicy(&#34;HubWin&#34;)
+ *             .databaseName(&#34;syncgroupcrud-4328&#34;)
+ *             .hubDatabaseUserName(&#34;hubUser&#34;)
+ *             .interval(&#34;TODO: GenUnaryOpExpression&#34;)
+ *             .resourceGroupName(&#34;syncgroupcrud-65440&#34;)
+ *             .serverName(&#34;syncgroupcrud-8475&#34;)
+ *             .syncDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328&#34;)
+ *             .syncGroupName(&#34;syncgroupcrud-3187&#34;)
+ *             .usePrivateLinkConnection(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

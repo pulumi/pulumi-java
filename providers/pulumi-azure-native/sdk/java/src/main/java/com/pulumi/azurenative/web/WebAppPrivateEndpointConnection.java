@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Approves or rejects a private endpoint connection for a site.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webAppPrivateEndpointConnection = new WebAppPrivateEndpointConnection(&#34;webAppPrivateEndpointConnection&#34;, WebAppPrivateEndpointConnectionArgs.builder()        
+ *             .name(&#34;testSite&#34;)
+ *             .privateEndpointConnectionName(&#34;connection&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;actionsRequired&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;Approved by admin.&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

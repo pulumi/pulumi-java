@@ -144,8 +144,8 @@ func (g *generator) genApply(w io.Writer, expr *model.FunctionCallExpression) {
 	applyArgs, then := pcl.ParseApplyCall(expr)
 
 	if len(applyArgs) == 1 {
-		// If we only have a single output, just generate a normal `.apply`
-		g.Fgenf(w, "%.v.apply(%.v)", applyArgs[0], then)
+		// If we only have a single output, just generate a normal `.applyValue`
+		g.Fgenf(w, "%.v.applyValue(%.v)", applyArgs[0], then)
 	} else {
 		// Otherwise, generate a call to `Output.tuple(...)`.
 		g.Fgen(w, "Output.tuple(")
@@ -156,7 +156,7 @@ func (g *generator) genApply(w io.Writer, expr *model.FunctionCallExpression) {
 			g.Fgenf(w, "%.v", o)
 		}
 
-		g.Fgenf(w, ").apply(%.v)", then)
+		g.Fgenf(w, ").applyValue(%.v)", then)
 	}
 }
 
@@ -717,7 +717,7 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 	if isFunctionInvoke {
 		lambdaArg := names.LowerCamelCase(typeName(invokedFunctionSchema.Outputs))
 		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
-		g.Fgenf(w, ".apply(%s -> %s", lambdaArg, lambdaArg)
+		g.Fgenf(w, ".applyValue(%s -> %s", lambdaArg, lambdaArg)
 	}
 
 	var objType *schema.ObjectType

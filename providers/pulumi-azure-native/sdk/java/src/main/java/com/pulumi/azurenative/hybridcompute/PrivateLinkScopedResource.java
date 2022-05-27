@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-15-preview.
  * 
  * ## Example Usage
+ * ### Update a scoped resource in a private link scope.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkScopedResource = new PrivateLinkScopedResource(&#34;privateLinkScopedResource&#34;, PrivateLinkScopedResourceArgs.builder()        
+ *             .linkedResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1&#34;)
+ *             .name(&#34;scoped-resource-name&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scopeName(&#34;myPrivateLinkScope&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

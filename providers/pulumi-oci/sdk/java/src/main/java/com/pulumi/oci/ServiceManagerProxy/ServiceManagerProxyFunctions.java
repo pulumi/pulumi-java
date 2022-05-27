@@ -25,6 +25,14 @@ public final class ServiceManagerProxyFunctions {
     public static CompletableFuture<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args) {
         return getServiceEnvironment(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Service Environment resource in Oracle Cloud Infrastructure Service Manager Proxy service.
+     * 
+     * Get the detailed information for a specific service environment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetServiceEnvironmentResult> getServiceEnvironment(GetServiceEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ServiceManagerProxy/getServiceEnvironment:getServiceEnvironment", TypeShape.of(GetServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
@@ -40,6 +48,15 @@ public final class ServiceManagerProxyFunctions {
     public static CompletableFuture<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args) {
         return getServiceEnvironments(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Service Environments in Oracle Cloud Infrastructure Service Manager Proxy service.
+     * 
+     * List the details of Software as a Service (SaaS) environments provisioned by Service Manager.
+     * Information includes the service instance endpoints and service definition details.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetServiceEnvironmentsResult> getServiceEnvironments(GetServiceEnvironmentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ServiceManagerProxy/getServiceEnvironments:getServiceEnvironments", TypeShape.of(GetServiceEnvironmentsResult.class), args, Utilities.withVersion(options));
     }

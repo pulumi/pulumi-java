@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### NetworkGroupsPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkGroup = new NetworkGroup(&#34;networkGroup&#34;, NetworkGroupArgs.builder()        
+ *             .conditionalMembership(&#34;&#34;)
+ *             .description(&#34;A sample group&#34;)
+ *             .displayName(&#34;My Network Group&#34;)
+ *             .groupMembers(Map.of(&#34;resourceId&#34;, &#34;/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1&#34;))
+ *             .memberType(&#34;VirtualNetwork&#34;)
+ *             .networkGroupName(&#34;TestNetworkGroup&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

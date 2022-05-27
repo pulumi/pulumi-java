@@ -29,6 +29,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetDevicePoolResult> getDevicePool(GetDevicePoolArgs args) {
         return getDevicePool(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
+     * 
+     */
     public static CompletableFuture<GetDevicePoolResult> getDevicePool(GetDevicePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getDevicePool", TypeShape.of(GetDevicePoolResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
         return getInstanceProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
+     * 
+     */
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(GetNetworkProfileArgs args) {
         return getNetworkProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::NetworkProfile creates a new DF Network Profile
+     * 
+     */
     public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(GetNetworkProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getNetworkProfile", TypeShape.of(GetNetworkProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::Project creates a new Device Farm Project
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetTestGridProjectResult> getTestGridProject(GetTestGridProjectArgs args) {
         return getTestGridProject(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
+     * 
+     */
     public static CompletableFuture<GetTestGridProjectResult> getTestGridProject(GetTestGridProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getTestGridProject", TypeShape.of(GetTestGridProjectResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class DevicefarmFunctions {
     public static CompletableFuture<GetVPCEConfigurationResult> getVPCEConfiguration(GetVPCEConfigurationArgs args) {
         return getVPCEConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::DeviceFarm::VPCEConfiguration creates a new Device Farm VPCE Configuration
+     * 
+     */
     public static CompletableFuture<GetVPCEConfigurationResult> getVPCEConfiguration(GetVPCEConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getVPCEConfiguration", TypeShape.of(GetVPCEConfigurationResult.class), args, Utilities.withVersion(options));
     }

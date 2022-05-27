@@ -25,6 +25,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create or update flow log
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var flowLog = new FlowLog(&#34;flowLog&#34;, FlowLogArgs.builder()        
+ *             .enabled(true)
+ *             .flowLogName(&#34;fl&#34;)
+ *             .format(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;JSON&#34;),
+ *                 Map.entry(&#34;version&#34;, 1)
+ *             ))
+ *             .location(&#34;centraluseuap&#34;)
+ *             .networkWatcherName(&#34;nw1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .storageId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/nwtest1mgvbfmqsigdxe&#34;)
+ *             .targetResourceId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityGroups/desmondcentral-nsg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

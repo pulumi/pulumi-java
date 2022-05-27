@@ -1,9 +1,30 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.Role;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleArgs;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.PolicyRuleArgs;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleBinding;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.RoleBindingArgs;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.SubjectArgs;
+import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs.RoleRefArgs;
+import com.pulumi.kubernetes.core_v1.ServiceAccount;
+import com.pulumi.kubernetes.core_v1.ServiceAccountArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {

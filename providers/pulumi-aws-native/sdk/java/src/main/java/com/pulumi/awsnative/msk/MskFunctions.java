@@ -23,6 +23,10 @@ public final class MskFunctions {
     public static CompletableFuture<GetBatchScramSecretResult> getBatchScramSecret(GetBatchScramSecretArgs args) {
         return getBatchScramSecret(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::MSK::BatchScramSecret
+     * 
+     */
     public static CompletableFuture<GetBatchScramSecretResult> getBatchScramSecret(GetBatchScramSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:msk:getBatchScramSecret", TypeShape.of(GetBatchScramSecretResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class MskFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::MSK::Cluster
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:msk:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class MskFunctions {
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
         return getConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::MSK::Configuration
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:msk:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }

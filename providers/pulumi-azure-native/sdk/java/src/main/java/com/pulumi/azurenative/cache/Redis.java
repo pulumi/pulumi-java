@@ -29,6 +29,45 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### RedisCacheCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var redis = new Redis(&#34;redis&#34;, RedisArgs.builder()        
+ *             .enableNonSslPort(true)
+ *             .location(&#34;West US&#34;)
+ *             .minimumTlsVersion(&#34;1.2&#34;)
+ *             .name(&#34;cache1&#34;)
+ *             .redisConfiguration(Map.of(&#34;maxmemoryPolicy&#34;, &#34;allkeys-lru&#34;))
+ *             .replicasPerMaster(2)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .shardCount(2)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;family&#34;, &#34;P&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .staticIP(&#34;192.168.0.5&#34;)
+ *             .subnetId(&#34;/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1&#34;)
+ *             .zones(&#34;1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

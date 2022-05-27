@@ -26,6 +26,38 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or Update Container App AuthConfig
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerAppsAuthConfig = new ContainerAppsAuthConfig(&#34;containerAppsAuthConfig&#34;, ContainerAppsAuthConfigArgs.builder()        
+ *             .containerAppName(&#34;testcanadacentral&#34;)
+ *             .globalValidation(Map.of(&#34;unauthenticatedClientAction&#34;, &#34;AllowAnonymous&#34;))
+ *             .identityProviders(Map.of(&#34;facebook&#34;, Map.of(&#34;registration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;appId&#34;, &#34;123&#34;),
+ *                 Map.entry(&#34;appSecretSettingName&#34;, &#34;facebook-secret&#34;)
+ *             ))))
+ *             .name(&#34;current&#34;)
+ *             .platform(Map.of(&#34;enabled&#34;, true))
+ *             .resourceGroupName(&#34;workerapps-rg-xj&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

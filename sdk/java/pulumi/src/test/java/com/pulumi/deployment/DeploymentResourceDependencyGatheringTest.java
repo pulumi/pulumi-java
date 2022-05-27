@@ -1,6 +1,7 @@
 package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
+import com.pulumi.Context;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.annotations.ResourceType;
@@ -9,7 +10,6 @@ import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class DeploymentResourceDependencyGatheringTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
                 .setMocks(new MyMocks(true))
-                .setSpyGlobalInstance();
+                .build();
     }
 
     @AfterAll
@@ -41,13 +41,13 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
+        var result = mock.runTestAsync(DeploysResourcesWithUnknownDependsOnStack::init).join();
         assertThat(result.exceptions).isNotNull();
         assertThat(result.exceptions).isEmpty();
     }
 
-    public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
-        public DeploysResourcesWithUnknownDependsOnStack() {
+    public static class DeploysResourcesWithUnknownDependsOnStack {
+        public static void init(Context ctx) {
             var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
                     .dependsOn(OutputTests.unknown())
                     .build()

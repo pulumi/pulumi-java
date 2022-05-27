@@ -19,6 +19,33 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates or updates the specified virtual network rule. During update, the virtual network rule with the specified name will be replaced with this new virtual network rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkRule = new VirtualNetworkRule(&#34;virtualNetworkRule&#34;, VirtualNetworkRuleArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .subnetId(&#34;test_subnetId&#34;)
+ *             .virtualNetworkRuleName(&#34;test_virtual_network_rules_name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

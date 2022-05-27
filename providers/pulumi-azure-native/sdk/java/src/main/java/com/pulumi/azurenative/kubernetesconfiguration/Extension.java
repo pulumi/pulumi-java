@@ -27,6 +27,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01-preview.
  * 
  * ## Example Usage
+ * ### Create Extension
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var extension = new Extension(&#34;extension&#34;, ExtensionArgs.builder()        
+ *             .autoUpgradeMinorVersion(true)
+ *             .clusterName(&#34;clusterName1&#34;)
+ *             .clusterResourceName(&#34;connectedClusters&#34;)
+ *             .clusterRp(&#34;Microsoft.Kubernetes&#34;)
+ *             .configurationProtectedSettings(Map.of(&#34;omsagent.secret.key&#34;, &#34;secretKeyValue01&#34;))
+ *             .configurationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;omsagent.env.clusterName&#34;, &#34;clusterName1&#34;),
+ *                 Map.entry(&#34;omsagent.secret.wsid&#34;, &#34;a38cef99-5a89-52ed-b6db-22095c23664b&#34;)
+ *             ))
+ *             .extensionInstanceName(&#34;ClusterMonitor&#34;)
+ *             .extensionType(&#34;azuremonitor-containers&#34;)
+ *             .releaseTrain(&#34;Preview&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .scope(Map.of(&#34;cluster&#34;, Map.of(&#34;releaseNamespace&#34;, &#34;kube-system&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

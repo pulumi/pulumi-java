@@ -27,6 +27,121 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingJob = new StreamingJob(&#34;streamingJob&#34;, StreamingJobArgs.builder()        
+ *             .compatibilityLevel(&#34;1.0&#34;)
+ *             .dataLocale(&#34;en-US&#34;)
+ *             .eventsLateArrivalMaxDelayInSeconds(5)
+ *             .eventsOutOfOrderMaxDelayInSeconds(0)
+ *             .eventsOutOfOrderPolicy(&#34;Drop&#34;)
+ *             .functions()
+ *             .inputs(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;inputtest&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containerName&#34;),
+ *                         Map.entry(&#34;pathPattern&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;storageAccounts&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;accountKey&#34;, &#34;yourAccountKey==&#34;),
+ *                             Map.entry(&#34;accountName&#34;, &#34;yourAccountName&#34;)
+ *                         )),
+ *                         Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/Blob&#34;)
+ *                     )),
+ *                     Map.entry(&#34;serialization&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;Json&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;Stream&#34;)
+ *                 ))
+ *             ))
+ *             .jobName(&#34;sj7804&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .outputErrorPolicy(&#34;Drop&#34;)
+ *             .outputs(Map.ofEntries(
+ *                 Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;database&#34;, &#34;databaseName&#34;),
+ *                     Map.entry(&#34;password&#34;, &#34;userPassword&#34;),
+ *                     Map.entry(&#34;server&#34;, &#34;serverName&#34;),
+ *                     Map.entry(&#34;table&#34;, &#34;tableName&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Sql/Server/Database&#34;),
+ *                     Map.entry(&#34;user&#34;, &#34;&lt;user&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;outputtest&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg3276&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key3&#34;, &#34;value3&#34;),
+ *                 Map.entry(&#34;randomKey&#34;, &#34;randomValue&#34;)
+ *             ))
+ *             .transformation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;transformationtest&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;Select Id, Name from inputtest&#34;),
+ *                 Map.entry(&#34;streamingUnits&#34;, 1)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingJob = new StreamingJob(&#34;streamingJob&#34;, StreamingJobArgs.builder()        
+ *             .compatibilityLevel(&#34;1.0&#34;)
+ *             .dataLocale(&#34;en-US&#34;)
+ *             .eventsLateArrivalMaxDelayInSeconds(16)
+ *             .eventsOutOfOrderMaxDelayInSeconds(5)
+ *             .eventsOutOfOrderPolicy(&#34;Drop&#34;)
+ *             .functions()
+ *             .inputs()
+ *             .jobName(&#34;sj59&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .outputErrorPolicy(&#34;Drop&#34;)
+ *             .outputs()
+ *             .resourceGroupName(&#34;sjrg6936&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key3&#34;, &#34;value3&#34;),
+ *                 Map.entry(&#34;randomKey&#34;, &#34;randomValue&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

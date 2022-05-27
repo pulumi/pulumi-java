@@ -23,6 +23,54 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create attached data network
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var attachedDataNetwork = new AttachedDataNetwork(&#34;attachedDataNetwork&#34;, AttachedDataNetworkArgs.builder()        
+ *             .attachedDataNetworkName(&#34;TestAttachedDataNetwork&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .naptConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;pinholeLimits&#34;, 65536),
+ *                 Map.entry(&#34;pinholeTimeouts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;icmp&#34;, 60),
+ *                     Map.entry(&#34;tcp&#34;, 7440),
+ *                     Map.entry(&#34;udp&#34;, 300)
+ *                 )),
+ *                 Map.entry(&#34;portRange&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxPort&#34;, 65535),
+ *                     Map.entry(&#34;minPort&#34;, 1024)
+ *                 )),
+ *                 Map.entry(&#34;portReuseHoldTime&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;tcp&#34;, 120),
+ *                     Map.entry(&#34;udp&#34;, 60)
+ *                 ))
+ *             ))
+ *             .packetCoreControlPlaneName(&#34;TestPacketCoreCP&#34;)
+ *             .packetCoreDataPlaneName(&#34;TestPacketCoreDP&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .userEquipmentAddressPoolPrefix(&#34;2.2.0.0/16&#34;)
+ *             .userEquipmentStaticAddressPoolPrefix(&#34;2.4.0.0/16&#34;)
+ *             .userPlaneDataInterface(Map.of(&#34;name&#34;, &#34;N6&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

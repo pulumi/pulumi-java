@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a privateLinkHub
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkHub = new PrivateLinkHub(&#34;privateLinkHub&#34;, PrivateLinkHubArgs.builder()        
+ *             .location(&#34;East US&#34;)
+ *             .privateLinkHubName(&#34;privateLinkHub1&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

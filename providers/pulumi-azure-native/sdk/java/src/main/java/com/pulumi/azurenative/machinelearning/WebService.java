@@ -22,6 +22,170 @@ import javax.annotation.Nullable;
  * API Version: 2017-01-01.
  * 
  * ## Example Usage
+ * ### PUT WebService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webService = new WebService(&#34;webService&#34;, WebServiceArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;assets&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;asset1&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;locationInfo&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;credentials&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;uri&#34;, &#34;aml://module/moduleId-1&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;Execute R Script&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;Module&#34;)
+ *                     )),
+ *                     Map.entry(&#34;asset2&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;locationInfo&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;credentials&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;uri&#34;, &#34;aml://module/moduleId-2&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;Import Data&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;Module&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;commitmentPlan&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.MachineLearning/commitmentPlans/commitmentPlanName&#34;)),
+ *                 Map.entry(&#34;description&#34;, &#34;Web Service Description&#34;),
+ *                 Map.entry(&#34;diagnostics&#34;, Map.of(&#34;level&#34;, &#34;None&#34;)),
+ *                 Map.entry(&#34;exampleRequest&#34;, Map.of(&#34;inputs&#34;, Map.of(&#34;input1&#34;,                 
+ *                     &#34;age&#34;,
+ *                     &#34;workclass&#34;,
+ *                     &#34;fnlwgt&#34;,
+ *                     &#34;education&#34;,
+ *                     &#34;education-num&#34;))),
+ *                 Map.entry(&#34;exposeSampleData&#34;, true),
+ *                 Map.entry(&#34;input&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;input1&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.of(&#34;column_name&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;type&#34;, &#34;String&#34;),
+ *                             Map.entry(&#34;xMsIsnullable&#34;, false)
+ *                         ))),
+ *                         Map.entry(&#34;title&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;object&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;title&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;object&#34;)
+ *                 )),
+ *                 Map.entry(&#34;machineLearningWorkspace&#34;, Map.of(&#34;id&#34;, &#34;workspaceId&#34;)),
+ *                 Map.entry(&#34;output&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;output1&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;age&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;format&#34;, &#34;Int32&#34;),
+ *                                 Map.entry(&#34;type&#34;, &#34;Integer&#34;),
+ *                                 Map.entry(&#34;xMsIsnullable&#34;, true)
+ *                             )),
+ *                             Map.entry(&#34;workclass&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;type&#34;, &#34;String&#34;),
+ *                                 Map.entry(&#34;xMsIsnullable&#34;, false)
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;title&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;object&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;title&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;object&#34;)
+ *                 )),
+ *                 Map.entry(&#34;package&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;edges&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;sourceNodeId&#34;, &#34;node2&#34;),
+ *                             Map.entry(&#34;sourcePortId&#34;, &#34;Results dataset&#34;),
+ *                             Map.entry(&#34;targetNodeId&#34;, &#34;node1&#34;),
+ *                             Map.entry(&#34;targetPortId&#34;, &#34;Dataset2&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;sourceNodeId&#34;, &#34;node3&#34;),
+ *                             Map.entry(&#34;targetNodeId&#34;, &#34;node1&#34;),
+ *                             Map.entry(&#34;targetPortId&#34;, &#34;Dataset1&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;sourceNodeId&#34;, &#34;node1&#34;),
+ *                             Map.entry(&#34;sourcePortId&#34;, &#34;Result Dataset&#34;),
+ *                             Map.entry(&#34;targetNodeId&#34;, &#34;node4&#34;)
+ *                         )),
+ *                     Map.entry(&#34;graphParameters&#34;, ),
+ *                     Map.entry(&#34;nodes&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;node1&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;assetId&#34;, &#34;asset1&#34;),
+ *                             Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;R Script&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;The R Script&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;R Version&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;CRAN R 3.1.0&#34;)
+ *                                 ))
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;node2&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;assetId&#34;, &#34;asset2&#34;),
+ *                             Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;Account Key&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;TheThumbprint&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;Encrypted Key&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;Account Name&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;accountName&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;Please Specify Authentication Type&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;Account&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;Please Specify Data Source&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;certificateThumbprint&#34;, &#34;&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;AzureBlobStorage&#34;)
+ *                                 ))
+ *                             ))
+ *                         )),
+ *                         Map.entry(&#34;node3&#34;, Map.of(&#34;inputId&#34;, &#34;input1&#34;)),
+ *                         Map.entry(&#34;node4&#34;, Map.of(&#34;outputId&#34;, &#34;output1&#34;))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;packageType&#34;, &#34;Graph&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;payloadsInBlobStorage&#34;, false),
+ *                 Map.entry(&#34;readOnly&#34;, false),
+ *                 Map.entry(&#34;realtimeConfiguration&#34;, Map.of(&#34;maxConcurrentCalls&#34;, 4)),
+ *                 Map.entry(&#34;storageAccount&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key&#34;, &#34;Storage_Key&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Storage_Name&#34;)
+ *                 )),
+ *                 Map.entry(&#34;title&#34;, &#34;Web Service Title&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .webServiceName(&#34;TargetWebServiceName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### SubscriptionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subscription = new Subscription(&#34;subscription&#34;, SubscriptionArgs.builder()        
+ *             .enableBatchedOperations(true)
+ *             .namespaceName(&#34;sdk-Namespace-1349&#34;)
+ *             .resourceGroupName(&#34;ResourceGroup&#34;)
+ *             .subscriptionName(&#34;sdk-Subscriptions-2178&#34;)
+ *             .topicName(&#34;sdk-Topics-8740&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

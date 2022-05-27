@@ -24,6 +24,94 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01.
  * 
  * ## Example Usage
+ * ### Create or Update a service with all parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .kind(&#34;fhir-R4&#34;)
+ *             .location(&#34;westus2&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;accessPolicies&#34;,                 
+ *                     Map.of(&#34;objectId&#34;, &#34;c487e7d1-3210-41a3-8ccc-e9372b78da47&#34;),
+ *                     Map.of(&#34;objectId&#34;, &#34;5b307da8-43d4-492b-8b66-b0294ade872f&#34;)),
+ *                 Map.entry(&#34;authenticationConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;audience&#34;, &#34;https://azurehealthcareapis.com&#34;),
+ *                     Map.entry(&#34;authority&#34;, &#34;https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc&#34;),
+ *                     Map.entry(&#34;smartProxyEnabled&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;corsConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowCredentials&#34;, false),
+ *                     Map.entry(&#34;headers&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;maxAge&#34;, 1440),
+ *                     Map.entry(&#34;methods&#34;,                     
+ *                         &#34;DELETE&#34;,
+ *                         &#34;GET&#34;,
+ *                         &#34;OPTIONS&#34;,
+ *                         &#34;PATCH&#34;,
+ *                         &#34;POST&#34;,
+ *                         &#34;PUT&#34;),
+ *                     Map.entry(&#34;origins&#34;, &#34;*&#34;)
+ *                 )),
+ *                 Map.entry(&#34;cosmosDbConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keyVaultKeyUri&#34;, &#34;https://my-vault.vault.azure.net/keys/my-key&#34;),
+ *                     Map.entry(&#34;offerThroughput&#34;, 1000)
+ *                 )),
+ *                 Map.entry(&#34;exportConfiguration&#34;, Map.of(&#34;storageAccountName&#34;, &#34;existingStorageAccount&#34;)),
+ *                 Map.entry(&#34;privateEndpointConnections&#34;, ),
+ *                 Map.entry(&#34;publicNetworkAccess&#34;, &#34;Disabled&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;service1&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update a service with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .kind(&#34;fhir-R4&#34;)
+ *             .location(&#34;westus2&#34;)
+ *             .properties(Map.of(&#34;accessPolicies&#34;, Map.of(&#34;objectId&#34;, &#34;c487e7d1-3210-41a3-8ccc-e9372b78da47&#34;)))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;service2&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -202,7 +290,8 @@ public class Service extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20200330:Service").build()),
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210111:Service").build()),
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:Service").build()),
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:Service").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:Service").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20220131preview:Service").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

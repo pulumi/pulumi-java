@@ -25,6 +25,14 @@ public final class AppMgmtControlFunctions {
     public static CompletableFuture<GetMonitoredInstanceResult> getMonitoredInstance(GetMonitoredInstanceArgs args) {
         return getMonitoredInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Monitored Instance resource in Oracle Cloud Infrastructure Appmgmt Control service.
+     * 
+     * Gets a monitored instance by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMonitoredInstanceResult> getMonitoredInstance(GetMonitoredInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:AppMgmtControl/getMonitoredInstance:getMonitoredInstance", TypeShape.of(GetMonitoredInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class AppMgmtControlFunctions {
     public static CompletableFuture<GetMonitoredInstancesResult> getMonitoredInstances(GetMonitoredInstancesArgs args) {
         return getMonitoredInstances(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Monitored Instances in Oracle Cloud Infrastructure Appmgmt Control service.
+     * 
+     * Returns a list of monitored instances.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetMonitoredInstancesResult> getMonitoredInstances(GetMonitoredInstancesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:AppMgmtControl/getMonitoredInstances:getMonitoredInstances", TypeShape.of(GetMonitoredInstancesResult.class), args, Utilities.withVersion(options));
     }

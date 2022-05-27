@@ -21,6 +21,72 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### TableServicesPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tableServiceProperties = new TableServiceProperties(&#34;tableServiceProperties&#34;, TableServicePropertiesArgs.builder()        
+ *             .accountName(&#34;sto8607&#34;)
+ *             .cors(Map.of(&#34;corsRules&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;,                     
+ *                         &#34;x-ms-meta-abc&#34;,
+ *                         &#34;x-ms-meta-data*&#34;,
+ *                         &#34;x-ms-meta-target*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;,                     
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;,
+ *                         &#34;POST&#34;,
+ *                         &#34;OPTIONS&#34;,
+ *                         &#34;MERGE&#34;,
+ *                         &#34;PUT&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;,                     
+ *                         &#34;http://www.contoso.com&#34;,
+ *                         &#34;http://www.fabrikam.com&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;, &#34;x-ms-meta-*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 100)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;, &#34;GET&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 2)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;allowedHeaders&#34;, &#34;x-ms-meta-12345675754564*&#34;),
+ *                     Map.entry(&#34;allowedMethods&#34;,                     
+ *                         &#34;GET&#34;,
+ *                         &#34;PUT&#34;),
+ *                     Map.entry(&#34;allowedOrigins&#34;,                     
+ *                         &#34;http://www.abc23.com&#34;,
+ *                         &#34;https://www.fabrikam.com/*&#34;),
+ *                     Map.entry(&#34;exposedHeaders&#34;,                     
+ *                         &#34;x-ms-meta-abc&#34;,
+ *                         &#34;x-ms-meta-data*&#34;,
+ *                         &#34;x-ms-meta-target*&#34;),
+ *                     Map.entry(&#34;maxAgeInSeconds&#34;, 2000)
+ *                 )))
+ *             .resourceGroupName(&#34;res4410&#34;)
+ *             .tableServiceName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

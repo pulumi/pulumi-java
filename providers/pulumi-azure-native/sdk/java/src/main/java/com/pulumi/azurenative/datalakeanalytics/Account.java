@@ -28,6 +28,63 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates the specified Data Lake Analytics account. This supplies the user with computation services for Data Lake Analytics workloads.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .computePolicies(Map.ofEntries(
+ *                 Map.entry(&#34;maxDegreeOfParallelismPerJob&#34;, 1),
+ *                 Map.entry(&#34;minPriorityPerJob&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;test_policy&#34;),
+ *                 Map.entry(&#34;objectId&#34;, &#34;34adfa4f-cedf-4dc0-ba29-b6d1a69ab345&#34;),
+ *                 Map.entry(&#34;objectType&#34;, &#34;User&#34;)
+ *             ))
+ *             .dataLakeStoreAccounts(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;test_adls&#34;),
+ *                 Map.entry(&#34;suffix&#34;, &#34;test_suffix&#34;)
+ *             ))
+ *             .defaultDataLakeStoreAccount(&#34;test_adls&#34;)
+ *             .firewallAllowAzureIps(&#34;Enabled&#34;)
+ *             .firewallRules(Map.ofEntries(
+ *                 Map.entry(&#34;endIpAddress&#34;, &#34;2.2.2.2&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test_rule&#34;),
+ *                 Map.entry(&#34;startIpAddress&#34;, &#34;1.1.1.1&#34;)
+ *             ))
+ *             .firewallState(&#34;Enabled&#34;)
+ *             .location(&#34;eastus2&#34;)
+ *             .maxDegreeOfParallelism(30)
+ *             .maxDegreeOfParallelismPerJob(1)
+ *             .maxJobCount(3)
+ *             .minPriorityPerJob(1)
+ *             .newTier(&#34;Consumption&#34;)
+ *             .queryStoreRetention(30)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .storageAccounts(Map.ofEntries(
+ *                 Map.entry(&#34;accessKey&#34;, &#34;34adfa4f-cedf-4dc0-ba29-b6d1a69ab346&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test_storage&#34;),
+ *                 Map.entry(&#34;suffix&#34;, &#34;test_suffix&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;test_key&#34;, &#34;test_value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,59 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### StorageAccountPutEncryptionScope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var encryptionScope = new EncryptionScope(&#34;encryptionScope&#34;, EncryptionScopeArgs.builder()        
+ *             .accountName(&#34;{storage-account-name}&#34;)
+ *             .encryptionScopeName(&#34;{encryption-scope-name}&#34;)
+ *             .resourceGroupName(&#34;resource-group-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountPutEncryptionScopeWithInfrastructureEncryption
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var encryptionScope = new EncryptionScope(&#34;encryptionScope&#34;, EncryptionScopeArgs.builder()        
+ *             .accountName(&#34;{storage-account-name}&#34;)
+ *             .encryptionScopeName(&#34;{encryption-scope-name}&#34;)
+ *             .requireInfrastructureEncryption(true)
+ *             .resourceGroupName(&#34;resource-group-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

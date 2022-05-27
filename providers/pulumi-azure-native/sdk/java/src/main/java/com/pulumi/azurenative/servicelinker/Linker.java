@@ -29,6 +29,70 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### PutLink
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linker = new Linker(&#34;linker&#34;, LinkerArgs.builder()        
+ *             .authInfo(Map.ofEntries(
+ *                 Map.entry(&#34;authType&#34;, &#34;secret&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;name&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .linkerName(&#34;linkName&#34;)
+ *             .resourceUri(&#34;subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app&#34;)
+ *             .targetId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PutLinkWithServiceEndpoint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linker = new Linker(&#34;linker&#34;, LinkerArgs.builder()        
+ *             .authInfo(Map.ofEntries(
+ *                 Map.entry(&#34;authType&#34;, &#34;secret&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;name&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .linkerName(&#34;linkName&#34;)
+ *             .resourceUri(&#34;subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app&#34;)
+ *             .secretStore(Map.of(&#34;keyVaultId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.KeyVault/vaults/test-kv&#34;))
+ *             .targetId(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db&#34;)
+ *             .vNetSolution(Map.of(&#34;type&#34;, &#34;serviceEndpoint&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

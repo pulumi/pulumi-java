@@ -24,6 +24,15 @@ public final class OsubBillingScheduleFunctions {
     public static CompletableFuture<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args) {
         return getBillingSchedule(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Billing Schedules in Oracle Cloud Infrastructure Osub Billing Schedule service.
+     * 
+     * This list API returns all billing schedules for given subscription id and
+     * for a particular Subscribed Service if provided
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetBillingScheduleResult> getBillingSchedule(GetBillingScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsubBillingSchedule/getBillingSchedule:getBillingSchedule", TypeShape.of(GetBillingScheduleResult.class), args, Utilities.withVersion(options));
     }

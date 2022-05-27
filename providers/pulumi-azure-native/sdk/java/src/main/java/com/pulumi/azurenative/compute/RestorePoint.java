@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a restore point
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var restorePoint = new RestorePoint(&#34;restorePoint&#34;, RestorePointArgs.builder()        
+ *             .excludeDisks(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123&#34;))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .restorePointCollectionName(&#34;rpcName&#34;)
+ *             .restorePointName(&#34;rpName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

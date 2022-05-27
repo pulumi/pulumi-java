@@ -23,6 +23,77 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### PipelineRunCreate_Export
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipelineRun = new PipelineRun(&#34;pipelineRun&#34;, PipelineRunArgs.builder()        
+ *             .pipelineRunName(&#34;myPipelineRun&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .request(Map.ofEntries(
+ *                 Map.entry(&#34;artifacts&#34;,                 
+ *                     &#34;sourceRepository/hello-world&#34;,
+ *                     &#34;sourceRepository2@sha256:00000000000000000000000000000000000&#34;),
+ *                 Map.entry(&#34;pipelineResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline&#34;),
+ *                 Map.entry(&#34;target&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myblob.tar.gz&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;AzureStorageBlob&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PipelineRunCreate_Import
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipelineRun = new PipelineRun(&#34;pipelineRun&#34;, PipelineRunArgs.builder()        
+ *             .forceUpdateTag(&#34;2020-03-04T17:23:21.9261521+00:00&#34;)
+ *             .pipelineRunName(&#34;myPipelineRun&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .request(Map.ofEntries(
+ *                 Map.entry(&#34;catalogDigest&#34;, &#34;sha256@&#34;),
+ *                 Map.entry(&#34;pipelineResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline&#34;),
+ *                 Map.entry(&#34;source&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myblob.tar.gz&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;AzureStorageBlob&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

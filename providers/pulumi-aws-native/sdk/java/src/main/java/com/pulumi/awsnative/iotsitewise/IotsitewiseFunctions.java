@@ -31,6 +31,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
         return getAccessPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::AccessPolicy
+     * 
+     */
     public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -41,6 +45,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args) {
         return getAsset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Asset
+     * 
+     */
     public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getAsset", TypeShape.of(GetAssetResult.class), args, Utilities.withVersion(options));
     }
@@ -51,6 +59,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetAssetModelResult> getAssetModel(GetAssetModelArgs args) {
         return getAssetModel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::AssetModel
+     * 
+     */
     public static CompletableFuture<GetAssetModelResult> getAssetModel(GetAssetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getAssetModel", TypeShape.of(GetAssetModelResult.class), args, Utilities.withVersion(options));
     }
@@ -61,6 +73,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Dashboard
+     * 
+     */
     public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +87,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Gateway
+     * 
+     */
     public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
@@ -81,6 +101,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetPortalResult> getPortal(GetPortalArgs args) {
         return getPortal(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Portal
+     * 
+     */
     public static CompletableFuture<GetPortalResult> getPortal(GetPortalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getPortal", TypeShape.of(GetPortalResult.class), args, Utilities.withVersion(options));
     }
@@ -91,6 +115,10 @@ public final class IotsitewiseFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::IoTSiteWise::Project
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotsitewise:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }

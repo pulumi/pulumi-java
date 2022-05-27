@@ -22,6 +22,11 @@ public final class MyedgeorderFunctions {
     public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
         return listConfigurations(args, InvokeOptions.Empty);
     }
+    /**
+     * The list of configurations.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
     public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class MyedgeorderFunctions {
     public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
         return listProductFamilies(args, InvokeOptions.Empty);
     }
+    /**
+     * The list of product families.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
     public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }

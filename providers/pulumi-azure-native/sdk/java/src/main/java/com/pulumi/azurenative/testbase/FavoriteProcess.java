@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-16-preview.
  * 
  * ## Example Usage
+ * ### FavoriteProcessCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var favoriteProcess = new FavoriteProcess(&#34;favoriteProcess&#34;, FavoriteProcessArgs.builder()        
+ *             .actualProcessName(&#34;testApp&amp;.exe&#34;)
+ *             .favoriteProcessResourceName(&#34;testAppProcess&#34;)
+ *             .packageName(&#34;contoso-package2&#34;)
+ *             .resourceGroupName(&#34;contoso-rg1&#34;)
+ *             .testBaseAccountName(&#34;contoso-testBaseAccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

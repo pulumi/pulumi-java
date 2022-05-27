@@ -22,6 +22,64 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Register access policy entity.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accessPolicy = new AccessPolicy(&#34;accessPolicy&#34;, AccessPolicyArgs.builder()        
+ *             .accessPolicyName(&#34;accessPolicyName1&#34;)
+ *             .accountName(&#34;testaccount2&#34;)
+ *             .authentication(Map.ofEntries(
+ *                 Map.entry(&#34;audiences&#34;, &#34;audience1&#34;),
+ *                 Map.entry(&#34;claims&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;claimname1&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;claimvalue1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;claimname2&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;claimvalue2&#34;)
+ *                     )),
+ *                 Map.entry(&#34;issuers&#34;,                 
+ *                     &#34;issuer1&#34;,
+ *                     &#34;issuer2&#34;),
+ *                 Map.entry(&#34;keys&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;alg&#34;, &#34;RS256&#34;),
+ *                         Map.entry(&#34;e&#34;, &#34;ZLFzZTY0IQ==&#34;),
+ *                         Map.entry(&#34;kid&#34;, &#34;123&#34;),
+ *                         Map.entry(&#34;n&#34;, &#34;YmFzZTY0IQ==&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.RsaTokenKey&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;alg&#34;, &#34;ES256&#34;),
+ *                         Map.entry(&#34;kid&#34;, &#34;124&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.EccTokenKey&#34;),
+ *                         Map.entry(&#34;x&#34;, &#34;XX==&#34;),
+ *                         Map.entry(&#34;y&#34;, &#34;YY==&#34;)
+ *                     )),
+ *                 Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.JwtAuthentication&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .role(&#34;Reader&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

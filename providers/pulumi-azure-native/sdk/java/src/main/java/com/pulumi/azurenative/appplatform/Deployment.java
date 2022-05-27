@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### Deployments_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .appName(&#34;myapp&#34;)
+ *             .deploymentName(&#34;mydeployment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;deploymentSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cpu&#34;, 1),
+ *                     Map.entry(&#34;environmentVariables&#34;, Map.of(&#34;env&#34;, &#34;test&#34;)),
+ *                     Map.entry(&#34;jvmOptions&#34;, &#34;-Xms1G -Xmx3G&#34;),
+ *                     Map.entry(&#34;memoryInGB&#34;, 3),
+ *                     Map.entry(&#34;runtimeVersion&#34;, &#34;Java_8&#34;)
+ *                 )),
+ *                 Map.entry(&#34;source&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;artifactSelector&#34;, &#34;sub-module-1&#34;),
+ *                     Map.entry(&#34;relativePath&#34;, &#34;resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Source&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;1.0&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

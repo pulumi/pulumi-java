@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-20.
  * 
  * ## Example Usage
+ * ### HcxEnterpriseSites_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hcxEnterpriseSite = new HcxEnterpriseSite(&#34;hcxEnterpriseSite&#34;, HcxEnterpriseSiteArgs.builder()        
+ *             .hcxEnterpriseSiteName(&#34;site1&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

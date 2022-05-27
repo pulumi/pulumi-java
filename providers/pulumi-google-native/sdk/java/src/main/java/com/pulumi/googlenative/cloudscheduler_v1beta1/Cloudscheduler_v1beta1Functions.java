@@ -19,6 +19,10 @@ public final class Cloudscheduler_v1beta1Functions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a job.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudscheduler/v1beta1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }

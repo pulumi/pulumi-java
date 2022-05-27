@@ -23,6 +23,10 @@ public final class SsmFunctions {
     public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args) {
         return getAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::SSM::Association resource associates an SSM document in AWS Systems Manager with EC2 instances that contain a configuration agent to process the document.
+     * 
+     */
     public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class SsmFunctions {
     public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args) {
         return getDocument(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::SSM::Document resource is an SSM document in AWS Systems Manager that defines the actions that Systems Manager performs, which can be used to set up and run commands on your instances.
+     * 
+     */
     public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class SsmFunctions {
     public static CompletableFuture<GetResourceDataSyncResult> getResourceDataSync(GetResourceDataSyncArgs args) {
         return getResourceDataSync(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SSM::ResourceDataSync
+     * 
+     */
     public static CompletableFuture<GetResourceDataSyncResult> getResourceDataSync(GetResourceDataSyncArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getResourceDataSync", TypeShape.of(GetResourceDataSyncResult.class), args, Utilities.withVersion(options));
     }

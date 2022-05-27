@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01-preview.
  * 
  * ## Example Usage
+ * ### RelayPutPrivateEndpointConnection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnection = new PrivateEndpointConnection(&#34;privateEndpointConnection&#34;, PrivateEndpointConnectionArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .namespaceName(&#34;example-RelayNamespace-5849&#34;)
+ *             .privateEndpoint(Map.of(&#34;id&#34;, &#34;/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1&#34;))
+ *             .privateEndpointConnectionName(&#34;{privateEndpointConnection name}&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;You may pass&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourcegroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -167,7 +199,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:relay/v20180101preview:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:relay/v20180101preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:relay/v20211101:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

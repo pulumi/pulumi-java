@@ -19,6 +19,10 @@ public final class Cloudsupport_v2betaFunctions {
     public static CompletableFuture<GetCaseResult> getCase(GetCaseArgs args) {
         return getCase(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve the specified case.
+     * 
+     */
     public static CompletableFuture<GetCaseResult> getCase(GetCaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsupport/v2beta:getCase", TypeShape.of(GetCaseResult.class), args, Utilities.withVersion(options));
     }

@@ -25,6 +25,10 @@ public final class S3Functions {
     public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
         return getAccessPoint(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access buckets.
+     * 
+     */
     public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class S3Functions {
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::S3::Bucket
+     * 
+     */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class S3Functions {
     public static CompletableFuture<GetMultiRegionAccessPointResult> getMultiRegionAccessPoint(GetMultiRegionAccessPointArgs args) {
         return getMultiRegionAccessPoint(args, InvokeOptions.Empty);
     }
+    /**
+     * AWS::S3::MultiRegionAccessPoint is an Amazon S3 resource type that dynamically routes S3 requests to easily satisfy geographic compliance requirements based on customer-defined routing policies.
+     * 
+     */
     public static CompletableFuture<GetMultiRegionAccessPointResult> getMultiRegionAccessPoint(GetMultiRegionAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getMultiRegionAccessPoint", TypeShape.of(GetMultiRegionAccessPointResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class S3Functions {
     public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicy(GetMultiRegionAccessPointPolicyArgs args) {
         return getMultiRegionAccessPointPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy to be attached to a Multi Region Access Point
+     * 
+     */
     public static CompletableFuture<GetMultiRegionAccessPointPolicyResult> getMultiRegionAccessPointPolicy(GetMultiRegionAccessPointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3:getMultiRegionAccessPointPolicy", TypeShape.of(GetMultiRegionAccessPointPolicyResult.class), args, Utilities.withVersion(options));
     }

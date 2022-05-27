@@ -28,6 +28,57 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### HostPool_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hostPool = new HostPool(&#34;hostPool&#34;, HostPoolArgs.builder()        
+ *             .description(&#34;des1&#34;)
+ *             .friendlyName(&#34;friendly&#34;)
+ *             .hostPoolName(&#34;hostPool1&#34;)
+ *             .hostPoolType(&#34;Pooled&#34;)
+ *             .loadBalancerType(&#34;BreadthFirst&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .maxSessionLimit(999999)
+ *             .migrationRequest(Map.ofEntries(
+ *                 Map.entry(&#34;migrationPath&#34;, &#34;TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}&#34;),
+ *                 Map.entry(&#34;operation&#34;, &#34;Start&#34;)
+ *             ))
+ *             .personalDesktopAssignmentType(&#34;Automatic&#34;)
+ *             .preferredAppGroupType(&#34;Desktop&#34;)
+ *             .registrationInfo(Map.ofEntries(
+ *                 Map.entry(&#34;expirationTime&#34;, &#34;2020-10-01T14:01:54.9571247Z&#34;),
+ *                 Map.entry(&#34;registrationTokenOperation&#34;, &#34;Update&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ssoClientId(&#34;client&#34;)
+ *             .ssoClientSecretKeyVaultPath(&#34;https://keyvault/secret&#34;)
+ *             .ssoSecretType(&#34;SharedKey&#34;)
+ *             .ssoadfsAuthority(&#34;https://adfs&#34;)
+ *             .startVMOnConnect(false)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .vmTemplate(&#34;{json:json}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

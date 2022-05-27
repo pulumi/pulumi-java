@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VirtualHubRouteTableV2Put
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualHubBgpConnection = new VirtualHubBgpConnection(&#34;virtualHubBgpConnection&#34;, VirtualHubBgpConnectionArgs.builder()        
+ *             .connectionName(&#34;conn1&#34;)
+ *             .peerAsn(20000)
+ *             .peerIp(&#34;192.168.1.5&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .virtualHubName(&#34;hub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create DSCP Configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dscpConfiguration = new DscpConfiguration(&#34;dscpConfiguration&#34;, DscpConfigurationArgs.builder()        
+ *             .destinationIpRanges(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endIP&#34;, &#34;127.0.10.2&#34;),
+ *                     Map.entry(&#34;startIP&#34;, &#34;127.0.10.1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endIP&#34;, &#34;127.0.11.2&#34;),
+ *                     Map.entry(&#34;startIP&#34;, &#34;127.0.11.1&#34;)
+ *                 ))
+ *             .destinationPortRanges(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;end&#34;, 15),
+ *                     Map.entry(&#34;start&#34;, 15)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;end&#34;, 27),
+ *                     Map.entry(&#34;start&#34;, 26)
+ *                 ))
+ *             .dscpConfigurationName(&#34;mydscpconfig&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .markings(            
+ *                 46,
+ *                 10)
+ *             .protocol(&#34;Tcp&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sourceIpRanges(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endIP&#34;, &#34;127.0.0.2&#34;),
+ *                     Map.entry(&#34;startIP&#34;, &#34;127.0.0.1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endIP&#34;, &#34;127.0.1.2&#34;),
+ *                     Map.entry(&#34;startIP&#34;, &#34;127.0.1.1&#34;)
+ *                 ))
+ *             .sourcePortRanges(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;end&#34;, 11),
+ *                     Map.entry(&#34;start&#34;, 10)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;end&#34;, 21),
+ *                     Map.entry(&#34;start&#34;, 20)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

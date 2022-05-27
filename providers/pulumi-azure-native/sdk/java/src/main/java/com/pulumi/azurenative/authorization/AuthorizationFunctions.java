@@ -56,6 +56,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(GetAccessReviewHistoryDefinitionByIdArgs args) {
         return getAccessReviewHistoryDefinitionById(args, InvokeOptions.Empty);
     }
+    /**
+     * Access Review History Definition.
+     * API Version: 2021-11-16-preview.
+     * 
+     */
     public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(GetAccessReviewHistoryDefinitionByIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewHistoryDefinitionById", TypeShape.of(GetAccessReviewHistoryDefinitionByIdResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +72,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(GetAccessReviewScheduleDefinitionByIdArgs args) {
         return getAccessReviewScheduleDefinitionById(args, InvokeOptions.Empty);
     }
+    /**
+     * Access Review Schedule Definition.
+     * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(GetAccessReviewScheduleDefinitionByIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewScheduleDefinitionById", TypeShape.of(GetAccessReviewScheduleDefinitionByIdResult.class), args, Utilities.withVersion(options));
     }
@@ -77,9 +87,17 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
         return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this function to access the current configuration of the native Azure provider.
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this function to access the current configuration of the native Azure provider.
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
@@ -90,9 +108,17 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetClientTokenResult> getClientToken() {
         return getClientToken(GetClientTokenArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Use this function to get an Azure authentication token for the current login context.
+     * 
+     */
     public static CompletableFuture<GetClientTokenResult> getClientToken(GetClientTokenArgs args) {
         return getClientToken(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this function to get an Azure authentication token for the current login context.
+     * 
+     */
     public static CompletableFuture<GetClientTokenResult> getClientToken(GetClientTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args, Utilities.withVersion(options));
     }
@@ -104,6 +130,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(GetManagementLockAtResourceGroupLevelArgs args) {
         return getManagementLockAtResourceGroupLevel(args, InvokeOptions.Empty);
     }
+    /**
+     * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     */
     public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(GetManagementLockAtResourceGroupLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceGroupLevel", TypeShape.of(GetManagementLockAtResourceGroupLevelResult.class), args, Utilities.withVersion(options));
     }
@@ -115,6 +146,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(GetManagementLockAtResourceLevelArgs args) {
         return getManagementLockAtResourceLevel(args, InvokeOptions.Empty);
     }
+    /**
+     * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     */
     public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(GetManagementLockAtResourceLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceLevel", TypeShape.of(GetManagementLockAtResourceLevelResult.class), args, Utilities.withVersion(options));
     }
@@ -126,6 +162,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(GetManagementLockAtSubscriptionLevelArgs args) {
         return getManagementLockAtSubscriptionLevel(args, InvokeOptions.Empty);
     }
+    /**
+     * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     */
     public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(GetManagementLockAtSubscriptionLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtSubscriptionLevel", TypeShape.of(GetManagementLockAtSubscriptionLevelResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +178,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(GetManagementLockByScopeArgs args) {
         return getManagementLockByScope(args, InvokeOptions.Empty);
     }
+    /**
+     * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     */
     public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(GetManagementLockByScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockByScope", TypeShape.of(GetManagementLockByScopeResult.class), args, Utilities.withVersion(options));
     }
@@ -148,6 +194,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(GetPolicyAssignmentArgs args) {
         return getPolicyAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy assignment.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(GetPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyAssignment", TypeShape.of(GetPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }
@@ -159,6 +210,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(GetPolicyDefinitionArgs args) {
         return getPolicyDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy definition.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(GetPolicyDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyDefinition", TypeShape.of(GetPolicyDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -170,6 +226,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(GetPolicyDefinitionAtManagementGroupArgs args) {
         return getPolicyDefinitionAtManagementGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy definition.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(GetPolicyDefinitionAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyDefinitionAtManagementGroup", TypeShape.of(GetPolicyDefinitionAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -181,6 +242,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(GetPolicyExemptionArgs args) {
         return getPolicyExemption(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy exemption.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(GetPolicyExemptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyExemption", TypeShape.of(GetPolicyExemptionResult.class), args, Utilities.withVersion(options));
     }
@@ -192,6 +258,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args) {
         return getPolicySetDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy set definition.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -203,6 +274,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(GetPolicySetDefinitionAtManagementGroupArgs args) {
         return getPolicySetDefinitionAtManagementGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * The policy set definition.
+     * API Version: 2020-09-01.
+     * 
+     */
     public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(GetPolicySetDefinitionAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinitionAtManagementGroup", TypeShape.of(GetPolicySetDefinitionAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -213,6 +289,10 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetPrivateLinkAssociationResult> getPrivateLinkAssociation(GetPrivateLinkAssociationArgs args) {
         return getPrivateLinkAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2020-05-01.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkAssociationResult> getPrivateLinkAssociation(GetPrivateLinkAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPrivateLinkAssociation", TypeShape.of(GetPrivateLinkAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -223,6 +303,10 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(GetResourceManagementPrivateLinkArgs args) {
         return getResourceManagementPrivateLink(args, InvokeOptions.Empty);
     }
+    /**
+     * API Version: 2020-05-01.
+     * 
+     */
     public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(GetResourceManagementPrivateLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getResourceManagementPrivateLink", TypeShape.of(GetResourceManagementPrivateLinkResult.class), args, Utilities.withVersion(options));
     }
@@ -234,6 +318,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args) {
         return getRoleAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Role Assignments
+     * API Version: 2020-10-01-preview.
+     * 
+     */
     public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
@@ -245,6 +334,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
         return getRoleDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Role definition.
+     * API Version: 2018-01-01-preview.
+     * 
+     */
     public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
@@ -256,6 +350,11 @@ public final class AuthorizationFunctions {
     public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(GetRoleManagementPolicyAssignmentArgs args) {
         return getRoleManagementPolicyAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Role management policy
+     * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(GetRoleManagementPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleManagementPolicyAssignment", TypeShape.of(GetRoleManagementPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }

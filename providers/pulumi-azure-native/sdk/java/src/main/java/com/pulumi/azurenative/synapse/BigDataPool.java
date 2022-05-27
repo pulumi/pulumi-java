@@ -28,6 +28,53 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a Big Data pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bigDataPool = new BigDataPool(&#34;bigDataPool&#34;, BigDataPoolArgs.builder()        
+ *             .autoPause(Map.ofEntries(
+ *                 Map.entry(&#34;delayInMinutes&#34;, 15),
+ *                 Map.entry(&#34;enabled&#34;, true)
+ *             ))
+ *             .autoScale(Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;maxNodeCount&#34;, 50),
+ *                 Map.entry(&#34;minNodeCount&#34;, 3)
+ *             ))
+ *             .bigDataPoolName(&#34;ExamplePool&#34;)
+ *             .defaultSparkLogFolder(&#34;/logs&#34;)
+ *             .libraryRequirements(Map.ofEntries(
+ *                 Map.entry(&#34;content&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;filename&#34;, &#34;requirements.txt&#34;)
+ *             ))
+ *             .location(&#34;West US 2&#34;)
+ *             .nodeCount(4)
+ *             .nodeSize(&#34;Medium&#34;)
+ *             .nodeSizeFamily(&#34;MemoryOptimized&#34;)
+ *             .resourceGroupName(&#34;ExampleResourceGroup&#34;)
+ *             .sparkEventsFolder(&#34;/events&#34;)
+ *             .sparkVersion(&#34;2.4&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .workspaceName(&#34;ExampleWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

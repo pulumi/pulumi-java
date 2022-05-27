@@ -24,6 +24,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create server
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var server = new Server(&#34;server&#34;, ServerArgs.builder()        
+ *             .administratorLogin(&#34;dummylogin&#34;)
+ *             .administratorLoginPassword(&#34;PLACEHOLDER&#34;)
+ *             .administrators(Map.ofEntries(
+ *                 Map.entry(&#34;azureADOnlyAuthentication&#34;, true),
+ *                 Map.entry(&#34;login&#34;, &#34;bob@contoso.com&#34;),
+ *                 Map.entry(&#34;principalType&#34;, &#34;User&#34;),
+ *                 Map.entry(&#34;sid&#34;, &#34;00000011-1111-2222-2222-123456789111&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;00000011-1111-2222-2222-123456789111&#34;)
+ *             ))
+ *             .location(&#34;Japan East&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-7398&#34;)
+ *             .serverName(&#34;sqlcrudtest-4645&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### CreateLocalNetworkGateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var localNetworkGateway = new LocalNetworkGateway(&#34;localNetworkGateway&#34;, LocalNetworkGatewayArgs.builder()        
+ *             .fqdn(&#34;site1.contoso.com&#34;)
+ *             .gatewayIpAddress(&#34;11.12.13.14&#34;)
+ *             .localNetworkAddressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.1.0.0/16&#34;))
+ *             .localNetworkGatewayName(&#34;localgw&#34;)
+ *             .location(&#34;Central US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

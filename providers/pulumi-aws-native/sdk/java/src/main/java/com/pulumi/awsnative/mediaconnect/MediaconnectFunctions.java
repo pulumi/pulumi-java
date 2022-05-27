@@ -25,6 +25,10 @@ public final class MediaconnectFunctions {
     public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args) {
         return getFlow(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaConnect::Flow
+     * 
+     */
     public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class MediaconnectFunctions {
     public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(GetFlowEntitlementArgs args) {
         return getFlowEntitlement(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaConnect::FlowEntitlement
+     * 
+     */
     public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(GetFlowEntitlementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowEntitlement", TypeShape.of(GetFlowEntitlementResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class MediaconnectFunctions {
     public static CompletableFuture<GetFlowSourceResult> getFlowSource(GetFlowSourceArgs args) {
         return getFlowSource(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaConnect::FlowSource
+     * 
+     */
     public static CompletableFuture<GetFlowSourceResult> getFlowSource(GetFlowSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowSource", TypeShape.of(GetFlowSourceResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class MediaconnectFunctions {
     public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(GetFlowVpcInterfaceArgs args) {
         return getFlowVpcInterface(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaConnect::FlowVpcInterface
+     * 
+     */
     public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(GetFlowVpcInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowVpcInterface", TypeShape.of(GetFlowVpcInterfaceResult.class), args, Utilities.withVersion(options));
     }

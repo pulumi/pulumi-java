@@ -29,6 +29,14 @@ public final class NosqlFunctions {
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
         return getIndex(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Index resource in Oracle Cloud Infrastructure NoSQL Database service.
+     * 
+     * Get information about a single index.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Nosql/getIndex:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,14 @@ public final class NosqlFunctions {
     public static CompletableFuture<GetIndexesResult> getIndexes(GetIndexesArgs args) {
         return getIndexes(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Indexes in Oracle Cloud Infrastructure NoSQL Database service.
+     * 
+     * Get a list of indexes on a table.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetIndexesResult> getIndexes(GetIndexesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Nosql/getIndexes:getIndexes", TypeShape.of(GetIndexesResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +73,14 @@ public final class NosqlFunctions {
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Table resource in Oracle Cloud Infrastructure NoSQL Database service.
+     * 
+     * Get table info by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Nosql/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
@@ -71,6 +95,14 @@ public final class NosqlFunctions {
     public static CompletableFuture<GetTablesResult> getTables(GetTablesArgs args) {
         return getTables(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Tables in Oracle Cloud Infrastructure NoSQL Database service.
+     * 
+     * Get a list of tables in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetTablesResult> getTables(GetTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Nosql/getTables:getTables", TypeShape.of(GetTablesResult.class), args, Utilities.withVersion(options));
     }

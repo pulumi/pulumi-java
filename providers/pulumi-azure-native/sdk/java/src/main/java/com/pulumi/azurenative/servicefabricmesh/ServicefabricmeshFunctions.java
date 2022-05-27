@@ -32,6 +32,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes an application resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +48,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes a gateway resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
@@ -54,6 +64,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
         return getNetwork(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes a network resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +80,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes a secret resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
@@ -76,6 +96,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetSecretValueResult> getSecretValue(GetSecretValueArgs args) {
         return getSecretValue(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSecretValueResult> getSecretValue(GetSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +112,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
+    /**
+     * This type describes a volume resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
@@ -98,6 +128,11 @@ public final class ServicefabricmeshFunctions {
     public static CompletableFuture<ListSecretValueResult> listSecretValue(ListSecretValueArgs args) {
         return listSecretValue(args, InvokeOptions.Empty);
     }
+    /**
+     * This type represents the unencrypted value of the secret.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static CompletableFuture<ListSecretValueResult> listSecretValue(ListSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args, Utilities.withVersion(options));
     }

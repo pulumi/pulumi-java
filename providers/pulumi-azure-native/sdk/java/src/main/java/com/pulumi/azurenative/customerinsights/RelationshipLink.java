@@ -23,6 +23,44 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### RelationshipLinks_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var relationshipLink = new RelationshipLink(&#34;relationshipLink&#34;, RelationshipLinkArgs.builder()        
+ *             .description(Map.of(&#34;en-us&#34;, &#34;Link Description&#34;))
+ *             .displayName(Map.of(&#34;en-us&#34;, &#34;Link DisplayName&#34;))
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .interactionType(&#34;testInteraction4332&#34;)
+ *             .profilePropertyReferences(Map.ofEntries(
+ *                 Map.entry(&#34;interactionPropertyName&#34;, &#34;profile1&#34;),
+ *                 Map.entry(&#34;profilePropertyName&#34;, &#34;ProfileId&#34;)
+ *             ))
+ *             .relatedProfilePropertyReferences(Map.ofEntries(
+ *                 Map.entry(&#34;interactionPropertyName&#34;, &#34;profile1&#34;),
+ *                 Map.entry(&#34;profilePropertyName&#34;, &#34;ProfileId&#34;)
+ *             ))
+ *             .relationshipLinkName(&#34;Somelink&#34;)
+ *             .relationshipName(&#34;testProfile2326994&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,10 @@ public final class WisdomFunctions {
     public static CompletableFuture<GetAssistantResult> getAssistant(GetAssistantArgs args) {
         return getAssistant(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::Wisdom::Assistant Resource Type
+     * 
+     */
     public static CompletableFuture<GetAssistantResult> getAssistant(GetAssistantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistant", TypeShape.of(GetAssistantResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class WisdomFunctions {
     public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(GetAssistantAssociationArgs args) {
         return getAssistantAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::Wisdom::AssistantAssociation Resource Type
+     * 
+     */
     public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(GetAssistantAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistantAssociation", TypeShape.of(GetAssistantAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class WisdomFunctions {
     public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args) {
         return getKnowledgeBase(args, InvokeOptions.Empty);
     }
+    /**
+     * Definition of AWS::Wisdom::KnowledgeBase Resource Type
+     * 
+     */
     public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getKnowledgeBase", TypeShape.of(GetKnowledgeBaseResult.class), args, Utilities.withVersion(options));
     }

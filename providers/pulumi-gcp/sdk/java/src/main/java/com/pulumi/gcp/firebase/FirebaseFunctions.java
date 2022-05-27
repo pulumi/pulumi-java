@@ -21,6 +21,10 @@ public final class FirebaseFunctions {
     public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args) {
         return getWebApp(args, InvokeOptions.Empty);
     }
+    /**
+     * A Google Cloud Firebase web application instance
+     * 
+     */
     public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:firebase/getWebApp:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,16 @@ public final class FirebaseFunctions {
     public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(GetWebAppConfigArgs args) {
         return getWebAppConfig(args, InvokeOptions.Empty);
     }
+    /**
+     * A Google Cloud Firebase web application configuration
+     * 
+     * To get more information about WebApp, see:
+     * 
+     * * [API documentation](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps)
+     * * How-to Guides
+     *     * [Official Documentation](https://firebase.google.com/)
+     * 
+     */
     public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(GetWebAppConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:firebase/getWebAppConfig:getWebAppConfig", TypeShape.of(GetWebAppConfigResult.class), args, Utilities.withVersion(options));
     }

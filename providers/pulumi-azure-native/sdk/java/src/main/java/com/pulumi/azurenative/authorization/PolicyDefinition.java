@@ -23,6 +23,120 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Create or update a policy definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyDefinition = new PolicyDefinition(&#34;policyDefinition&#34;, PolicyDefinitionArgs.builder()        
+ *             .description(&#34;Force resource names to begin with given &#39;prefix&#39; and/or end with given &#39;suffix&#39;&#34;)
+ *             .displayName(&#34;Enforce resource naming convention&#34;)
+ *             .metadata(Map.of(&#34;category&#34;, &#34;Naming&#34;))
+ *             .mode(&#34;All&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;prefix&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metadata&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Resource name prefix&#34;),
+ *                         Map.entry(&#34;displayName&#34;, &#34;Prefix&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 )),
+ *                 Map.entry(&#34;suffix&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metadata&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Resource name suffix&#34;),
+ *                         Map.entry(&#34;displayName&#34;, &#34;Suffix&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 ))
+ *             ))
+ *             .policyDefinitionName(&#34;ResourceNaming&#34;)
+ *             .policyRule(Map.ofEntries(
+ *                 Map.entry(&#34;if&#34;, Map.of(&#34;not&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;field&#34;, &#34;name&#34;),
+ *                     Map.entry(&#34;like&#34;, &#34;[concat(parameters(&#39;prefix&#39;), &#39;*&#39;, parameters(&#39;suffix&#39;))]&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;then&#34;, Map.of(&#34;effect&#34;, &#34;deny&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a policy definition with advanced parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyDefinition = new PolicyDefinition(&#34;policyDefinition&#34;, PolicyDefinitionArgs.builder()        
+ *             .description(&#34;Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised&#34;)
+ *             .displayName(&#34;Event Hubs should have diagnostic logging enabled&#34;)
+ *             .metadata(Map.of(&#34;category&#34;, &#34;Event Hub&#34;))
+ *             .mode(&#34;Indexed&#34;)
+ *             .parameters(Map.of(&#34;requiredRetentionDays&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;allowedValues&#34;,                 
+ *                     0,
+ *                     30,
+ *                     90,
+ *                     180,
+ *                     365),
+ *                 Map.entry(&#34;defaultValue&#34;, 365),
+ *                 Map.entry(&#34;metadata&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;The required diagnostic logs retention in days&#34;),
+ *                     Map.entry(&#34;displayName&#34;, &#34;Required retention (days)&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Integer&#34;)
+ *             )))
+ *             .policyDefinitionName(&#34;EventHubDiagnosticLogs&#34;)
+ *             .policyRule(Map.ofEntries(
+ *                 Map.entry(&#34;if&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;equals&#34;, &#34;Microsoft.EventHub/namespaces&#34;),
+ *                     Map.entry(&#34;field&#34;, &#34;type&#34;)
+ *                 )),
+ *                 Map.entry(&#34;then&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;details&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;existenceCondition&#34;, Map.of(&#34;allOf&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;equals&#34;, &#34;true&#34;),
+ *                                 Map.entry(&#34;field&#34;, &#34;Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled&#34;)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;equals&#34;, &#34;[parameters(&#39;requiredRetentionDays&#39;)]&#34;),
+ *                                 Map.entry(&#34;field&#34;, &#34;Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days&#34;)
+ *                             ))),
+ *                         Map.entry(&#34;type&#34;, &#34;Microsoft.Insights/diagnosticSettings&#34;)
+ *                     )),
+ *                     Map.entry(&#34;effect&#34;, &#34;AuditIfNotExists&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

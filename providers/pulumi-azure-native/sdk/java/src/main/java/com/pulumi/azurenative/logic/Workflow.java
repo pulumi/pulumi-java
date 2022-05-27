@@ -28,6 +28,62 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update a workflow
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workflow = new Workflow(&#34;workflow&#34;, WorkflowArgs.builder()        
+ *             .definition(Map.ofEntries(
+ *                 Map.entry(&#34;$schema&#34;, &#34;https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#&#34;),
+ *                 Map.entry(&#34;actions&#34;, Map.of(&#34;Find_pet_by_ID&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;inputs&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;host&#34;, Map.of(&#34;connection&#34;, Map.of(&#34;name&#34;, &#34;@parameters(&#39;$connections&#39;)[&#39;test-custom-connector&#39;][&#39;connectionId&#39;]&#34;))),
+ *                         Map.entry(&#34;method&#34;, &#34;get&#34;),
+ *                         Map.entry(&#34;path&#34;, &#34;/pet/@{encodeURIComponent(&#39;1&#39;)}&#34;)
+ *                     )),
+ *                     Map.entry(&#34;runAfter&#34;, ),
+ *                     Map.entry(&#34;type&#34;, &#34;ApiConnection&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;contentVersion&#34;, &#34;1.0.0.0&#34;),
+ *                 Map.entry(&#34;outputs&#34;, ),
+ *                 Map.entry(&#34;parameters&#34;, Map.of(&#34;$connections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;defaultValue&#34;, ),
+ *                     Map.entry(&#34;type&#34;, &#34;Object&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;triggers&#34;, Map.of(&#34;manual&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;inputs&#34;, Map.of(&#34;schema&#34;, )),
+ *                     Map.entry(&#34;kind&#34;, &#34;Http&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Request&#34;)
+ *                 )))
+ *             ))
+ *             .integrationAccount(Map.of(&#34;id&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account&#34;))
+ *             .location(&#34;brazilsouth&#34;)
+ *             .parameters(Map.of(&#34;$connections&#34;, Map.of(&#34;value&#34;, Map.of(&#34;test-custom-connector&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;connectionId&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector&#34;),
+ *                 Map.entry(&#34;connectionName&#34;, &#34;test-custom-connector&#34;),
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector&#34;)
+ *             )))))
+ *             .resourceGroupName(&#34;test-resource-group&#34;)
+ *             .tags()
+ *             .workflowName(&#34;test-workflow&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,374 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApi
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;tempgroup&#34;)
+ *             .authenticationSettings(Map.of(&#34;oAuth2&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;authorizationServerId&#34;, &#34;authorizationServerId2283&#34;),
+ *                 Map.entry(&#34;scope&#34;, &#34;oauth2scope2580&#34;)
+ *             )))
+ *             .description(&#34;apidescription5200&#34;)
+ *             .displayName(&#34;apiname1463&#34;)
+ *             .path(&#34;newapiPath&#34;)
+ *             .protocols(            
+ *                 &#34;https&#34;,
+ *                 &#34;http&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://newechoapi.cloudapp.net/api&#34;)
+ *             .subscriptionKeyParameterNames(Map.ofEntries(
+ *                 Map.entry(&#34;header&#34;, &#34;header4520&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;query3037&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiClone
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;echo-api2&#34;)
+ *             .description(&#34;Copy of Existing Echo Api including Operations.&#34;)
+ *             .displayName(&#34;Echo API2&#34;)
+ *             .isCurrent(true)
+ *             .path(&#34;echo2&#34;)
+ *             .protocols(            
+ *                 &#34;http&#34;,
+ *                 &#34;https&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://echoapi.cloudapp.net/api&#34;)
+ *             .sourceApiId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001&#34;)
+ *             .subscriptionRequired(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiNewVersionUsingExistingApi
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;echoapiv3&#34;)
+ *             .apiVersion(&#34;v4&#34;)
+ *             .apiVersionSetId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458&#34;)
+ *             .description(&#34;Create Echo API into a new Version using Existing Version Set and Copy all Operations.&#34;)
+ *             .displayName(&#34;Echo API2&#34;)
+ *             .isCurrent(true)
+ *             .path(&#34;echo2&#34;)
+ *             .protocols(            
+ *                 &#34;http&#34;,
+ *                 &#34;https&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://echoapi.cloudapp.net/api&#34;)
+ *             .sourceApiId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath&#34;)
+ *             .subscriptionRequired(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiRevisionFromExistingApi
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;echo-api;rev=3&#34;)
+ *             .apiRevisionDescription(&#34;Creating a Revision of an existing API&#34;)
+ *             .path(&#34;echo&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://echoapi.cloudapp.net/apiv3&#34;)
+ *             .sourceApiId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiUsingImportOverrideServiceUrl
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;apidocs&#34;)
+ *             .format(&#34;swagger-link&#34;)
+ *             .path(&#34;petstoreapi123&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://petstore.swagger.wordnik.com/api&#34;)
+ *             .value(&#34;http://apimpimportviaurl.azurewebsites.net/api/apidocs/&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiUsingOai3Import
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;petstore&#34;)
+ *             .format(&#34;openapi-link&#34;)
+ *             .path(&#34;petstore&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiUsingSwaggerImport
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;petstore&#34;)
+ *             .format(&#34;swagger-link-json&#34;)
+ *             .path(&#34;petstore&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;http://petstore.swagger.io/v2/swagger.json&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiUsingWadlImport
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;petstore&#34;)
+ *             .format(&#34;wadl-link-json&#34;)
+ *             .path(&#34;collector&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiWithOpenIdConnect
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;tempgroup&#34;)
+ *             .authenticationSettings(Map.of(&#34;openid&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;bearerTokenSendingMethods&#34;, &#34;authorizationHeader&#34;),
+ *                 Map.entry(&#34;openidProviderId&#34;, &#34;testopenid&#34;)
+ *             )))
+ *             .description(&#34;This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.&#34;)
+ *             .displayName(&#34;Swagger Petstore&#34;)
+ *             .path(&#34;petstore&#34;)
+ *             .protocols(&#34;https&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .serviceUrl(&#34;http://petstore.swagger.io/v2&#34;)
+ *             .subscriptionKeyParameterNames(Map.ofEntries(
+ *                 Map.entry(&#34;header&#34;, &#34;Ocp-Apim-Subscription-Key&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;subscription-key&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateSoapPassThroughApiUsingWsdlImport
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;soapApi&#34;)
+ *             .format(&#34;wsdl-link&#34;)
+ *             .path(&#34;currency&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .soapApiType(&#34;soap&#34;)
+ *             .value(&#34;http://www.webservicex.net/CurrencyConvertor.asmx?WSDL&#34;)
+ *             .wsdlSelector(Map.ofEntries(
+ *                 Map.entry(&#34;wsdlEndpointName&#34;, &#34;CurrencyConvertorSoap&#34;),
+ *                 Map.entry(&#34;wsdlServiceName&#34;, &#34;CurrencyConvertor&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateSoapToRestApiUsingWsdlImport
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;soapApi&#34;)
+ *             .format(&#34;wsdl-link&#34;)
+ *             .path(&#34;currency&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;http://www.webservicex.net/CurrencyConvertor.asmx?WSDL&#34;)
+ *             .wsdlSelector(Map.ofEntries(
+ *                 Map.entry(&#34;wsdlEndpointName&#34;, &#34;CurrencyConvertorSoap&#34;),
+ *                 Map.entry(&#34;wsdlServiceName&#34;, &#34;CurrencyConvertor&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

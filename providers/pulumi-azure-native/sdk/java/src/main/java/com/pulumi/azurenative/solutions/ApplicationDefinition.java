@@ -31,6 +31,40 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-01.
  * 
  * ## Example Usage
+ * ### Create or update managed application definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var applicationDefinition = new ApplicationDefinition(&#34;applicationDefinition&#34;, ApplicationDefinitionArgs.builder()        
+ *             .applicationDefinitionName(&#34;myManagedApplicationDef&#34;)
+ *             .authorizations(Map.ofEntries(
+ *                 Map.entry(&#34;principalId&#34;, &#34;validprincipalguid&#34;),
+ *                 Map.entry(&#34;roleDefinitionId&#34;, &#34;validroleguid&#34;)
+ *             ))
+ *             .description(&#34;myManagedApplicationDef description&#34;)
+ *             .displayName(&#34;myManagedApplicationDef&#34;)
+ *             .location(&#34;East US 2&#34;)
+ *             .lockLevel(&#34;None&#34;)
+ *             .packageFileUri(&#34;https://path/to/packagezipfile&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

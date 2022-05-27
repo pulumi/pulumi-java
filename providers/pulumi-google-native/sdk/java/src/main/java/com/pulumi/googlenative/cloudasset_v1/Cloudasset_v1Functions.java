@@ -21,6 +21,10 @@ public final class Cloudasset_v1Functions {
     public static CompletableFuture<GetFeedResult> getFeed(GetFeedArgs args) {
         return getFeed(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details about an asset feed.
+     * 
+     */
     public static CompletableFuture<GetFeedResult> getFeed(GetFeedArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getFeed", TypeShape.of(GetFeedResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Cloudasset_v1Functions {
     public static CompletableFuture<GetSavedQueryResult> getSavedQuery(GetSavedQueryArgs args) {
         return getSavedQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details about a saved query.
+     * 
+     */
     public static CompletableFuture<GetSavedQueryResult> getSavedQuery(GetSavedQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args, Utilities.withVersion(options));
     }

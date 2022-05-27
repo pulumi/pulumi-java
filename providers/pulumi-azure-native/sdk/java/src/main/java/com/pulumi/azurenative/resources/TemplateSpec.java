@@ -24,6 +24,33 @@ import javax.annotation.Nullable;
  * API Version: 2022-02-01.
  * 
  * ## Example Usage
+ * ### TemplateSpecsCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateSpec = new TemplateSpec(&#34;templateSpec&#34;, TemplateSpecArgs.builder()        
+ *             .description(&#34;A very simple Template Spec&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;templateSpecRG&#34;)
+ *             .templateSpecName(&#34;simpleTemplateSpec&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

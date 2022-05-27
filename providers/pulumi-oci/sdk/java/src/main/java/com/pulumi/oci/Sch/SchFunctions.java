@@ -25,6 +25,14 @@ public final class SchFunctions {
     public static CompletableFuture<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args) {
         return getServiceConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Service Connector resource in Oracle Cloud Infrastructure Service Connector Hub service.
+     * 
+     * Gets the specified service connector&#39;s configuration information.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetServiceConnectorResult> getServiceConnector(GetServiceConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Sch/getServiceConnector:getServiceConnector", TypeShape.of(GetServiceConnectorResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +47,14 @@ public final class SchFunctions {
     public static CompletableFuture<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args) {
         return getServiceConnectors(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Service Connectors in Oracle Cloud Infrastructure Service Connector Hub service.
+     * 
+     * Lists service connectors in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetServiceConnectorsResult> getServiceConnectors(GetServiceConnectorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Sch/getServiceConnectors:getServiceConnectors", TypeShape.of(GetServiceConnectorsResult.class), args, Utilities.withVersion(options));
     }

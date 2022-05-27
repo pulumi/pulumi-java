@@ -23,6 +23,44 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### PartnerConfigurations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var partnerConfiguration = new PartnerConfiguration(&#34;partnerConfiguration&#34;, PartnerConfigurationArgs.builder()        
+ *             .partnerAuthorization(Map.ofEntries(
+ *                 Map.entry(&#34;authorizedPartnersList&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;authorizationExpirationTimeInUtc&#34;, &#34;2022-01-28T01:20:55.142Z&#34;),
+ *                         Map.entry(&#34;partnerName&#34;, &#34;Contoso.Finance&#34;),
+ *                         Map.entry(&#34;partnerRegistrationImmutableId&#34;, &#34;941892bc-f5d0-4d1c-8fb5-477570fc2b71&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;authorizationExpirationTimeInUtc&#34;, &#34;2022-02-20T01:00:00.142Z&#34;),
+ *                         Map.entry(&#34;partnerName&#34;, &#34;fabrikam.HR&#34;),
+ *                         Map.entry(&#34;partnerRegistrationImmutableId&#34;, &#34;5362bdb6-ce3e-4d0d-9a5b-3eb92c8aab38&#34;)
+ *                     )),
+ *                 Map.entry(&#34;defaultMaximumExpirationTimeInDays&#34;, 10)
+ *             ))
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

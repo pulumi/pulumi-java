@@ -19,6 +19,44 @@ import javax.annotation.Nullable;
  * API Version: 2018-10-01.
  * 
  * ## Example Usage
+ * ### PutUserSettings
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userSettings = new UserSettings(&#34;userSettings&#34;, UserSettingsArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;preferredLocation&#34;, &#34;eastus&#34;),
+ *                 Map.entry(&#34;preferredOsType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;preferredShellType&#34;, &#34;bash&#34;),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;diskSizeInGB&#34;, 5),
+ *                     Map.entry(&#34;fileShareName&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;storageAccountResourceId&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;terminalSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;fontSize&#34;, &#34;Medium&#34;),
+ *                     Map.entry(&#34;fontStyle&#34;, &#34;Monospace&#34;)
+ *                 ))
+ *             ))
+ *             .userSettingsName(&#34;cloudconsole&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

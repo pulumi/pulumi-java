@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-16-preview.
  * 
  * ## Example Usage
+ * ### CreateMultipleActivationKey
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var multipleActivationKey = new MultipleActivationKey(&#34;multipleActivationKey&#34;, MultipleActivationKeyArgs.builder()        
+ *             .agreementNumber(&#34;1a2b45ag&#34;)
+ *             .installedServerNumber(100)
+ *             .isEligible(true)
+ *             .location(&#34;East US&#34;)
+ *             .multipleActivationKeyName(&#34;server08-key-2019&#34;)
+ *             .osType(&#34;WindowsServer2008&#34;)
+ *             .resourceGroupName(&#34;testgr1&#34;)
+ *             .supportType(&#34;SupplementalServicing&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

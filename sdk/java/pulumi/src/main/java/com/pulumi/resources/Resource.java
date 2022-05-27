@@ -4,11 +4,11 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
-import com.pulumi.core.Urn;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.Strings;
+import com.pulumi.core.internal.Urn;
 import com.pulumi.core.internal.annotations.ExportMetadata;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
@@ -215,12 +215,10 @@ public abstract class Resource {
             } else {
                 // If a provider was specified, add it to the providers map under this type's package so that
                 // any children of this resource inherit its provider.
-                var typeComponents = this.type.split(":");
-                if (typeComponents.length == 3) {
-                    var pkg = typeComponents[0];
-                    thisProviders.put(pkg, provider);
+                var typeComponents = Urn.Type.parse(this.type);
+                if (typeComponents.module.isPresent()) {
+                    thisProviders.put(typeComponents.package_, provider);
                 }
-                // TODO: why do we silently ignore invalid type?
             }
         } else {
             // Note: we've checked above that at most one of options.provider or options.providers is set.
@@ -344,8 +342,12 @@ public abstract class Resource {
             }
 
             var parentInfo = getParentInfo(defaultParent, a);
+            var parentUrn = Optional.ofNullable(parentInfo.parent)
+                    .map(p -> p.getUrn())
+                    .or(() -> Optional.ofNullable(parentInfo.parentUrn));
 
-            return Urn.create(name, type, parentInfo.parent, parentInfo.parentUrn, project, stack);
+
+            return Urn.create(stack, project, parentUrn, type, name);
         });
     }
 
@@ -377,7 +379,7 @@ public abstract class Resource {
 
     /**
      * Computes the alias that should be applied to a child
-     * based on an alias applied to it's parent. This may involve changing the name of the
+     * based on an alias applied to its parent. This may involve changing the name of the
      * resource in cases where the resource has a named derived from the name of the parent,
      * and the parent name changed.
      */
@@ -409,7 +411,12 @@ public abstract class Resource {
         }
 
         var urn = Urn.create(
-                aliasName, Output.of(childType), null, parentAlias, null, null);
+                Output.of(Deployment.getInstance().getStackName()),
+                Output.of(Deployment.getInstance().getProjectName()),
+                Optional.of(parentAlias),
+                Output.of(childType),
+                aliasName
+        );
 
         return urn.applyValue(Alias::withUrn);
     }

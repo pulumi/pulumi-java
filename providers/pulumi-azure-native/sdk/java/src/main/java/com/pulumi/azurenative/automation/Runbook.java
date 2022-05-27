@@ -26,6 +26,87 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update runbook and publish it
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var runbook = new Runbook(&#34;runbook&#34;, RunbookArgs.builder()        
+ *             .automationAccountName(&#34;ContoseAutomationAccount&#34;)
+ *             .description(&#34;Description of the Runbook&#34;)
+ *             .location(&#34;East US 2&#34;)
+ *             .logActivityTrace(1)
+ *             .logProgress(true)
+ *             .logVerbose(false)
+ *             .name(&#34;Get-AzureVMTutorial&#34;)
+ *             .publishContentLink(Map.ofEntries(
+ *                 Map.entry(&#34;contentHash&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;algorithm&#34;, &#34;SHA256&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .runbookName(&#34;Get-AzureVMTutorial&#34;)
+ *             .runbookType(&#34;PowerShellWorkflow&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag01&#34;, &#34;value01&#34;),
+ *                 Map.entry(&#34;tag02&#34;, &#34;value02&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create runbook as draft
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var runbook = new Runbook(&#34;runbook&#34;, RunbookArgs.builder()        
+ *             .automationAccountName(&#34;ContoseAutomationAccount&#34;)
+ *             .description(&#34;Description of the Runbook&#34;)
+ *             .draft()
+ *             .location(&#34;East US 2&#34;)
+ *             .logProgress(false)
+ *             .logVerbose(false)
+ *             .name(&#34;Get-AzureVMTutorial&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .runbookName(&#34;Get-AzureVMTutorial&#34;)
+ *             .runbookType(&#34;PowerShellWorkflow&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag01&#34;, &#34;value01&#34;),
+ *                 Map.entry(&#34;tag02&#34;, &#34;value02&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

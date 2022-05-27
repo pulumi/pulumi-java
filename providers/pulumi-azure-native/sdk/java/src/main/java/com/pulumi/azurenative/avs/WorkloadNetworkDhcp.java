@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### WorkloadNetworks_CreateDhcp
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadNetworkDhcp = new WorkloadNetworkDhcp(&#34;workloadNetworkDhcp&#34;, WorkloadNetworkDhcpArgs.builder()        
+ *             .dhcpId(&#34;dhcp1&#34;)
+ *             .dhcpType(&#34;SERVER&#34;)
+ *             .displayName(&#34;dhcpConfigurations1&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .revision(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,42 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-12.
  * 
  * ## Example Usage
+ * ### Create Enterprise Channel
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var enterpriseChannel = new EnterpriseChannel(&#34;enterpriseChannel&#34;, EnterpriseChannelArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.of(&#34;nodes&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;azureLocation&#34;, &#34;WestUs&#34;),
+ *                 Map.entry(&#34;azureSku&#34;, &#34;Int1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Node 1&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;contoso-dl&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;S1&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

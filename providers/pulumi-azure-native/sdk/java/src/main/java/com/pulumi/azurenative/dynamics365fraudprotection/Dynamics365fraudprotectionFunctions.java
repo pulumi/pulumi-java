@@ -20,6 +20,11 @@ public final class Dynamics365fraudprotectionFunctions {
     public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(GetInstanceDetailsArgs args) {
         return getInstanceDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of a DFP instance resource.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(GetInstanceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dynamics365fraudprotection:getInstanceDetails", TypeShape.of(GetInstanceDetailsResult.class), args, Utilities.withVersion(options));
     }

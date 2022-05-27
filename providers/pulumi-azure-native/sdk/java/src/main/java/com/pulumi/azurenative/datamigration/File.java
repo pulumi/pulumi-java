@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-15-preview.
  * 
  * ## Example Usage
+ * ### Files_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var file = new File(&#34;file&#34;, FileArgs.builder()        
+ *             .fileName(&#34;x114d023d8&#34;)
+ *             .groupName(&#34;DmsSdkRg&#34;)
+ *             .projectName(&#34;DmsSdkProject&#34;)
+ *             .properties(Map.of(&#34;filePath&#34;, &#34;DmsSdkFilePath/DmsSdkFile.sql&#34;))
+ *             .serviceName(&#34;DmsSdkService&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

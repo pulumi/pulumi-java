@@ -22,6 +22,11 @@ public final class PowerbidedicatedFunctions {
     public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args) {
         return getAutoScaleVCore(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of an auto scale v-core resource.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class PowerbidedicatedFunctions {
     public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args) {
         return getCapacityDetails(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an instance of a Dedicated Capacity resource.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args, Utilities.withVersion(options));
     }

@@ -29,6 +29,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Dataset.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Job.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
         return getProject(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Project.
+     * 
+     */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetRecipeResult> getRecipe(GetRecipeArgs args) {
         return getRecipe(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Recipe.
+     * 
+     */
     public static CompletableFuture<GetRecipeResult> getRecipe(GetRecipeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getRecipe", TypeShape.of(GetRecipeResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetRulesetResult> getRuleset(GetRulesetArgs args) {
         return getRuleset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Ruleset.
+     * 
+     */
     public static CompletableFuture<GetRulesetResult> getRuleset(GetRulesetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getRuleset", TypeShape.of(GetRulesetResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class DatabrewFunctions {
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args) {
         return getSchedule(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::DataBrew::Schedule.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getSchedule", TypeShape.of(GetScheduleResult.class), args, Utilities.withVersion(options));
     }

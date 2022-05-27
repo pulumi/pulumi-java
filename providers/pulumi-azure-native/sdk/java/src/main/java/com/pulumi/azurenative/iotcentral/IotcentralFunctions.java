@@ -22,6 +22,11 @@ public final class IotcentralFunctions {
     public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
         return getApp(args, InvokeOptions.Empty);
     }
+    /**
+     * The IoT Central application.
+     * API Version: 2018-09-01.
+     * 
+     */
     public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class IotcentralFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The private endpoint connection resource.
+     * API Version: 2021-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }

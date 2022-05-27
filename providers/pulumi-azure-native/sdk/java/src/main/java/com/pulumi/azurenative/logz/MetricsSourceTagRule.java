@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### MetricsSourceTagRules_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricsSourceTagRule = new MetricsSourceTagRule(&#34;metricsSourceTagRule&#34;, MetricsSourceTagRuleArgs.builder()        
+ *             .metricsSourceName(&#34;MetricsSource1&#34;)
+ *             .monitorName(&#34;myMonitor&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .ruleSetName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

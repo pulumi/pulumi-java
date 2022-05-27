@@ -29,6 +29,63 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### UpdateVirtualNetworkGateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkGateway = new VirtualNetworkGateway(&#34;virtualNetworkGateway&#34;, VirtualNetworkGatewayArgs.builder()        
+ *             .activeActive(false)
+ *             .bgpSettings(Map.ofEntries(
+ *                 Map.entry(&#34;asn&#34;, 65515),
+ *                 Map.entry(&#34;bgpPeeringAddress&#34;, &#34;10.0.1.30&#34;),
+ *                 Map.entry(&#34;peerWeight&#34;, 0)
+ *             ))
+ *             .customRoutes(Map.of(&#34;addressPrefixes&#34;, &#34;101.168.0.6/32&#34;))
+ *             .enableBgp(false)
+ *             .enableDnsForwarding(true)
+ *             .gatewayType(&#34;Vpn&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;gwipconfig1&#34;),
+ *                 Map.entry(&#34;privateIPAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip&#34;)),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet&#34;))
+ *             ))
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;VpnGw1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;VpnGw1&#34;)
+ *             ))
+ *             .virtualNetworkGatewayName(&#34;vpngw&#34;)
+ *             .vpnClientConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;radiusServers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;radiusServerAddress&#34;, &#34;10.2.0.0&#34;),
+ *                     Map.entry(&#34;radiusServerScore&#34;, 20),
+ *                     Map.entry(&#34;radiusServerSecret&#34;, &#34;radiusServerSecret&#34;)
+ *                 )),
+ *                 Map.entry(&#34;vpnClientProtocols&#34;, &#34;OpenVPN&#34;),
+ *                 Map.entry(&#34;vpnClientRevokedCertificates&#34;, ),
+ *                 Map.entry(&#34;vpnClientRootCertificates&#34;, )
+ *             ))
+ *             .vpnType(&#34;RouteBased&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

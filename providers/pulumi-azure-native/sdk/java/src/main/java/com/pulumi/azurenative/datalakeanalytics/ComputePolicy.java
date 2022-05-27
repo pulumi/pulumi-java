@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates or updates the specified compute policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var computePolicy = new ComputePolicy(&#34;computePolicy&#34;, ComputePolicyArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .computePolicyName(&#34;test_policy&#34;)
+ *             .maxDegreeOfParallelismPerJob(10)
+ *             .minPriorityPerJob(30)
+ *             .objectId(&#34;776b9091-8916-4638-87f7-9c989a38da98&#34;)
+ *             .objectType(&#34;User&#34;)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

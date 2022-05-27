@@ -30,6 +30,49 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### VirtualMachines_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .allowClaim(true)
+ *             .disallowPublicIpAddress(true)
+ *             .galleryImageReference(Map.ofEntries(
+ *                 Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                 Map.entry(&#34;sku&#34;, &#34;16.04-LTS&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;Latest&#34;)
+ *             ))
+ *             .labName(&#34;{labName}&#34;)
+ *             .labSubnetName(&#34;{virtualNetworkName}Subnet&#34;)
+ *             .labVirtualNetworkId(&#34;/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualnetworks/{virtualNetworkName}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{vmName}&#34;)
+ *             .password(&#34;{userPassword}&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .size(&#34;Standard_A2_v2&#34;)
+ *             .storageType(&#34;Standard&#34;)
+ *             .tags(Map.of(&#34;tagName1&#34;, &#34;tagValue1&#34;))
+ *             .userName(&#34;{userName}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

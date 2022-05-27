@@ -20,6 +20,112 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01-preview.
  * 
  * ## Example Usage
+ * ### CostAllocationRulesCreateResourceGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var costAllocationRule = new CostAllocationRule(&#34;costAllocationRule&#34;, CostAllocationRuleArgs.builder()        
+ *             .billingAccountId(&#34;100&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;This is a testRule&#34;),
+ *                 Map.entry(&#34;details&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;sourceResources&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;ResourceGroupName&#34;),
+ *                         Map.entry(&#34;resourceType&#34;, &#34;Dimension&#34;),
+ *                         Map.entry(&#34;values&#34;,                         
+ *                             &#34;sampleRG&#34;,
+ *                             &#34;secondRG&#34;)
+ *                     )),
+ *                     Map.entry(&#34;targetResources&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;ResourceGroupName&#34;),
+ *                         Map.entry(&#34;policyType&#34;, &#34;FixedProportion&#34;),
+ *                         Map.entry(&#34;resourceType&#34;, &#34;Dimension&#34;),
+ *                         Map.entry(&#34;values&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;destinationRG&#34;),
+ *                                 Map.entry(&#34;percentage&#34;, 45)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;destinationRG2&#34;),
+ *                                 Map.entry(&#34;percentage&#34;, 54)
+ *                             ))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .ruleName(&#34;testRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CostAllocationRulesCreateTag
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var costAllocationRule = new CostAllocationRule(&#34;costAllocationRule&#34;, CostAllocationRuleArgs.builder()        
+ *             .billingAccountId(&#34;100&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;This is a testRule&#34;),
+ *                 Map.entry(&#34;details&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;sourceResources&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;category&#34;),
+ *                         Map.entry(&#34;resourceType&#34;, &#34;Tag&#34;),
+ *                         Map.entry(&#34;values&#34;, &#34;devops&#34;)
+ *                     )),
+ *                     Map.entry(&#34;targetResources&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;ResourceGroupName&#34;),
+ *                         Map.entry(&#34;policyType&#34;, &#34;FixedProportion&#34;),
+ *                         Map.entry(&#34;resourceType&#34;, &#34;Dimension&#34;),
+ *                         Map.entry(&#34;values&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;destinationRG&#34;),
+ *                                 Map.entry(&#34;percentage&#34;, 33.33)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;destinationRG2&#34;),
+ *                                 Map.entry(&#34;percentage&#34;, 33.33)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;destinationRG3&#34;),
+ *                                 Map.entry(&#34;percentage&#34;, 33.34)
+ *                             ))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Active&#34;)
+ *             ))
+ *             .ruleName(&#34;testRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

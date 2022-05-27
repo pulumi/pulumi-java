@@ -21,6 +21,10 @@ public final class Remotebuildexecution_v1alphaFunctions {
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the specified instance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Remotebuildexecution_v1alphaFunctions {
     public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args) {
         return getWorkerPool(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the specified worker pool.
+     * 
+     */
     public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }

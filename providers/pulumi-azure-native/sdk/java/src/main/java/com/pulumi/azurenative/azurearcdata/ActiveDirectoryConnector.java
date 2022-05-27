@@ -21,6 +21,51 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update an Active Directory connector instance.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var activeDirectoryConnector = new ActiveDirectoryConnector(&#34;activeDirectoryConnector&#34;, ActiveDirectoryConnectorArgs.builder()        
+ *             .activeDirectoryConnectorName(&#34;testADConnector&#34;)
+ *             .dataControllerName(&#34;testdataController&#34;)
+ *             .properties(Map.of(&#34;spec&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;activeDirectory&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;domainControllers&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;primaryDomainController&#34;, Map.of(&#34;hostname&#34;, &#34;dc1.contoso.local&#34;)),
+ *                         Map.entry(&#34;secondaryDomainControllers&#34;,                         
+ *                             Map.of(&#34;hostname&#34;, &#34;dc2.contoso.local&#34;),
+ *                             Map.of(&#34;hostname&#34;, &#34;dc3.contoso.local&#34;))
+ *                     )),
+ *                     Map.entry(&#34;realm&#34;, &#34;CONTOSO.LOCAL&#34;),
+ *                     Map.entry(&#34;serviceAccountProvisioning&#34;, &#34;manual&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dns&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;nameserverIPAddresses&#34;,                     
+ *                         &#34;11.11.111.111&#34;,
+ *                         &#34;22.22.222.222&#34;),
+ *                     Map.entry(&#34;preferK8sDnsForPtrLookups&#34;, false),
+ *                     Map.entry(&#34;replicas&#34;, 1)
+ *                 ))
+ *             )))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

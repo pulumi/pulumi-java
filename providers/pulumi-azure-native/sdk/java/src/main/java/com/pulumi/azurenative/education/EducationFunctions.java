@@ -22,6 +22,11 @@ public final class EducationFunctions {
     public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args) {
         return getGetLab(args, InvokeOptions.Empty);
     }
+    /**
+     * Lab details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:education:getGetLab", TypeShape.of(GetGetLabResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +38,11 @@ public final class EducationFunctions {
     public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args) {
         return getGetStudent(args, InvokeOptions.Empty);
     }
+    /**
+     * Student details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:education:getGetStudent", TypeShape.of(GetGetStudentResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,34 @@ import javax.annotation.Nullable;
  * API Version: 2014-04-01.
  * 
  * ## Example Usage
+ * ### Update geo backup policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var geoBackupPolicy = new GeoBackupPolicy(&#34;geoBackupPolicy&#34;, GeoBackupPolicyArgs.builder()        
+ *             .databaseName(&#34;testdw&#34;)
+ *             .geoBackupPolicyName(&#34;Default&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-4799&#34;)
+ *             .serverName(&#34;sqlcrudtest-5961&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

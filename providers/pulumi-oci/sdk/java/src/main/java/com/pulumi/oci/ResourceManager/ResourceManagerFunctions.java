@@ -27,6 +27,14 @@ public final class ResourceManagerFunctions {
     public static CompletableFuture<GetStackResult> getStack(GetStackArgs args) {
         return getStack(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Stack resource in Oracle Cloud Infrastructure Resource Manager service.
+     * 
+     * Gets a stack using the stack ID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +45,10 @@ public final class ResourceManagerFunctions {
     public static CompletableFuture<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args) {
         return getStackTfState(args, InvokeOptions.Empty);
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetStackTfStateResult> getStackTfState(GetStackTfStateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStackTfState:getStackTfState", TypeShape.of(GetStackTfStateResult.class), args, Utilities.withVersion(options));
     }
@@ -53,6 +65,16 @@ public final class ResourceManagerFunctions {
     public static CompletableFuture<GetStacksResult> getStacks(GetStacksArgs args) {
         return getStacks(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Stacks in Oracle Cloud Infrastructure Resource Manager service.
+     * 
+     * Returns a list of stacks.
+     * - If called using the compartment ID, returns all stacks in the specified compartment.
+     * - If called using the stack ID, returns the specified stack.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetStacksResult> getStacks(GetStacksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ResourceManager/getStacks:getStacks", TypeShape.of(GetStacksResult.class), args, Utilities.withVersion(options));
     }

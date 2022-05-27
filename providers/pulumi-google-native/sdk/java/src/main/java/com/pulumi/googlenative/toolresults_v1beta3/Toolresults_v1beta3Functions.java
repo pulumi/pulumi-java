@@ -25,6 +25,10 @@ public final class Toolresults_v1beta3Functions {
     public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args) {
         return getExecution(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
+     * 
+     */
     public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class Toolresults_v1beta3Functions {
     public static CompletableFuture<GetHistoryResult> getHistory(GetHistoryArgs args) {
         return getHistory(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
+     * 
+     */
     public static CompletableFuture<GetHistoryResult> getHistory(GetHistoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getHistory", TypeShape.of(GetHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class Toolresults_v1beta3Functions {
     public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(GetPerfSampleSeriesArgs args) {
         return getPerfSampleSeries(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
+     * 
+     */
     public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(GetPerfSampleSeriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getPerfSampleSeries", TypeShape.of(GetPerfSampleSeriesResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class Toolresults_v1beta3Functions {
     public static CompletableFuture<GetStepResult> getStep(GetStepArgs args) {
         return getStep(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
+     * 
+     */
     public static CompletableFuture<GetStepResult> getStep(GetStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getStep", TypeShape.of(GetStepResult.class), args, Utilities.withVersion(options));
     }

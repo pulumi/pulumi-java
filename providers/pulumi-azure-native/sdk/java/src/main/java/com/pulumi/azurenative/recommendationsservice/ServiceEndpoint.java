@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * API Version: 2022-02-01.
  * 
  * ## Example Usage
+ * ### Create or update ServiceEndpoint resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceEndpoint = new ServiceEndpoint(&#34;serviceEndpoint&#34;, ServiceEndpointArgs.builder()        
+ *             .accountName(&#34;sampleAccount&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.of(&#34;preAllocatedCapacity&#34;, 100))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .serviceEndpointName(&#34;s1&#34;)
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Prod&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

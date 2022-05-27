@@ -24,6 +24,11 @@ public final class SqlvirtualmachineFunctions {
     public static CompletableFuture<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args) {
         return getAvailabilityGroupListener(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL Server availability group listener.
+     * API Version: 2017-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetAvailabilityGroupListenerResult> getAvailabilityGroupListener(GetAvailabilityGroupListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getAvailabilityGroupListener", TypeShape.of(GetAvailabilityGroupListenerResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class SqlvirtualmachineFunctions {
     public static CompletableFuture<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args) {
         return getSqlVirtualMachine(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL virtual machine.
+     * API Version: 2017-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSqlVirtualMachineResult> getSqlVirtualMachine(GetSqlVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachine", TypeShape.of(GetSqlVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class SqlvirtualmachineFunctions {
     public static CompletableFuture<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args) {
         return getSqlVirtualMachineGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * A SQL virtual machine group.
+     * API Version: 2017-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSqlVirtualMachineGroupResult> getSqlVirtualMachineGroup(GetSqlVirtualMachineGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachineGroup", TypeShape.of(GetSqlVirtualMachineGroupResult.class), args, Utilities.withVersion(options));
     }

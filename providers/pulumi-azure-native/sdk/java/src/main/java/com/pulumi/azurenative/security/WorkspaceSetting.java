@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2017-08-01-preview.
  * 
  * ## Example Usage
+ * ### Create a workspace setting data for subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspaceSetting = new WorkspaceSetting(&#34;workspaceSetting&#34;, WorkspaceSettingArgs.builder()        
+ *             .scope(&#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23&#34;)
+ *             .workspaceId(&#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace&#34;)
+ *             .workspaceSettingName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

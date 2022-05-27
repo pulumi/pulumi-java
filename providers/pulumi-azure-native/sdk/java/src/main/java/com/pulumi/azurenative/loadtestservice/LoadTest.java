@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01-preview.
  * 
  * ## Example Usage
+ * ### LoadTests_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loadTest = new LoadTest(&#34;loadTest&#34;, LoadTestArgs.builder()        
+ *             .description(&#34;This is new load test resource&#34;)
+ *             .loadTestName(&#34;myLoadTest&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;dummyrg&#34;)
+ *             .tags(Map.of(&#34;Team&#34;, &#34;Dev Exp&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

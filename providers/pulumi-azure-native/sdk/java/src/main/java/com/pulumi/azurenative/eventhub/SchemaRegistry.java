@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01.
  * 
  * ## Example Usage
+ * ### SchemaRegistryCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var schemaRegistry = new SchemaRegistry(&#34;schemaRegistry&#34;, SchemaRegistryArgs.builder()        
+ *             .groupProperties()
+ *             .namespaceName(&#34;ali-ua-test-eh-system-1&#34;)
+ *             .resourceGroupName(&#34;alitest&#34;)
+ *             .schemaCompatibility(&#34;Forward&#34;)
+ *             .schemaGroupName(&#34;testSchemaGroup1&#34;)
+ *             .schemaType(&#34;Avro&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

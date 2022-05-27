@@ -19,6 +19,10 @@ public final class HealthlakeFunctions {
     public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(GetFHIRDatastoreArgs args) {
         return getFHIRDatastore(args, InvokeOptions.Empty);
     }
+    /**
+     * HealthLake FHIR Datastore
+     * 
+     */
     public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(GetFHIRDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:healthlake:getFHIRDatastore", TypeShape.of(GetFHIRDatastoreResult.class), args, Utilities.withVersion(options));
     }

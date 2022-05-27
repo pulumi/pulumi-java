@@ -28,6 +28,52 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create a LiveEvent
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var liveEvent = new LiveEvent(&#34;liveEvent&#34;, LiveEventArgs.builder()        
+ *             .accountName(&#34;slitestmedia10&#34;)
+ *             .description(&#34;test event 1&#34;)
+ *             .input(Map.ofEntries(
+ *                 Map.entry(&#34;accessControl&#34;, Map.of(&#34;ip&#34;, Map.of(&#34;allow&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;address&#34;, &#34;0.0.0.0&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;AllowAll&#34;),
+ *                     Map.entry(&#34;subnetPrefixLength&#34;, 0)
+ *                 )))),
+ *                 Map.entry(&#34;keyFrameIntervalDuration&#34;, &#34;PT6S&#34;),
+ *                 Map.entry(&#34;streamingProtocol&#34;, &#34;RTMP&#34;)
+ *             ))
+ *             .liveEventName(&#34;myLiveEvent1&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .preview(Map.of(&#34;accessControl&#34;, Map.of(&#34;ip&#34;, Map.of(&#34;allow&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;address&#34;, &#34;0.0.0.0&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;AllowAll&#34;),
+ *                 Map.entry(&#34;subnetPrefixLength&#34;, 0)
+ *             )))))
+ *             .resourceGroupName(&#34;mediaresources&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

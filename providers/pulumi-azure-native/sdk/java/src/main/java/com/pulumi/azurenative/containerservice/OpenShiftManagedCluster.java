@@ -27,6 +27,73 @@ import javax.annotation.Nullable;
  * API Version: 2019-04-30.
  * 
  * ## Example Usage
+ * ### Create/Update OpenShift Managed Cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var openShiftManagedCluster = new OpenShiftManagedCluster(&#34;openShiftManagedCluster&#34;, OpenShiftManagedClusterArgs.builder()        
+ *             .agentPoolProfiles(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;count&#34;, 2),
+ *                     Map.entry(&#34;name&#34;, &#34;infra&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;role&#34;, &#34;infra&#34;),
+ *                     Map.entry(&#34;subnetCidr&#34;, &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;vmSize&#34;, &#34;Standard_D4s_v3&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;count&#34;, 4),
+ *                     Map.entry(&#34;name&#34;, &#34;compute&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;role&#34;, &#34;compute&#34;),
+ *                     Map.entry(&#34;subnetCidr&#34;, &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;vmSize&#34;, &#34;Standard_D4s_v3&#34;)
+ *                 ))
+ *             .authProfile(Map.of(&#34;identityProviders&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Azure AD&#34;),
+ *                 Map.entry(&#34;provider&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;clientId&#34;),
+ *                     Map.entry(&#34;customerAdminGroupId&#34;, &#34;customerAdminGroupId&#34;),
+ *                     Map.entry(&#34;kind&#34;, &#34;AADIdentityProvider&#34;),
+ *                     Map.entry(&#34;secret&#34;, &#34;secret&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;tenantId&#34;)
+ *                 ))
+ *             )))
+ *             .location(&#34;location1&#34;)
+ *             .masterPoolProfile(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;master&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;subnetCidr&#34;, &#34;10.0.0.0/24&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_D4s_v3&#34;)
+ *             ))
+ *             .networkProfile(Map.of(&#34;vnetCidr&#34;, &#34;10.0.0.0/8&#34;))
+ *             .openShiftVersion(&#34;v3.11&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .routerProfiles(Map.of(&#34;name&#34;, &#34;default&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

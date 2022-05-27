@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a live pipeline
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var livePipeline = new LivePipeline(&#34;livePipeline&#34;, LivePipelineArgs.builder()        
+ *             .accountName(&#34;testaccount2&#34;)
+ *             .bitrateKbps(500)
+ *             .description(&#34;Live Pipeline 1 Description&#34;)
+ *             .livePipelineName(&#34;livePipeline1&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;rtspUrlParameter&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;rtsp://contoso.com/stream&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .topologyName(&#34;pipelinetopology1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

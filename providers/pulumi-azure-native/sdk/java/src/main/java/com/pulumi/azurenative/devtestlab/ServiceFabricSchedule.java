@@ -25,6 +25,60 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### ServiceFabricSchedules_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceFabricSchedule = new ServiceFabricSchedule(&#34;serviceFabricSchedule&#34;, ServiceFabricScheduleArgs.builder()        
+ *             .dailyRecurrence(Map.of(&#34;time&#34;, &#34;19:00&#34;))
+ *             .hourlyRecurrence(Map.of(&#34;minute&#34;, 0))
+ *             .labName(&#34;{labName}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{scheduleName}&#34;)
+ *             .notificationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;emailRecipient&#34;, &#34;{email}&#34;),
+ *                 Map.entry(&#34;notificationLocale&#34;, &#34;EN&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;{Enabled|Disabled}&#34;),
+ *                 Map.entry(&#34;timeInMinutes&#34;, 15),
+ *                 Map.entry(&#34;webhookUrl&#34;, &#34;{webhoolUrl}&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .serviceFabricName(&#34;{serviceFrabicName}&#34;)
+ *             .status(&#34;{Enabled|Disabled}&#34;)
+ *             .tags(Map.of(&#34;tagName1&#34;, &#34;tagValue1&#34;))
+ *             .targetResourceId(&#34;/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/users/{uniqueIdentifier}/servicefabrics/{serviceFrabicName}&#34;)
+ *             .taskType(&#34;{Unknown|LabVmsShutdownTask|LabVmsStartupTask|LabVmReclamationTask|ComputeVmShutdownTask}&#34;)
+ *             .timeZoneId(&#34;Pacific Standard Time&#34;)
+ *             .userName(&#34;@me&#34;)
+ *             .weeklyRecurrence(Map.ofEntries(
+ *                 Map.entry(&#34;time&#34;, &#34;19:00&#34;),
+ *                 Map.entry(&#34;weekdays&#34;,                 
+ *                     &#34;Monday&#34;,
+ *                     &#34;Tuesday&#34;,
+ *                     &#34;Wednesday&#34;,
+ *                     &#34;Thursday&#34;,
+ *                     &#34;Friday&#34;,
+ *                     &#34;Saturday&#34;,
+ *                     &#34;Sunday&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -32,6 +32,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args) {
         return getConnectionMonitorTest(args, InvokeOptions.Empty);
     }
+    /**
+     * The Connection Monitor Test class.
+     * API Version: 2021-06-01.
+     * 
+     */
     public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +48,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args) {
         return getPeerAsn(args, InvokeOptions.Empty);
     }
+    /**
+     * The essential information related to the peer&#39;s ASN.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeerAsn", TypeShape.of(GetPeerAsnResult.class), args, Utilities.withVersion(options));
     }
@@ -54,6 +64,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args) {
         return getPeering(args, InvokeOptions.Empty);
     }
+    /**
+     * Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeering", TypeShape.of(GetPeeringResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +80,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args) {
         return getPeeringService(args, InvokeOptions.Empty);
     }
+    /**
+     * Peering Service
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeeringService", TypeShape.of(GetPeeringServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -76,6 +96,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args) {
         return getPrefix(args, InvokeOptions.Empty);
     }
+    /**
+     * The peering service prefix class.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +112,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args) {
         return getRegisteredAsn(args, InvokeOptions.Empty);
     }
+    /**
+     * The customer&#39;s ASN that is registered by the peering service provider.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredAsn", TypeShape.of(GetRegisteredAsnResult.class), args, Utilities.withVersion(options));
     }
@@ -98,6 +128,11 @@ public final class PeeringFunctions {
     public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args) {
         return getRegisteredPrefix(args, InvokeOptions.Empty);
     }
+    /**
+     * The customer&#39;s prefix that is registered by the peering service provider.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args, Utilities.withVersion(options));
     }

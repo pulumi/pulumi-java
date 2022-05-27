@@ -23,6 +23,10 @@ public final class Policysimulator_v1Functions {
     public static CompletableFuture<GetFolderReplayResult> getFolderReplay(GetFolderReplayArgs args) {
         return getFolderReplay(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+     * 
+     */
     public static CompletableFuture<GetFolderReplayResult> getFolderReplay(GetFolderReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1:getFolderReplay", TypeShape.of(GetFolderReplayResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class Policysimulator_v1Functions {
     public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(GetOrganizationReplayArgs args) {
         return getOrganizationReplay(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+     * 
+     */
     public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(GetOrganizationReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1:getOrganizationReplay", TypeShape.of(GetOrganizationReplayResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class Policysimulator_v1Functions {
     public static CompletableFuture<GetReplayResult> getReplay(GetReplayArgs args) {
         return getReplay(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+     * 
+     */
     public static CompletableFuture<GetReplayResult> getReplay(GetReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1:getReplay", TypeShape.of(GetReplayResult.class), args, Utilities.withVersion(options));
     }

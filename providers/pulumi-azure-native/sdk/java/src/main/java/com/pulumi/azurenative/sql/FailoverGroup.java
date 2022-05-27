@@ -24,6 +24,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create failover group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var failoverGroup = new FailoverGroup(&#34;failoverGroup&#34;, FailoverGroupArgs.builder()        
+ *             .databases(            
+ *                 &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1&#34;,
+ *                 &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2&#34;)
+ *             .failoverGroupName(&#34;failover-group-test-3&#34;)
+ *             .partnerServers(Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server&#34;))
+ *             .readOnlyEndpoint(Map.of(&#34;failoverPolicy&#34;, &#34;Disabled&#34;))
+ *             .readWriteEndpoint(Map.ofEntries(
+ *                 Map.entry(&#34;failoverPolicy&#34;, &#34;Automatic&#34;),
+ *                 Map.entry(&#34;failoverWithDataLossGracePeriodMinutes&#34;, 480)
+ *             ))
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .serverName(&#34;failover-group-primary-server&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

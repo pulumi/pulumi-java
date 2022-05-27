@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01.
  * 
  * ## Example Usage
+ * ### Creates an NetworkExperiment Profile in a Resource Group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkExperimentProfile = new NetworkExperimentProfile(&#34;networkExperimentProfile&#34;, NetworkExperimentProfileArgs.builder()        
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .location(&#34;WestUs&#34;)
+ *             .profileName(&#34;MyProfile&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

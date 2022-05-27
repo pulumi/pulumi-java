@@ -19,6 +19,10 @@ public final class AuditmanagerFunctions {
     public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args) {
         return getAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+     * 
+     */
     public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:auditmanager:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
     }

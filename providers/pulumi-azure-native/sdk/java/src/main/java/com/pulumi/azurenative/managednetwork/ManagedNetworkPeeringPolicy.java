@@ -21,13 +21,44 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### ManagedNetworkPeeringPoliciesPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedNetworkPeeringPolicy = new ManagedNetworkPeeringPolicy(&#34;managedNetworkPeeringPolicy&#34;, ManagedNetworkPeeringPolicyArgs.builder()        
+ *             .managedNetworkName(&#34;myManagedNetwork&#34;)
+ *             .managedNetworkPeeringPolicyName(&#34;myHubAndSpoke&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;hub&#34;, Map.of(&#34;id&#34;, &#34;/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet&#34;)),
+ *                 Map.entry(&#34;spokes&#34;, Map.of(&#34;id&#34;, &#34;/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1&#34;)),
+ *                 Map.entry(&#34;type&#34;, &#34;HubAndSpokeTopology&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:managednetwork:ManagedNetworkPeeringPolicy myHubAndSpoke /subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkPeeringPolicies/myHubAndSpoke 
+ * $ pulumi import azure-native:managednetwork:ManagedNetworkPeeringPolicy myHubAndSpoke /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkPeeringPolicies/myHubAndSpoke 
  * ```
  * 
  */

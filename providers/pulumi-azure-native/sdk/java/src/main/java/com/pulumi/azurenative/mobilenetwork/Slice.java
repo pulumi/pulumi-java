@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create mobile network slice
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var slice = new Slice(&#34;slice&#34;, SliceArgs.builder()        
+ *             .description(&#34;myFavouriteSlice&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .mobileNetworkName(&#34;testMobileNetwork&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sliceName(&#34;testSlice&#34;)
+ *             .snssai(Map.ofEntries(
+ *                 Map.entry(&#34;sd&#34;, &#34;1abcde&#34;),
+ *                 Map.entry(&#34;sst&#34;, 1)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

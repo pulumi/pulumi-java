@@ -25,6 +25,234 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Creates a Streaming Policy with clear streaming
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingPolicy = new StreamingPolicy(&#34;streamingPolicy&#34;, StreamingPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .noEncryption(Map.of(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;dash&#34;, true),
+ *                 Map.entry(&#34;download&#34;, true),
+ *                 Map.entry(&#34;hls&#34;, true),
+ *                 Map.entry(&#34;smoothStreaming&#34;, true)
+ *             )))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingPolicyName(&#34;UserCreatedClearStreamingPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Policy with commonEncryptionCbcs only
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingPolicy = new StreamingPolicy(&#34;streamingPolicy&#34;, StreamingPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .commonEncryptionCbcs(Map.ofEntries(
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;cbcsDefaultKey&#34;))),
+ *                 Map.entry(&#34;drm&#34;, Map.of(&#34;fairPlay&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowPersistentLicense&#34;, true),
+ *                     Map.entry(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, false),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, true),
+ *                     Map.entry(&#34;smoothStreaming&#34;, false)
+ *                 ))
+ *             ))
+ *             .defaultContentKeyPolicyName(&#34;PolicyWithMultipleOptions&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingPolicyName(&#34;UserCreatedSecureStreamingPolicyWithCommonEncryptionCbcsOnly&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Policy with commonEncryptionCenc only
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingPolicy = new StreamingPolicy(&#34;streamingPolicy&#34;, StreamingPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .commonEncryptionCenc(Map.ofEntries(
+ *                 Map.entry(&#34;clearTracks&#34;, Map.of(&#34;trackSelections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;operation&#34;, &#34;Equal&#34;),
+ *                     Map.entry(&#34;property&#34;, &#34;FourCC&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;hev1&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;cencDefaultKey&#34;))),
+ *                 Map.entry(&#34;drm&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;playReady&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}&#34;),
+ *                         Map.entry(&#34;playReadyCustomAttributes&#34;, &#34;PlayReady CustomAttributes&#34;)
+ *                     )),
+ *                     Map.entry(&#34;widevine&#34;, Map.of(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId&#34;))
+ *                 )),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, true),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, false),
+ *                     Map.entry(&#34;smoothStreaming&#34;, true)
+ *                 ))
+ *             ))
+ *             .defaultContentKeyPolicyName(&#34;PolicyWithPlayReadyOptionAndOpenRestriction&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingPolicyName(&#34;UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Policy with envelopeEncryption only
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingPolicy = new StreamingPolicy(&#34;streamingPolicy&#34;, StreamingPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .defaultContentKeyPolicyName(&#34;PolicyWithClearKeyOptionAndTokenRestriction&#34;)
+ *             .envelopeEncryption(Map.ofEntries(
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;aesDefaultKey&#34;))),
+ *                 Map.entry(&#34;customKeyAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}&#34;),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, true),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, true),
+ *                     Map.entry(&#34;smoothStreaming&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingPolicyName(&#34;UserCreatedSecureStreamingPolicyWithEnvelopeEncryptionOnly&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Streaming Policy with secure streaming
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingPolicy = new StreamingPolicy(&#34;streamingPolicy&#34;, StreamingPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .commonEncryptionCbcs(Map.ofEntries(
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;cbcsDefaultKey&#34;))),
+ *                 Map.entry(&#34;drm&#34;, Map.of(&#34;fairPlay&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowPersistentLicense&#34;, true),
+ *                     Map.entry(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, false),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, true),
+ *                     Map.entry(&#34;smoothStreaming&#34;, false)
+ *                 ))
+ *             ))
+ *             .commonEncryptionCenc(Map.ofEntries(
+ *                 Map.entry(&#34;clearTracks&#34;, Map.of(&#34;trackSelections&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;operation&#34;, &#34;Equal&#34;),
+ *                     Map.entry(&#34;property&#34;, &#34;FourCC&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;hev1&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;cencDefaultKey&#34;))),
+ *                 Map.entry(&#34;drm&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;playReady&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}&#34;),
+ *                         Map.entry(&#34;playReadyCustomAttributes&#34;, &#34;PlayReady CustomAttributes&#34;)
+ *                     )),
+ *                     Map.entry(&#34;widevine&#34;, Map.of(&#34;customLicenseAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId&#34;))
+ *                 )),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, true),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, false),
+ *                     Map.entry(&#34;smoothStreaming&#34;, true)
+ *                 ))
+ *             ))
+ *             .defaultContentKeyPolicyName(&#34;PolicyWithMultipleOptions&#34;)
+ *             .envelopeEncryption(Map.ofEntries(
+ *                 Map.entry(&#34;contentKeys&#34;, Map.of(&#34;defaultKey&#34;, Map.of(&#34;label&#34;, &#34;aesDefaultKey&#34;))),
+ *                 Map.entry(&#34;customKeyAcquisitionUrlTemplate&#34;, &#34;https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}&#34;),
+ *                 Map.entry(&#34;enabledProtocols&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dash&#34;, true),
+ *                     Map.entry(&#34;download&#34;, false),
+ *                     Map.entry(&#34;hls&#34;, true),
+ *                     Map.entry(&#34;smoothStreaming&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .streamingPolicyName(&#34;UserCreatedSecureStreamingPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

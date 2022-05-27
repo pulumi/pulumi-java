@@ -26,6 +26,44 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### ApplicationGroup_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var applicationGroup = new ApplicationGroup(&#34;applicationGroup&#34;, ApplicationGroupArgs.builder()        
+ *             .applicationGroupName(&#34;applicationGroup1&#34;)
+ *             .applicationGroupType(&#34;RemoteApp&#34;)
+ *             .description(&#34;des1&#34;)
+ *             .friendlyName(&#34;friendly&#34;)
+ *             .hostPoolArmPath(&#34;/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .migrationRequest(Map.ofEntries(
+ *                 Map.entry(&#34;migrationPath&#34;, &#34;TenantGroups/{defaultV1TenantGroup.Name}/Tenants/{defaultV1Tenant.Name}/HostPools/{sessionHostPool.Name}&#34;),
+ *                 Map.entry(&#34;operation&#34;, &#34;Start&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

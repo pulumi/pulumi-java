@@ -1,9 +1,18 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.azure.core.CoreFunctions;
+import com.pulumi.azure.core.inputs.GetResourceGroupArgs;
+import com.pulumi.azure.storage.Account;
+import com.pulumi.azure.storage.AccountArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
@@ -18,7 +27,7 @@ public class App {
             .name(resourceGroupNameParam)
             .build()));
 
-        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.apply(getResourceGroupResult -> getResourceGroupResult.location()));
+        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.applyValue(getResourceGroupResult -> getResourceGroupResult.location()));
         final var storageAccountTierParam = config.get("storageAccountTierParam").orElse("Standard");
         final var storageAccountTypeReplicationParam = config.get("storageAccountTypeReplicationParam").orElse("LRS");
         var storageAccountResource = new Account("storageAccountResource", AccountArgs.builder()        

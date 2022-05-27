@@ -28,6 +28,83 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create Or Update service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningService = new MachineLearningService(&#34;machineLearningService&#34;, MachineLearningServiceArgs.builder()        
+ *             .computeType(&#34;ACI&#34;)
+ *             .environmentImageRequest(Map.ofEntries(
+ *                 Map.entry(&#34;assets&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;mimeType&#34;, &#34;application/x-python&#34;),
+ *                     Map.entry(&#34;unpack&#34;, false),
+ *                     Map.entry(&#34;url&#34;, &#34;aml://storage/azureml/score.py&#34;)
+ *                 )),
+ *                 Map.entry(&#34;driverProgram&#34;, &#34;score.py&#34;),
+ *                 Map.entry(&#34;environment&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;docker&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;baseImage&#34;, &#34;mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04&#34;),
+ *                         Map.entry(&#34;baseImageRegistry&#34;, )
+ *                     )),
+ *                     Map.entry(&#34;environmentVariables&#34;, Map.of(&#34;EXAMPLE_ENV_VAR&#34;, &#34;EXAMPLE_VALUE&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;AzureML-Scikit-learn-0.20.3&#34;),
+ *                     Map.entry(&#34;python&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;condaDependencies&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;channels&#34;, &#34;conda-forge&#34;),
+ *                             Map.entry(&#34;dependencies&#34;,                             
+ *                                 &#34;python=3.6.2&#34;,
+ *                                 CreateServiceRequestEnvironmentImageRequest.builder()
+ *                                     .pip(                                    
+ *                                         &#34;azureml-core==1.0.69&#34;,
+ *                                         &#34;azureml-defaults==1.0.69&#34;,
+ *                                         &#34;azureml-telemetry==1.0.69&#34;,
+ *                                         &#34;azureml-train-restclients-hyperdrive==1.0.69&#34;,
+ *                                         &#34;azureml-train-core==1.0.69&#34;,
+ *                                         &#34;scikit-learn==0.20.3&#34;,
+ *                                         &#34;scipy==1.2.1&#34;,
+ *                                         &#34;numpy==1.16.2&#34;,
+ *                                         &#34;joblib==0.13.2&#34;)
+ *                                     .build()),
+ *                             Map.entry(&#34;name&#34;, &#34;azureml_ae1acbe6e1e6aabbad900b53c491a17c&#34;)
+ *                         )),
+ *                         Map.entry(&#34;interpreterPath&#34;, &#34;python&#34;),
+ *                         Map.entry(&#34;userManagedDependencies&#34;, false)
+ *                     )),
+ *                     Map.entry(&#34;spark&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;packages&#34;, ),
+ *                         Map.entry(&#34;precachePackages&#34;, true),
+ *                         Map.entry(&#34;repositories&#34;, )
+ *                     )),
+ *                     Map.entry(&#34;version&#34;, &#34;3&#34;)
+ *                 )),
+ *                 Map.entry(&#34;models&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;mimeType&#34;, &#34;application/x-python&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;sklearn_regression_model.pkl&#34;),
+ *                     Map.entry(&#34;url&#34;, &#34;aml://storage/azureml/sklearn_regression_model.pkl&#34;)
+ *                 ))
+ *             ))
+ *             .location(&#34;eastus2&#34;)
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .serviceName(&#34;service456&#34;)
+ *             .workspaceName(&#34;workspaces123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

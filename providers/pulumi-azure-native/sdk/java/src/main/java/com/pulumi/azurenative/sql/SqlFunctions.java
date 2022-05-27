@@ -136,6 +136,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(GetBackupShortTermRetentionPolicyArgs args) {
         return getBackupShortTermRetentionPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A short term retention policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(GetBackupShortTermRetentionPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getBackupShortTermRetentionPolicy", TypeShape.of(GetBackupShortTermRetentionPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -147,6 +152,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(GetDataMaskingPolicyArgs args) {
         return getDataMaskingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a database data masking policy.
+     * API Version: 2014-04-01.
+     * 
+     */
     public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(GetDataMaskingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDataMaskingPolicy", TypeShape.of(GetDataMaskingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -158,6 +168,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * A database resource.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -169,6 +184,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(GetDatabaseAdvisorArgs args) {
         return getDatabaseAdvisor(args, InvokeOptions.Empty);
     }
+    /**
+     * Database, Server or Elastic Pool Advisor.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(GetDatabaseAdvisorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseAdvisor", TypeShape.of(GetDatabaseAdvisorResult.class), args, Utilities.withVersion(options));
     }
@@ -180,6 +200,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(GetDatabaseBlobAuditingPolicyArgs args) {
         return getDatabaseBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A database blob auditing policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(GetDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseBlobAuditingPolicy", TypeShape.of(GetDatabaseBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -191,6 +216,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(GetDatabaseSecurityAlertPolicyArgs args) {
         return getDatabaseSecurityAlertPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A database security alert policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(GetDatabaseSecurityAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseSecurityAlertPolicy", TypeShape.of(GetDatabaseSecurityAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -202,6 +232,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(GetDatabaseVulnerabilityAssessmentArgs args) {
         return getDatabaseVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * A database vulnerability assessment.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(GetDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseVulnerabilityAssessment", TypeShape.of(GetDatabaseVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -213,6 +248,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
         return getDatabaseVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
+    /**
+     * A database vulnerability assessment rule baseline.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetDatabaseVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
@@ -224,6 +264,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(GetDisasterRecoveryConfigurationArgs args) {
         return getDisasterRecoveryConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a disaster recovery configuration.
+     * API Version: 2014-04-01.
+     * 
+     */
     public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(GetDisasterRecoveryConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDisasterRecoveryConfiguration", TypeShape.of(GetDisasterRecoveryConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -235,6 +280,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(GetDistributedAvailabilityGroupArgs args) {
         return getDistributedAvailabilityGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Distributed availability group between box and Sql Managed Instance.
+     * API Version: 2021-05-01-preview.
+     * 
+     */
     public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(GetDistributedAvailabilityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDistributedAvailabilityGroup", TypeShape.of(GetDistributedAvailabilityGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -246,6 +296,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args) {
         return getElasticPool(args, InvokeOptions.Empty);
     }
+    /**
+     * An elastic pool.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args, Utilities.withVersion(options));
     }
@@ -257,6 +312,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(GetEncryptionProtectorArgs args) {
         return getEncryptionProtector(args, InvokeOptions.Empty);
     }
+    /**
+     * The server encryption protector.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(GetEncryptionProtectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getEncryptionProtector", TypeShape.of(GetEncryptionProtectorResult.class), args, Utilities.withVersion(options));
     }
@@ -268,6 +328,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(GetExtendedDatabaseBlobAuditingPolicyArgs args) {
         return getExtendedDatabaseBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * An extended database blob auditing policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(GetExtendedDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getExtendedDatabaseBlobAuditingPolicy", TypeShape.of(GetExtendedDatabaseBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -279,6 +344,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(GetExtendedServerBlobAuditingPolicyArgs args) {
         return getExtendedServerBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * An extended server blob auditing policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(GetExtendedServerBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getExtendedServerBlobAuditingPolicy", TypeShape.of(GetExtendedServerBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -290,6 +360,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(GetFailoverGroupArgs args) {
         return getFailoverGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * A failover group.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(GetFailoverGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getFailoverGroup", TypeShape.of(GetFailoverGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -301,6 +376,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
         return getFirewallRule(args, InvokeOptions.Empty);
     }
+    /**
+     * A server firewall rule.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -312,6 +392,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(GetGeoBackupPolicyArgs args) {
         return getGeoBackupPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A database geo backup policy.
+     * API Version: 2014-04-01.
+     * 
+     */
     public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(GetGeoBackupPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getGeoBackupPolicy", TypeShape.of(GetGeoBackupPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -323,6 +408,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(GetIPv6FirewallRuleArgs args) {
         return getIPv6FirewallRule(args, InvokeOptions.Empty);
     }
+    /**
+     * An IPv6 server firewall rule.
+     * API Version: 2021-08-01-preview.
+     * 
+     */
     public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(GetIPv6FirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getIPv6FirewallRule", TypeShape.of(GetIPv6FirewallRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -334,6 +424,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(GetInstanceFailoverGroupArgs args) {
         return getInstanceFailoverGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * An instance failover group.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(GetInstanceFailoverGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstanceFailoverGroup", TypeShape.of(GetInstanceFailoverGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -345,6 +440,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args) {
         return getInstancePool(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL instance pool.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstancePool", TypeShape.of(GetInstancePoolResult.class), args, Utilities.withVersion(options));
     }
@@ -356,6 +456,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
+    /**
+     * A job.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
@@ -367,6 +472,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetJobAgentResult> getJobAgent(GetJobAgentArgs args) {
         return getJobAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL job agent.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetJobAgentResult> getJobAgent(GetJobAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobAgent", TypeShape.of(GetJobAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -378,6 +488,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetJobCredentialResult> getJobCredential(GetJobCredentialArgs args) {
         return getJobCredential(args, InvokeOptions.Empty);
     }
+    /**
+     * A stored credential that can be used by a job to connect to target databases.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetJobCredentialResult> getJobCredential(GetJobCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobCredential", TypeShape.of(GetJobCredentialResult.class), args, Utilities.withVersion(options));
     }
@@ -389,6 +504,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetJobStepResult> getJobStep(GetJobStepArgs args) {
         return getJobStep(args, InvokeOptions.Empty);
     }
+    /**
+     * A job step.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetJobStepResult> getJobStep(GetJobStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobStep", TypeShape.of(GetJobStepResult.class), args, Utilities.withVersion(options));
     }
@@ -400,6 +520,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(GetJobTargetGroupArgs args) {
         return getJobTargetGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * A group of job targets.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(GetJobTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobTargetGroup", TypeShape.of(GetJobTargetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -411,6 +536,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(GetLongTermRetentionPolicyArgs args) {
         return getLongTermRetentionPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A long term retention policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(GetLongTermRetentionPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getLongTermRetentionPolicy", TypeShape.of(GetLongTermRetentionPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -422,6 +552,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args) {
         return getManagedDatabase(args, InvokeOptions.Empty);
     }
+    /**
+     * A managed database resource.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args, Utilities.withVersion(options));
     }
@@ -433,6 +568,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(GetManagedDatabaseSensitivityLabelArgs args) {
         return getManagedDatabaseSensitivityLabel(args, InvokeOptions.Empty);
     }
+    /**
+     * A sensitivity label.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(GetManagedDatabaseSensitivityLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseSensitivityLabel", TypeShape.of(GetManagedDatabaseSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
@@ -444,6 +584,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(GetManagedDatabaseVulnerabilityAssessmentArgs args) {
         return getManagedDatabaseVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * A database vulnerability assessment.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(GetManagedDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseVulnerabilityAssessment", TypeShape.of(GetManagedDatabaseVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -455,6 +600,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
         return getManagedDatabaseVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
+    /**
+     * A database vulnerability assessment rule baseline.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
@@ -466,6 +616,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
         return getManagedInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL managed instance.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
@@ -477,6 +632,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(GetManagedInstanceAdministratorArgs args) {
         return getManagedInstanceAdministrator(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL managed instance administrator.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(GetManagedInstanceAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAdministrator", TypeShape.of(GetManagedInstanceAdministratorResult.class), args, Utilities.withVersion(options));
     }
@@ -488,6 +648,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(GetManagedInstanceAzureADOnlyAuthenticationArgs args) {
         return getManagedInstanceAzureADOnlyAuthentication(args, InvokeOptions.Empty);
     }
+    /**
+     * Azure Active Directory only authentication.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(GetManagedInstanceAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAzureADOnlyAuthentication", TypeShape.of(GetManagedInstanceAzureADOnlyAuthenticationResult.class), args, Utilities.withVersion(options));
     }
@@ -499,6 +664,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(GetManagedInstanceKeyArgs args) {
         return getManagedInstanceKey(args, InvokeOptions.Empty);
     }
+    /**
+     * A managed instance key.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(GetManagedInstanceKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceKey", TypeShape.of(GetManagedInstanceKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -510,6 +680,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(GetManagedInstancePrivateEndpointConnectionArgs args) {
         return getManagedInstancePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(GetManagedInstancePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstancePrivateEndpointConnection", TypeShape.of(GetManagedInstancePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -521,6 +696,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(GetManagedInstanceVulnerabilityAssessmentArgs args) {
         return getManagedInstanceVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * A managed instance vulnerability assessment.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(GetManagedInstanceVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceVulnerabilityAssessment", TypeShape.of(GetManagedInstanceVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -532,6 +712,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetManagedServerDnsAliasResult> getManagedServerDnsAlias(GetManagedServerDnsAliasArgs args) {
         return getManagedServerDnsAlias(args, InvokeOptions.Empty);
     }
+    /**
+     * A managed server DNS alias.
+     * API Version: 2021-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetManagedServerDnsAliasResult> getManagedServerDnsAlias(GetManagedServerDnsAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedServerDnsAlias", TypeShape.of(GetManagedServerDnsAliasResult.class), args, Utilities.withVersion(options));
     }
@@ -543,6 +728,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(GetOutboundFirewallRuleArgs args) {
         return getOutboundFirewallRule(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL DB Server Outbound Firewall Rule.
+     * API Version: 2021-02-01-preview.
+     * 
+     */
     public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(GetOutboundFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getOutboundFirewallRule", TypeShape.of(GetOutboundFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -554,6 +744,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -565,6 +760,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(GetSensitivityLabelArgs args) {
         return getSensitivityLabel(args, InvokeOptions.Empty);
     }
+    /**
+     * A sensitivity label.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(GetSensitivityLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSensitivityLabel", TypeShape.of(GetSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
@@ -576,6 +776,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL Database server.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
@@ -587,6 +792,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(GetServerAdvisorArgs args) {
         return getServerAdvisor(args, InvokeOptions.Empty);
     }
+    /**
+     * Database, Server or Elastic Pool Advisor.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(GetServerAdvisorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAdvisor", TypeShape.of(GetServerAdvisorResult.class), args, Utilities.withVersion(options));
     }
@@ -598,6 +808,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(GetServerAzureADAdministratorArgs args) {
         return getServerAzureADAdministrator(args, InvokeOptions.Empty);
     }
+    /**
+     * Azure Active Directory administrator.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(GetServerAzureADAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADAdministrator", TypeShape.of(GetServerAzureADAdministratorResult.class), args, Utilities.withVersion(options));
     }
@@ -609,6 +824,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(GetServerAzureADOnlyAuthenticationArgs args) {
         return getServerAzureADOnlyAuthentication(args, InvokeOptions.Empty);
     }
+    /**
+     * Azure Active Directory only authentication.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(GetServerAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADOnlyAuthentication", TypeShape.of(GetServerAzureADOnlyAuthenticationResult.class), args, Utilities.withVersion(options));
     }
@@ -620,6 +840,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(GetServerBlobAuditingPolicyArgs args) {
         return getServerBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A server blob auditing policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(GetServerBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerBlobAuditingPolicy", TypeShape.of(GetServerBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -631,6 +856,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(GetServerCommunicationLinkArgs args) {
         return getServerCommunicationLink(args, InvokeOptions.Empty);
     }
+    /**
+     * Server communication link.
+     * API Version: 2014-04-01.
+     * 
+     */
     public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(GetServerCommunicationLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerCommunicationLink", TypeShape.of(GetServerCommunicationLinkResult.class), args, Utilities.withVersion(options));
     }
@@ -642,6 +872,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(GetServerDnsAliasArgs args) {
         return getServerDnsAlias(args, InvokeOptions.Empty);
     }
+    /**
+     * A server DNS alias.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(GetServerDnsAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerDnsAlias", TypeShape.of(GetServerDnsAliasResult.class), args, Utilities.withVersion(options));
     }
@@ -653,6 +888,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args) {
         return getServerKey(args, InvokeOptions.Empty);
     }
+    /**
+     * A server key.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerKey", TypeShape.of(GetServerKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -664,6 +904,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args) {
         return getServerSecurityAlertPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * A server security alert policy.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerSecurityAlertPolicy", TypeShape.of(GetServerSecurityAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -675,6 +920,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(GetServerTrustCertificateArgs args) {
         return getServerTrustCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+     * API Version: 2021-05-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(GetServerTrustCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustCertificate", TypeShape.of(GetServerTrustCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -686,6 +936,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(GetServerTrustGroupArgs args) {
         return getServerTrustGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * A server trust group.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(GetServerTrustGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustGroup", TypeShape.of(GetServerTrustGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -697,6 +952,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(GetServerVulnerabilityAssessmentArgs args) {
         return getServerVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
+    /**
+     * A server vulnerability assessment.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(GetServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerVulnerabilityAssessment", TypeShape.of(GetServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
@@ -708,6 +968,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetSyncAgentResult> getSyncAgent(GetSyncAgentArgs args) {
         return getSyncAgent(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL Database sync agent.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSyncAgentResult> getSyncAgent(GetSyncAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncAgent", TypeShape.of(GetSyncAgentResult.class), args, Utilities.withVersion(options));
     }
@@ -719,6 +984,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args) {
         return getSyncGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL Database sync group.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -730,6 +1000,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetSyncMemberResult> getSyncMember(GetSyncMemberArgs args) {
         return getSyncMember(args, InvokeOptions.Empty);
     }
+    /**
+     * An Azure SQL Database sync member.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetSyncMemberResult> getSyncMember(GetSyncMemberArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncMember", TypeShape.of(GetSyncMemberResult.class), args, Utilities.withVersion(options));
     }
@@ -741,6 +1016,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(GetTransparentDataEncryptionArgs args) {
         return getTransparentDataEncryption(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents a database transparent data encryption configuration.
+     * API Version: 2014-04-01.
+     * 
+     */
     public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(GetTransparentDataEncryptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getTransparentDataEncryption", TypeShape.of(GetTransparentDataEncryptionResult.class), args, Utilities.withVersion(options));
     }
@@ -752,6 +1032,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
         return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
+    /**
+     * A virtual network rule.
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -763,6 +1048,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(GetWorkloadClassifierArgs args) {
         return getWorkloadClassifier(args, InvokeOptions.Empty);
     }
+    /**
+     * Workload classifier operations for a data warehouse
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(GetWorkloadClassifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getWorkloadClassifier", TypeShape.of(GetWorkloadClassifierResult.class), args, Utilities.withVersion(options));
     }
@@ -774,6 +1064,11 @@ public final class SqlFunctions {
     public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(GetWorkloadGroupArgs args) {
         return getWorkloadGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Workload group operations for a data warehouse
+     * API Version: 2020-11-01-preview.
+     * 
+     */
     public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(GetWorkloadGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getWorkloadGroup", TypeShape.of(GetWorkloadGroupResult.class), args, Utilities.withVersion(options));
     }

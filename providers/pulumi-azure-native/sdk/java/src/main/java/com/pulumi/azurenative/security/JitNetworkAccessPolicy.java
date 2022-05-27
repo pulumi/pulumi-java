@@ -21,6 +21,63 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Create JIT network access policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jitNetworkAccessPolicy = new JitNetworkAccessPolicy(&#34;jitNetworkAccessPolicy&#34;, JitNetworkAccessPolicyArgs.builder()        
+ *             .ascLocation(&#34;westeurope&#34;)
+ *             .jitNetworkAccessPolicyName(&#34;default&#34;)
+ *             .kind(&#34;Basic&#34;)
+ *             .requests(Map.ofEntries(
+ *                 Map.entry(&#34;requestor&#34;, &#34;barbara@contoso.com&#34;),
+ *                 Map.entry(&#34;startTimeUtc&#34;, &#34;2018-05-17T08:06:45.5691611Z&#34;),
+ *                 Map.entry(&#34;virtualMachines&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1&#34;),
+ *                     Map.entry(&#34;ports&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;allowedSourceAddressPrefix&#34;, &#34;192.127.0.2&#34;),
+ *                         Map.entry(&#34;endTimeUtc&#34;, &#34;2018-05-17T09:06:45.5691611Z&#34;),
+ *                         Map.entry(&#34;number&#34;, 3389),
+ *                         Map.entry(&#34;status&#34;, &#34;Initiated&#34;),
+ *                         Map.entry(&#34;statusReason&#34;, &#34;UserRequested&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myRg1&#34;)
+ *             .virtualMachines(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1&#34;),
+ *                 Map.entry(&#34;ports&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;allowedSourceAddressPrefix&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;maxRequestAccessDuration&#34;, &#34;PT3H&#34;),
+ *                         Map.entry(&#34;number&#34;, 22),
+ *                         Map.entry(&#34;protocol&#34;, &#34;*&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;allowedSourceAddressPrefix&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;maxRequestAccessDuration&#34;, &#34;PT3H&#34;),
+ *                         Map.entry(&#34;number&#34;, 3389),
+ *                         Map.entry(&#34;protocol&#34;, &#34;*&#34;)
+ *                     ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

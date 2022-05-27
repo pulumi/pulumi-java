@@ -29,6 +29,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
         return getInstanceProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::InstanceProfile
+     * 
+     */
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetOIDCProviderResult> getOIDCProvider(GetOIDCProviderArgs args) {
         return getOIDCProvider(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::OIDCProvider
+     * 
+     */
     public static CompletableFuture<GetOIDCProviderResult> getOIDCProvider(GetOIDCProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getOIDCProvider", TypeShape.of(GetOIDCProviderResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
         return getRole(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::Role
+     * 
+     */
     public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetSAMLProviderResult> getSAMLProvider(GetSAMLProviderArgs args) {
         return getSAMLProvider(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::SAMLProvider
+     * 
+     */
     public static CompletableFuture<GetSAMLProviderResult> getSAMLProvider(GetSAMLProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getSAMLProvider", TypeShape.of(GetSAMLProviderResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args) {
         return getServerCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::ServerCertificate
+     * 
+     */
     public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getServerCertificate", TypeShape.of(GetServerCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class IamFunctions {
     public static CompletableFuture<GetVirtualMFADeviceResult> getVirtualMFADevice(GetVirtualMFADeviceArgs args) {
         return getVirtualMFADevice(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::IAM::VirtualMFADevice
+     * 
+     */
     public static CompletableFuture<GetVirtualMFADeviceResult> getVirtualMFADevice(GetVirtualMFADeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getVirtualMFADevice", TypeShape.of(GetVirtualMFADeviceResult.class), args, Utilities.withVersion(options));
     }

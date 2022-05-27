@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### ApiManagementApproveOrRejectPrivateEndpointConnection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnectionByName = new PrivateEndpointConnectionByName(&#34;privateEndpointConnectionByName&#34;, PrivateEndpointConnectionByNameArgs.builder()        
+ *             .id(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/privateEndpointConnections/connectionName&#34;)
+ *             .privateEndpointConnectionName(&#34;privateEndpointConnectionName&#34;)
+ *             .properties(Map.of(&#34;privateLinkServiceConnectionState&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;The Private Endpoint Connection is approved.&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

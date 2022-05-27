@@ -19,6 +19,10 @@ public final class QldbFunctions {
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::QLDB::Stream.
+     * 
+     */
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:qldb:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }

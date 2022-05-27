@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Create protection container mapping.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationProtectionContainerMapping = new ReplicationProtectionContainerMapping(&#34;replicationProtectionContainerMapping&#34;, ReplicationProtectionContainerMappingArgs.builder()        
+ *             .fabricName(&#34;cloud1&#34;)
+ *             .mappingName(&#34;cloud1protectionprofile1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;policyId&#34;, &#34;/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1&#34;),
+ *                 Map.entry(&#34;providerSpecificInput&#34;, ),
+ *                 Map.entry(&#34;targetProtectionContainerId&#34;, &#34;Microsoft Azure&#34;)
+ *             ))
+ *             .protectionContainerName(&#34;cloud_6d224fc6-f326-5d35-96de-fbf51efb3179&#34;)
+ *             .resourceGroupName(&#34;resourceGroupPS1&#34;)
+ *             .resourceName(&#34;vault1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

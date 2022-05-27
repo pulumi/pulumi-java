@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### ConfigurationAssignments_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configurationAssignment = new ConfigurationAssignment(&#34;configurationAssignment&#34;, ConfigurationAssignmentArgs.builder()        
+ *             .configurationAssignmentName(&#34;workervmConfiguration&#34;)
+ *             .maintenanceConfigurationId(&#34;/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1&#34;)
+ *             .providerName(&#34;Microsoft.Compute&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .resourceName(&#34;smdtest1&#34;)
+ *             .resourceType(&#34;virtualMachineScaleSets&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

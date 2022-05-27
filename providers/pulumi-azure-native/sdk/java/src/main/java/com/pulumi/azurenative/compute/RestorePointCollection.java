@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a restore point collection.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var restorePointCollection = new RestorePointCollection(&#34;restorePointCollection&#34;, RestorePointCollectionArgs.builder()        
+ *             .location(&#34;norwayeast&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .restorePointCollectionName(&#34;myRpc&#34;)
+ *             .source(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM&#34;))
+ *             .tags(Map.of(&#34;myTag1&#34;, &#34;tagValue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

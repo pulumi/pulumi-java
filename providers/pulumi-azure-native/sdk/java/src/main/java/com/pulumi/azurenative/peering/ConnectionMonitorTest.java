@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01.
  * 
  * ## Example Usage
+ * ### Create or Update Connection Monitor Test
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectionMonitorTest = new ConnectionMonitorTest(&#34;connectionMonitorTest&#34;, ConnectionMonitorTestArgs.builder()        
+ *             .connectionMonitorTestName(&#34;connectionMonitorTestName&#34;)
+ *             .destination(&#34;Example Destination&#34;)
+ *             .destinationPort(443)
+ *             .peeringServiceName(&#34;peeringServiceName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .sourceAgent(&#34;Example Source Agent&#34;)
+ *             .testFrequencyInSec(30)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,11 @@ public final class DatabricksFunctions {
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * The private endpoint connection of a workspace
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databricks:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class DatabricksFunctions {
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Information about workspace.
+     * API Version: 2018-04-01.
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databricks:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class DatabricksFunctions {
     public static CompletableFuture<GetvNetPeeringResult> getvNetPeering(GetvNetPeeringArgs args) {
         return getvNetPeering(args, InvokeOptions.Empty);
     }
+    /**
+     * Peerings in a VirtualNetwork resource
+     * API Version: 2018-04-01.
+     * 
+     */
     public static CompletableFuture<GetvNetPeeringResult> getvNetPeering(GetvNetPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databricks:getvNetPeering", TypeShape.of(GetvNetPeeringResult.class), args, Utilities.withVersion(options));
     }

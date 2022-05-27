@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### Operations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var operationByProviderRegistration = new OperationByProviderRegistration(&#34;operationByProviderRegistration&#34;, OperationByProviderRegistrationArgs.builder()        
+ *             .contents(Map.ofEntries(
+ *                 Map.entry(&#34;display&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Read employees&#34;),
+ *                     Map.entry(&#34;operation&#34;, &#34;Gets/List employee resources&#34;),
+ *                     Map.entry(&#34;provider&#34;, &#34;Microsoft.Contoso&#34;),
+ *                     Map.entry(&#34;resource&#34;, &#34;Employees&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;Microsoft.Contoso/Employees/Read&#34;)
+ *             ))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

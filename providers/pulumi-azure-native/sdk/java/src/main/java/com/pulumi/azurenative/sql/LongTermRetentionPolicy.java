@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update the long term retention policy for the database.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var longTermRetentionPolicy = new LongTermRetentionPolicy(&#34;longTermRetentionPolicy&#34;, LongTermRetentionPolicyArgs.builder()        
+ *             .databaseName(&#34;testDatabase&#34;)
+ *             .monthlyRetention(&#34;P1Y&#34;)
+ *             .policyName(&#34;default&#34;)
+ *             .resourceGroupName(&#34;resourceGroup&#34;)
+ *             .serverName(&#34;testserver&#34;)
+ *             .weekOfYear(5)
+ *             .weeklyRetention(&#34;P1M&#34;)
+ *             .yearlyRetention(&#34;P5Y&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

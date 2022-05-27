@@ -20,6 +20,11 @@ public final class FeaturesFunctions {
     public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args) {
         return getSubscriptionFeatureRegistration(args, InvokeOptions.Empty);
     }
+    /**
+     * Subscription feature registration details
+     * API Version: 2021-07-01.
+     * 
+     */
     public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args, Utilities.withVersion(options));
     }

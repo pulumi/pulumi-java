@@ -1,5 +1,7 @@
 builds:
+
 - binary: pulumi-language-java
+  id: pulumi-language-java
   dir: pkg
   main: ./cmd/pulumi-language-java
   env:
@@ -13,6 +15,26 @@ builds:
     - amd64
     - arm64
   mod_timestamp: '{{ .CommitTimestamp }}'
+  ldflags:
+    - -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
+
+- binary: pulumi-java-gen
+  id: pulumi-java-gen
+  dir: pkg
+  main: ./cmd/pulumi-java-gen
+  env:
+  - CGO_ENABLED=0
+  - GO111MODULE=on
+  goos:
+    - darwin
+    - windows
+    - linux
+  goarch:
+    - amd64
+    - arm64
+  mod_timestamp: '{{ .CommitTimestamp }}'
+  ldflags:
+    - -X github.com/pulumi/pulumi-java/pkg/version.Version={{.Tag}}
 
 archives:
 - name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"

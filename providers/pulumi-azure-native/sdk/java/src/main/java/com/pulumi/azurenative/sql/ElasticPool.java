@@ -25,6 +25,97 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update elastic pool with all parameter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var elasticPool = new ElasticPool(&#34;elasticPool&#34;, ElasticPoolArgs.builder()        
+ *             .elasticPoolName(&#34;sqlcrudtest-8102&#34;)
+ *             .location(&#34;Japan East&#34;)
+ *             .perDatabaseSettings(Map.ofEntries(
+ *                 Map.entry(&#34;maxCapacity&#34;, 2),
+ *                 Map.entry(&#34;minCapacity&#34;, 0.25)
+ *             ))
+ *             .resourceGroupName(&#34;sqlcrudtest-2369&#34;)
+ *             .serverName(&#34;sqlcrudtest-8069&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen4_2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update elastic pool with maintenance configuration parameter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var elasticPool = new ElasticPool(&#34;elasticPool&#34;, ElasticPoolArgs.builder()        
+ *             .elasticPoolName(&#34;sqlcrudtest-8102&#34;)
+ *             .location(&#34;Japan East&#34;)
+ *             .maintenanceConfigurationId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_1&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-2369&#34;)
+ *             .serverName(&#34;sqlcrudtest-8069&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update elastic pool with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var elasticPool = new ElasticPool(&#34;elasticPool&#34;, ElasticPoolArgs.builder()        
+ *             .elasticPoolName(&#34;sqlcrudtest-8102&#34;)
+ *             .location(&#34;Japan East&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-2369&#34;)
+ *             .serverName(&#34;sqlcrudtest-8069&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

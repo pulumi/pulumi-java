@@ -44,19 +44,19 @@ repositories {
 
 def prerelease = version.contains("+")
 
-def defaultPulumiJavaSdkVersion = "0.1.0";
+def defaultPulumiJavaSdkVersion = "0.2.1";
 
 def pulumiJavaSdkVersion = prerelease
     ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)
     : defaultPulumiJavaSdkVersion;
 
-def defaultPulumiAwsSdkVersion = "5.3.0";
+def defaultPulumiAwsSdkVersion = "5.4.0";
 
 def pulumiAwsSdkVersion = prerelease
     ? (System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: defaultPulumiAwsSdkVersion)
     : defaultPulumiAwsSdkVersion;
 
-def defaultPulumiKubernetesSdkVersion = "3.18.3";
+def defaultPulumiKubernetesSdkVersion = "3.19.1";
 
 def pulumiKubernetesSdkVersion = prerelease
     ? (System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: defaultPulumiKubernetesSdkVersion)

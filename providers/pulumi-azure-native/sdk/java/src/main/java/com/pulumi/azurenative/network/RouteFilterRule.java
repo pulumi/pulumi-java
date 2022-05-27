@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### RouteFilterRuleCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routeFilterRule = new RouteFilterRule(&#34;routeFilterRule&#34;, RouteFilterRuleArgs.builder()        
+ *             .access(&#34;Allow&#34;)
+ *             .communities(            
+ *                 &#34;12076:5030&#34;,
+ *                 &#34;12076:5040&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeFilterName(&#34;filterName&#34;)
+ *             .routeFilterRuleType(&#34;Community&#34;)
+ *             .ruleName(&#34;ruleName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

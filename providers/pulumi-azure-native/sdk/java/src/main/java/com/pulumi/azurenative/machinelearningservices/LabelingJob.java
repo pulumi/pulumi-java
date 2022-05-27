@@ -21,6 +21,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update LabelingJob
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var labelingJob = new LabelingJob(&#34;labelingJob&#34;, LabelingJobArgs.builder()        
+ *             .labelingJobId(&#34;testLabelingJob&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasetConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;assetName&#34;, &#34;testdataasset&#34;),
+ *                     Map.entry(&#34;datasetVersion&#34;, &#34;1&#34;),
+ *                     Map.entry(&#34;enableIncrementalDatasetRefresh&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;jobInstructions&#34;, Map.of(&#34;uri&#34;, &#34;https://www.testjobInstructions.com/labeling1.txt&#34;)),
+ *                 Map.entry(&#34;labelCategories&#34;, Map.of(&#34;testCategory&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowMultiSelect&#34;, false),
+ *                     Map.entry(&#34;classes&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;testClass1&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;displayName&#34;, &#34;testClass1&#34;),
+ *                             Map.entry(&#34;subclasses&#34;, Map.of(&#34;testclass1-1&#34;, Map.of(&#34;displayName&#34;, &#34;testClass1-1&#34;)))
+ *                         )),
+ *                         Map.entry(&#34;testClass2&#34;, Map.of(&#34;displayName&#34;, &#34;testClass2&#34;))
+ *                     )),
+ *                     Map.entry(&#34;displayName&#34;, &#34;testCategory&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;labelingJobMediaProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;annotationType&#34;, &#34;BoundingBox&#34;),
+ *                     Map.entry(&#34;mediaType&#34;, &#34;Image&#34;)
+ *                 )),
+ *                 Map.entry(&#34;mlAssistConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;inferencingComputeBinding&#34;, Map.of(&#34;computeId&#34;, &#34;inferencingcompute&#34;)),
+ *                     Map.entry(&#34;mlAssistEnabled&#34;, true),
+ *                     Map.entry(&#34;modelNamePrefix&#34;, &#34;testmodel_1&#34;),
+ *                     Map.entry(&#34;prelabelAccuracyThreshold&#34;, 0.8),
+ *                     Map.entry(&#34;trainingComputeBinding&#34;, Map.of(&#34;computeId&#34;, &#34;trainingcompute&#34;))
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;workspace-1234&#34;)
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

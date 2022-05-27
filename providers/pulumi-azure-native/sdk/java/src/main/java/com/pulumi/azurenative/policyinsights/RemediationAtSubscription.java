@@ -22,6 +22,61 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-01.
  * 
  * ## Example Usage
+ * ### Create remediation at subscription scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var remediationAtSubscription = new RemediationAtSubscription(&#34;remediationAtSubscription&#34;, RemediationAtSubscriptionArgs.builder()        
+ *             .policyAssignmentId(&#34;/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5&#34;)
+ *             .remediationName(&#34;storageRemediation&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create remediation at subscription scope with all properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var remediationAtSubscription = new RemediationAtSubscription(&#34;remediationAtSubscription&#34;, RemediationAtSubscriptionArgs.builder()        
+ *             .filters(Map.of(&#34;locations&#34;,             
+ *                 &#34;eastus&#34;,
+ *                 &#34;westus&#34;))
+ *             .policyAssignmentId(&#34;/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5&#34;)
+ *             .policyDefinitionReferenceId(&#34;8c8fa9e4&#34;)
+ *             .remediationName(&#34;storageRemediation&#34;)
+ *             .resourceDiscoveryMode(&#34;ReEvaluateCompliance&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -35,6 +35,14 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetHttpMonitorResult> getHttpMonitor(GetHttpMonitorArgs args) {
         return getHttpMonitor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Http Monitor resource in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets the configuration for the specified monitor.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHttpMonitorResult> getHttpMonitor(GetHttpMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getHttpMonitor:getHttpMonitor", TypeShape.of(GetHttpMonitorResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,14 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetHttpMonitorsResult> getHttpMonitors(GetHttpMonitorsArgs args) {
         return getHttpMonitors(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Http Monitors in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets a list of HTTP monitors.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHttpMonitorsResult> getHttpMonitors(GetHttpMonitorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getHttpMonitors:getHttpMonitors", TypeShape.of(GetHttpMonitorsResult.class), args, Utilities.withVersion(options));
     }
@@ -65,6 +81,16 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetHttpProbeResultsResult> getHttpProbeResults(GetHttpProbeResultsArgs args) {
         return getHttpProbeResults(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Http Probe Results in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets the HTTP probe results for the specified probe or monitor, where
+     * the `probeConfigurationId` is the OCID of either a monitor or an
+     * on-demand probe.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetHttpProbeResultsResult> getHttpProbeResults(GetHttpProbeResultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getHttpProbeResults:getHttpProbeResults", TypeShape.of(GetHttpProbeResultsResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +105,14 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetPingMonitorResult> getPingMonitor(GetPingMonitorArgs args) {
         return getPingMonitor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides details about a specific Ping Monitor resource in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets the configuration for the specified ping monitor.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPingMonitorResult> getPingMonitor(GetPingMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getPingMonitor:getPingMonitor", TypeShape.of(GetPingMonitorResult.class), args, Utilities.withVersion(options));
     }
@@ -96,6 +130,17 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetPingMonitorsResult> getPingMonitors(GetPingMonitorsArgs args) {
         return getPingMonitors(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Ping Monitors in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets a list of configured ping monitors.
+     * 
+     * Results are paginated based on `page` and `limit`.  The `opc-next-page` header provides
+     * a URL for fetching the next page.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPingMonitorsResult> getPingMonitors(GetPingMonitorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getPingMonitors:getPingMonitors", TypeShape.of(GetPingMonitorsResult.class), args, Utilities.withVersion(options));
     }
@@ -116,6 +161,20 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetPingProbeResultsResult> getPingProbeResults(GetPingProbeResultsArgs args) {
         return getPingProbeResults(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Ping Probe Results in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Returns the results for the specified probe, where the `probeConfigurationId`
+     * is the OCID of either a monitor or an on-demand probe.
+     * 
+     * Results are paginated based on `page` and `limit`.  The `opc-next-page` header provides
+     * a URL for fetching the next page.  Use `sortOrder` to set the order of the
+     * results.  If `sortOrder` is unspecified, results are sorted in ascending order by
+     * `startTime`.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPingProbeResultsResult> getPingProbeResults(GetPingProbeResultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getPingProbeResults:getPingProbeResults", TypeShape.of(GetPingProbeResultsResult.class), args, Utilities.withVersion(options));
     }
@@ -130,9 +189,25 @@ public final class HealthChecksFunctions {
     public static CompletableFuture<GetVantagePointsResult> getVantagePoints() {
         return getVantagePoints(GetVantagePointsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vantage Points in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets information about all vantage points available to the user.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args) {
         return getVantagePoints(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source provides the list of Vantage Points in Oracle Cloud Infrastructure Health Checks service.
+     * 
+     * Gets information about all vantage points available to the user.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetVantagePointsResult> getVantagePoints(GetVantagePointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:HealthChecks/getVantagePoints:getVantagePoints", TypeShape.of(GetVantagePointsResult.class), args, Utilities.withVersion(options));
     }

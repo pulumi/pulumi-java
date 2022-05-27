@@ -96,6 +96,75 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args) {
         return getAppEngineService(args, InvokeOptions.Empty);
     }
+    /**
+     * A Monitoring Service is the root resource under which operational aspects of a
+     * generic service are accessible. A service is some discrete, autonomous, and
+     * network-accessible unit, designed to solve an individual concern
+     * 
+     * An App Engine monitoring service is automatically created by GCP to monitor
+     * App Engine services.
+     * 
+     * To get more information about Service, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+     * * How-to Guides
+     *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Monitoring App Engine Service
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+     *             .location(&#34;US&#34;)
+     *             .build());
+     * 
+     *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+     *             .bucket(bucket.getName())
+     *             .source(new FileAsset(&#34;./test-fixtures/appengine/hello-world.zip&#34;))
+     *             .build());
+     * 
+     *         var myapp = new StandardAppVersion(&#34;myapp&#34;, StandardAppVersionArgs.builder()        
+     *             .versionId(&#34;v1&#34;)
+     *             .service(&#34;myapp&#34;)
+     *             .runtime(&#34;nodejs10&#34;)
+     *             .entrypoint(StandardAppVersionEntrypoint.builder()
+     *                 .shell(&#34;node ./app.js&#34;)
+     *                 .build())
+     *             .deployment(StandardAppVersionDeployment.builder()
+     *                 .zip(StandardAppVersionDeploymentZip.builder()
+     *                     .sourceUrl(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+     *                         var bucketName = values.t1;
+     *                         var objectName = values.t2;
+     *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, bucketName,objectName);
+     *                     }))
+     *                     .build())
+     *                 .build())
+     *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+     *             .deleteServiceOnDestroy(false)
+     *             .build());
+     * 
+     *         final var srv = MonitoringFunctions.getAppEngineService(GetAppEngineServiceArgs.builder()
+     *             .moduleId(myapp.getService())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getAppEngineService:getAppEngineService", TypeShape.of(GetAppEngineServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -145,6 +214,49 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args) {
         return getClusterIstioService(args, InvokeOptions.Empty);
     }
+    /**
+     * A Monitoring Service is the root resource under which operational aspects of a
+     * generic service are accessible. A service is some discrete, autonomous, and
+     * network-accessible unit, designed to solve an individual concern
+     * 
+     * An Cluster Istio monitoring service is automatically created by GCP to monitor
+     * Cluster Istio services.
+     * 
+     * To get more information about Service, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+     * * How-to Guides
+     *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Monitoring Cluster Istio Service
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(MonitoringFunctions.getClusterIstioService(GetClusterIstioServiceArgs.builder()
+     *             .clusterName(&#34;west&#34;)
+     *             .location(&#34;us-west2-a&#34;)
+     *             .serviceName(&#34;istio-policy&#34;)
+     *             .serviceNamespace(&#34;istio-system&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getClusterIstioService:getClusterIstioService", TypeShape.of(GetClusterIstioServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -193,6 +305,48 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args) {
         return getIstioCanonicalService(args, InvokeOptions.Empty);
     }
+    /**
+     * A Monitoring Service is the root resource under which operational aspects of a
+     * generic service are accessible. A service is some discrete, autonomous, and
+     * network-accessible unit, designed to solve an individual concern
+     * 
+     * A monitoring Istio Canonical Service is automatically created by GCP to monitor
+     * Istio Canonical Services.
+     * 
+     * To get more information about Service, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+     * * How-to Guides
+     *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Monitoring Istio Canonical Service
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(MonitoringFunctions.getIstioCanonicalService(GetIstioCanonicalServiceArgs.builder()
+     *             .canonicalService(&#34;prometheus&#34;)
+     *             .canonicalServiceNamespace(&#34;istio-system&#34;)
+     *             .meshUid(&#34;proj-573164786102&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getIstioCanonicalService:getIstioCanonicalService", TypeShape.of(GetIstioCanonicalServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -241,6 +395,48 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args) {
         return getMeshIstioService(args, InvokeOptions.Empty);
     }
+    /**
+     * A Monitoring Service is the root resource under which operational aspects of a
+     * generic service are accessible. A service is some discrete, autonomous, and
+     * network-accessible unit, designed to solve an individual concern
+     * 
+     * An Mesh Istio monitoring service is automatically created by GCP to monitor
+     * Mesh Istio services.
+     * 
+     * To get more information about Service, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
+     * * How-to Guides
+     *     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Monitoring Mesh Istio Service
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(MonitoringFunctions.getMeshIstioService(GetMeshIstioServiceArgs.builder()
+     *             .meshUid(&#34;proj-573164786102&#34;)
+     *             .serviceName(&#34;prometheus&#34;)
+     *             .serviceNamespace(&#34;istio-system&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getMeshIstioService:getMeshIstioService", TypeShape.of(GetMeshIstioServiceResult.class), args, Utilities.withVersion(options));
     }
@@ -303,9 +499,121 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel() {
         return getNotificationChannel(GetNotificationChannelArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * A NotificationChannel is a medium through which an alert is delivered
+     * when a policy violation is detected. Examples of channels include email, SMS,
+     * and third-party messaging applications. Fields containing sensitive information
+     * like authentication tokens or contact info are only partially populated on retrieval.
+     * 
+     * To get more information about NotificationChannel, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels)
+     * * How-to Guides
+     *     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Notification Channel Basic
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var basic = Output.of(MonitoringFunctions.getNotificationChannel(GetNotificationChannelArgs.builder()
+     *             .displayName(&#34;Test Notification Channel&#34;)
+     *             .build()));
+     * 
+     *         var alertPolicy = new AlertPolicy(&#34;alertPolicy&#34;, AlertPolicyArgs.builder()        
+     *             .displayName(&#34;My Alert Policy&#34;)
+     *             .notificationChannels(basic.apply(getNotificationChannelResult -&gt; getNotificationChannelResult.getName()))
+     *             .combiner(&#34;OR&#34;)
+     *             .conditions(AlertPolicyCondition.builder()
+     *                 .displayName(&#34;test condition&#34;)
+     *                 .conditionThreshold(AlertPolicyConditionConditionThreshold.builder()
+     *                     .filter(&#34;metric.type=\&#34;compute.googleapis.com/instance/disk/write_bytes_count\&#34; AND resource.type=\&#34;gce_instance\&#34;&#34;)
+     *                     .duration(&#34;60s&#34;)
+     *                     .comparison(&#34;COMPARISON_GT&#34;)
+     *                     .aggregations(AlertPolicyConditionConditionThresholdAggregation.builder()
+     *                         .alignmentPeriod(&#34;60s&#34;)
+     *                         .perSeriesAligner(&#34;ALIGN_RATE&#34;)
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
         return getNotificationChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * A NotificationChannel is a medium through which an alert is delivered
+     * when a policy violation is detected. Examples of channels include email, SMS,
+     * and third-party messaging applications. Fields containing sensitive information
+     * like authentication tokens or contact info are only partially populated on retrieval.
+     * 
+     * To get more information about NotificationChannel, see:
+     * 
+     * * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels)
+     * * How-to Guides
+     *     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
+     *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+     * 
+     * ## Example Usage
+     * ### Notification Channel Basic
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var basic = Output.of(MonitoringFunctions.getNotificationChannel(GetNotificationChannelArgs.builder()
+     *             .displayName(&#34;Test Notification Channel&#34;)
+     *             .build()));
+     * 
+     *         var alertPolicy = new AlertPolicy(&#34;alertPolicy&#34;, AlertPolicyArgs.builder()        
+     *             .displayName(&#34;My Alert Policy&#34;)
+     *             .notificationChannels(basic.apply(getNotificationChannelResult -&gt; getNotificationChannelResult.getName()))
+     *             .combiner(&#34;OR&#34;)
+     *             .conditions(AlertPolicyCondition.builder()
+     *                 .displayName(&#34;test condition&#34;)
+     *                 .conditionThreshold(AlertPolicyConditionConditionThreshold.builder()
+     *                     .filter(&#34;metric.type=\&#34;compute.googleapis.com/instance/disk/write_bytes_count\&#34; AND resource.type=\&#34;gce_instance\&#34;&#34;)
+     *                     .duration(&#34;60s&#34;)
+     *                     .comparison(&#34;COMPARISON_GT&#34;)
+     *                     .aggregations(AlertPolicyConditionConditionThresholdAggregation.builder()
+     *                         .alignmentPeriod(&#34;60s&#34;)
+     *                         .perSeriesAligner(&#34;ALIGN_RATE&#34;)
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getNotificationChannel:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
@@ -343,6 +651,37 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
         return getSecretVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var basic = Output.of(SecretmanagerFunctions.getSecretVersion(GetSecretVersionArgs.builder()
+     *             .secret(&#34;my-secret&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * @deprecated
+     * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
+     * 
+     */
+    @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
     public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -376,9 +715,63 @@ public final class MonitoringFunctions {
     public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs() {
         return getUptimeCheckIPs(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Returns the list of IP addresses that checkers run from. For more information see
+     * the [official documentation](https://cloud.google.com/monitoring/uptime-checks#get-ips).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ips = Output.of(MonitoringFunctions.getUptimeCheckIPs());
+     * 
+     *         ctx.export(&#34;ipList&#34;, ips.apply(getUptimeCheckIPsResult -&gt; getUptimeCheckIPsResult.getUptimeCheckIps()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args) {
         return getUptimeCheckIPs(args, InvokeOptions.Empty);
     }
+    /**
+     * Returns the list of IP addresses that checkers run from. For more information see
+     * the [official documentation](https://cloud.google.com/monitoring/uptime-checks#get-ips).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ips = Output.of(MonitoringFunctions.getUptimeCheckIPs());
+     * 
+     *         ctx.export(&#34;ipList&#34;, ips.apply(getUptimeCheckIPsResult -&gt; getUptimeCheckIPsResult.getUptimeCheckIps()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getUptimeCheckIPs:getUptimeCheckIPs", TypeShape.of(GetUptimeCheckIPsResult.class), args, Utilities.withVersion(options));
     }

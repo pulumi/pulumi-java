@@ -24,6 +24,110 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### Create export job
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobName(&#34;myExportJob&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backupDriveManifest&#34;, true),
+ *                 Map.entry(&#34;diagnosticsPath&#34;, &#34;waimportexport&#34;),
+ *                 Map.entry(&#34;export&#34;, Map.of(&#34;blobPathPrefix&#34;, &#34;/&#34;)),
+ *                 Map.entry(&#34;jobType&#34;, &#34;Export&#34;),
+ *                 Map.entry(&#34;logLevel&#34;, &#34;Verbose&#34;),
+ *                 Map.entry(&#34;returnAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;city&#34;, &#34;Redmond&#34;),
+ *                     Map.entry(&#34;countryOrRegion&#34;, &#34;USA&#34;),
+ *                     Map.entry(&#34;email&#34;, &#34;Test@contoso.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;4250000000&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;98007&#34;),
+ *                     Map.entry(&#34;recipientName&#34;, &#34;Test&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;wa&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;Street1&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;street2&#34;)
+ *                 )),
+ *                 Map.entry(&#34;returnShipping&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;carrierAccountNumber&#34;, &#34;989ffff&#34;),
+ *                     Map.entry(&#34;carrierName&#34;, &#34;FedEx&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create import job
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobName(&#34;myJob&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backupDriveManifest&#34;, true),
+ *                 Map.entry(&#34;diagnosticsPath&#34;, &#34;waimportexport&#34;),
+ *                 Map.entry(&#34;driveList&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;bitLockerKey&#34;, &#34;238810-662376-448998-450120-652806-203390-606320-483076&#34;),
+ *                     Map.entry(&#34;driveHeaderHash&#34;, &#34;0:1048576:FB6B6ED500D49DA6E0D723C98D42C657F2881CC13357C28DCECA6A524F1292501571A321238540E621AB5BD9C9A32637615919A75593E6CB5C1515DAE341CABF;135266304:143360:C957A189AFC38C4E80731252301EB91427CE55E61448FA3C73C6FDDE70ABBC197947EC8D0249A2C639BB10B95957D5820A4BE8DFBBF76FFFA688AE5CE0D42EC3&#34;),
+ *                     Map.entry(&#34;driveId&#34;, &#34;9CA995BB&#34;),
+ *                     Map.entry(&#34;manifestFile&#34;, &#34;\\8a0c23f7-14b7-470a-9633-fcd46590a1bc.manifest&#34;),
+ *                     Map.entry(&#34;manifestHash&#34;, &#34;4228EC5D8E048CB9B515338C789314BE8D0B2FDBC7C7A0308E1C826242CDE74E&#34;)
+ *                 )),
+ *                 Map.entry(&#34;jobType&#34;, &#34;Import&#34;),
+ *                 Map.entry(&#34;logLevel&#34;, &#34;Verbose&#34;),
+ *                 Map.entry(&#34;returnAddress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;city&#34;, &#34;Redmond&#34;),
+ *                     Map.entry(&#34;countryOrRegion&#34;, &#34;USA&#34;),
+ *                     Map.entry(&#34;email&#34;, &#34;Test@contoso.com&#34;),
+ *                     Map.entry(&#34;phone&#34;, &#34;4250000000&#34;),
+ *                     Map.entry(&#34;postalCode&#34;, &#34;98007&#34;),
+ *                     Map.entry(&#34;recipientName&#34;, &#34;Test&#34;),
+ *                     Map.entry(&#34;stateOrProvince&#34;, &#34;wa&#34;),
+ *                     Map.entry(&#34;streetAddress1&#34;, &#34;Street1&#34;),
+ *                     Map.entry(&#34;streetAddress2&#34;, &#34;street2&#34;)
+ *                 )),
+ *                 Map.entry(&#34;returnShipping&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;carrierAccountNumber&#34;, &#34;989ffff&#34;),
+ *                     Map.entry(&#34;carrierName&#34;, &#34;FedEx&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

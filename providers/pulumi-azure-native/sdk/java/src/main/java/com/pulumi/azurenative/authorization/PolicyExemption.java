@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a policy exemption
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyExemption = new PolicyExemption(&#34;policyExemption&#34;, PolicyExemptionArgs.builder()        
+ *             .description(&#34;Exempt demo cluster from limit sku&#34;)
+ *             .displayName(&#34;Exempt demo cluster&#34;)
+ *             .exemptionCategory(&#34;Waiver&#34;)
+ *             .metadata(Map.of(&#34;reason&#34;, &#34;Temporary exemption for a expensive VM demo&#34;))
+ *             .policyAssignmentId(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement&#34;)
+ *             .policyDefinitionReferenceIds(&#34;Limit_Skus&#34;)
+ *             .policyExemptionName(&#34;DemoExpensiveVM&#34;)
+ *             .scope(&#34;subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

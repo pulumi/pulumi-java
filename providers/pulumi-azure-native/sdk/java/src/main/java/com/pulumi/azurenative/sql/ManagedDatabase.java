@@ -21,13 +21,191 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Creates a new managed database by restoring from an external backup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .autoCompleteRestore(true)
+ *             .collation(&#34;SQL_Latin1_General_CP1_CI_AS&#34;)
+ *             .createMode(&#34;RestoreExternalBackup&#34;)
+ *             .databaseName(&#34;managedDatabase&#34;)
+ *             .lastBackupName(&#34;last_backup_name&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .storageContainerSasToken(&#34;sv=2015-12-11&amp;sr=c&amp;sp=rl&amp;sig=1234&#34;)
+ *             .storageContainerUri(&#34;https://myaccountname.blob.core.windows.net/backups&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a new managed database from restoring a geo-replicated backup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .createMode(&#34;Recovery&#34;)
+ *             .databaseName(&#34;testdb_recovered&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;server1&#34;)
+ *             .recoverableDatabaseId(&#34;/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a new managed database from restoring a long term retention backup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .collation(&#34;SQL_Latin1_General_CP1_CI_AS&#34;)
+ *             .createMode(&#34;RestoreExternalBackup&#34;)
+ *             .databaseName(&#34;managedDatabase&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .storageContainerSasToken(&#34;sv=2015-12-11&amp;sr=c&amp;sp=rl&amp;sig=1234&#34;)
+ *             .storageContainerUri(&#34;https://myaccountname.blob.core.windows.net/backups&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a new managed database using point in time restore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .createMode(&#34;PointInTimeRestore&#34;)
+ *             .databaseName(&#34;managedDatabase&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .restorePointInTime(&#34;2017-07-14T05:35:31.503Z&#34;)
+ *             .sourceDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a new managed database with maximal properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .databaseName(&#34;managedDatabase&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .tags(Map.of(&#34;tagKey1&#34;, &#34;TagValue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a new managed database with minimal properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabase = new ManagedDatabase(&#34;managedDatabase&#34;, ManagedDatabaseArgs.builder()        
+ *             .databaseName(&#34;managedDatabase&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:sql:ManagedDatabase testdb2 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb2 
+ * $ pulumi import azure-native:sql:ManagedDatabase testdb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb1 
  * ```
  * 
  */

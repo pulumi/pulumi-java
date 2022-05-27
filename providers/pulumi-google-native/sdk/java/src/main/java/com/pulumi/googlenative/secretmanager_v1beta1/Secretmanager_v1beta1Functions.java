@@ -21,6 +21,10 @@ public final class Secretmanager_v1beta1Functions {
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
         return getSecret(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets metadata for a given Secret.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:secretmanager/v1beta1:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Secretmanager_v1beta1Functions {
     public static CompletableFuture<GetSecretIamPolicyResult> getSecretIamPolicy(GetSecretIamPolicyArgs args) {
         return getSecretIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSecretIamPolicyResult> getSecretIamPolicy(GetSecretIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:secretmanager/v1beta1:getSecretIamPolicy", TypeShape.of(GetSecretIamPolicyResult.class), args, Utilities.withVersion(options));
     }

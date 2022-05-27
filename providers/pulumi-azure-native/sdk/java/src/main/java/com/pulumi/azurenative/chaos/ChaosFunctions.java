@@ -24,6 +24,11 @@ public final class ChaosFunctions {
     public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args) {
         return getCapability(args, InvokeOptions.Empty);
     }
+    /**
+     * Model that represents a Capability resource.
+     * API Version: 2021-09-15-preview.
+     * 
+     */
     public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class ChaosFunctions {
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
         return getExperiment(args, InvokeOptions.Empty);
     }
+    /**
+     * Model that represents a Experiment resource.
+     * API Version: 2021-09-15-preview.
+     * 
+     */
     public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class ChaosFunctions {
     public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args) {
         return getTarget(args, InvokeOptions.Empty);
     }
+    /**
+     * Model that represents a Target resource.
+     * API Version: 2021-09-15-preview.
+     * 
+     */
     public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getTarget", TypeShape.of(GetTargetResult.class), args, Utilities.withVersion(options));
     }

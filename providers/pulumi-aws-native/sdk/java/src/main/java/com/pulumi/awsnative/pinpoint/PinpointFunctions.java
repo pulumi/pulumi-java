@@ -19,6 +19,10 @@ public final class PinpointFunctions {
     public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args) {
         return getInAppTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Pinpoint::InAppTemplate
+     * 
+     */
     public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args, Utilities.withVersion(options));
     }

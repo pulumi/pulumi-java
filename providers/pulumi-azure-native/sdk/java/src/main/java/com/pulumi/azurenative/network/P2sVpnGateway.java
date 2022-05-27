@@ -26,6 +26,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### P2SVpnGatewayPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var p2sVpnGateway = new P2sVpnGateway(&#34;p2sVpnGateway&#34;, P2sVpnGatewayArgs.builder()        
+ *             .customDnsServers(            
+ *                 &#34;1.1.1.1&#34;,
+ *                 &#34;2.2.2.2&#34;)
+ *             .gatewayName(&#34;p2sVpnGateway1&#34;)
+ *             .isRoutingPreferenceInternet(false)
+ *             .location(&#34;West US&#34;)
+ *             .p2SConnectionConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;P2SConnectionConfig1&#34;),
+ *                 Map.entry(&#34;routingConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;associatedRouteTable&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1&#34;)),
+ *                     Map.entry(&#34;propagatedRouteTables&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;ids&#34;,                         
+ *                             Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1&#34;),
+ *                             Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2&#34;),
+ *                             Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3&#34;)),
+ *                         Map.entry(&#34;labels&#34;,                         
+ *                             &#34;label1&#34;,
+ *                             &#34;label2&#34;)
+ *                     )),
+ *                     Map.entry(&#34;vnetRoutes&#34;, Map.of(&#34;staticRoutes&#34;, ))
+ *                 )),
+ *                 Map.entry(&#34;vpnClientAddressPool&#34;, Map.of(&#34;addressPrefixes&#34;, &#34;101.3.0.0/16&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1&#34;))
+ *             .vpnGatewayScaleUnit(1)
+ *             .vpnServerConfiguration(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,51 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateProductPolicy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var productPolicy = new ProductPolicy(&#34;productPolicy&#34;, ProductPolicyArgs.builder()        
+ *             .format(&#34;xml&#34;)
+ *             .policyId(&#34;policy&#34;)
+ *             .productId(&#34;5702e97e5157a50f48dce801&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;&#34;&#34;
+ * &lt;policies&gt;
+ *   &lt;inbound&gt;
+ *     &lt;rate-limit calls=&#34;{{call-count}}&#34; renewal-period=&#34;15&#34;&gt;&lt;/rate-limit&gt;
+ *     &lt;log-to-eventhub logger-id=&#34;16&#34;&gt;
+ *                       {@literal @}( string.Join(&#34;,&#34;, DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+ *                   &lt;/log-to-eventhub&gt;
+ *     &lt;quota-by-key calls=&#34;40&#34; counter-key=&#34;cc&#34; renewal-period=&#34;3600&#34; increment-count=&#34;{@literal @}(context.Request.Method == &amp;quot;POST&amp;quot; ? 1:2)&#34; /&gt;
+ *     &lt;base /&gt;
+ *   &lt;/inbound&gt;
+ *   &lt;backend&gt;
+ *     &lt;base /&gt;
+ *   &lt;/backend&gt;
+ *   &lt;outbound&gt;
+ *     &lt;base /&gt;
+ *   &lt;/outbound&gt;
+ * &lt;/policies&gt;            &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

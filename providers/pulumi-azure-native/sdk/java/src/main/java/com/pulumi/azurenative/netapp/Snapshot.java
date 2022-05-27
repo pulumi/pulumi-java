@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Snapshots_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .poolName(&#34;pool1&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .snapshotName(&#34;snapshot1&#34;)
+ *             .volumeName(&#34;volume1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

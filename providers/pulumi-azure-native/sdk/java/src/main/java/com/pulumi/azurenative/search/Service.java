@@ -27,6 +27,135 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### SearchCreateOrUpdateService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .hostingMode(&#34;default&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .partitionCount(1)
+ *             .replicaCount(3)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .searchServiceName(&#34;mysearchservice&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;standard&#34;))
+ *             .tags(Map.of(&#34;app-name&#34;, &#34;My e-commerce app&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### SearchCreateOrUpdateServiceToAllowAccessFromPrivateEndpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .hostingMode(&#34;default&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .partitionCount(1)
+ *             .publicNetworkAccess(&#34;disabled&#34;)
+ *             .replicaCount(3)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .searchServiceName(&#34;mysearchservice&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;standard&#34;))
+ *             .tags(Map.of(&#34;app-name&#34;, &#34;My e-commerce app&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### SearchCreateOrUpdateServiceToAllowAccessFromPublicCustomIPs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .hostingMode(&#34;default&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .networkRuleSet(Map.of(&#34;ipRules&#34;,             
+ *                 Map.of(&#34;value&#34;, &#34;123.4.5.6&#34;),
+ *                 Map.of(&#34;value&#34;, &#34;123.4.6.0/18&#34;)))
+ *             .partitionCount(1)
+ *             .replicaCount(1)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .searchServiceName(&#34;mysearchservice&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;standard&#34;))
+ *             .tags(Map.of(&#34;app-name&#34;, &#34;My e-commerce app&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### SearchCreateOrUpdateServiceWithIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .hostingMode(&#34;default&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .partitionCount(1)
+ *             .replicaCount(3)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .searchServiceName(&#34;mysearchservice&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;standard&#34;))
+ *             .tags(Map.of(&#34;app-name&#34;, &#34;My e-commerce app&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -1,10 +1,19 @@
 package generated_program;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.AwsFunctions;
+import com.pulumi.aws.inputs.GetAvailabilityZonesArgs;
+import com.pulumi.aws.ec2.Subnet;
+import com.pulumi.aws.ec2.SubnetArgs;
 import com.pulumi.codegen.internal.KeyedValue;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
@@ -14,7 +23,7 @@ public class App {
     public static void stack(Context ctx) {
         final var zones = Output.of(AwsFunctions.getAvailabilityZones());
 
-        final var vpcSubnet = zones.apply(getAvailabilityZonesResult -> {
+        final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
             for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
                 var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                

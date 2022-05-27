@@ -21,6 +21,10 @@ public final class Appengine_v1alphaFunctions {
     public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args) {
         return getAuthorizedCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified SSL certificate.
+     * 
+     */
     public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Appengine_v1alphaFunctions {
     public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args) {
         return getDomainMapping(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the specified domain mapping.
+     * 
+     */
     public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
     }

@@ -24,6 +24,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### ImportPipelineCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var importPipeline = new ImportPipeline(&#34;importPipeline&#34;, ImportPipelineArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2&#34;, ))
+ *             ))
+ *             .importPipelineName(&#34;myImportPipeline&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .options(            
+ *                 &#34;OverwriteTags&#34;,
+ *                 &#34;DeleteSourceBlobOnSuccess&#34;,
+ *                 &#34;ContinueOnErrors&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultUri&#34;, &#34;https://myvault.vault.azure.net/secrets/acrimportsas&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureStorageBlobContainer&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://accountname.blob.core.windows.net/containername&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

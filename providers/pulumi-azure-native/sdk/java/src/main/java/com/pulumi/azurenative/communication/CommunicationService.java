@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-20.
  * 
  * ## Example Usage
+ * ### Create or update resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var communicationService = new CommunicationService(&#34;communicationService&#34;, CommunicationServiceArgs.builder()        
+ *             .communicationServiceName(&#34;MyCommunicationResource&#34;)
+ *             .dataLocation(&#34;United States&#34;)
+ *             .location(&#34;Global&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

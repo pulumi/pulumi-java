@@ -24,6 +24,76 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-18.
  * 
  * ## Example Usage
+ * ### Create Account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;testCreate1&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .kind(&#34;Emotion&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keySource&#34;, &#34;Microsoft.KeyVault&#34;),
+ *                     Map.entry(&#34;keyVaultProperties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;keyName&#34;, &#34;KeyName&#34;),
+ *                         Map.entry(&#34;keyVaultUri&#34;, &#34;https://pltfrmscrts-use-pc-dev.vault.azure.net/&#34;),
+ *                         Map.entry(&#34;keyVersion&#34;, &#34;891CF236-D241-4738-9462-D506AF493DFA&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;userOwnedStorage&#34;, Map.of(&#34;resourceId&#34;, &#34;/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;S0&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Account Min
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;testCreate1&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .kind(&#34;CognitiveServices&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;S0&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

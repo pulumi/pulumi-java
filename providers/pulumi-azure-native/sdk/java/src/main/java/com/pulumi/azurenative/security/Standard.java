@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01-preview.
  * 
  * ## Example Usage
+ * ### Create a security standard on a specified scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var standard = new Standard(&#34;standard&#34;, StandardArgs.builder()        
+ *             .category(&#34;SecurityCenter&#34;)
+ *             .components(            
+ *                 Map.of(&#34;key&#34;, &#34;1195afff-c881-495e-9bc5-1486211ae03f&#34;),
+ *                 Map.of(&#34;key&#34;, &#34;dbd0cb49-b563-45e7-9724-889e799fa648&#34;))
+ *             .description(&#34;description of Azure Test Security Standard 1&#34;)
+ *             .displayName(&#34;Azure Test Security Standard 1&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .standardId(&#34;8bb8be0a-6010-4789-812f-e4d661c4ed0e&#34;)
+ *             .supportedClouds(&#34;GCP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

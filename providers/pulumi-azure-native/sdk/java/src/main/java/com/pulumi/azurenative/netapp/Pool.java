@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Pools_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .poolName(&#34;pool1&#34;)
+ *             .qosType(&#34;Auto&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .serviceLevel(&#34;Premium&#34;)
+ *             .size(4398046511104)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
         return getBackup(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
@@ -39,6 +43,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets information about a domain.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -49,6 +57,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetDomainBackupIamPolicyResult> getDomainBackupIamPolicy(GetDomainBackupIamPolicyArgs args) {
         return getDomainBackupIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDomainBackupIamPolicyResult> getDomainBackupIamPolicy(GetDomainBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getDomainBackupIamPolicy", TypeShape.of(GetDomainBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -59,6 +71,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetDomainIamPolicyResult> getDomainIamPolicy(GetDomainIamPolicyArgs args) {
         return getDomainIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDomainIamPolicyResult> getDomainIamPolicy(GetDomainIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getDomainIamPolicy", TypeShape.of(GetDomainIamPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -69,6 +85,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args) {
         return getPeering(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Peering.
+     * 
+     */
     public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getPeering", TypeShape.of(GetPeeringResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +99,10 @@ public final class Managedidentities_v1beta1Functions {
     public static CompletableFuture<GetPeeringIamPolicyResult> getPeeringIamPolicy(GetPeeringIamPolicyArgs args) {
         return getPeeringIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetPeeringIamPolicyResult> getPeeringIamPolicy(GetPeeringIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1beta1:getPeeringIamPolicy", TypeShape.of(GetPeeringIamPolicyResult.class), args, Utilities.withVersion(options));
     }

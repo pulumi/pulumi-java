@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or Update Container App
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerApp = new ContainerApp(&#34;containerApp&#34;, ContainerAppArgs.builder()        
+ *             .configuration(Map.of(&#34;ingress&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;external&#34;, true),
+ *                 Map.entry(&#34;targetPort&#34;, 3000)
+ *             )))
+ *             .kind(&#34;containerApp&#34;)
+ *             .kubeEnvironmentId(&#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .name(&#34;testcontainerApp0&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .template(Map.ofEntries(
+ *                 Map.entry(&#34;containers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;image&#34;, &#34;repo/testcontainerApp0:v1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;testcontainerApp0&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dapr&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;appPort&#34;, 3000),
+ *                     Map.entry(&#34;enabled&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;scale&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxReplicas&#34;, 5),
+ *                     Map.entry(&#34;minReplicas&#34;, 1),
+ *                     Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;custom&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;metadata&#34;, Map.of(&#34;concurrentRequests&#34;, &#34;50&#34;)),
+ *                             Map.entry(&#34;type&#34;, &#34;http&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;httpscalingrule&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

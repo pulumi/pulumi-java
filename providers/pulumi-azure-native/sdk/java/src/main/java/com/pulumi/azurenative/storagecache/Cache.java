@@ -31,6 +31,127 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Caches_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cache = new Cache(&#34;cache&#34;, CacheArgs.builder()        
+ *             .cacheName(&#34;sc1&#34;)
+ *             .cacheSizeGB(3072)
+ *             .directoryServicesSettings(Map.ofEntries(
+ *                 Map.entry(&#34;activeDirectory&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cacheNetBiosName&#34;, &#34;contosoSmb&#34;),
+ *                     Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;password&#34;, &#34;&lt;password&gt;&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;consotoAdmin&#34;)
+ *                     )),
+ *                     Map.entry(&#34;domainName&#34;, &#34;contosoAd.contoso.local&#34;),
+ *                     Map.entry(&#34;domainNetBiosName&#34;, &#34;contosoAd&#34;),
+ *                     Map.entry(&#34;primaryDnsIpAddress&#34;, &#34;192.0.2.10&#34;),
+ *                     Map.entry(&#34;secondaryDnsIpAddress&#34;, &#34;192.0.2.11&#34;)
+ *                 )),
+ *                 Map.entry(&#34;usernameDownload&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;bindDn&#34;, &#34;cn=ldapadmin,dc=contosoad,dc=contoso,dc=local&#34;),
+ *                         Map.entry(&#34;bindPassword&#34;, &#34;&lt;bindPassword&gt;&#34;)
+ *                     )),
+ *                     Map.entry(&#34;extendedGroups&#34;, true),
+ *                     Map.entry(&#34;ldapBaseDN&#34;, &#34;dc=contosoad,dc=contoso,dc=local&#34;),
+ *                     Map.entry(&#34;ldapServer&#34;, &#34;192.0.2.12&#34;),
+ *                     Map.entry(&#34;usernameSource&#34;, &#34;LDAP&#34;)
+ *                 ))
+ *             ))
+ *             .encryptionSettings(Map.of(&#34;keyEncryptionKey&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;keyUrl&#34;, &#34;https://keyvault-cmk.vault.azure.net/keys/key2047/test&#34;),
+ *                 Map.entry(&#34;sourceVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk&#34;))
+ *             )))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;scgroup&#34;)
+ *             .securitySettings(Map.of(&#34;accessPolicies&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;accessRules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;access&#34;, &#34;rw&#34;),
+ *                     Map.entry(&#34;rootSquash&#34;, false),
+ *                     Map.entry(&#34;scope&#34;, &#34;default&#34;),
+ *                     Map.entry(&#34;submountAccess&#34;, true),
+ *                     Map.entry(&#34;suid&#34;, false)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;)
+ *             )))
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard_2G&#34;))
+ *             .subnet(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1&#34;)
+ *             .tags(Map.of(&#34;Dept&#34;, &#34;Contoso&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Caches_CreateOrUpdate_ldap_only
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cache = new Cache(&#34;cache&#34;, CacheArgs.builder()        
+ *             .cacheName(&#34;sc1&#34;)
+ *             .cacheSizeGB(3072)
+ *             .directoryServicesSettings(Map.of(&#34;usernameDownload&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;bindDn&#34;, &#34;cn=ldapadmin,dc=contosoad,dc=contoso,dc=local&#34;),
+ *                     Map.entry(&#34;bindPassword&#34;, &#34;&lt;bindPassword&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;extendedGroups&#34;, true),
+ *                 Map.entry(&#34;ldapBaseDN&#34;, &#34;dc=contosoad,dc=contoso,dc=local&#34;),
+ *                 Map.entry(&#34;ldapServer&#34;, &#34;192.0.2.12&#34;),
+ *                 Map.entry(&#34;usernameSource&#34;, &#34;LDAP&#34;)
+ *             )))
+ *             .encryptionSettings(Map.of(&#34;keyEncryptionKey&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;keyUrl&#34;, &#34;https://keyvault-cmk.vault.azure.net/keys/key2048/test&#34;),
+ *                 Map.entry(&#34;sourceVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk&#34;))
+ *             )))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;scgroup&#34;)
+ *             .securitySettings(Map.of(&#34;accessPolicies&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;accessRules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;access&#34;, &#34;rw&#34;),
+ *                     Map.entry(&#34;rootSquash&#34;, false),
+ *                     Map.entry(&#34;scope&#34;, &#34;default&#34;),
+ *                     Map.entry(&#34;submountAccess&#34;, true),
+ *                     Map.entry(&#34;suid&#34;, false)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;)
+ *             )))
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard_2G&#34;))
+ *             .subnet(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1&#34;)
+ *             .tags(Map.of(&#34;Dept&#34;, &#34;Contoso&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

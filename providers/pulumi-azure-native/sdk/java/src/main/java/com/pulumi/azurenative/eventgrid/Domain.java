@@ -25,6 +25,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### Domains_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var domain = new Domain(&#34;domain&#34;, DomainArgs.builder()        
+ *             .domainName(&#34;exampledomain1&#34;)
+ *             .inboundIpRules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;12.18.30.15&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Allow&#34;),
+ *                     Map.entry(&#34;ipMask&#34;, &#34;12.18.176.1&#34;)
+ *                 ))
+ *             .location(&#34;westus2&#34;)
+ *             .publicNetworkAccess(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

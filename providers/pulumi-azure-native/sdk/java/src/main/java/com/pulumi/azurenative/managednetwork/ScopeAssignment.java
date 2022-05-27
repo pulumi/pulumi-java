@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### ScopeAssignmentsPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scopeAssignment = new ScopeAssignment(&#34;scopeAssignment&#34;, ScopeAssignmentArgs.builder()        
+ *             .assignedManagedNetwork(&#34;/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork&#34;)
+ *             .scope(&#34;subscriptions/subscriptionC&#34;)
+ *             .scopeAssignmentName(&#34;subscriptionCAssignment&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

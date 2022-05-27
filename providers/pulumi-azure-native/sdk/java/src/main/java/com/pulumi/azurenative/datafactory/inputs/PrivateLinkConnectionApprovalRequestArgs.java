@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.azurenative.datafactory.inputs.PrivateEndpointArgs;
 import com.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -18,6 +19,21 @@ import javax.annotation.Nullable;
 public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkConnectionApprovalRequestArgs Empty = new PrivateLinkConnectionApprovalRequestArgs();
+
+    /**
+     * The resource of private endpoint.
+     * 
+     */
+    @Import(name="privateEndpoint")
+    private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
+
+    /**
+     * @return The resource of private endpoint.
+     * 
+     */
+    public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
+        return Optional.ofNullable(this.privateEndpoint);
+    }
 
     /**
      * The state of a private link connection
@@ -37,6 +53,7 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.r
     private PrivateLinkConnectionApprovalRequestArgs() {}
 
     private PrivateLinkConnectionApprovalRequestArgs(PrivateLinkConnectionApprovalRequestArgs $) {
+        this.privateEndpoint = $.privateEndpoint;
         this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
     }
 
@@ -56,6 +73,27 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.r
 
         public Builder(PrivateLinkConnectionApprovalRequestArgs defaults) {
             $ = new PrivateLinkConnectionApprovalRequestArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param privateEndpoint The resource of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
+            $.privateEndpoint = privateEndpoint;
+            return this;
+        }
+
+        /**
+         * @param privateEndpoint The resource of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
+            return privateEndpoint(Output.of(privateEndpoint));
         }
 
         /**

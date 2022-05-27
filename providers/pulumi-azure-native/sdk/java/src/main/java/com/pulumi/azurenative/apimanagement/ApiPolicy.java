@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApiPolicy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiPolicy = new ApiPolicy(&#34;apiPolicy&#34;, ApiPolicyArgs.builder()        
+ *             .apiId(&#34;5600b57e7e8880006a040001&#34;)
+ *             .format(&#34;xml&#34;)
+ *             .policyId(&#34;policy&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;&lt;policies&gt; &lt;inbound /&gt; &lt;backend&gt;    &lt;forward-request /&gt;  &lt;/backend&gt;  &lt;outbound /&gt;&lt;/policies&gt;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateApiPolicyNonXmlEncoded
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiPolicy = new ApiPolicy(&#34;apiPolicy&#34;, ApiPolicyArgs.builder()        
+ *             .apiId(&#34;5600b57e7e8880006a040001&#34;)
+ *             .format(&#34;rawxml&#34;)
+ *             .policyId(&#34;policy&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;&#34;&#34;
+ * &lt;policies&gt;
+ *      &lt;inbound&gt;
+ *      &lt;base /&gt;
+ *   &lt;set-header name=&#34;newvalue&#34; exists-action=&#34;override&#34;&gt;
+ *    &lt;value&gt;&#34;{@literal @}(context.Request.Headers.FirstOrDefault(h =&gt; h.Ke==&#34;Via&#34;))&#34; &lt;/value&gt;
+ *     &lt;/set-header&gt;
+ *   &lt;/inbound&gt;
+ *       &lt;/policies&gt;            &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

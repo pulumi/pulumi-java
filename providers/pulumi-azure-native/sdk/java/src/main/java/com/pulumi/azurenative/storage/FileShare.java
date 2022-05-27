@@ -24,6 +24,86 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### Create NFS Shares
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileShare = new FileShare(&#34;fileShare&#34;, FileShareArgs.builder()        
+ *             .accountName(&#34;sto666&#34;)
+ *             .enabledProtocols(&#34;NFS&#34;)
+ *             .resourceGroupName(&#34;res346&#34;)
+ *             .shareName(&#34;share1235&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PutShares
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileShare = new FileShare(&#34;fileShare&#34;, FileShareArgs.builder()        
+ *             .accountName(&#34;sto328&#34;)
+ *             .resourceGroupName(&#34;res3376&#34;)
+ *             .shareName(&#34;share6185&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PutShares with Access Tier
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fileShare = new FileShare(&#34;fileShare&#34;, FileShareArgs.builder()        
+ *             .accessTier(&#34;Hot&#34;)
+ *             .accountName(&#34;sto666&#34;)
+ *             .resourceGroupName(&#34;res346&#34;)
+ *             .shareName(&#34;share1235&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

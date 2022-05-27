@@ -46,6 +46,37 @@ public final class CurFunctions {
     public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
         return getReportDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get information on an AWS Cost and Usage Report Definition.
+     * 
+     * &gt; *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
+     * 
+     * &gt; *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var reportDefinition = Output.of(CurFunctions.getReportDefinition(GetReportDefinitionArgs.builder()
+     *             .reportName(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cur/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
     }

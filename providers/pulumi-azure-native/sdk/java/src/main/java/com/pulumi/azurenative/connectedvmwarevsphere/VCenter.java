@@ -26,6 +26,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
+ * ### CreateVCenter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vCenter = new VCenter(&#34;vCenter&#34;, VCenterArgs.builder()        
+ *             .credentials(Map.ofEntries(
+ *                 Map.entry(&#34;password&#34;, &#34;&lt;password&gt;&#34;),
+ *                 Map.entry(&#34;username&#34;, &#34;tempuser&#34;)
+ *             ))
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;customLocation&#34;)
+ *             ))
+ *             .fqdn(&#34;ContosoVMware.contoso.com&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .port(1234)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .vcenterName(&#34;ContosoVCenter&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

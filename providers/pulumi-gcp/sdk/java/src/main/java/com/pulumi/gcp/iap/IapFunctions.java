@@ -47,6 +47,38 @@ public final class IapFunctions {
     public static CompletableFuture<GetClientResult> getClient(GetClientArgs args) {
         return getClient(args, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var project = Output.of(OrganizationsFunctions.getProject(GetProjectArgs.builder()
+     *             .projectId(&#34;foobar&#34;)
+     *             .build()));
+     * 
+     *         final var projectClient = Output.of(IapFunctions.getClient(GetClientArgs.builder()
+     *             .brand(String.format(&#34;projects/%s/brands/[BRAND_NUMBER]&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+     *             .clientId(FOO.getApps().getGoogleusercontent().getCom())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClientResult> getClient(GetClientArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iap/getClient:getClient", TypeShape.of(GetClientResult.class), args, Utilities.withVersion(options));
     }

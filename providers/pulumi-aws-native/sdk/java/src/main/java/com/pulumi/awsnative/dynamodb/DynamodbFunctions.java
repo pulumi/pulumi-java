@@ -19,6 +19,10 @@ public final class DynamodbFunctions {
     public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args) {
         return getGlobalTable(args, InvokeOptions.Empty);
     }
+    /**
+     * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
+     * 
+     */
     public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:dynamodb:getGlobalTable", TypeShape.of(GetGlobalTableResult.class), args, Utilities.withVersion(options));
     }

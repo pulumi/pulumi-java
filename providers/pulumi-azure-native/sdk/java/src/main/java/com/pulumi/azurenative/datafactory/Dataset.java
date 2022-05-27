@@ -115,6 +115,99 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01.
  * 
  * ## Example Usage
+ * ### Datasets_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetName(&#34;exampleDataset&#34;)
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;fileName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;Expression&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;@dataset().MyFileName&#34;)
+ *                 )),
+ *                 Map.entry(&#34;folderPath&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;Expression&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;@dataset().MyFolderPath&#34;)
+ *                 )),
+ *                 Map.entry(&#34;format&#34;, Map.of(&#34;type&#34;, &#34;TextFormat&#34;)),
+ *                 Map.entry(&#34;linkedServiceName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;referenceName&#34;, &#34;exampleLinkedService&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;LinkedServiceReference&#34;)
+ *                 )),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;MyFileName&#34;, Map.of(&#34;type&#34;, &#34;String&#34;)),
+ *                     Map.entry(&#34;MyFolderPath&#34;, Map.of(&#34;type&#34;, &#34;String&#34;))
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureBlob&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Datasets_Update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetName(&#34;exampleDataset&#34;)
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Example description&#34;),
+ *                 Map.entry(&#34;fileName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;Expression&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;@dataset().MyFileName&#34;)
+ *                 )),
+ *                 Map.entry(&#34;folderPath&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;Expression&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;@dataset().MyFolderPath&#34;)
+ *                 )),
+ *                 Map.entry(&#34;format&#34;, Map.of(&#34;type&#34;, &#34;TextFormat&#34;)),
+ *                 Map.entry(&#34;linkedServiceName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;referenceName&#34;, &#34;exampleLinkedService&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;LinkedServiceReference&#34;)
+ *                 )),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;MyFileName&#34;, Map.of(&#34;type&#34;, &#34;String&#34;)),
+ *                     Map.entry(&#34;MyFolderPath&#34;, Map.of(&#34;type&#34;, &#34;String&#34;))
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureBlob&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

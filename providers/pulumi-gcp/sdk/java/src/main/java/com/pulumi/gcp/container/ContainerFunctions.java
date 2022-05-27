@@ -54,9 +54,67 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetAwsVersionsResult> getAwsVersions() {
         return getAwsVersions(GetAwsVersionsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Kubernetes versions in a location for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getAwsVersions(GetAwsVersionsArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .project(&#34;my-project&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firstAvailableVersion&#34;, data.getGoogle_container_aws_versions().getVersions().getValid_versions()[0]);
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args) {
         return getAwsVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Kubernetes versions in a location for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getAwsVersions(GetAwsVersionsArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .project(&#34;my-project&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firstAvailableVersion&#34;, data.getGoogle_container_aws_versions().getVersions().getValid_versions()[0]);
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAwsVersions:getAwsVersions", TypeShape.of(GetAwsVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -92,9 +150,67 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetAzureVersionsResult> getAzureVersions() {
         return getAzureVersions(GetAzureVersionsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Kubernetes versions in a location for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getAzureVersions(GetAzureVersionsArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .project(&#34;my-project&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firstAvailableVersion&#34;, data.getGoogle_container_azure_versions().getVersions().getValid_versions()[0]);
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args) {
         return getAzureVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Kubernetes versions in a location for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getAzureVersions(GetAzureVersionsArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .project(&#34;my-project&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firstAvailableVersion&#34;, data.getGoogle_container_azure_versions().getVersions().getValid_versions()[0]);
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAzureVersions:getAzureVersions", TypeShape.of(GetAzureVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -133,6 +249,38 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Get info about a GKE cluster from its name and location.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCluster = Output.of(ContainerFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;my-cluster&#34;)
+     *             .location(&#34;us-east1-a&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;endpoint&#34;, myCluster.apply(getClusterResult -&gt; getClusterResult.getEndpoint()));
+     *         ctx.export(&#34;instanceGroupUrls&#34;, myCluster.apply(getClusterResult -&gt; getClusterResult.getNodePools()[0].getInstanceGroupUrls()));
+     *         ctx.export(&#34;nodeConfig&#34;, myCluster.apply(getClusterResult -&gt; getClusterResult.getNodeConfigs()));
+     *         ctx.export(&#34;nodePools&#34;, myCluster.apply(getClusterResult -&gt; getClusterResult.getNodePools()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -180,9 +328,91 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetEngineVersionsResult> getEngineVersions() {
         return getEngineVersions(GetEngineVersionsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.
+     * 
+     * &gt; If you are using the `gcp.container.getEngineVersions` datasource with a
+     * regional cluster, ensure that you have provided a region as the `location` to
+     * the datasource. A region can have a different set of supported versions than
+     * its component zones, and not all zones in a region are guaranteed to
+     * support the same version.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getEngineVersions(GetEngineVersionsArgs.builder()
+     *             .location(&#34;us-central1-b&#34;)
+     *             .versionPrefix(&#34;1.12.&#34;)
+     *             .build()));
+     * 
+     *         var foo = new Cluster(&#34;foo&#34;, ClusterArgs.builder()        
+     *             .location(&#34;us-central1-b&#34;)
+     *             .nodeVersion(central1b.apply(getEngineVersionsResult -&gt; getEngineVersionsResult.getLatestNodeVersion()))
+     *             .initialNodeCount(1)
+     *             .build());
+     * 
+     *         ctx.export(&#34;stableChannelVersion&#34;, central1b.apply(getEngineVersionsResult -&gt; getEngineVersionsResult.getReleaseChannelDefaultVersion().getSTABLE()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args) {
         return getEngineVersions(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.
+     * 
+     * &gt; If you are using the `gcp.container.getEngineVersions` datasource with a
+     * regional cluster, ensure that you have provided a region as the `location` to
+     * the datasource. A region can have a different set of supported versions than
+     * its component zones, and not all zones in a region are guaranteed to
+     * support the same version.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var central1b = Output.of(ContainerFunctions.getEngineVersions(GetEngineVersionsArgs.builder()
+     *             .location(&#34;us-central1-b&#34;)
+     *             .versionPrefix(&#34;1.12.&#34;)
+     *             .build()));
+     * 
+     *         var foo = new Cluster(&#34;foo&#34;, ClusterArgs.builder()        
+     *             .location(&#34;us-central1-b&#34;)
+     *             .nodeVersion(central1b.apply(getEngineVersionsResult -&gt; getEngineVersionsResult.getLatestNodeVersion()))
+     *             .initialNodeCount(1)
+     *             .build());
+     * 
+     *         ctx.export(&#34;stableChannelVersion&#34;, central1b.apply(getEngineVersionsResult -&gt; getEngineVersionsResult.getReleaseChannelDefaultVersion().getSTABLE()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getEngineVersions:getEngineVersions", TypeShape.of(GetEngineVersionsResult.class), args, Utilities.withVersion(options));
     }
@@ -219,6 +449,36 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
         return getRegistryImage(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
+     * 
+     * The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var debian = Output.of(ContainerFunctions.getRegistryImage(GetRegistryImageArgs.builder()
+     *             .name(&#34;debian&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;gcrLocation&#34;, debian.apply(getRegistryImageResult -&gt; getRegistryImageResult.getImageUrl()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
     }
@@ -253,9 +513,65 @@ public final class ContainerFunctions {
     public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository() {
         return getRegistryRepository(GetRegistryRepositoryArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
+     * 
+     * The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ContainerFunctions.getRegistryRepository());
+     * 
+     *         ctx.export(&#34;gcrLocation&#34;, foo.apply(getRegistryRepositoryResult -&gt; getRegistryRepositoryResult.getRepositoryUrl()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args) {
         return getRegistryRepository(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
+     * 
+     * The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ContainerFunctions.getRegistryRepository());
+     * 
+     *         ctx.export(&#34;gcrLocation&#34;, foo.apply(getRegistryRepositoryResult -&gt; getRegistryRepositoryResult.getRepositoryUrl()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getRegistryRepository:getRegistryRepository", TypeShape.of(GetRegistryRepositoryResult.class), args, Utilities.withVersion(options));
     }

@@ -21,6 +21,10 @@ public final class Ids_v1Functions {
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets details of a single Endpoint.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ids/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class Ids_v1Functions {
     public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(GetEndpointIamPolicyArgs args) {
         return getEndpointIamPolicy(args, InvokeOptions.Empty);
     }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(GetEndpointIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ids/v1:getEndpointIamPolicy", TypeShape.of(GetEndpointIamPolicyResult.class), args, Utilities.withVersion(options));
     }

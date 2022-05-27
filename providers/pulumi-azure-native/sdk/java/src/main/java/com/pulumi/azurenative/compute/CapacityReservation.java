@@ -24,6 +24,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01.
  * 
  * ## Example Usage
+ * ### Create or update a capacity reservation .
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var capacityReservation = new CapacityReservation(&#34;capacityReservation&#34;, CapacityReservationArgs.builder()        
+ *             .capacityReservationGroupName(&#34;myCapacityReservationGroup&#34;)
+ *             .capacityReservationName(&#34;myCapacityReservation&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 4),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_DS1_v2&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;department&#34;, &#34;HR&#34;))
+ *             .zones(&#34;1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

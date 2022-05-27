@@ -29,6 +29,63 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-30.
  * 
  * ## Example Usage
+ * ### Creates or updates a OpenShift cluster with the specified subscription, resource group and resource name.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var openShiftCluster = new OpenShiftCluster(&#34;openShiftCluster&#34;, OpenShiftClusterArgs.builder()        
+ *             .apiserverProfile(Map.of(&#34;visibility&#34;, &#34;Public&#34;))
+ *             .clusterProfile(Map.ofEntries(
+ *                 Map.entry(&#34;domain&#34;, &#34;cluster.location.aroapp.io&#34;),
+ *                 Map.entry(&#34;pullSecret&#34;, &#34;{\&#34;auths\&#34;:{\&#34;registry.connect.redhat.com\&#34;:{\&#34;auth\&#34;:\&#34;\&#34;},\&#34;registry.redhat.io\&#34;:{\&#34;auth\&#34;:\&#34;\&#34;}}}&#34;),
+ *                 Map.entry(&#34;resourceGroupId&#34;, &#34;/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup&#34;)
+ *             ))
+ *             .consoleProfile()
+ *             .ingressProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;),
+ *                 Map.entry(&#34;visibility&#34;, &#34;Public&#34;)
+ *             ))
+ *             .location(&#34;location&#34;)
+ *             .masterProfile(Map.ofEntries(
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_D8s_v3&#34;)
+ *             ))
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;podCidr&#34;, &#34;10.128.0.0/14&#34;),
+ *                 Map.entry(&#34;serviceCidr&#34;, &#34;172.30.0.0/16&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup&#34;)
+ *             .resourceName(&#34;resourceName&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientId&#34;),
+ *                 Map.entry(&#34;clientSecret&#34;, &#34;clientSecret&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .workerProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;diskSizeGB&#34;, 128),
+ *                 Map.entry(&#34;name&#34;, &#34;worker&#34;),
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

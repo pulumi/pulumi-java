@@ -25,6 +25,10 @@ public final class EventsFunctions {
     public static CompletableFuture<GetApiDestinationResult> getApiDestination(GetApiDestinationArgs args) {
         return getApiDestination(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Events::ApiDestination.
+     * 
+     */
     public static CompletableFuture<GetApiDestinationResult> getApiDestination(GetApiDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getApiDestination", TypeShape.of(GetApiDestinationResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class EventsFunctions {
     public static CompletableFuture<GetArchiveResult> getArchive(GetArchiveArgs args) {
         return getArchive(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Events::Archive
+     * 
+     */
     public static CompletableFuture<GetArchiveResult> getArchive(GetArchiveArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getArchive", TypeShape.of(GetArchiveResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class EventsFunctions {
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Events::Connection.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class EventsFunctions {
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
         return getEndpoint(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::Events::Endpoint.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }

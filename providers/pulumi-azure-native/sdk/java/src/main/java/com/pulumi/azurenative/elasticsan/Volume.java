@@ -25,6 +25,67 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-20-preview.
  * 
  * ## Example Usage
+ * ### Volumes_Create_MaximumSet_Gen
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volume = new Volume(&#34;volume&#34;, VolumeArgs.builder()        
+ *             .creationData(Map.ofEntries(
+ *                 Map.entry(&#34;createSource&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&#34;)
+ *             ))
+ *             .elasticSanName(&#34;33zg-7s_4_7L2_65o&#34;)
+ *             .location(&#34;aaaaaaaaaaa&#34;)
+ *             .resourceGroupName(&#34;rgelasticsan&#34;)
+ *             .sizeGiB(30)
+ *             .tags(Map.of(&#34;key9122&#34;, &#34;aaaaaaaaaaaaaaaaaaaaaaaaaa&#34;))
+ *             .volumeGroupName(&#34;9_67U25-1f2gR3-b6L-4T5&#34;)
+ *             .volumeName(&#34;vt-h45-18D68-j3sg8&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Volumes_Create_MinimumSet_Gen
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volume = new Volume(&#34;volume&#34;, VolumeArgs.builder()        
+ *             .elasticSanName(&#34;33zg-7s_4_7L2_65o&#34;)
+ *             .resourceGroupName(&#34;rgelasticsan&#34;)
+ *             .volumeGroupName(&#34;9_67U25-1f2gR3-b6L-4T5&#34;)
+ *             .volumeName(&#34;vt-h45-18D68-j3sg8&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

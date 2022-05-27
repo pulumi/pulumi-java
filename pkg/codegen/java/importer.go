@@ -1,4 +1,16 @@
-// Copyright 2022, Pulumi Corporation.  All rights reserved.
+// Copyright 2016-2022, Pulumi Corporation.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 package java
 
@@ -18,13 +30,30 @@ type PropertyInfo struct {
 
 // PackageInfo represents a Java language-specific info for a package.
 type PackageInfo struct {
-	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
-	Packages               map[string]string `json:"packages,omitempty"`
-	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
-	BasePackage            string            `json:"basePackage"`
+	Packages    map[string]string `json:"packages,omitempty"`
+	BasePackage string            `json:"basePackage"`
 
 	// If set to "gradle" generates a basic set of Gradle build files.
 	BuildFiles string `json:"buildFiles"`
+}
+
+func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
+	result := i
+	if overrides.BuildFiles != "" {
+		result.BuildFiles = overrides.BuildFiles
+	}
+	if overrides.BasePackage != "" {
+		result.BasePackage = ""
+	}
+	if overrides.Packages != nil && len(overrides.Packages) > 0 {
+		if result.Packages == nil {
+			result.Packages = map[string]string{}
+		}
+		for k, v := range overrides.Packages {
+			result.Packages[k] = v
+		}
+	}
+	return result
 }
 
 func (i PackageInfo) BasePackageOrDefault() string {

@@ -3,6 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.gson.JsonParser;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputData;
+import com.pulumi.deployment.MockDeployment;
 import com.pulumi.deployment.MocksTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -32,7 +33,8 @@ class ReSerializerTest {
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setMockGlobalInstance();
+                .deploymentFactory(MockDeployment::new)
+                .build();
     }
 
     @AfterAll
@@ -43,7 +45,7 @@ class ReSerializerTest {
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {
-        var deserializer = new Deserializer();
+        var deserializer = new Deserializer(mock.log);
         var serialized = new Serializer(mock.log)
                 .serializeAsync("ReSerializerTest", o, true);
 

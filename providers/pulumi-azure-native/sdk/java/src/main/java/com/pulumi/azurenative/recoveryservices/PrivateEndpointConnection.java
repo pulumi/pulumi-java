@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### Update PrivateEndpointConnection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnection = new PrivateEndpointConnection(&#34;privateEndpointConnection&#34;, PrivateEndpointConnectionArgs.builder()        
+ *             .privateEndpointConnectionName(&#34;gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;privateEndpoint&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.Network/privateEndpoints/gaallatestpe3&#34;)),
+ *                 Map.entry(&#34;privateLinkServiceConnectionState&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Approved by johndoe@company.com&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *                 )),
+ *                 Map.entry(&#34;provisioningState&#34;, &#34;Succeeded&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;gaallaRG&#34;)
+ *             .vaultName(&#34;gaallavaultbvtd2msi&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

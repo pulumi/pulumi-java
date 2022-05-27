@@ -24,6 +24,11 @@ public final class HybriddataFunctions {
     public static CompletableFuture<GetDataManagerResult> getDataManager(GetDataManagerArgs args) {
         return getDataManager(args, InvokeOptions.Empty);
     }
+    /**
+     * The DataManager resource.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetDataManagerResult> getDataManager(GetDataManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataManager", TypeShape.of(GetDataManagerResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +40,11 @@ public final class HybriddataFunctions {
     public static CompletableFuture<GetDataStoreResult> getDataStore(GetDataStoreArgs args) {
         return getDataStore(args, InvokeOptions.Empty);
     }
+    /**
+     * Data store.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetDataStoreResult> getDataStore(GetDataStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataStore", TypeShape.of(GetDataStoreResult.class), args, Utilities.withVersion(options));
     }
@@ -46,6 +56,11 @@ public final class HybriddataFunctions {
     public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(GetJobDefinitionArgs args) {
         return getJobDefinition(args, InvokeOptions.Empty);
     }
+    /**
+     * Job Definition.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(GetJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getJobDefinition", TypeShape.of(GetJobDefinitionResult.class), args, Utilities.withVersion(options));
     }

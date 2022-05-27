@@ -24,6 +24,249 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create ADLS  Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .clientId(&#34;233d7008-b157-4354-88d1-ba191f06a900&#34;)
+ *             .clientSecret(&#34;vdvgdvdvdv&#34;)
+ *             .dataStoreType(&#34;adls&#34;)
+ *             .datastoreName(&#34;adlsDatastore&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .storeName(&#34;stanley&#34;)
+ *             .tenantId(&#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create ADLS Gen2 Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .accountName(&#34;nicksadlsgen2storage&#34;)
+ *             .clientId(&#34;233d7008-b157-4354-88d1-ba191f06a900&#34;)
+ *             .clientSecret(&#34;vdegbvedgeg&#34;)
+ *             .dataStoreType(&#34;adls-gen2&#34;)
+ *             .datastoreName(&#34;adlsgen2Datastore&#34;)
+ *             .fileSystem(&#34;testfs1&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .tenantId(&#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Blob Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .accountKey(&#34;wddrfewfewsgewgrrwegwreg&#34;)
+ *             .accountName(&#34;acjainmleastus9484093746&#34;)
+ *             .containerName(&#34;azureml-blobstore-5da947c5-53aa-41a5-bb2b-074074e73b7&#34;)
+ *             .dataStoreType(&#34;blob&#34;)
+ *             .datastoreName(&#34;blobDatastore&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Databricks File System Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .dataStoreType(&#34;dbfs&#34;)
+ *             .datastoreName(&#34;blobDatastore&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create File Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .accountKey(&#34;wddrfewfewsgewgrrwegwreg&#34;)
+ *             .accountName(&#34;acjainmleastus9484093746&#34;)
+ *             .dataStoreType(&#34;file&#34;)
+ *             .datastoreName(&#34;fileDatastore&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .shareName(&#34;azureml-filestore-5da947c5-53aa-41a5-bb2b-074074e73b76&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create MySQL Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .dataStoreType(&#34;mysqldb&#34;)
+ *             .databaseName(&#34;dataset&#34;)
+ *             .datastoreName(&#34;mySqlDatastore&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .serverName(&#34;dataset-mysql-srv&#34;)
+ *             .userId(&#34;demo_user@dataset-mysql-srv&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create PostgreSQL Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .dataStoreType(&#34;psqldb&#34;)
+ *             .databaseName(&#34;dataset&#34;)
+ *             .datastoreName(&#34;postgreSqlDatastore&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .serverName(&#34;dataset-pgsql-srv&#34;)
+ *             .userId(&#34;demo_user@dataset-pgsql-srv&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create SQL Datastore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDatastore = new MachineLearningDatastore(&#34;machineLearningDatastore&#34;, MachineLearningDatastoreArgs.builder()        
+ *             .dataStoreType(&#34;sqldb&#34;)
+ *             .databaseName(&#34;dataset&#34;)
+ *             .datastoreName(&#34;sqlDatastore&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .serverName(&#34;dataset-azsql-srv&#34;)
+ *             .userName(&#34;demo_user&#34;)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
