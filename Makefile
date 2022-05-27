@@ -71,7 +71,7 @@ provider.%.install:	provider.%.build
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
 test_example.%:	bin/pulumi-language-java
-	cd tests/examples && PATH="${PATH}:${PWD}/bin" go test -run "TestExamples/^$*" -test.v
+	cd tests/examples && PATH="${PATH}:${PWD}/bin" go test -run "TestExamples/^$*$$" -test.v
 
 # Test a single template, e.g.:
 #     make test_template.java-gradle
