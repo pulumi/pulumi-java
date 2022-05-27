@@ -1,24 +1,33 @@
 package com.pulumi.resources;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 import java.util.Optional;
 
+import static java.util.Objects.requireNonNull;
+
+/**
+ * The callback signature for the {@code transformations} resource option.
+ * @see #apply(Args)
+ */
 public interface ResourceTransformation {
 
     /**
-     * ResourceTransformation#apply is the callback signature for @see {@link ResourceOptions#getResourceTransformations()}.
-     * A transformation is passed the same set of inputs provided to the @see {@link Resource} constructor,
-     * and can optionally return back alternate values for the "properties" and/or "options" prior to the resource
+     * ResourceTransformation#apply is the callback signature for {@link ResourceOptions#getResourceTransformations()}.
+     * A transformation is passed the same set of inputs provided to the {@link Resource} constructor,
+     * and can optionally return alternate values for the "properties" and/or "options" prior to the resource
      * actually being created. The effect will be as though those "properties" and/or
-     * "options" were passed in place of the original call to the @see {@link Resource} constructor.
+     * "options" were passed in place of the original call to the {@link Resource} constructor.
      *
-     * @return The new values to use for the "args" and "options" of the @see {@link Resource}
+     * @return The new values to use for the "args" and "options" of the {@link Resource}
      * in place of the originally provided values.
-     * Returns @see {@link Optional#empty()} if the resource will not be transformed.
+     * Returns {@link Optional#empty()} if the resource will not be transformed.
      */
     Optional<ResourceTransformation.Result> apply(ResourceTransformation.Args args);
 
+    /**
+     * The argument bag passed to a {@link Resource} transformation.
+     * @see #apply(Args)
+     */
     @ParametersAreNonnullByDefault
     class Args {
         private final Resource resource;
@@ -26,53 +35,104 @@ public interface ResourceTransformation {
         private final ResourceOptions options;
 
         public Args(Resource resource, ResourceArgs args, ResourceOptions options) {
-            this.resource = Objects.requireNonNull(resource);
-            this.args = Objects.requireNonNull(args);
-            this.options = Objects.requireNonNull(options);
+            this.resource = requireNonNull(resource);
+            this.args = requireNonNull(args);
+            this.options = requireNonNull(options);
         }
 
         /**
-         * The Resource instance that is being transformed.
+         * @return the {@link Resource} instance that is being transformed.
          */
+        public Resource resource() {
+            return this.resource;
+        }
+
+        /**
+         * @return the {@link Resource} instance that is being transformed.
+         * @deprecated use {@link #resource()}
+         */
+        @Deprecated
         public Resource getResource() {
             return this.resource;
         }
 
         /**
-         * The original properties passed to the Resource constructor.
+         * @return the original properties passed to the {@link Resource} constructor.
          */
+        public ResourceArgs args() {
+            return this.args;
+        }
+
+        /**
+         * @return the original properties passed to the {@link Resource} constructor.
+         * @deprecated use {@link #args()}
+         */
+        @Deprecated
         public ResourceArgs getArgs() {
             return this.args;
         }
 
         /**
-         * The original resource options passed to the Resource constructor.
+         * @return the original resource options passed to the {@link Resource} constructor.
          */
+        public ResourceOptions options() {
+            return this.options;
+        }
+
+        /**
+         * @return the original resource options passed to the {@link Resource} constructor.
+         * @deprecated use {@link #options()}
+         */
+        @Deprecated
         public ResourceOptions getOptions() {
             return this.options;
         }
     }
 
+    /**
+     * the result that must be returned by a resource transformation callback.
+     * It includes new values to use for the "properties" and "options"
+     * of the {@link Resource} in place of the originally provided values.
+     * @see #apply(Args)
+     */
     @ParametersAreNonnullByDefault
     class Result {
         private final ResourceArgs args;
         private final ResourceOptions options;
 
         public Result(ResourceArgs args, ResourceOptions options) {
-            this.args = Objects.requireNonNull(args);
-            this.options = Objects.requireNonNull(options);
+            this.args = requireNonNull(args);
+            this.options = requireNonNull(options);
         }
 
         /**
-         * The original properties passed to the Resource constructor.
+         * @return the original properties passed to the Resource constructor.
          */
+        public ResourceArgs args() {
+            return args;
+        }
+
+        /**
+         * @return the original properties passed to the Resource constructor.
+         * @deprecated use {@link #args()}
+         */
+        @Deprecated
         public ResourceArgs getArgs() {
             return args;
         }
 
         /**
-         * The original resource options passed to the Resource constructor.
+         * @return the original resource options passed to the Resource constructor.
          */
+        public ResourceOptions options() {
+            return options;
+        }
+
+        /**
+         * @return the original resource options passed to the Resource constructor.
+         * @deprecated use {@link #options()}
+         */
+        @Deprecated
         public ResourceOptions getOptions() {
             return options;
         }
