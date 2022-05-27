@@ -33,7 +33,7 @@ func main() {
 	var binary string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
-	flag.StringVar(&binary, "binary", "", "A relative or an absolute path to a JAR to execute")
+	flag.StringVar(&binary, "binary", "", "JAR or a JBang entry-point file to execute")
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
@@ -56,14 +56,33 @@ func main() {
 			cmdutil.Exit(err)
 		}
 	case binary != "":
-		logging.V(3).Infof("language host asked to use specific JAR: `%s`", binary)
-		cmd, err := lookupPath("java")
-		if err != nil {
-			cmdutil.Exit(err)
-		}
-		javaExec, err = newJarExecutor(cmd, binary)
-		if err != nil {
-			cmdutil.Exit(err)
+		logging.V(3).Infof("language host asked to use a specific file: `%s`", binary)
+
+		suffix := strings.ToLower(filepath.Ext(binary))
+
+		switch suffix {
+		case ".jar":
+			cmd, err := lookupPath("java")
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+			javaExec, err = newJarExecutor(cmd, binary)
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+		case ".java", ".kt", ".groovy":
+			cmd, err := probeJBangExecutor()
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+			javaExec, err = newJBangExecutor(cmd, binary)
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+		default:
+			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. "+
+				"Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)",
+				binary, suffix))
 		}
 	default:
 		pathExec, err := probeExecutor()
@@ -177,7 +196,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	args := host.exec.pluginArgs
 	output, err := host.runJavaCommand(ctx, cmd, args)
 	if err != nil {
-		// Plugin determination is an advisory feature so it doe not need to escalate to an error.
+		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
 			"returning empty plugins; cause: %s", err)
 		return []plugin.PulumiPluginJSON{}, nil
@@ -403,6 +422,7 @@ func probeExecutor() (string, error) {
 			gradle = "./gradlew"
 		}
 	}
+
 	// detect maven or gradle
 	for _, file := range files {
 		if !file.IsDir() {
@@ -411,6 +431,8 @@ func probeExecutor() (string, error) {
 				return mvn, nil
 			case "settings.gradle", "settings.gradle.kts":
 				return gradle, nil
+			case "jbang.properties":
+				return resolveJBangPath(files)
 			}
 		}
 	}
@@ -418,6 +440,8 @@ func probeExecutor() (string, error) {
 }
 
 func resolveExecutor(exec string) (*javaExecutor, error) {
+	logging.V(3).Infof("Finding executor for: `%s`", exec)
+
 	switch exec {
 	case "gradle", "./gradlew":
 		cmd, err := lookupPath(exec)
@@ -431,9 +455,15 @@ func resolveExecutor(exec string) (*javaExecutor, error) {
 			return nil, err
 		}
 		return newMavenExecutor(cmd)
+	case jbangGlobal, jbangLocal:
+		cmd, err := lookupPath(exec)
+		if err != nil {
+			return nil, err
+		}
+		return newJBangExecutor(cmd, "src/main.java")
 	default:
 		return nil, errors.Errorf("did not recognize executor '%s', "+
-			"expected one of: gradle, mvn, gradlew, mvnw", exec)
+			"expected one of: gradle, mvn, gradlew, mvnw, jbang", exec)
 	}
 }
 
