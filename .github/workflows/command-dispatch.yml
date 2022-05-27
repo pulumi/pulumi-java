@@ -4,7 +4,8 @@ on:
     types: [created, edited]
 
 jobs:
-  # Dispatches "${commands}{event-type-suffix}" == "pr-command" events.
+  # When `/run-acceptance-tests` comment is added on a PR, dispatches
+  # "${commands}{event-type-suffix}" == "run-acceptance-tests-command" event.
   command-dispatch-for-testing:
     runs-on: ubuntu-latest
     steps:
