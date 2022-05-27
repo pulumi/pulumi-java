@@ -15,6 +15,7 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
+import com.pulumi.resources.StackOptions;
 import com.pulumi.resources.internal.StackDefinition;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -57,16 +58,18 @@ public class PulumiInternal implements Pulumi {
     }
 
     @InternalUse
-    public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
-        return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
+    public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback, StackOptions stackOptions) {
+        return runAsyncResult(stackCallback, stackOptions).thenApply(r -> r.exitCode());
     }
 
     @InternalUse
-    protected CompletableFuture<Result<ContextInternal>> runAsyncResult(Consumer<Context> stackCallback) {
+    protected CompletableFuture<Result<ContextInternal>> runAsyncResult(
+            Consumer<Context> stackCallback, StackOptions stackOptions
+    ) {
         var stackDefinition = new StackDefinition(
                 this.stackContext.projectName(),
                 this.stackContext.stackName(),
-                List.of()
+                stackOptions.resourceTransformations()
         );
         // TODO: simplify this call
         Internal.of(Deployment.getInstance()).getInternal().setStack(stackDefinition);

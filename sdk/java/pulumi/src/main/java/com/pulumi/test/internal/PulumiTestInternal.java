@@ -8,6 +8,7 @@ import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.internal.PulumiInternal;
+import com.pulumi.resources.StackOptions;
 import com.pulumi.test.TestResult;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,7 +33,13 @@ public class PulumiTestInternal extends PulumiInternal {
     }
 
     public CompletableFuture<TestResult> runTestAsync(Consumer<Context> stackCallback) {
-        return runAsyncResult(stackCallback)
+        return runTestAsync(stackCallback, StackOptions.Empty);
+    }
+
+    public CompletableFuture<TestResult> runTestAsync(
+            Consumer<Context> stackCallback, StackOptions stackOptions
+    ) {
+        return runAsyncResult(stackCallback, stackOptions)
                 .thenApply(r -> new TestResult(
                         r.exitCode(),
                         this.monitor.resources,
