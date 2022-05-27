@@ -33,9 +33,8 @@ func main() {
 	var binary string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
-	flag.StringVar(&binary, "binary", "", "A relative or an absolute path to a JAR to execute")
+	flag.StringVar(&binary, "binary", "", "JAR or a JBang entry-point file to execute")
 
-	logging.V(3).Infof("JBANG FTW!")
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
 	var givenExecutor string
@@ -57,7 +56,7 @@ func main() {
 			cmdutil.Exit(err)
 		}
 	case binary != "":
-		logging.V(3).Infof("language host asked to use specific file: `%s`", binary)
+		logging.V(3).Infof("language host asked to use a specific file: `%s`", binary)
 
 		suffix := strings.ToLower(filepath.Ext(binary))
 
@@ -81,7 +80,7 @@ func main() {
                 cmdutil.Exit(err)
             }
 		default:
-			cmdutil.Exit(fmt.Errorf("Could not find way to use binary: `%s` with `%s`", binary, suffix))
+			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)", binary, suffix))
 
 		}
 
