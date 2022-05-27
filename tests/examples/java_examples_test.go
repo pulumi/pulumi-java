@@ -182,6 +182,16 @@ func TestExamples(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("minimal-jbang", func(t *testing.T) {
+		test := getJavaBase(t, "minimal-jbang", integration.ProgramTestOptions{
+			Config: map[string]string{
+				"minimal:name":   "minimal-name",
+				"minimal:secret": "minimal-secret",
+			},
+		})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
