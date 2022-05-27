@@ -80,8 +80,9 @@ func main() {
 				cmdutil.Exit(err)
 			}
 		default:
-			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)", binary, suffix))
-
+			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. "+
+				"Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)",
+				binary, suffix))
 		}
 	default:
 		pathExec, err := probeExecutor()
