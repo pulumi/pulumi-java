@@ -25,6 +25,9 @@ on:
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
+  repository_dispatch:
+    types:
+      - run-acceptance-tests-command
 
 # TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
 # before making the repo public.
