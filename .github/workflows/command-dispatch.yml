@@ -1,0 +1,22 @@
+name: Command Dispatch for PR events
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  # When `/run-acceptance-tests` comment is added on a PR, dispatches
+  # "${commands}{event-type-suffix}" == "run-acceptance-tests-command" event.
+  command-dispatch-for-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Build
+        uses: peter-evans/slash-command-dispatch@v2
+        with:
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          reaction-token: ${{ secrets.GITHUB_TOKEN }}
+          commands: run-acceptance-tests
+          event-type-suffix: -command
+          permission: write
+          issue-type: pull-request
+          repository: pulumi/pulumi-java
