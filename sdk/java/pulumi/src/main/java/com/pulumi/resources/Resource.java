@@ -146,7 +146,7 @@ public abstract class Resource {
                     new ResourceTransformation.Args(this, args, options)
             );
             if (tres.isPresent()) {
-                if (tres.get().getOptions().parent != options.parent) {
+                if (tres.get().options().parent != options.parent) {
                     // This is currently not allowed because the parent tree is needed to
                     // establish what transformation to apply in the first place, and to compute
                     // inheritance of other resource options in the Resource constructor before
@@ -158,8 +158,8 @@ public abstract class Resource {
                     throw new IllegalArgumentException("Transformations cannot currently be used to change the 'parent' of a resource.");
                 }
 
-                args = tres.get().getArgs();
-                options = tres.get().getOptions();
+                args = tres.get().args();
+                options = tres.get().options();
             }
         }
 
