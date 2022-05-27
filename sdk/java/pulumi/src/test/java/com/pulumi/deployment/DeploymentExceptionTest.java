@@ -17,7 +17,6 @@ import java.util.logging.Level;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class DeploymentExceptionTest {
 
@@ -38,14 +37,16 @@ public class DeploymentExceptionTest {
     @Test
     void testUrnFutureDoesNotHangOnException() {
         mock.standardLogger.setLevel(Level.OFF);
-        assertThatThrownBy(() -> mock.runTestAsync(ctx -> {
+        var result = mock.runTestAsync(ctx -> {
             var instance = new MocksTest.Instance("i1", null, null);
             var out = instance.getUrn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();
-        }).join())
-                .isInstanceOf(CompletionException.class)
-                .hasCauseInstanceOf(DeliberateException.class)
-                .hasMessageContaining("deliberate exception");
+        }).join();
+
+        assertThat(result.exceptions).hasSize(2);
+        assertThat(result.exceptions.get(0)).isExactlyInstanceOf(CompletionException.class);
+        assertThat(result.exceptions.get(1)).isExactlyInstanceOf(DeliberateException.class);
+        assertThat(result.exceptions.get(1)).hasMessageContaining("deliberate exception");
     }
 
     static class DeliberateException extends IllegalStateException {

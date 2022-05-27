@@ -1,6 +1,5 @@
 package com.pulumi.deployment.internal;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.pulumi.Config;
@@ -10,8 +9,6 @@ import com.pulumi.context.internal.ConfigContextInternal;
 import com.pulumi.context.internal.ContextInternal;
 import com.pulumi.context.internal.LoggingContextInternal;
 import com.pulumi.context.internal.OutputContextInternal;
-import com.pulumi.core.Output;
-import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.deployment.EmptyMocks;
 import com.pulumi.deployment.MockEngine;
@@ -19,20 +16,16 @@ import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.MockRunner;
 import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
-import com.pulumi.exceptions.RunException;
-import com.pulumi.resources.Resource;
-import com.pulumi.resources.Stack;
+import com.pulumi.test.TestResult;
+import com.pulumi.test.internal.PulumiTestInternal;
 
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 
@@ -88,104 +81,28 @@ public class DeploymentTests {
         }
 
         public CompletableFuture<TestResult> runTestAsync(Consumer<Context> stackCallback) {
-            if (!(engine instanceof MockEngine)) {
+            if (!(this.engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
-            if (!(monitor instanceof MockMonitor)) {
+            if (!(this.monitor instanceof MockMonitor)) {
                 throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            // TODO: remove this after runner refactoring
-            Function<List<Resource>, Map<String, Output<?>>> outputs = resources -> resources.stream()
-                    .filter(r -> r instanceof Stack)
-                    .map(r -> (Stack) r)
-                    .findFirst()
-                    .map(s -> Internal.from(s).getOutputs())
-                    .map(os -> Internal.of(os).getDataAsync().join().getValueNullable())
-                    .orElseThrow(() -> new IllegalStateException("Unexpected lack of Stack"));
 
             Function<String, Config> configFactory = (name) -> new Config(this.config, name);
             var configContext = new ConfigContextInternal(this.options.getProjectName(), configFactory);
             var loggingContext = new LoggingContextInternal(this.log);
             var outputFactory = new OutputFactory(this.runner);
             var outputsContext = new OutputContextInternal(outputFactory);
-            var exports = Map.<String, Output<?>>of();
 
             var context = new ContextInternal(
                     this.options.getProjectName(),
                     this.options.getStackName(),
-                    loggingContext, configContext, outputsContext, exports
+                    loggingContext, configContext, outputsContext
             );
-            return this.runner.runAsyncFuture(() -> {
-                        stackCallback.accept(context);
-                        return CompletableFuture.completedFuture(context.exports());
-                    })
-                    .thenApply(exitCode -> new TestResult(
-                            exitCode,
-                            mockMonitor.resources,
-                            runner.getSwallowedExceptions(),
-                            ImmutableList.copyOf(mockEngine.getErrors()),
-                            outputs.apply(mockMonitor.resources)
-                    ));
-        }
-
-        public static class TestResult {
-            public final int exitCode;
-            public final List<Resource> resources;
-            public final List<Exception> exceptions;
-            public final List<String> errors;
-            public final Map<String, Output<?>> stackOutputs;
-
-            public TestResult(int exitCode,
-                              List<Resource> resources,
-                              List<Exception> exceptions,
-                              List<String> errors,
-                              Map<String, Output<?>> stackOutputs
-            ) {
-                this.exitCode = exitCode;
-                this.resources = ImmutableList.copyOf(resources);
-                this.exceptions = ImmutableList.copyOf(exceptions);
-                this.errors = ImmutableList.copyOf(errors);
-                this.stackOutputs = ImmutableMap.copyOf(stackOutputs);
-            }
-
-            public Output<Object> stackOutput(String name) {
-                return stackOutput(name, Object.class);
-            }
-
-            public <T> Output<T> stackOutput(String name, Class<T> type) {
-                if (!this.stackOutputs.containsKey(name)) {
-                    return Output.of(CompletableFuture.failedFuture(
-                            new IllegalArgumentException(String.format(
-                                    "Can't find stack output: '%s', available outputs: %s",
-                                    name, String.join(", ", this.stackOutputs.keySet())
-                            ))
-                    ));
-                }
-                var output = this.stackOutputs.get(name);
-                return output.applyValue(o -> {
-                    if (type.isAssignableFrom(o.getClass())) {
-                        return type.cast(o);
-                    }
-                    throw new IllegalArgumentException(String.format(
-                            "Cannot cast '%s' to the given type: '%s'",
-                            o.getClass().getTypeName(),
-                            type.getTypeName()
-                    ));
-                });
-            }
-
-            public TestResult throwOnError() {
-                if (!this.exceptions.isEmpty()) {
-                    throw new RunException(String.format("Error count: %d, errors: %s",
-                            this.exceptions.size(), this.exceptions.stream()
-                                    .map(Throwable::getMessage)
-                                    .collect(Collectors.joining(", "))
-                    ));
-                }
-                return this;
-            }
+            var pulumi = new PulumiTestInternal(this.runner, mockEngine, mockMonitor, context);
+            return pulumi.runTestAsync(stackCallback);
         }
     }
 

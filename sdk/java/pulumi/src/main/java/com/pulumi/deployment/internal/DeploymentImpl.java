@@ -44,9 +44,7 @@ import com.pulumi.resources.ProviderResource;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
-import com.pulumi.resources.Stack.StackInternal;
-import com.pulumi.resources.StackOptions;
+import com.pulumi.resources.internal.StackDefinition;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -95,6 +93,7 @@ import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.resources.internal.StackDefinition.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -211,20 +210,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Nullable
-    private Stack stack; // TODO: get rid of mutability, somehow
+    private StackDefinition stack;
 
     @InternalUse
     @Override
-    public Stack getStack() {
+    public StackDefinition getStack() {
         if (this.stack == null) {
             throw new IllegalStateException("Trying to acquire Deployment#getStack before 'run' was called.");
         }
         return this.stack;
     }
 
+    // TODO: remove when refactoring deployment initialization
     @InternalUse
     @Override
-    public void setStack(Stack stack) {
+    public void setStack(StackDefinition stack) {
         Objects.requireNonNull(stack);
         this.stack = stack;
     }
@@ -1114,7 +1114,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // object finishing initializing. Note: this is not a speculative concern. This is
             // something that does happen and has to be accounted for.
             //
-            // IMPORTANT! We have to make sure we run 'OutputCompletionSource#initializeOutputs'
+            // IMPORTANT! We have to make sure we run OutputCompletionSource initialization
             // synchronously directly when `resource`'s constructor runs since this will set all of
             // the `@Export(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
@@ -1561,7 +1561,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (StackInternal.RootPulumiStackTypeName.equals(type)) {
+            if (RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1579,7 +1579,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return this.rootResource;
         }
 
-        private CompletableFuture<Optional<String>> setRootResourceWorkerAsync(Stack stack) {
+        private CompletableFuture<Optional<String>> setRootResourceWorkerAsync(StackDefinition stack) {
             return Internal.of(stack.getUrn())
                     .getValueNullable()
                     .thenCompose(
@@ -1700,43 +1700,28 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
-        public List<Exception> getSwallowedExceptions() {
-            return ImmutableList.copyOf(this.swallowedExceptions);
-        }
-
         @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
+        public <T> CompletableFuture<Result<T>> runAsync(Supplier<T> callback) {
             try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
+                // invoke callback code in the context of the error handler
+                var value = Optional.ofNullable(callback.get());
+                // loop starts after the callback
+                return whileRunningAsync().thenApply(
+                        exitCode -> new Result<>(
+                                exitCode,
+                                ImmutableList.copyOf(this.swallowedExceptions),
+                                value
+                        )
+                );
             } catch (Exception ex) {
-                return handleExceptionAsync(ex);
+                return handleExceptionAsync(ex).thenApply(
+                        exitCode -> new Result<>(
+                                exitCode,
+                                ImmutableList.copyOf(this.swallowedExceptions),
+                                Optional.empty()
+                        )
+                );
             }
-
-            return whileRunningAsync();
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            return runAsyncFuture(callback, StackOptions.Empty);
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            try {
-                var stack = StackInternal.of(callback, options);
-                // no outputs to register here
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
         }
 
         @Override

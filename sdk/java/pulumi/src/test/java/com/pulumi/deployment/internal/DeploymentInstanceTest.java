@@ -3,11 +3,10 @@ package com.pulumi.deployment.internal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.CompletionException;
 import java.util.logging.Level;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 public class DeploymentInstanceTest {
@@ -28,17 +27,18 @@ public class DeploymentInstanceTest {
                 .build();
         mock.standardLogger.setLevel(Level.OFF);
 
-        var task = mock.runTestAsync(
+        // confirm we've initialized the global singleton holder
+        assertThat(DeploymentImpl.getInstance()).isNotNull();
+
+        var result = mock.runTestAsync(
                 ctx -> {
                     // try to double-set the Deployment#instance
                     DeploymentImpl.setInstance(new DeploymentInstanceInternal(mock.deployment));
                 }
-        );
+        ).join();
 
-        // should not throw until awaited
-        assertThatExceptionOfType(CompletionException.class)
-                .isThrownBy(task::join)
-                .withCauseInstanceOf(IllegalStateException.class)
-                .withMessageContaining("Deployment#instance should only be set once");
+        assertThat(result.exceptions).hasSize(1);
+        assertThat(result.exceptions.get(0)).isExactlyInstanceOf(IllegalStateException.class);
+        assertThat(result.exceptions.get(0)).hasMessageContaining("Deployment#instance should only be set once");
     }
 }

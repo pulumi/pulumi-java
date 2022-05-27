@@ -1,19 +1,18 @@
 package com.pulumi.deployment;
 
 import com.pulumi.core.Output;
-import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.InMemoryLogger;
+import com.pulumi.deployment.internal.Runner;
 import com.pulumi.exceptions.RunException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Supplier;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
 
 import static com.pulumi.deployment.internal.Runner.ProcessExitedAfterLoggingUserActionableMessage;
@@ -56,8 +55,8 @@ public class DeploymentRunnerTest {
         assertThat(result.resources).isNotNull();
         assertThat(result.resources).isNotEmpty();
         assertThat(result.resources).hasSize(1);
-        assertThat(Internal.of(result.stackOutput("slowOutput")).getDataAsync()).isNotCompleted();
-        assertThat(Internal.of(result.stackOutput("slowOutput")).getValueNullable()).isNotCompleted();
+        assertThat(Internal.of(result.output("slowOutput")).getDataAsync()).isNotCompleted();
+        assertThat(Internal.of(result.output("slowOutput")).getValueNullable()).isNotCompleted();
         assertThat(result.exitCode).isEqualTo(ProcessExitedAfterLoggingUserActionableMessage);
     }
 
@@ -67,7 +66,6 @@ public class DeploymentRunnerTest {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
                 .setStandardLogger(logger)
                 .build();
 
@@ -75,15 +73,29 @@ public class DeploymentRunnerTest {
             final var delay = 100L + i;
             mock.runner.registerTask(String.format("task%d", i), new CompletableFuture<Void>().completeOnTimeout(null, delay, TimeUnit.MILLISECONDS));
         }
-        Supplier<CompletableFuture<Map<String, Output<?>>>> supplier =
-                () -> CompletableFuture.completedFuture(Map.of());
-        var code = mock.runner.runAsyncFuture(supplier).join();
-        assertThat(code).isEqualTo(0);
+        var result = mock.runner.runAsync(() -> null).join();
+        assertThat(result.exitCode()).isEqualTo(0);
 
         var messages = logger.getMessages();
         for (var i = 0; i < 2; i++) {
             assertThat(messages).haveAtLeastOne(containsString(String.format("Registering task: 'task%d'", i)));
             assertThat(messages).haveAtLeastOne(containsString(String.format("Completed task: 'task%d'", i)));
         }
+    }
+
+    @Test
+    void testRunnerRuns() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                .build();
+
+        var taskWasCalled = new AtomicBoolean(false);
+        mock.runner.registerTask("testRunnerRuns", CompletableFuture.runAsync(() -> taskWasCalled.set(true)));
+        var resultFuture = mock.runner.runAsync(() -> "foo");
+
+        var result = resultFuture.join();
+        assertThat(taskWasCalled).isTrue();
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
+        assertThat(result.exceptions()).isEmpty();
+        assertThat(result.result()).hasValue("foo");
     }
 }

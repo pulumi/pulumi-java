@@ -21,7 +21,7 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.StackDefinition;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import org.junit.jupiter.api.AfterEach;
@@ -118,7 +118,7 @@ public class MocksTest {
                 .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
-        var publicIp = waitForValue(result.stackOutput("publicIp", String.class));
+        var publicIp = waitForValue(result.output("publicIp", String.class));
         assertThat(publicIp).isEqualTo("203.0.113.12");
     }
 
@@ -159,8 +159,8 @@ public class MocksTest {
         assertThat(errors).isNotEmpty();
 
         var stack = resources.stream()
-                .filter(r -> r instanceof Stack)
-                .map(r -> (Stack) r)
+                .filter(r -> r instanceof StackDefinition)
+                .map(r -> (StackDefinition) r)
                 .findFirst();
         assertThat(stack).isPresent();
 
@@ -199,7 +199,7 @@ public class MocksTest {
         assertThat(exceptions.stream().map(Throwable::getMessage).collect(Collectors.toList()))
                 .haveAtLeastOne(containsString("Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."));
 
-        var publicIp = result.stackOutput("publicIp");
+        var publicIp = result.output("publicIp");
         var ipFuture = Internal.of(publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
 
