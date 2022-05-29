@@ -22,7 +22,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
+        final var amiResult = Ec2Functions.getAmi(GetAmiArgs.builder()
                 .filters(GetAmiFilter.builder()
                         .name("name")
                         .values("amzn-ami-hvm-*-x86_64-ebs")
@@ -30,7 +30,9 @@ public class App {
                 .owners("137112412989")
                 .mostRecent(true)
                 .build()
-        ).thenApply(GetAmiResult::id);
+        );
+
+        final var ami = amiResult.applyValue(result -> result.id);
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
                 .ingress(SecurityGroupIngressArgs.builder()
@@ -54,7 +56,7 @@ public class App {
                 .tags(Map.of("Name", "web-server-www"))
                 .instanceType(Output.ofRight(com.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
                 .vpcSecurityGroupIds(group.getId().applyValue(List::of))
-                .ami(Output.of(ami))
+                .ami(ami)
                 .userData(userData)
                 .build()
         );
