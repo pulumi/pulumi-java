@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="slot", required=true)
-    private String slot;
+    private Output<String> slot;
 
     /**
      * @return Name of the deployment slot. By default, this API returns the production slot.
      * 
      */
-    public String slot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -57,9 +58,19 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder slot(String slot) {
+        public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
+        }
+
+        /**
+         * @param slot Name of the deployment slot. By default, this API returns the production slot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder slot(String slot) {
+            return slot(Output.of(slot));
         }
 
         public GetWebAppSlotArgs build() {

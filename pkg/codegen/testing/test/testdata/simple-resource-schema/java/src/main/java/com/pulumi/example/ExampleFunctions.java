@@ -3,22 +3,22 @@
 
 package com.pulumi.example;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.inputs.ArgFunctionArgs;
 import com.pulumi.example.outputs.ArgFunctionResult;
-import java.util.concurrent.CompletableFuture;
 
 public final class ExampleFunctions {
-    public static CompletableFuture<ArgFunctionResult> argFunction() {
+    public static Output<ArgFunctionResult> argFunction() {
         return argFunction(ArgFunctionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ArgFunctionResult> argFunction(ArgFunctionArgs args) {
+    public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args) {
         return argFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
+    public static Output<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
     }
 }
