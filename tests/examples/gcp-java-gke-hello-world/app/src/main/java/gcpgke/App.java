@@ -43,7 +43,7 @@ public class App {
         final String name = "helloworld";
 
         final var masterVersion = ContainerFunctions.getEngineVersions().applyValue(versions ->
-            ctx.config().get("masterVersion").orElse(versions.latestMasterVersion)
+            ctx.config().get("masterVersion").orElse(versions.latestMasterVersion())
         );
 
         ctx.export("masterVersion", masterVersion);

@@ -32,7 +32,7 @@ public class App {
                 .build()
         );
 
-        final var ami = amiResult.applyValue(result -> result.id);
+        final var ami = amiResult.applyValue(result -> result.id());
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
                 .ingress(SecurityGroupIngressArgs.builder()
