@@ -203,26 +203,6 @@ func (g *generator) functionName(tokenArg model.Expression) (string, string) {
 	return names.Title(module) + "Functions" + "." + member, names.Title(member)
 }
 
-// outputOf creates a new call to the output intrinsic.
-func outputOf(promise model.Expression) model.Expression {
-	promiseType, ok := promise.Type().(*model.PromiseType)
-	if !ok {
-		return promise
-	}
-
-	return &model.FunctionCallExpression{
-		Name: intrinsicOutput,
-		Signature: model.StaticFunctionSignature{
-			Parameters: []model.Parameter{{
-				Name: "promise",
-				Type: promiseType,
-			}},
-			ReturnType: model.NewOutputType(promiseType.ElementType),
-		},
-		Args: []model.Expression{promise},
-	}
-}
-
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
 	switch expr.Name {
 	case pcl.IntrinsicConvert:
