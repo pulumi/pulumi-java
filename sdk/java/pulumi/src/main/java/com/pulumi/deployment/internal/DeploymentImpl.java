@@ -57,7 +57,6 @@ import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
 import pulumirpc.Provider.CallRequest;
-import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
@@ -81,7 +80,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -95,7 +93,6 @@ import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
 import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
-import static com.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -137,12 +134,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.serialization = new PropertiesSerializer(this.log);
         this.deserializer = new Deserializer(this.log);
         this.converter = new Converter(this.log, this.deserializer);
-        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
+        this.invoke = new Invoke(
+                this.log, state.monitor, this.featureSupport, this.serialization, this.converter,
+                DeploymentState.DisableResourceReferences
+        );
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
         this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
-        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
-        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
+        this.readResource = new ReadResource(
+                this.log, this.prepare, state.monitor,
+                DeploymentState.DisableResourceReferences
+        );
+        this.registerResource = new RegisterResource(
+                this.log, this.prepare, state.monitor,
+                DeploymentState.DisableResourceReferences
+        );
         this.readOrRegisterResource = new ReadOrRegisterResource(
                 this.log, state.runner, this.invoke, this.readResource,
                 this.registerResource, this.converter, state.isDryRun
@@ -194,10 +200,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.state.config;
     }
 
+    @Override
     public Optional<String> getConfig(String fullKey) {
         return this.state.config.getConfig(fullKey);
     }
 
+    @Override
     public boolean isConfigSecret(String fullKey) {
         return this.state.config.isConfigSecret(fullKey);
     }
@@ -206,6 +214,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private Stack stack; // TODO: get rid of mutability, somehow
 
     @InternalUse
+    @Override
     public Stack getStack() {
         if (this.stack == null) {
             throw new IllegalStateException("Trying to acquire Deployment#getStack before 'run' was called.");
@@ -214,6 +223,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @InternalUse
+    @Override
     public void setStack(Stack stack) {
         Objects.requireNonNull(stack);
         this.stack = stack;
@@ -432,19 +442,22 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final FeatureSupport featureSupport;
         private final PropertiesSerializer serialization;
         private final Converter converter;
+        private final boolean disableResourceReferences;
 
         private Invoke(
                 Log log,
                 Monitor monitor,
                 FeatureSupport featureSupport,
                 PropertiesSerializer serialization,
-                Converter converter
+                Converter converter,
+                boolean disableResourceReferences
         ) {
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
             this.serialization = Objects.requireNonNull(serialization);
             this.converter = Objects.requireNonNull(converter);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
@@ -570,7 +583,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setProvider(provider.orElse(""))
                                 .setVersion(version.orElse(""))
                                 .setArgs(serialized.serialized)
-                                .setAcceptResources(!DeploymentState.DisableResourceReferences)
+                                .setAcceptResources(!this.disableResourceReferences)
                                 .build()
                         ).thenApply(response -> {
                             // Handle failures.
@@ -1278,11 +1291,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
+        private final boolean disableResourceReferences;
 
-        private ReadResource(Log log, Prepare prepare, Monitor monitor) {
+        private ReadResource(Log log, Prepare prepare, Monitor monitor, boolean disableResourceReferences) {
             this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         private CompletableFuture<RawResourceResult> readResourceAsync(
@@ -1295,9 +1310,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             return this.prepare.prepareResourceAsync(label, resource, /* custom */ true, /* remote */ false, args, options)
                     .thenCompose(prepareResult -> {
-                        log.debug(String.format(
-                                "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name) +
-                                (DeploymentState.ExcessiveDebugOutput ? String.format(", obj=%s", prepareResult.serializedProps) : "")
+                        log.debugOrExcessive(String.format(
+                                "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name),
+                                String.format(", obj=%s", prepareResult.serializedProps)
                         );
 
                         // Create a resource request and do the RPC.
@@ -1310,7 +1325,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setProperties(prepareResult.serializedProps)
                                 .setVersion(options.getVersion().orElse(""))
                                 .setAcceptSecrets(true)
-                                .setAcceptResources(!DeploymentState.DisableResourceReferences);
+                                .setAcceptResources(!this.disableResourceReferences);
 
                         for (int i = 0; i < prepareResult.allDirectDependencyUrns.size(); i++) {
                             request.setDependencies(i, prepareResult.allDirectDependencyUrns.asList().get(i));
@@ -1331,11 +1346,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
+        private final boolean disableResourceReferences;
 
-        private RegisterResource(Log log, Prepare prepare, Monitor monitor) {
+        private RegisterResource(Log log, Prepare prepare, Monitor monitor, boolean disableResourceReferences) {
             this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         private CompletableFuture<RawResourceResult> registerResourceAsync(
@@ -1406,7 +1423,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .setPluginDownloadURL(options.getPluginDownloadURL().orElse(""))
                     .setImportId(customOpts ? ((CustomResourceOptions) options).getImportId().orElse("") : "")
                     .setAcceptSecrets(true)
-                    .setAcceptResources(!DeploymentState.DisableResourceReferences)
+                    .setAcceptResources(!this.disableResourceReferences)
                     .setDeleteBeforeReplace(customOpts && ((CustomResourceOptions) options).getDeleteBeforeReplace())
                     .setDeleteBeforeReplaceDefined(true)
                     .setCustomTimeouts(
@@ -1497,12 +1514,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (Strings.isEmptyOrNull(urn)) {
                     throw new IllegalStateException(String.format("Expected a urn at this point, got: '%s'", urn));
                 }
-                log.debug(String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn) +
-                        (DeploymentState.ExcessiveDebugOutput ?
-                                String.format(", outputs=%s", JsonFormatter
+                log.debugOrExcessive(
+                        String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn),
+                        String.format(", outputs=%s", JsonFormatter
                                         .format(serialized)
-                                        .orThrow(Function.identity()))
-                                : ""
+                                        .orThrow(Function.identity())
                         ));
 
                 return this.monitor.registerResourceOutputsAsync(
@@ -1636,12 +1652,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
                 var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
                 var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
-//            var pwd = getEnvironmentVariable("PULUMI_PWD");
                 var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
-//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
-//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
-//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
-                // TODO what to do with all the unused envvars?
 
                 var config = Config.parse();
                 standardLogger.setLevel(GlobalLogging.GlobalLevel);
@@ -1732,7 +1743,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public <T> void registerTask(String description, CompletableFuture<T> task) {
             Objects.requireNonNull(description);
             Objects.requireNonNull(task);
-            standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
+            this.standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
 
             // we don't need the result here, just the future itself
             CompletableFuture<Void> key = task.thenApply(__ -> null);
@@ -1741,7 +1752,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // happen when the runtime reuses cached tasks that it knows are value-identical
             // (for example a completed future). In that case, we just store all the descriptions.
             // We'll print them all out as done once this task actually finishes.
-            inFlightTasks.compute(key,
+            this.inFlightTasks.compute(key,
                     (__, descriptions) -> {
                         if (descriptions == null) {
                             return Lists.newArrayList(description);
@@ -1771,7 +1782,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     if (!task.isDone()) {
                         throw new IllegalStateException(
                                 String.format("expected task to be done at this point, it was not: %s, %s",
-                                        inFlightTasks.get(task),
+                                        this.inFlightTasks.get(task),
                                         task
                                 )
                         );
@@ -1779,16 +1790,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     task.join();
 
                     // Log the descriptions of completed tasks.
-                    if (standardLogger.isLoggable(Level.FINEST)) {
+                    if (this.standardLogger.isLoggable(Level.FINEST)) {
                         List<String> descriptions = inFlightTasks.getOrDefault(task, List.of());
                         // getOrDefault should never return null, but it does for whatever reason, so just to be sure
                         if (descriptions == null) {
                             descriptions = List.of();
                         }
-                        standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", String.join(",", descriptions), task));
+                        this.standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", String.join(",", descriptions), task));
                     }
                 } catch (Exception e) {
-                    standardLogger.log(Level.FINEST, String.format("Failed task: '%s', exception: %s", inFlightTasks.get(task), e));
+                    this.standardLogger.log(Level.FINEST, String.format("Failed task: '%s', exception: %s", inFlightTasks.get(task), e));
                     throw e;
                 } finally {
                     // Once finished, remove the task from the set of tasks that are running.
@@ -1799,7 +1810,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Supplier<CompletableFuture<Integer>> loopUntilDone = () -> {
                 // Keep looping as long as there are outstanding tasks that are still running.
                 while (inFlightTasks.size() > 0) {
-                    standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+                    this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
                     // Grab all the tasks we currently have running.
                     for (var task : inFlightTasks.keySet()) {
@@ -1809,7 +1820,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 // so there won't be any blocking here
                                 handleCompletion.accept(task); // will remove from inFlightTasks
                             } else {
-                                standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                                this.standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
                                 // will attempt again in the next iteration
                             }
                         } catch (Exception e) {
@@ -1829,14 +1840,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.swallowedExceptions.add(exception);
 
             Function<Void, Integer> exitMessageAndCode = unused -> {
-                standardLogger.log(Level.FINE, "Returning from program after last error");
+                this.standardLogger.log(Level.FINE, "Returning from program after last error");
                 return ProcessExitedAfterLoggingUserActionableMessage;
             };
 
             if (exception instanceof LogException) {
                 // We got an error while logging itself.
                 // Nothing to do here but print some errors and abort.
-                standardLogger.log(Level.SEVERE, String.format(
+                this.standardLogger.log(Level.SEVERE, String.format(
                         "Error occurred trying to send logging message to engine: %s", exception.getMessage()));
                 return CompletableFuture.supplyAsync(() -> {
                     System.err.printf("Error occurred trying to send logging message to engine: %s%n", exception);
@@ -2013,7 +2024,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return CompletableFuture.completedFuture(null);
             }
             try {
-                return tryGetResourceUrnAsync(resource)
+                return resourceUrnOrEmpty(resource)
                         .thenCompose(
                                 urn -> engine.logAsync(
                                         LogRequest.newBuilder()
@@ -2027,7 +2038,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         );
             } catch (Exception e) {
                 // mark that we had an error so that our top level process quits with an error code.
-                errorCount.incrementAndGet();
+                this.errorCount.incrementAndGet();
 
                 // We have a potential pathological case with logging. Consider if logging a
                 // message itself throws an error.  If we then allow the error to bubble up, our top
@@ -2041,13 +2052,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         /**
          * @return a URN or empty String for the given @see {@link Resource}
          */
-        private static CompletableFuture<String> tryGetResourceUrnAsync(@Nullable Resource resource) {
+        private static CompletableFuture<String> resourceUrnOrEmpty(@Nullable Resource resource) {
             if (resource != null) {
                 try {
                     return Internal.of(resource.getUrn()).getValueOrDefault("");
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
-                    // fail to send an logging message. we'll just send the logging message unassociated
+                    // fail to send a logging message. we'll just send the logging message unassociated
                     // with any resource.
                 }
             }

@@ -25,6 +25,9 @@ on:
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
+  repository_dispatch:
+    types:
+      - run-acceptance-tests-command
 
 # TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
 # before making the repo public.
@@ -98,6 +101,8 @@ jobs:
           path: bin/
       - name: Publish Pulumi Java SDK
         run: make sdk.publish
+        # See Note 1.
+        if: github.event_name == 'repository_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     strategy:
       fail-fast: true
 
@@ -164,6 +169,8 @@ jobs:
       - run: cd pkg && go test ./...
 
   providers:
+    # See Note 1.
+    if: github.event_name == 'repository_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     needs: prerequisites
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -678,3 +685,9 @@ jobs:
         run: chmod a+x ./bin/pulumi-java-gen
       - run: make --old-file=bin/pulumi-java-gen providers_generate_all
       - run: ./scripts/check-dirty.sh
+
+# ** Note 1: fork PRs do not have access to some of the tokens required
+# to use Pulumi infra. The PRs will be partially tested and wait for a
+# maintainer to comment `/run-acceptance-tests` after a review,
+# triggering this workflow via `repository_dispatch` and the right
+# tokens.

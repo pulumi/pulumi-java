@@ -53,7 +53,7 @@ public class DeploymentInvokeTest {
                         );
                     }
                 })
-                .setSpyGlobalInstance();
+                .build();
 
         var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyValue(r -> {
             assertThat(r).hasSize(1);

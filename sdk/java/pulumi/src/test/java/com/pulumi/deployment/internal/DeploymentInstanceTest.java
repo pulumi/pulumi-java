@@ -1,21 +1,19 @@
 package com.pulumi.deployment.internal;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
+import java.util.logging.Level;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.mockito.Mockito.mock;
 
 public class DeploymentInstanceTest {
 
-    @AfterAll
-    static void cleanup() {
+    @AfterEach
+    void cleanup() {
         cleanupDeploymentMocks();
     }
 
@@ -26,28 +24,14 @@ public class DeploymentInstanceTest {
                 .isThrownBy(DeploymentImpl::getInstance)
                 .withMessageContaining("Trying to acquire Deployment#instance before");
 
-        var options = new TestOptions();
-        var engine = mock(Engine.class);
-        var monitor = mock(Monitor.class);
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                .build();
+        mock.standardLogger.setLevel(Level.OFF);
 
-        var config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
-        var state = new DeploymentImpl.DeploymentState(
-                config,
-                DeploymentTests.defaultLogger(),
-                options.getProjectName(),
-                options.getStackName(),
-                options.isPreview(),
-                engine,
-                monitor
-        );
-        var deployment = new DeploymentImpl(state);
-
-        var task = DeploymentInternal.createRunnerAndRunAsync(
-                () -> deployment,
-                runner -> {
+        var task = mock.runTestAsync(
+                ctx -> {
                     // try to double-set the Deployment#instance
-                    DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
-                    return CompletableFuture.completedFuture(1);
+                    DeploymentImpl.setInstance(new DeploymentInstanceInternal(mock.deployment));
                 }
         );
 

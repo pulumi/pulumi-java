@@ -32,7 +32,7 @@ public class DeploymentRunnerTest {
     void testTerminatesEarlyOnException() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setSpyGlobalInstance();
+                .build();
 
         mock.standardLogger.setLevel(Level.OFF);
         var result = mock.runTestAsync(ctx -> {
@@ -69,7 +69,7 @@ public class DeploymentRunnerTest {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
                 .setStandardLogger(logger)
-                .setSpyGlobalInstance();
+                .build();
 
         for (var i = 0; i < 2; i++) {
             final var delay = 100L + i;

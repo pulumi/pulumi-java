@@ -59,7 +59,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
@@ -84,7 +84,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
@@ -107,7 +107,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
         var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
@@ -121,7 +121,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
         var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
@@ -134,7 +134,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
@@ -157,7 +157,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
@@ -180,7 +180,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeComponentResourceStack).join();
         var values = waitForValue(result.stackOutput("values", ValuesClass));
@@ -194,7 +194,7 @@ class ResourceRefPropertyTest {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(isPreview))
                 .setMocks(new MyMocks(isPreview))
-                .setSpyGlobalInstance();
+                .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();
         var values = waitForValue(result.stackOutput("values", ValuesClass));
         assertThat(values).isNotNull();
