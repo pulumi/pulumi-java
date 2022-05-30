@@ -12,6 +12,7 @@
     "src/main/java/com/pulumi/example/ResourceArgs.java",
     "src/main/java/com/pulumi/example/Utilities.java",
     "src/main/java/com/pulumi/example/inputs/ArgFunctionArgs.java",
+    "src/main/java/com/pulumi/example/inputs/ArgFunctionPlainArgs.java",
     "src/main/java/com/pulumi/example/outputs/ArgFunctionResult.java"
   ]
 }

@@ -5,11 +5,13 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.web.inputs.GetWebAppSlotArgs;
+import com.pulumi.azurenative.web.inputs.GetWebAppSlotPlainArgs;
 import com.pulumi.azurenative.web.outputs.GetWebAppSlotResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class WebFunctions {
     /**
@@ -25,7 +27,23 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlotPlain(GetWebAppSlotPlainArgs args) {
+        return getWebAppSlotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A web app, a mobile app backend, or an API app.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A web app, a mobile app backend, or an API app.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlotPlain(GetWebAppSlotPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
     }
 }

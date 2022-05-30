@@ -16,6 +16,7 @@
     "src/main/java/com/pulumi/example/enums/OutputOnlyEnumType.java",
     "src/main/java/com/pulumi/example/enums/RubberTreeVariety.java",
     "src/main/java/com/pulumi/example/inputs/ArgFunctionArgs.java",
+    "src/main/java/com/pulumi/example/inputs/ArgFunctionPlainArgs.java",
     "src/main/java/com/pulumi/example/inputs/ConfigMapArgs.java",
     "src/main/java/com/pulumi/example/inputs/ObjectArgs.java",
     "src/main/java/com/pulumi/example/inputs/ObjectWithNodeOptionalInputsArgs.java",
